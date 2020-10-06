@@ -39,5 +39,10 @@
     "plugins": [
       "@typescript-eslint/eslint-plugin"
     ]
+  },
+  "stylelint":{
+    "extends": "stylelint-config-sass-guidelines","plugins": [
+      "stylelint-scss"
+    ]
   }
 }

@@ -1,3 +1,4 @@
+//ToDo: delete (It's only a example)
 import React from 'react';
 
 import { Header } from './Header';

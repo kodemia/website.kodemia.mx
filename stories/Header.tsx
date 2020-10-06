@@ -1,3 +1,4 @@
+//ToDo: delete (It's only a example)
 import React from 'react';
 
 import { Button } from './Button';
@@ -36,11 +37,11 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogin, onLogout, onCreat
         {user ? (
           <Button size="small" onClick={onLogout} label="Log out" />
         ) : (
-          <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
-          </>
-        )}
+            <>
+              <Button size="small" onClick={onLogin} label="Log in" />
+              <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+            </>
+          )}
       </div>
     </div>
   </header>
