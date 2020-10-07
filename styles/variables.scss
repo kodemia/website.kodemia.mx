@@ -1,0 +1,25 @@
+/*COLORS */
+
+//Black
+$black: #000;
+$black-medium: rgba(0, 0, 0, 0.6);
+$black-primary: #181818;
+
+// Cyan
+$cyan: #0ff;
+$cyan-primary: #0c0c0c;
+
+//White
+$white: #fff;
+$white-light: #fbfbfb;
+$white-lighter: rgba(255, 255, 255, 0.9);
+$white-primary: #f6f6f6;
+
+//Gray
+$gray: #bdbdbd;
+
+// Update Bulma's global variables
+$primary: $white;
+$info: $cyan;
+$text: $gray;
+
