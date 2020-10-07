@@ -2,6 +2,9 @@
 
 @import './variables';
 
+// components 
+//@import './components/index.scss';
+
 * {
   border: 0;
   box-sizing: border-box;
@@ -14,3 +17,4 @@ body {
   color: $primary;
   font-family: 'Poppins',sans-serif;
 }
+

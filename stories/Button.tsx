@@ -1,6 +1,6 @@
 //ToDo: delete (It's only a example)
 import React from 'react';
-import './button.css';
+import './button.scss';
 
 export interface ButtonProps {
   /**
