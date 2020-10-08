@@ -3,7 +3,7 @@
 @import './variables';
 
 // components 
-//@import './components/index.scss';
+@import './components/index.scss';
 
 * {
   border: 0;
@@ -17,4 +17,3 @@ body {
   color: $primary;
   font-family: 'Poppins',sans-serif;
 }
-
