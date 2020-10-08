@@ -1,4 +1,4 @@
-//ToDo: delete (It's only a example)
+
 import React from 'react';
 
 export interface ButtonProps {
