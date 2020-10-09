@@ -5,25 +5,11 @@ import Link from 'next/link'
 
 import { Button } from './Button'
 
-export interface FooteerProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+// ToDo: quitar, solo se usa para storybook
+export interface FooterProps {
+
 }
-export const Footer: React.FC<ButtonProps> = ({
-  primary = true,
-  label,
-  ...props
-}) => {
+export const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className=' footer'>
       <img src='kodemia-logo-white.png' alt='kodemia-logo' />
@@ -92,13 +78,9 @@ export const Footer: React.FC<ButtonProps> = ({
         <div className='info-contact'>
           <Button label='Mándanos un whatsapp' icon='/icons/Button-Whatsapp.svg' />
           <Button primary={false} label='Únete a la comunidad' icon='/icons/Button-Telegram.svg' />
-          <div className='contact'>
-            <p>Teléfonos 55 3731 72 66</p>
-            <p>Email: contacto@kodemia.mx</p>
-          </div>
-
+          <p>Teléfonos 55 3731 72 66</p>
+          <p>Email: contacto@kodemia.mx</p>
         </div>
-
       </div>
       <div className='legal'>
         <p>Kodemia© {dayjs().format('YYYY')}. Todos los dereechos reservados </p>
