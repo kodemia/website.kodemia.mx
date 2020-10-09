@@ -1,26 +1,35 @@
 
-.button{
+.button {
   
   border-radius: 10px;
   color: $primary;
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
+  margin: 20px 0;
   padding: 5px 35px;
   text-align: center;
+
+  .icon {
+    margin-right: 5px;
+    width: 15px;
+  }
+  
 }
 
-.button-primary{
+.button-primary {
   border: 2px solid $cyan;
-  &:hover{
+
+  &:hover {
     background-color: $cyan_primary;
-    border:none;
+    border: 0;
   }
 } 
 
-.button-secondary{
+.button-secondary {
   border: 2px solid $white;
-  &:hover{
+
+  &:hover {
     border: 2px solid $cyan;
   }
 }

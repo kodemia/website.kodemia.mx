@@ -2,17 +2,9 @@
 import React from 'react';
 
 export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
   primary?: boolean;
-  /**
-   * Button contents
-   */
   label: string;
-  /**
-   * Optional click handler
-   */
+  icon: string;
   onClick?: () => void;
 }
 
@@ -20,8 +12,9 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonProps> = ({
-  primary = false,
+  primary = true,
   label,
+  icon = '',
   ...props
 }) => {
   const mode = primary ? 'button-primary' : 'button-secondary';
@@ -30,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={`button ${mode} `}
       {...props}
     >
-      {label}
+      <img src={icon} className='icon' /> {label}
     </a>
   );
 };

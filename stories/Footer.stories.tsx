@@ -14,13 +14,7 @@ export default {
 
 const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Footer',
-};
+export const Only = Template.bind({});
+Only.args = {
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
 };

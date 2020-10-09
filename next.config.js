@@ -1,12 +1,4 @@
 const withPlugins = require('next-compose-plugins')
-const optimizedImages = require('next-optimized-images')
+const withImages = require('next-images')
 
-module.exports = withPlugins([
-  [optimizedImages]
-])
-
-module.exports = {
-  env: {
-    GTM_CONTAINER_ID: process.env.GTM_CONTAINER_ID
-  }
-}
+module.exports = withPlugins([withImages({})])
