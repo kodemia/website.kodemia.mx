@@ -72,12 +72,16 @@ export const Footer: React.FC<FooterProps> = () => {
               <img src='/icons/Social-media-in.svg' />
             </a>
           </div>
-          <p className='address'>Tonalá 10, Roma Norte,Cuauhtémoc, <br /> 03800 Ciudad de México, CDMX
-          </p>
         </div>
         <div className='info-contact'>
           <Button label='Mándanos un whatsapp' icon='/icons/Button-Whatsapp.svg' />
           <Button primary={false} label='Únete a la comunidad' icon='/icons/Button-Telegram.svg' />
+        </div>
+      </div>
+      <div className='info-kodemia'>
+        <p className='address'>Tonalá 10, Roma Norte,Cuauhtémoc, <br /> 03800 Ciudad de México, CDMX
+          </p>
+        <div className='contact'>
           <p>Teléfonos 55 3731 72 66</p>
           <p>Email: contacto@kodemia.mx</p>
         </div>

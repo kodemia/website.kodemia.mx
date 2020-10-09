@@ -22,7 +22,8 @@
 
   &:hover {
     background-color: $cyan_primary;
-    border: 0;
+    border: 2px solid $cyan_primary;
+  
   }
 } 
 
@@ -30,6 +31,6 @@
   border: 2px solid $white;
 
   &:hover {
-    border: 2px solid $cyan;
+    background-color: $gray;
   }
 }

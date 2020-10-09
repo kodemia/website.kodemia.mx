@@ -7,20 +7,21 @@
     justify-content: space-between;
 
     .directory {
-
       .navigation {
         display: flex;
         list-style: none;
         margin: 30px 0;
         white-space: pre;
-         li a {
-            color: $white;
-            text-decoration: none;
-          }
+
+        li a {
+          color: $white;
+          text-decoration: none;
+        }
       }
 
       .social-media {
         margin: 30px 0; 
+        
         a {
           margin: 0 10px;
 
@@ -34,6 +35,14 @@
     .info-contact {
       display: flex;
       flex-direction: column;
+    }
+  }
+
+  .info-kodemia {
+    display: flex;
+    justify-content: space-between;
+    
+    .phone-email p {
       text-align: end;
     }
   }
