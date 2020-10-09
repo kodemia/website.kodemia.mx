@@ -1,36 +1,38 @@
 //ToDo: delete (It's only a example)
 import React from 'react';
+import { Primary } from '../stories/Button.stories';
 
 export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
+
+  type: string,
+  label: string,
+  icon: string
   onClick?: () => void;
+
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonProps> = ({
-  primary = false,
+  type = 'primary',
   label,
+  icon,
   ...props
 }) => {
-  const mode = primary ? 'button-primary' : 'button-secondary';
+
+  let button = icon ? 'button-icon' : 'button'
+
+  console.log(type)
   return (
+
     <a
-      className={`button ${mode} `}
+      className={`${button} button-${type.toLowerCase()} `}
       {...props}
     >
+      <img src={icon} className='icon' />
       {label}
     </a>
+
   );
 };
