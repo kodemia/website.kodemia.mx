@@ -7,20 +7,25 @@ import { Button, ButtonProps } from '../components/Button';
 export default {
   title: 'Kodemia-Components/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button',
+  type: 'Primary',
+  label: 'Conocenos',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  type: 'Secondary',
+  label: 'Conocenos'
+};
+
+export const White = Template.bind({});
+Secondary.args = {
+  type: 'White',
+  label: 'Conocenos'
 };

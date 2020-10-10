@@ -1,11 +1,17 @@
 
+<<<<<<< HEAD
 .button {
+=======
+%button {
+>>>>>>> button-component
   
   border-radius: 10px;
   color: $primary;
   cursor: pointer;
+  display: block;
   font-size: 16px;
   font-weight: 500;
+<<<<<<< HEAD
   margin: 20px 0;
   padding: 5px 35px;
   text-align: center;
@@ -17,13 +23,39 @@
   
 }
 
+=======
+  margin: 0 5%;
+  padding: 10px 50px;
+  text-align: center;
+ 
+}
+
+.button {
+  @extend %button;
+}
+
+.button-icon {
+  @extend %button;
+
+  .icon {
+    margin-right: 10px;
+    width: 15px;
+  }
+}
+
+>>>>>>> button-component
 .button-primary {
   border: 2px solid $cyan;
 
   &:hover {
+<<<<<<< HEAD
     background-color: $cyan_primary;
     border: 2px solid $cyan_primary;
   
+=======
+    background-color: $cyan-primary;
+    border: 2px solid $cyan-primary;
+>>>>>>> button-component
   }
 } 
 
@@ -31,6 +63,18 @@
   border: 2px solid $white;
 
   &:hover {
+<<<<<<< HEAD
     background-color: $gray;
   }
 }
+=======
+    background-color: $gray-primary;
+    border: 2px solid $gray-primary;
+  }
+}
+
+.button-white {
+  background-color: $white;
+  color: $black;
+}
+>>>>>>> button-component
