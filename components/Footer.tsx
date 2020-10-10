@@ -75,20 +75,20 @@ export const Footer: React.FC<FooterProps> = () => {
         </div>
         <div className='info-contact'>
           <Button label='Mándanos un whatsapp' icon='/icons/Button-Whatsapp.svg' />
-          <Button primary={false} label='Únete a la comunidad' icon='/icons/Button-Telegram.svg' />
+          <Button type='secondary' label='Únete a la comunidad' icon='/icons/Button-Telegram.svg' />
         </div>
       </div>
       <div className='info-kodemia'>
         <p className='address'>Tonalá 10, Roma Norte,Cuauhtémoc, <br /> 03800 Ciudad de México, CDMX
           </p>
-        <div className='contact'>
+        <div className='phone-email'>
           <p>Teléfonos 55 3731 72 66</p>
           <p>Email: contacto@kodemia.mx</p>
         </div>
       </div>
       <div className='legal'>
         <p>Kodemia© {dayjs().format('YYYY')}. Todos los dereechos reservados </p>
-        <a href='#'>Aviso de Privacidad</a>
+        <a href='#'>Aviso de Privacidad   </a>
       </div>
     </footer>
   )
