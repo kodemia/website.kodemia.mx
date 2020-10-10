@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-.button {
-=======
 %button {
->>>>>>> button-component
   
   border-radius: 10px;
   color: $primary;
@@ -11,19 +7,6 @@
   display: block;
   font-size: 16px;
   font-weight: 500;
-<<<<<<< HEAD
-  margin: 20px 0;
-  padding: 5px 35px;
-  text-align: center;
-
-  .icon {
-    margin-right: 5px;
-    width: 15px;
-  }
-  
-}
-
-=======
   margin: 0 5%;
   padding: 10px 50px;
   text-align: center;
@@ -43,19 +26,12 @@
   }
 }
 
->>>>>>> button-component
 .button-primary {
   border: 2px solid $cyan;
 
   &:hover {
-<<<<<<< HEAD
-    background-color: $cyan_primary;
-    border: 2px solid $cyan_primary;
-  
-=======
     background-color: $cyan-primary;
     border: 2px solid $cyan-primary;
->>>>>>> button-component
   }
 } 
 
@@ -63,11 +39,6 @@
   border: 2px solid $white;
 
   &:hover {
-<<<<<<< HEAD
-    background-color: $gray;
-  }
-}
-=======
     background-color: $gray-primary;
     border: 2px solid $gray-primary;
   }
@@ -77,4 +48,3 @@
   background-color: $white;
   color: $black;
 }
->>>>>>> button-component

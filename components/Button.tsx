@@ -1,18 +1,12 @@
 
 import React from 'react';
-import { Primary } from '../stories/Button.stories';
+
 
 export interface ButtonProps {
-<<<<<<< HEAD
-  primary?: boolean;
-  label: string;
-  icon: string;
-=======
 
   type: string,
   label: string,
   icon: string
->>>>>>> button-component
   onClick?: () => void;
 
 }
@@ -21,15 +15,9 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonProps> = ({
-<<<<<<< HEAD
-  primary = true,
-  label,
-  icon = '',
-=======
   type = 'primary',
   label,
   icon,
->>>>>>> button-component
   ...props
 }) => {
 
@@ -42,12 +30,8 @@ export const Button: React.FC<ButtonProps> = ({
       className={`${button} button-${type.toLowerCase()} `}
       {...props}
     >
-<<<<<<< HEAD
-      <img src={icon} className='icon' /> {label}
-=======
       <img src={icon} className='icon' />
       {label}
->>>>>>> button-component
     </a>
 
   );
