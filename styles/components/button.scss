@@ -30,8 +30,8 @@
   border: 2px solid $cyan;
 
   &:hover {
-    background-color: $cyan_primary;
-    border: 2px solid $cyan_primary;
+    background-color: $cyan-primary;
+    border: 2px solid $cyan-primary;
   }
 } 
 
@@ -39,8 +39,8 @@
   border: 2px solid $white;
 
   &:hover {
-    // ToDo : Poner el estilo correcto 
-    border: 2px solid $cyan;
+    background-color: $gray-primary;
+    border: 2px solid $gray-primary;
   }
 }
 
