@@ -88,7 +88,7 @@ export const Footer: React.FC<FooterProps> = () => {
       </div>
       <div className='legal'>
         <p>Kodemia© {dayjs().format('YYYY')}. Todos los dereechos reservados </p>
-        <a href='#'>Aviso de Privacidad</a>
+        <a href='#'>Aviso de Privacidad   </a>
       </div>
     </footer>
   )
