@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "dayjs": "^1.9.1",
+    "classnames": "^2.2.6",
     "next": "9.5.3",
     "next-compose-plugins": "^2.2.0",
     "next-images": "^1.6.0",
@@ -53,9 +54,9 @@
     "plugins": [
       "stylelint-scss"
     ],
-    "rules":{
-      "max-nesting-depth":5,
-      "selector-max-compound-selectors":7
+    "rules": {
+      "max-nesting-depth": 5,
+      "selector-max-compound-selectors": 7
     }
   }
 }

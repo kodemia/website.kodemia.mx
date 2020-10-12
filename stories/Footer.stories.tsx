@@ -7,14 +7,12 @@ import { Footer, FooterProps } from '../components/Footer';
 export default {
   title: 'Kodemia-Components/Footer',
   component: Footer,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+
 } as Meta;
 
 const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 
-export const Only = Template.bind({});
-Only.args = {
+export const OnlyFooter = Template.bind({});
+OnlyFooter.args = {
 
 };

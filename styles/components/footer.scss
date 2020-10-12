@@ -1,63 +1,120 @@
 
+// .footer {
+//   margin: 0 5%;
+
+//   .container {
+//     display: flex;
+//     justify-content: space-between;
+
+//     .directory {
+//       .navigation {
+//         display: flex;
+//         list-style: none;
+//         margin: 30px 0;
+//         white-space: pre;
+
+//         li a {
+//           color: $white;
+//           text-decoration: none;
+//         }
+//       }
+
+//       .social-media {
+//         margin: 30px 0;
+        
+//         a {
+//           margin: 0 10px;
+
+//           img {
+//             width: 25.6px;
+//           }
+//         }
+//       }
+//     }
+
+//     .info-contact {
+//       display: flex;
+//       flex-direction: column;
+//       width: 367px;
+//     }
+//   }
+
+//   .info-kodemia {
+//     display: flex;
+//     justify-content: space-between;
+    
+//     .phone-email p {
+//       text-align: end;
+//     }
+//   }
+
+//   .legal {
+//     border-top: 2px solid $white;
+//     display: flex;
+//     justify-content: space-between;
+//     margin-top: 20px;
+//     padding-top: 20px;
+
+//     a {
+//       color: $white;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
 .footer {
   margin: 0 5%;
 
+  * a {
+    color: $white;
+    text-decoration: none;
+  }
+
   .container {
-    display: flex;
-    justify-content: space-between;
-
-    .directory {
-      .navigation {
-        display: flex;
-        list-style: none;
-        margin: 30px 0;
-        white-space: pre;
-
-        li a {
-          color: $white;
-          text-decoration: none;
-        }
-      }
-
-      .social-media {
-        margin: 30px 0;
-        
-        a {
-          margin: 0 10px;
-
-          img {
-            width: 25.6px;
-          }
-        }
-      }
+    .logo {
+      width: 20%;
     }
 
-    .info-contact {
+    .navigation {
       display: flex;
-      flex-direction: column;
-      width: 367px;
+      list-style: none;
+      margin: 30px 0;
+      white-space: pre;
+      
+      li a {
+        color: $white;
+        text-decoration: none;
+      }
     }
+    .social-media {
+      margin: 30px 0;
+              
+      a {
+        margin: 0 10px;
+      
+        img {
+          width: 25.6px;
+         }
+       }
+      }
+
   }
 
-  .info-kodemia {
-    display: flex;
-    justify-content: space-between;
-    
-    .phone-email p {
-      text-align: end;
-    }
-  }
-
-  .legal {
+  .copyright-container {
     border-top: 2px solid $white;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
     padding-top: 20px;
-
-    a {
-      color: $white;
-      text-decoration: none;
+    text-align: center;
+    @include mobile {
+      flex-direction: column;
     }
+
+    .privacy {
+      @include mobile {
+        margin: 20px 0;
+      }
+    }
+
   }
 }
