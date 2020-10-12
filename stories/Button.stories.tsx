@@ -14,18 +14,20 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  type: 'Primary',
-  label: 'Conocenos',
+  isPrimary: true,
+  label: 'Conocer más',
+  hasWhiteBg: false
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  type: 'Secondary',
-  label: 'Conocenos'
+  isPrimary: false,
+  label: 'Conocer más',
+  hasWhiteBg: false
 };
 
 export const White = Template.bind({});
-Secondary.args = {
-  type: 'White',
-  label: 'Conocenos'
+White.args = {
+  label: 'Conocer más',
+  hasWhiteBg: true
 };

@@ -10,7 +10,9 @@ export default function Home () {
       </Head>
       <h1>Home</h1>
       <div>
-        <Button label='kodemia' />
+        <Button label='kodemia' hasWhiteBg />
+        <Button isPrimary label='kodemia' />
+        <Button isPrimary={false} label='kodemia' />
       </div>
     </div>
   )
