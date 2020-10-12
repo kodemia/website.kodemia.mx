@@ -2,7 +2,6 @@
 import React from 'react';
 import classNames from 'classnames'
 
-
 export interface ButtonProps {
   isPrimary: Boolean,
   label: string,
