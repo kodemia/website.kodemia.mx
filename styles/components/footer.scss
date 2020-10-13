@@ -1,67 +1,4 @@
 
-// .footer {
-//   margin: 0 5%;
-
-//   .container {
-//     display: flex;
-//     justify-content: space-between;
-
-//     .directory {
-//       .navigation {
-//         display: flex;
-//         list-style: none;
-//         margin: 30px 0;
-//         white-space: pre;
-
-//         li a {
-//           color: $white;
-//           text-decoration: none;
-//         }
-//       }
-
-//       .social-media {
-//         margin: 30px 0;
-        
-//         a {
-//           margin: 0 10px;
-
-//           img {
-//             width: 25.6px;
-//           }
-//         }
-//       }
-//     }
-
-//     .info-contact {
-//       display: flex;
-//       flex-direction: column;
-//       width: 367px;
-//     }
-//   }
-
-//   .info-kodemia {
-//     display: flex;
-//     justify-content: space-between;
-    
-//     .phone-email p {
-//       text-align: end;
-//     }
-//   }
-
-//   .legal {
-//     border-top: 2px solid $white;
-//     display: flex;
-//     justify-content: space-between;
-//     margin-top: 20px;
-//     padding-top: 20px;
-
-//     a {
-//       color: $white;
-//       text-decoration: none;
-//     }
-//   }
-// }
-
 .footer {
   margin: 0 5%;
 
@@ -71,43 +8,114 @@
   }
 
   .container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(3, auto);
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: unset;
+      text-align: center;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .logo {
-      width: 20%;
+      grid-column: 1 / 3;
+      width: 15%;
+      @include mobile {
+        grid-column: unset;
+        grid-row: unset;
+        width: 30%;
+      }
     }
 
-    .navigation {
+    .buttons {
+      grid-column: 2 / 3;
+      @include mobile {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+
+    .directory {
       display: flex;
-      list-style: none;
-      margin: 30px 0;
-      white-space: pre;
-      
-      li a {
-        color: $white;
-        text-decoration: none;
-      }
-    }
-    .social-media {
-      margin: 30px 0;
-              
-      a {
-        margin: 0 10px;
-      
-        img {
-          width: 25.6px;
-         }
-       }
+      flex-direction: column;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      justify-content: space-around;
+      margin-top: 20px;
+      @include mobile {
+        grid-row: unset;
       }
 
+      .navigation {
+        display: flex;
+        white-space: pre;
+        @include mobile {
+          justify-content: center;
+        }
+        
+        li a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+
+      .social-media {   
+        @include mobile {
+          margin: 40px 0 20px;
+        }
+
+        a {
+          margin: 0 10px;
+        
+          img {
+            width: 25.6px;
+          }
+        }
+      }
+        
+    }
+
+    .contact {
+      grid-column: 2 / 3;
+      margin: 20px 0;
+      text-align: end;
+      @include mobile {
+        grid-column: unset;
+        grid-row: unset;
+        margin-bottom: 0;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+
+    .address {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      margin: 20px 0;
+      @include mobile {
+        grid-column: unset;
+        grid-row: unset;
+        margin-top: 0;
+      }
+    }
   }
 
   .copyright-container {
     border-top: 2px solid $white;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     padding-top: 20px;
     text-align: center;
     @include mobile {
       flex-direction: column;
+
+      p {
+        margin: 0 10%;
+      }
     }
 
     .privacy {
@@ -115,6 +123,5 @@
         margin: 20px 0;
       }
     }
-
   }
 }

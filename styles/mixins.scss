@@ -10,7 +10,7 @@ $tablet-width: 1023px;
 }
 
 @mixin tablet {
-  @media (max-width: #{$tablet-width}) {
+  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width}) {
     @content;
   }
 }
