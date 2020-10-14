@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { Footer } from '../components/Footer'
+import { Navbar } from '../components/Navbar'
+import { Button } from '../components/Button'
 
 export default function Home () {
   return (
@@ -8,8 +9,7 @@ export default function Home () {
         <title>Kodemia</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <h1>Home</h1>
-      <Footer />
+      <Navbar />
     </div>
   )
 }

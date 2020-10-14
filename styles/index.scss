@@ -1,12 +1,14 @@
-
+//font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
 // variables
 @import './variables';
 @import './mixins';
 
-// components 
-@import './components/index';
+//bulma
+ //@import './node_modules/bulma/sass/components/navbar';
+@import 'bulma/bulma';
+
 
 * {
   border: 0;
@@ -16,7 +18,10 @@
 }
 
 body {
-  background-color: $black;
+  background-color: $body-background-color;
   color: $primary;
   font-family: 'Poppins',sans-serif;
 }
+
+// components 
+@import './components/index';

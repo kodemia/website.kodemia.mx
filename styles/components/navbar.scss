@@ -1,0 +1,42 @@
+.navbar{
+  * a{
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+  background-color: $black-transparent;
+  padding: 0 5%;
+  .navbar-menu {
+    .navbar-end {
+      .btns {
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        justify-content: space-between;
+        @include mobile{
+          flex-direction: column;
+          width: 100%;
+        }
+        width: 300px;
+        .btn-signIn{
+          width: 136px;
+          @include mobile{
+            width: 95%;
+            margin: 0 auto;
+          }
+        }
+        .btn-apply{
+          width: 136px;
+          @include mobile{
+            width: 95%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+}
