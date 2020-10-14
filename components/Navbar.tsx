@@ -1,5 +1,7 @@
 
 import React, { useState } from 'react';
+import Link from 'next/link'
+// my components
 import { Button } from './Button'
 
 export interface NavbarProps {
@@ -11,14 +13,16 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
       <div className='navbar-brand'>
-        <a href='/' className='navbar-item'>
-          <img
-            src='/icons/kodemia-logo-02.svg'
-            alt='Logo'
-            width='128'
-            height='35'
-          />
-        </a>
+        <Link href='/' >
+          <a className='navbar-item'>
+            <img
+              src='/icons/kodemia-logo-02.svg'
+              alt='Logo'
+              width='128'
+              height='35'
+            />
+          </a>
+        </Link>
 
         <a
           onClick={() => {
@@ -28,7 +32,6 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
           className={`navbar-burger burger ${isActive ? 'is-active' : ''}`}
           aria-label='menu'
           aria-expanded='false'
-          data-target='navbarBasicExample'
         >
           <span aria-hidden='true'></span>
           <span aria-hidden='true'></span>
@@ -38,21 +41,29 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className='navbar-end'>
           <div className='navbar-item'>
-            <a href='/' className='navbar-item'>
-              Bootcamps
-            </a>
-            <a href='/' className='navbar-item'>
-              Empresas
-            </a>
-            <a href='/' className='navbar-item'>
-              FQA
-            </a>
-            <a href='/' className='navbar-item'>
-              Alumnos
-            </a>
+            <Link href='/'>
+              <a className='navbar-item'>
+                Bootcamps
+              </a>
+            </Link>
+            <Link href='/'>
+              <a className='navbar-item'>
+                Empresas
+              </a>
+            </Link>
+            <Link href='/'>
+              <a className='navbar-item'>
+                FQA
+              </a>
+            </Link>
+            <Link href='/'>
+              <a className='navbar-item'>
+                Alumnos
+              </a>
+            </Link>
           </div>
           <div className='btns'>
-            <div className='btn-signIn'>
+            <div className='btn-sign-in'>
               <Button isPrimary={false} label='Iniciar sesión' />
             </div>
             <div className='btn-apply'>

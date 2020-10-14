@@ -16,12 +16,13 @@
   width: 100%;
   
   &:hover {
-    color:$white;
+    color: $white;
   }
 }
 
 .btn {
   @extend %btn;
+  
   .ikon {
     display: none;
   }
@@ -37,7 +38,7 @@
 }
 
 .button-primary {
-  border-color:  $cyan;
+  border-color: $cyan;
 
   &:hover {
     background-color: $cyan-primary;

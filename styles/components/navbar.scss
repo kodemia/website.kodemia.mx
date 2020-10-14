@@ -1,42 +1,103 @@
-.navbar{
-  * a{
-    color: $white;
-    font-size: 16px;
-    font-weight: 500;
+.navbar {
+  background-color: $black-transparent;
+  padding: 5px 5%;
+ 
+  * a {
     @include mobile {
       font-size: 18px;
     }
   }
-  background-color: $black-transparent;
-  padding: 0 5%;
+
+  .navbar-brand {
+    .navbar-item {
+      img {
+        max-height: none;
+      }
+    }
+  }
+
   .navbar-menu {
     .navbar-end {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      width: 100%;
+      @include mobile {
+        flex-direction: column;
+      }
+      // @include tablet{
+      //   flex-direction: column;
+      // }
+      @media (min-width:769px) and (max-width: 1023px) {
+        flex-direction: column;
+      }
+
+      .navbar-item {
+        margin: 0 auto;
+        @include mobile {
+          margin: 0;
+        }
+        // @include tablet {
+        //   margin: 0;
+        // }
+        @media (min-width:769px) and (max-width: 1023px) {
+          margin: 0;
+        }
+      }
+
       .btns {
         display: flex;
         flex-direction: row;
         font-size: 16px;
         justify-content: space-between;
-        @include mobile{
+        width: 300px;
+        @include mobile {
           flex-direction: column;
           width: 100%;
         }
-        width: 300px;
-        .btn-signIn{
-          width: 136px;
-          @include mobile{
-            width: 95%;
-            margin: 0 auto;
-          }
+        // @include tablet {
+        //   flex-direction: column;
+        //   width: 100%;
+        // }
+        @media (min-width:769px) and (max-width: 1023px) {
+          flex-direction: column;
+          width: 100%;
         }
-        .btn-apply{
+
+        .btn-sign-in {
           width: 136px;
-          @include mobile{
-            width: 95%;
+          
+          @include mobile {
             margin: 0 auto;
+            width: 95%;
+          }
+          //  @include tablet {
+          //    margin: 0 auto;
+          //    width: 95%;
+          //  }
+          @media (min-width:769px) and (max-width: 1023px) {
+            margin: 0 auto;
+            width: 95%;
+          }
+          
+        }
+
+        .btn-apply {
+          width: 136px;
+          @include mobile {
+            margin: 0 auto;
+            width: 95%;
+          }
+          //  @include tablet {
+          //   margin: 0 auto;
+          //   width: 95%;
+          // }
+          @media (min-width:769px) and (max-width: 1023px) {
+            margin: 0 auto;
+            width: 95%;
           }
         }
       }
     }
   }
-
 }
