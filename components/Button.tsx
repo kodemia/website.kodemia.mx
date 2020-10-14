@@ -20,10 +20,10 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
 
   let btnClass = classNames({
-    'button': !icon,
-    'button-icon': true,
-    'button-primary': isPrimary && !hasWhiteBg,
-    'button-secondary': !isPrimary && !hasWhiteBg,
+    'btn': !icon,
+    'button-ikon': true,
+    'button-primary': isPrimary,
+    'button-secondary': !isPrimary,
     'button-white': hasWhiteBg
   })
 
@@ -32,7 +32,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={btnClass}
       {...props}
     >
-      <img src={icon} className='icon' />
+      <img src={icon} className='ikon' />
       {label}
     </a>
   );
