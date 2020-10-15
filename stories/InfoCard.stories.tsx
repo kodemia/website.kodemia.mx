@@ -19,5 +19,3 @@ Primary.args = {
   title: 'Te acompañamos en el proceso',
   description: 'Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales'
 }
-
-
