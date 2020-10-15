@@ -7,14 +7,15 @@
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint:ts": "standardx '**/*.{tx,tsx}' --fix | snazzy"
   },
   "dependencies": {
+    "husky": "^4.3.0",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "sass": "^1.26.10",
-    "stylelint-scss": "^3.18.0"
+    "sass": "^1.26.10"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -24,15 +25,28 @@
     "@storybook/react": "^6.0.26",
     "@types/node": "^14.10.1",
     "@types/react": "^16.9.49",
-    "@typescript-eslint/eslint-plugin": "^4.4.0",
-    "@typescript-eslint/parser": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
     "babel-loader": "^8.1.0",
     "bulma": "^0.9.1",
     "react-is": "^16.13.1",
+    "snazzy": "^8.0.0",
     "standardx": "^5.0.0",
     "stylelint": "^13.7.2",
     "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-scss": "^3.18.0",
     "typescript": "^4.0.2"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   },
   "standardx": {
     "parser": "@typescript-eslint/parser",
@@ -40,9 +54,15 @@
       "@typescript-eslint/eslint-plugin"
     ]
   },
-  "stylelint":{
-    "extends": "stylelint-config-sass-guidelines","plugins": [
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines",
+    "plugins": [
       "stylelint-scss"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:ts"
+    }
   }
 }
