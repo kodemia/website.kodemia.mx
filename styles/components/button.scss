@@ -15,7 +15,7 @@
   width: 100%;
   
   &:hover {
-    color: $white;
+    color: $primary;
   }
 }
 
@@ -37,20 +37,20 @@
 }
 
 .button-primary {
-  border-color: $cyan;
+  border-color: $primary-btn-border;
 
   &:hover {
-    background-color: $cyan-primary;
-    border-color: $cyan-primary;
+    background-color: $primary-btn-hover;
+    border-color: $primary-btn-hover
   }
 } 
 
 .button-secondary {
-  border-color: $white;
+  border-color: $secondary-btn-border;
 
   &:hover {
-    background-color: $gray-primary;
-    border-color: $gray-primary;
+    background-color: $secondary-btn-hover;
+    border-color: $secondary-btn-hover;
   }
 }
 
@@ -65,3 +65,4 @@
     color: $white;
   }
 }
+
