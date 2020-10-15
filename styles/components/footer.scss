@@ -1,13 +1,12 @@
 
 .footer {
-  margin: 0 5%;
-
-  * a {
-    color: $white;
-    text-decoration: none;
+  background-color: $body-background-color;
+  padding: 6rem 0;
+  @include mobile {
+    padding: 3rem 0;
   }
 
-  .container {
+  .first-container {
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: repeat(3, auto);
@@ -22,19 +21,41 @@
 
     .logo {
       grid-column: 1 / 3;
-      width: 15%;
+      margin-bottom: 50px;
+      width: 14%;
       @include mobile {
         grid-column: unset;
         grid-row: unset;
+        margin-bottom: 25px;
         width: 30%;
       }
     }
 
     .buttons {
+      display: flex;
+      flex-direction: column;
       grid-column: 2 / 3;
       @include mobile {
         grid-column: unset;
         grid-row: unset;
+      }
+
+      .btn-whats {
+        margin: 10px 0;
+        margin-left: auto;
+        width: 337px;
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      .btn-telegram {
+        margin: 10px 0;
+        margin-left: auto;
+        width: 337px;
+        @include mobile {
+          width: 100%;
+        }
       }
     }
 
@@ -44,36 +65,45 @@
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       justify-content: space-around;
-      margin-top: 20px;
       @include mobile {
         grid-row: unset;
       }
 
       .navigation {
         display: flex;
+        flex-wrap: wrap;
+        font-size: 6vmin;
         white-space: pre;
         @include mobile {
           justify-content: center;
         }
-        
-        li a {
-          color: $white;
-          text-decoration: none;
+
+        .item-nav {
+          &:hover {
+            color: $info;
+          }
         }
       }
 
       .social-media {   
+        position: relative;
+        
         @include mobile {
           margin: 40px 0 20px;
         }
 
-        a {
+        .item-sm {
           margin: 0 10px;
-        
+          
           img {
             width: 25.6px;
+            
+            &:hover {
+              filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%);
+            }
           }
         }
+
       }
         
     }
@@ -122,6 +152,11 @@
       @include mobile {
         margin: 20px 0;
       }
+
+      &:hover {
+        color: $info;
+      }
+      
     }
   }
 }
