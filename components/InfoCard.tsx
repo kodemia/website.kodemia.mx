@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React from 'react'
 
 type Props = {
   icon: string,
@@ -8,18 +8,16 @@ type Props = {
 
 }
 
-export default function InfoCard({
+export default function InfoCard ({
   icon,
   title,
   description
 }: Props) {
-
-
   return (
     <div className='info-card'>
       <img src={icon} className='ikon' />
       <h2 className='title'>{title}</h2>
       <p className='description'>{description}</p>
     </div>
-  );
+  )
 };
