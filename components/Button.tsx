@@ -2,7 +2,7 @@
 import React from 'react';
 import classNames from 'classnames'
 
-export interface ButtonProps {
+type Props = {
   isPrimary: Boolean,
   label: string,
   icon: string,
@@ -11,19 +11,19 @@ export interface ButtonProps {
 
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export default function Button({
   isPrimary = true,
   label,
   icon,
   hasWhiteBg = false,
   ...props
-}) => {
+}: Props) {
 
   let btnClass = classNames({
-    'button': !icon,
-    'button-icon': true,
-    'button-primary': isPrimary && !hasWhiteBg,
-    'button-secondary': !isPrimary && !hasWhiteBg,
+    'btn': !icon,
+    'button-ikon': true,
+    'button-primary': isPrimary,
+    'button-secondary': !isPrimary,
     'button-white': hasWhiteBg
   })
 
@@ -32,7 +32,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={btnClass}
       {...props}
     >
-      <img src={icon} className='icon' />
+      <img src={icon} className='ikon' />
       {label}
     </a>
   );

@@ -4,6 +4,8 @@
 $black: #000;
 $black-medium: rgba(0, 0, 0, 0.6);
 $black-primary: #181818;
+$black-transparent: rgba(24, 24 , 24, 0.6);
+$black-transparent-hover: rgba(24, 24 , 24, 0.7);
 
 // Cyan
 $cyan: #0ff;
@@ -19,8 +21,20 @@ $white-primary: #f6f6f6;
 $gray: #bdbdbd;
 $gray-primary: #4e4e4e;
 
+// my variables
+$primary-btn-border: $cyan;
+$primary-btn-hover: $cyan-primary;
+$secondary-btn-border: $white;
+$secondary-btn-hover:$gray-primary;
+
 // Update Bulma's global variables
+$body-background-color: $black;
 $primary: $white;
 $info: $cyan;
 $text: $gray;
+$link: $white;
 
+//navbar
+$navbar-background-color: $black-transparent-hover;
+$navbar-item-hover-background-color: $black-transparent-hover;
+$navbar-item-color: $white;

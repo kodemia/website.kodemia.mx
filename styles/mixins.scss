@@ -4,13 +4,14 @@ $tablet-width: 1023px;
 
 // BREAK POINTS
 @mixin desktop {
-  @media (min-width: #{$tablet-width + 1px}) {
-	  @content;
-	}
+  @media (min-width: #{$tablet-width + 1px}){
+		@content;
+  }
 }
 
 @mixin tablet {
-  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width}) {
+	// ToDo: checar porque con variables se comporta extraño
+  @media (min-width: 769px) and (max-width: 1023) {
     @content;
   }
 }
@@ -20,4 +21,3 @@ $tablet-width: 1023px;
 		@content;
 	}
 }
-
