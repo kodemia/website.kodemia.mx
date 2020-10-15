@@ -25,11 +25,26 @@
   }
 }
 
+
+
 body {
   background-color: $body-background-color;
   color: $primary;
   font-family: 'Poppins',sans-serif;
 }
 
+.card{
+  width: 372px;
+  height: 222px;
+  background-color: $body-background-color;
+  @include tablet {
+    width: 454px;
+    height: 190px;
+  }
+  @include mobile{
+    width: 676px;
+  height: 204px;
+  }
+}
 // components 
 @import './components/index';

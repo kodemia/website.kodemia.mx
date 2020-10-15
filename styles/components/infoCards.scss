@@ -1,0 +1,29 @@
+.info-card {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-template-rows: repeat(2, auto);
+
+
+  .ikon{
+    grid-column: 1 / 2;
+    grid-row: 1 /3;
+    margin-right: 16px;
+    width: 26px;
+
+  }
+
+  .title{
+    color: $primary;
+    font-size: 22px;
+    grid-column: 2/ 3;
+    grid-row: 1 / 2;
+    margin: 0;
+    width: 300px;
+  }
+
+  .description{
+    font-size: 2vmax;
+    grid-column: 2 / 3;
+    grid-row: 2 /3;
+  }
+}
