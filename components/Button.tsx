@@ -1,6 +1,6 @@
 
-import React from 'react';
-import classNames from 'classnames';
+import React from 'react'
+import classNames from 'classnames'
 
 type Props = {
   isPrimary: Boolean,
@@ -11,16 +11,15 @@ type Props = {
 
 }
 
-export default function Button({
+export default function Button ({
   isPrimary = true,
   label,
   icon,
   hasWhiteBg = false,
   ...props
 }: Props) {
-
-  let btnClass = classNames({
-    'btn': !icon,
+  const btnClass = classNames({
+    btn: !icon,
     'button-ikon': true,
     'button-primary': isPrimary,
     'button-secondary': !isPrimary,
@@ -35,5 +34,5 @@ export default function Button({
       <img src={icon} className='ikon' />
       {label}
     </a>
-  );
+  )
 };
