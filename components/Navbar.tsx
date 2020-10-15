@@ -1,19 +1,15 @@
 
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Link from 'next/link'
 // my components
-import { Button } from './Button'
+import Button from './Button'
 
-export interface NavbarProps {
-
-}
-
-export const Navbar: React.FC<NavbarProps> = ({ }) => {
+export default function Navbar() {
   const [isActive, setisActive] = useState(false)
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
       <div className='navbar-brand'>
-        <Link href='/' >
+        <Link href='/'>
           <a className='navbar-item'>
             <img
               src='/icons/kodemia-logo-02.svg'
@@ -33,9 +29,9 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
           aria-label='menu'
           aria-expanded='false'
         >
-          <span aria-hidden='true'></span>
-          <span aria-hidden='true'></span>
-          <span aria-hidden='true'></span>
+          <span aria-hidden='true' />
+          <span aria-hidden='true' />
+          <span aria-hidden='true' />
         </a>
       </div>
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
@@ -67,10 +63,11 @@ export const Navbar: React.FC<NavbarProps> = ({ }) => {
               <Button isPrimary={false} label='Iniciar sesión' />
             </div>
             <div className='btn-apply'>
-              <Button isPrimary={true} label='Aplica hoy' /></div>
+              <Button isPrimary label='Aplica hoy' />
+            </div>
           </div>
         </div>
       </div>
     </nav>
-  );
+  )
 };

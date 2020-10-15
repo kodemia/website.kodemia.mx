@@ -2,7 +2,7 @@ import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Navbar, NavbarProps } from '../components/Navbar';
+import Navbar from '../components/Navbar';
 
 export default {
   title: 'Base/Navbar',
@@ -10,8 +10,7 @@ export default {
 
 } as Meta;
 
-const Template: Story<NavbarProps> = (args) => <Navbar {...args} />;
+const Template: Story = () => <Navbar />;
 
-export const presentationalComponents = Template.bind({});
-presentationalComponents.args = {};
+export const Styled = Template.bind({});
 

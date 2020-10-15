@@ -1,6 +1,9 @@
 .navbar {
   background-color: $black-transparent;
   padding: 5px 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
  
   * a {
     @include mobile {
@@ -15,8 +18,22 @@
       }
     }
   }
+  
 
   .navbar-menu {
+    @include mobile {
+      margin-left: -5%;
+      padding: 0 5%;
+      position: absolute;
+      width: 100%;
+    }
+    @media (min-width:769px) and (max-width: 1023px) {
+      margin-left: -5%;
+      padding: 0 5%;
+      position: absolute;
+      width: 100%;
+    }
+
     .navbar-end {
       display: flex;
       justify-content: space-between;
@@ -36,16 +53,28 @@
         margin: 0 auto;
         @include mobile {
           margin: 0;
+          padding: 0;
         }
         // @include tablet {
         //   margin: 0;
         // }
         @media (min-width:769px) and (max-width: 1023px) {
           margin: 0;
+          padding: 0;
+        }
+
+        a {
+          @include mobile {
+            margin: 20px 0;
+          }
+          @media (min-width:769px) and (max-width: 1023px) {
+            margin: 20px 0;
+          }
         }
       }
 
       .btns {
+        align-items: center;
         display: flex;
         flex-direction: row;
         font-size: 16px;
@@ -66,9 +95,9 @@
 
         .btn-sign-in {
           width: 136px;
-          
           @include mobile {
-            margin: 0 auto;
+            margin: 20px auto;
+            //margin-bottom: 20px;
             width: 95%;
           }
           //  @include tablet {
@@ -76,16 +105,15 @@
           //    width: 95%;
           //  }
           @media (min-width:769px) and (max-width: 1023px) {
-            margin: 0 auto;
+            margin: 20 auto;
             width: 95%;
           }
-          
         }
 
         .btn-apply {
           width: 136px;
           @include mobile {
-            margin: 0 auto;
+            margin: 20px auto;
             width: 95%;
           }
           //  @include tablet {
@@ -93,7 +121,7 @@
           //   width: 95%;
           // }
           @media (min-width:769px) and (max-width: 1023px) {
-            margin: 0 auto;
+            margin: 20px auto;
             width: 95%;
           }
         }
