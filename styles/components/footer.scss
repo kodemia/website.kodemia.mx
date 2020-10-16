@@ -1,9 +1,14 @@
 
 .footer {
   background-color: $body-background-color;
+  margin: 0 155px;
   padding: 6rem 0;
   @include mobile {
+    margin: 0 32px;
     padding: 3rem 0;
+  }
+  @include tablet {
+    margin: 0 85px;
   }
 
   .first-container {
@@ -22,12 +27,15 @@
     .logo {
       grid-column: 1 / 3;
       margin-bottom: 50px;
-      width: 14%;
+      width: 172px;
       @include mobile {
         grid-column: unset;
         grid-row: unset;
         margin-bottom: 25px;
-        width: 30%;
+        width: 198px;
+      }
+      @include tablet {
+        margin-bottom: 40px;
       }
     }
 
@@ -85,27 +93,28 @@
         }
       }
 
-      .social-media {   
+      .social-media {
         position: relative;
-        
+
         @include mobile {
           margin: 40px 0 20px;
         }
 
         .item-sm {
           margin: 0 10px;
-          
+
           img {
             width: 25.6px;
-            
+
             &:hover {
               filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%);
             }
+
           }
         }
 
       }
-        
+
     }
 
     .contact {
@@ -156,7 +165,6 @@
       &:hover {
         color: $info;
       }
-      
     }
   }
 }

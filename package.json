@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "storybook": "start-storybook  -s ./public -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "lint:ts": "standardx '**/*.{tx,tsx}' --fix | snazzy",
+    "lint:scss": "stylelint '**/*.scss' --fix",
+    "lint": "npm run lint:ts ; npm run lint:scss"
   },
   "dependencies": {
     "dayjs": "^1.9.1",
     "classnames": "^2.2.6",
+    "husky": "^4.3.0",
     "next": "9.5.3",
     "next-compose-plugins": "^2.2.0",
     "next-images": "^1.6.0",
@@ -19,7 +23,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.26.10",
-    "stylelint-scss": "^3.18.0"
+    "sass-loader": "^10.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -30,18 +34,30 @@
     "@storybook/react": "^6.0.26",
     "@types/node": "^14.10.1",
     "@types/react": "^16.9.49",
-    "@typescript-eslint/eslint-plugin": "^4.4.0",
-    "@typescript-eslint/parser": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
     "babel-loader": "^8.1.0",
     "bulma": "^0.9.1",
     "css-loader": "^4.3.0",
     "react-is": "^16.13.1",
-    "sass-loader": "^10.0.2",
+    "snazzy": "^8.0.0",
     "standardx": "^5.0.0",
     "style-loader": "^1.3.0",
     "stylelint": "^13.7.2",
     "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-scss": "^3.18.0",
     "typescript": "^4.0.2"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   },
   "standardx": {
     "parser": "@typescript-eslint/parser",
@@ -55,8 +71,13 @@
       "stylelint-scss"
     ],
     "rules": {
-      "max-nesting-depth": 5,
+      "max-nesting-depth": 7,
       "selector-max-compound-selectors": 7
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
     }
   }
 }
