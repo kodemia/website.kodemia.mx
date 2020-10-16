@@ -7,7 +7,7 @@
   border-width: 2px;
   color: $primary;
   cursor: pointer;
-  display:flex;
+  display: flex;
   font-size: 16px;
   font-weight: 500;
   justify-content: center;
@@ -42,7 +42,7 @@
 
   &:hover {
     background-color: $primary-btn-hover;
-    border-color: $primary-btn-hover
+    border-color: $primary-btn-hover;
   }
 }
 
