@@ -42,6 +42,8 @@ export default function Footer () {
             <a
               href='https://www.facebook.com/kodemiamx'
               target='_blank'
+              rel='noopener noreferrer'
+
               className='item-sm'
             >
               <img src='/icons/Social-media-fb.svg' />
@@ -50,6 +52,7 @@ export default function Footer () {
             <a
               href='https://www.instagram.com/kodemiamx'
               target='_blank'
+              rel='noopener noreferrer'
               className='item-sm'
             >
               <img src='/icons/Social-media-insta.svg' />
@@ -57,6 +60,7 @@ export default function Footer () {
             <a
               href='https://twitter.com/kodemiamx'
               target='_blank'
+              rel='noopener noreferrer'
               className='item-sm'
             >
               <img src='/icons/Social-media-tw.svg' />
@@ -64,6 +68,7 @@ export default function Footer () {
             <a
               href='https://github.com/kodemia'
               target='_blank'
+              rel='noopener noreferrer'
               className='item-sm'
             >
               <img src='/icons/Social-media-gh.svg' />
@@ -71,6 +76,7 @@ export default function Footer () {
             <a
               href='https://medium.com/kodemia'
               target='_blank'
+              rel='noopener noreferrer'
               className='item-sm'
             >
               <img src='/icons/Social-media-medium.svg' />
@@ -78,6 +84,7 @@ export default function Footer () {
             <a
               href='https://www.youtube.com/channel/UCjCo9gdMQdebs95zcufryaQ'
               target='_blank'
+              rel='noopener noreferrer'
               className='item-sm'
             >
               <img src='/icons/Social-media-yt.svg' />
@@ -85,6 +92,7 @@ export default function Footer () {
             <a
               href='https://www.linkedin.com/company/kodemiamx'
               target='_blank'
+              rel='noopener noreferrer'
               className='item-sm'
             >
               <img src='/icons/Social-media-in.svg' />
