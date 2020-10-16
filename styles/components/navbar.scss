@@ -1,10 +1,14 @@
+
 .navbar {
   background-color: $black-transparent;
-  padding: 5px 5%;
+  padding: 12px 49px;
   position: fixed;
   top: 0;
   width: 100%;
- 
+  @include mobile {
+    padding: 5px 8px;
+  }
+
   * a {
     @include mobile {
       font-size: 18px;
@@ -18,19 +22,21 @@
       }
     }
   }
-  
+
 
   .navbar-menu {
     @include mobile {
-      margin-left: -5%;
-      padding: 0 5%;
+      margin-left: -8px;
+      padding: 0 40px;
       position: absolute;
+      top: 62px;
       width: 100%;
     }
     @media (min-width:769px) and (max-width: 1023px) {
-      margin-left: -5%;
-      padding: 0 5%;
+      margin-left: -49px;
+      padding: 0 80px;
       position: absolute;
+      top: 76px;
       width: 100%;
     }
 
@@ -95,6 +101,7 @@
 
         .btn-sign-in {
           width: 136px;
+
           @include mobile {
             margin: 20px auto;
             //margin-bottom: 20px;
@@ -106,8 +113,10 @@
           //  }
           @media (min-width:769px) and (max-width: 1023px) {
             margin: 20 auto;
+            // margin-bottom: 20px;
             width: 95%;
           }
+
         }
 
         .btn-apply {
