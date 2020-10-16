@@ -1,4 +1,3 @@
-
 import React from 'react'
 import * as dayjs from 'dayjs'
 import Link from 'next/link'
@@ -42,7 +41,7 @@ export default function Footer () {
           <div className='social-media'>
             <a
               href='https://www.facebook.com/kodemiamx'
-              rel='noopener'
+              target='_blank'
               className='item-sm'
             >
               <img src='/icons/Social-media-fb.svg' />
@@ -50,42 +49,42 @@ export default function Footer () {
 
             <a
               href='https://www.instagram.com/kodemiamx'
-              rel='noopener'
+              target='_blank'
               className='item-sm'
             >
               <img src='/icons/Social-media-insta.svg' />
             </a>
             <a
               href='https://twitter.com/kodemiamx'
-              rel='noopener'
+              target='_blank'
               className='item-sm'
             >
               <img src='/icons/Social-media-tw.svg' />
             </a>
             <a
               href='https://github.com/kodemia'
-              rel='noopener'
+              target='_blank'
               className='item-sm'
             >
               <img src='/icons/Social-media-gh.svg' />
             </a>
             <a
               href='https://medium.com/kodemia'
-              rel='noopener'
+              target='_blank'
               className='item-sm'
             >
               <img src='/icons/Social-media-medium.svg' />
             </a>
             <a
               href='https://www.youtube.com/channel/UCjCo9gdMQdebs95zcufryaQ'
-              rel='noopener'
+              target='_blank'
               className='item-sm'
             >
               <img src='/icons/Social-media-yt.svg' />
             </a>
             <a
               href='https://www.linkedin.com/company/kodemiamx'
-              rel='noopener'
+              target='_blank'
               className='item-sm'
             >
               <img src='/icons/Social-media-in.svg' />
