@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import Button from './Button'
 
-export default function Footer () {
+export default function Footer() {
   return (
     <footer className='footer'>
       <div className='first-container'>
@@ -42,7 +42,7 @@ export default function Footer () {
           <div className='social-media'>
             <a
               href='https://www.facebook.com/kodemiamx'
-              target='_blank'
+              rel='noopener'
               className='item-sm'
             >
               <img src='/icons/Social-media-fb.svg' />
@@ -50,42 +50,42 @@ export default function Footer () {
 
             <a
               href='https://www.instagram.com/kodemiamx'
-              target='_blank'
+              rel='noopener'
               className='item-sm'
             >
               <img src='/icons/Social-media-insta.svg' />
             </a>
             <a
               href='https://twitter.com/kodemiamx'
-              target='_blank'
+              rel='noopener'
               className='item-sm'
             >
               <img src='/icons/Social-media-tw.svg' />
             </a>
             <a
               href='https://github.com/kodemia'
-              target='_blank'
+              rel='noopener'
               className='item-sm'
             >
               <img src='/icons/Social-media-gh.svg' />
             </a>
             <a
               href='https://medium.com/kodemia'
-              target='_blank'
+              rel='noopener'
               className='item-sm'
             >
               <img src='/icons/Social-media-medium.svg' />
             </a>
             <a
               href='https://www.youtube.com/channel/UCjCo9gdMQdebs95zcufryaQ'
-              target='_blank'
+              rel='noopener'
               className='item-sm'
             >
               <img src='/icons/Social-media-yt.svg' />
             </a>
             <a
               href='https://www.linkedin.com/company/kodemiamx'
-              target='_blank'
+              rel='noopener'
               className='item-sm'
             >
               <img src='/icons/Social-media-in.svg' />
