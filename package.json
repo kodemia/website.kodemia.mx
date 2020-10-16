@@ -65,7 +65,11 @@
     "extends": "stylelint-config-sass-guidelines",
     "plugins": [
       "stylelint-scss"
-    ]
+    ],
+    "rules": {
+      "max-nesting-depth": 7,
+      "selector-max-compound-selectors": 7
+    }
   },
   "husky": {
     "hooks": {

@@ -1,0 +1,47 @@
+
+.bootcamp-type {
+  border: solid 1px $text;
+  border-radius: 10px;
+
+  &:hover {
+    border-color: $primary-btn-border;
+  }
+
+  .type-container {
+    margin: 25px 20px 30px;
+
+    .mode {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .date {
+      color: $info;
+      font-size: 20px;
+
+    }
+
+    .schedule {
+      margin: 24px 0;
+
+      .schedule-title {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .schedule-content {
+        color: $text;
+        font-size: 18px;
+        margin: 0;
+        width: 200px;
+      }
+    }
+
+    .feature {
+      color: $text;
+      font-size: 18px;
+      margin-bottom: 36px;
+      margin-top: 12px;
+    }
+  }
+}
