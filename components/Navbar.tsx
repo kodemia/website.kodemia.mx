@@ -4,7 +4,7 @@ import Link from 'next/link'
 // my components
 import Button from './Button'
 
-export default function Navbar() {
+export default function Navbar () {
   const [isActive, setisActive] = useState(false)
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
