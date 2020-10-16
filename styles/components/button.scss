@@ -1,0 +1,68 @@
+
+%btn {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  color: $primary;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
+  padding: 6.5px 10px;
+  transition: all 0.4s ease;
+  width: 100%;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.btn {
+  @extend %btn;
+
+  .ikon {
+    display: none;
+  }
+}
+
+.button-ikon {
+  @extend %btn;
+
+  .ikon {
+    margin-right: 10px;
+    width: 20px;
+  }
+}
+
+.button-primary {
+  border-color: $primary-btn-border;
+
+  &:hover {
+    background-color: $primary-btn-hover;
+    border-color: $primary-btn-hover;
+  }
+}
+
+.button-secondary {
+  border-color: $secondary-btn-border;
+
+  &:hover {
+    background-color: $secondary-btn-hover;
+    border-color: $secondary-btn-hover;
+  }
+}
+
+.button-white {
+  background-color: $white;
+  border-color: $white;
+  color: $black;
+
+  &:hover {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+  }
+}
