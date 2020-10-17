@@ -1,18 +1,18 @@
 [
   {
     "name": "Bootcamps",
-    "hrf": "/"
+    "href": "/"
   },
   {
     "name": "Empresas",
-    "hrf": "/"
+    "href": "/"
   },
   {
     "name": "FQA",
-    "hrf": "/"
+    "href": "/"
   },
   {
     "name": "Alumnos",
-    "hrf": "/"
+    "href": "/"
   }
 ]

@@ -15,8 +15,7 @@
   padding: 0;
 }
 
-* a {
-  color: $link;
+a {
   font-size: 16px;
   font-weight: 500;
 
@@ -26,7 +25,6 @@
 }
 
 body {
-  background-color: $body-background-color;
   color: $primary;
   font-family: 'Poppins',sans-serif;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import Link from 'next/link'
 
 import Button from './Button'

@@ -5,12 +5,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  @include mobile {
+  @include on-mobile {
     padding: 5px 8px;
   }
 
-  * a {
-    @include mobile {
+  a {
+    @include on-mobile {
       font-size: 18px;
     }
   }
@@ -25,14 +25,14 @@
 
 
   .navbar-menu {
-    @include mobile {
+    @include on-mobile {
       margin-left: -8px;
       padding: 0 40px;
       position: absolute;
       top: 62px;
       width: 100%;
     }
-    @media (min-width:769px) and (max-width: 1023px) {
+    @include on-tablet {
       margin-left: -49px;
       padding: 0 80px;
       position: absolute;
@@ -41,36 +41,25 @@
     }
 
     .navbar-end {
-      display: flex;
-      justify-content: space-between;
       margin: 0;
       width: 100%;
-      @include mobile {
-        flex-direction: column;
-      }
-      // @include tablet{
-      //   flex-direction: column;
-      // }
-      @media (min-width:769px) and (max-width: 1023px) {
-        flex-direction: column;
-      }
 
       .navbar-item {
         margin: 0 auto;
-        @include mobile {
+        @include on-mobile {
           margin: 0;
           padding: 0;
         }
-        // @include tablet {
+        // @include on-tablet {
         //   margin: 0;
         // }
-        @media (min-width:769px) and (max-width: 1023px) {
-          margin: 0;
-          padding: 0;
-        }
+        // @media (min-width:769px) and (max-width: 1023px) {
+        //   margin: 0;
+        //   padding: 0;
+        // }
 
         a {
-          @include mobile {
+          @include on-mobile {
             margin: 20px 0;
           }
           @media (min-width:769px) and (max-width: 1023px) {
@@ -86,15 +75,12 @@
         font-size: 16px;
         justify-content: space-between;
         width: 300px;
-        @include mobile {
+        @include on-mobile {
           flex-direction: column;
           width: 100%;
         }
-        // @include tablet {
-        //   flex-direction: column;
-        //   width: 100%;
-        // }
-        @media (min-width:769px) and (max-width: 1023px) {
+
+        @include on-tablet {
           flex-direction: column;
           width: 100%;
         }
@@ -102,18 +88,12 @@
         .btn-sign-in {
           width: 136px;
 
-          @include mobile {
+          @include on-mobile {
             margin: 20px auto;
-            //margin-bottom: 20px;
             width: 95%;
           }
-          //  @include tablet {
-          //    margin: 0 auto;
-          //    width: 95%;
-          //  }
-          @media (min-width:769px) and (max-width: 1023px) {
-            margin: 20 auto;
-            // margin-bottom: 20px;
+          @include on-tablet {
+            margin: 20px auto;
             width: 95%;
           }
 
@@ -121,15 +101,12 @@
 
         .btn-apply {
           width: 136px;
-          @include mobile {
+          @include on-mobile {
             margin: 20px auto;
             width: 95%;
           }
-          //  @include tablet {
-          //   margin: 0 auto;
-          //   width: 95%;
-          // }
-          @media (min-width:769px) and (max-width: 1023px) {
+
+          @include on-tablet {
             margin: 20px auto;
             width: 95%;
           }

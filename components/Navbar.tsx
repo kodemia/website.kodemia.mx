@@ -38,17 +38,19 @@ export default function Navbar () {
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className='navbar-end'>
           <div className='navbar-item'>
-            {NavbarItems.map(({ name, hrf }, index) => (
-              <Link href={hrf} key={index}>
-                <a className='navbar-item'>
-                  {name}
-                </a>
-              </Link>
-            ))}
+            {
+              NavbarItems.map(({ name, href }, index) => (
+                <Link href={href} key={index}>
+                  <a className='navbar-item'>
+                    {name}
+                  </a>
+                </Link>
+              ))
+            }
           </div>
           <div className='btns'>
             <div className='btn-sign-in'>
-              <Button isPrimary={false} label='Iniciar sesión' />
+              <Button label='Iniciar sesión' />
             </div>
             <div className='btn-apply'>
               <Button isPrimary label='Aplica hoy' />
