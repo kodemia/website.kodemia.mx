@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 // my components
 import Button from './Button'
+import NavbarItems from '../config/navbar-items.json'
 
-export default function Navbar () {
+export default function Navbar() {
   const [isActive, setisActive] = useState(false)
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
@@ -37,26 +38,13 @@ export default function Navbar () {
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className='navbar-end'>
           <div className='navbar-item'>
-            <Link href='/'>
-              <a className='navbar-item'>
-                Bootcamps
-              </a>
-            </Link>
-            <Link href='/'>
-              <a className='navbar-item'>
-                Empresas
-              </a>
-            </Link>
-            <Link href='/'>
-              <a className='navbar-item'>
-                FQA
-              </a>
-            </Link>
-            <Link href='/'>
-              <a className='navbar-item'>
-                Alumnos
-              </a>
-            </Link>
+            {NavbarItems.map(({ name, hrf }, index) => (
+              <Link href={hrf} key={index}>
+                <a className='navbar-item'>
+                  {name}
+                </a>
+              </Link>
+            ))}
           </div>
           <div className='btns'>
             <div className='btn-sign-in'>
