@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Button from './Button'
 import NavbarItems from '../config/navbar-items.json'
 
-export default function Navbar() {
+export default function Navbar () {
   const [isActive, setisActive] = useState(false)
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
