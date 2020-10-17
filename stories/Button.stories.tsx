@@ -21,7 +21,7 @@ export default {
       control: 'text'
     }
   },
-  decorators: [ Story => <div style={{maxWidth: '200px'}} ><Story/></div> ]
+  decorators: [Story => <div style={{ maxWidth: '200px' }}><Story /></div>]
 } as Meta
 
 const Template: Story<Props> = (args) => <Button {...args} />
