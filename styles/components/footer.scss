@@ -3,11 +3,11 @@
   background-color: $body-background-color;
   margin: 0 155px;
   padding: 6rem 0;
-  @include mobile {
+  @include on-mobile {
     margin: 0 32px;
     padding: 3rem 0;
   }
-  @include tablet {
+  @include on-tablet {
     margin: 0 85px;
   }
 
@@ -15,12 +15,12 @@
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: repeat(3, auto);
-    @include mobile {
+    @include on-mobile {
       grid-template-columns: 1fr;
       grid-template-rows: unset;
       text-align: center;
     }
-    @include tablet {
+    @include on-tablet {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -28,13 +28,13 @@
       grid-column: 1 / 3;
       margin-bottom: 50px;
       width: 172px;
-      @include mobile {
+      @include on-mobile {
         grid-column: unset;
         grid-row: unset;
         margin-bottom: 25px;
         width: 198px;
       }
-      @include tablet {
+      @include on-tablet {
         margin-bottom: 40px;
       }
     }
@@ -43,7 +43,7 @@
       display: flex;
       flex-direction: column;
       grid-column: 2 / 3;
-      @include mobile {
+      @include on-mobile {
         grid-column: unset;
         grid-row: unset;
       }
@@ -52,7 +52,7 @@
         margin: 10px 0;
         margin-left: auto;
         width: 337px;
-        @include mobile {
+        @include on-mobile {
           width: 100%;
         }
       }
@@ -61,7 +61,7 @@
         margin: 10px 0;
         margin-left: auto;
         width: 337px;
-        @include mobile {
+        @include on-mobile {
           width: 100%;
         }
       }
@@ -73,7 +73,7 @@
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       justify-content: space-around;
-      @include mobile {
+      @include on-mobile {
         grid-row: unset;
       }
 
@@ -82,7 +82,7 @@
         flex-wrap: wrap;
         font-size: 6vmin;
         white-space: pre;
-        @include mobile {
+        @include on-mobile {
           justify-content: center;
         }
 
@@ -96,7 +96,7 @@
       .social-media {
         position: relative;
 
-        @include mobile {
+        @include on-mobile {
           margin: 40px 0 20px;
         }
 
@@ -121,7 +121,7 @@
       grid-column: 2 / 3;
       margin: 20px 0;
       text-align: end;
-      @include mobile {
+      @include on-mobile {
         grid-column: unset;
         grid-row: unset;
         margin-bottom: 0;
@@ -134,7 +134,7 @@
       grid-column: 1 / 2;
       grid-row: 3 / 4;
       margin: 20px 0;
-      @include mobile {
+      @include on-mobile {
         grid-column: unset;
         grid-row: unset;
         margin-top: 0;
@@ -149,7 +149,7 @@
     margin-top: 10px;
     padding-top: 20px;
     text-align: center;
-    @include mobile {
+    @include on-mobile {
       flex-direction: column;
 
       p {
@@ -158,7 +158,7 @@
     }
 
     .privacy {
-      @include mobile {
+      @include on-mobile {
         margin: 20px 0;
       }
 

@@ -2,20 +2,19 @@
 import React from 'react'
 import classNames from 'classnames'
 
-type Props = {
-  isPrimary: Boolean,
-  label: string,
-  icon: string,
-  hasWhiteBg: Boolean,
-  onClick?: () => void;
-
+export interface Props {
+  isPrimary?: Boolean
+  label: string
+  icon?: string
+  hasWhiteBg?: Boolean
+  onClick?: () => void
 }
 
 export default function Button ({
-  isPrimary = true,
+  isPrimary,
   label,
   icon,
-  hasWhiteBg = false,
+  hasWhiteBg,
   ...props
 }: Props) {
   const btnClass = classNames({
