@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 export default function Home () {
   return (
@@ -7,7 +9,8 @@ export default function Home () {
         <title>Kodemia</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <h1>Home</h1>
+      <Navbar />
+      <Footer />
     </div>
   )
 }
