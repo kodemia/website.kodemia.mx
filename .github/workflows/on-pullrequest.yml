@@ -1,5 +1,5 @@
 
-name: test annd deploy chromatic
+name: test and deploy chromatic
 
 on: [pull_request]
 
@@ -20,7 +20,7 @@ jobs:
     - run: npm install
     - run: npm test
 
-    deploy chromatic:
+    deploy-chromatic:
     runs-on: ubuntu-latest
 
     strategy:
