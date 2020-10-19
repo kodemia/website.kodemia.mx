@@ -19,9 +19,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm test
-      env:
-        CI: true
-        CHROMATIC_TOKEN: ${{ secrets.CHROMATIC_TOKEN }}
   chromatic:
     runs-on: ubuntu-latest
 
