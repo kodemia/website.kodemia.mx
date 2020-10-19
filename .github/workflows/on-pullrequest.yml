@@ -1,5 +1,5 @@
 
-name: Test and deploy chromatic
+name: Test and deploy ui test
 
 on: [pull_request]
 
