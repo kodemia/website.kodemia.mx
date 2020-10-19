@@ -14,7 +14,7 @@
     "lint:scss:fix": "stylelint '**/*.scss' --fix",
     "lint": "npm run lint:ts ; npm run lint:scss",
     "lint:fix": "npm run lint:ts:fix ; npm run lint:scss:fix",
-    "chromatic": "chromatic --project-token pb587nrefn",
+    "chromatic": "chromatic",
     "test": "npm lint"
   },
   "dependencies": {

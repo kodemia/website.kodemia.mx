@@ -21,6 +21,7 @@ jobs:
     - run: npm test
       env:
         CI: true
+        CHROMATIC_TOKEN: ${{ secrets.CHROMATIC_TOKEN }}
   chromatic:
     runs-on: ubuntu-latest
 
@@ -30,10 +31,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm chromatic
+        fetch-depth: 0 # Required to retrieve git history
+    - uses: chromaui/action@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
