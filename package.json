@@ -15,7 +15,7 @@
     "lint": "npm run lint:ts ; npm run lint:scss",
     "lint:fix": "npm run lint:ts:fix ; npm run lint:scss:fix",
     "chromatic": "chromatic",
-    "test": "npm lint"
+    "test": "npm run lint"
   },
   "dependencies": {
     "classnames": "^2.2.6",
