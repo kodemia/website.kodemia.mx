@@ -1,10 +1,10 @@
 
-name: test and deploy chromatic
+name: Test and deploy chromatic
 
 on: [pull_request]
 
 jobs:
-  install:
+  test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,24 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-
-  test:
-    needs: install
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
     - run: npm test
-
-  deploy-chromatic:
-    needs: [ 'install', 'test' ]
-    runs-on: ubuntu-latest
-    
-    steps:
     - uses: chromaui/action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
