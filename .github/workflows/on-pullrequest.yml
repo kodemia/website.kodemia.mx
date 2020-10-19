@@ -4,7 +4,7 @@ name: test and deploy chromatic
 on: [pull_request]
 
 jobs:
-  linting:
+  install:
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,22 +18,24 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm test
 
-  chromatic-deploy:
+  test:
+    needs: install
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
-    
     steps:
     - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0 # Required to retrieve git history
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
-    - run: npm install
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm test
+
+  deploy-chromatic:
+    needs: [ 'install', 'test' ]
+    runs-on: ubuntu-latest
+    
+    steps:
     - uses: chromaui/action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
