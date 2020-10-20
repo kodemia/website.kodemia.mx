@@ -6,8 +6,22 @@ import BootcampCard from '../components/BootcampCard'
 
 export default {
   title: 'Base/BootcampCard',
-  component: BootcampCard
-
+  component: BootcampCard,
+  argTypes: {
+    mode: {
+      control: 'text'
+    },
+    date: {
+      control: 'text'
+    },
+    schedule: {
+      control: 'text'
+    },
+    feature: {
+      control: 'text'
+    }
+  },
+  decorators: [Story => <div style={{ maxWidth: '300px' }}><Story /></div>]
 } as Meta
 
 const Template: Story = (args) => <BootcampCard {...args} />

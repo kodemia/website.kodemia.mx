@@ -2,14 +2,14 @@
 import React from 'react'
 import Button from './Button'
 
-type Props = {
+export interface Props {
   mode: string,
   date: String,
   schedule: string,
   feature: string
 }
 
-export default function BootcampCard ({
+export default function BootcampCard({
   mode,
   date,
   schedule,
@@ -25,7 +25,7 @@ export default function BootcampCard ({
           <p className='schedule-content'>{schedule}</p>
         </div>
         <p className='feature'>{feature}</p>
-        <Button label='Conocer más' />
+        <Button isPrimary label='Conocer más' />
       </div>
     </div>
   )

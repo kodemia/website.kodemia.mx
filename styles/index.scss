@@ -15,21 +15,19 @@
   padding: 0;
 }
 
-* a {
-  color: $link;
+a {
   font-size: 16px;
   font-weight: 500;
-  
+
   &:hover {
     color: $link;
   }
 }
 
 body {
-  background-color: $body-background-color;
   color: $primary;
   font-family: 'Poppins',sans-serif;
 }
 
-// components 
+// components
 @import './components/index';

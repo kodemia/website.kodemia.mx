@@ -1,0 +1,117 @@
+
+.navbar {
+  background-color: $black-transparent;
+  padding: 12px 49px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  @include on-mobile {
+    padding: 5px 8px;
+  }
+
+  a {
+    @include on-mobile {
+      font-size: 18px;
+    }
+  }
+
+  .navbar-brand {
+    .navbar-item {
+      img {
+        max-height: none;
+      }
+    }
+  }
+
+
+  .navbar-menu {
+    @include on-mobile {
+      margin-left: -8px;
+      padding: 0 40px;
+      position: absolute;
+      top: 62px;
+      width: 100%;
+    }
+    @include on-tablet {
+      margin-left: -49px;
+      padding: 0 80px;
+      position: absolute;
+      top: 76px;
+      width: 100%;
+    }
+
+    .navbar-end {
+      margin: 0;
+      width: 100%;
+
+      .navbar-item {
+        margin: 0 auto;
+        @include on-mobile {
+          margin: 0;
+          padding: 0;
+        }
+        // @include on-tablet {
+        //   margin: 0;
+        // }
+        // @media (min-width:769px) and (max-width: 1023px) {
+        //   margin: 0;
+        //   padding: 0;
+        // }
+
+        a {
+          @include on-mobile {
+            margin: 20px 0;
+          }
+          @media (min-width:769px) and (max-width: 1023px) {
+            margin: 20px 0;
+          }
+        }
+      }
+
+      .btns {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        justify-content: space-between;
+        width: 300px;
+        @include on-mobile {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        @include on-tablet {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .btn-sign-in {
+          width: 136px;
+
+          @include on-mobile {
+            margin: 20px auto;
+            width: 95%;
+          }
+          @include on-tablet {
+            margin: 20px auto;
+            width: 95%;
+          }
+
+        }
+
+        .btn-apply {
+          width: 136px;
+          @include on-mobile {
+            margin: 20px auto;
+            width: 95%;
+          }
+
+          @include on-tablet {
+            margin: 20px auto;
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
+}
