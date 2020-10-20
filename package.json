@@ -6,14 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
-    "lint:ts": "standardx '**/*.{tx,tsx}' --fix | snazzy"
+    "lint:ts": "standardx '**/*.{tx,tsx}' --fix | snazzy",
+    "lint:scss": "stylelint '**/*.scss' --fix",
+    "lint": "npm run lint:ts ; npm run lint:scss"
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "dayjs": "^1.9.3",
     "husky": "^4.3.0",
     "next": "9.5.3",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.6.0",
+    "next-optimized-images": "^2.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.26.10",
@@ -22,10 +28,13 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-controls": "^6.0.26",
     "@storybook/addon-essentials": "^6.0.26",
     "@storybook/addon-links": "^6.0.26",
+    "@storybook/addons": "^6.0.26",
     "@storybook/preset-scss": "^1.0.2",
     "@storybook/react": "^6.0.26",
+    "@types/classnames": "^2.2.10",
     "@types/node": "^14.10.1",
     "@types/react": "^16.9.49",
     "@typescript-eslint/eslint-plugin": "4.0.1",
@@ -63,11 +72,15 @@
     "extends": "stylelint-config-sass-guidelines",
     "plugins": [
       "stylelint-scss"
-    ]
+    ],
+    "rules": {
+      "max-nesting-depth": 7,
+      "selector-max-compound-selectors": 7
+    }
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:ts"
+      "pre-commit": "npm run lint"
     }
   }
 }
