@@ -4,11 +4,21 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
 import InfoCard from '../components/InfoCard'
-import icon from '../public/Icon-Objetivo.svg'
 
 export default {
   title: 'Base/InfoCard',
-  component: InfoCard
+  component: InfoCard,
+  argTypes: {
+    icon: {
+      control: 'text'
+    },
+    title: {
+      control: 'text'
+    },
+    description: {
+      control: 'text'
+    }
+  }
 
 } as Meta
 
@@ -16,7 +26,7 @@ const Template: Story = (args) => <InfoCard {...args} />
 
 export const Info = Template.bind({})
 Info.args = {
-  icon: { icon },
+  icon: '/icons/Icon-Objetivo.svg',
   title: 'Te acompañamos en el proceso',
   description: 'Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales'
 }

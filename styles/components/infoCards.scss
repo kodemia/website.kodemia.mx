@@ -1,19 +1,19 @@
 .info-card {
   display: grid;
-  grid-template-columns:3% 97%;
+  grid-column-gap: 16px;
+  grid-template-columns: 3% 97%;
   grid-template-rows: repeat(2, auto);
-  grid-column-gap: 16px ;
   padding: 20px 0;
   padding-right: 20px;
   @include mobile {
-    grid-template-columns:8% 92%;
+    grid-template-columns: 8% 92%;
     padding-right: 0;
   }
 
   .ikon {
     grid-column: 1 / 2;
     grid-row: 1 /3;
-    margin-left:auto;
+    margin-left: auto;
     padding-top: 10px;
     width: 26px;
 
