@@ -1,14 +1,14 @@
 
 import React from 'react'
 
-type Props = {
+export interface Props {
   icon: string,
   title: string,
   description: string
 
 }
 
-export default function InfoCard ({
+export default function InfoCard({
   icon,
   title,
   description

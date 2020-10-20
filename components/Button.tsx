@@ -10,7 +10,7 @@ export interface Props {
   onClick?: () => void
 }
 
-export default function Button ({
+export default function Button({
   isPrimary,
   label,
   icon,
