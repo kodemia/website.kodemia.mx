@@ -8,7 +8,7 @@ export interface Props {
 
 }
 
-export default function InfoCard({
+export default function InfoCard ({
   icon,
   title,
   description
