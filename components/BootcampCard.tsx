@@ -9,7 +9,7 @@ export interface Props {
   feature: string
 }
 
-export default function BootcampCard({
+export default function BootcampCard ({
   mode,
   date,
   schedule,

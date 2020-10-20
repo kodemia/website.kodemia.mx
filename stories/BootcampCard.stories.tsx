@@ -2,7 +2,7 @@ import React from 'react'
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import BootcampCard from '../components/BootcampCard'
+import BootcampCard, { Props } from '../components/BootcampCard'
 
 export default {
   title: 'Base/BootcampCard',
@@ -24,7 +24,7 @@ export default {
   decorators: [Story => <div style={{ maxWidth: '300px' }}><Story /></div>]
 } as Meta
 
-const Template: Story = (args) => <BootcampCard {...args} />
+const Template: Story<Props> = (args) => <BootcampCard {...args} />
 
 export const Lifetime = Template.bind({})
 Lifetime.args = {
