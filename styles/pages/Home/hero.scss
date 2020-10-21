@@ -1,17 +1,31 @@
 
 .hero {
-  background-image: url('https://st.depositphotos.com/1002111/1408/i/950/depositphotos_14085142-stock-photo-children-are-lying-on-floor.jpg');
+  position: relative;
+
+  .bg-video {
+    z-index: -2;
+
+    .video {
+      height: 100vh;
+      object-fit: cover;
+      width: 100vw;
+    }
+  }
 
   .cover {
     background: linear-gradient(to top, $black, $black-transparent-hero);
-    padding: 185px 155px 0;
+    height: 100%;
+    padding: 190px 155px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
     @include on-mobile {
-      padding: 155px 32px;
+      padding: 150px 32px 20px;
     }
 
     @include on-tablet {
-      padding: 185px 85px 0;
+      padding: 200px 85px 0;
     }
 
     .arrow-icon {

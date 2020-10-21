@@ -16,9 +16,9 @@ export default function HeroCard ({ title, content }: Props) {
   return (
     <div className='hero-card'>
       <h1 className='hero-title'>
-        {newTitle}<span className='final-character'>{title[title.length - 1]}</span>
+        {newTitle}<span className='cursor-text'>{title[title.length - 1]}</span>
       </h1>
-      <p className='hero-context'>{content}</p>
+      <p className='hero-content'>{content}</p>
       <Button isPrimary label='Conoce nuestros Bootcamps' />
     </div>
   )
