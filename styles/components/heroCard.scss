@@ -1,0 +1,29 @@
+
+.hero-card {
+  width: 337px;
+
+  @include on-mobile {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.07;
+    padding-right: 10px;
+
+    @include on-mobile {
+      font-size: 11vmin;
+    }
+
+    .final-character {
+      border-bottom: 2px solid $primary;
+    }
+  }
+
+  .hero-context {
+    color: $text;
+    font-size: 18px;
+    margin: 40px 0;
+  }
+}
