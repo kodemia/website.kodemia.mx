@@ -1,6 +1,6 @@
 
 .bootcamp-type {
-  border: solid 1px $text;
+  border: solid 1px $gray;
   border-radius: 10px;
 
   &:hover {
@@ -16,7 +16,7 @@
     }
 
     .date {
-      color: $info;
+      color: $text-cyan;
       font-size: 20px;
     }
 
@@ -29,7 +29,7 @@
       }
 
       .schedule-content {
-        color: $text;
+        color: $text-gray;
         font-size: 18px;
         margin: 0;
         width: 200px;
@@ -37,7 +37,7 @@
     }
 
     .feature {
-      color: $text;
+      color: $text-gray;
       font-size: 18px;
       margin-bottom: 36px;
       margin-top: 12px;

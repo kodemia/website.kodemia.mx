@@ -52,13 +52,6 @@
           margin: 0;
           padding: 0;
         }
-        // @include on-tablet {
-        //   margin: 0;
-        // }
-        // @media (min-width:769px) and (max-width: 1023px) {
-        //   margin: 0;
-        //   padding: 0;
-        // }
 
         a {
           @include on-mobile {
