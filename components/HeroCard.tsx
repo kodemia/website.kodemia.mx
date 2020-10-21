@@ -9,7 +9,7 @@ export interface Props {
   content: string
 }
 
-export default function HeroCard({ title, content }: Props) {
+export default function HeroCard ({ title, content }: Props) {
   const finalPosition = title.length - 1
   const newTitle = title.slice(0, finalPosition)
 
