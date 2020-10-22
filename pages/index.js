@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Hero from '../components/Pages/Home/Hero'
 
-export default function Home() {
+export default function Home () {
   return (
     <div>
       <Head>
@@ -12,7 +12,6 @@ export default function Home() {
       </Head>
       <Navbar />
       <Hero />
-
       <Footer />
     </div>
   )
