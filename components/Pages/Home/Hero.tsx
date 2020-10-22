@@ -1,13 +1,22 @@
 
 import React from 'react'
+// my component
 import HeroCard from '../../HeroCard'
 
 export default function Hero () {
   return (
     <div className='hero'>
       <div className='bg-video'>
-        <video className='video' autoPlay='autoplay' loop='loop' muted>
-          <source src='videos/Hero_Home.mp4' type='video/mp4' />
+        <video
+          className='video'
+          autoPlay
+          loop
+          muted
+        >
+          <source
+            src='videos/Hero_Home.mp4'
+            type='video/mp4'
+          />
         </video>
       </div>
       <div className='cover'>

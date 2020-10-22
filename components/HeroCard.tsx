@@ -1,8 +1,9 @@
 
 import React from 'react'
 
-// my component
+// my components
 import Button from '../components/Button'
+import H1 from './H1'
 
 export interface Props {
   title: string
@@ -10,14 +11,9 @@ export interface Props {
 }
 
 export default function HeroCard ({ title, content }: Props) {
-  const finalPosition = title.length - 1
-  const newTitle = title.slice(0, finalPosition)
-
   return (
     <div className='hero-card'>
-      <h1 className='hero-title'>
-        {newTitle}<span className='cursor-text'>{title[title.length - 1]}</span>
-      </h1>
+      <H1 title= {title}/>
       <p className='hero-content'>{content}</p>
       <Button isPrimary label='Conoce nuestros Bootcamps' />
     </div>

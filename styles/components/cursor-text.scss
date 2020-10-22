@@ -1,0 +1,10 @@
+
+.cursor-text {
+  border-bottom: 2px solid $primary;
+  font-size: 45px;
+  font-weight: 600;
+
+  @include on-mobile {
+    font-size: 31px;
+  }
+}
