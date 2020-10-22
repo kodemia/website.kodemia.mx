@@ -4,7 +4,7 @@ import Button from './Button'
 
 export interface Props {
   mode: string,
-  date: String,
+  date: string,
   schedule: string,
   feature: string
 }
