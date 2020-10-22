@@ -13,13 +13,13 @@ export default function Footer () {
           <div className='btn-whats'>
             <Button
               isPrimary label='Mándanos un whatsapp'
-              icon='/icons/Button-Whatsapp.svg' hasWhiteBg={false}
+              icon='/icons/Button-Whatsapp.svg'
             />
           </div>
           <div className='btn-telegram'>
             <Button
-              isPrimary={false} label='Únete a la comunidad'
-              icon='/icons/Button-Telegram.svg' hasWhiteBg={false}
+              label='Únete a la comunidad'
+              icon='/icons/Button-Telegram.svg'
             />
           </div>
         </div>
