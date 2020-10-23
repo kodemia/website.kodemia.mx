@@ -7,9 +7,7 @@ export interface Props {
   title: string
 }
 
-export default function H1 ({
-  title
-}: Props) {
+export default function H1 ({ title }: Props) {
   const finalPosition = title.length - 1
   const newTitle = title.slice(0, finalPosition)
   const character = title[finalPosition]
