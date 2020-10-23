@@ -6,6 +6,7 @@
   padding-right: 10px;
 
   @include on-mobile {
-    font-size: 31px;
+    font-size: 35px;
+    padding-right: 0;
   }
 }
