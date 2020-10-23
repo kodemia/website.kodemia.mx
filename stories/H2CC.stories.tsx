@@ -10,8 +10,8 @@ export default {
     cyanText: {
       control: 'text'
     },
-    whiteText: {
-      control: 'text'
+    whiteText: { 
+      control: 'text' 
     }
   }
 } as Meta
