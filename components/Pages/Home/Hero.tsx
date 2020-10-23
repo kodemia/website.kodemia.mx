@@ -24,7 +24,7 @@ export default function Hero () {
           title='Transforma tu vida programando' content='Más que una escuela, somos el aliado que te acompaña para desarrollarte como programador, antes, durante y después de nuestros Bootcamps. '
         />
         <img
-          src='/icons/Button-Telegram.svg' className='arrow-icon'
+          src='/icons/Icon-Scroll.svg' className='arrow-icon'
         />
       </div>
     </div>

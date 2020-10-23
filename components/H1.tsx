@@ -1,21 +1,18 @@
 
 import React from 'react'
 //my component
-import Cursor from './Cursor'
+import Cursor from './TextCursor'
 
 export interface Props {
-  title: string
+  text: string
 }
 
-export default function H1 ({ title }: Props) {
-  const finalPosition = title.length - 1
-  const newTitle = title.slice(0, finalPosition)
-  const character = title[finalPosition]
+export default function H1 ({ text }: Props) {
+  
 
   return (
     <h1 className ='h1'>
-      {newTitle}
-      <Cursor character ={character}/>
+      <Cursor h1 text= {text} white/>
     </h1>
   )
 };

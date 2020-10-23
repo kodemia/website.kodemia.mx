@@ -1,0 +1,32 @@
+
+%cursor {
+  border-bottom: 2px solid;
+}
+
+.text-h1 {
+  color:$primary;
+}
+
+.cursor-h1 {
+  border-bottom: 2px solid $primary;
+}
+
+.cyan-text-h2 {
+  color: $info;
+}
+
+.white-text-h2 {
+  color: $primary;
+}
+
+.white-cursor {
+  @extend %cursor;
+  border-color: $primary;
+  color: $primary;
+}
+
+.cyan-cursor {
+  @extend %cursor;
+  border-color:$info;
+  color: $cyan;
+}
