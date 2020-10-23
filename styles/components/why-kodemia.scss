@@ -1,0 +1,31 @@
+.why-kodemia {
+  .container {
+    grid-template-areas:
+      'subtitle subtitle'
+      'title title'
+      'image cards';
+
+    .subtitle {
+      color: $gray-light;
+      font-size: 20px;
+      font-weight: 500;
+      grid-area: subtitle;
+    }
+
+    .title {
+      color: $white-light;
+      font-size: 35px;
+      font-weight: 600;
+      grid-area: title;
+      line-height: 1.2;
+    }
+
+    .image {
+      grid-area: image;
+    }
+
+    .cards {
+      grid-area: cards;
+    }
+  }
+}
