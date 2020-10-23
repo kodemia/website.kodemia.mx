@@ -1,4 +1,6 @@
 .why-kodemia {
+  margin: 0 155px;
+
   .container {
     grid-template-areas:
       'subtitle subtitle'
@@ -22,6 +24,7 @@
 
     .image {
       grid-area: image;
+      height: 423px;
     }
 
     .cards {
