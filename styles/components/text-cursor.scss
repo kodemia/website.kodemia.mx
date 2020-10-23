@@ -3,7 +3,7 @@
   border-bottom: 2px solid;
 }
 
-.cyan-text{
+.cyan-text {
   color: $info;
 }
 
@@ -13,12 +13,14 @@
 
 .white-cursor {
   @extend %cursor;
+
   border-color: $primary;
   color: $primary;
 }
 
 .cyan-cursor {
   @extend %cursor;
-  border-color:$info;
+
+  border-color: $info;
   color: $cyan;
 }

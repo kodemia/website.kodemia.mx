@@ -1,5 +1,6 @@
 import React from 'react'
-//my component
+
+// my component
 import TextCursor from './TextCursor'
 
 export interface Props {
@@ -7,18 +8,17 @@ export interface Props {
   cyanText: string
 }
 
-export default function H2CC ({ 
-    whiteText,
-    cyanText
- }: Props) {
-   
+export default function H2CC ({
+  whiteText,
+  cyanText
+}: Props) {
   cyanText = cyanText.trim()
   whiteText = whiteText.trim()
 
   return (
-    <h2 className ='h2-white'>
+    <h2 className='h2-white'>
       {whiteText}
-      <TextCursor text = {cyanText} />
+      <TextCursor text={cyanText} />
     </h2>
   )
 };
