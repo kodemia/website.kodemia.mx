@@ -9,7 +9,7 @@ export default {
   component: H1,
   argTypes: {
     text: {
-      control: 'text' 
+      control: 'text'
     }
   }
 } as Meta
