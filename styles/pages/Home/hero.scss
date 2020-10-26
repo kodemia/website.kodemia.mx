@@ -29,11 +29,32 @@
     }
 
     .arrow-icon {
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-name: arrow;
+      animation-timing-function: ease-out;
+      left: 0;
       margin: 114px 50%;
+      position: absolute;
       width: 33px;
 
       @include on-mobile {
         display: none;
+      }
+    }
+
+    @keyframes arrow {
+      0% {
+        bottom: 0;
+      }
+
+      50% {
+        bottom: -100px;
+        width: 10px;
+      }
+
+      100% {
+        bottom: 0px;
       }
     }
   }
