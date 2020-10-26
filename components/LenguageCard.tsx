@@ -19,10 +19,9 @@ export default function LenguageCard ({
       <h1 className='lenguage'>{name} {lenguage}</h1>
       <p className='description'>{description}</p>
       <div className='duration-container'>
-        <img 
+        <img
           src='/icons/Icon-Calendario.svg'
-          alt='calendar-kodemia'
-          className='calendar-icon' 
+          className='calendar-icon'
         />
         <h2 className='title'>Duración</h2>
         <p className='duration'>{duration}</p>
