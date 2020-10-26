@@ -1,0 +1,69 @@
+
+{
+  "bootcamps":[
+    {
+      "name":"Bootcamp FullStack con",
+      "lenguage": [
+        {
+          "javascript":[
+            {
+              "name":"Javascript",
+              "description": "Desarrollarás una web app completa con MERN orientadi al Front End con React",
+              "duration":"19 semanas",
+              "modality": [
+                  {
+                    "name":"Lifetime",
+                    "description": "Acceso de por vida a Kodemia",
+                    "schedule" :{
+                      "day": "19",
+                      "month":"Oct",
+                      "year":"2020",
+                      "hour":"7:00 - 10:00 pm",
+                      "days":"Lunes a viernes"
+                    }
+                  },
+                  {
+                    "name": "Live",
+                    "description": "Aprende sin salir de casa",
+                    "schedule" :{
+                      "day": "19",
+                      "month":"Oct",
+                      "year":"2020",
+                      "hour":"7:00 - 10:00 pm",
+                      "days":"Lunes a viernes"
+                    }
+                  }
+              ]
+            }
+          ],
+          "python":[
+            {
+              "name":"Pytho",
+              "description": "Desarrollarás una web app completa orientada al Banck End con Python y Javascript",
+              "duration":"21 semanas",
+              "modality": [
+                  {
+                    "name":"Lifetime",
+                    "description": "Acceso de por vida a Kodemia"
+                  },
+                  {
+                    "name": "Live",
+                    "description": "Aprende sin salir de casa"
+                  }
+              ],
+              "schedule" :{
+                "day": "19",
+                "month":"Oct",
+                "year":"2020",
+                "hour":"7:00 - 10:00 pm",
+                "days":"Lunes a viernes"
+              }
+
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
+}

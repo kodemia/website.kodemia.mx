@@ -3,6 +3,7 @@ import InfoCard from '../components/InfoCard'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import BootcampCard from '../components/BootcampCard'
+import LenguageCard from '../components/LenguageCard'
 
 export default function Home () {
   return (
@@ -23,6 +24,12 @@ export default function Home () {
         schedule='Lunes a viernes de 07:00 - 10:00 pm'
         feature='Acceso de por vida a Kodemia'
       />
+      <LenguageCard
+        name='Bootcamp FullStack con' 
+        lenguage='Javascript' 
+        description='Desarrollarás una web app completa con MERN orientado al Front End con React' 
+        duration='19em'
+      /> 
       <Footer />
     </div>
   )
