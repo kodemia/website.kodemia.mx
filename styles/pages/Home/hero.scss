@@ -21,11 +21,11 @@
     width: 100%;
 
     @include on-mobile {
-      padding: 215px 32px 20px;
+      padding: 150px 32px 20px;
     }
 
     @include on-tablet {
-      padding: 200px 85px 0;
+      padding: 250px 85px 0;
     }
 
     .arrow-icon {
@@ -36,7 +36,7 @@
       left: 0;
       margin: 114px 50%;
       position: absolute;
-      width: 33px;
+      width: 30px;
 
       @include on-mobile {
         display: none;
@@ -49,7 +49,7 @@
       }
 
       50% {
-        bottom: -100px;
+        bottom: -110px;
         width: 10px;
       }
 
