@@ -2,6 +2,10 @@
 .hero {
   position: relative;
 
+  @include on-mobile {
+    margin-bottom: 70px;
+  }
+
   .bg-video {
     z-index: -2;
 
@@ -25,7 +29,7 @@
     }
 
     @include on-tablet {
-      padding: 250px 85px 0;
+      padding: 170px 85px 0;
     }
 
     .arrow-icon {
@@ -34,7 +38,7 @@
       animation-name: arrow;
       animation-timing-function: ease-out;
       left: 0;
-      margin: 114px 50%;
+      margin: 0 50% 114px;
       position: absolute;
       width: 30px;
 
@@ -49,8 +53,8 @@
       }
 
       50% {
-        bottom: -110px;
-        width: 10px;
+        bottom: -60px;
+        width: 20px;
       }
 
       100% {
