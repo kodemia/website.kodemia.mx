@@ -8,7 +8,7 @@
     "start": "next start",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
-    "lint:ts": "standardx '**/*.{tx,tsx}' | snazzy",
+    "lint:ts": "standardx '**/*.{ts,tsx}' | snazzy",
     "lint:scss": "stylelint '**/*.scss'",
     "lint:ts:fix": "standardx '**/*.{tx,tsx}' --fix | snazzy",
     "lint:scss:fix": "stylelint '**/*.scss' --fix",

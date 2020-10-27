@@ -1,6 +1,6 @@
 
 import React from 'react'
-import H2CC from './H2CC'
+import H2 from './H2'
 
 export interface Props {
   name: string,
@@ -17,7 +17,7 @@ export default function LenguageCard ({
 }: Props) {
   return (
     <div className='language-card'>
-      <H2CC whiteText={name} cyanText={lenguage} />
+      <H2 whiteText={name} cyanText={lenguage}/>
       <p className='description'>{description}</p>
       <div className='duration-container'>
         <img
