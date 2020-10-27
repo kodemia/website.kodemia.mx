@@ -1,0 +1,47 @@
+
+%cursor {
+  border-bottom: 3.5px solid;
+}
+
+%cursor-animation {
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.cyan-text {
+  color: $info;
+}
+
+.white-text {
+  color: $primary;
+}
+
+.white-cursor {
+  @extend %cursor;
+  @extend %cursor-animation;
+
+  animation-name: white-cursor;
+  color: $primary;
+}
+
+.cyan-cursor {
+  @extend %cursor;
+  @extend %cursor-animation;
+
+  animation-name: cyan-cursor;
+  color: $cyan;
+}
+
+/* Animations */
+@keyframes white-cursor {
+  from { border-color: transparent; }
+  to { border-color: $primary; }
+}
+
+@keyframes cyan-cursor {
+  from { border-color: transparent; }
+  to { border-color: $info; }
+}

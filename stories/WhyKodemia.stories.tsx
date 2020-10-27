@@ -1,7 +1,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import WhyKodemia from '../components/WhyKodemia'
+import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 
 export default {
   title: 'base/WhyKodemia',

@@ -1,9 +1,9 @@
-import BootcampCard from '../components/BootcampCard'
+// import BootcampCard from '../components/BootcampCard'
 import Footer from '../components/Footer'
 import Head from 'next/head'
-import InfoCard from '../components/InfoCard'
+import Hero from '../components/Pages/Home/Hero'
 import Navbar from '../components/Navbar'
-import WhyKodemia from '../components/WhyKodemia'
+import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 
 const cards = [
   {
@@ -12,9 +12,9 @@ const cards = [
     heading: 'Te acompañamos en el proceso'
   },
   {
-    description: 'Nos adaptamos a lo que estás buscando, ya sea colocarte, emprender o crecer profesionalmente',
+    text: 'Nos adaptamos a lo que estás buscando, ya sea colocarte, emprender o crecer profesionalmente',
     icon: '/icons/Icon-Objetivo.svg',
-    title: 'Tu objetivo es nuestro objetivo'
+    heading: 'Tu objetivo es nuestro objetivo'
   },
   {
     description: 'Lo más importante para nosotros son las personas. Ayudarlas a conectar entre sí es parte de nuestro propósito, para que nunca dejen de crecer',
@@ -36,18 +36,13 @@ export default function Home () {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar />
-      <InfoCard
+      {/* <InfoCard
         icon='/icons/Icon-Objetivo.svg'
         title='Te acompañamos en el proceso'
         description='Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales'
-      />
-      <WhyKodemia cards={cards} />
-      {/* <BootcampCard
-        mode='Modo Lifetime'
-        date='19 de Octubre'
-        schedule='Lunes a viernes de 07:00 - 10:00 pm'
-        feature='Acceso de por vida a Kodemia'
       /> */}
+      <WhyKodemia cards={cards} />
+      <Hero />
       <Footer />
     </div>
   )
