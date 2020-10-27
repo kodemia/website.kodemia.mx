@@ -2,13 +2,14 @@
 .lenguage-card {
   margin: 20px 0;
   max-width: 337px;
+  min-width: 250px;
 
   @include on-mobile {
-    width: 100%;
+    max-width: 100%;
   }
 
   @include on-tablet {
-    width: 50%;
+    max-width: 50%;
   }
 
   .description {
