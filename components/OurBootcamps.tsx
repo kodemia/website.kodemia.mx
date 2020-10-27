@@ -7,7 +7,7 @@ import Lenguage from './LenguageCard'
 import Bootcamps from '../config/bootcamps.json'
 
 export default function OurBootcamps () {
-  return(
+  return (
     <div className='our-bootcamps'>
       <h3 className='title'>Nuestros Bootcamps</h3>
       <div className='bootcamp'>
@@ -19,7 +19,7 @@ export default function OurBootcamps () {
         />
         <div className='modalities-conteiner'>
           {
-            Bootcamps.javascript.modalities.map(({ name, description, schedule: {day, month, days, hour}}, index) => (
+            Bootcamps.javascript.modalities.map(({ name, description, schedule: { day, month, days, hour } }, index) => (
               <div className='modality'>
                 <BootcampCard 
                   key={index}
@@ -42,7 +42,7 @@ export default function OurBootcamps () {
         />
         <div className='modalities-conteiner'>
           {
-            Bootcamps.python.modalities.map(({name, description, schedule: {day, month, days, hour}}, index) => (
+            Bootcamps.python.modalities.map(({name, description, schedule: { day, month, days, hour } }, index) => (
               <div className='modality'>
                 <BootcampCard 
                   key={index}
@@ -57,5 +57,5 @@ export default function OurBootcamps () {
         </div>
       </div>
     </div>
-  ) 
+  )
 }
