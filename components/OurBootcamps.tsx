@@ -20,11 +20,10 @@ export default function OurBootcamps () {
         <div className='modalities-conteiner'>
           {
             Bootcamps.javascript.modalities.map(({ name, description, schedule: { day, month, days, hour } }, index) => (
-              <div className='modality'>
+              <div className='modality' key={index}>
                 <BootcampCard 
-                  key={index}
-                  mode={name} 
-                  date={`${day} de ${month}`} 
+                  mode={name}
+                  date={`${day} de ${month}`}
                   schedule={`${days} de ${hour}`}
                   feature={description}
                 />
@@ -42,12 +41,11 @@ export default function OurBootcamps () {
         />
         <div className='modalities-conteiner'>
           {
-            Bootcamps.python.modalities.map(({name, description, schedule: { day, month, days, hour } }, index) => (
-              <div className='modality'>
+            Bootcamps.python.modalities.map(({ name, description, schedule: { day, month, days, hour } }, index) => (
+              <div className='modality' key={index}>
                 <BootcampCard 
-                  key={index}
-                  mode={name} 
-                  date={`${day} de ${month}`} 
+                  mode={name}
+                  date={`${day} de ${month}`}
                   schedule={`${days} de ${hour}`}
                   feature={description}
                 />
