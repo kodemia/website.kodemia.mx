@@ -18,8 +18,8 @@ export default function WhyKodemia ({ cards }: Props) {
               <InfoCard
                 key={`card-${index}`}
                 icon={card.icon}
-                title={card.title}
-                description={card.description}
+                heading={card.heading}
+                text={card.text}
               />
             )
           })}

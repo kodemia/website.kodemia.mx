@@ -7,9 +7,9 @@ import WhyKodemia from '../components/WhyKodemia'
 
 const cards = [
   {
-    description: 'Queremos ser parte de tu nuevo futuro como desarrollador desde el día uno, hasta después del Bootcamp',
+    text: 'Queremos ser parte de tu nuevo futuro como desarrollador desde el día uno, hasta después del Bootcamp',
     icon: '/icons/Icon-Proceso.svg',
-    title: 'Te acompañamos en el proceso'
+    heading: 'Te acompañamos en el proceso'
   },
   {
     description: 'Nos adaptamos a lo que estás buscando, ya sea colocarte, emprender o crecer profesionalmente',
