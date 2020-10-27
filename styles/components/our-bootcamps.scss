@@ -1,0 +1,36 @@
+
+.our-bootcamps {
+  margin: 0 155px;
+  padding-top: 100px;
+  
+  @include on-mobile {
+    margin: 0 32px;
+  }
+
+  @include on-tablet {
+    margin: 0 85px;
+  }
+
+  .title {
+    color: $text;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px 0;
+  }
+
+  .bootcamp {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    .modalities-conteiner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .modality {
+        width: 337px;
+      }
+    }
+  }
+}
