@@ -16,7 +16,7 @@ export default function LenguageCard ({
   duration
 }: Props) {
   return (
-    <div className='lenguage-card'>
+    <div className='language-card'>
       <H2CC whiteText={name} cyanText={lenguage} />
       <p className='description'>{description}</p>
       <div className='duration-container'>

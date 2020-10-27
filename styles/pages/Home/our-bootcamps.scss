@@ -33,7 +33,7 @@
     .modalities-conteiner {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-evenly;
       padding-left: 15px;
 
       @include on-mobile {

@@ -2,7 +2,7 @@
 import React from 'react'
 // My components
 import BootcampCard from '../../BootcampCard'
-import LenguageCard from '../../LenguageCard'
+import LanguageCard from '../../LanguageCard'
 // Data
 import Bootcamps from '../../../config/bootcamps.json'
 
@@ -11,21 +11,21 @@ export default function OurBootcamps () {
     <div className='our-bootcamps'>
       <h3 className='title'>Nuestros Bootcamps</h3>
       <div className='bootcamp'>
-        <LenguageCard
+        <LanguageCard
           name={Bootcamps.name}
-          lenguage={Bootcamps.javascript.lenguage}
+          lenguage={Bootcamps.javascript.language}
           description={Bootcamps.javascript.description}
           duration={Bootcamps.javascript.duration}
         />
         <div className='modalities-conteiner'>
           {
-            Bootcamps.javascript.modalities.map(({ name, description, schedule: { day, month, days, hour } }, index) => (
+            Bootcamps.javascript.modalities.map((modality, index) => (
               <div className='modality' key={index}>
                 <BootcampCard
-                  mode={name}
-                  date={`${day} de ${month}`}
-                  schedule={`${days} de ${hour}`}
-                  feature={description}
+                  mode={modality.name}
+                  date={`${modality.schedule.day} de ${modality.schedule.month}`}
+                  schedule={`${modality.schedule.days} de ${modality.schedule.hour}`}
+                  feature={modality.description}
                 />
               </div>
             ))
@@ -33,21 +33,21 @@ export default function OurBootcamps () {
         </div>
       </div>
       <div className='bootcamp'>
-        <LenguageCard
+        <LanguageCard
           name={Bootcamps.name}
-          lenguage={Bootcamps.python.lenguage}
+          lenguage={Bootcamps.python.language}
           description={Bootcamps.python.description}
           duration={Bootcamps.python.duration}
         />
         <div className='modalities-conteiner'>
           {
-            Bootcamps.python.modalities.map(({ name, description, schedule: { day, month, days, hour } }, index) => (
+            Bootcamps.python.modalities.map((modality, index) => (
               <div className='modality' key={index}>
                 <BootcampCard
-                  mode={name}
-                  date={`${day} de ${month}`}
-                  schedule={`${days} de ${hour}`}
-                  feature={description}
+                  mode={modality.name}
+                  date={`${modality.schedule.day} de ${modality.schedule.month}`}
+                  schedule={`${modality.schedule.days} de ${modality.schedule.hour}`}
+                  feature={modality.description}
                 />
               </div>
             ))
