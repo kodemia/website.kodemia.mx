@@ -1,0 +1,15 @@
+
+.hero-card {
+  width: 337px;
+
+  @include on-mobile {
+    max-width: 337px;
+    width: 100%;
+  }
+
+  .hero-content {
+    color: $text;
+    font-size: 18px;
+    margin: 40px 0;
+  }
+}

@@ -13,7 +13,7 @@ export default function Navbar () {
         <Link href='/'>
           <a className='navbar-item'>
             <img
-              src='/icons/kodemia-logo-02.svg'
+              src='/icons/Kodemia-logo-02.svg'
               alt='Logo'
               width='128'
               height='35'
