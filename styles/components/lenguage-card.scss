@@ -1,6 +1,15 @@
 
 .lenguage-card {
-  width: 337px;
+  margin: 20px 0;
+  max-width: 337px;
+
+  @include on-mobile {
+    width: 100%;
+  }
+
+  @include on-tablet {
+    width: 50%;
+  }
 
   .description {
     color: $text;
