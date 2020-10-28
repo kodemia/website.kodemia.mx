@@ -1,0 +1,67 @@
+
+{
+  "name":"Bootcamp FullStack con", 
+  "javascript": {
+    "language":"Javascript",
+    "description": "Desarrollarás una web app completa con MERN orientada al Front End con React",
+    "duration":"19 semanas",
+    "modalities": [
+      {
+        "name":"Lifetime",
+        "description": "Acceso de por vida a Kodemia",
+        "link": "/",
+        "schedule": {
+          "day": "19",
+          "month":"Oct",
+          "year":"2020",
+          "hour":"7:00 - 10:00 pm",
+          "days":"Lunes a viernes"
+        }
+      },
+      {
+        "name": "Live",
+        "description": "Aprende sin salir de casa",
+        "link": "/",
+        "schedule" :{
+          "day": "19",
+          "month":"Oct",
+          "year":"2020",
+          "hour":"7:00 - 10:00 pm",
+          "days":"Lunes a viernes"
+       }
+      }
+     ]
+    }
+  ,
+  "python": {
+    "language":"Python",
+    "description": "Desarrollarás una web app completa orientada al Back End con Python y Javascript",
+    "duration":"21 semanas",
+    "modalities": [
+      {
+        "name":"Lifetime",
+        "description": "Acceso de por vida a Kodemia",
+        "link": "/",
+        "schedule": {
+          "day": "19",
+          "month":"Oct",
+          "year":"2020",
+          "hour":"7:00 - 10:00 pm",
+          "days":"Lunes a viernes"
+        }
+      },
+      {
+        "name": "Live",
+        "description": "Aprende sin salir de casa",
+        "link": "/",
+        "schedule" :{
+          "day": "19",
+          "month":"Oct",
+          "year":"2020",
+          "hour":"7:00 - 10:00 pm",
+          "days":"Lunes a viernes"
+       }
+      }
+     ]
+    }
+}

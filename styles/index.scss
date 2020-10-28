@@ -29,6 +29,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.page-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 // components
 @import 'components/index';
 @import 'pages/index';

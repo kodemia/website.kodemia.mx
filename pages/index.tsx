@@ -1,8 +1,9 @@
-// import BootcampCard from '../components/BootcampCard'
-import Footer from '../components/Footer'
 import Head from 'next/head'
+
+import Footer from '../components/Footer'
 import Hero from '../components/Pages/Home/Hero'
 import Navbar from '../components/Navbar'
+import OurBootcamps from '../components/Pages/Home/OurBootcamps'
 import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 
 const cards = [
@@ -30,7 +31,7 @@ const cards = [
 
 export default function Home () {
   return (
-    <div>
+    <>
       <Head>
         <title>Kodemia</title>
         <link rel='icon' href='/favicon.ico' />
@@ -38,7 +39,8 @@ export default function Home () {
       <Navbar />
       <Hero />
       <WhyKodemia cards={cards} />
+      <OurBootcamps />
       <Footer />
-    </div>
+    </>
   )
 }
