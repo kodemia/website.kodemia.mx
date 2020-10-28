@@ -1,34 +1,87 @@
 .why-kodemia {
-  margin: 0 155px;
+  background-color: $black-primary;
+  display: flex;
+  justify-content: center;
+  padding: 110px 155px 60px;
+
+  @include on-mobile {
+    flex-direction: column;
+    padding: 150px 32px 20px;
+  }
+
+  @include on-tablet {
+    padding: 170px 85px 0;
+  }
 
   .container {
+    box-sizing: border-box;
+    display: grid;
+    grid-column-gap: 20px;
     grid-template-areas:
-      'subtitle subtitle'
-      'title title'
-      'image cards';
+      'sub-title sub-title'
+      'subject subject'
+      'image why-kodemia-cards'
+      'image why-kodemia-cards';
 
-    .subtitle {
+    @include on-mobile {
+      grid-column-gap: 0;
+      grid-template-areas:
+        'sub-title'
+        'subject'
+        'image'
+        'why-kodemia-cards';
+    }
+
+    @include on-tablet {
+      grid-column-gap: 16px;
+      grid-template-areas:
+        'sub-title'
+        'subject'
+        'image'
+        'why-kodemia-cards';
+      // margin: 0 85px;
+    }
+
+    .sub-title {
       color: $gray-light;
       font-size: 20px;
       font-weight: 500;
-      grid-area: subtitle;
+      grid-area: sub-title;
     }
 
-    .title {
+    .subject {
       color: $white-light;
       font-size: 35px;
       font-weight: 600;
-      grid-area: title;
+      grid-area: subject;
       line-height: 1.2;
+      margin-top: 10px;
+      max-width: 375px;
+
+      @include on-mobile {
+        font-size: 30px;
+        width: 100%;
+      }
     }
 
     .image {
+      border-radius: 30px;
       grid-area: image;
-      height: 423px;
+      margin: 40px 0 auto;
+      max-width: 100%;
     }
 
-    .cards {
-      grid-area: cards;
+    .why-kodemia-cards {
+      display: grid;
+      grid-area: why-kodemia-cards;
+      grid-row-gap: 29px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 211px);
+      margin-top: 40px;
+
+      @include on-mobile {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

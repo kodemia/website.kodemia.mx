@@ -1,26 +1,25 @@
 .info-card {
   display: grid;
-  // grid-column-gap: 16px;
-  // grid-template-columns: 5% 95%;
-  // grid-template-rows: auto, auto;
+  grid-column-gap: 16px;
   grid-template-areas:
-    'ikon title'
-    'ikon description';
-  padding: 20px 20px 20px 0;
+    'ikon info-card-title'
+    'ikon text';
+  grid-template-columns: 5% 95%;
+  grid-template-rows: repeat(2, auto);
+  padding: 20px 0;
   width: 370px;
 
-  @include mobile {
-    // grid-template-columns: 8% 92%;
+  @include on-mobile {
+    grid-template-columns: 8% 92%;
     padding-right: 0;
   }
 
   .ikon {
-    // grid-column: 1 / 2;
-    // grid-row: 1 / 3;
-    // margin-left: auto;
     grid-area: ikon;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-left: auto;
     padding-top: 10px;
-    text-align: center;
     width: 26px;
 
     &:hover {
@@ -28,23 +27,25 @@
     }
   }
 
-  .title {
+  .info-card-title {
     color: $primary;
     font-size: 22px;
     font-weight: 600;
-    // grid-column: 2 / 3;
-    // grid-row: 1 / 2;
-    grid-area: title;
+    grid-area: info-card-title;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     line-height: 1.36;
     margin: 0;
-    width: 300px;
+    width: 250px;
   }
 
-  .description {
+  .text {
+    color: $gray;
     font-size: 18px;
-    // grid-column: 2 / 3;
-    // grid-row: 2 /3;
-    grid-area: description;
+    font-weight: 500;
+    grid-area: text;
+    grid-column: 2 / 3;
+    grid-row: 2 /3;
     margin-top: 12px;
   }
 }

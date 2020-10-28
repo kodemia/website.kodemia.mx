@@ -3,20 +3,20 @@ import React from 'react'
 
 export interface Props {
   icon: string,
-  heading: string,
+  title: string,
   text: string
 
 }
 
 export default function InfoCard ({
   icon,
-  heading,
+  title,
   text
 }: Props) {
   return (
     <div className='info-card'>
       <img src={icon} className='ikon' />
-      <h2 className='heading'>{heading}</h2>
+      <h2 className='info-card-title'>{title}</h2>
       <p className='text'>{text}</p>
     </div>
   )

@@ -9,8 +9,8 @@ export default function WhyKodemia ({ cards }: Props) {
   return (
     <section className='why-kodemia'>
       <div className='container'>
-        <h3 className='subtitle'>¿Por qué Kodemia?</h3>
-        <h2 className='title'>Vivimos para <span>formar programadores</span></h2>
+        <h3 className='sub-title'>¿Por qué Kodemia?</h3>
+        <h2 className='subject'>Vivimos para <span>formar programadores</span></h2>
         <img className='image' src='/images/why-kodemia.png' alt='koder y mentor sonriendo' />
         <div className='why-kodemia-cards'>
           {cards.map((card, index) => {
@@ -18,7 +18,7 @@ export default function WhyKodemia ({ cards }: Props) {
               <InfoCard
                 key={`card-${index}`}
                 icon={card.icon}
-                heading={card.heading}
+                title={card.title}
                 text={card.text}
               />
             )
