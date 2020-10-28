@@ -1,6 +1,7 @@
 
 .our-bootcamps {
   margin: 0 155px;
+  max-width: $content-max-width;
   padding-top: 100px;
 
   @include on-mobile {

@@ -16,6 +16,11 @@
     }
   }
 
+  .container { // TODO: arreglar xD
+    max-width: $content-max-width;
+    width: 100%;
+  }
+
   .navbar-brand {
     .navbar-item {
       img {

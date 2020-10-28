@@ -6,7 +6,7 @@ import OurBootcamps from '../components/Pages/Home/OurBootcamps'
 
 export default function Home () {
   return (
-    <div>
+    <>
       <Head>
         <title>Kodemia</title>
         <link rel='icon' href='/favicon.ico' />
@@ -15,6 +15,6 @@ export default function Home () {
       <Hero />
       <OurBootcamps />
       <Footer />
-    </div>
+    </>
   )
 }

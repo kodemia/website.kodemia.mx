@@ -2,7 +2,9 @@
 .footer {
   background-color: $body-background-color;
   margin: 0 155px;
+  max-width: $content-max-width;
   padding: 6rem 0;
+  width: 100%;
 
   @include on-mobile {
     margin: 0 32px;
