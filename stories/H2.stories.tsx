@@ -25,7 +25,7 @@ h2.args = {
 }
 
 export const h2isFirstCyan = Template.bind({})
-h2.args = {
+h2isFirstCyan.args = {
   cyanText: 'Vivimos para',
   whiteText: 'formar programadores',
   isFirstCyan: true
