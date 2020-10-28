@@ -22,7 +22,7 @@
       grid-template-rows: repeat(3, auto);
       margin: 0 auto;
       max-width: $content-max-width;
-      min-width: 719px;
+      min-width: $content-min-width;
 
       @include on-mobile {
         grid-template-columns: 1fr;

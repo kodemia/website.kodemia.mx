@@ -1,7 +1,8 @@
+
 import React from 'react'
 import dayjs from 'dayjs'
 import Link from 'next/link'
-
+//my-component
 import Button from './Button'
 
 export default function Footer () {
@@ -102,14 +103,14 @@ export default function Footer () {
           </div>
           <div className='contact'>
             <p>
-              Teléfono: 
-              <a href="tel:55 3731 72 66">
+              Teléfono:
+              <a href='tel:55 3731 72 66'>
                 55 3731 72 66
               </a>
             </p>
             <p>
-              Email: 
-              <a href="mailto:contacto@kodemia.mx">
+              Email:
+              <a href='mailto:contacto@kodemia.mx'>
                 contacto@kodemia.mx
               </a>
             </p>
