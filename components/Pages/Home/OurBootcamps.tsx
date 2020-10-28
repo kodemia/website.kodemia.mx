@@ -13,11 +13,11 @@ export default function OurBootcamps () {
       <div className='bootcamp'>
         <LanguageCard
           name={Bootcamps.name}
-          lenguage={Bootcamps.javascript.language}
+          language={Bootcamps.javascript.language}
           description={Bootcamps.javascript.description}
           duration={Bootcamps.javascript.duration}
         />
-        <div className='modalities-conteiner'>
+        <div className='modalities-container'>
           {
             Bootcamps.javascript.modalities.map((modality, index) => (
               <div className='modality' key={index}>
@@ -35,11 +35,11 @@ export default function OurBootcamps () {
       <div className='bootcamp'>
         <LanguageCard
           name={Bootcamps.name}
-          lenguage={Bootcamps.python.language}
+          language={Bootcamps.python.language}
           description={Bootcamps.python.description}
           duration={Bootcamps.python.duration}
         />
-        <div className='modalities-conteiner'>
+        <div className='modalities-container'>
           {
             Bootcamps.python.modalities.map((modality, index) => (
               <div className='modality' key={index}>
