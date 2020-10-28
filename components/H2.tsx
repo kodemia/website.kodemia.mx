@@ -19,7 +19,7 @@ export default function H2 ({
   whiteText = whiteText.trim()
 
   const text = isFirstCyan ? cyanText : whiteText
-  const cursorText = isFirstCyan ?  whiteText : cyanText
+  const cursorText = isFirstCyan ? whiteText : cyanText
 
   return (
     <h2
@@ -28,10 +28,10 @@ export default function H2 ({
         'h2-white': !isFirstCyan
       })}
     >
-      { text }
+      {text}
       <TextCursor
-        text={ cursorText }
-        white={ isFirstCyan }
+        text={cursorText}
+        white={isFirstCyan}
       />
     </h2>
   )
