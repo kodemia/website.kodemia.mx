@@ -5,11 +5,12 @@
   padding-top: 100px;
 
   @include on-mobile {
-    margin: 0 32px;
+    margin: 0 45px;
   }
 
   @include on-tablet {
-    margin: 0 85px;
+    padding: 0 85px;
+    width: 100%;
   }
 
   .title {
