@@ -2,7 +2,8 @@
   background-color: $black-primary;
   display: flex;
   justify-content: center;
-  padding: 110px 155px 60px;
+  padding: 100px 0 60px;
+  width: 100%;
 
   @include on-mobile {
     flex-direction: column;
@@ -13,32 +14,38 @@
     padding: 170px 85px 0;
   }
 
-  .container {
+  .content {
+    background-color: $black-medium;
     box-sizing: border-box;
     display: grid;
-    grid-column-gap: 20px;
+    // grid-column-gap: 20px;
     grid-template-areas:
       'sub-title sub-title'
       'subject subject'
       'image why-kodemia-cards'
       'image why-kodemia-cards';
+      grid-template-columns: 1fr 2fr;
+    max-width: $content-max-width;
+    width: 100%;
 
     @include on-mobile {
-      grid-column-gap: 0;
+      // grid-column-gap: 0;
       grid-template-areas:
         'sub-title'
         'subject'
         'image'
         'why-kodemia-cards';
+        grid-template-columns: 1fr;
     }
 
     @include on-tablet {
-      grid-column-gap: 16px;
+      // grid-column-gap: 16px;
       grid-template-areas:
         'sub-title'
         'subject'
         'image'
         'why-kodemia-cards';
+      grid-template-columns: 1fr;
       // margin: 0 85px;
     }
 
