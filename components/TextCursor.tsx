@@ -20,6 +20,7 @@ export default function TextCursor ({
     'cyan-text': !white,
     'white-text': white
   })
+
   const finalPosition = text.length - 1
   const newText = text.slice(0, finalPosition)
   const characterCursor = text[finalPosition]

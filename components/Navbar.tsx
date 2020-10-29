@@ -1,12 +1,13 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import classNames from 'classnames'
 // my components
 import Button from './Button'
 import NavbarItems from '../config/navbar-items.json'
 
 export default function Navbar () {
-  const [isActive, setisActive] = useState(false)
+  const [isActive, setIsActive] = useState(false)
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
       <div className='container'>
@@ -23,10 +24,10 @@ export default function Navbar () {
           </Link>
           <a
             onClick={() => {
-              setisActive(!isActive)
+              setIsActive(!isActive)
             }}
             role='button'
-            className={`navbar-burger burger ${isActive ? 'is-active' : ''}`}
+            className={classNames('navbar-burger', 'burger', { 'is-active': isActive })}
             aria-label='menu'
             aria-expanded='false'
           >
@@ -35,7 +36,7 @@ export default function Navbar () {
             <span aria-hidden='true' />
           </a>
         </div>
-        <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
+        <div className={classNames('navbar-menu', { 'is-active': isActive })}>
           <div className='navbar-end'>
             <div className='navbar-item'>
               {

@@ -10,7 +10,11 @@ export default function Footer () {
     <footer className='my-footer'>
       <div className='wrapper-f'>
         <div className='first-container'>
-          <img src='/icons/Kodemia-logo-01.svg' alt='kodemia-logo' className='logo' />
+          <img
+            src='/icons/kodemia-logo-01.svg'
+            alt='kodemia-logo'
+            className='logo'
+          />
           <div className='buttons'>
             <div className='btn-whats'>
               <Button
