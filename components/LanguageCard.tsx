@@ -4,24 +4,24 @@ import H2 from './H2'
 
 export interface Props {
   name: string,
-  lenguage: string,
+  language: string,
   description: string,
   duration: string,
 }
 
-export default function LenguageCard ({
+export default function LanguageCard ({
   name,
-  lenguage,
+  language,
   description,
   duration
 }: Props) {
   return (
     <div className='language-card'>
-      <H2 whiteText={name} cyanText={lenguage} />
+      <H2 whiteText={name} cyanText={language} />
       <p className='description'>{description}</p>
       <div className='duration-container'>
         <img
-          src='/icons/Icon-Calendario.svg'
+          src='/icons/icon-calendario.svg'
           className='calendar-icon'
         />
         <h2 className='title'>Duración</h2>

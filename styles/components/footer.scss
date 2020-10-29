@@ -1,178 +1,195 @@
 
-.footer {
+.my-footer {
   background-color: $body-background-color;
-  margin: 0 155px;
-  max-width: $content-max-width;
-  padding: 6rem 0;
+  margin: 45px 0 40px;
   width: 100%;
 
-  @include on-mobile {
-    margin: 0 32px;
-    padding: 3rem 0;
-  }
-
-  @include on-tablet {
-    margin: 0 85px;
-  }
-
-  .first-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+  .wrapper-f {
+    margin: 0 155px;
 
     @include on-mobile {
-      grid-template-columns: 1fr;
-      grid-template-rows: unset;
-      text-align: center;
+      margin: 0 45px;
+      padding: 3rem 0;
     }
 
-    .logo {
-      grid-column: 1 / 3;
-      margin-bottom: 50px;
-      width: 172px;
+    @include on-tablet {
+      margin: 0 85px;
+    }
+
+    .first-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      margin: 0 auto;
+      max-width: $content-max-width;
+      min-width: $content-min-width;
 
       @include on-mobile {
-        grid-column: unset;
-        grid-row: unset;
-        margin-bottom: 25px;
-        width: 198px;
+        grid-template-columns: 1fr;
+        grid-template-rows: unset;
+        min-width: 100%;
+        text-align: center;
       }
 
       @include on-tablet {
-        margin-bottom: 40px;
-      }
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      grid-column: 2 / 3;
-
-      @include on-mobile {
-        grid-column: unset;
-        grid-row: unset;
+        min-width: 100%;
       }
 
-      .btn-whats {
-        margin: 10px 0;
-        margin-left: auto;
-        width: 337px;
+      .logo {
+        grid-column: 1 / 3;
+        margin-bottom: 50px;
+        width: 172px;
 
         @include on-mobile {
-          width: 100%;
+          grid-column: unset;
+          grid-row: unset;
+          margin-bottom: 25px;
+          width: 198px;
+        }
+
+        @include on-tablet {
+          margin-bottom: 40px;
         }
       }
 
-      .btn-telegram {
-        margin: 10px 0;
-        margin-left: auto;
-        width: 337px;
-
-        @include on-mobile {
-          width: 100%;
-        }
-      }
-    }
-
-    .directory {
-      display: flex;
-      flex-direction: column;
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      justify-content: space-around;
-
-      @include on-mobile {
-        grid-row: unset;
-      }
-
-      .navigation {
+      .buttons {
         display: flex;
-        flex-wrap: wrap;
-        font-size: 6vmin;
-        white-space: pre;
+        flex-direction: column;
+        grid-column: 2 / 3;
 
         @include on-mobile {
-          justify-content: center;
+          grid-column: unset;
+          grid-row: unset;
         }
 
-        .item-nav {
-          &:hover {
-            color: $info;
+        .btn-whats {
+          margin: 10px 0;
+          margin-left: auto;
+          width: 337px;
+
+          @include on-mobile {
+            width: 100%;
+          }
+        }
+
+        .btn-telegram {
+          margin: 10px 0;
+          margin-left: auto;
+          width: 337px;
+
+          @include on-mobile {
+            width: 100%;
           }
         }
       }
 
-      .social-media {
-        position: relative;
+      .directory {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        justify-content: space-around;
 
         @include on-mobile {
-          margin: 40px 0 20px;
+          grid-row: unset;
         }
 
-        .item-sm {
-          margin: 0 10px;
+        .navigation {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 6vmin;
+          white-space: pre;
 
-          img {
-            width: 25.6px;
+          @include on-mobile {
+            justify-content: center;
+          }
 
+          .item-nav {
             &:hover {
-              filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%);
+              color: $info;
+            }
+          }
+        }
+
+        .social-media {
+          position: relative;
+
+          @include on-mobile {
+            margin: 40px 0 20px;
+          }
+
+          .item-sm {
+            margin: 0 10px;
+
+            img {
+              width: 25.6px;
+
+              &:hover {
+                filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%);
+              }
             }
           }
         }
       }
-    }
 
-    .contact {
-      grid-column: 2 / 3;
-      margin: 20px 0;
-      text-align: end;
-
-      @include on-mobile {
-        grid-column: unset;
-        grid-row: unset;
-        margin-bottom: 0;
-        margin-top: 10px;
-        text-align: center;
-      }
-    }
-
-    .address {
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
-      margin: 20px 0;
-
-      @include on-mobile {
-        grid-column: unset;
-        grid-row: unset;
-        margin-top: 0;
-      }
-    }
-  }
-
-  .copyright-container {
-    border-top: 2px solid $white;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    padding-top: 20px;
-    text-align: center;
-
-    @include on-mobile {
-      flex-direction: column;
-
-      p {
-        margin: 0 10%;
-      }
-    }
-
-    .privacy {
-      @include on-mobile {
+      .contact {
+        grid-column: 2 / 3;
         margin: 20px 0;
+        text-align: end;
+
+        @include on-mobile {
+          grid-column: unset;
+          grid-row: unset;
+          margin-bottom: 0;
+          margin-top: 10px;
+          text-align: center;
+        }
       }
 
-      &:hover {
-        color: $info;
+      .address {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        margin: 20px 0;
+
+        @include on-mobile {
+          grid-column: unset;
+          grid-row: unset;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .copyright-container {
+      border-top: 2px solid $white;
+      display: flex;
+      justify-content: space-between;
+      margin: 10px auto 0;
+      max-width: $content-max-width;
+      min-width: 719px;
+      padding-top: 20px;
+      text-align: center;
+
+      @include on-mobile {
+        flex-direction: column;
+        min-width: 100%;
+
+        p {
+          margin: 0 10%;
+        }
+      }
+
+      @include on-tablet {
+        min-width: 100%;
+      }
+
+      .privacy {
+        @include on-mobile {
+          margin: 20px 0;
+        }
+
+        &:hover {
+          color: $info;
+        }
       }
     }
   }
