@@ -6,28 +6,7 @@ import Navbar from '../components/Navbar'
 import OurBootcamps from '../components/Pages/Home/OurBootcamps'
 import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 
-const cards = [
-  {
-    text: 'Queremos ser parte de tu nuevo futuro como desarrollador desde el día uno, hasta después del Bootcamp',
-    icon: '/icons/Icon-Proceso.svg',
-    title: 'Te acompañamos en el proceso'
-  },
-  {
-    text: 'Nos adaptamos a lo que estás buscando, ya sea colocarte, emprender o crecer profesionalmente',
-    icon: '/icons/Icon-Objetivo.svg',
-    title: 'Tu objetivo es nuestro objetivo'
-  },
-  {
-    text: 'Lo más importante para nosotros son las personas. Ayudarlas a conectar entre sí es parte de nuestro propósito, para que nunca dejen de crecer',
-    icon: '/icons/Icon-Comunidad.svg',
-    title: 'Creamos comunidad'
-  },
-  {
-    text: 'Nuestros egresados tienen las herramientas para enfrentarse y triunfar en el mundo laboral ',
-    icon: '/icons/Icon-Alto-calibre.svg',
-    title: 'Programadores de alto calibre'
-  }
-]
+import WhyKodemiaCards from '../config/why-kodemia-cards.json'
 
 export default function Home () {
   return (
@@ -38,7 +17,7 @@ export default function Home () {
       </Head>
       <Navbar />
       <Hero />
-      <WhyKodemia cards={cards} />
+      <WhyKodemia infoCards={WhyKodemiaCards.cards} />
       <OurBootcamps />
       <Footer />
     </>

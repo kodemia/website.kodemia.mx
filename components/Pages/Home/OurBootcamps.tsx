@@ -8,7 +8,7 @@ import Bootcamps from '../../../config/bootcamps.json'
 
 export default function OurBootcamps () {
   return (
-    <div className='our-bootcamps'>
+    <div className='our-bootcamps section-container'>
       <h3 className='title'>Nuestros Bootcamps</h3>
       <div className='bootcamp'>
         <LanguageCard

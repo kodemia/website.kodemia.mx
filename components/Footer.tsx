@@ -8,7 +8,7 @@ import Button from './Button'
 export default function Footer () {
   return (
     <footer className='my-footer'>
-      <div className='wrapper-f'>
+      <div className='wrapper-f section-container'>
         <div className='first-container'>
           <img src='/icons/Kodemia-logo-01.svg' alt='kodemia-logo' className='logo' />
           <div className='buttons'>
