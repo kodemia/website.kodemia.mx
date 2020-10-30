@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Hero from '../components/Pages/Home/Hero'
 import OurBootcamps from '../components/Pages/Home/OurBootcamps'
+// Data
+import OurBootcampsCards from '../config/our-bootcamps-cards.json'
 
 export default function Home () {
   return (
@@ -13,7 +15,7 @@ export default function Home () {
       </Head>
       <Navbar />
       <Hero />
-      <OurBootcamps />
+      <OurBootcamps bootcamps={OurBootcampsCards} />
       <Footer />
     </>
   )

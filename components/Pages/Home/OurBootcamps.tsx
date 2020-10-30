@@ -1,25 +1,27 @@
 
 import React from 'react'
 // My components
-import BootcampCard from '../../BootcampCard'
-import LanguageCard from '../../LanguageCard'
-// Data
-import Bootcamps from '../../../config/bootcamps.json'
+import BootcampCard, { Props as BootcampCardProps } from '../../BootcampCard'
+import LanguageCard, {Props as LanguageCardProps} from '../../LanguageCard'
 
-export default function OurBootcamps () {
+export interface Props {
+  bootcamps: object
+}
+
+export default function OurBootcamps ({ bootcamps }) {
   return (
     <div className='our-bootcamps'>
       <h3 className='title'>Nuestros Bootcamps</h3>
       <div className='bootcamp'>
         <LanguageCard
-          name={Bootcamps.name}
-          language={Bootcamps.javascript.language}
-          description={Bootcamps.javascript.description}
-          duration={Bootcamps.javascript.duration}
+          name={bootcamps.javascript.name}
+          language={bootcamps.javascript.language}
+          description={bootcamps.javascript.description}
+          duration={bootcamps.javascript.duration}
         />
         <div className='modalities-container'>
           {
-            Bootcamps.javascript.modalities.map((modality, index) => (
+            bootcamps.javascript.modalities.map((modality, index) => (
               <div className='modality' key={index}>
                 <BootcampCard
                   mode={modality.name}
@@ -34,14 +36,14 @@ export default function OurBootcamps () {
       </div>
       <div className='bootcamp'>
         <LanguageCard
-          name={Bootcamps.name}
-          language={Bootcamps.python.language}
-          description={Bootcamps.python.description}
-          duration={Bootcamps.python.duration}
+          name={bootcamps.python.name}
+          language={bootcamps.python.language}
+          description={bootcamps.python.description}
+          duration={bootcamps.python.duration}
         />
         <div className='modalities-container'>
           {
-            Bootcamps.python.modalities.map((modality, index) => (
+            bootcamps.python.modalities.map((modality, index) => (
               <div className='modality' key={index}>
                 <BootcampCard
                   mode={modality.name}

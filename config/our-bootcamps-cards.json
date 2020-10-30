@@ -1,7 +1,7 @@
 
 {
-  "name":"Bootcamp FullStack con", 
   "javascript": {
+    "name":"Bootcamp FullStack con",
     "language":"Javascript",
     "description": "Desarrollarás una web app completa con MERN orientada al Front End con React",
     "duration":"19 semanas",
@@ -34,6 +34,7 @@
     }
   ,
   "python": {
+    "name":"Bootcamp FullStack con",
     "language":"Python",
     "description": "Desarrollarás una web app completa orientada al Back End con Python y Javascript",
     "duration":"21 semanas",
