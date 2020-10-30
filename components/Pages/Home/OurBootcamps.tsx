@@ -5,7 +5,7 @@ import BootcampCard from '../../BootcampCard'
 import LanguageCard from '../../LanguageCard'
 
 export interface Props {
-  bootcamps: object
+  bootcamps: any
 }
 
 export default function OurBootcamps ({ bootcamps }:Props) {
