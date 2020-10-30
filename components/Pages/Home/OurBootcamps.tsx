@@ -4,10 +4,6 @@ import React from 'react'
 import BootcampCard from '../../BootcampCard'
 import LanguageCard from '../../LanguageCard'
 
-export interface Props {
-  bootcamps: object
-}
-
 export default function OurBootcamps ({ bootcamps }) {
   return (
     <div className='our-bootcamps'>
