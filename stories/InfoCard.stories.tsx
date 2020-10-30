@@ -16,7 +16,7 @@ export default {
       control: 'text'
     },
     text: {
-      control: 'text' 
+      control: 'text'
     }
   }
 

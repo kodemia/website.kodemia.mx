@@ -5,7 +5,7 @@ import WhyKodemia, { Props } from '../components/Pages/Home/WhyKodemia'
 
 export default {
   title: 'Base/WhyKodemia',
-  component: WhyKodemia,
+  component: WhyKodemia
 } as Meta
 
 const Template: Story<Props> = (infoCards) => <WhyKodemia {...infoCards} />
@@ -17,7 +17,7 @@ Default.args = {
     {
       icon: '/icons/Icon-Objetivo.svg',
       title: 'Te acompañamos en el proceso',
-      text: 'Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales' 
+      text: 'Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales'
     }
   ]
 }
