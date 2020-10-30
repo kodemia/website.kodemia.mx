@@ -40,7 +40,7 @@
       grid-template-columns: 1fr;
       min-width: 100%;
     }
-    
+
     .subject {
       margin-bottom: 40px;
 
@@ -48,6 +48,7 @@
         max-width: 100%;
         min-width: 50%;
       }
+
       @include on-tablet {
         max-width: 50%;
       }
@@ -83,7 +84,7 @@
       grid-column-gap: 35px;
       grid-row-gap: 29px;
       grid-template-columns: 1fr 1fr;
- 
+
       @include on-mobile {
         grid-template-columns: 1fr;
         padding-left: 0;

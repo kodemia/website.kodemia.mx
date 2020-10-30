@@ -5,7 +5,7 @@
   grid-template-areas:
     'ikon info-card-title'
     'ikon text';
-  padding: 20px 0 18px 0;
+  padding: 20px 0 18px;
 
   @include on-mobile {
     padding: 20px 0;
@@ -29,7 +29,6 @@
     grid-area: info-card-title;
     line-height: 1.36;
     margin: 0;
-
   }
 
   .text {
