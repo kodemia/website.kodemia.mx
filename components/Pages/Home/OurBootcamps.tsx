@@ -1,8 +1,8 @@
 
 import React from 'react'
 // My components
-import BootcampCard, { Props as BootcampCardProps } from '../../BootcampCard'
-import LanguageCard, {Props as LanguageCardProps} from '../../LanguageCard'
+import BootcampCard from '../../BootcampCard'
+import LanguageCard from '../../LanguageCard'
 
 export interface Props {
   bootcamps: object
