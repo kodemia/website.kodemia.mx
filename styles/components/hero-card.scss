@@ -1,9 +1,11 @@
 
 .hero-card {
-  width: 337px;
+  min-width: 338px;
+  width: 33.33%;
 
   @include on-mobile {
-    max-width: 337px;
+    max-width: 338px;
+    min-width: 50%;
     width: 100%;
   }
 

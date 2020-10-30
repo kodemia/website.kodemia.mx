@@ -7,7 +7,7 @@
   width: 100%;
 
   @include on-mobile {
-    padding: 5px 8px;
+    padding: 5px 15px;
   }
 
   a {
@@ -16,93 +16,98 @@
     }
   }
 
-  .navbar-brand {
-    .navbar-item {
-      img {
-        max-height: none;
-      }
-    }
-  }
+  .container {
+    max-width: $content-max-width;
+    width: 100%;
 
-  .navbar-menu {
-    @include on-mobile {
-      margin-left: -8px;
-      padding: 0 40px;
-      position: absolute;
-      top: 62px;
-      width: 100%;
-    }
-
-    @include on-tablet {
-      margin-left: -49px;
-      padding: 0 80px;
-      position: absolute;
-      top: 76px;
-      width: 100%;
-    }
-
-    .navbar-end {
-      margin: 0;
-      width: 100%;
-
+    .navbar-brand {
       .navbar-item {
-        margin: 0 auto;
-
-        @include on-mobile {
-          margin: 0;
-          padding: 0;
-        }
-
-        a {
-          @include on-mobile {
-            margin: 20px 0;
-          }
+        img {
+          max-height: none;
         }
       }
+    }
 
-      .btns {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        font-size: 16px;
-        justify-content: space-between;
-        width: 300px;
+    .navbar-menu {
+      @include on-mobile {
+        left: -15px;
+        margin: 4px 0;
+        padding: 0 40px;
+        position: absolute;
+        width: 100vw;
+      }
 
-        @include on-mobile {
-          flex-direction: column;
-          width: 100%;
-        }
+      @include on-tablet {
+        margin: 11px 0;
+        padding: 0 60px;
+        position: absolute;
+        right: -50px;
+        width: 100vw;
+      }
 
-        @include on-tablet {
-          flex-direction: column;
-          width: 100%;
-        }
+      .navbar-end {
+        margin: 0;
+        width: 99%;
 
-        .btn-sign-in {
-          width: 136px;
+        .navbar-item {
+          margin: 0 auto;
 
           @include on-mobile {
-            margin: 20px auto;
-            width: 95%;
+            margin: 0;
+            padding: 0 10px;
+          }
+
+          a {
+            @include on-mobile {
+              margin: 20px 0;
+            }
+          }
+        }
+
+        .btns {
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          font-size: 16px;
+          justify-content: space-between;
+          width: 300px;
+
+          @include on-mobile {
+            flex-direction: column;
+            width: 100%;
           }
 
           @include on-tablet {
-            margin: 20px auto;
-            width: 95%;
-          }
-        }
-
-        .btn-apply {
-          width: 136px;
-
-          @include on-mobile {
-            margin: 20px auto;
-            width: 95%;
+            flex-direction: column;
+            width: 100%;
           }
 
-          @include on-tablet {
-            margin: 20px auto;
-            width: 95%;
+          .btn-sign-in {
+            width: 136px;
+
+            @include on-mobile {
+              margin: 20px auto;
+              width: 95%;
+            }
+
+            @include on-tablet {
+              margin: 20px auto;
+              width: 95%;
+            }
+          }
+
+          .btn-apply {
+            width: 136px;
+
+            @include on-mobile {
+              margin: 20px auto;
+              width: 95%;
+            }
+
+            @include on-tablet {
+              margin: 20px auto;
+              width: 95%;
+            }
           }
         }
       }
