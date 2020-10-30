@@ -6,11 +6,11 @@
   width: 100%;
 
   @include on-mobile {
-    padding: 150px 45px 20px;
+    padding: 100px 45px 20px;
   }
 
   @include on-tablet {
-    padding: 170px 85px 0;
+    padding: 100px 85px 0;
   }
 
   .why-kodemia-container {

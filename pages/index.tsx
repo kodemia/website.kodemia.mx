@@ -18,8 +18,8 @@ export default function Home () {
       </Head>
       <Navbar />
       <Hero />
-      <OurBootcamps bootcamps={OurBootcampsCards} />
       <WhyKodemia infoCards={WhyKodemiaCards.cards} />
+      <OurBootcamps bootcamps={OurBootcampsCards} />
       <Footer />
     </>
   )
