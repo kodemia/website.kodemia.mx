@@ -4,8 +4,30 @@ import React from 'react'
 import BootcampCard from '../../BootcampCard'
 import LanguageCard from '../../LanguageCard'
 
+export interface Modality {
+  name: string
+  description: string
+  link: string
+  schedule: {
+    day: string
+    month: string
+    year: string
+    hour: string
+    days: string
+  }
+}
+export interface Language {
+  name: string
+  language: string
+  description: string
+  duration: string
+  modalities: Array<Modality>
+}
 export interface Props {
-  bootcamps: any
+  bootcamps: {
+    javascript: Language
+    python: Language
+  }
 }
 
 export default function OurBootcamps ({ bootcamps }:Props) {
