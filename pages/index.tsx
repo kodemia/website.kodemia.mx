@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Hero from '../components/Pages/Home/Hero'
 import OurBootcamps from '../components/Pages/Home/OurBootcamps'
+import KodemiaFinancing from '../components/Pages/Home/KodemiaFinancing'
 // Data
 import OurBootcampsCards from '../config/our-bootcamps-cards.json'
 
@@ -16,6 +17,7 @@ export default function Home () {
       <Navbar />
       <Hero />
       <OurBootcamps bootcamps={OurBootcampsCards} />
+      <KodemiaFinancing />
       <Footer />
     </>
   )
