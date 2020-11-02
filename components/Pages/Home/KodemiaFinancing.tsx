@@ -13,6 +13,7 @@ export default function KodemiaFinancing () {
   return (
     <div>
       <H3 text={data.section} />
+      <Button />
     </div>
   )
 }
