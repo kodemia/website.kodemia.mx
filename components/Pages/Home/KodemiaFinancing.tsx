@@ -15,11 +15,15 @@ export default function KodemiaFinancing () {
 
   return (
     <div className='kodemia-financing'>
-      <div className='container-card'>
+      <div className='card-container'>
         <H3 text={data.section} />
-        <H2 whiteText={data.title} cyanText={data.keywords} />
+        <div className='title-container'>
+          <H2 whiteText={data.title} cyanText={data.keywords} />
+        </div>
         <p className='text'>{data.text}</p>
-        <Button isPrimary label='Conoce más' />
+        <div className='btn-container'>
+          <Button isPrimary label='Conoce más' />
+        </div>
       </div>
     </div>
   )
