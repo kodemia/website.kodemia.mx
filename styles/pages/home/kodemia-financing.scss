@@ -25,28 +25,26 @@
     .title-container {
       width: 452px;
 
-       @include on-mobile {
-         width: 100%;
-       }
-
-
+      @include on-mobile {
+        width: 100%;
+      }
     }
 
     .text {
       color: $text;
       font-size: 18px;
       font-weight: 500px;
-      margin: 32px 0 37px ;
-      }
+      margin: 32px 0 37px;
+    }
 
     .btn-container {
-      width: 336px ;
+      width: 336px;
 
       @include on-mobile {
         width: 100%;
       }
 
-      @include on-tablet{
+      @include on-tablet {
         width: 100%;
       }
     }
