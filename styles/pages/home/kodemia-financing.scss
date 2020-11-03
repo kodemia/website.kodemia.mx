@@ -1,31 +1,49 @@
 
 .kodemia-financing {
-  background-image: url('/apoyo-kodemia.png');
+  background-image: url('/images/apoyo-kodemia.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin: 43px 0;
   width: 100%;
 
-  .card-container {
+  @include on-mobile {
+    padding: 0 45px;
+  }
+
+  @include on-tablet {
+    justify-content: flex-start;
+    padding: 0 85px;
+  }
+
+  .kodemia-financing-container {
     display: flex;
     flex-direction: column;
     height: 459px;
     justify-content: center;
-    margin: 0 auto 0 0;
-    max-width: 729px;
+    max-width: $content-max-width;
     width: 100%;
 
     @include on-mobile {
+      margin: 0;
       max-width: 100%;
     }
 
     @include on-tablet {
-      max-width: 50%;
+      margin:0;
+      max-width: 437px;
+      width: 50%;
     }
 
     .title-container {
-      width: 452px;
+      width: 437px;
 
-      @include on-mobile {
+       @include on-mobile {
+         width: 100%;
+       }
+
+       @include on-tablet {
         width: 100%;
       }
     }
@@ -34,17 +52,18 @@
       color: $text;
       font-size: 18px;
       font-weight: 500px;
-      margin: 32px 0 37px;
-    }
+      margin: 32px 0 37px ;
+      max-width: 729px;
+      }
 
     .btn-container {
-      width: 336px;
+      width: 336px ;
 
       @include on-mobile {
         width: 100%;
       }
 
-      @include on-tablet {
+      @include on-tablet{
         width: 100%;
       }
     }

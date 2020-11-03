@@ -14,8 +14,8 @@ export default function KodemiaFinancing () {
   }
 
   return (
-    <div className='kodemia-financing'>
-      <div className='card-container'>
+    <section className='kodemia-financing'>
+      <div className='kodemia-financing-container  section-container'>
         <H3 text={data.section} />
         <div className='title-container'>
           <H2 whiteText={data.title} cyanText={data.keywords} />
@@ -25,6 +25,6 @@ export default function KodemiaFinancing () {
           <Button isPrimary label='Conoce más' />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

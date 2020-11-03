@@ -1,11 +1,14 @@
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
+
 import Footer from '../components/Footer'
 import Hero from '../components/Pages/Home/Hero'
+import Navbar from '../components/Navbar'
 import OurBootcamps from '../components/Pages/Home/OurBootcamps'
 import KodemiaFinancing from '../components/Pages/Home/KodemiaFinancing'
+import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 // Data
 import OurBootcampsCards from '../config/our-bootcamps-cards.json'
+import WhyKodemiaCards from '../config/why-kodemia-cards.json'
 
 export default function Home () {
   return (
@@ -16,6 +19,7 @@ export default function Home () {
       </Head>
       <Navbar />
       <Hero />
+      <WhyKodemia infoCards={WhyKodemiaCards.cards} />
       <OurBootcamps bootcamps={OurBootcampsCards} />
       <KodemiaFinancing />
       <Footer />

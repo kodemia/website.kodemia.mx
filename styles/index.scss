@@ -36,6 +36,10 @@ body {
   justify-content: center;
 }
 
+.section-container {
+  margin: $section-margin;
+}
+
 // components
 @import 'components/index';
 @import 'pages/index';
