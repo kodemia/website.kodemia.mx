@@ -15,7 +15,7 @@ export default {
     title: {
       control: 'text'
     },
-    description: {
+    text: {
       control: 'text'
     }
   }
@@ -28,5 +28,5 @@ export const Info = Template.bind({})
 Info.args = {
   icon: '/icons/Icon-Objetivo.svg',
   title: 'Te acompañamos en el proceso',
-  description: 'Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales'
+  text: 'Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales'
 }
