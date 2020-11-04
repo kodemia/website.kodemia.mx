@@ -1,6 +1,7 @@
 
 import React from 'react'
 // My components
+import H3 from '../../H3'
 import BootcampCard from '../../BootcampCard'
 import LanguageCard from '../../LanguageCard'
 
@@ -33,7 +34,7 @@ export interface Props {
 export default function OurBootcamps ({ bootcamps }:Props) {
   return (
     <div className='our-bootcamps section-container'>
-      <h3 className='title'>Nuestros Bootcamps</h3>
+      <H3 text='Nuestros Bootcamps'/>
       <div className='bootcamp'>
         <LanguageCard
           name={bootcamps.javascript.name}
