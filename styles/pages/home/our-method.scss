@@ -2,12 +2,12 @@
 .our-method {
   max-width: $content-max-width;
   min-width: $content-min-width;
-  padding: 70px 0px;
+  padding: 70px 0;
 
-  @include on-mobile{
-    padding: 70px 45px;
+  @include on-mobile {
     max-width: 100%;
     min-width: 100%;
+    padding: 70px 45px;
   }
 
   @include on-tablet {
@@ -17,6 +17,7 @@
 
   .title-contain {
     max-width: 452px;
+
     @include on-mobile {
       max-width: 369px;
     }
@@ -38,8 +39,8 @@
     display: grid;
     grid-column-gap: 55px;
     grid-row-gap: 29px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
 
     @include on-mobile {
       grid-template-columns: 1fr;
@@ -47,7 +48,7 @@
     }
 
     @include on-tablet {
-      grid-template-columns:repeat( 2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
     }
   }
