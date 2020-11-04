@@ -22,7 +22,7 @@ export default function Home () {
       <Hero />
       <WhyKodemia infoCards={WhyKodemiaCards.cards} />
       <OurBootcamps bootcamps={OurBootcampsCards} />
-      <OurMethod infoOurMethod={OurMethodData} />
+      <OurMethod ourMethod={OurMethodData} />
       <Footer />
     </>
   )
