@@ -13,7 +13,7 @@ export default function WhyKodemia ({ infoCards }: Props) {
     <section className='why-kodemia'>
       <div className='why-kodemia-container section-container'>
         <div className='subject'>
-          <H3 text='¿Por qué Kodemia?'/>
+          <H3 text='¿Por qué Kodemia?' />
           <H2 whiteText='Vivimos para ' cyanText='formar programadores' />
         </div>
         <img className='image' src='/images/why-kodemia.png' alt='koder y mentor sonriendo' />

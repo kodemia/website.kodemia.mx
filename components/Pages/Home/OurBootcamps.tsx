@@ -34,7 +34,7 @@ export interface Props {
 export default function OurBootcamps ({ bootcamps }:Props) {
   return (
     <div className='our-bootcamps section-container'>
-      <H3 text='Nuestros Bootcamps'/>
+      <H3 text='Nuestros Bootcamps' />
       <div className='bootcamp'>
         <LanguageCard
           name={bootcamps.javascript.name}
