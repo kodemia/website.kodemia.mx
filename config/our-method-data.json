@@ -1,0 +1,38 @@
+{
+  "title":"Aprender a programar",
+  "keywords": "no es fácil",
+  "text":"En kodemia no solo buscamso que \"copies y pegues código\" somo enemigos del \"si funciona no le muevas \" nuestro \"Método\" te exigirá y te llevará al limite, pero al final la recompensa es enorme",
+  "cards":[
+    {
+      "title":"De la teoría a la práctica",
+      "text":"Todos kis días, por módulos y por Bootcamp, llevrás proyectos prácticos reales",
+      "image": "/icons/icon-practica.svg"
+    },
+    {
+      "title":"Asesoria personalizada",
+      "text":"Si algún tema se te dificulta, recibe apoyo adicional a las clases, para que no haya cabos sueltos",
+      "image": "/icons/icon-asesorias.svg"
+    },
+    {
+      "title":"Aprende a aprender",
+      "text":"En el mundo laboral, muchas veces estrás solo, por eso impulsaremos tu autoaprendizaje y tus habilidades para la resolución de problemas",
+      "image": "/icons/icon-aprender.svg"
+    },
+    {
+      "title":"Aprende de ti",
+      "text": "Descrube tu método de aprendizaje. Utilizamos estrategias personalizadas para que aprendas a tu estilo",
+      "image": "//icons/icon-aprende-de-ti.svg/"
+    },
+    {
+      "title": "Aprende en equipo",
+      "text": "Junto con tus compañeros, desde el primer módulo, tendrás desafios con los que aprenderás a trabajar en células de desarrollo",
+      "image": "/icons/icon-aprende-equipo.svg"
+    },
+    {
+      "title":"Aprende de líderes de desarrollo",
+      "text":"Los mentores de Kodemia son Developers Sr. en empresas de tecnología y te compartirán sus hacks y experiencia",
+      "image": "/icons/icon-aprende-lideres.svg"
+    }
+
+  ]
+}
