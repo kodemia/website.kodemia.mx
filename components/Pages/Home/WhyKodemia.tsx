@@ -1,6 +1,7 @@
 import React from 'react'
-
+// my components
 import H2 from '../../H2'
+import H3 from '../../H3'
 import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
 
 export interface Props {
@@ -12,7 +13,7 @@ export default function WhyKodemia ({ infoCards }: Props) {
     <section className='why-kodemia'>
       <div className='why-kodemia-container section-container'>
         <div className='subject'>
-          <h3 className='title'>¿Por qué Kodemia?</h3>
+          <H3 text='¿Por qué Kodemia?' />
           <H2 whiteText='Vivimos para ' cyanText='formar programadores' />
         </div>
         <img className='image' src='/images/why-kodemia.png' alt='koder y mentor sonriendo' />

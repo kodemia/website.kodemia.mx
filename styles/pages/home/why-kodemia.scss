@@ -52,14 +52,6 @@
       @include on-tablet {
         max-width: 50%;
       }
-
-      .title {
-        color: $text;
-        font-size: 20px;
-        font-weight: 500;
-        grid-area: sub-title;
-        margin-bottom: 15px;
-      }
     }
 
     .image {
