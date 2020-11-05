@@ -9,6 +9,7 @@ import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 // Data
 import OurBootcampsCards from '../config/our-bootcamps-cards.json'
 import WhyKodemiaCards from '../config/why-kodemia-cards.json'
+import KodemiaFinancingData from '../config/kodemia-financing-data.json'
 
 export default function Home () {
   return (
@@ -21,7 +22,7 @@ export default function Home () {
       <Hero />
       <WhyKodemia infoCards={WhyKodemiaCards.cards} />
       <OurBootcamps bootcamps={OurBootcampsCards} />
-      <KodemiaFinancing />
+      <KodemiaFinancing info={KodemiaFinancingData} />
       <Footer />
     </>
   )
