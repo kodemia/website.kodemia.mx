@@ -5,13 +5,14 @@ import Button from '../../Button'
 import H2 from '../../H2'
 import H3 from '../../H3'
 
-export interface Props {
-  info: {
+export interface Data {
     title: string
     keywords: string
     section: string
     text: string
-  }
+}
+export interface Props {
+  info: Data
 }
 
 export default function KodemiaFinancing ({ info }:Props) {
