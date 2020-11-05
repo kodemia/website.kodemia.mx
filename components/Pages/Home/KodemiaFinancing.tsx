@@ -5,7 +5,7 @@ import Button from '../../Button'
 import H2 from '../../H2'
 import H3 from '../../H3'
 
-export interface Props  {
+export interface Props {
   info: {
     title: string
     keywords: string
@@ -14,8 +14,7 @@ export interface Props  {
   }
 }
 
-export default function KodemiaFinancing ({info}:Props) {
-
+export default function KodemiaFinancing ({ info }:Props) {
   return (
     <section className='kodemia-financing'>
       <div className='kodemia-financing-container  section-container'>
