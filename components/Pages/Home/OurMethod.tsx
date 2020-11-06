@@ -1,6 +1,7 @@
 import React from 'react'
 // My component
 import H2 from '../../H2'
+import H3 from '../../H3'
 import InfoCard from '../../InfoCard'
 
 export interface Cards {
@@ -22,8 +23,9 @@ export interface Props {
 
 export default function OurMethod ({ ourMethod: { title, keywords, text, cards } }: Props) {
   return (
-    <section className='our-method section-container'>
-      <h3>Nuestro Método</h3>
+    <section className='our-method '>
+     <div className='our-method-container section-container'>
+     <H3 text='Nuestro Método'/>
       <div className='title-contain'>
         <H2 whiteText={title} cyanText={keywords} />
       </div>
@@ -40,6 +42,7 @@ export default function OurMethod ({ ourMethod: { title, keywords, text, cards }
           )
         })}
       </div>
+     </div>
     </section>
   )
 }

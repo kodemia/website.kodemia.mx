@@ -7,6 +7,10 @@
   @include on-mobile {
     font-size: 28px;
   }
+
+  @include on-tablet {
+    font-size: 30px;
+  }
 }
 
 .h2-white {

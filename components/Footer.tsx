@@ -11,7 +11,7 @@ export default function Footer () {
       <div className='wrapper-f section-container'>
         <div className='first-container'>
           <img
-            src='/icons/kodemia-logo-01.svg'
+            src='/icons/kodemia-logo.svg'
             alt='kodemia-logo'
             className='logo'
           />
@@ -19,13 +19,13 @@ export default function Footer () {
             <div className='btn-whats'>
               <Button
                 isPrimary label='Mándanos un whatsapp'
-                icon='/icons/button-whatsapp.svg'
+                icon='/icons/btn-whatsapp.svg'
               />
             </div>
             <div className='btn-telegram'>
               <Button
                 label='Únete a la comunidad'
-                icon='/icons/button-telegram.svg'
+                icon='/icons/btn-telegram.svg'
               />
             </div>
           </div>
