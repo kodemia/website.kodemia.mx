@@ -14,7 +14,7 @@ export interface Info {
   title: string
   keywords: string
   text: string
-  cards: Array<Cards>
+  cards: Array<Card>
 }
 
 export interface Props {
