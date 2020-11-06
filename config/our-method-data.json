@@ -1,7 +1,7 @@
 {
   "title":"Aprender a programar",
   "keywords": "no es fácil",
-  "text":"En kodemia no solo buscamos que \"copies y pegues código\" somo enemigos del \"si funciona no le muevas \" nuestro \"Método\" te exigirá y te llevará al limite, pero al final la recompensa es enorme.",
+  "text":"En kodemia no solo buscamos que \"copies y pegues código\" somos enemigos del \"si funciona no le muevas \" nuestro \"Método\" te exigirá y te llevará al limite, pero al final la recompensa es enorme.",
   "cards":[
     {
       "title":"De la teoría a la \npráctica",
@@ -9,7 +9,7 @@
       "icon": "/icons/icon-practica.svg"
     },
     {
-      "title":"Asesoria\npersonalizada",
+      "title":"Asesoría\npersonalizada",
       "text":"Si algún tema se te dificulta, recibe apoyo adicional a las clases, para que no haya cabos sueltos",
       "icon": "/icons/icon-asesoria.svg"
     },
