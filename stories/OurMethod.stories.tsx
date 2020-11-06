@@ -13,16 +13,14 @@ const Template: Story<Props> = (args) => <OurMethod {...args} />
 export const Default = Template.bind({})
 Default.args = {
   ourMethod: {
-    title: 'Aprender a programar',
-    keywords: 'no es fácil',
-    text:
-      'En kodemia no solo buscamso que "copies y pegues código" somo enemigos del "si funciona no le muevas " nuestro "Método" te exigirá y te llevará al limite, pero al final la recompensa es enorme',
-    cards: [
+    title:"Aprender a programar",
+    keywords: "no es fácil",
+    text:"En Kodemia no solo buscamos que \"copies y pegues código\" somos enemigos del \"si funciona, no le muevas \" nuestro \"Método\" te exigirá y te llevará al limite, pero al final la recompensa es enorme.",
+    cards:[
       {
-        title: 'De la teoría a la \npráctica',
-        text:
-          'Todos kis días, por módulos y por Bootcamp, llevrás proyectos prácticos reales',
-        icon: '/icons/icon-practica.svg'
+        title:"De la teoría a la \npráctica",
+        text:"Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales",
+        icon: "/icons/icon-practica.svg"
       }
     ]
   }
