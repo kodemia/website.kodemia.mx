@@ -4,7 +4,7 @@ import H2 from '../../H2'
 import H3 from '../../H3'
 import InfoCard from '../../InfoCard'
 
-export interface Cards {
+export interface Card {
   icon: string
   text: string
   title: string
