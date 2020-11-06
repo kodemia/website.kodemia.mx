@@ -5,7 +5,7 @@
   "cards":[
     {
       "title":"De la teoría a la \npráctica",
-      "text":"Todos kis días, por módulos y por Bootcamp, llevrás proyectos prácticos reales",
+      "text":"Todos los días, por módulos y por Bootcamp, llevarás proyectos prácticos reales",
       "icon": "/icons/icon-practica.svg"
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "title":"Aprende \nde ti",
-      "text": "Descrube tu método de aprendizaje. Utilizamos estrategias personalizadas para que aprendas a tu estilo",
+      "text": "Descubre tu método de aprendizaje. Utilizamos estrategias personalizadas para que aprendas a tu estilo",
       "icon": "/icons/icon-aprende-de-ti.svg/"
     },
     {
