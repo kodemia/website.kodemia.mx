@@ -1,0 +1,56 @@
+
+.your-life {
+  background-color: $cyan-primary;
+  display: flex;
+  justify-content: center;
+  margin: 45px 0;
+  width: 100%;
+
+  .your-life-container {
+    align-items: center;
+    display: flex;
+    height: 319px;
+    justify-content: space-between;
+    max-width: $content-max-width;
+    width: 100%;
+
+    @include on-mobile {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 0 45px;
+    }
+
+    @include on-tablet {
+      margin: 0;
+      padding: 0 85px;
+    }
+
+    .title-container {
+      max-width: 600px;
+
+      @include on-mobile {
+        width: 100%;
+      }
+
+      @include on-tablet {
+        //max-width: 416px;
+        width: 55%;
+      }
+    }
+
+    .btn-container {
+      width: 338px;
+
+      @include on-mobile {
+        margin-top: 55px;
+        width: 100%;
+      }
+
+      @include on-tablet {
+        width: 45%;
+      }
+    }
+  }
+}

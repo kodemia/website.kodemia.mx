@@ -7,7 +7,6 @@
   .wrapper-f {
     @include on-mobile {
       margin: 0 45px;
-      padding: 3rem 0;
     }
 
     @include on-tablet {
