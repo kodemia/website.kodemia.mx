@@ -3,10 +3,10 @@ import React from 'react'
 import Button from '../../Button'
 import H1 from '../../H1'
 
-export default function YourLife () {
+export default function TransformYourLife () {
   return (
-    <section className='your-life'>
-      <div className='your-life-container section-container'>
+    <section className='transform-your-life'>
+      <div className='transform-your-life-container section-container'>
         <div className='title-container'>
           <H1 text='¿Listo para transformar tu vida programando?' />
         </div>
