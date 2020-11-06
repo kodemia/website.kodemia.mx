@@ -1,5 +1,5 @@
 
-.our-method{
+.our-method {
   background-color: $black-primary;
   display: flex;
   justify-content: center;
@@ -28,7 +28,7 @@
         max-width: 369px;
       }
 
-      @include on-tablet{
+      @include on-tablet {
         max-width: 395px;
       }
     }
