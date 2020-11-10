@@ -1,4 +1,11 @@
 
+%video {
+  height: 100vh;
+  object-fit: cover;
+  width: 100vw;
+
+}
+
 .hero {
   position: relative;
 
@@ -10,9 +17,20 @@
     z-index: -2;
 
     .video {
-      height: 100vh;
-      object-fit: cover;
-      width: 100vw;
+      @extend %video;
+
+      @include on-mobile {
+        display: none;
+      }
+    }
+
+    .video-mobile {
+      @extend %video;
+      display: none;
+
+      @include on-mobile {
+        display: block;
+      }
     }
   }
 
