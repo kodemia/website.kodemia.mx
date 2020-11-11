@@ -9,11 +9,13 @@
 
   @include on-mobile {
     background-image: url('/images/apoyo-mobile.jpg');
+    background-position: center;
     padding: 0 45px;
   }
 
   @include on-tablet {
     background-image: url('/images/apoyo-tablet.jpg');
+    background-position: center;
     justify-content: flex-start;
     padding: 0 85px;
   }
