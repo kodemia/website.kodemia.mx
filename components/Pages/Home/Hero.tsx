@@ -14,17 +14,6 @@ export default function Hero () {
           muted
         >
           <source
-            src='videos/hero_home.mp4'
-            type='video/mp4'
-          />
-        </video>
-        <video
-          className='video-mobile'
-          autoPlay
-          loop
-          muted
-        >
-          <source
             src='videos/hero-home-mobile.mp4'
             type='video/mp4'
           />
