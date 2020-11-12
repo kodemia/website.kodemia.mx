@@ -16,7 +16,7 @@ export default function WhyKodemia ({ infoCards }: Props) {
           <H3 text='¿Por qué Kodemia?' />
           <H2 whiteText='Vivimos para ' cyanText='formar programadores' />
         </div>
-        <img className='image' src='/images/why-kodemia.png' alt='koder y mentor sonriendo' />
+        <img className='image' src='/images/why-kodemia.png' alt='escuela-de-programación-koder-y-mentor-sonriendo' />
 
         <div className='why-kodemia-cards'>
           {

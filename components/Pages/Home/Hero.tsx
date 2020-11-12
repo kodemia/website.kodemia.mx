@@ -14,7 +14,7 @@ export default function Hero () {
           muted
         >
           <source
-            src='videos/hero_home.mp4'
+            src='videos/hero-home-mobile.mp4'
             type='video/mp4'
           />
         </video>
