@@ -20,16 +20,17 @@ export default function AllianceKodemia ({ allies }:Props) {
         <H2 cyanText='Ellos confían' whiteText='en nosotros' isFirstCyan />
         <div className='allies-container'>
           <div className='slider'>
-         {
-            allies.map((ally,index)=>{
-              return(
-              <img
-              src={ally.image}
-              key={`ally-${index}`}
-              className ='ally-container'/>
-              )
-            })
-          }
+            {
+              allies.map((ally, index) => {
+                return (
+                  <img
+                    src={ally.image}
+                    key={`ally-${index}`}
+                    className='ally-container'
+                  />
+                )
+              })
+            }
           </div>
         </div>
       </div>

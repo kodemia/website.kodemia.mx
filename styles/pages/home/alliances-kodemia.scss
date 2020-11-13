@@ -1,28 +1,27 @@
 
 .alliances-kodemia {
-  display: flex;
   background-color: $black-primary;
+  display: flex;
   justify-content: center;
   padding-top: 115px;
   width: 100%;
 
-  .alliances-kodemia-container  {
+  .alliances-kodemia-container {
     max-width: $content-max-width;
     min-width: $content-min-width;
     width: 100%;
 
-    @include on-mobile{
+    @include on-mobile {
       margin: 0;
       padding: 0 45px;
     }
 
     .allies-container {
-
       .slider {
         display: flex;
-        overflow-x:auto;
+        overflow-x: auto;
 
-        .ally-container{
+        .ally-container {
           height: 130px;
           margin: 50px 20px;
         }
