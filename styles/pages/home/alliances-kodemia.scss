@@ -1,7 +1,7 @@
 
 .alliances-kodemia {
-  display: flex;
   background-color: $black-primary;
+  display: flex;
   justify-content: center;
   padding-top: 115px;
   width: 100%;
@@ -14,18 +14,18 @@
     flex-direction: column;
   }
 
-  .alliances-kodemia-container  {
+  .alliances-kodemia-container {
     max-width: $content-max-width;
     min-width: $content-min-width;
     width: 100%;
 
-    @include on-mobile{
+    @include on-mobile {
       margin: 0;
       min-width: 100%;
       padding: 0 45px;
     }
 
-    @include on-tablet{
+    @include on-tablet {
       margin: 0;
       min-width: 100%;
       padding: 0 85px;
@@ -34,13 +34,13 @@
 
   .allies-slider {
     margin: auto;
-    overflow:hidden;
+    overflow: hidden;
     position: relative;
 
     &::before,
     &::after {
-      background:  linear-gradient(to right, $black-primary, $black-transparent-hero,rgba(8, 8, 8, 0.034));
-      content: "";
+      background: linear-gradient(to right, $black-primary, $black-transparent-hero, rgba(8, 8, 8, 0.034));
+      content: '';
       height: 130px;
       margin: 50px 0 20px;
       position: absolute;
@@ -84,7 +84,7 @@
 
     @keyframes slider {
       0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-250px * 8.5))}
+      100% { transform: translateX(calc(-250px * 8.5)); }
     }
 
     .slide {
@@ -95,8 +95,8 @@
       }
 
       .ally {
-        height:130px;
-        width:250px;
+        height: 130px;
+        width: 250px;
 
         @include on-mobile {
           width: 100%;
