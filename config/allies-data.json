@@ -1,50 +1,62 @@
 [
   {
     "name": "Dinkbit",
-    "image":"/images/allies/dinkbit.svg"
+    "image":"/images/allies/dinkbit.svg",
+    "alt":"escuela-de-programación-descripcion-dinkbit"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/ibm.svg"
+    "name": "IBM",
+    "image":"/images/allies/ibm.svg",
+    "alt":"escuela-de-programación-descripcion-ibm"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/toroto.svg"
+    "name": "Toroto",
+    "image":"/images/allies/toroto.svg",
+    "alt":"escuela-de-programación-descripcion-toroto"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/edrive.svg"
+    "name": "E-Drive",
+    "image":"/images/allies/edrive.svg",
+    "alt":"escuela-de-programación-descripcion-edrive"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/vercel.svg"
+    "name": "Vercel",
+    "image":"/images/allies/vercel.svg",
+    "alt":"escuela-de-programación-descripcion-vercel"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/github-experts.svg"
+    "name": "Github-experts",
+    "image":"/images/allies/github-experts.svg",
+    "alt":"escuela-de-programación-descripcion-github"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/talentnetwork.svg"
+    "name": "TalentNetwork",
+    "image":"/images/allies/talentnetwork.svg",
+    "alt":"escuela-de-programación-descripcion-talentnetwork"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/grin.svg"
+    "name": "Grin",
+    "image":"/images/allies/grin.svg",
+    "alt":"escuela-de-programación-descripcion-grin"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/bluepixel.svg"
+    "name": "Bluepixel",
+    "image":"/images/allies/bluepixel.svg",
+    "alt":"escuela-de-programación-descripcion-bluepixel"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/refly.svg"
+    "name": "Refly",
+    "image":"/images/allies/refly.svg",
+    "alt":"escuela-de-programación-descripcion-refly"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/iterando.svg"
+    "name": "Iterando",
+    "image":"/images/allies/iterando.svg",
+    "alt":"escuela-de-programación-descripcion-iterando"
   },
   {
-    "name": "Dinkbit",
-    "image":"/images/allies/asociacion-internet.svg"
+    "name": "Asociacion internet",
+    "image":"/images/allies/asociacion-internet.svg",
+    "alt":"escuela-de-programación-descripcion-asociacion-internet"
   }
 ]
