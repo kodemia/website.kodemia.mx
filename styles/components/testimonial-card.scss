@@ -1,15 +1,13 @@
 
 .testimonial-card {
-  border: 1px solid $primary-btn-border ;
+  border: 1px solid $primary-btn-border;
   border-radius: 10px;
   display: grid;
-  grid-template-areas:
-    "data quote quote";
+  grid-template-areas: 'data quote quote';
   height: 285px;
   width: 729px;
 
-
-  .testimonial-data{
+  .testimonial-data {
     margin: 35px;
     width: 195px;
 
@@ -25,11 +23,12 @@
         object-fit: cover;
         width: 115px;
       }
+
       .flag {
         bottom: -15px;
         font-size: 34px;
-        right: 14px;
         position: absolute;
+        right: 14px;
       }
     }
 
@@ -47,16 +46,14 @@
   }
 
   .koder-quote {
-    display: flex;
-    grid-area: quote ;
     align-items: center;
+    display: flex;
+    grid-area: quote;
 
     .quote {
       color: $text;
       font-size: 16px;
       margin-right: 35px;
     }
-
   }
 }
-

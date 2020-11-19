@@ -11,8 +11,7 @@ export interface Props {
   }
 }
 
-
-export default function TestimonialCard ({testimonial}:Props) {
+export default function TestimonialCard ({ testimonial }:Props) {
   return (
     <div className='testimonial-card'>
       <div className='testimonial-data'>
