@@ -1,0 +1,62 @@
+
+.testimonial-card {
+  border: 1px solid $primary-btn-border ;
+  border-radius: 10px;
+  display: grid;
+  grid-template-areas:
+    "data quote quote";
+  height: 285px;
+  width: 729px;
+
+
+  .testimonial-data{
+    margin: 35px;
+    width: 195px;
+
+    .photo-flag {
+      margin-bottom: 13px;
+      position: relative;
+
+      .testimonial-photo {
+        border-radius: 50%;
+        grid-area: data;
+        height: 115px;
+        margin-right: 30px;
+        object-fit: cover;
+        width: 115px;
+      }
+      .flag {
+        bottom: -15px;
+        font-size: 34px;
+        right: 14px;
+        position: absolute;
+      }
+    }
+
+    .testimonial-name {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.36;
+    }
+
+    .testimonial-employment {
+      color: $text;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  .koder-quote {
+    display: flex;
+    grid-area: quote ;
+    align-items: center;
+
+    .quote {
+      color: $text;
+      font-size: 16px;
+      margin-right: 35px;
+    }
+
+  }
+}
+
