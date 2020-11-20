@@ -13,7 +13,7 @@ export interface Props {
   allies: Array<Allies>
 }
 
-export default function AllianceKodemia ({ allies }: Props) {
+export default function AllianceKodemia ({ allies = [] }: Props) {
   return (
     <section className='alliances-kodemia'>
       <div className='alliances-kodemia-container section-container'>
