@@ -4,13 +4,14 @@ import React from 'react'
 import H2 from '../../H2'
 import H3 from '../../H3'
 
-export interface Allies {
+export interface Ally {
   name: string
   image: string
   alt: string
+  href: string
 }
 export interface Props {
-  allies: Array<Allies>
+  allies: Array<Ally>
 }
 
 export default function AllianceKodemia ({ allies = [] }: Props) {
@@ -25,11 +26,13 @@ export default function AllianceKodemia ({ allies = [] }: Props) {
               allies.map((ally, index) => {
                 return (
                   <div className='slide' key={`ally-${index}`}>
-                    <img
+                    <a href={ally.href} target='_blank'>
+                      <img
                       src={ally.image}
                       className='ally'
                       alt={ally.alt}
-                    />
+                      />
+                    </a>
                   </div>
                 )
               })

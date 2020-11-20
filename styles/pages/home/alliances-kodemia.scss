@@ -60,7 +60,7 @@
     }
 
     .slider-container {
-      animation: slider 60s linear infinite;
+      animation: slider 120s linear infinite;
       display: flex;
       margin: 50px 0 20px;
       width: calc(250px * 12);
@@ -76,7 +76,7 @@
         animation: none;
         flex-direction: column;
         flex-wrap: wrap;
-        height: 800px;
+        height: calc(130px * 6);
         margin: 25px 0;
         width: 100%;
       }
@@ -84,7 +84,9 @@
 
     @keyframes slider {
       0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-250px * 8.5)); }
+      50% {
+        transform: translateX(calc(-250px * 8.5)) translateZ(0px);
+      }
     }
 
     .slide {
