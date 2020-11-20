@@ -84,8 +84,9 @@
 
     @keyframes slider {
       0% { transform: translateX(0); }
+
       50% {
-        transform: translateX(calc(-250px * 8.5)) translateZ(0px);
+        transform: translateX(calc(-250px * 8.5)) translateZ(0);
       }
     }
 

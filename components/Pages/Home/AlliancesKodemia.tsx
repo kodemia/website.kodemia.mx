@@ -25,12 +25,18 @@ export default function AllianceKodemia ({ allies = [] }: Props) {
             {
               allies.map((ally, index) => {
                 return (
-                  <div className='slide' key={`ally-${index}`}>
-                    <a href={ally.href} target='_blank'>
+                  <div
+                  className='slide'
+                  key={`ally-${index}`}
+                  >
+                    <a
+                    href={ally.href}
+                    target='_blank'
+                    rel='noopener noreferrer'>
                       <img
-                      src={ally.image}
-                      className='ally'
-                      alt={ally.alt}
+                        src={ally.image}
+                        className='ally'
+                        alt={ally.alt}
                       />
                     </a>
                   </div>
