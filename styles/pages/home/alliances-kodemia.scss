@@ -76,7 +76,8 @@
         animation: none;
         flex-direction: column;
         flex-wrap: wrap;
-        height: calc(130px * 6);
+        height: calc(130px * 7);
+        justify-content: space-between;
         margin: 25px 0;
         width: 100%;
       }
@@ -86,7 +87,7 @@
       0% { transform: translateX(0); }
 
       50% {
-        transform: translateX(calc(-250px * 8.5)) translateZ(0);
+        transform: translateX(calc(-250px * 8));
       }
     }
 

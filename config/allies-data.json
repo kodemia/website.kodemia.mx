@@ -31,9 +31,9 @@
     "href":""
   },
   {
-    "name": "Github-experts",
-    "image":"/images/allies/github-experts.svg",
-    "alt":"escuela-de-programación-descripcion-github",
+    "name": "Bluepixel",
+    "image":"/images/allies/bluepixel.svg",
+    "alt":"escuela-de-programación-descripcion-bluepixel",
     "href":""
   },
   {
@@ -49,9 +49,9 @@
     "href":""
   },
   {
-    "name": "Bluepixel",
-    "image":"/images/allies/bluepixel.svg",
-    "alt":"escuela-de-programación-descripcion-bluepixel",
+    "name": "Github-experts",
+    "image":"/images/allies/github-experts.svg",
+    "alt":"escuela-de-programación-descripcion-github",
     "href":""
   },
   {
@@ -71,5 +71,11 @@
     "image":"/images/allies/asociacion-internet.svg",
     "alt":"escuela-de-programación-descripcion-asociacion-internet",
     "href":""
+  },
+  {
+    "name": "Asociacion internet",
+    "image":"/images/allies/jooble.svg",
+    "alt":"escuela-de-programación-descripcion-jooble",
+    "href":"https://mx.jooble.org/trabajo-programador"
   }
 ]
