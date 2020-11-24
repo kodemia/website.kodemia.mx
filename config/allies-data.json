@@ -13,6 +13,12 @@
     "href":""
   },
   {
+    "name": "Bluepixel",
+    "image":"/images/allies/bluepixel.svg",
+    "alt":"escuela-de-programación-descripcion-bluepixel",
+    "href":""
+  },
+  {
     "name": "Toroto",
     "image":"/images/allies/toroto.svg",
     "alt":"escuela-de-programación-descripcion-toroto",
@@ -28,12 +34,6 @@
     "name": "Vercel",
     "image":"/images/allies/vercel.svg",
     "alt":"escuela-de-programación-descripcion-vercel",
-    "href":""
-  },
-  {
-    "name": "Bluepixel",
-    "image":"/images/allies/bluepixel.svg",
-    "alt":"escuela-de-programación-descripcion-bluepixel",
     "href":""
   },
   {
@@ -73,7 +73,7 @@
     "href":""
   },
   {
-    "name": "Asociacion internet",
+    "name": "jooble",
     "image":"/images/allies/jooble.svg",
     "alt":"escuela-de-programación-descripcion-jooble",
     "href":"https://mx.jooble.org/trabajo-programador"
