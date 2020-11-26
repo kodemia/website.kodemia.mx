@@ -13,13 +13,7 @@
 
   &::before,
   &::after {
-    background:
-      linear-gradient (
-        to right,
-        $black-primary,
-        $black-transparent-hero,
-        rgba(8, 8, 8, 0.034)
-      );
+    background: linear-gradient( to right, $black-primary, $black-transparent-hero, rgba(8, 8, 8, 0.034));
     content: '';
     height: 130px;
     position: absolute;
