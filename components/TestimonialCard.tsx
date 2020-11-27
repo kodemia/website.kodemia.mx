@@ -1,10 +1,11 @@
 
 import React from 'react'
+import ReactCountryFlag from 'react-country-flag'
 
 export interface Props {
   testimonial : {
     photo: string
-    nationality: string
+    country: string
     name: string
     employment: string
     quote: string
@@ -16,7 +17,11 @@ export default function TestimonialCard ({ testimonial }:Props) {
     <div className='testimonial-card'>
       <div className='testimonial-data'>
         <img src={testimonial.photo} className='testimonial-photo' />
-        {testimonial.nationality === 'mexican' ? <p className='flag'> 🇲🇽 </p> : ''}
+        <ReactCountryFlag
+          countryCode={testimonial.country}
+          className='flag'
+          style={{ fontSize: '2em'}}
+        />
         <h6 className='testimonial-name'>
           {testimonial.name}
         </h6>
