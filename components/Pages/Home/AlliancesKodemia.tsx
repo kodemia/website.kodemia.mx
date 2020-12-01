@@ -23,7 +23,7 @@ export default function AllianceKodemia ({ allies = [] }: Props) {
         <CarrouselAlliances allies={allies} />
         <div className='slider-container'>
           {allies.map((ally, index) => {
-            return ally.href === '' ? (
+            return !ally.href &&
               <div
                 className='slide'
                 key={`ally-${index}`}
@@ -34,7 +34,9 @@ export default function AllianceKodemia ({ allies = [] }: Props) {
                   alt={ally.alt}
                 />
               </div>
-            ) : (
+          })}
+          {allies.map((ally, index) => {
+            return ally.href &&
               <div
                 className='slide'
                 key={`ally-${index}`}
@@ -51,7 +53,6 @@ export default function AllianceKodemia ({ allies = [] }: Props) {
                   />
                 </a>
               </div>
-            )
           })}
         </div>
       </div>
