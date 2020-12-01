@@ -20,7 +20,7 @@ export default function TestimonialCard ({ testimonial }:Props) {
         <ReactCountryFlag
           countryCode={testimonial.country}
           className='flag'
-          style={{ fontSize: '2em'}}
+          style={{ fontSize: '2em' }}
         />
         <h6 className='testimonial-name'>
           {testimonial.name}

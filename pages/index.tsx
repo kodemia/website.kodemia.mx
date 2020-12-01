@@ -30,7 +30,7 @@ export default function Home () {
       <OurMethod ourMethod={OurMethodData} />
       <KodemiaFinancing info={KodemiaFinancingData} />
       <TransformYourLife />
-      <TestimonialCard testimonial={TestimonialData[0]} />
+      <TestimonialCard testimonial={TestimonialData[4]} />
       <Footer />
     </>
   )

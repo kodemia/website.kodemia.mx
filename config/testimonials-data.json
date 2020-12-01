@@ -4,7 +4,7 @@
     "quote":"\"Kodemia una excelente escuela de programación, excelentes mentores, excelente comunidad. Es una gran familia. Todos están dispuestos a ayudar y enseñarte, entré sin saber nada y salgo con bastos conocimientos y habilidades de programación. \n Gracias Kodemia por todo.\"",
     "country":"MX",
     "name": "Marblue Molina",
-    "photo":"/images/apoyo-kodemia.jpg"
+    "photo":"/images/testimonials/mar.jpg"
   }
   ,
   {
@@ -12,27 +12,27 @@
     "quote":"\"El bootcamp de Kodemia marcó una diferencia en mi vida, tanto a nivel profesional como a nivel personal. Cada uno de los mentores cuenta con una gran experiencia que comparten dentro y fuera del aula. Todos están comprometidos en ayudarte a lograr tus objetivos y la comunidad es un gran apoyo durante todo el proceso.\" ",
     "country":"MX",
     "name":"Brenda González",
-    "photo":""
+    "photo":"/images/testimonials/brenda.jpg"
   },
   {
     "employment":"Desarrollador Full Stack en E-Drive",
     "quote":"\"El ambiente de trabajo y de comunidad es muy importante para el desarrollo de las personas y en Kodemia lo encuentras de una manera inigualable. La mejor experiencia que me llevo, es la de comunidad. Una comunidad que se preocupa y te procura aún cuando no eres alumno.\"",
     "country":"MX",
     "name":"Alejandro Cruz",
-    "photo":""
+    "photo":"/images/testimonials/alejandro-cruz.jpg"
   },
   {
     "employment":"Developer Web Jr en GoNet",
     "quote":"\"Me inscribí al Bootcamp de Kodemia sin conocimiento de programación, pero me asesoraron desde el primer momento que decidí tomarlo, la comunidad siempre está dispuesta a apoyar, antes de terminar el Bootcamp ya estaba trabajando como desarrollador.\"",
     "country":"MX",
     "name":"Oscar Pantoja",
-    "photo":""
+    "photo":"/images/testimonials/oscar-pantoja.jpg"
   },
   {
     "employment": "RGIS (California)",
     "quote":"\"Es una gran comunidad llena de aprendizaje. Los mentores siempre están ahí para ti y para resolver dudas. Es increible todo lo que se puede aprender en cuatro meses y el cariño que le tomamos a todos los que forman parte de esta comunidad. \n ¡Gracias Kodemia!\"",
     "country":"MX",
     "name":"Luis Omar Ariza",
-    "photo":""
+    "photo":"/images/testimonials/omar.jpg"
   }
 ]
