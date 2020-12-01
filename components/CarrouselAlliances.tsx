@@ -33,29 +33,32 @@ export default function CarrouselAlliances ({ allies = [] }: Props) {
     <div className='carrousel-alliances'>
       <Slider {...settings}>
         {allies.map((ally, index) => {
-          return !ally.href &&
-            <img
-              key={`ally-${index}`}
-              src={ally.image}
-              className='ally'
-              alt={ally.alt}
-            />
-        })}
-        {allies.map((ally, index) => {
-          return ally.href &&
-            <a
-              key={`ally-${index}`}
-              href={ally.href}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='a-ally'
-            >
+          if (!ally.href) {
+            return (
               <img
+                key={`ally-${index}`}
                 src={ally.image}
                 className='ally'
                 alt={ally.alt}
               />
-            </a>
+            )
+          } else {
+            return (
+              <a
+                key={`ally-${index}`}
+                href={ally.href}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='a-ally'
+              >
+                <img
+                  src={ally.image}
+                  className='ally'
+                  alt={ally.alt}
+                />
+              </a>
+            )
+          }
         })}
       </Slider>
     </div>

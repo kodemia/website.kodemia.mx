@@ -23,36 +23,38 @@ export default function AllianceKodemia ({ allies = [] }: Props) {
         <CarrouselAlliances allies={allies} />
         <div className='slider-container'>
           {allies.map((ally, index) => {
-            return !ally.href &&
-              <div
-                className='slide'
-                key={`ally-${index}`}
-              >
-                <img
-                  src={ally.image}
-                  className='ally'
-                  alt={ally.alt}
-                />
-              </div>
-          })}
-          {allies.map((ally, index) => {
-            return ally.href &&
-              <div
-                className='slide'
-                key={`ally-${index}`}
-              >
-                <a
-                  href={ally.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
+            if (!ally.href) {
+              return (
+                <div
+                  className='slide'
+                  key={`ally-${index}`}
                 >
                   <img
                     src={ally.image}
                     className='ally'
                     alt={ally.alt}
                   />
-                </a>
-              </div>
+                </div>)
+            } else {
+              return (
+                <div
+                  className='slide'
+                  key={`ally-${index}`}
+                >
+                  <a
+                    href={ally.href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <img
+                      src={ally.image}
+                      className='ally'
+                      alt={ally.alt}
+                    />
+                  </a>
+                </div>
+              )
+            }
           })}
         </div>
       </div>
