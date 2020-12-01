@@ -1,0 +1,82 @@
+
+[
+  {
+    "name": "Dinkbit",
+    "image": "/images/allies/dinkbit.svg",
+    "alt": "escuela-de-programación-descripcion-dinkbit",
+    "href": ""
+  },
+  {
+    "name": "IBM",
+    "image": "/images/allies/ibm.svg",
+    "alt": "escuela-de-programación-descripcion-ibm",
+    "href": ""
+  },
+
+  {
+    "name": "Toroto",
+    "image": "/images/allies/toroto.svg",
+    "alt": "escuela-de-programación-descripcion-toroto",
+    "href": ""
+  },
+  {
+    "name": "Refly",
+    "image": "/images/allies/refly.svg",
+    "alt": "escuela-de-programación-descripcion-refly",
+    "href": ""
+  },
+  {
+    "name": "Vercel",
+    "image": "/images/allies/vercel.svg",
+    "alt": "escuela-de-programación-descripcion-vercel",
+    "href": ""
+  },
+  {
+    "name": "Github-experts",
+    "image": "/images/allies/github-experts.svg",
+    "alt": "escuela-de-programación-descripcion-github",
+    "href": ""
+  },
+  {
+    "name": "Bluepixel",
+    "image": "/images/allies/bluepixel.svg",
+    "alt": "escuela-de-programación-descripcion-bluepixel",
+    "href": ""
+  },
+  {
+    "name": "Grin",
+    "image": "/images/allies/grin.svg",
+    "alt": "escuela-de-programación-descripcion-grin",
+    "href": ""
+  },
+  {
+    "name": "TalentNetwork",
+    "image": "/images/allies/talentnetwork.svg",
+    "alt": "escuela-de-programación-descripcion-talentnetwork",
+    "href": ""
+  },
+  {
+    "name": "Iterando",
+    "image": "/images/allies/iterando.svg",
+    "alt": "escuela-de-programación-descripcion-iterando",
+    "href": ""
+  },
+  {
+    "name": "Asociacion internet",
+    "image": "/images/allies/asociacion-internet.svg",
+    "alt": "escuela-de-programación-descripcion-asociacion-internet",
+    "href": ""
+  },
+  {
+    "name": "E-Drive",
+    "image": "/images/allies/edrive.svg",
+    "alt": "escuela-de-programación-descripcion-edrive",
+    "href": ""
+  },
+  {
+    "name": "jooble",
+    "image": "/images/allies/jooble.svg",
+    "alt": "escuela-de-programación-descripcion-jooble",
+    "href": "https://mx.jooble.org/trabajo-programador"
+  }
+]
