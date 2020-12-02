@@ -1,4 +1,89 @@
 
 .testimonials {
-  background-color: pin;
+  display: flex;
+  justify-content: center;
+  min-height: max-content;
+  overflow: hidden;
+  padding: 0 32px;
+  width: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 80px 0 40px;
+    max-width: 1900px;
+    min-height: 400px;
+    width: 100%;
+
+    @include mobile {
+      flex-direction: column;
+      height: auto;
+      justify-content: space-between;
+    }
+
+    .sliders {
+      display: flex;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      width: 1150px;
+
+      .testimonial {
+        height: 200px;
+        position: absolute;
+        right: 0;
+        width: 729px;
+      }
+
+      .active {
+        height: 285px;
+        left: 0;
+        width: 729px;
+        z-index: 10;
+      }
+    }
+
+    .back-forward-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      .barra {
+        background-color: #4e4e4e;
+        border-radius: 10px;
+        display: inline;
+        height: 8px;
+        width: 972px;
+
+        ul {
+          display: flex;
+
+          .doot {
+            color: #4e4e4e;
+            height: 8px;
+            width: 20%;
+          }
+
+          .active {
+            background-color: $cyan;
+            border-radius: 10px;
+            color: $cyan;
+          }
+        }
+      }
+
+      .container-buttons {
+        .back,
+        .forward {
+          cursor: pointer;
+          height: 20px;
+        }
+
+        .back {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
 }

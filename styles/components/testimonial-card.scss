@@ -1,129 +1,158 @@
 
 .testimonial-card {
-  border: 1px solid $primary-btn-border;
-  border-radius: 10px;
-  display: grid;
-  grid-template-areas: 'data quote quote';
-  height: 285px;
-  width: 729px;
-
-  @include on-mobile {
-    grid-template-areas:
-      'data'
-      'quote';
-    height: 100%;
-    width: 100%;
-  }
-
-  @include on-tablet {
-    grid-template-areas:
-      'data'
-      'quote';
-    height: 317px;
-    width: 637px;
-  }
-
-  .testimonial-data {
+  .testimonial-card-container {
+    background-color: $black;
+    border: 1px solid $primary-btn-border;
+    border-radius: 10px;
     display: grid;
-    grid-area: data;
-    grid-template-areas:
-      'photo flag'
-      'name name'
-      'employment employment';
-    margin: 35px;
-    width: 195px;
+    grid-template-areas: 'data quote quote';
+    height: 285px;
+    width: 729px;
 
     @include on-mobile {
       grid-template-areas:
-        'photo flag'
-        'photo name'
-        'photo employment';
-      margin: 0;
-      max-width: 500px;
-      padding: 25px 0 0 25px;
+        'data'
+        'quote';
+      height: 100%;
       width: 100%;
     }
 
     @include on-tablet {
       grid-template-areas:
+        'data'
+        'quote';
+      height: 317px;
+      width: 637px;
+    }
+
+    .testimonial-data {
+      display: grid;
+      grid-area: data;
+      grid-template-areas:
         'photo flag'
-        'photo name'
-        'photo employment';
-      margin: 25px 0 0 25px;
-      width: 75%;
-    }
-
-    .testimonial-photo {
-      border-radius: 50%;
-      grid-area: photo;
-      height: 115px;
-      margin-bottom: 15px;
-      object-fit: cover;
-      width: 115px;
+        'name name'
+        'employment employment';
+      margin: 35px;
+      width: 195px;
 
       @include on-mobile {
-        height: 100px;
-        margin-right: 30px;
-        width: 100px;
+        grid-template-areas:
+          'photo flag'
+          'photo name'
+          'photo employment';
+        margin: 0;
+        max-width: 500px;
+        padding: 25px 0 0 25px;
+        width: 100%;
       }
 
       @include on-tablet {
-        height: 100px;
-        width: 100px;
+        grid-template-areas:
+          'photo flag'
+          'photo name'
+          'photo employment';
+        margin: 25px 0 0 25px;
+        width: 75%;
+      }
+
+      .testimonial-photo {
+        border-radius: 50%;
+        grid-area: photo;
+        height: 115px;
+        margin-bottom: 15px;
+        object-fit: cover;
+        width: 115px;
+
+        @include on-mobile {
+          height: 100px;
+          margin-right: 30px;
+          width: 100px;
+        }
+
+        @include on-tablet {
+          height: 100px;
+          width: 100px;
+        }
+      }
+
+      .flag {
+        font-size: 34px;
+        grid-area: flag;
+        height: 50px;
+        margin-top: auto;
+        text-align: center;
+
+        @include on-mobile {
+          font-size: 30px;
+          height: 35px;
+          text-align: start;
+        }
+
+        @include on-tablet {
+          font-size: 30px;
+          height: 35px;
+          text-align: start;
+        }
+      }
+
+      .testimonial-name {
+        font-size: 22px;
+        font-weight: 600;
+        grid-area: name;
+        line-height: 1.36;
+      }
+
+      .testimonial-employment {
+        color: $text;
+        font-size: 18px;
+        font-weight: 500;
+        grid-area: employment;
       }
     }
 
-    .flag {
-      font-size: 34px;
-      grid-area: flag;
-      height: 50px;
-      margin-top: auto;
-      text-align: center;
+    .koder-quote {
+      align-items: center;
+      display: flex;
+      grid-area: quote;
 
-      @include on-mobile {
-        font-size: 30px;
-        height: 35px;
-        text-align: start;
+      .quote {
+        color: $text;
+        font-size: 16px;
+        margin-right: 35px;
+
+        @include on-mobile {
+          margin: 25px;
+        }
+
+        @include on-tablet {
+          margin: 25px;
+        }
       }
-
-      @include on-tablet {
-        font-size: 30px;
-        height: 35px;
-        text-align: start;
-      }
-    }
-
-    .testimonial-name {
-      font-size: 22px;
-      font-weight: 600;
-      grid-area: name;
-      line-height: 1.36;
-    }
-
-    .testimonial-employment {
-      color: $text;
-      font-size: 18px;
-      font-weight: 500;
-      grid-area: employment;
     }
   }
 
-  .koder-quote {
-    align-items: center;
-    display: flex;
-    grid-area: quote;
+  .active {
+    border: 1px solid $primary-btn-border;
+    height: 285px;
+    margin: 0;
+    width: 729px;
+  }
 
-    .quote {
-      color: $text;
-      font-size: 16px;
-      margin-right: 35px;
+  .inactive {
+    border: 1px solid $secondary-btn-border;
+    height: 205px;
+    margin: 41px 0;
+    width: 729px;
 
-      @include on-mobile {
-        margin: 25px;
+    .testimonial-data {
+      .testimonial-employment {
+        display: none;
       }
+    }
 
-      @include on-tablet {
-        margin: 25px;
+    .koder-quote {
+      .quote {
+        font-size: 14px;
       }
     }
   }
