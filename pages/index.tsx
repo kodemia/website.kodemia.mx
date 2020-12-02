@@ -8,7 +8,7 @@ import KodemiaFinancing from '../components/Pages/Home/KodemiaFinancing'
 import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 import OurMethod from '../components/Pages/Home/OurMethod'
 import TransformYourLife from '../components/Pages/Home/TransformYourLife'
-import TestimonialCard from '../components/TestimonialCard'
+import Testimonials from '../components/Pages/Home/Testimonials'
 // Data
 import OurBootcampsCards from '../config/our-bootcamps-cards.json'
 import WhyKodemiaCards from '../config/why-kodemia-cards.json'
@@ -29,8 +29,8 @@ export default function Home () {
       <OurBootcamps bootcamps={OurBootcampsCards} />
       <OurMethod ourMethod={OurMethodData} />
       <KodemiaFinancing info={KodemiaFinancingData} />
+      <Testimonials testimonials={TestimonialData} />
       <TransformYourLife />
-      <TestimonialCard testimonial={TestimonialData[4]} />
       <Footer />
     </>
   )
