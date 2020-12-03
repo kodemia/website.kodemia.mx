@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 // My components
+import H2 from '../../H2'
+import H3 from '../../H3'
 import TestimonialCard from '../../TestimonialCard'
 export interface Testimonial {
   photo: string
@@ -33,8 +35,10 @@ export default function Testimonials ({ testimonials }: Props) {
   }
 
   return (
-    <section className='testimonials'>
-      <div className='container'>
+    <section className='testimonials '>
+      <div className='container-testimonials section-container'>
+        <H3 text='Testimonios' />
+        <H2 whiteText='Nuestra' cyanText='comunidad' />
         <div className='sliders'>
           {
             testimonials.map((testimonial, index) => {
@@ -55,15 +59,15 @@ export default function Testimonials ({ testimonials }: Props) {
             })
           }
         </div>
-        <div className='back-forward-buttons'>
-          <div className='barra'>
+        <div className='bar-buttons'>
+          <div className='bar'>
             <ul>
               {
                 testimonials.map((testimonial, index) => {
                   return (
                     <li
                       className={classnames(
-                        'doot',
+                        'selected-bar',
                         {
                           inactive: (activeTestimonialIndex !== index),
                           active: (activeTestimonialIndex === index)

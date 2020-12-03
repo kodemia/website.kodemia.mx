@@ -2,64 +2,93 @@
 .testimonials {
   display: flex;
   justify-content: center;
-  min-height: max-content;
-  overflow: hidden;
-  padding: 0 32px;
   width: 100%;
 
-  .container {
+  .container-testimonials {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 80px 0 40px;
-    max-width: 1900px;
-    min-height: 400px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+    max-width: $content-max-width;
+    min-width: $content-min-width;
     width: 100%;
 
     @include mobile {
-      flex-direction: column;
-      height: auto;
-      justify-content: space-between;
+      margin: 0;
+      margin-bottom: 50px;
+      margin-top: 100px;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0 45px;
+      width: 100%;
+    }
+
+    @include on-tablet {
+      margin: 0;
+      margin-bottom: 50px;
+      margin-top: 100px;
+      padding: 0 85px;
     }
 
     .sliders {
       display: flex;
       height: 300px;
+      margin-top: 45px;
       overflow: hidden;
       position: relative;
-      width: 1150px;
+      width: 100%;
+
+      @include on-mobile {
+        height: 100%;
+        min-height: max-content;
+        overflow: auto;
+        position: static;
+      }
+
+      @include on-tablet {
+        height: 320px;
+      }
 
       .testimonial {
-        height: 200px;
         position: absolute;
         right: 0;
-        width: 729px;
+
+        @include on-mobile {
+          position: static;
+        }
       }
 
       .active {
-        height: 285px;
         left: 0;
-        width: 729px;
         z-index: 10;
       }
     }
 
-    .back-forward-buttons {
+    .bar-buttons {
       display: flex;
       justify-content: space-between;
       margin-top: 40px;
 
-      .barra {
+      .bar {
         background-color: #4e4e4e;
         border-radius: 10px;
         display: inline;
         height: 8px;
-        width: 972px;
+        width: 85%;
+
+        @include on-mobile {
+          width: 65%;
+        }
+
+        @include on-tablet {
+          width: 80%;
+        }
 
         ul {
           display: flex;
 
-          .doot {
+          .selected-bar {
             color: #4e4e4e;
             height: 8px;
             width: 20%;
@@ -78,10 +107,31 @@
         .forward {
           cursor: pointer;
           height: 20px;
+
+          @include on-mobile {
+            height: 15px;
+          }
+        }
+
+        .forward {
+          transition: height 2s;
+
+          &:hover {
+            height: 19px;
+          }
         }
 
         .back {
-          margin-right: 5px;
+          margin: 0 20px 0 45px;
+          transition: height 2s;
+
+          @include on-mobile {
+            margin: 0 20px;
+          }
+
+          &:hover {
+            height: 19px;
+          }
         }
       }
     }
