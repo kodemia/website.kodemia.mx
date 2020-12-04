@@ -17,7 +17,7 @@
       max-height: min-content;
       max-width: 100%;
       min-width: 100%;
-      padding: 25px;
+      padding: 25px 20px;
       width: 100%;
     }
 
@@ -43,7 +43,7 @@
       width: 195px;
 
       @include on-mobile {
-        grid-column-gap: 20px;
+        grid-column-gap: 15px;
         grid-template-areas:
           'photo flag'
           'photo name'
