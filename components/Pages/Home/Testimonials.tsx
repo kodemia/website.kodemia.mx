@@ -51,7 +51,7 @@ export default function Testimonials ({ testimonials }: Props) {
                       active: (activeTestimonialIndex === index)
                     }
                   )}
-                  key={`testimonial-${index}`}
+                  key={`testimonialSection-${index}`}
                 >
                   <TestimonialCard testimonial={testimonial} isActive={activeTestimonialIndex === index} />
                 </div>

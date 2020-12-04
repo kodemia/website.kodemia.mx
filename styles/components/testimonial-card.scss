@@ -12,11 +12,12 @@
       grid-template-areas:
         'data'
         'quote';
-      grid-template-rows: 145px auto;
+      grid-template-rows: auto auto;
       height: 100%;
       max-height: min-content;
       max-width: 100%;
       min-width: 100%;
+      padding: 25px;
       width: 100%;
     }
 
@@ -48,10 +49,9 @@
           'photo name'
           'photo employment';
         grid-template-columns: auto 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
         margin: 0;
         max-width: 500px;
-        padding: 25px 0 0 25px;
         width: 100%;
       }
 
@@ -111,7 +111,8 @@
         margin: 10px 0;
 
         @include on-mobile {
-          margin: 0;
+          font-size: 20px;
+          margin: 5px 0;
         }
       }
 
@@ -121,6 +122,10 @@
         font-weight: 500;
         grid-area: employment;
         line-height: 1;
+
+        @include on-mobile {
+          font-size: 16px;
+        }
       }
     }
 
@@ -135,7 +140,9 @@
         margin-right: 35px;
 
         @include on-mobile {
-          margin: 25px;
+          font-size: 15px;
+          margin-right: 0;
+          margin-top: 10px;
         }
 
         @include on-tablet {
