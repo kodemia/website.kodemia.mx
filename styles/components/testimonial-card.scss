@@ -48,7 +48,7 @@
           'photo name'
           'photo employment';
         grid-template-columns: auto 1fr;
-        grid-template-rows: repeat(3,1fr);
+        grid-template-rows: repeat(3, 1fr);
         margin: 0;
         max-width: 500px;
         padding: 25px 0 0 25px;
@@ -62,7 +62,7 @@
           'photo name'
           'photo employment';
         grid-template-columns: auto 1fr;
-        grid-template-rows: repeat(3,1fr);
+        grid-template-rows: repeat(3, 1fr);
         margin: 25px 0 0 25px;
         width: 75%;
       }
@@ -90,7 +90,6 @@
         grid-area: flag;
         margin-top: auto;
 
-
         @include on-mobile {
           font-size: 30px;
           height: 35px;
@@ -107,11 +106,11 @@
       .testimonial-name {
         font-size: 22px;
         font-weight: 600;
-        margin: 10px 0;
         grid-area: name;
         line-height: 1;
+        margin: 10px 0;
 
-        @include on-mobile{
+        @include on-mobile {
           margin: 0;
         }
       }
