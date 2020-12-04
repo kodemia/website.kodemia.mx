@@ -12,6 +12,7 @@
       grid-template-areas:
         'data'
         'quote';
+      grid-template-rows: 145px auto;
       height: 100%;
       max-height: min-content;
       max-width: 100%;
@@ -23,6 +24,7 @@
       grid-template-areas:
         'data'
         'quote';
+      grid-template-rows: 130px auto;
       height: 317px;
       width: 637px;
     }
@@ -34,6 +36,8 @@
         'photo flag'
         'name name'
         'employment employment';
+      grid-template-columns: 115px 1fr;
+      grid-template-rows: 115px auto 1fr;
       margin: 35px;
       width: 195px;
 
@@ -44,6 +48,7 @@
           'photo name'
           'photo employment';
         grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(3,1fr);
         margin: 0;
         max-width: 500px;
         padding: 25px 0 0 25px;
@@ -57,6 +62,7 @@
           'photo name'
           'photo employment';
         grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(3,1fr);
         margin: 25px 0 0 25px;
         width: 75%;
       }
@@ -81,11 +87,9 @@
       }
 
       .flag {
-        font-size: 34px;
         grid-area: flag;
-        height: 50px;
         margin-top: auto;
-        text-align: center;
+
 
         @include on-mobile {
           font-size: 30px;
@@ -103,8 +107,13 @@
       .testimonial-name {
         font-size: 22px;
         font-weight: 600;
+        margin: 10px 0;
         grid-area: name;
         line-height: 1;
+
+        @include on-mobile{
+          margin: 0;
+        }
       }
 
       .testimonial-employment {
