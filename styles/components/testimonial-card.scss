@@ -113,6 +113,7 @@
         @include on-mobile {
           font-size: 20px;
           margin: 5px 0;
+          min-width: 100px;
         }
       }
 
