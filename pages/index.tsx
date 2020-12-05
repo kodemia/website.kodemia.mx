@@ -8,12 +8,14 @@ import KodemiaFinancing from '../components/Pages/Home/KodemiaFinancing'
 import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 import OurMethod from '../components/Pages/Home/OurMethod'
 import TransformYourLife from '../components/Pages/Home/TransformYourLife'
+import Testimonials from '../components/Pages/Home/Testimonials'
 import AlliancesKodemia from '../components/Pages/Home/AlliancesKodemia'
 // Data
 import OurBootcampsCards from '../config/our-bootcamps-cards.json'
 import WhyKodemiaCards from '../config/why-kodemia-cards.json'
 import OurMethodData from '../config/our-method-data.json'
 import KodemiaFinancingData from '../config/kodemia-financing-data.json'
+import TestimonialData from '../config/testimonials-data.json'
 import AlliesData from '../config/allies-data.json'
 
 export default function Home () {
@@ -30,7 +32,9 @@ export default function Home () {
       <OurMethod ourMethod={OurMethodData} />
       <KodemiaFinancing info={KodemiaFinancingData} />
       <AlliancesKodemia allies={AlliesData} />
+      <Testimonials testimonials={TestimonialData} />
       <TransformYourLife />
+
       <Footer />
     </>
   )

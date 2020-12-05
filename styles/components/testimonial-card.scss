@@ -1,0 +1,210 @@
+
+.testimonial-card {
+  .testimonial-card-container {
+    background-color: $black-primary;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: 'data quote quote';
+    height: 285px;
+    width: 729px;
+
+    @include on-mobile {
+      grid-template-areas:
+        'data'
+        'quote';
+      grid-template-rows: auto auto;
+      height: 100%;
+      max-height: min-content;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 25px 20px;
+      width: 100%;
+    }
+
+    @include on-tablet {
+      grid-template-areas:
+        'data'
+        'quote';
+      grid-template-rows: 130px auto;
+      height: 317px;
+      width: 637px;
+    }
+
+    .testimonial-data {
+      display: grid;
+      grid-area: data;
+      grid-template-areas:
+        'photo flag'
+        'name name'
+        'employment employment';
+      grid-template-columns: 115px 1fr;
+      grid-template-rows: 115px auto 1fr;
+      margin: 35px;
+      width: 195px;
+
+      @include on-mobile {
+        grid-column-gap: 15px;
+        grid-template-areas:
+          'photo flag'
+          'photo name'
+          'photo employment';
+        grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(3, auto);
+        margin: 0;
+        max-width: 500px;
+        width: 100%;
+      }
+
+      @include on-tablet {
+        grid-column-gap: 20px;
+        grid-template-areas:
+          'photo flag'
+          'photo name'
+          'photo employment';
+        grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        margin: 25px 0 0 25px;
+        width: 75%;
+      }
+
+      .testimonial-photo {
+        border-radius: 50%;
+        grid-area: photo;
+        height: 115px;
+        margin-bottom: 15px;
+        object-fit: cover;
+        width: 115px;
+
+        @include on-mobile {
+          height: 100px;
+          width: 100px;
+        }
+
+        @include on-tablet {
+          height: 100px;
+          width: 100px;
+        }
+      }
+
+      .flag {
+        grid-area: flag;
+        margin-top: auto;
+
+        @include on-mobile {
+          font-size: 30px;
+          height: 35px;
+          text-align: start;
+        }
+
+        @include on-tablet {
+          font-size: 30px;
+          height: 35px;
+          text-align: start;
+        }
+      }
+
+      .testimonial-name {
+        font-size: 22px;
+        font-weight: 600;
+        grid-area: name;
+        line-height: 1;
+        margin: 10px 0;
+
+        @include on-mobile {
+          font-size: 20px;
+          margin: 5px 0;
+          min-width: 100px;
+        }
+      }
+
+      .testimonial-employment {
+        color: $text;
+        font-size: 18px;
+        font-weight: 500;
+        grid-area: employment;
+        line-height: 1;
+
+        @include on-mobile {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .koder-quote {
+      align-items: center;
+      display: flex;
+      grid-area: quote;
+
+      .quote {
+        color: $text;
+        font-size: 16px;
+        margin-right: 35px;
+
+        @include on-mobile {
+          font-size: 15px;
+          margin-right: 0;
+          margin-top: 10px;
+        }
+
+        @include on-tablet {
+          margin: 25px;
+        }
+      }
+    }
+  }
+
+  .active {
+    border: 1px solid $primary-btn-border;
+    height: 285px;
+    margin: 0;
+    width: 729px;
+
+    @include on-mobile {
+      height: 100%;
+      min-height: max-content;
+      width: 100%;
+    }
+
+    @include on-tablet {
+      height: 317px;
+      max-width: 637px;
+      min-width: 599px;
+      width: 100%;
+    }
+  }
+
+  .inactive {
+    border: 1px solid $secondary-btn-border;
+    height: 205px;
+    margin: 41px 0;
+    width: 729px;
+
+    @include on-mobile {
+      display: none;
+    }
+
+    @include on-tablet {
+      height: 277px;
+      margin: 20px 0;
+      max-width: 637px;
+      min-width: 599px;
+      width: 100%;
+    }
+
+    .testimonial-data {
+      .testimonial-employment {
+        display: none;
+
+        @include on-tablet {
+          display: block;
+        }
+      }
+    }
+
+    .koder-quote {
+      .quote {
+        font-size: 14px;
+      }
+    }
+  }
+}
