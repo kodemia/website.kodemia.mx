@@ -1,0 +1,48 @@
+
+.experience-video {
+  position: relative;
+
+  .video {
+    .poster {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .icon-play {
+    display: none;
+    height: 50px;
+    left: 150px;
+    position: absolute;
+    top: 35px;
+    width: 50px;
+  }
+
+  .data-container {
+    height: 165px;
+    //width: 337px;
+
+    @include on-mobile {
+      width: 100%;
+    }
+
+    @include on-tablet {
+      max-width: 416px;
+      width: 100%;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.36;
+      margin: 12px 0;
+    }
+
+    .content {
+      color: $text;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+  }
+}

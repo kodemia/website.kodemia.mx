@@ -1,0 +1,80 @@
+
+.kodemia-experience {
+  background-color: $black-primary;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 60px;
+  width: 100%;
+
+  .kodemia-experience-container {
+    max-width: $content-max-width;
+    min-width: $content-min-width;
+    width: 100%;
+
+    @include on-mobile {
+      margin: 0;
+      min-width: 100%;
+      padding: 0 45px;
+    }
+
+    @include on-tablet {
+      margin: 0;
+      min-width: 100%;
+      padding: 0 85px;
+    }
+
+    .description {
+      color: $text;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 35px 0;
+    }
+
+    .videos-container {
+      display: flex;
+      justify-content: space-between;
+
+      @include on-mobile {
+        flex-direction: column;
+      }
+
+      @include on-tablet {
+        flex-wrap: wrap;
+      }
+
+      .video {
+        max-width: 337px;
+        width: 100%;
+
+        @include on-mobile {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        @include on-tablet {
+          max-width: 416px;
+          width: 45%;
+        }
+
+        &:first-child {
+          @include on-tablet {
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+
+        &:nth-child(2) {
+          margin: 0 20px;
+
+          @include on-mobile {
+            margin: 0;
+          }
+
+          @include on-tablet {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
