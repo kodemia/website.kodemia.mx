@@ -20,12 +20,14 @@ export default function Footer () {
               <Button
                 isPrimary label='Mándanos un whatsapp'
                 icon='/icons/btn-whatsapp.svg'
+                href='https://wa.me/525573255094'
               />
             </div>
             <div className='btn-telegram'>
               <Button
                 label='Únete a la comunidad'
                 icon='/icons/btn-telegram.svg'
+                href='https://t.me/kodemiadevs'
               />
             </div>
           </div>
@@ -127,7 +129,12 @@ export default function Footer () {
           <p>
             Kodemia© {dayjs().format('YYYY')}. Todos los  derechos reservados
           </p>
-          <a href='#' className='privacy'>
+          <a
+            href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='privacy'
+          >
             Aviso de Privacidad
           </a>
         </div>
