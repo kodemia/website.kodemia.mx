@@ -1,5 +1,6 @@
 
-import React from 'react'
+import React, { useState, useRef, MutableRefObject } from 'react'
+import classnames from 'classnames'
 
 export interface Props {
   video: {
@@ -8,18 +9,59 @@ export interface Props {
     content: string
     poster: string
   }
+  onClick: () => void
+  onEnded: () => void
 }
+export interface HTMLVideoElement{}
 
-export default function ExperienceVideo ({ video }: Props) {
+export default function ExperienceVideo ({ video, onClick, onEnded }: Props) {
+  const [showPlayIcon, setShowPlayIcon] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
   return (
     <div className='experience-video'>
-      <div className='video'>
-        <video controls poster={video.poster} className='poster'>
+      <div
+        className='video'
+        onClick={onClick}
+      >
+        <video
+          controls={false}
+          poster={video.poster}
+          className='poster'
+          ref={videoRef}
+          onPause={() => {
+            setShowPlayIcon(true)
+            videoRef.current.controls = false
+          }}
+          onEnded={() => {
+            setShowPlayIcon(true)
+            videoRef.current.controls = false
+            onEnded()
+          }}
+          onSeeked={() => {
+            setShowPlayIcon(false)
+            videoRef.current.controls = true
+          }}
+        >
           <source src={video.url} type='video/mp4' />
         </video>
       </div>
 
-      <img src='/icons/icon-video.svg' alt='' className='icon-play' />
+      <div
+        className={classnames('icon-container', {
+          'is-hidden': !showPlayIcon
+        })}
+        onClick={() => {
+          onClick()
+          setShowPlayIcon(false)
+          videoRef.current.play()
+          videoRef.current.controls = true
+        }}
+      >
+        <img
+          src='/icons/icon-video.svg' alt=''
+          className='icon-play'
+        />
+      </div>
 
       <div className='data-container'>
         <h4 className='name'>{video.name}</h4>
