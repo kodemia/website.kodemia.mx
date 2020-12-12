@@ -22,6 +22,9 @@
       margin: 0 auto;
       padding-top: 25%;
       width: 50px;
+      &:hover{
+        filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%);
+      }
     }
   }
 
