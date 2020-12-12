@@ -27,7 +27,7 @@ export default function BootcampCard ({
           <p className='schedule-content'>{schedule}</p>
         </div>
         <p className='feature'>{feature}</p>
-        <Button isPrimary label='Conocer más' link={link}/>
+        <Button isPrimary label='Conocer más' link={link} />
       </div>
     </div>
   )
