@@ -54,7 +54,7 @@ export default function Navbar () {
                 <Button label='Iniciar sesión' link='/login' />
               </div>
               <div className='btn-apply'>
-                <Button isPrimary label='Aplica hoy' link='aplicar' />
+                <Button isPrimary label='Aplica hoy' link='/aplicar' />
               </div>
             </div>
           </div>
