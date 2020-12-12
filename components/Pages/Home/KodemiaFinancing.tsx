@@ -1,7 +1,6 @@
 
 import React from 'react'
 // My component
-import Button from '../../Button'
 import H2 from '../../H2'
 import H3 from '../../H3'
 
