@@ -6,14 +6,16 @@ export interface Props {
   mode: string,
   date: string,
   schedule: string,
-  feature: string
+  feature: string,
+  link: string
 }
 
 export default function BootcampCard ({
   mode,
   date,
   schedule,
-  feature
+  feature,
+  link
 }: Props) {
   return (
     <div className='bootcamp-type'>
@@ -25,7 +27,7 @@ export default function BootcampCard ({
           <p className='schedule-content'>{schedule}</p>
         </div>
         <p className='feature'>{feature}</p>
-        <Button isPrimary label='Conocer más' />
+        <Button isPrimary label='Conocer más' link={link}/>
       </div>
     </div>
   )

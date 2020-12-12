@@ -33,16 +33,16 @@ export default function Footer () {
           </div>
           <div className='directory'>
             <div className='navigation'>
-              <Link href='/'>
+              <Link href='/#bootcamps'>
                 <a><span className='item-nav'>Programas</span> | </a>
               </Link>
-              <Link href='/'>
+              <Link href='/empresas'>
                 <a><span className='item-nav'>Empresas</span> | </a>
               </Link>
-              <Link href='/'>
-                <a><span className='item-nav'>FAQ</span> | </a>
+              <Link href='/FQA'>
+                <a><span className='item-nav'>FQA</span> | </a>
               </Link>
-              <Link href='/'>
+              <Link href='/alumnos'>
                 <a><span className='item-nav'>Alumnos</span> </a>
               </Link>
             </div>
