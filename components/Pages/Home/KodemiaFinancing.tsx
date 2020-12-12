@@ -24,9 +24,6 @@ export default function KodemiaFinancing ({ info }:Props) {
           <H2 whiteText={info.title} cyanText={info.keywords} />
         </div>
         <p className='text'>{info.text}</p>
-        <div className='btn-container'>
-          <Button isPrimary label='Conoce más' />
-        </div>
       </div>
     </section>
   )
