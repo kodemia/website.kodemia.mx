@@ -12,8 +12,7 @@ export interface Props {
   onClick: () => void
   onEnded: () => void
 }
-export interface HTMLVideoElement{}
-
+export interface HTMLVideoElement {}
 export default function ExperienceVideo ({ video, onClick, onEnded }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
@@ -60,6 +59,10 @@ export default function ExperienceVideo ({ video, onClick, onEnded }: Props) {
         <img
           src='/icons/icon-video.svg' alt=''
           className='icon-play'
+        />
+        <img
+          src='/icons/icon-video-blue.svg' alt=''
+          className='icon-play-blue'
         />
       </div>
 
