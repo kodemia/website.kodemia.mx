@@ -33,7 +33,7 @@ export interface Props {
 
 export default function OurBootcamps ({ bootcamps }:Props) {
   return (
-    <div className='our-bootcamps section-container'>
+    <div id='bootcamps' className='our-bootcamps section-container'>
       <H3 text='Nuestros Bootcamps' />
       <div className='bootcamp'>
         <LanguageCard
@@ -51,6 +51,7 @@ export default function OurBootcamps ({ bootcamps }:Props) {
                   date={`${modality.schedule.day} de ${modality.schedule.month}`}
                   schedule={`${modality.schedule.days} de ${modality.schedule.hour}`}
                   feature={modality.description}
+                  link={modality.link}
                 />
               </div>
             ))
@@ -73,6 +74,7 @@ export default function OurBootcamps ({ bootcamps }:Props) {
                   date={`${modality.schedule.day} de ${modality.schedule.month}`}
                   schedule={`${modality.schedule.days} de ${modality.schedule.hour}`}
                   feature={modality.description}
+                  link={modality.link}
                 />
               </div>
             ))

@@ -13,7 +13,7 @@ export default function HeroCard ({ title, content }: Props) {
     <div className='hero-card'>
       <H1 text={title} />
       <p className='hero-content'>{content}</p>
-      <Button isPrimary label='Conoce nuestros Bootcamps' />
+      <Button isPrimary label='Conoce nuestros Bootcamps' link='/#bootcamps' />
     </div>
   )
 };
