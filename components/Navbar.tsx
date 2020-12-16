@@ -51,10 +51,14 @@ export default function Navbar () {
             </div>
             <div className='btns'>
               <div className='btn-sign-in'>
-                <Button label='Iniciar sesión' />
+                <Link href='ingresar'>
+                  <Button label='Iniciar sesión' />
+                </Link>
               </div>
               <div className='btn-apply'>
-                <Button isPrimary label='Aplica hoy' />
+                <Link href='/aplicar'>
+                  <Button isPrimary label='Aplica hoy' />
+                </Link>
               </div>
             </div>
           </div>
