@@ -39,7 +39,7 @@ export default function Footer () {
               <Link href='/empresas'>
                 <a><span className='item-nav'>Empresas</span> | </a>
               </Link>
-              <Link href='/FQA'>
+              <Link href='/FAQ'>
                 <a><span className='item-nav'>FAQ</span> | </a>
               </Link>
               <Link href='/alumnos'>
