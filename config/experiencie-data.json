@@ -1,21 +1,21 @@
 
 [
   {
-    "url":"https://vod-progressive.akamaized.net/exp=1608075929~acl=%2A%2F2082540846.mp4%2A~hmac=942e828f13f81dba836f4183f4ac48d38c3df6fb5ce1e10c2dd6bfdba51b6d1a/vimeo-prod-skyfire-std-us/01/3715/18/468575964/2082540846.mp4?filename=KO_VLP_DCAFS_Mell.mp4",
+    "url":"https://player.vimeo.com/play/2082540846?s=468575964_1608089507_b647be50424ed6a378493d15c4bcb436&loc=external&context=Vimeo%5CController%5CClipController.main",
     "name": "Melissa Castillo",
     "content": "\"En un inicio, no tenía conocimiento previo, pero Kodemia me acompañó...\"",
-    "poster":"/images/experience/melissa-castillo.jpg"
+    "poster":"/images/experience/melissa-castillo.jpeg"
   },
   {
-    "url":"https://vod-progressive.akamaized.net/exp=1608073846~acl=%2A%2F2070557094.mp4%2A~hmac=24e3bc48ef40c89bbefb7d8a254ff3520992a53eabeb41264954da2ba24f8bac/vimeo-prod-skyfire-std-us/01/3291/18/466455253/2070557094.mp4?filename=KO_VLP_JuanC_DEAE.mp4",
+    "url":"https://player.vimeo.com/play/2070557094?s=466455253_1608089362_b3f40baa866d534d23e5971bfa11eb35&loc=external&context=Vimeo%5CController%5CClipController.main",
     "name": "Juan Cundafé",
     "content": "\"Cuando conocí Kodemia quería emprender. Ahí conocí a mis socios y hoy...\"",
     "poster":"/images/experience/juan-cundafe.jpg"
   },
   {
-    "url":"https://vod-progressive.akamaized.net/exp=1608076015~acl=%2A%2F2070568003.mp4%2A~hmac=2fedeeffa4acd01de381dd5bd6281c6f49d8b233ced83c484f17ef90b0b0c489/vimeo-prod-skyfire-std-us/01/3291/18/466456915/2070568003.mp4?filename=KO_VLP_Naomi_DSPASP.mp4",
+    "url":"https://player.vimeo.com/play/2070568003?s=466456915_1608089554_a24e31cd7112454c9841858954e1a3ed&loc=external&context=Vimeo%5CController%5CClipController.main",
     "name": "Naomi López",
     "content": "\"Terminé una carrera en sistemas, pero al buscar trabajo descubrí...\"",
-    "poster":"/images/experience/naomi-lop.jpg"
+    "poster":"/images/experience/naomi-lp.jpeg"
   }
 ]

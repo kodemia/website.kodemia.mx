@@ -1,5 +1,5 @@
 
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, MutableRefObject } from 'react'
 import classnames from 'classnames'
 
 export interface Props {
@@ -15,7 +15,7 @@ export interface Props {
 
 export default function ExperienceVideo ({ video, onClick, onEnded }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
-  const videoRef = useRef(null) || null
+  const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
   return (
     <div className='experience-video'>
       <div

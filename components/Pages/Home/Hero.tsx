@@ -14,7 +14,7 @@ export default function Hero () {
           muted
         >
           <source
-            src='https://vod-progressive.akamaized.net/exp=1608075290~acl=%2A%2F2132480147.mp4%2A~hmac=5dc20f840a5d3fa5b450093c1fdd637f82e29588ebfcc905e1d4118b585b1080/vimeo-prod-skyfire-std-us/01/491/19/477458459/2132480147.mp4?filename=KO_VLP_Home_Mobile_20.mp4'
+            src='https://player.vimeo.com/play/2124925016?s=476082828_1608089450_21c5b6b7dfc8adf211edca23833fdd1b&loc=external&context=Vimeo%5CController%5CClipController.main'
             type='video/mp4'
           />
         </video>
