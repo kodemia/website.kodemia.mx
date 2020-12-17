@@ -1,18 +1,18 @@
 [
   {
     "name": "Bootcamps",
-    "href": "/"
+    "href": "/#bootcamps"
   },
   {
     "name": "Empresas",
-    "href": "/"
+    "href": "/empresas"
   },
   {
     "name": "FAQ",
-    "href": "/"
+    "href": "/FAQ"
   },
   {
     "name": "Alumnos",
-    "href": "/"
+    "href": "/alumnos"
   }
 ]
