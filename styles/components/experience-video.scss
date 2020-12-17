@@ -19,20 +19,14 @@
     top: 0;
     width: 100%;
 
-    %ikon {
+    .icon-play {
+      display: block;
       width: 50px;
     }
 
-    .icon-play {
-      @extend %ikon;
-
-      display: block;
-    }
-
     .icon-play-blue {
-      @extend %ikon;
-
       display: none;
+      width: 50px;
     }
 
     &:hover {
