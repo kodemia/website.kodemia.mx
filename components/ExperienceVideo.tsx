@@ -1,6 +1,9 @@
 
+/** global HTMLVideoElement */
+
 import React, { useState, useRef, MutableRefObject } from 'react'
 import classnames from 'classnames'
+import HTMLVideoElement from 'typescript'
 
 export interface Props {
   video: {
