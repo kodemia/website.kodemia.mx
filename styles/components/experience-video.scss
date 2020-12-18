@@ -26,11 +26,13 @@
 
     .icon-play {
       @extend %ikon;
+
       display: block;
     }
 
     .icon-play-blue {
       @extend %ikon;
+
       display: none;
     }
 

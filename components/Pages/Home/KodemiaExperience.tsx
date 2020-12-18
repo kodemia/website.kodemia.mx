@@ -37,7 +37,7 @@ export default function KodemiaExperience ({ videos = [] }:Props) {
               key={`experience-video-${index}`}
               className={classnames('video', `video-${index}`, {
                 'is-active': index === activeVideoIndex,
-                'is-inactive': index !== activeVideoIndex,
+                'is-inactive': index !== activeVideoIndex
               })}
             >
               <ExperienceVideo
