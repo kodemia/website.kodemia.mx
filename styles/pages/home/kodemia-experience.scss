@@ -35,7 +35,7 @@
       display: grid;
       grid-column-gap: 50px;
       grid-template-areas: 'video video video';
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       @include on-mobile {
         grid-column-gap: 0;
