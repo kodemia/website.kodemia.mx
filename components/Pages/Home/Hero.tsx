@@ -14,8 +14,7 @@ export default function Hero () {
           muted
         >
           <source
-            src='https://player.vimeo.com/play/2124925016?s=476082828_1608089450_21c5b6b7dfc8adf211edca23833fdd1b&loc=external&context=Vimeo%5CController%5CClipController.main'
-            type='video/mp4'
+            src='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4'
           />
         </video>
       </div>

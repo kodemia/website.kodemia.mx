@@ -47,7 +47,6 @@ export default function KodemiaExperience ({ videos = [] }:Props) {
                   setIsActive(true)
                 }}
                 onEnded={() => {
-                  // TODO checar funcionalidad setActiveVideoIndex(-1)
                   setIsActive(false)
                 }}
               />

@@ -37,7 +37,9 @@ export default function ExperienceVideo ({ video, onClick, onEnded }: Props) {
           onEnded={() => {
             setShowPlayIcon(true)
             videoRef.current.controls = false
+            //Todo: checar
             onEnded()
+            videoRef.current.load()
           }}
           onSeeked={() => {
             setShowPlayIcon(false)
