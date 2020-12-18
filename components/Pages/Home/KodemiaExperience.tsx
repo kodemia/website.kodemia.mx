@@ -34,9 +34,10 @@ export default function KodemiaExperience ({ videos = [] }:Props) {
         >
           {videos.map((video, index) => (
             <div
-              key={`experience-video-${index}`} className={classnames('video', `video-${index}`, {
+              key={`experience-video-${index}`}
+              className={classnames('video', `video-${index}`, {
                 'is-active': index === activeVideoIndex,
-                'is-inactive': index !== activeVideoIndex
+                'is-inactive': index !== activeVideoIndex,
               })}
             >
               <ExperienceVideo
@@ -46,7 +47,7 @@ export default function KodemiaExperience ({ videos = [] }:Props) {
                   setIsActive(true)
                 }}
                 onEnded={() => {
-                  setActiveVideoIndex(-1)
+                  // TODO checar funcionalidad setActiveVideoIndex(-1)
                   setIsActive(false)
                 }}
               />
