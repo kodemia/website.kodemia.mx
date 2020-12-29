@@ -5,10 +5,9 @@ import classnames from 'classnames'
 import H2 from '../../H2'
 import H3 from '../../H3'
 import ExperienceVideo from '../../ExperienceVideo'
-let wrapGrid = {}
+let wrapGrid: (arg0: any, arg1: object) => void
 if (typeof window !== 'undefined') {
   wrapGrid = require('animate-css-grid').wrapGrid
-  console.log(wrapGrid)
 }
 
 export interface Video {

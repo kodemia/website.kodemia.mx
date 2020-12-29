@@ -98,7 +98,6 @@
 
     .inactive {
       @include on-mobile {
-        animation: none;
         display: flex;
         flex-direction: column;
       }
