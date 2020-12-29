@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Slider from 'react-slick'
 
 import Button from '../../Button'
@@ -79,9 +79,6 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
             }
           </Slider>
         </div>
-        {/* <div className='bar'>
-            <input type='checkbox'></input>
-          </div> */}
       </div>
     </section>
   )
