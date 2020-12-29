@@ -15,7 +15,6 @@ export interface Props {
 }
 
 export default function WhatGoingAchieve ({ winnerImages }: Props) {
-  const slider = useRef(null)
   useEffect(() => {
     const dots = document.getElementsByClassName('custom-dot')
     if (dots && dots[0]) {
@@ -37,9 +36,9 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
       return (
         <div className='div-slider'>
           <div className='bar'>&nbsp;</div>
-          {i === 0 && <p>wireframe</p>}
-          {i === 1 && <p>code</p>}
-          {i === 2 && <p>mockup</p>}
+          {i === 0 && <p>Wireframe</p>}
+          {i === 1 && <p>Desarrollo Web</p>}
+          {i === 2 && <p>Aplicación</p>}
         </div>
       )
     }
@@ -59,28 +58,30 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
           </p>
           <Button isPrimary label='Conoce la experiencia completa' />
         </div>
-        <div className='images-bar-container'>
-          <div className='images'>
-            <Slider {...settings} ref={slider}>
-              {
-                winnerImages.map((image, index) => {
-                  console.log('image', image)
-                  return (
-                    <div
-                      className='image'
-                      key={`image-${index}`}
-                    >
-                      <img src={image.image} alt='winner images' />
-                    </div>
-                  )
-                })
-              }
-            </Slider>
-          </div>
-          {/* <div className='bar'>
+        <div className='slider'>
+          <Slider {...settings}>
+            {/* <div>1</div>
+              <div>2</div>
+              <div>3</div> */}
+
+            {
+              winnerImages.map((image, index) => {
+                console.log('image', image)
+                return (
+                  <div
+                    className='image'
+                    key={`image-${index}`}
+                  >
+                    <img src={image.image} alt='winner images' />
+                  </div>
+                )
+              })
+            }
+          </Slider>
+        </div>
+        {/* <div className='bar'>
             <input type='checkbox'></input>
           </div> */}
-        </div>
       </div>
     </section>
   )

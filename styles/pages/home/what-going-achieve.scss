@@ -4,27 +4,26 @@
   width: 100%;
 
   .achieves-container {
-    background-color: #dda0dd;
     display: grid;
-    grid-gap: 60px;
-    grid-template-areas: 'info images';
-    grid-template-columns: 1fr 2fr;
+    grid-gap: 55px;
+    grid-template-areas: 'info slider';
+    grid-template-columns: calc(100% / 3) calc((100% / 3) * 2);
     max-width: $content-max-width;
     padding: 100px 0 60px;
 
-    @include on-mobile {
-      grid-template-areas:
-        'info'
-        'images';
-      grid-template-columns: 1fr;
-    }
+    // @include on-mobile {
+    //   grid-template-areas:
+    //     'info'
+    //     'images-bar';
+    //   grid-template-columns: 1fr;
+    // }
 
-    @include on-tablet {
-      grid-template-areas:
-        'info'
-        'images';
-      grid-template-columns: 1fr;
-    }
+    // @include on-tablet {
+    //   grid-template-areas:
+    //     'info'
+    //     'images-bar';
+    //   grid-template-columns: 1fr;
+    // }
 
     .info {
       grid-area: info;
@@ -35,19 +34,70 @@
       }
     }
 
-    .images-bar-container {
-      background-color: #b0e0e6;
+    .slider {
+      background-color: #191970;
+      grid-area: slider;
+      // display: flex;
+      // overflow: hidden;
 
-      .images {
-        background-color: #eee8aa;
-        // display: flex;
-        grid-area: images;
-        // overflow: hidden;
+      // .image {
+      //   border: 1px solid white;
+      //   cursor: grab;
+      //   display: flex;
+      //   height: 373px;
+      //   margin-top: 60px;
+      //   // min-width: 100%;
 
-        .image {
-          height: 373px;
-          margin-top: 60px;
-          min-width: 100%;
+      //   img {
+      //     margin: auto;
+      //   }
+      // }
+
+      .div-slider {
+        content: '0';
+        cursor: pointer;
+        width: 100%;
+
+        p {
+          color: $white-light;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 1.36;
+          text-align: center;
+        }
+
+        .bar {
+          width: 100%;
+        }
+      }
+
+      .custom-dot {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          width: 100%;
+
+          .div-slider .bar {
+            background-color: #ff0000;
+          }
+
+          .slick-active p {
+            color: #00ffff;
+          }
+
+          .slick-active .bar {
+            background-color: #ffff00;
+          }
+
+          &:first-child .div-slider .bar {
+            border-radius: 10px 0 0 10px;
+          }
+
+          &:last-child .div-slider .bar {
+            border-radius: 0 10px 10px 0;
+          }
         }
       }
     }
