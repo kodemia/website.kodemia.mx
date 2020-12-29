@@ -21,7 +21,9 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Pr
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
 
-  (!isPlay && videoRef.current) ? videoRef.current.pause() : null
+  if (!isPlay && videoRef.current) {
+    videoRef.current.pause()
+  }
 
   return (
     <div className='experience-video'>
