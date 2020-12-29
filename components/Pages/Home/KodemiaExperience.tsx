@@ -27,14 +27,21 @@ export default function KodemiaExperience ({ videos = [] }:Props) {
   const gridRef = useRef(null)
 
   useEffect(() => {
-    wrapGrid(gridRef.current, { easing: 'linear', stagger: 10, duration: 400 })
+    wrapGrid(gridRef.current,
+      {
+        easing: 'linear',
+        stagger: 10,
+        duration: 400
+      })
   }, [])
 
   return (
     <section className='kodemia-experience'>
       <div className='kodemia-experience-container section-container'>
         <H3 text='La experiencia Kodemia' />
-        <H2 cyanText='Conoce la historia' whiteText='de nuestros graduados' isFirstCyan />
+        <H2 cyanText='Conoce la historia'
+          whiteText='de nuestros graduados'
+          isFirstCyan />
         <p className='description'>Es más importante contar historias que números. Buscamos que los alumnos que salen de Kodemia transformen su vida.</p>
         <div
           ref={gridRef} className={classnames('videos-container', {
@@ -59,6 +66,9 @@ export default function KodemiaExperience ({ videos = [] }:Props) {
                 onEnded={() => {
                   setIsActive(false)
                 }}
+                isPlay={index === activeVideoIndex ?
+                  true :
+                  false}
               />
             </div>
           ))}

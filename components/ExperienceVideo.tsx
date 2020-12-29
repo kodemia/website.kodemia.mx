@@ -12,13 +12,17 @@ export interface Props {
     content: string
     poster: string
   }
+  isPlay: boolean
   onClick: () => void
   onEnded: () => void
 }
 
-export default function ExperienceVideo ({ video, onClick, onEnded }: Props) {
+export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
+
+  (!isPlay && videoRef.current) ? videoRef.current.pause() : null
+
   return (
     <div className='experience-video'>
       <div
