@@ -1,7 +1,25 @@
 .login {
-  background-image: url('/images/apoyo-kodemia.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  .columns{
+    padding: 0;
+    margin: 0;
+    .column {
+      padding: 0;
+      .cover {
+        background: linear-gradient(to top, $black-primary, $black-transparent-hover);
+        height: 100%;
+        padding: 190px 49px 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        @include on-mobile {
+          padding: 150px 45px 20px;
+        }
+
+        @include on-tablet {
+          padding: 170px 85px 0;
+        }
+      }
+    }
+  }
 }

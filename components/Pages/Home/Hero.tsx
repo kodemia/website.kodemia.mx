@@ -2,23 +2,12 @@
 import React from 'react'
 // my component
 import HeroCard from '../../HeroCard'
+import BgVideo from '../../BgVideo'
 
 export default function Hero () {
   return (
     <div className='hero'>
-      <div className='bg-video'>
-        <video
-          className='video'
-          autoPlay
-          loop
-          muted
-        >
-          <source
-            src='videos/hero-home-mobile.mp4'
-            type='video/mp4'
-          />
-        </video>
-      </div>
+      <BgVideo />
       <div className='cover'>
         <div className='container'>
           <HeroCard
