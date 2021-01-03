@@ -1,9 +1,11 @@
 .login {
-  .columns{
-    padding: 0;
+  .columns {
     margin: 0;
+    padding: 0;
+
     .column {
       padding: 0;
+
       .cover {
         background: linear-gradient(to top, $black-primary, $black-transparent-hover);
         height: 100%;
