@@ -29,6 +29,24 @@ a {
 body {
   color: $primary;
   font-family: 'Poppins', sans-serif;
+  //::scrollbar-highlight-color: aqua;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 10px;
+
+  }
+  &::-webkit-scrollbar-track {
+    background: $white-lighter;
+
+  }
+  &::-webkit-scrollbar-thumb {
+    background:rgba(0, 255, 255, 0.5);
+    border-radius: 10px;
+    margin: 0 2px;
+    &:hover {
+      background: $cyan;
+    }
+  }
 }
 
 .page-container {
