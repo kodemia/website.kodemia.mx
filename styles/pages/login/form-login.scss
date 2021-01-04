@@ -1,0 +1,12 @@
+
+.login-form {
+  width: 340px;
+
+  @include on-mobile {
+    width: 100%;
+  }
+
+  @include on-tablet {
+    width: 420px;
+  }
+}

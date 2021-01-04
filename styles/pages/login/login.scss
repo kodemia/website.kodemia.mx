@@ -1,0 +1,28 @@
+
+.login {
+  .columns {
+    margin: 0;
+    padding: 0;
+
+    .column {
+      padding: 0;
+
+      .cover {
+        background: rgba(20, 20, 20, 0.9);
+        height: 100%;
+        padding: 190px 49px 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        @include on-mobile {
+          padding: 150px 45px 20px;
+        }
+
+        @include on-tablet {
+          padding: 170px 85px 0;
+        }
+      }
+    }
+  }
+}

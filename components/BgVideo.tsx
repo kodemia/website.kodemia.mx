@@ -10,8 +10,7 @@ export default function BgVideo () {
         muted
       >
         <source
-          src='videos/hero-home-mobile.mp4'
-          type='video/mp4'
+          src='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4'
         />
       </video>
     </div>

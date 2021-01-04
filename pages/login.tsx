@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import H1 from '../components/H1'
 import BgVideo from '../components/BgVideo'
+import LoginForm from '../components/Pages/Login/LoginForm'
 
 export default function Login () {
   return (
@@ -13,8 +14,9 @@ export default function Login () {
         <div className='column is-full'>
           <BgVideo />
           <div className='columns cover'>
-            <div className='column is-flex is-justify-content-center'>
+            <div className='column is-flex is-align-items-center is-flex-direction-column'>
               <H1 text='Bienvenido' />
+              <LoginForm />
             </div>
           </div>
         </div>
