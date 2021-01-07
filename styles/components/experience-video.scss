@@ -1,0 +1,79 @@
+
+.experience-video {
+  background-color: $black-primary;
+  position: relative;
+
+  .video {
+    .poster {
+      border-radius: 10px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .icon-container {
+    background-color: $black-transparent-hero;
+    display: flex;
+    height: calc(100% - 140px);
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    %ikon {
+      width: 50px;
+    }
+
+    .icon-play {
+      @extend %ikon;
+
+      display: block;
+    }
+
+    .icon-play-blue {
+      @extend %ikon;
+
+      display: none;
+    }
+
+    &:hover {
+      .icon-play {
+        display: none;
+      }
+
+      .icon-play-blue {
+        display: block;
+      }
+    }
+  }
+
+  .data-container {
+    height: 140px;
+    max-width: 337px;
+    overflow: hidden;
+
+    @include on-mobile {
+      margin-bottom: 20px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include on-tablet {
+      max-width: 416px;
+      width: 100%;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.36;
+      margin: 12px 0;
+    }
+
+    .content {
+      color: $text;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

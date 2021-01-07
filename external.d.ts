@@ -1,2 +1,2 @@
 
-declare module "react-country-flag";
+declare module 'react-country-flag';

@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { useRouter } from 'next/router'
 import classNames from 'classnames'
 
 export interface Props {
@@ -7,6 +8,8 @@ export interface Props {
   label: string
   icon?: string
   hasWhiteBg?: Boolean
+  link?:string
+  href?: string
   onClick?: () => void
 }
 
@@ -14,9 +17,11 @@ export default function Button ({
   isPrimary,
   label,
   icon,
-  hasWhiteBg,
-  ...props
+  link = '',
+  href,
+  hasWhiteBg
 }: Props) {
+  const router = useRouter()
   const btnClass = classNames({
     btn: !icon,
     'button-ikon': true,
@@ -26,12 +31,27 @@ export default function Button ({
   })
 
   return (
-    <a
-      className={btnClass}
-      {...props}
-    >
-      <img src={icon} className='ikon' />
-      {label}
-    </a>
+    <>
+      {href &&
+        <a
+          href={href}
+          target='_blank'
+          rel='noopener noreferrer'
+          className={btnClass}
+        >
+          <img src={icon} className='ikon' />
+          {label}
+        </a>}
+      {
+        !href &&
+          <a
+            className={btnClass}
+            onClick={() => router.push(link)}
+          >
+            <img src={icon} className='ikon' />
+            {label}
+          </a>
+      }
+    </>
   )
 };

@@ -2,10 +2,6 @@
 .hero {
   position: relative;
 
-  @include on-mobile {
-    margin-bottom: 70px;
-  }
-
   .bg-video {
     z-index: -2;
 
@@ -17,7 +13,7 @@
   }
 
   .cover {
-    background: linear-gradient(to top, $black, $black-transparent-hero);
+    background: linear-gradient(to top, $black-primary, $black-transparent-hero);
     height: 100%;
     padding: 190px 49px 0;
     position: absolute;
