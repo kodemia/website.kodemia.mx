@@ -1,5 +1,5 @@
 
-import React, { useState, SyntheticEvent} from 'react'
+import React, { useState, SyntheticEvent } from 'react'
 // my components
 import FormField from '../../FormField'
 

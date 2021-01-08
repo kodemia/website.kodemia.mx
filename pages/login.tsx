@@ -15,7 +15,7 @@ export default function Login () {
     if (token) Router.replace('clases')
   })
 
-  const handleForm = async (email: string, password: string) =>{
+  const handleForm = async (email: string, password: string) => {
     try {
       const token = await login(email, password)
       sessionStorage.setItem('token', token)

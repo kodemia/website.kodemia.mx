@@ -18,7 +18,7 @@ interface Target {
 }
 
 export default function FormField ({ text, type = 'text', name, value, placeholder, callback }: Props) {
-  const handlerInput = ({ target: { value, name }}:Target) => {
+  const handlerInput = ({ target: { value, name } }:Target) => {
     callback(name, value)
   }
   return (
