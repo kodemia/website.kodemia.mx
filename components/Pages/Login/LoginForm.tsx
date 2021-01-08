@@ -3,34 +3,32 @@ import React, { useState } from 'react'
 // my components
 import FormField from '../../FormField'
 
-export default function LoginForm () {
-  const [user, setUser] = useState('')
+export interface Props {
+  callback: (email: string, password: string) => void
+}
+
+export default function LoginForm ({ callback }:Props) {
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const handlerInputChange = (name, value) => {
-    name === 'user'
-      ? setUser(value)
+  const handlerInputChange = (name: string, value: string) => {
+    name === 'email'
+      ? setEmail(value)
       : setPassword(value)
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault()
-
-    // callback(title, subtitle, author, hour, content, popular, img)
-
-    // setTitle('')
-    // setSubtitle('')
-    // setAuthor('')
-    // setContent('')
-    // setImg('')
-    // setPopular(false)
+    callback(email, password)
+    setEmail('')
+    setPassword('')
   }
   return (
     <form onSubmit={handleSubmit} className='login-form'>
       <FormField
         text='Usuario:'
-        value={user}
-        name='user'
+        value={email}
+        name='email'
         callback={handlerInputChange}
       />
       <FormField
@@ -40,6 +38,9 @@ export default function LoginForm () {
         name='password'
         callback={handlerInputChange}
       />
+      <button className='btn button-primary btn-login'>
+        Igresar
+      </button>
     </form>
   )
 }
