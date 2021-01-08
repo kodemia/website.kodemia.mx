@@ -10,8 +10,15 @@ interface Props {
   callback: (name: string, value: string) => void
 }
 
+interface Target {
+  target: {
+    value: string
+    name: string
+  }
+}
+
 export default function FormField ({ text, type = 'text', name, value, placeholder, callback }: Props) {
-  const handlerInput = ({ target: { value, name } }) => {
+  const handlerInput = ({ target: { value, name }}:Target) => {
     callback(name, value)
   }
   return (

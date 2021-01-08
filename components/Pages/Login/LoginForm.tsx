@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useState, SyntheticEvent} from 'react'
 // my components
 import FormField from '../../FormField'
 
@@ -17,7 +17,7 @@ export default function LoginForm ({ callback }:Props) {
       : setPassword(value)
   }
 
-  const handleSubmit = (event: { preventDefault: () => void }) => {
+  const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault()
     callback(email, password)
     setEmail('')
