@@ -20,8 +20,6 @@ export default function LoginForm ({ callback }:Props) {
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault()
     callback(email, password)
-    setEmail('')
-    setPassword('')
   }
   return (
     <form onSubmit={handleSubmit} className='login-form'>

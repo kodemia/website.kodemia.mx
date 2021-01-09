@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-interface Props {
+export interface Props {
   text: string
   type?: string
   name: string
@@ -17,10 +17,11 @@ interface Target {
   }
 }
 
-export default function FormField ({ text, type = 'text', name, value, placeholder, callback }: Props) {
+export default function FormField ({ text, type = 'email', name, value, placeholder, callback }: Props) {
   const handlerInput = ({ target: { value, name } }:Target) => {
     callback(name, value)
   }
+
   return (
     <div className='form-field'>
       <label className='label label-login'>{text}</label>
@@ -32,6 +33,7 @@ export default function FormField ({ text, type = 'text', name, value, placehold
         placeholder={placeholder}
         onChange={handlerInput}
       />
+
     </div>
   )
 }
