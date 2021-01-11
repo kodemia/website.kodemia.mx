@@ -41,8 +41,7 @@ export default function Login () {
                 {error &&
                   <p className='help is-danger is-medium'>
                     Contraseña o usuario incorrectos
-                    </p>
-                }
+                  </p>}
               </div>
             </div>
           </div>
