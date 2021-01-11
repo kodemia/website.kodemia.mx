@@ -1,43 +1,44 @@
 
 import React, { useState, SyntheticEvent } from 'react'
+import { useForm } from "react-hook-form";
 // my components
 import FormField from '../../FormField'
 
 export interface Props {
   callback: (email: string, password: string) => void
 }
+export interface Data{
+  email: string
+  password: string
+}
 
 export default function LoginForm ({ callback }:Props) {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
 
-  const handlerInputChange = (name: string, value: string) => {
-    name === 'email'
-      ? setEmail(value)
-      : setPassword(value)
-  }
+  const { register, handleSubmit, watch, errors } = useForm();
+  const onSubmit = ({email,password}: Data) => {callback(email, password)};
 
-  const handleSubmit = (event: SyntheticEvent) => {
-    event.preventDefault()
-    callback(email, password)
-  }
   return (
-    <form onSubmit={handleSubmit} className='login-form'>
-      <FormField
-        text='Usuario:'
-        value={email}
+    <form onSubmit={handleSubmit(onSubmit)}className='login-form'>
+      <label className='label label-login'>Usuario:</label>
+      <input
+        className='input input-login'
+        type='email'
         name='email'
-        callback={handlerInputChange}
+        placeholder='usuario@ejemplo.com'
+        ref={register({ required: true })}
       />
-      <FormField
-        text='Contraseña:'
+      {errors.email && <span className='error help is-danger is-medium'>Necesitas llenar este campo</span>}
+      <label className='label label-login'>Contraseña:</label>
+      <input
+        className='input input-login'
         type='password'
-        value={password}
         name='password'
-        callback={handlerInputChange}
+        placeholder='contraseña'
+        ref={register({ required: true })}
       />
+      {errors.password && <span className='error help is-danger is-medium'>Necesitas llenar este campo</span>}
       <button className='btn button-primary btn-login'>
-        Igresar
+        Ingresar
       </button>
     </form>
   )
