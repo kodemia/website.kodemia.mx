@@ -1,18 +1,10 @@
 
 .login-form {
-  margin-top: 25px;
-  width: 340px;
-
-  @include on-mobile {
-    width: 100%;
-  }
-
-  @include on-tablet {
-    width: 420px;
-  }
+  margin-top: 35px;
+  width: 100%;
 
   .label-login {
-    margin:35px 0 20px;
+    margin: 35px 0 20px;
     text-align: center;
   }
 
@@ -24,9 +16,11 @@
       border: 1px solid $cyan;
     }
   }
-  .error{
+
+  .error {
     position: absolute;
   }
+
   .btn-login {
     margin-top: 60px;
   }

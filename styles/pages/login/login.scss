@@ -22,6 +22,18 @@
         @include on-tablet {
           padding: 170px 85px 0;
         }
+
+        .form-container {
+          width: 340px;
+
+          @include on-mobile {
+            width: 100%;
+          }
+
+          @include on-tablet {
+            width: 420px;
+          }
+        }
       }
     }
   }

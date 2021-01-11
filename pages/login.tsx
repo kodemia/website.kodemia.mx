@@ -35,10 +35,14 @@ export default function Login () {
           <BgVideo />
           <div className='columns cover'>
             <div className='column is-flex is-align-items-center is-flex-direction-column'>
-            <H1 text='Bienvenido' />
-              <div>
-              <LoginForm callback={handleForm} />
-              {error && <p className='help is-danger is-medium'>Contraseña o usuario incorrectos</p>}
+              <H1 text='Bienvenido' />
+              <div className='form-container'>
+                <LoginForm callback={handleForm} />
+                {error &&
+                  <p className='help is-danger is-medium'>
+                    Contraseña o usuario incorrectos
+                    </p>
+                }
               </div>
             </div>
           </div>
