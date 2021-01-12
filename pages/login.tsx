@@ -15,6 +15,12 @@ export default function Login () {
 
   return (
     <div className='login'>
+      <style global jsx>{`
+        body ::-webkit-scrollbar {
+          width: 0;
+         }
+      `}
+      </style>
       <Navbar />
       <div className='columns'>
         <div className='column is-full'>

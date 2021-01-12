@@ -31,7 +31,7 @@ export default function LoginForm () {
       className='login-form'
     >
       <label className='label label-login'>
-        Usuario:
+        Usuario
       </label>
       <input
         className='input input-login'
@@ -45,7 +45,7 @@ export default function LoginForm () {
           Necesitas llenar este campo
         </span>}
       <label className='label label-login'>
-        Contraseña:
+        Contraseña
       </label>
       <input
         className='input input-login'
