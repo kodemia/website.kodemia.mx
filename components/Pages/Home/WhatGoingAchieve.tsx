@@ -4,7 +4,6 @@ import Slider from 'react-slick'
 import Button from '../../Button'
 import H2 from '../../H2'
 import H3 from '../../H3'
-// import { settings } from 'cluster'
 
 export interface Image {
   image: string
@@ -60,10 +59,6 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
         </div>
         <div className='slider'>
           <Slider {...settings}>
-            {/* <div>1</div>
-              <div>2</div>
-              <div>3</div> */}
-
             {
               winnerImages.map((image, index) => {
                 console.log('image', image)
