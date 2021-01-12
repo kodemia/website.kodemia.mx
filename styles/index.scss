@@ -31,15 +31,15 @@ body {
   font-family: 'Poppins', sans-serif;
 
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
   }
 
   &::-webkit-scrollbar-track {
-    background: $white-lighter;
+    background: $black;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(0, 255, 255, 0.5);
+    background: $gray-primary;
     border-radius: 10px;
 
     &:hover {

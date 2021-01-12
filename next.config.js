@@ -5,6 +5,6 @@ module.exports = withPlugins([withImages({})])
 
 module.exports = {
   env: {
-    URL_API: 'https://api-kodemia-mx.vercel.app'
+    API_URL: process.env.API_URL
   }
 }

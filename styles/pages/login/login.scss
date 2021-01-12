@@ -18,7 +18,7 @@
         width: 100%;
 
         @include on-mobile {
-          padding: 150px 45px 20px;
+          padding: 150px 45px 0;
         }
 
         @include on-tablet {
