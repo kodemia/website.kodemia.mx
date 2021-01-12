@@ -1,18 +1,29 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import Router from 'next/router'
+// API
+import { login } from '../../../lib/api'
 
-export interface Props {
-  callback: (email: string, password: string) => void
-}
 export interface Data{
   email: string
   password: string
 }
 
-export default function LoginForm ({ callback }:Props) {
+export default function LoginForm () {
+  const [error, setError] = useState(false)
   const { register, handleSubmit, errors } = useForm()
-  const onSubmit = ({ email, password }: Data) => { callback(email, password) }
+
+  const onSubmit = async ({ email, password }: Data) => {
+    try {
+      const token = await login(email, password)
+      sessionStorage.setItem('token', token)
+      Router.push('clases')
+    } catch (error) {
+      setError(true)
+      setTimeout(() => setError(false), 5000)
+    }
+  }
 
   return (
     <form
@@ -50,6 +61,10 @@ export default function LoginForm ({ callback }:Props) {
       <button className='btn button-primary btn-login'>
         Ingresar
       </button>
+      {error &&
+        <p className='help is-danger is-medium'>
+          Contraseña o usuario incorrectos
+        </p>}
     </form>
   )
 }
