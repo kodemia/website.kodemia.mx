@@ -24,9 +24,11 @@
         }
 
         .form-container {
+          margin-top: 20px;
           width: 340px;
 
           @include on-mobile {
+            margin-top: 10px;
             width: 100%;
           }
 

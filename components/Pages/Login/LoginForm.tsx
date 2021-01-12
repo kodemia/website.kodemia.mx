@@ -5,7 +5,7 @@ import Router from 'next/router'
 // API
 import { login } from '../../../lib/api'
 
-export interface Data{
+export interface Data {
   email: string
   password: string
 }
