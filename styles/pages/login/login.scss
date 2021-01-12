@@ -1,6 +1,8 @@
 
 .login {
   ::-webkit-scrollbar { display: none; }
+  height: 100vh;
+  overflow: hidden;
 
   .columns {
     margin: 0;
