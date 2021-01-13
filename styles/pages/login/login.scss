@@ -1,7 +1,6 @@
 
 .login {
-  height: 100vh;
-  overflow: hidden;
+
   ::-webkit-scrollbar { display: none; }
 
   .columns {
@@ -10,10 +9,12 @@
 
     .column {
       padding: 0;
+      height: 100vh;
+  overflow: hidden;
 
       .cover {
         background: rgba(20, 20, 20, 0.9);
-        height: 100%;
+        height: 100vh;
         padding: 190px 49px 0;
         position: absolute;
         top: 0;
