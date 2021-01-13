@@ -1,0 +1,27 @@
+
+.login-form {
+  margin-top: 35px;
+  width: 100%;
+
+  .label-login {
+    margin: 35px 0 20px;
+    text-align: center;
+  }
+
+  .input-login {
+    height: 33px;
+    width: 100%;
+
+    &:focus {
+      border: 1px solid $cyan;
+    }
+  }
+
+  .error {
+    position: absolute;
+  }
+
+  .btn-login {
+    margin-top: 60px;
+  }
+}

@@ -1,6 +1,5 @@
 
 import '../styles/index.scss'
-
 function MyApp ({ Component, pageProps }) {
   return (
     <div className='page-container'>

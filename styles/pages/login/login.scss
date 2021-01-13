@@ -1,0 +1,46 @@
+
+.login {
+  overflow: hidden;
+
+  .columns {
+    margin: 0;
+    padding: 0;
+
+    .column {
+      height: 100vh;
+      padding: 0;
+
+      .cover {
+        background: rgba(20, 20, 20, 0.9);
+        height: 100vh;
+        overflow: hidden;
+        padding: 190px 49px 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        @include on-mobile {
+          padding: 150px 45px 0;
+        }
+
+        @include on-tablet {
+          padding: 170px 85px 0;
+        }
+
+        .form-container {
+          margin-top: 20px;
+          width: 340px;
+
+          @include on-mobile {
+            margin-top: 10px;
+            width: 100%;
+          }
+
+          @include on-tablet {
+            width: 420px;
+          }
+        }
+      }
+    }
+  }
+}
