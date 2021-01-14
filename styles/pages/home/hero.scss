@@ -2,16 +2,6 @@
 .hero {
   position: relative;
 
-  .bg-video {
-    z-index: -2;
-
-    .video {
-      height: 100vh;
-      object-fit: cover;
-      width: 100vw;
-    }
-  }
-
   .cover {
     background: linear-gradient(to top, $black-primary, $black-transparent-hero);
     height: 100%;
