@@ -9,7 +9,7 @@ import LoginForm from '../components/Pages/Login/LoginForm'
 
 export default function Login () {
   useEffect(() => {
-    const token = sessionStorage.getItem('token')
+    const token = window.sessionStorage.getItem('token')
     if (token) Router.replace('clases')
   })
 
