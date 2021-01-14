@@ -17,7 +17,7 @@ export default function LoginForm () {
   const onSubmit = async ({ email, password }: Data) => {
     try {
       const token = await login(email, password)
-      sessionStorage.setItem('token', token)
+      window.sessionStorage.setItem('token', token)
       Router.push('clases')
     } catch (error) {
       setError(true)
