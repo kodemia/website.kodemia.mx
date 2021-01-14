@@ -96,7 +96,10 @@
     "rules": {
       "max-nesting-depth": 7,
       "selector-max-compound-selectors": 7,
-      "selector-no-qualifying-type": false,
+      "selector-no-qualifying-type": [
+        true,
+        { "ignore": ["attribute"] }
+      ],
       "selector-max-id": 1
     }
   },
