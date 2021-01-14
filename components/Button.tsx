@@ -10,6 +10,7 @@ export interface Props {
   hasWhiteBg?: Boolean
   link?:string
   href?: string
+  type?: 'submit'
   onClick?: () => void
 }
 
@@ -19,7 +20,8 @@ export default function Button ({
   icon,
   link = '',
   href,
-  hasWhiteBg
+  hasWhiteBg,
+  type
 }: Props) {
   const router = useRouter()
   const btnClass = classNames({
@@ -32,7 +34,7 @@ export default function Button ({
 
   return (
     <>
-      {href &&
+      {href && type !== 'submit' &&
         <a
           href={href}
           target='_blank'
@@ -43,7 +45,7 @@ export default function Button ({
           {label}
         </a>}
       {
-        !href &&
+        !href && type !== 'submit' &&
           <a
             className={btnClass}
             onClick={() => router.push(link)}
@@ -51,6 +53,10 @@ export default function Button ({
             <img src={icon} className='ikon' />
             {label}
           </a>
+      }
+      {
+        type === 'submit' &&
+          <input type='submit' value={label} className={btnClass} />
       }
     </>
   )

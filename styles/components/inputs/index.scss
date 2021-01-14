@@ -1,0 +1,13 @@
+
+// .input, .input:focus, .input:hover, .input:active {
+//   background-color: $black-medium;
+//   border: 1px solid $black-medium;
+//   color: $white-lighter;
+
+//   &::placeholder {
+//     color: $gray-light;
+//   }
+// }
+
+@import './select';
+@import './phone-input';

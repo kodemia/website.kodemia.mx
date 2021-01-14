@@ -1,0 +1,21 @@
+
+input [type=tel] {
+  padding-left: 55px !important;
+}
+
+.phone-dropdown {
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  padding-left: 10px !important;
+
+  .selected-flag {
+    &:focus,
+    &:hover,
+    &:active,
+    &.open {
+      background-color: transparent !important;
+      border-radius: 10px !important;
+    }
+  }
+}

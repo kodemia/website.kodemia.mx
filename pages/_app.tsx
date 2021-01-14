@@ -1,7 +1,10 @@
 
-import '../styles/index.scss'
+import { AppProps } from 'next/app'
 
-function MyApp ({ Component, pageProps }) {
+import '../styles/index.scss'
+import 'react-phone-input-2/lib/style.css'
+
+function MyApp ({ Component, pageProps }: AppProps) {
   return (
     <div className='page-container'>
       <Component {...pageProps} />
