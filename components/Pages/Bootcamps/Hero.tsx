@@ -6,9 +6,8 @@ import HeroCard from './HeroCard'
 import BgVideo from '../../BgVideo'
 
 export interface Information {
-  start: string
-  modality: string
-  schedule: string
+  title: string
+  text: string
 }
 
 export interface Props{

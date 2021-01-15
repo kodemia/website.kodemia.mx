@@ -7,9 +7,7 @@
     "information": [
       {
         "title": "Inicio:",
-        "text": "08 de Febrero de 2021",
-
-        "schedule": "Lunes a viernes de 19:00 - 22:00 hrs."
+        "text": "08 de Febrero de 2021"
       },{
         "title":"Modalidad: Live",
         "text": "Clases remotas"
@@ -17,7 +15,6 @@
       {
         "title":"Horario:",
         "text": "Lunes a viernes de 19:00 - 22:00 hrs."
-
       }
     ]
   }

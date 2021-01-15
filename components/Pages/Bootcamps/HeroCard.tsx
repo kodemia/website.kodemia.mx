@@ -31,7 +31,7 @@ export default function HeroCard ({ bootcamp }: Props) {
             {bootcamp.description}
           </p>
         </div>
-        <div className='column is-one-third is-half-mobile container-information'>
+        <div className='column container-information'>
           {
             bootcamp.information.map((data, index) => (
               <div key={`js-h-${index}`} className='wrapper-information'>
