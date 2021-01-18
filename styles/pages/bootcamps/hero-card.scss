@@ -3,6 +3,13 @@
   .container-data {
     .container-tittle {
       max-width: 275px;
+
+      @include on-mobile {
+        max-width: 221px;
+      }
+    }
+    .bootcamp-js {
+      max-width: 206px;
     }
 
     .container-description {
@@ -16,6 +23,7 @@
         @include on-mobile {
           font-size: 15px;
           margin: 15px 0;
+          max-width: 540px;
         }
       }
     }
