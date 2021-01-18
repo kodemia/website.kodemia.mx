@@ -25,12 +25,13 @@ export default function HeroCard ({ bootcamp }: Props) {
       <div className='columns is-flex-direction-column container-data'>
         <div className={
           classNames('column  is-one-third-mobile is-half-tablet is-one-third-desktop container-tittle',
-          {
-            'bootcamp-js': bootcamp.subtitle === 'Javascript'
-          })}
+            {
+              'bootcamp-js': bootcamp.subtitle === 'Javascript'
+            })
+        }
         >
           <H3 text={bootcamp.subtitle} />
-          <H2 whiteText={bootcamp.title} cyanText='' isFirstCyan/>
+          <H2 whiteText={bootcamp.title} cyanText='' isFirstCyan />
         </div>
         <div className='column is-one-third-desktop is-three-fifths-tablet container-description'>
           <p className='description'>
