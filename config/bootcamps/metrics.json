@@ -1,0 +1,20 @@
+{
+  "javascript": [
+    {
+      "description": "horas en clases y talleres complementarios",
+      "value": "+340"
+    },
+    {
+      "description": "certificaciones de valor curricular e internacional",
+      "value": "2"
+    },
+    {
+      "description": "horas de prácticas en desafíos y proyectos",
+      "value": "+180"
+    },
+    {
+      "description": "de colocación de egresados de Kodemia",
+      "value": "90%"
+    }
+  ]
+}

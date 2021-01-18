@@ -1,7 +1,11 @@
 import React from 'react'
 
+import Metrics from '../../components/Pages/Bootcamps/Metrics'
+
+import MetricsBootcamps from '../../config/bootcamps/metrics.json'
+
 export default function JavascriptLive () {
   return (
-    <h1>JAVASCRIPT</h1>
+    <Metrics bootcamp={MetricsBootcamps.javascript} />
   )
 }
