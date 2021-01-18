@@ -17,7 +17,7 @@ export default function Metrics ({ description, value }: Props) {
   return (
     <div className='metrics'>
       <div className='metrics-container'>
-        {metrics.map((metric, index) => {
+        {/* {metrics.map((metric, index) => {
           return (
             <MetricCard
               value={value}
@@ -25,7 +25,7 @@ export default function Metrics ({ description, value }: Props) {
               key={`metric-${index}`}
             />
           )
-        })}
+        })} */}
       </div>
     </div>
   )
