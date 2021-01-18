@@ -1,0 +1,51 @@
+
+.hero-card-bootcamps {
+  .container-data {
+    .container-tittle {
+      max-width: 336px;
+    }
+
+    .container-description {
+      .description {
+        color: $text;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 35px 0;
+
+        @include on-mobile {
+          font-size: 15px;
+          margin: 15px 0;
+        }
+      }
+    }
+
+    .container-information {
+      width: 100%;
+
+      .wrapper-information {
+        @include on-mobile {
+          font-size: 13px;
+        }
+
+        .title-info {
+          color: $primary;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 1.36;
+          margin: 5px 0;
+
+          @include on-mobile {
+            font-size: 14px;
+            margin: 2px 0;
+          }
+        }
+
+        .text-info {
+          color: $text;
+          font-size: 16px;
+          margin: 2px 0;
+        }
+      }
+    }
+  }
+}
