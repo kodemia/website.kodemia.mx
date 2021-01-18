@@ -24,7 +24,7 @@ export default function HeroCard ({ bootcamp }: Props) {
     <div className='hero-card-bootcamps'>
       <div className='columns is-flex-direction-column container-data'>
         <div className={
-          classNames('column  is-one-third-mobile is-half-tablet is-one-third-desktop container-tittle',
+          classNames('column  is-full-mobile is-half-tablet is-one-third-desktop container-tittle',
             {
               'bootcamp-js': bootcamp.subtitle === 'Javascript'
             })
