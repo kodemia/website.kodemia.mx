@@ -2,7 +2,15 @@
 .hero-card-bootcamps {
   .container-data {
     .container-tittle {
-      max-width: 336px;
+      max-width: 275px;
+
+      @include on-mobile {
+        max-width: 221px;
+      }
+    }
+
+    .bootcamp-js {
+      max-width: 206px;
     }
 
     .container-description {
@@ -11,10 +19,12 @@
         font-size: 18px;
         font-weight: 500;
         margin: 35px 0;
+        max-width: 336px;
 
         @include on-mobile {
           font-size: 15px;
           margin: 15px 0;
+          max-width: 540px;
         }
       }
     }
