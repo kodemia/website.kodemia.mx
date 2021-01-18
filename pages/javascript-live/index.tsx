@@ -6,6 +6,6 @@ import MetricsBootcamps from '../../config/bootcamps/metrics.json'
 
 export default function JavascriptLive () {
   return (
-    <Metrics bootcamp={MetricsBootcamps.javascript} />
+    <Metrics bootcamp={MetricsBootcamps} />
   )
 }

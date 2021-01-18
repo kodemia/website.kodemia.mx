@@ -1,21 +1,21 @@
 import React from 'react'
 
-export interface Metric {
+export interface Props {
   description: string
   value: string
 }
 
-export interface Props {
-  bootcamp: {
-    metric: Array<Metric>
-  }
-}
+// export interface Props {
+//   bootcamp: {
+//     metric: Array<Metric>
+//   }
+// }
 
-export default function MetricCard ({ bootcamp }: Props) {
+export default function MetricCard ({ description, value }: Props) {
   return (
-    <div className='metric-card'>
-      <div className='value'>{bootcamp.metric}</div>
-      <div className='description'>{bootcamp.metric}</div>
+    <div className='metric'>
+      <div className='value'>{value}</div>
+      <div className='description'>{description}</div>
     </div>
   )
 }
