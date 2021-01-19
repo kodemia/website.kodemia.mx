@@ -16,19 +16,21 @@ export default function Aplicar () {
   return (
     <>
       <NavBar />
-      <div className='section' style={{ paddingTop: '120px' }} id='aplicar'>
+      <div className='section' id='aplicar'>
         <div className='container'>
           <main className='columns'>
-            <aside className='column is-one-third'>
-              <H3 text='Aplica ahora' />
-              <H2>
-                Únete y sé parte de nuestra comunida<Cursor white>d</Cursor>
-              </H2>
-              <DescriptionParagraph>
-                Te contactaremos lo más pronto posible para coordinar una entrevista personal
-              </DescriptionParagraph>
+            <aside className='column '>
+              <div className='delimiter'>
+                <H3 text='Aplica ahora' />
+                <H2>
+                  Únete y <span className='h2-cyan'> sé parte </span> de nuestra comunida<Cursor white>d</Cursor>
+                </H2>
+                <DescriptionParagraph>
+                  Te contactaremos lo más pronto posible para coordinar una entrevista personal
+                </DescriptionParagraph>
+              </div>
             </aside>
-            <article className='column'>
+            <article className='column is-two-thirds'>
               <ApplyForm />
             </article>
           </main>

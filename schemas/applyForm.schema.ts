@@ -3,7 +3,7 @@ import parsePhoneNumber from 'libphonenumber-js'
 import * as z from 'zod'
 
 export default z.object({
-  name: z.string().min(2, { message: 'Ingresa tu nombre' }),
+  firstName: z.string().min(2, { message: 'Ingresa tu nombre' }),
   lastName: z.string().min(2, { message: 'Ingresa tu apellido' }),
   email: z.string().email({ message: 'Email invalido' }),
   phone: z
@@ -14,7 +14,7 @@ export default z.object({
       const phoneNumber = parsePhoneNumber(value)
       return phoneNumber?.isValid()
     }, { message: 'Teléfono invalido' }),
-  program: z.enum([
+  course: z.enum([
     'javascript-live',
     'javascript-lifetime',
     'python-live',

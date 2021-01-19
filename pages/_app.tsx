@@ -3,6 +3,7 @@ import { AppProps } from 'next/app'
 
 import '../styles/index.scss'
 import 'react-phone-input-2/lib/style.css'
+import 'react-toastify/dist/ReactToastify.css';
 
 function MyApp ({ Component, pageProps }: AppProps) {
   return (

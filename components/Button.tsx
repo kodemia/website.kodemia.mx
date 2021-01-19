@@ -11,6 +11,7 @@ export interface Props {
   link?:string
   href?: string
   type?: 'submit'
+  isDisabled?: boolean
   onClick?: () => void
 }
 
@@ -21,7 +22,8 @@ export default function Button ({
   link = '',
   href,
   hasWhiteBg,
-  type
+  type,
+  isDisabled
 }: Props) {
   const router = useRouter()
   const btnClass = classNames({
@@ -29,7 +31,8 @@ export default function Button ({
     'button-ikon': true,
     'button-primary': isPrimary,
     'button-secondary': !isPrimary,
-    'button-white': hasWhiteBg
+    'button-white': hasWhiteBg,
+    'is-loading': isDisabled
   })
 
   return (
@@ -56,7 +59,12 @@ export default function Button ({
       }
       {
         type === 'submit' &&
-          <input type='submit' value={label} className={btnClass} />
+          <input
+            type='submit'
+            value={label}
+            disabled={!!isDisabled}
+            className={btnClass}
+          />
       }
     </>
   )

@@ -1,6 +1,10 @@
 
 import classnames from 'classnames'
 
+interface Option {
+  label?: string
+  value: string | number
+}
 export interface Props {
   wrapperClassName?: string
   className?: string
@@ -8,9 +12,12 @@ export interface Props {
   error?: string
   name: string
   register: any
+  options: Array<Option>
+  required: boolean
 }
 
-export default function (props: Props) {
+
+export default function Select (props: Props) {
   return (
     <div className='field'>
       <label className='label has-text-white has-text-weight-normal'>
@@ -22,13 +29,21 @@ export default function (props: Props) {
           'select'
         )}
         >
-          <select name={props.name} ref={props.register}>
-            <option> uno </option>
-            <option> dos </option>
-            <option> tres </option>
-            <option> cuatro </option>
-            <option> cinco </option>
-            <option> seis </option>
+          <select
+            name={props.name}
+            ref={props.register}
+            required={props.required}
+          >
+            {
+              props.options?.map((option, index) => (
+                <option
+                  key={`option-${option.value}-${index}`}
+                  value={option.value}
+                >
+                  { option?.label || option.value }
+                </option>
+              ))
+            }
           </select>
         </div>
       </div>
