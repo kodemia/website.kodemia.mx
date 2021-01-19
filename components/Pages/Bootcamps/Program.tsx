@@ -1,11 +1,11 @@
 
 import React from 'react'
-import ThemeCard from './ThemeCard'
+import ProgramCard from './ProgramThem'
 
 export default function Program () {
   return (
     <div>
-      <ThemeCard />
+      <ProgramCard />
     </div>
   )
 }
