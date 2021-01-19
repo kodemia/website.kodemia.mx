@@ -6,10 +6,10 @@ export interface Props {
   p: string
 }
 
-export default function ProgramCard ({image, p}: Props) {
+export default function ProgramCard ({ image, p }: Props) {
   return (
     <div>
-      <img src={image}/>
+      <img src={image} />
       <p>{p}</p>
     </div>
   )
