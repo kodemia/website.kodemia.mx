@@ -1,17 +1,11 @@
 import React from 'react'
 
-export interface Props {
+export interface Metric {
   description: string
   value: string
 }
 
-// export interface Props {
-//   bootcamp: {
-//     metric: Array<Metric>
-//   }
-// }
-
-export default function MetricCard ({ description, value }: Props) {
+export default function MetricCard ({ description, value }: Metric) {
   return (
     <div className='metric'>
       <div className='value'>{value}</div>
