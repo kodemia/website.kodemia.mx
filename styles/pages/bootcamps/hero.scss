@@ -1,0 +1,63 @@
+// dummy file
+.hero-bootcamps {
+  .columns {
+    margin: 0;
+    padding: 0;
+
+    .column {
+      padding: 0;
+
+      .cover {
+        background: rgba(20, 20, 20, 0.9);
+        height: 100vh;
+        overflow: hidden;
+        padding: 160px 49px 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        @include on-mobile {
+          padding: 70px 45px 0;
+        }
+
+        @include on-tablet {
+          padding: 170px 85px 0;
+        }
+
+        .container-card {
+          max-width: $content-max-width;
+
+          .arrow-icon {
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-name: arrow;
+            animation-timing-function: ease-out;
+            left: 0;
+            margin: 0 50% 114px;
+            position: absolute;
+            width: 30px;
+
+            @include on-mobile {
+              display: none;
+            }
+          }
+
+          @keyframes arrow {
+            0% {
+              bottom: 0;
+            }
+
+            50% {
+              bottom: -60px;
+              width: 20px;
+            }
+
+            100% {
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
