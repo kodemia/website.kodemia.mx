@@ -11,7 +11,7 @@ import PhoneInput from 'components/inputs/PhoneInput'
 import Select from 'components/inputs/Select'
 import TextArea from 'components/inputs/TextArea'
 import schema from 'schemas/applyForm.schema'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify'
 
 import { apply } from 'lib/api'
 import { useRouter } from 'next/router'
@@ -23,7 +23,7 @@ export default function ApplyForm () {
     resolver: zodResolver(schema)
   })
 
-  const [ isSubmitting, setIsSubmitting ] = useState<boolean>(false)
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
@@ -38,8 +38,8 @@ export default function ApplyForm () {
         let errorMessage = `☠️ Ocurrio un error en el servidor,
         por favor intenta mas tarde o reportalo a contacto@kodemia.mx`
 
-        if ( status >= 400 && status < 500) {
-          errorMessage  = `🤔 Por favor, revisa que tu información sea correcta y vuelve a intentar enviar el formulario`
+        if (status >= 400 && status < 500) {
+          errorMessage = '🤔 Por favor, revisa que tu información sea correcta y vuelve a intentar enviar el formulario'
           toast.warn(errorMessage)
           return
         }
@@ -63,7 +63,7 @@ export default function ApplyForm () {
           type='text'
           placeholder='Nombre'
           name='firstName'
-          required={true}
+          required
           register={register}
           error={errors?.firstName?.message}
         />
@@ -75,7 +75,7 @@ export default function ApplyForm () {
           type='text'
           placeholder='Apellido'
           name='lastName'
-          required={true}
+          required
           register={register}
           error={errors?.lastName?.message}
         />
@@ -87,7 +87,7 @@ export default function ApplyForm () {
           type='email'
           placeholder='name@ejemplo.com'
           name='email'
-          required={true}
+          required
           register={register}
           error={errors?.email?.message}
         />
@@ -120,7 +120,7 @@ export default function ApplyForm () {
             { label: 'Python Live', value: 'python-live' },
             { label: 'Python Lifetime', value: 'python-lifetime' }
           ]}
-          required={true}
+          required
         />
       </div>
 
@@ -137,7 +137,7 @@ export default function ApplyForm () {
             { value: 'YouTube' },
             { value: 'Otro' }
           ]}
-          required={true}
+          required
         />
       </div>
 
@@ -146,7 +146,7 @@ export default function ApplyForm () {
           label='¿Por qué quieres aplicar a Kodemia?'
           register={register}
           name='reason'
-          required={true}
+          required
           rows={2}
           error={errors?.reason?.message}
         />

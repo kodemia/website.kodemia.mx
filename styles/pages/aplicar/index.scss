@@ -6,9 +6,11 @@
   aside {
     .delimiter {
       max-width: 335px;
+
       @include on-mobile {
         max-width: 100%;
       }
+
       .description-paragraph {
         margin-top: 25px;
       }

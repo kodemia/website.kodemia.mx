@@ -16,7 +16,6 @@ export interface Props {
   required: boolean
 }
 
-
 export default function Select (props: Props) {
   return (
     <div className='field'>
@@ -40,7 +39,7 @@ export default function Select (props: Props) {
                   key={`option-${option.value}-${index}`}
                   value={option.value}
                 >
-                  { option?.label || option.value }
+                  {option?.label || option.value}
                 </option>
               ))
             }
