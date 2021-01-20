@@ -21,11 +21,13 @@
     background-color: $black-transparent-background;
     border-radius: 20px;
     margin-left: 60px;
+    margin-right: 12px;
     margin-top: 25px;
     padding: 30px 40px;
 
     @include on-mobile {
       margin-left: 0;
+      margin-right: 0;
       padding: 20px;
     }
   }
