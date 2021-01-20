@@ -2,51 +2,167 @@
   "subtitle": "El programa",
   "cyanText": "Todos los temas",
   "whiteText": "que verás en el Bootcamp",
-  "javascript":[
-    {
-      "module": "Módulo 0 |",
-      "week": "Semana 0",
-      "title": "Pre-bootcamp",
-      "themes":[
-        {
-          "theme":"Pensamiento estructurado",
-          "image":"/images/bootcamps/Tema-01.svg"
-        },
-        {
-          "theme":"Pensamiento estructurado",
-          "image":"/images/bootcamps/Tema-02.svg"
-        },
-        {
-          "theme":"Pensamiento estructurado",
-          "image":"/images/bootcamps/Tema-03.svg"
-        },
-        {
-          "theme":"Pensamiento estructurado",
-          "image":"/images/bootcamps/Tema-04.svg"
-        },{
-          "theme":"Pensamiento estructurado",
-          "image":"/images/bootcamps/Tema-05.svg"
-        },
-        {
-          "theme":"Pensamiento estructurado",
-          "image":"/images/bootcamps/Tema-06.svg"
-        },
-        {
-          "theme":"Pensamiento estructurado",
-          "image":"/images/bootcamps/Tema-07.svg"
-        }
-      ]
-    },
-    {
-      "module": "Módulo 1",
-      "week": "Semana 01-06",
-      "title": "Pre-bootcamp",
-      "themes":[
-        {
-          "theme":" estructurado",
-          "image":"/images/bootcamps/Tema-08.svg"
-        }
-      ]
-    }
-  ]
+  "javascript":{
+    "modules":[
+      {
+        "module": "Módulo 0 |",
+        "week": "Semana 0",
+        "title": "Pre-bootcamp",
+        "themes":[
+          {
+            "theme":"Pensamiento estructurado",
+            "image":"/images/bootcamps/Tema-01.svg"
+          },
+          {
+            "theme":"Pensamiento lógico",
+            "image":"/images/bootcamps/Tema-02.svg"
+          },
+          {
+            "theme":"Algoritmos",
+            "image":"/images/bootcamps/Tema-03.svg"
+          },
+          {
+            "theme":"Pensamiento paralelo",
+            "image":"/images/bootcamps/Tema-04.svg"
+          },{
+            "theme":"Pseudocódigo",
+            "image":"/images/bootcamps/Tema-05.svg"
+          },
+          {
+            "theme":"Diagramas de flujo",
+            "image":"/images/bootcamps/Tema-06.svg"
+          },
+          {
+            "theme":"Primeros programas con JavaScript estructurado",
+            "image":"/images/bootcamps/Tema-07.svg"
+          }
+        ]
+      },
+      {
+        "module": "Módulo 1",
+        "week": "Semana 01-06",
+        "title": "Front End",
+        "themes":[
+          {
+            "theme":"Git & Github ",
+            "image":"/images/bootcamps/Tema-08.svg"
+          },
+          {
+            "theme":"HTML5",
+            "image":"/images/bootcamps/Tema-09.svg"
+          },
+          {
+            "theme":"CSS3",
+            "image":"/images/bootcamps/Tema-10.svg"
+          },
+          {
+            "theme":"Sass",
+            "image":"/images/bootcamps/Tema-11.svg"
+          },
+          {
+            "theme":"Bootstrap 4",
+            "image":"/images/bootcamps/Tema-12.svg"
+          },
+          {
+            "theme":"JavaScript (ES5 & ES6)",
+            "image":"/images/bootcamps/Tema-13.svg"
+          },
+          {
+            "theme":"JQuery",
+            "image":"/images/bootcamps/Tema-14.svg"
+          },
+          {
+            "theme":"AJAX",
+            "image":"/images/bootcamps/Tema-15.svg"
+          },
+          {
+            "theme":"DOM",
+            "image":"/images/bootcamps/Tema-16.svg"
+          }
+        ]
+      },
+      {
+        "module": "Módulo 2",
+        "week": "Semana 07-15",
+        "title": "Back End",
+        "themes":[
+          {
+            "theme":"Linux / Consola / Protocolos",
+            "image":"/images/bootcamps/Tema-17.svg"
+          },
+          {
+            "theme":"La terminal / sistemas *NIX",
+            "image":"/images/bootcamps/Tema-18.svg"
+          },
+          {
+            "theme":"Modelo Cliente-Servidor",
+            "image":"/images/bootcamps/Tema-19.svg"
+          },
+          {
+            "theme":"Hypermedia",
+            "image":"/images/bootcamps/Tema-20.svg"
+          },
+          {
+            "theme":"REST / RESTfull / API",
+            "image":"/images/bootcamps/Tema-21.svg"
+          },
+          {
+            "theme":"Clean architecture",
+            "image":"/images/bootcamps/Tema-22.svg"
+          },
+          {
+            "theme":"NodeJS / npm",
+            "image":"/images/bootcamps/Tema-23.svg"
+          },
+          {
+            "theme":"ExpressJS",
+            "image":"/images/bootcamps/Tema-24.svg"
+          },
+          {
+            "theme":"Bases de datos",
+            "image":"/images/bootcamps/Tema-25.svg"
+          },
+          {
+            "theme":"Mongo y Mongoose",
+            "image":"/images/bootcamps/Tema-26.svg"
+          },
+          {
+            "theme":"Autenticación JWT",
+            "image":"/images/bootcamps/Tema-27.svg"
+          },
+          {
+            "theme":"Cloud (IBM & AWS)",
+            "image":"/images/bootcamps/Tema-28.svg"
+          }
+        ]
+      },
+      {
+        "module": "Módulo 3",
+        "week": "Semana 15-17",
+        "title": "Front End moderno",
+        "themes":[
+          {
+            "theme":"ReactJS",
+            "image":"/images/bootcamps/Tema-29.svg"
+          },
+          {
+            "theme":"React-router",
+            "image":"/images/bootcamps/Tema-30.svg"
+          },
+          {
+            "theme":"React-Hooks",
+            "image":"/images/bootcamps/Tema-31.svg"
+          },
+          {
+            "theme":"FectchAPI",
+            "image":"/images/bootcamps/Tema-32.svg"
+          },
+          {
+            "theme":"Babel",
+            "image":"/images/bootcamps/Tema-33.svg"
+          }
+        ]
+      }
+    ]
+  }
 }
