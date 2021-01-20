@@ -9,7 +9,6 @@ export default z.object({
   phone: z
     .string()
     .refine(value => {
-      console.log('value: ', value)
       value = `+${value}`
       const phoneNumber = parsePhoneNumber(value)
       return phoneNumber?.isValid()
