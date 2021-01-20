@@ -8,13 +8,20 @@ import Program from '../../components/Pages/Bootcamps/Program'
 // Data
 import HeroData from '../../config/bootcapms/hero-data.json'
 import TestimonialData from '../../config/testimonials-data.json'
+import ProgramData from '../../config/bootcapms/program-data.json'
 
 export default function JavascriptLive () {
   return (
     <>
       <Navbar />
       <Hero bootcamp={HeroData.javascript} />
-      <Program />
+      <Program
+        subtitle={ProgramData.subtitle}
+        cyanText={ProgramData.cyanText}
+        whiteText={ProgramData.whiteText}
+        bootcamp={ProgramData.javascript}
+
+      />
       <Testimonials testimonials={TestimonialData} />
       <TransformYourLife />
     </>

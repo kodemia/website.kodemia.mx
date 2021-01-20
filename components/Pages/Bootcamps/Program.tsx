@@ -1,11 +1,28 @@
 
+import { StringifyOptions } from 'querystring'
 import React from 'react'
-import ProgramCard from './ProgramThem'
+import H2 from '../../H2'
+import H3 from '../../H3'
+import ProgramModule from './ProgramModule'
 
-export default function Program () {
+export interface Props {
+  subtitle: string
+  cyanText: string
+  whiteText: string
+  bootcamp: object
+}
+
+export default function Program ({subtitle, cyanText, whiteText, bootcamp}: Props) {
   return (
     <div>
-      <ProgramCard />
+      <div>
+        <H3 text={subtitle}/>
+        <H2 cyanText={cyanText} whiteText={whiteText} isFirstCyan/>
+      </div>
+      <div>
+        <ProgramModule modules={bootcamp} />
+      </div>
+
     </div>
   )
 }

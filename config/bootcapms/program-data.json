@@ -2,6 +2,51 @@
   "subtitle": "El programa",
   "cyanText": "Todos los temas",
   "whiteText": "que verás en el Bootcamp",
-  "javascript":{
-  }
+  "javascript":[
+    {
+      "module": "Módulo 0 |",
+      "week": "Semana 0",
+      "title": "Pre-bootcamp",
+      "themes":[
+        {
+          "theme":"Pensamiento estructurado",
+          "image":"/images/bootcamps/Tema-01.svg"
+        },
+        {
+          "theme":"Pensamiento estructurado",
+          "image":"/images/bootcamps/Tema-02.svg"
+        },
+        {
+          "theme":"Pensamiento estructurado",
+          "image":"/images/bootcamps/Tema-03.svg"
+        },
+        {
+          "theme":"Pensamiento estructurado",
+          "image":"/images/bootcamps/Tema-04.svg"
+        },{
+          "theme":"Pensamiento estructurado",
+          "image":"/images/bootcamps/Tema-05.svg"
+        },
+        {
+          "theme":"Pensamiento estructurado",
+          "image":"/images/bootcamps/Tema-06.svg"
+        },
+        {
+          "theme":"Pensamiento estructurado",
+          "image":"/images/bootcamps/Tema-07.svg"
+        }
+      ]
+    },
+    {
+      "module": "Módulo 1",
+      "week": "Semana 01-06",
+      "title": "Pre-bootcamp",
+      "themes":[
+        {
+          "theme":" estructurado",
+          "image":"/images/bootcamps/Tema-08.svg"
+        }
+      ]
+    }
+  ]
 }
