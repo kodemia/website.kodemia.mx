@@ -12,12 +12,12 @@ export interface Props {
   bootcamp: object
 }
 
-export default function Program ({subtitle, cyanText, whiteText, bootcamp}: Props) {
+export default function Program ({ subtitle, cyanText, whiteText, bootcamp }: Props) {
   return (
     <div>
       <div>
-        <H3 text={subtitle}/>
-        <H2 cyanText={cyanText} whiteText={whiteText} isFirstCyan/>
+        <H3 text={subtitle} />
+        <H2 cyanText={cyanText} whiteText={whiteText} isFirstCyan />
       </div>
       <div>
         <ProgramModule modules={bootcamp} />
