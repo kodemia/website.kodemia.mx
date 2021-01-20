@@ -16,9 +16,7 @@ export default z.object({
     }, { message: 'Teléfono invalido' }),
   course: z.enum([
     'javascript-live',
-    'javascript-lifetime',
-    'python-live',
-    'python-lifetime'
+    'python-live'
   ]),
   referer: z.enum([
     'Facebook',

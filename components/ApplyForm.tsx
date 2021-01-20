@@ -116,9 +116,7 @@ export default function ApplyForm () {
           error={errors?.course?.message}
           options={[
             { label: 'Javascript Live', value: 'javascript-live' },
-            { label: 'Javascript Lifetime', value: 'javascript-lifetime' },
-            { label: 'Python Live', value: 'python-live' },
-            { label: 'Python Lifetime', value: 'python-lifetime' }
+            { label: 'Python Live', value: 'python-live' }
           ]}
           required
         />
@@ -153,7 +151,7 @@ export default function ApplyForm () {
       </div>
 
       <div className='column is-full-desktop is-full-touch'>
-        Al enviar este formulario estas aceptando nuestros <Link href='/'> Terminos y conidiciónes </Link>
+        Al enviar este formulario estas aceptando nuestros <Link href='/terminos-y-condiciones'> Términos y conidiciónes </Link>
       </div>
 
       <div className='column is-full-desktop is-full-touch'>
