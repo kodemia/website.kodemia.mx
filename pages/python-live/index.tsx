@@ -7,7 +7,7 @@ import Navbar from '../../components/Navbar'
 import Testimonials from '../../components/Pages/Home/Testimonials'
 import TransformYourLife from '../../components/Pages/Home/TransformYourLife'
 // Data
-import HeroData from '../../config/bootcapms/hero-data.json'
+import HeroData from '../../config/bootcamps/hero-data.json'
 import MetricsBootcamps from '../../config/bootcamps/metrics.json'
 import TestimonialData from '../../config/testimonials-data.json'
 
