@@ -164,5 +164,168 @@
         ]
       }
     ]
+  },
+  "python":{
+    "modules":[
+      {
+        "module": "Módulo 0 | ",
+        "week": "Semana 0",
+        "title": "Pre-bootcamp",
+        "themes":[
+          {
+            "theme":"Pensamiento estructurado",
+            "image":"/images/bootcamps/Tema-01.svg"
+          },
+          {
+            "theme":"Pensamiento lógico",
+            "image":"/images/bootcamps/Tema-02.svg"
+          },
+          {
+            "theme":"Algoritmos",
+            "image":"/images/bootcamps/Tema-03.svg"
+          },
+          {
+            "theme":"Pensamiento paralelo",
+            "image":"/images/bootcamps/Tema-04.svg"
+          },{
+            "theme":"Pseudocódigo",
+            "image":"/images/bootcamps/Tema-05.svg"
+          },
+          {
+            "theme":"Diagramas de flujo",
+            "image":"/images/bootcamps/Tema-06.svg"
+          },
+          {
+            "theme":"Primeros programas con JavaScript estructurado",
+            "image":"/images/bootcamps/Tema-07.svg"
+          }
+        ]
+      },
+      {
+        "module": "Módulo 1 | ",
+        "week": "Semana 01-06",
+        "title": "Front End",
+        "themes":[
+          {
+            "theme":"Git & Github ",
+            "image":"/images/bootcamps/Tema-08.svg"
+          },
+          {
+            "theme":"HTML5",
+            "image":"/images/bootcamps/Tema-09.svg"
+          },
+          {
+            "theme":"CSS3",
+            "image":"/images/bootcamps/Tema-10.svg"
+          },
+          {
+            "theme":"Sass",
+            "image":"/images/bootcamps/Tema-11.svg"
+          },
+          {
+            "theme":"Bootstrap 4",
+            "image":"/images/bootcamps/Tema-12.svg"
+          },
+          {
+            "theme":"JavaScript (ES5 & ES6)",
+            "image":"/images/bootcamps/Tema-13.svg"
+          },
+          {
+            "theme":"JQuery",
+            "image":"/images/bootcamps/Tema-14.svg"
+          },
+          {
+            "theme":"AJAX",
+            "image":"/images/bootcamps/Tema-15.svg"
+          },
+          {
+            "theme":"DOM",
+            "image":"/images/bootcamps/Tema-16.svg"
+          }
+        ]
+      },
+      {
+        "module": "Módulo 2 | ",
+        "week": "Semana 07-15",
+        "title": "Back End",
+        "themes":[
+          {
+            "theme":"Linux / Consola / Protocolos",
+            "image":"/images/bootcamps/Tema-17.svg"
+          },
+          {
+            "theme":"La terminal / sistemas *NIX",
+            "image":"/images/bootcamps/Tema-18.svg"
+          },
+          {
+            "theme":"Modelo Cliente-Servidor",
+            "image":"/images/bootcamps/Tema-19.svg"
+          },
+          {
+            "theme":"REST / RESTfull / API",
+            "image":"/images/bootcamps/Tema-21.svg"
+          },
+          {
+            "theme":"Clean architecture",
+            "image":"/images/bootcamps/Tema-22.svg"
+          },
+          {
+            "theme":"SQL sintaxis + CRUD",
+            "image":"/images/bootcamps/Tema-34.svg"
+          },
+          {
+            "theme":"PostgreSQL",
+            "image":"/images/bootcamps/Tema-35.svg"
+          },
+          {
+            "theme":"Normalización",
+            "image":"/images/bootcamps/Tema-36.svg"
+          },
+          {
+            "theme":"Python",
+            "image":"/images/bootcamps/Tema-37.svg"
+          },
+          {
+            "theme":"Django",
+            "image":"/images/bootcamps/Tema-27.svg"
+          }
+        ]
+      },
+      {
+        "module": "Módulo 3 | ",
+        "week": "Semana 15-17",
+        "title": "Front End moderno",
+        "themes":[
+          {
+            "theme":"Cloud (IBM & AWS)",
+            "image":"/images/bootcamps/Tema-28.svg"
+          },
+          {
+            "theme":"Contexto / Estructura",
+            "image":"/images/bootcamps/Tema-39.svg"
+          },
+          {
+            "theme":"Despliegues / App Engine",
+            "image":"/images/bootcamps/Tema-40.svg"
+          },
+          {
+            "theme":"Cloud Database",
+            "image":"/images/bootcamps/Tema-41.svg"
+          },
+          {
+            "theme":"Storage / Functions",
+            "image":"/images/bootcamps/Tema-43.svg"
+          },
+          {
+            "theme":"Cloud IA API’s",
+            "image":"/images/bootcamps/Tema-44.svg"
+          },
+          {
+            "theme":"Cloud IA API’s",
+            "image":"/images/bootcamps/Tema-45.svg"
+          }
+        ]
+      }
+    ]
   }
 }
