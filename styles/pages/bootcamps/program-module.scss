@@ -1,0 +1,65 @@
+.program-module {
+  margin: 0;
+  width: 100%;
+
+  .data-module-container {
+    margin-top: 70px;
+    padding: 0;
+
+    .title-module {
+      color: $primary;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.36;
+      text-align: left;
+
+      .title-theme {
+        color: $cyan;
+      }
+    }
+
+    .themes-container {
+      @include on-mobile {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      @include on-tablet {
+        justify-content: space-between;
+      }
+
+      .theme {
+        margin-bottom: 5px;
+        min-width: 307px;
+        padding: 18px 18px 20px;
+        width: 33%;
+
+        @include on-mobile {
+          max-width: 100%;
+          min-width: 100%;
+          width: 100%;
+        }
+
+        @include on-tablet {
+          max-width: 454px;
+          min-width: 341px;
+          width: 50%;
+        }
+
+        .subtitle {
+          color: $text;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 1.36;
+          max-width: 350px;
+          text-align: center;
+
+          @include on-mobile {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

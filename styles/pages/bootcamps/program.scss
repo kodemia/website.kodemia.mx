@@ -1,0 +1,27 @@
+
+.program {
+  background-color: $black-primary;
+  margin: 0;
+  padding: 0 49px 20px;
+  width: 100%;
+
+  @include on-mobile {
+    padding: 0 45px;
+  }
+
+  @include on-tablet {
+    padding: 0 85px;
+  }
+
+  .section {
+    margin: 0;
+    max-width: $content-max-width;
+    min-width: $content-min-width;
+    padding: 0;
+
+    @include on-mobile {
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}

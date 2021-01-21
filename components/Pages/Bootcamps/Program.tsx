@@ -17,15 +17,20 @@ export interface Props {
 
 export default function Program ({ subtitle, cyanText, whiteText, bootcamp }: Props) {
   return (
-    <div>
-      <div>
+    <div className='columns is-multiline program is-flex is-flex-direction-column is-justify-content-center
+    is-align-content-center'
+    >
+      <section className='column is-full-desktop section'>
         <H3 text={subtitle} />
-        <H2 cyanText={cyanText} whiteText={whiteText} isFirstCyan />
-      </div>
-      <div>
+        <H2
+          cyanText={cyanText}
+          whiteText={whiteText}
+          isFirstCyan
+        />
+      </section>
+      <section className='column is-full-desktop section'>
         <ProgramModule modules={bootcamp.modules} />
-      </div>
-
+      </section>
     </div>
   )
 }

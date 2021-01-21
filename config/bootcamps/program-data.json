@@ -5,7 +5,7 @@
   "javascript":{
     "modules":[
       {
-        "module": "Módulo 0 |",
+        "module": "Módulo 0 | ",
         "week": "Semana 0",
         "title": "Pre-bootcamp",
         "themes":[
@@ -39,7 +39,7 @@
         ]
       },
       {
-        "module": "Módulo 1",
+        "module": "Módulo 1 | ",
         "week": "Semana 01-06",
         "title": "Front End",
         "themes":[
@@ -82,7 +82,7 @@
         ]
       },
       {
-        "module": "Módulo 2",
+        "module": "Módulo 2 | ",
         "week": "Semana 07-15",
         "title": "Back End",
         "themes":[
@@ -137,7 +137,7 @@
         ]
       },
       {
-        "module": "Módulo 3",
+        "module": "Módulo 3 | ",
         "week": "Semana 15-17",
         "title": "Front End moderno",
         "themes":[
