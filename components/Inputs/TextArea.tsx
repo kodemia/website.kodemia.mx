@@ -8,7 +8,7 @@ export interface Props {
   name: string
   placeholder?: string
   register: any
-  required: boolean
+  required?: boolean
   rows?: number
 }
 

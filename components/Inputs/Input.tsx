@@ -9,7 +9,7 @@ export interface Props {
   error?: string
   name: string
   register: any
-  required: boolean
+  required?: boolean
 }
 
 export default function Input (props: Props) {

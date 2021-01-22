@@ -144,14 +144,13 @@ export default function ApplyForm () {
           label='¿Por qué quieres aplicar a Kodemia?'
           register={register}
           name='reason'
-          required
           rows={2}
           error={errors?.reason?.message}
         />
       </div>
 
       <div className='column is-full-desktop is-full-touch'>
-        Al enviar este formulario estas aceptando nuestros <Link href='/terminos-y-condiciones'> Términos y conidiciónes </Link>
+        Al enviar este formulario estas aceptando nuestros <Link href='/terminos-y-condiciones'> Términos y condiciónes </Link>
       </div>
 
       <div className='column is-full-desktop is-full-touch'>

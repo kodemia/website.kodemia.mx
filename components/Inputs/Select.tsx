@@ -13,7 +13,7 @@ export interface Props {
   name: string
   register: any
   options: Array<Option>
-  required: boolean
+  required?: boolean
 }
 
 export default function Select (props: Props) {
