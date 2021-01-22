@@ -3,7 +3,7 @@
   width: 100%;
 
   .data-module-container {
-    margin-top: 70px;
+    margin-bottom: 70px;
     padding: 0;
 
     .title-module {
@@ -43,8 +43,8 @@
 
         @include on-tablet {
           max-width: 454px;
-          min-width: 341px;
-          width: 50%;
+          min-width: 293px;
+          width: 30%;
         }
 
         .subtitle {

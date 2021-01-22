@@ -1,0 +1,55 @@
+
+.workshops {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  .workshop {
+    padding: 0;
+
+    .wrapper {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      .image {
+        align-items: center;
+        justify-content: center;
+
+        @include on-mobile {
+          align-items: flex-end;
+          justify-content: end;
+          padding: 0;
+        }
+
+        @include on-tablet {
+          align-items: flex-end;
+          justify-content: end;
+          padding: 0;
+        }
+      }
+
+      .workshop-data {
+        height: 210px;
+        padding: 0;
+
+        @include on-mobile {
+          height: auto;
+        }
+
+        .title {
+          color: $primary;
+          font-size: 28px;
+          margin: 10px 0;
+        }
+
+        .description {
+          color: $text;
+          font-size: 18px;
+          font-weight: 500;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}

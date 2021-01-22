@@ -24,7 +24,6 @@ export default function JavascriptLive () {
         cyanText={ProgramData.cyanText}
         whiteText={ProgramData.whiteText}
         bootcamp={ProgramData.javascript}
-
       />
       <Testimonials testimonials={TestimonialData} />
       <TransformYourLife />
