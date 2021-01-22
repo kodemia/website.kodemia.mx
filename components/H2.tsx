@@ -5,15 +5,17 @@ import classnames from 'classnames'
 import TextCursor from './TextCursor'
 
 export interface Props {
-  whiteText: string,
-  cyanText: string,
+  whiteText?: string,
+  cyanText?: string,
   isFirstCyan?: boolean
+  children?: React.ReactNode
 }
 
 export default function H2 ({
-  whiteText,
-  cyanText,
-  isFirstCyan = false
+  whiteText = '',
+  cyanText = '',
+  isFirstCyan = false,
+  children
 }: Props) {
   cyanText = cyanText.trim()
   whiteText = whiteText.trim()
@@ -28,11 +30,14 @@ export default function H2 ({
         'h2-white': !isFirstCyan
       })}
     >
-      {text}
-      <TextCursor
-        text={cursorText}
-        white={isFirstCyan}
-      />
+      {children || text}
+      {
+        !children &&
+          <TextCursor
+            text={cursorText}
+            white={isFirstCyan}
+          />
+      }
     </h2>
   )
 };
