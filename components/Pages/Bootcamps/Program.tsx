@@ -22,7 +22,6 @@ export interface Props {
 }
 
 export default function Program ({ subtitle, cyanText, whiteText, bootcamp }: Props) {
-  console.log(bootcamp.dataManipulation)
   return (
     <div className='the-program'>
       <div className='columns is-multiline is-flex program  bg-image'>

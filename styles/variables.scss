@@ -1,10 +1,11 @@
-/* COLORS */
+// COLORS
 
 //Black
 $black: #000;
 $black-medium: rgba(0, 0, 0, 0.6);
 $black-primary: #181818;
 $black-transparent: rgba(24, 24, 24, 0.8);
+$black-transparent-background: rgba(255, 255, 255, 0.1);
 $black-transparent-hero: rgba(24, 24, 24, 0.4);
 $black-transparent-hover: rgba(24, 24, 24, 0.8);
 
@@ -35,12 +36,16 @@ $primary: $white;
 $info: $cyan;
 $text: $gray;
 $link: $white;
-// form
+// - Bulma forms
 $label-color: $white;
 $label-weight: 500;
 $input-color: $white;
-$input-background-color: rgba(255, 255, 255, 0);
-$radius: 10px;
+$input-background-color: $black-medium;
+$input-border-color: $black-medium;
+$input-hover-border-color: $black-medium;
+$input-focus-border-color: $gray-light;
+$input-focus-box-shadow-size: 0;
+$input-radius: 10px;
 
 //navbar
 $navbar-background-color: $black-transparent-hover;
@@ -51,3 +56,5 @@ $navbar-item-color: $white;
 $content-max-width: 1200px;
 $content-min-width: 719px;
 $section-margin: 0 49px;
+
+// END COLORS

@@ -18,12 +18,14 @@
     "test": "npm run lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.0.0-beta.3",
     "@types/react-slick": "^0.23.4",
     "animate-css-grid": "^1.4.3",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "dayjs": "^1.9.3",
     "husky": "^4.3.0",
+    "libphonenumber-js": "^1.9.7",
     "lodash": "^4.17.20",
     "next": "^10.0.5",
     "next-compose-plugins": "^2.2.0",
@@ -32,11 +34,14 @@
     "react": "16.13.1",
     "react-country-flag": "^2.3.0",
     "react-dom": "16.13.1",
-    "react-hook-form": "^6.14.0",
+    "react-hook-form": "^6.14.1",
+    "react-phone-input-2": "^2.13.9",
     "react-slick": "^0.27.13",
+    "react-toastify": "^6.2.0",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "zod": "^2.0.0-beta.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -94,7 +99,16 @@
     ],
     "rules": {
       "max-nesting-depth": 7,
-      "selector-max-compound-selectors": 7
+      "selector-max-compound-selectors": 7,
+      "selector-no-qualifying-type": [
+        true,
+        {
+          "ignore": [
+            "attribute"
+          ]
+        }
+      ],
+      "selector-max-id": 1
     }
   },
   "husky": {

@@ -27,6 +27,13 @@
   .ikon {
     display: none;
   }
+
+  &:disabled {
+    background-color: $gray-light;
+    border-color: transparent;
+    cursor: wait;
+    opacity: 0.5;
+  }
 }
 
 .button-ikon {
