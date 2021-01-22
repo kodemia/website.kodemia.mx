@@ -8,11 +8,7 @@ export interface Props {
 
 }
 
-export default function InfoCard ({
-  icon,
-  title,
-  text
-}: Props) {
+export default function InfoCard ({ icon, title, text }: Props) {
   return (
     <div className='info-card'>
       <img src={icon} className='ikon' />
@@ -20,4 +16,4 @@ export default function InfoCard ({
       <p className='text'>{text}</p>
     </div>
   )
-};
+}

@@ -13,7 +13,7 @@ export interface Props {
 
 export default function Metrics ({ metrics }: Props) {
   return (
-    <div className='metrics'>
+    <section className='metrics'>
       <div className='metrics-container'>
         {metrics.map((metric, index) => {
           return (
@@ -25,6 +25,6 @@ export default function Metrics ({ metrics }: Props) {
           )
         })}
       </div>
-    </div>
+    </section>
   )
 }
