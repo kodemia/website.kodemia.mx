@@ -1,6 +1,8 @@
 
 import React from 'react'
 import Image from 'next/image'
+// My components
+import H2 from '../../H2'
 import H3 from '../../H3'
 
 export interface WorkshopArr {
@@ -14,13 +16,21 @@ export interface Props {
   workshops : Array<WorkshopArr>
 }
 
-export default function Workshop ({ workshops }: Props) {
+export default function workshops ({ workshops }: Props) {
   return (
     <section className='columns is-multiline workshops'>
+      <div>
+        <H2
+          whiteText='Los Talleres'
+          cyanText=''
+          isFirstCyan
+        />
+      </div>
       {
         workshops.map((workshop, index) => (
           <article
-            key={`workshop-${index}`} className='column is-full workshop'
+            key={`workshop-${index}`}
+            className='column is-full workshop'
           >
             <div className='columns is-multiline wrapper'>
               <div className='column is-4-desktop is-12-tablet  is-flex image'>
@@ -33,9 +43,12 @@ export default function Workshop ({ workshops }: Props) {
               </div>
               <div className='column is-8-desktop is-12-tablet workshop-data'>
                 <H3 text={workshop.week} />
-                <h5 className='title'>{workshop.title}</h5>
-                <p className='description'>{workshop.description}</p>
-
+                <h5 className='title'>
+                  {workshop.title}
+                </h5>
+                <p className='description'>
+                  {workshop.description}
+                </p>
               </div>
             </div>
           </article>

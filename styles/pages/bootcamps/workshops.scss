@@ -17,14 +17,12 @@
         justify-content: center;
 
         @include on-mobile {
-          align-items: flex-end;
-          justify-content: end;
+          justify-content: flex-start;
           padding: 0;
         }
 
         @include on-tablet {
-          align-items: flex-end;
-          justify-content: end;
+          justify-content: flex-start;
           padding: 0;
         }
       }

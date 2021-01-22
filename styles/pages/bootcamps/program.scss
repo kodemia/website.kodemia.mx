@@ -2,17 +2,46 @@
 .the-program {
   width: 100%;
 
-  .program {
+  .bg-image {
+    background-image: url('/images/bootcamps/el-programa-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 450px;
+    justify-content: center;
     margin: 0;
-    padding: 0 49px 20px;
     width: 100%;
 
     @include on-mobile {
+      background-image: url('/images/bootcamps/el-programa-mobile.jpg');
+      background-position: center;
+      height: 400px;
       padding: 0 45px;
     }
 
     @include on-tablet {
+      background-image: url('/images/bootcamps/el-programa-tablet.jpg');
+      background-position: center;
+      height: 400px;
+      justify-content: flex-start;
       padding: 0 85px;
+    }
+  }
+
+  .program {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 100px 49px 60px;
+    width: 100%;
+
+    @include on-mobile {
+      padding: 100px 45px 60px;
+    }
+
+    @include on-tablet {
+      padding: 100px 85px 60px;
     }
 
     .section {
@@ -30,14 +59,15 @@
         max-width: 100%;
         min-width: 100%;
       }
+
+      .container {
+        margin: 0;
+        max-width: 400px;
+      }
     }
 
     &:nth-child(even) {
       background-color: $black-primary;
     }
-  }
-
-  .is-gray {
-    background-color: $black-primary;
   }
 }

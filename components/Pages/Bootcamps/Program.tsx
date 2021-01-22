@@ -1,10 +1,12 @@
 
 import React from 'react'
+// My components
 import H2 from '../../H2'
 import H3 from '../../H3'
 import ProgramModule from './ProgramModule'
-import Workshop from './Workshop'
-import TextCursor from '../../TextCursor'
+import Workshops from './Workshops'
+import Certifications from './Certifications'
+import DataManipulation from './DataManipulation'
 
 export interface bootcamp {
   modules: Array<any>
@@ -23,40 +25,41 @@ export default function Program ({ subtitle, cyanText, whiteText, bootcamp }: Pr
   console.log(bootcamp.dataManipulation)
   return (
     <div className='the-program'>
-      <div className='columns is-multiline is-flex is-flex-direction-column is-justify-content-center
-      is-align-content-center program '
-      >
+      <div className='columns is-multiline is-flex program  bg-image'>
         <section className='column is-full-desktop section'>
-          <H3 text={subtitle} />
-          <H2
-            cyanText={cyanText}
-            whiteText={whiteText}
-            isFirstCyan
-          />
+          <div className='container'>
+            <H3 text={subtitle} />
+            <H2
+              cyanText={cyanText}
+              whiteText={whiteText}
+              isFirstCyan
+            />
+          </div>
         </section>
       </div>
-      <div className='columns is-multiline is-flex is-flex-direction-column is-justify-content-center
-      is-align-content-center program '
-      >
+      <div className='columns is-multiline is-flex program '>
         <section className='column is-full-desktop section'>
-          <h4><TextCursor text='Temas' white /></h4>
           <ProgramModule modules={bootcamp.modules} />
         </section>
       </div>
-      {bootcamp.dataManipulation &&
-        <div className='columns is-multiline program is-flex is-flex-direction-column is-justify-content-center is-align-content-center'>
-          <section className='column is-full-desktop section'>
-            <h4><TextCursor text='Temas' white /></h4>
-            <h1>hi</h1>
-          </section>
-        </div>}
-      <div className='columns is-multiline program is-flex is-flex-direction-column is-justify-content-center is-align-content-center'>
+      {
+        bootcamp.dataManipulation &&
+          <div className='columns is-multiline program is-flex'>
+            <section className='column is-full-desktop section'>
+              <DataManipulation dataManipulation={bootcamp.dataManipulation} />
+            </section>
+          </div>
+      }
+      <div className='columns is-multiline program is-flex'>
         <section className='column is-full-desktop section'>
-          <h4><TextCursor text='Talleres' white /></h4>
-          <Workshop workshops={bootcamp.workshops} />
+          <Workshops workshops={bootcamp.workshops} />
         </section>
       </div>
-
+      <div className='columns is-multiline program is-flex'>
+        <section className='column is-full-desktop section'>
+          <Certifications certifications={bootcamp.certifications} />
+        </section>
+      </div>
     </div>
   )
 }

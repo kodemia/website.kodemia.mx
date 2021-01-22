@@ -1,6 +1,8 @@
 
 import React from 'react'
 import Image from 'next/image'
+// My components
+import H2 from '../../H2'
 import H3 from '../../H3'
 import TextCursor from '../../TextCursor'
 
@@ -22,6 +24,13 @@ export interface Props {
 export default function ProgramModule ({ modules = [] }: Props) {
   return (
     <div className='columns is-multiline program-module'>
+      <div>
+        <H2
+          whiteText='Los Temas'
+          cyanText=''
+          isFirstCyan
+        />
+      </div>
       {
         modules.map((module, index) => (
           <section
@@ -46,7 +55,9 @@ export default function ProgramModule ({ modules = [] }: Props) {
                       width='100%'
                       height='auto'
                     />
-                    <p className='subtitle'>{theme.theme}</p>
+                    <p className='subtitle'>
+                      {theme.theme}
+                    </p>
                   </article>
                 ))
               }
