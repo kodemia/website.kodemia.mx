@@ -31,7 +31,7 @@ export default function JavascriptLive () {
         whiteText={ProgramData.whiteText}
         bootcamp={ProgramData.javascript}
       />
-      <Testimonials testimonials={TestimonialData} />
+      <Testimonials testimonials={TestimonialData} isGray />
       <Investment investment={InvestmentData.javascript} />
       <Scholarship />
       <TransformYourLife />

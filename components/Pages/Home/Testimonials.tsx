@@ -15,9 +15,10 @@ export interface Testimonial {
 
 export interface Props {
   testimonials: Array<Testimonial>
+  isGray?: boolean
 }
 
-export default function Testimonials ({ testimonials }: Props) {
+export default function Testimonials({ testimonials, isGray }: Props) {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0)
 
   const next = () => {
@@ -35,67 +36,75 @@ export default function Testimonials ({ testimonials }: Props) {
   }
 
   return (
-    <section className='testimonials '>
-      <div className='container-testimonials section-container'>
-        <H3 text='Testimonios' />
-        <H2 whiteText='Nuestra' cyanText='comunidad' />
-        <div className='sliders'>
-          {
-            testimonials.map((testimonial, index) => {
-              return (
-                <div
-                  className={classnames(
-                    'testimonial',
-                    {
-                      inactive: (activeTestimonialIndex !== index),
-                      active: (activeTestimonialIndex === index)
-                    }
-                  )}
-                  key={`testimonialSection-${index}`}
-                >
-                  <TestimonialCard testimonial={testimonial} isActive={activeTestimonialIndex === index} />
-                </div>
-              )
-            })
-          }
-        </div>
-        <div className='bar-buttons'>
-          <div className='bar'>
-            <ul>
-              {
-                testimonials.map((testimonial, index) => {
-                  return (
-                    <li
-                      className={classnames(
-                        'selected-bar',
-                        {
-                          inactive: (activeTestimonialIndex !== index),
-                          active: (activeTestimonialIndex === index)
-                        }
-                      )}
-                      key={`testimonial-${index}`}
-                    />
-                  )
-                })
-              }
-            </ul>
+    <div className='testimonials'>
+      <section className={classnames(
+        'testimonials-wrapper',
+        {
+          "is-gray": isGray
+        }
+      )}
+      >
+        <div className='container-testimonials section-container'>
+          <H3 text='Testimonios' />
+          <H2 whiteText='Nuestra' cyanText='comunidad' />
+          <div className='sliders'>
+            {
+              testimonials.map((testimonial, index) => {
+                return (
+                  <div
+                    className={classnames(
+                      'testimonial',
+                      {
+                        inactive: (activeTestimonialIndex !== index),
+                        active: (activeTestimonialIndex === index)
+                      }
+                    )}
+                    key={`testimonialSection-${index}`}
+                  >
+                    <TestimonialCard testimonial={testimonial} isActive={activeTestimonialIndex === index} />
+                  </div>
+                )
+              })
+            }
           </div>
-          <div className='container-buttons'>
-            <img
-              className='back'
-              src='/icons/icon-back.svg'
-              alt='back'
-              onClick={() => previuos()}
-            />
-            <img
-              className='forward'
-              src='/icons/icon-forward.svg'
-              alt='forward'
-              onClick={() => next()}
-            />
+          <div className='bar-buttons'>
+            <div className='bar'>
+              <ul>
+                {
+                  testimonials.map((testimonial, index) => {
+                    return (
+                      <li
+                        className={classnames(
+                          'selected-bar',
+                          {
+                            inactive: (activeTestimonialIndex !== index),
+                            active: (activeTestimonialIndex === index)
+                          }
+                        )}
+                        key={`testimonial-${index}`}
+                      />
+                    )
+                  })
+                }
+              </ul>
+            </div>
+            <div className='container-buttons'>
+              <img
+                className='back'
+                src='/icons/icon-back.svg'
+                alt='back'
+                onClick={() => previuos()}
+              />
+              <img
+                className='forward'
+                src='/icons/icon-forward.svg'
+                alt='forward'
+                onClick={() => next()}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }

@@ -1,136 +1,138 @@
-
 .testimonials {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  .container-testimonials {
+  .testimonials-wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    margin-bottom: 40px;
-    margin-top: 100px;
-    max-width: $content-max-width;
-    min-width: $content-min-width;
     width: 100%;
 
-    @include mobile {
-      margin: 0;
-      margin-bottom: 50px;
-      margin-top: 100px;
-      max-width: 100%;
-      min-width: 100%;
-      padding: 0 45px;
-      width: 100%;
-    }
-
-    @include on-tablet {
-      margin: 0;
-      margin-bottom: 50px;
-      margin-top: 100px;
-      padding: 0 85px;
-    }
-
-    .sliders {
+    .container-testimonials {
       display: flex;
-      height: 300px;
-      margin-top: 45px;
-      overflow: hidden;
-      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 0 60px;
+      max-width: $content-max-width;
+      min-width: $content-min-width;
       width: 100%;
 
-      @include on-mobile {
-        height: 100%;
-        min-height: max-content;
-        overflow: auto;
-        position: static;
+      @include mobile {
+        margin: 0;
+        margin-bottom: 50px;
+        max-width: 100%;
+        min-width: 100%;
+        padding: 100px 45px 60px;
+        width: 100%;
       }
 
       @include on-tablet {
-        height: 320px;
+        margin: 0;
+        margin-bottom: 50px;
+        margin-top: 100px;
+        padding: 100px 85px 60px;
       }
 
-      .testimonial {
-        position: absolute;
-        right: 0;
+      .sliders {
+        display: flex;
+        height: 300px;
+        margin-top: 45px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
 
         @include on-mobile {
+          height: 100%;
+          min-height: max-content;
+          overflow: auto;
           position: static;
-        }
-      }
-
-      .active {
-        left: 0;
-        z-index: 10;
-      }
-    }
-
-    .bar-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-
-      .bar {
-        background-color: #4e4e4e;
-        border-radius: 10px;
-        display: inline;
-        height: 8px;
-        width: 85%;
-
-        @include on-mobile {
-          width: 65%;
         }
 
         @include on-tablet {
-          width: 80%;
+          height: 320px;
         }
 
-        ul {
-          display: flex;
+        .testimonial {
+          position: absolute;
+          right: 0;
 
-          .selected-bar {
-            color: #4e4e4e;
-            height: 8px;
-            width: 25%;
+          @include on-mobile {
+            position: static;
           }
+        }
 
-          .active {
-            background-color: $cyan;
-            border-radius: 10px;
-            color: $cyan;
-          }
+        .active {
+          left: 0;
+          z-index: 10;
         }
       }
 
-      .container-buttons {
-        .back,
-        .forward {
-          cursor: pointer;
-          height: 20px;
+      .bar-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        .bar {
+          background-color: #4e4e4e;
+          border-radius: 10px;
+          display: inline;
+          height: 8px;
+          width: 85%;
 
           @include on-mobile {
-            height: 15px;
+            width: 65%;
+          }
+
+          @include on-tablet {
+            width: 80%;
+          }
+
+          ul {
+            display: flex;
+
+            .selected-bar {
+              color: #4e4e4e;
+              height: 8px;
+              width: 25%;
+            }
+
+            .active {
+              background-color: $cyan;
+              border-radius: 10px;
+              color: $cyan;
+            }
           }
         }
 
-        .forward {
-          &:hover {
-            height: 19px;
-          }
-        }
+        .container-buttons {
+          .back,
+          .forward {
+            cursor: pointer;
+            height: 20px;
 
-        .back {
-          margin: 0 20px 0 45px;
-
-          @include on-mobile {
-            margin: 0 15px;
+            @include on-mobile {
+              height: 15px;
+            }
           }
 
-          &:hover {
-            height: 19px;
+          .forward {
+            &:hover {
+              height: 19px;
+            }
+          }
+
+          .back {
+            margin: 0 20px 0 45px;
+
+            @include on-mobile {
+              margin: 0 15px;
+            }
+
+            &:hover {
+              height: 19px;
+            }
           }
         }
       }
     }
+  }
+  .is-gray {
+    background: $black-primary;
   }
 }
