@@ -7,15 +7,15 @@
     "paymentTypes": [
       {
         "title": "A MSI con tarjeta de crédito",
-        "description": "A meses sin intereses con tu tarjeta de crédito y con Paypal"
+        "description": "A meses sin intereses con tu tarjeta de crédito ó con Paypal"
       },
       {
         "title": "15 o 18 Meses sin intereses",
-        "description": "Aplica por un financiamiento     de 15 o 18 meses sin Intereses con pagos desde $3,883"
+        "description": "Aplica por un financiamiento de 15 ó 18 meses sin Intereses con pagos desde $3,883"
       },
       {
         "title": "Financiamiento hasta 24 meses",
-        "description": "Puedes pagar tu Bootcamp a 12, 18 o 24 meses desde $3,070 mensuales"
+        "description": "Puedes pagar tu Bootcamp a 12, 18 ó 24 meses desde $3,070 mensuales"
       }
     ]
   },
