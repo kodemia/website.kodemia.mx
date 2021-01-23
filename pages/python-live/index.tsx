@@ -13,7 +13,7 @@ import GoalsData from '../../config/bootcamps/goals.json'
 import HeroData from '../../config/bootcamps/hero-data.json'
 import MetricsBootcamps from '../../config/bootcamps/metrics.json'
 import TestimonialData from '../../config/testimonials-data.json'
-import ProgramData from '../../config/bootcamps/program-data.json'
+import ProgramData from '../../config/bootcamps/program.json'
 export default function PythonLive () {
   return (
     <>
