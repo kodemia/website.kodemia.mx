@@ -9,6 +9,7 @@ import Testimonials from '../../components/Pages/Home/Testimonials'
 import TransformYourLife from '../../components/Pages/Home/TransformYourLife'
 import Program from '../../components/Pages/Bootcamps/Program'
 import Investment from '../../components/Pages/Bootcamps/Investment'
+import Scholarship from '../../components/Pages/Bootcamps/Scholarship'
 // Data
 import GoalsData from '../../config/bootcamps/goals.json'
 import HeroData from '../../config/bootcamps/hero-data.json'
@@ -32,6 +33,7 @@ export default function JavascriptLive () {
       />
       <Testimonials testimonials={TestimonialData} />
       <Investment investment={InvestmentData.javascript} />
+      <Scholarship />
       <TransformYourLife />
       <Footer />
     </>
