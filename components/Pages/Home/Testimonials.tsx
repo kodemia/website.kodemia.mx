@@ -18,7 +18,7 @@ export interface Props {
   isGray?: boolean
 }
 
-export default function Testimonials({ testimonials, isGray }: Props) {
+export default function Testimonials ({ testimonials, isGray }: Props) {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0)
 
   const next = () => {
@@ -40,7 +40,7 @@ export default function Testimonials({ testimonials, isGray }: Props) {
       <section className={classnames(
         'testimonials-wrapper',
         {
-          "is-gray": isGray
+          'is-gray': isGray
         }
       )}
       >
