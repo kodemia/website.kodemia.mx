@@ -4,7 +4,7 @@ import { GetServerSidePropsContext } from 'next'
 type Bootcamp = 'javascript-live' | 'python-live'
 type Version = 'desktop' | 'mobile'
 
-export default function BootcampPage () {
+export default function DownloadBrochure () {
   return null
 }
 
