@@ -34,8 +34,8 @@ export default function Home () {
       <Hero />
       <WhyKodemia infoCards={WhyKodemiaCards.cards} />
       <OurBootcamps bootcamps={OurBootcampsCards} />
-      <WhatGoingAchieve winnerImages={WinnerImages} />
       <KodemiaExperience videos={ExperienceData} />
+      <WhatGoingAchieve winnerImages={WinnerImages} />
       <OurMethod ourMethod={OurMethodData} />
       <KodemiaFinancing info={KodemiaFinancingData} />
       <AlliancesKodemia allies={AlliesData} />
