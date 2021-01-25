@@ -61,7 +61,6 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
           <Slider {...settings}>
             {
               winnerImages.map((image, index) => {
-                console.log('image', image)
                 return (
                   <div
                     className='image'
