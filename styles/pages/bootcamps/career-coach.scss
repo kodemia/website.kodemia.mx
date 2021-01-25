@@ -18,35 +18,35 @@
       min-width: 100%;
       padding: 0 85px;
     }
-    
+
     .head {
       grid-area: head;
       max-width: 450px;
       min-width: 224px;
     }
-    
+
     .first {
       display: grid;
       grid-column-gap: 2rem;
       grid-template-areas:
-      'image cards cards'
-      'image cards cards';
+        'image cards cards'
+        'image cards cards';
       grid-template-columns: repeat(3, 1fr);
       margin-top: 20px;
 
       @include on-mobile {
         grid-template-areas:
-        'image'
-        'cards';
+          'image'
+          'cards';
         grid-template-columns: 1fr;
         margin-top: 20px;
       }
-      
+
       @include on-tablet {
         grid-column-gap: 0;
         grid-template-areas:
-        'image'
-        'cards';
+          'image'
+          'cards';
         grid-template-columns: 1fr;
       }
     }
@@ -70,8 +70,8 @@
 
       @include on-tablet {
         grid-template-areas:
-        'image'
-        'cards';
+          'image'
+          'cards';
         grid-template-columns: 1fr;
         margin-top: 0;
       }
@@ -106,12 +106,12 @@
       grid-area: cards;
       grid-column-gap: 2rem;
       grid-template-columns: 1fr 1fr;
-      
+
       @include on-mobile {
         grid-template-columns: 1fr;
         margin-top: 35px;
       }
-      
+
       @include on-tablet {
         grid-template-columns: 1fr 1fr;
         margin-top: 35px;

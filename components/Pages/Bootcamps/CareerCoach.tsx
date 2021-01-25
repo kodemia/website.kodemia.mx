@@ -1,11 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
 import _ from 'lodash'
 
 import H2 from '../../H2'
 import H3 from '../../H3'
 import CareerData from '../../../config/bootcamps/career-data.json'
-
 
 import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
 
@@ -25,17 +23,17 @@ export default function CareerCoach ({ infoCards }: Props) {
         </div>
         <div className='first'>
           <div className='img-cont'>
-            <img className='image' src={CareerData.image1} alt=''/>
+            <img className='image' src={CareerData.image1} alt='' />
           </div>
           <div className='cards'>
             {
               first.map((infoCard, index) => {
                 return (
                   <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
+                    key={`card-${index}`}
+                    icon={infoCard.icon}
+                    title={infoCard.title}
+                    text={infoCard.text}
                   />
                 )
               })
@@ -48,17 +46,17 @@ export default function CareerCoach ({ infoCards }: Props) {
               second.map((infoCard, index) => {
                 return (
                   <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
+                    key={`card-${index}`}
+                    icon={infoCard.icon}
+                    title={infoCard.title}
+                    text={infoCard.text}
                   />
-                  )
-                })
-              }
+                )
+              })
+            }
           </div>
           <div className='img-cont'>
-            <img className='image' src={CareerData.image2} alt=''/>
+            <img className='image' src={CareerData.image2} alt='' />
           </div>
         </div>
       </div>
