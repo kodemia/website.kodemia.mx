@@ -19,7 +19,6 @@ export const login = async (email: string, password: string) => {
 }
 
 export async function apply (data: ApplyFormData) {
-  return true // TODO: this is for test
   const url = '/active-campaign/apply'
   const response = await api.post(url, data)
   return response
