@@ -5,14 +5,8 @@ import H2 from '../../H2'
 import H3 from '../../H3'
 import CareerData from '../../../config/bootcamps/career-data.json'
 
-// import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
 import InfoCard from '../../InfoCard'
 
-// export interface Props {
-//   infoCards: Array<InfoCardProps>
-// }
-
-// export default function CareerCoach ({ infoCards }: Props) {
 export default function CareerCoach () {
   const [first, second] = _.chunk(CareerData.cards, 4)
 
@@ -25,7 +19,7 @@ export default function CareerCoach () {
         </div>
         <div className='first'>
           <div className='img-cont'>
-            <img className='image' src={CareerData.image1} alt='' />
+            <img className='image' src={CareerData.image1} alt='Desarrollo profesional' />
           </div>
           <div className='cards'>
             {
@@ -58,7 +52,7 @@ export default function CareerCoach () {
             }
           </div>
           <div className='img-cont'>
-            <img className='image' src={CareerData.image2} alt='' />
+            <img className='image' src={CareerData.image2} alt='Career coach' />
           </div>
         </div>
       </div>
