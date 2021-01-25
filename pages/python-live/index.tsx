@@ -12,6 +12,7 @@ import Scholarship from '../../components/Pages/Bootcamps/Scholarship'
 import Support from 'components/Pages/Bootcamps/Support'
 import Testimonials from '../../components/Pages/Home/Testimonials'
 import TransformYourLife from '../../components/Pages/Home/TransformYourLife'
+import SEO from 'components/SEO'
 // Data
 import GoalsData from '../../config/bootcamps/goals.json'
 import HeroData from '../../config/bootcamps/hero-data.json'
@@ -24,6 +25,9 @@ import TestimonialData from '../../config/testimonials-data.json'
 export default function PythonLive () {
   return (
     <>
+      <SEO
+        title='Kodemia | Bootcamp FullStack con Python + Data manipulation'
+      />
       <Navbar />
       <section id='python-live-page'>
         <Hero bootcamp={HeroData.python} />

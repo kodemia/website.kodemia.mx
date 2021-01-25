@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import H1 from '../components/H1'
 import BgVideo from '../components/BgVideo'
 import LoginForm from '../components/Pages/Login/LoginForm'
+import SEO from 'components/SEO'
 
 export default function Login () {
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function Login () {
 
   return (
     <div className='login'>
+      <SEO />
       <style global jsx>{`
         body ::-webkit-scrollbar {
           width: 0;

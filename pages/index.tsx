@@ -12,6 +12,7 @@ import TransformYourLife from '../components/Pages/Home/TransformYourLife'
 import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 import WhatGoingAchieve from '../components/Pages/Home/WhatGoingAchieve'
 import KodemiaExperience from '../components/Pages/Home/KodemiaExperience'
+import SEO from 'components/SEO'
 
 // Data
 import AlliesData from '../config/allies-data.json'
@@ -26,10 +27,7 @@ import ExperienceData from '../config/experiencie-data.json'
 export default function Home () {
   return (
     <>
-      <Head>
-        <title>Kodemia</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <SEO />
       <Navbar />
       <Hero />
       <WhyKodemia infoCards={WhyKodemiaCards.cards} />
