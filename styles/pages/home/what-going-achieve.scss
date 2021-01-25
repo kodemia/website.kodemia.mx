@@ -1,14 +1,14 @@
 
 .achivements-section {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 30px;
   margin-bottom: 30px;
+  margin-top: 30px;
 
   .achivements-container {
-    width: 100%;
     max-width: $content-max-width;
+    width: 100%;
 
     @include on-tablet {
       margin: 0 85px;
@@ -16,6 +16,7 @@
 
     .achivements-text-column {
       padding-right: 40px;
+
       @include on-mobile {
         padding-right: 0;
       }
@@ -25,6 +26,7 @@
       @include on-mobile {
         padding-left: 0;
       }
+
       .slider-column {
         @include on-tablet {
           padding: 20px 0;
@@ -34,18 +36,17 @@
 
     .slide {
       display: grid;
-      position: relative;
       grid-template-columns: auto;
       grid-template-rows: auto;
-      width: 100%;
       margin-top: 20px;
+      position: relative;
+      width: 100%;
 
       .slide-item {
-        position: absolute;
         display: inline-block;
+        position: absolute;
         top: 0;
         transition: opacity 0.5s ease-in-out;
-
 
         &.is-active {
           opacity: 1;
@@ -55,33 +56,36 @@
           opacity: 0;
         }
       }
-
     }
 
     .bar-columns {
       margin-top: 25px;
-      padding-right: 10px;
       padding-left: 10px;
+      padding-right: 10px;
     }
+
     .bar {
       .bar-bar {
-        height: 10px;
         background-color: $black-transparent-background;
+        height: 10px;
 
         &.first {
           border-radius: 10px 0 0 10px;
         }
+
         &.last {
           border-radius: 0 10px 10px 0;
         }
+
         .indicator {
-          height: 10px;
           border-radius: 10px;
+          height: 10px;
         }
       }
 
       .bar-text {
         word-break: break-all;
+
         @include on-mobile {
           font-size: 3vw;
         }
