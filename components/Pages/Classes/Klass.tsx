@@ -50,8 +50,8 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
 
   return (
     <div className='klass'>
-      <div className='columns'>
-        <div className='column video-player'>
+      <div className='columns is-multiline klass-container'>
+        <div className='column is-full-tablet  is-8-desktop video-player'>
           <VideoPlayer id={idVimeo} isVimeo={isVimeo} />
           <div className='container-buttons'>
             <img
@@ -72,10 +72,10 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
           </div>
 
         </div>
-        <div className='column'>
+        <div className='column next-classes'>
           {
             showClasses.map((klass, index) =>
-              <div key={`viewClass-${index}`}>
+              <div key={`viewClass-${index}`} className='class-video'>
                 <ClassCard klass={klass} />
               </div>)
           }

@@ -5,7 +5,7 @@ import Vimeo from '@u-wave/react-vimeo'
 export default function VideoPlayer ({ id, isVimeo }) {
   return (
     <>
-      {isVimeo && <Vimeo video={id} />}
+      {isVimeo && <Vimeo video={id} responsive />}
     </>
   )
 }

@@ -1,3 +1,24 @@
 .klass {
   width: 100%;
+
+  .klass-container {
+    margin: 0;
+    width: 100%;
+
+    .video-player {
+      @include on-mobile {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.vimeo {
+  width: 100%;
+
+  @include on-mobile {
+    width: auto;
+  }
 }
