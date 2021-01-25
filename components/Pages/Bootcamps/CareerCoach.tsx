@@ -11,7 +11,8 @@ export interface Props {
   infoCards: Array<InfoCardProps>
 }
 
-export default function CareerCoach ({ infoCards }: Props) {
+// export default function CareerCoach ({ infoCards }: Props) {
+export default function CareerCoach () {
   const [first, second] = _.chunk(CareerData.cards, 4)
 
   return (
