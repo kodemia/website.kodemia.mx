@@ -49,7 +49,7 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
   }
 
   return (
-    <div className='class-bg'>
+    <div className='klass'>
       <div className='columns'>
         <div className='column video-player'>
           <VideoPlayer id={idVimeo} isVimeo={isVimeo} />
