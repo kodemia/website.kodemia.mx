@@ -9,6 +9,7 @@ import Metrics from '../../components/Pages/Bootcamps/Metrics'
 import Navbar from '../../components/Navbar'
 import Program from '../../components/Pages/Bootcamps/Program'
 import Scholarship from '../../components/Pages/Bootcamps/Scholarship'
+import Support from 'components/Pages/Bootcamps/Support'
 import Testimonials from '../../components/Pages/Home/Testimonials'
 import TransformYourLife from '../../components/Pages/Home/TransformYourLife'
 // Data
@@ -17,6 +18,7 @@ import HeroData from '../../config/bootcamps/hero-data.json'
 import InvestmentData from '../../config/bootcamps/investment.json'
 import MetricsBootcamps from '../../config/bootcamps/metrics.json'
 import ProgramData from '../../config/bootcamps/program.json'
+import SupportData from 'config/bootcamps/support-data.json'
 import TestimonialData from '../../config/testimonials-data.json'
 
 export default function JavascriptLive () {
@@ -37,6 +39,7 @@ export default function JavascriptLive () {
         <Testimonials testimonials={TestimonialData} isGray />
         <Investment investment={InvestmentData.javascript} />
         <Scholarship />
+        <Support infoCards={SupportData.cards} />
         <TransformYourLife />
       </section>
 
