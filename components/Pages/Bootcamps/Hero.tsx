@@ -3,9 +3,9 @@ import React from 'react'
 // My components
 
 import HeroCard from './HeroCard'
-import BgVideo from '../../BgVideo'
+// import BgVideo from '../../BgVideo'
 
-import BgVideoSrc from 'config/bootcamps/bg-video-src.json'
+// import BgVideoSrc from 'config/bootcamps/bg-video-src.json'
 
 export interface Information {
   title: string
