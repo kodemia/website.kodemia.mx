@@ -22,9 +22,13 @@ export function getServerSideProps (context: GetServerSidePropsContext) {
   }
 
   const bootcamp: Bootcamp = context?.params?.bootcamp as Bootcamp ?? 'javascript-live'
-  const version: Version = context?.params?.version as Version ?? 'mobile'
+  const version: Version = context?.query?.version as Version ?? 'mobile'
 
   context.res
     .writeHead(302, { Location: bootcampsMap[bootcamp][version] })
     .end()
+
+  return {
+    props: {}
+  }
 }

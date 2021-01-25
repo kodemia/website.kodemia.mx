@@ -2,6 +2,7 @@
 import { GetStaticPropsContext } from 'next'
 
 import NavBar from 'components/Navbar'
+import Footer from 'components/Footer'
 import H2 from 'components/H2'
 import Cursor from 'components/TextCursor'
 import Button from 'components/Button'
@@ -33,12 +34,20 @@ export default function Thankyou (props: Props) {
                       <br />
                       pronto posible
                     </div>
-                    <div className='column is-full mb-5'>
+                    <div className='column is-full mb-5 is-hidden-touch'>
                       <Button
                         isPrimary
                         label='Descarga el Brochure'
                         icon='/icons/download.svg'
-                        link={`/brochures/${props.bootcamp}`}
+                        href={`/brochures/${props.bootcamp}?version=desktop`}
+                      />
+                    </div>
+                    <div className='column is-full mb-5 is-hidden-desktop'>
+                      <Button
+                        isPrimary
+                        label='Descarga el Brochure'
+                        icon='/icons/download.svg'
+                        href={`/brochures/${props.bootcamp}?version=mobile`}
                       />
                     </div>
                   </div>
@@ -48,6 +57,7 @@ export default function Thankyou (props: Props) {
           </div>
         </main>
       </section>
+      <Footer />
     </>
   )
 }
