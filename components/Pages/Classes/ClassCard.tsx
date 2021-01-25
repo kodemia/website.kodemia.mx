@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import dayjs from 'dayjs'
-
+import Vimeo from '@u-wave/react-vimeo'
 export interface Props {
   klass: {
     date: string
