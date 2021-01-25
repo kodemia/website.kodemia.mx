@@ -27,8 +27,7 @@ export default function JavascriptLive ({ bootcamp }:Props) {
       <div className='columns hero-container'>
         <div className='column is-full'>
           {/* <BgVideo src='/images/bootcamps/Video-fondo-JS.mp4' /> */}
-          {`${bootcamp === 'javascript'} ? ${<BgVideo src={BgVideoSrc.javascript} /> : ${<BgVideo src={BgVideoSrc.javascript} />} }`}
-          
+          {/* {`${bootcamp === 'javascript'} ? ${<BgVideo src={BgVideoSrc.javascript} /> : ${<BgVideo src={BgVideoSrc.javascript} />} }`} */}
           <div className='columns is-justify-content-center cover'>
             <div className='column  container-card'>
               <HeroCard bootcamp={bootcamp} />
