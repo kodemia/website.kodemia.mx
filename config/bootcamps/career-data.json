@@ -1,0 +1,46 @@
+{
+  "image1": "/images/bootcamps/desarrollo-profesional-01.jpg",
+  "image2": "/images/bootcamps/desarrollo-profesional-02.jpg",
+  "cards": [
+    {
+      "text": "Muestra de forma estratégica en este documento tus habilidades y tu potencial como candidato",
+      "icon": "/icons/icon-personalizacion-cv.svg",
+      "title": "Personalización de \ncurriculum"
+    },
+    {
+      "text": "Asimila de la mejor manera todo lo aprendido en tu nueva vida como developer",
+      "icon": "/icons/icon-estilo-aprendizaje.svg",
+      "title": "Estilo de \naprendizaje"
+    },
+    {
+      "text": "Conoce todas las posibilidades de crecimiento que puedes tener en el sector Tech",
+      "icon": "/icons/icon-proyeccion-profesional.svg",
+      "title": "Proyección \nprofesional"
+    },
+    {
+      "text": "Eres una persona única y diferente, haz que el mundo lo sepa y crea una estrategia acorde a tus fortalezas y metas profesionales",
+      "icon": "/icons/icon-busqueda-empleo.svg",
+      "title": "Estrategias de búsqueda \nde empleo"
+    },
+    {
+      "text": "Estas pruebas son parte del proceso de selección, conoce tus resultados para ampliar tu visión y entendimiento de cómo los reclutadores ven tu perfil",
+      "icon": "/icons/icon-test-psicometrico.svg",
+      "title": "Test \npsicométrico"
+    },
+    {
+      "text": "Realiza una simulación de un proceso de selección para mejorar tu comunicación y confianza, haz una entrevista de primer filtro y aprende técnicas para afrontarla",
+      "icon": "/icons/icon-entrevistas-simulacion.svg",
+      "title": "Entrevistas de \nsimulación"
+    },
+    {
+      "text": "Un cambio de carrera puede generarte incertidumbre y dudas sobre tu capacidad. Trabaja con tu Career Coach para que tengas la fortaleza técnica y la inteligencia emocional para estar preparado",
+      "icon": "/icons/icon-sindrome-impostor.svg",
+      "title": "Síndrome del \nimpostor"
+    },
+    {
+      "text": "Mientras más herramientas tengas para descubrir tus fortalezas, habilidades y áreas de oportunidad, podrás comunicarlas de manera estratégica",
+      "icon": "/icons/icon-autoconocimiento-profesional.svg",
+      "title": "Autoconocimiento \nprofesional"
+    }
+  ] 
+}
