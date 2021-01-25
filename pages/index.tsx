@@ -1,4 +1,4 @@
-import Head from 'next/head'
+
 // My components
 import AlliancesKodemia from '../components/Pages/Home/AlliancesKodemia'
 import Footer from '../components/Footer'
