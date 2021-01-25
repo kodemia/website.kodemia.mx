@@ -24,7 +24,7 @@
         "link": "/javascript-live",
         "schedule" :{
           "day": "",
-          "month":"Abril",
+          "month":"Abril (Próximamente)",
           "year":"2021",
           "hour":"7:00 - 10:00 pm",
           "days":"Lunes a viernes"
@@ -46,6 +46,18 @@
         "schedule" :{
           "day": "15",
           "month":"Marzo",
+          "year":"2021",
+          "hour":"7:00 - 10:00 pm",
+          "days":"Lunes a viernes"
+       }
+      },
+      {
+        "name": "Live",
+        "description": "Aprende sin salir de casa",
+        "link": "/python-live",
+        "schedule" :{
+          "day": "",
+          "month":"Mayo (Próximamente)",
           "year":"2021",
           "hour":"7:00 - 10:00 pm",
           "days":"Lunes a viernes"

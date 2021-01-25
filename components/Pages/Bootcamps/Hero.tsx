@@ -19,12 +19,12 @@ export interface Props{
   }
 }
 
-export default function JavascriptLive ({ bootcamp }:Props) {
+export default function JavascriptLive ({ bootcamp, src }:Props) {
   return (
     <div className='hero-bootcamps'>
       <div className='columns hero-container'>
         <div className='column is-full'>
-          <BgVideo />
+          <BgVideo src='/images/bootcamps/Video-fondo-JS.mp4' />
           <div className='columns is-justify-content-center cover'>
             <div className='column  container-card'>
               <HeroCard bootcamp={bootcamp} />
