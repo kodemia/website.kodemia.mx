@@ -1,0 +1,42 @@
+{
+  "javascript": {
+    "whiteTitle": "Encuentra tu",
+    "cyanTitle": "mejor opción",
+    "subtitle": "La inversión",
+    "description": "La inversión del Bootcamp es de $69,900 (Incluye IVA) + Inscripción de $3,500*. \nSi tus causas y deseo de prepararte superan tu capacidad de pago, no te preocupes ni descartes la oportunidad, encontremos la solución juntos. Ponte en contacto, nos interesa escucharte. \n*Si aplicas a un financiamiento tu inscripción aumenta, se agrega el 5% del monto a financiar por la apertura del crédito.",
+    "paymentTypes": [
+      {
+        "title": "A MSI con tarjeta de crédito",
+        "description": "A meses sin intereses con tu tarjeta de crédito ó con Paypal"
+      },
+      {
+        "title": "15 o 18 Meses sin intereses",
+        "description": "Aplica por un financiamiento de 15 ó 18 meses sin Intereses con pagos desde $3,883"
+      },
+      {
+        "title": "Financiamiento hasta 24 meses",
+        "description": "Puedes pagar tu Bootcamp a 12, 18 ó 24 meses desde $3,070 mensuales"
+      }
+    ]
+  },
+  "python": {
+    "whiteTitle": "Encuentra tu",
+    "cyanTitle": "mejor opción",
+    "subtitle": "La inversión",
+    "description": "La inversión del Bootcamp es de $79,900 (Incluye IVA) + Inscripción de $3,500*. \n Si tus causas y deseo de prepararte superan tu capacidad de pago, no te preocupes ni descartes la oportunidad, encontremos la solución juntos. Ponte en contacto, nos interesa escucharte. \b*Si aplicas a un financiamiento tu inscripción aumenta, se agrega el 5% del monto a financiar por la apertura del crédito.",
+    "paymentTypes": [
+      {
+        "title": "A MSI con tarjeta de crédito",
+        "description": "A meses sin intereses con tu tarjeta de crédito y con Paypal"
+      },
+      {
+        "title": "15 o 18 Meses sin intereses",
+        "description": "Aplica por un financiamiento     de 15 o 18 meses sin Intereses con pagos desde $4,439"
+      },
+      {
+        "title": "Financiamiento hasta 24 meses",
+        "description": "Puedes pagar tu Bootcamp a 12, 18 o 24 meses desde $3,510 mensuales"
+      }
+    ]
+  }
+}

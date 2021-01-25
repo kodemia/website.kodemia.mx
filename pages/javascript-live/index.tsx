@@ -9,13 +9,16 @@ import Navbar from '../../components/Navbar'
 import Testimonials from '../../components/Pages/Home/Testimonials'
 import TransformYourLife from '../../components/Pages/Home/TransformYourLife'
 import Program from '../../components/Pages/Bootcamps/Program'
+import Investment from '../../components/Pages/Bootcamps/Investment'
+import Scholarship from '../../components/Pages/Bootcamps/Scholarship'
 // Data
 import CareerData from '../../config/bootcamps/career-data.json'
 import GoalsData from '../../config/bootcamps/goals.json'
 import HeroData from '../../config/bootcamps/hero-data.json'
 import MetricsBootcamps from '../../config/bootcamps/metrics.json'
 import TestimonialData from '../../config/testimonials-data.json'
-import ProgramData from '../../config/bootcamps/program-data.json'
+import ProgramData from '../../config/bootcamps/program.json'
+import InvestmentData from '../../config/bootcamps/investment.json'
 
 export default function JavascriptLive () {
   return (
@@ -32,9 +35,12 @@ export default function JavascriptLive () {
           bootcamp={ProgramData.javascript}
         />
         <CareerCoach infoCards={CareerData.cards} />
-        <Testimonials testimonials={TestimonialData} />
+        <Testimonials testimonials={TestimonialData} isGray />
+        <Investment investment={InvestmentData.javascript} />
+        <Scholarship />
         <TransformYourLife />
       </section>
+
       <Footer />
     </>
   )

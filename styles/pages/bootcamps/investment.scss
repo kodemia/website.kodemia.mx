@@ -1,0 +1,108 @@
+.investment {
+  background-image: url('/images/bootcamps/koder_gerardo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  .investment-container {
+    background: linear-gradient(0deg, $black, rgba(22, 22, 22, 0.468));
+    padding: 100px 49px 60px;
+
+    @include on-mobile {
+      padding: 100px 45px 60px;
+    }
+
+    @include on-tablet {
+      padding: 100px 85px 60px;
+    }
+
+    .investment-wrapper {
+      max-width: $content-max-width;
+      width: 100%;
+
+      .investment-header {
+        padding: 0;
+
+        .investment-title {
+          max-width: 300px;
+        }
+
+        .description {
+          color: $text;
+          font-size: 18px;
+          font-weight: 500;
+          margin: 45px 0;
+          max-width: 730px;
+          text-align: left;
+          white-space: pre-wrap;
+        }
+      }
+
+      .payment-types-container {
+        padding: 0;
+
+        @include on-mobile {
+          flex-direction: column;
+        }
+
+        @include on-tablet {
+          flex-wrap: wrap;
+        }
+
+        .payment-card {
+          background: transparent;
+          border: 1px solid $cyan;
+          border-radius: 10px;
+          padding: 20px;
+          width: 30%;
+
+          @include on-mobile {
+            margin: 20px 0;
+            padding: 30px;
+            width: 100%;
+          }
+
+          @include on-tablet {
+            margin-top: 30px;
+            max-width: 418px;
+            min-width: 280px;
+            width: 48%;
+          }
+
+          .payment-title {
+            color: $primary;
+            font-size: 22px;
+            max-width: 200px;
+
+            @include on-mobile {
+              max-width: 100%;
+            }
+
+            @include on-tablet {
+              max-width: 100%;
+            }
+          }
+
+          .payment-description {
+            color: $text;
+            font-size: 18px;
+            margin-top: 20px;
+            max-width: 290px;
+
+            @include on-mobile {
+              max-width: 100%;
+              min-height: 54px;
+            }
+
+            @include on-tablet {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
