@@ -1,11 +1,12 @@
 
 import { useEffect } from 'react'
 
+import NavBar from 'components/Navbar'
+import Footer from 'components/Footer'
 import Cursor from 'components/TextCursor'
 import DescriptionParagraph from 'components/DescriptionParagraph'
 import H2 from 'components/H2'
 import H3 from 'components/H3'
-import NavBar from 'components/Navbar'
 import ApplyForm from 'components/ApplyForm'
 
 export default function Aplicar () {
@@ -36,6 +37,7 @@ export default function Aplicar () {
           </main>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
