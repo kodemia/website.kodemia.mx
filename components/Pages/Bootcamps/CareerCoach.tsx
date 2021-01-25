@@ -5,11 +5,12 @@ import H2 from '../../H2'
 import H3 from '../../H3'
 import CareerData from '../../../config/bootcamps/career-data.json'
 
-import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
+// import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
+import InfoCard from '../../InfoCard'
 
-export interface Props {
-  infoCards: Array<InfoCardProps>
-}
+// export interface Props {
+//   infoCards: Array<InfoCardProps>
+// }
 
 // export default function CareerCoach ({ infoCards }: Props) {
 export default function CareerCoach () {
