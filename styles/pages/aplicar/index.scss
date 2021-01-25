@@ -1,6 +1,10 @@
 
+@import './gracias';
+
 #aplicar {
   background-color: $black-primary;
+  min-height: 100vh;
+  padding-bottom: 80px;
   padding-top: 110px;
 
   aside {
