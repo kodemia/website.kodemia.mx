@@ -25,7 +25,7 @@ export default function Clase () {
   useEffect(() => {
     const token = window.sessionStorage.getItem('token')
     if (!token) {
-      sessionStorage.setItem('from', 'clases')
+      window.sessionStorage.setItem('from', 'clases')
       Router.replace('/login')
     }
   }, [])
