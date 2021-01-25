@@ -31,7 +31,7 @@ export default function ApplyForm () {
 
     apply(data)
       .then(() => {
-        router.push('/gracias')
+        router.push(`aplicar/gracias/${data.course}`)
       })
       .catch(error => {
         const status = error.response.status
