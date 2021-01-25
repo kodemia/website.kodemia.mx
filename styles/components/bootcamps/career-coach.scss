@@ -4,7 +4,7 @@
   padding: 100px 0 80px;
   width: 100%;
 
-  .career-coach-section {
+  .career-coach-container {
     max-width: $content-max-width;
     min-width: $content-min-width;
     width: 100%;
@@ -84,7 +84,6 @@
 
       @include on-mobile {
         height: 420px;
-        max-width: 100%;
       }
 
       @include on-tablet {

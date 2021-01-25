@@ -39,7 +39,7 @@ export default function PythonLive () {
         <Testimonials testimonials={TestimonialData} />
         <Investment investment={InvestmentData.python} />
         <Scholarship />
-        <Support infoCards={SupportData.cards} />
+        <Support image={SupportData.image} infoCards={SupportData.cards} />
         <TransformYourLife />
       </section>
       <Footer />

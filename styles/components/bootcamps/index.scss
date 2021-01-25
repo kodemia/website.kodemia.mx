@@ -9,12 +9,11 @@
 @import './metric-card';
 @import './program';
 @import './program-module';
-@import './workshops';
 @import './scholarship';
-
+@import './support';
+@import './workshops';
 
 #javascript-live-page {
-  
   .investment {
     .investment-container {
       background: linear-gradient(0deg, $black, rgba(22, 22, 22, 0.468));
@@ -27,14 +26,13 @@
 }
 
 #python-live-page {
-  
   .career-coach {
     background-color: $black-primary;
   }
 
   .investment {
     .investment-container {
-      background: linear-gradient(0deg, $black-primary, rgba(22, 22, 22, 0.468))
+      background: linear-gradient(0deg, $black-primary, rgba(22, 22, 22, 0.468));
     }
   }
 

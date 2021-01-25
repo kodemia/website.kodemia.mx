@@ -12,7 +12,7 @@ export default function CareerCoach () {
 
   return (
     <section className='career-coach'>
-      <div className='career-coach-section section-container'>
+      <div className='career-coach-container section-container'>
         <div className='head'>
           <H3 text='Desarrollo Profesional' />
           <H2 whiteText='Parte de lo que lograrás con el' cyanText='Career Coach' />

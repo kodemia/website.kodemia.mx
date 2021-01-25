@@ -39,7 +39,7 @@ export default function JavascriptLive () {
         <Testimonials testimonials={TestimonialData} isGray />
         <Investment investment={InvestmentData.javascript} />
         <Scholarship />
-        <Support infoCards={SupportData.cards} />
+        <Support image={SupportData.image} infoCards={SupportData.cards} />
         <TransformYourLife />
       </section>
 

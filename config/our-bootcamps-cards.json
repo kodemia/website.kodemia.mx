@@ -7,13 +7,13 @@
     "duration":"19 semanas",
     "modalities": [
       {
-        "name":"Lifetime",
-        "description": "Acceso de por vida a Kodemia",
+        "name":"Live",
+        "description": "Aprende sin salir de casa",
         "link": "/javascript-live",
         "schedule": {
-          "day": "19",
-          "month":"Oct",
-          "year":"2020",
+          "day": "08",
+          "month":"Febrero",
+          "year":"2021",
           "hour":"7:00 - 10:00 pm",
           "days":"Lunes a viernes"
         }
@@ -23,9 +23,9 @@
         "description": "Aprende sin salir de casa",
         "link": "/javascript-live",
         "schedule" :{
-          "day": "19",
-          "month":"Oct",
-          "year":"2020",
+          "day": "",
+          "month":"Abril",
+          "year":"2021",
           "hour":"7:00 - 10:00 pm",
           "days":"Lunes a viernes"
        }
@@ -34,31 +34,19 @@
     }
   ,
   "python": {
-    "name":"Bootcamp FullStack con",
+    "name":"Bootcamp Web Developer +",
     "language":"Python",
     "description": "Desarrollarás una web app completa orientada al Back End con Python y Javascript",
     "duration":"21 semanas",
     "modalities": [
       {
-        "name":"Lifetime",
-        "description": "Acceso de por vida a Kodemia",
-        "link": "/python-live",
-        "schedule": {
-          "day": "19",
-          "month":"Oct",
-          "year":"2020",
-          "hour":"7:00 - 10:00 pm",
-          "days":"Lunes a viernes"
-        }
-      },
-      {
         "name": "Live",
         "description": "Aprende sin salir de casa",
         "link": "/python-live",
         "schedule" :{
-          "day": "19",
-          "month":"Oct",
-          "year":"2020",
+          "day": "15",
+          "month":"Marzo",
+          "year":"2021",
           "hour":"7:00 - 10:00 pm",
           "days":"Lunes a viernes"
        }
