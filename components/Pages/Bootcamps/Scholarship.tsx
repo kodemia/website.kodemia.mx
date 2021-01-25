@@ -18,7 +18,7 @@ export default function Scholarship () {
             </p>
           </div>
           <div className='column is-flex is-align-items-center scholarship-button'>
-            <Button label='Quiero una beca' isPrimary />
+            <Button label='Quiero una beca' href='/aplicar' isPrimary />
           </div>
         </div>
       </div>

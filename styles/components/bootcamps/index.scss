@@ -1,0 +1,42 @@
+@import './career-coach';
+@import './certifications';
+@import './data-manipulation';
+@import './goals';
+@import './hero';
+@import './hero-card';
+@import './investment';
+@import './metrics';
+@import './metric-card';
+@import './program';
+@import './program-module';
+@import './scholarship';
+@import './support';
+@import './workshops';
+
+#javascript-live-page {
+  .investment {
+    .investment-container {
+      background: linear-gradient(0deg, $black, rgba(22, 22, 22, 0.468));
+    }
+  }
+
+  .scholarship {
+    background-color: $black-primary;
+  }
+}
+
+#python-live-page {
+  .career-coach {
+    background-color: $black-primary;
+  }
+
+  .investment {
+    .investment-container {
+      background: linear-gradient(0deg, $black-primary, rgba(22, 22, 22, 0.468));
+    }
+  }
+
+  .support {
+    background-color: $black-primary;
+  }
+}
