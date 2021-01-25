@@ -1,0 +1,76 @@
+.class-card {
+  padding: 10px 0;
+  position: relative;
+
+  .poster-container {
+    .poster {
+      width: 336px;
+
+      @include on-mobile {
+        width: 100%;
+      }
+
+      @include on-tablet {
+        width: auto;
+      }
+    }
+  }
+
+  .icon-container {
+    background-color: $black-transparent-hero;
+    display: flex;
+    height: calc(100% - 100px);
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 336px;
+
+    @include on-mobile {
+      width: 100%;
+    }
+
+    @include on-tablet {
+      width: 100%;
+    }
+
+    %ikon {
+      width: 50px;
+    }
+
+    .icon-play {
+      @extend %ikon;
+
+      display: block;
+    }
+
+    .icon-play-blue {
+      @extend %ikon;
+
+      display: none;
+    }
+
+    &:hover {
+      .icon-play {
+        display: none;
+      }
+
+      .icon-play-blue {
+        display: block;
+      }
+    }
+  }
+
+  .data-container {
+    height: 100px;
+
+    .class-title {
+      color: $primary;
+      font-size: 22px;
+    }
+
+    .class-date {
+      color: $text;
+      font-size: 18px;
+    }
+  }
+}
