@@ -3,10 +3,9 @@
   background-color: $black-primary;
 
   .clase-container {
-    margin: 0 49px;
     max-width: $content-max-width;
-    min-width: $content-min-width;
-    padding: 150px 0 60px;
+    padding: 150px 25px 60px;
+    width: 100%;
 
     @include on-mobile {
       height: 100%;
