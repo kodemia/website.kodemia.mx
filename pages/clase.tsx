@@ -1,39 +1,48 @@
-import React, { useEffect } from 'react'
-import dynamic from 'next/dynamic'
-import Router from 'next/router'
+import React, { useEffect, useState } from 'react'
+import Router, { useRouter } from 'next/router'
 
 // My components
 import Navbar from '../components/Navbar'
-
 import Footer from '../components/Footer'
+import Klass from '../components/Pages/Classes/Klass'
+import { getClasses } from '../lib/api'
 
-const Klass = dynamic({
-  modules: () => {
-    return {
-      KlassComp: import('../components/Pages/Classes/Klass')
-    }
-  },
-  ssr: false,
-  render: renderKlassNoSrr
-})
+export interface Class {
 
-function renderKlassNoSrr (props, { KlassComp }) {
-  return <KlassComp />
+    date: string
+    description: string
+    generation: object
+    thumbnail: string
+    title: string
+    vimeoId: string
+    _id: string
+
 }
 
 export default function Clase () {
+  const [classes, setClasses] = useState < Array < Class >>([])
+  const [vimeoId, setVimeoId] = useState('')
+  const [isVimeo, setIsVimeo] = useState < Boolean >(false)
+  const router = useRouter()
   useEffect(() => {
+    const classVideoId = router.query.id
+    const isVimeoB = router.query.isVimeo
     const token = window.sessionStorage.getItem('token')
     if (!token) {
       window.sessionStorage.setItem('from', 'clases')
       Router.replace('/login')
     }
-  }, [])
+    setVimeoId(classVideoId)
+    setIsVimeo(isVimeoB)
+    getClasses(token).then(classes => {
+      setClasses(classes)
+    })
+  }, [router.query.id])
   return (
     <div className='clase is-flex is-flex-direction-column is-align-items-center'>
       <Navbar />
       <div className='clase-container'>
-        <Klass />
+        <Klass idVimeo={vimeoId} isVimeo={isVimeo} classes={classes} />
       </div>
       <Footer />
     </div>

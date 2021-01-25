@@ -12,12 +12,12 @@ export interface Props {
     title: string
     vimeoId: string
     _id: string
-    playbackId?: string
+
   }
 }
 
 export default function ClassCard ({ klass }: Props) {
-  const id = klass.playbackId || klass.vimeoId
+  const id = klass.vimeoId
   const isVimeo = !!klass.vimeoId
   const title = klass.title
   const date = dayjs(klass.date).format('DD/MM/YYYY')

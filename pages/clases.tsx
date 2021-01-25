@@ -30,7 +30,6 @@ export default function Classes () {
     }
 
     getClasses(token).then(classes => {
-      console.log(classes)
       setClasses(classes)
     })
   }, [])
