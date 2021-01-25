@@ -12,7 +12,7 @@ import TransformYourLife from '../components/Pages/Home/TransformYourLife'
 import WhyKodemia from '../components/Pages/Home/WhyKodemia'
 import WhatGoingAchieve from '../components/Pages/Home/WhatGoingAchieve'
 import KodemiaExperience from '../components/Pages/Home/KodemiaExperience'
-import SEO from 'components/SEO'
+import Seo from 'components/SEO'
 
 // Data
 import AlliesData from '../config/allies-data.json'
@@ -27,7 +27,7 @@ import ExperienceData from '../config/experiencie-data.json'
 export default function Home () {
   return (
     <>
-      <SEO />
+      <Seo />
       <Navbar />
       <Hero />
       <WhyKodemia infoCards={WhyKodemiaCards.cards} />

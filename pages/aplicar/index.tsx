@@ -8,7 +8,7 @@ import DescriptionParagraph from 'components/DescriptionParagraph'
 import H2 from 'components/H2'
 import H3 from 'components/H3'
 import ApplyForm from 'components/ApplyForm'
-import SEO from 'components/SEO'
+import Seo from 'components/SEO'
 
 export default function Aplicar () {
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Aplicar () {
 
   return (
     <>
-      <SEO />
+      <Seo />
       <NavBar />
       <div className='section' id='aplicar'>
         <div className='container'>

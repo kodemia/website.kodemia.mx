@@ -7,7 +7,7 @@ import H2 from '../components/H2'
 import H3 from '../components/H3'
 import ClassCard from '../components/Pages/Classes/ClassCard'
 import Footer from '../components/Footer'
-import SEO from 'components/SEO'
+import Seo from 'components/SEO'
 
 import { getClasses } from '../lib/api'
 
@@ -38,7 +38,7 @@ export default function Classes () {
 
   return (
     <div className='classes'>
-      <SEO />
+      <Seo />
       <Navbar />
       <div className='columns is-multiline classes-container'>
         <div className='column is-full classes-bg'>

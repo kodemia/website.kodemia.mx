@@ -12,7 +12,7 @@ import Scholarship from '../../components/Pages/Bootcamps/Scholarship'
 import Support from 'components/Pages/Bootcamps/Support'
 import Testimonials from '../../components/Pages/Home/Testimonials'
 import TransformYourLife from '../../components/Pages/Home/TransformYourLife'
-import SEO from 'components/SEO'
+import Seo from 'components/SEO'
 
 // Data
 import GoalsData from '../../config/bootcamps/goals.json'
@@ -26,7 +26,7 @@ import TestimonialData from '../../config/testimonials-data.json'
 export default function JavascriptLive () {
   return (
     <>
-      <SEO
+      <Seo
         title='Kodemia | Bootcamp FullStack con Javascript'
       />
       <Navbar />
