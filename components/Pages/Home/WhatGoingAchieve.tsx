@@ -14,7 +14,7 @@ export interface Props {
   winnerImages: Array<Image>
 }
 
-export default function WhatGoingAchieve({ winnerImages }: Props) {
+export default function WhatGoingAchieve ({ winnerImages }: Props) {
   const [activeImageIndex, setActiveImageIndex] = useState(0)
 
   return (
@@ -61,12 +61,10 @@ export default function WhatGoingAchieve({ winnerImages }: Props) {
                       key={`step-${index}`}
                       src={step.image}
                       alt='winner images'
-                      className={
-                        classnames(
-                          'slide-item',
-                          { 'is-active': activeImageIndex === index }
-                        )
-                      }
+                      className={classnames(
+                        'slide-item',
+                        { 'is-active': activeImageIndex === index }
+                      )}
                     />
                   ))
                 }
