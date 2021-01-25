@@ -4,7 +4,7 @@ import { GetServerSidePropsContext } from 'next'
 type Bootcamp = 'javascript-live' | 'python-live'
 type Version = 'desktop' | 'mobile'
 
-export default function Bootcamp () {
+export default function BootcampPage () {
   return null
 }
 
@@ -25,6 +25,6 @@ export function getServerSideProps (context: GetServerSidePropsContext) {
   const version: Version = context?.params?.version as Version ?? 'mobile'
 
   context.res
-    .writeHead(302, { 'Location':  bootcampsMap[bootcamp][version] })
+    .writeHead(302, { Location: bootcampsMap[bootcamp][version] })
     .end()
 }
