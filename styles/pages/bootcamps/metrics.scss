@@ -1,0 +1,27 @@
+.metrics {
+  background-color: $black-primary;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .metrics-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 100px 0;
+    max-width: $content-max-width;
+    min-width: $content-min-width;
+    width: 100%;
+
+    @include on-mobile {
+      grid-template-columns: 1fr;
+      min-width: 100%;
+      padding: 0 45px;
+    }
+
+    @include on-tablet {
+      grid-template-columns: 1fr 1fr;
+      min-width: 100%;
+      padding: 0 85px;
+    }
+  }
+}

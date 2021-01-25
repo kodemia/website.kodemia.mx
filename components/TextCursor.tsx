@@ -4,13 +4,15 @@ import React from 'react'
 import classNames from 'classnames'
 
 export interface Props {
-  text: string;
-  white?: Boolean
+  text?: string;
+  white?: Boolean,
+  children?: React.ReactNode
 }
 
 export default function TextCursor ({
-  text,
-  white
+  text = '',
+  white,
+  children
 }: Props) {
   const cursorClass = classNames({
     'white-cursor': white,
@@ -27,10 +29,13 @@ export default function TextCursor ({
 
   return (
     <>
-      <span className={textClass}>{` ${newText}`}</span>
-      <span className={cursorClass}>
-        {characterCursor}
-      </span>
+      <>
+        {!children && <span className={textClass}>{` ${newText}`}</span>}
+        <span className={cursorClass}>
+          {children && children}
+          {!children && characterCursor}
+        </span>
+      </>
     </>
   )
 };

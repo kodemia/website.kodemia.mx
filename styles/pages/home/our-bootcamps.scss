@@ -1,65 +1,81 @@
 
 .our-bootcamps {
-  max-width: $content-max-width;
-  padding: 100px 0 40px;
-
   @include on-mobile {
     margin: 0 45px;
   }
 
   @include on-tablet {
+    margin: 0;
     padding: 110px 85px;
     width: 100%;
   }
 
-  .bootcamp {
-    display: grid;
-    grid-column-gap: 55px;
-    grid-template-columns: 1fr 2fr;
+  .our-bootcamps-container {
+    margin: auto;
+    max-width: $content-max-width;
+    min-width: $content-min-width;
+    padding: 100px 0 40px;
 
     @include on-mobile {
-      grid-template-columns: 1fr;
+      margin: 0;
+      min-width: 100%;
     }
 
     @include on-tablet {
-      grid-template-columns: 1fr;
+      min-width: 100%;
+      padding: 0;
+      width: 100%;
     }
 
-    .modalities-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
+    .bootcamp {
+      display: grid;
+      grid-column-gap: 55px;
+      grid-template-columns: 1fr 2fr;
 
       @include on-mobile {
-        flex-direction: column;
-        padding-left: 0;
+        grid-template-columns: 1fr;
       }
 
       @include on-tablet {
-        padding-left: 0;
+        grid-template-columns: 1fr;
       }
 
-      .modality {
-        margin: 20px 0;
-        width: 50%;
+      .modalities-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
 
         @include on-mobile {
-          width: 100%;
+          flex-direction: column;
+          padding-left: 0;
         }
 
         @include on-tablet {
-          width: 50%;
+          padding-left: 0;
         }
 
-        &:first-child {
-          margin-right: 30px;
+        .modality {
+          margin: 20px 0;
+          width: 50%;
 
           @include on-mobile {
-            margin-right: 0;
+            width: 100%;
           }
 
           @include on-tablet {
-            margin-right: 25px;
+            width: 50%;
+          }
+
+          &:first-child {
+            margin-right: 30px;
+
+            @include on-mobile {
+              margin-right: 0;
+            }
+
+            @include on-tablet {
+              margin-right: 25px;
+            }
           }
         }
       }

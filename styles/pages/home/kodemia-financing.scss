@@ -58,17 +58,5 @@
       margin: 32px 0 37px;
       max-width: 729px;
     }
-
-    .btn-container {
-      width: 336px;
-
-      @include on-mobile {
-        width: 100%;
-      }
-
-      @include on-tablet {
-        width: 100%;
-      }
-    }
   }
 }

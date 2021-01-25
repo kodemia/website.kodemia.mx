@@ -9,7 +9,7 @@
       {
         "name":"Lifetime",
         "description": "Acceso de por vida a Kodemia",
-        "link": "/",
+        "link": "/javascript-live",
         "schedule": {
           "day": "19",
           "month":"Oct",
@@ -21,7 +21,7 @@
       {
         "name": "Live",
         "description": "Aprende sin salir de casa",
-        "link": "/",
+        "link": "/javascript-live",
         "schedule" :{
           "day": "19",
           "month":"Oct",
@@ -42,7 +42,7 @@
       {
         "name":"Lifetime",
         "description": "Acceso de por vida a Kodemia",
-        "link": "/",
+        "link": "/python-live",
         "schedule": {
           "day": "19",
           "month":"Oct",
@@ -54,7 +54,7 @@
       {
         "name": "Live",
         "description": "Aprende sin salir de casa",
-        "link": "/",
+        "link": "/python-live",
         "schedule" :{
           "day": "19",
           "month":"Oct",

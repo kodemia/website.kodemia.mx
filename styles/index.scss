@@ -29,11 +29,28 @@ a {
 body {
   color: $primary;
   font-family: 'Poppins', sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $black;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gray-primary;
+    border-radius: 10px;
+
+    &:hover {
+      background: $cyan;
+    }
+  }
 }
 
 .page-container {
   align-items: center;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   justify-content: center;
 }

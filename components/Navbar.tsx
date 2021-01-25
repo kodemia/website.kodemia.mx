@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
 // my components
-import Button from './Button'
-import NavbarItems from '../config/navbar-items.json'
+import Button from 'components/Button'
+import NavbarItems from 'config/navbar-items.json'
 
 export default function Navbar () {
   const [isActive, setIsActive] = useState(false)
@@ -51,10 +51,10 @@ export default function Navbar () {
             </div>
             <div className='btns'>
               <div className='btn-sign-in'>
-                <Button label='Iniciar sesión' />
+                <Button label='Iniciar sesión' link='/login' />
               </div>
               <div className='btn-apply'>
-                <Button isPrimary label='Aplica hoy' />
+                <Button isPrimary label='Aplica hoy' link='/aplicar' />
               </div>
             </div>
           </div>
