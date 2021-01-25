@@ -38,7 +38,7 @@ export default function Thankyou (props: Props) {
                         isPrimary
                         label='Descarga el Brochure'
                         icon='/icons/download.svg'
-                        href={`/brochure/${props.bootcamp}`}
+                        link={`/brochures/${props.bootcamp}`}
                       />
                     </div>
                   </div>
