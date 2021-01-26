@@ -109,10 +109,10 @@
         }
 
         .social-media {
-          padding: 0 66px 0 0;
           display: flex;
           flex-wrap: wrap;
-          
+          padding: 0 66px 0 0;
+
           @include on-mobile {
             justify-content: center;
             margin: 40px 0 20px;
