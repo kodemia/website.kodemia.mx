@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
 // my components
@@ -8,6 +8,11 @@ import NavbarItems from 'config/navbar-items.json'
 
 export default function Navbar () {
   const [isActive, setIsActive] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  useEffect(() => {
+    setIsLoggedIn(!!window?.sessionStorage?.getItem('token'))
+  })
+
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
       <div className='container'>
@@ -40,9 +45,13 @@ export default function Navbar () {
           <div className='navbar-end'>
             <div className='navbar-item'>
               {
-                NavbarItems.map(({ name, href }, index) => (
+                NavbarItems.map(({ name, href, onlyLoggedIn }, index) => (
                   <Link href={href} key={index}>
-                    <a className='navbar-item'>
+                    <a className={classNames(
+                      'navbar-item',
+                      { 'is-hidden': onlyLoggedIn && !isLoggedIn }
+                    )}
+                    >
                       {name}
                     </a>
                   </Link>

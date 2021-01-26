@@ -5,6 +5,7 @@
   },
   {
     "name": "Alumnos",
-    "href": "/login"
+    "href": "/login",
+    "onlyLoggedIn": true
   }
 ]
