@@ -45,7 +45,7 @@ export default function Navbar () {
           <div className='navbar-end'>
             <div className='navbar-item'>
               {
-                NavbarItems.map(({ name, href }, index) => (
+                NavbarItems.map(({ name, href, onlyLoggedIn }, index) => (
                   <Link href={href} key={index}>
                     <a className={classNames(
                       'navbar-item',
