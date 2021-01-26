@@ -55,8 +55,8 @@ export default function Classes () {
 
           <div className='columns is-multiline  classes-cards'>
             {
-              classes.length===0 &&
-              <progress className="progress is-small is-info" max="100">15%</progress>
+              classes.length === 0 &&
+                <progress className='progress is-small is-info' max='100'>15%</progress>
             }
             {
               classes.map((klass, index) => (
