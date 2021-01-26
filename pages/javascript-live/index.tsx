@@ -43,7 +43,6 @@ export default function JavascriptLive () {
         <Support image={SupportData.image} infoCards={SupportData.cards} />
         <TransformYourLife />
       </section>
-
       <Footer />
     </>
   )

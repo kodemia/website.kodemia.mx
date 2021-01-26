@@ -1,11 +1,8 @@
 
 import React from 'react'
 // My components
-
 import HeroCard from './HeroCard'
 import BgVideo from '../../BgVideo'
-
-// import BgVideoSrc from 'config/bootcamps/bg-video-src.json'
 
 export interface Information {
   title: string
@@ -40,6 +37,5 @@ export default function JavascriptLive ({ bootcamp, video }:Props) {
         </div>
       </div>
     </div>
-
   )
 }

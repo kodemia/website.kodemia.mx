@@ -12,7 +12,6 @@ import Testimonials from '../components/Pages/Home/Testimonials'
 import TransformYourLife from '../components/Pages/Home/TransformYourLife'
 import WhatGoingAchieve from '../components/Pages/Home/WhatGoingAchieve'
 import WhyKodemia from '../components/Pages/Home/WhyKodemia'
-
 // Data
 import AlliesData from '../config/allies-data.json'
 import BgVideoSrc from 'config/bg-video-src.json'
@@ -42,7 +41,6 @@ export default function Home () {
       <AlliancesKodemia allies={AlliesData} />
       <Testimonials testimonials={TestimonialData} />
       <TransformYourLife />
-
       <Footer />
     </>
   )

@@ -3,9 +3,9 @@ import _ from 'lodash'
 
 import H2 from '../../H2'
 import H3 from '../../H3'
-import CareerData from '../../../config/bootcamps/career-data.json'
-
 import InfoCard from '../../InfoCard'
+
+import CareerData from '../../../config/bootcamps/career-data.json'
 
 export default function CareerCoach () {
   const [first, second] = _.chunk(CareerData.cards, 4)
@@ -18,7 +18,7 @@ export default function CareerCoach () {
           <H2 whiteText='Parte de lo que lograrás con el' cyanText='Career Coach' />
         </div>
         <div className='first'>
-          <div className='img-cont'>
+          <div className='img-cont' id='first-img'>
             <img className='image' src={CareerData.image1} alt='Desarrollo profesional' />
           </div>
           <div className='cards'>
@@ -51,7 +51,7 @@ export default function CareerCoach () {
               })
             }
           </div>
-          <div className='img-cont'>
+          <div className='img-cont' id='second-img'>
             <img className='image' src={CareerData.image2} alt='Career coach' />
           </div>
         </div>

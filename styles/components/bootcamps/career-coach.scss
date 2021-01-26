@@ -79,17 +79,8 @@
 
     .img-cont {
       grid-area: image;
-      height: 560px;
       width: 100%;
-
-      @include on-mobile {
-        height: 420px;
-      }
-
-      @include on-tablet {
-        height: 430px;
-      }
-
+      
       .image {
         border-radius: 10px;
         height: 100%;
@@ -97,6 +88,30 @@
         max-height: 100%;
         object-fit: cover;
         width: 100%;
+      }
+    }
+    
+    #first-img {
+      height: 370px;
+
+      @include on-mobile {
+        height: 420px;
+      }
+      
+      @include on-tablet {
+        height: 420px;
+      }
+    }
+
+    #second-img {
+      height: 478px;
+
+      @include on-mobile {
+        height: 420px;
+      }
+      
+      @include on-tablet {
+        height: 420px;
       }
     }
 
