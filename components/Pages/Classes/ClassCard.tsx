@@ -5,13 +5,13 @@ import dayjs from 'dayjs'
 
 export interface Props {
   klass: {
-  date: string
-  description: string
-  generation: object
-  thumbnail: string
-  title: string
-  vimeoId: string
-  _id: string
+    date: string
+    description: string
+    generation: object
+    thumbnail: string
+    title: string
+    vimeoId: string
+    _id: string
   }
 }
 
