@@ -52,7 +52,12 @@ export default function Classes () {
           </div>
         </div>
         <div className='column is-flex is-justify-content-center classes-wrapper'>
-          <div className='columns is-multiline classes-cards'>
+
+          <div className='columns is-multiline  classes-cards'>
+            {
+              classes.length===0 &&
+              <progress className="progress is-small is-info" max="100">15%</progress>
+            }
             {
               classes.map((klass, index) => (
                 <div
