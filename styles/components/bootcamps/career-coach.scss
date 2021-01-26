@@ -80,7 +80,7 @@
     .img-cont {
       grid-area: image;
       width: 100%;
-      
+
       .image {
         border-radius: 10px;
         height: 100%;
@@ -90,14 +90,14 @@
         width: 100%;
       }
     }
-    
+
     #first-img {
       height: 370px;
 
       @include on-mobile {
         height: 420px;
       }
-      
+
       @include on-tablet {
         height: 420px;
       }
@@ -109,7 +109,7 @@
       @include on-mobile {
         height: 420px;
       }
-      
+
       @include on-tablet {
         height: 420px;
       }
