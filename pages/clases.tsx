@@ -8,7 +8,7 @@ import H3 from '../components/H3'
 import ClassCard from '../components/Pages/Classes/ClassCard'
 import Footer from '../components/Footer'
 import Seo from 'components/SEO'
-
+// api
 import { getClasses } from '../lib/api'
 
 export interface Class {
@@ -31,7 +31,6 @@ export default function Classes () {
     }
 
     getClasses(token).then(classes => {
-      console.log(classes)
       setClasses(classes)
     })
   }, [])
@@ -46,18 +45,26 @@ export default function Classes () {
             <div className='wrapper is-flex is-flex-direction-column is-justify-content-center'>
               <H3 text='Clases Kodemia' />
               <div className='h2'>
-                <H2 whiteText='No te pierdas' cyanText='ninguna' />
+                <H2
+                  whiteText='No te pierdas'
+                  cyanText='ninguna'
+                />
               </div>
             </div>
           </div>
-
         </div>
         <div className='column is-flex is-justify-content-center classes-wrapper'>
-          <div className='columns is-multiline classes-cards'>
+
+          <div className='columns is-multiline  classes-cards'>
+            {
+              classes.length === 0 &&
+                <progress className='progress is-small is-info' max='100'>15%</progress>
+            }
             {
               classes.map((klass, index) => (
                 <div
-                  key={`class-${index}`} className='column is-4-desktop is-6-tablet is-flex is-justify-content-center'
+                  key={`class-${index}`}
+                  className='column is-4-desktop is-6-tablet is-flex is-justify-content-center'
                 >
                   <ClassCard klass={klass} />
                 </div>
