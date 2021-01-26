@@ -13,6 +13,7 @@ import Support from 'components/Pages/Bootcamps/Support'
 import Testimonials from '../../components/Pages/Home/Testimonials'
 import TransformYourLife from '../../components/Pages/Home/TransformYourLife'
 // Data
+import BgVideoSrc from 'config/bg-video-src.json'
 import GoalsData from '../../config/bootcamps/goals.json'
 import HeroData from '../../config/bootcamps/hero-data.json'
 import InvestmentData from '../../config/bootcamps/investment.json'
@@ -26,7 +27,7 @@ export default function PythonLive () {
     <>
       <Navbar />
       <section id='python-live-page'>
-        <Hero bootcamp={HeroData.python} />
+        <Hero bootcamp={HeroData.python} video={BgVideoSrc.python} />
         <Metrics metrics={MetricsBootcamps.python} />
         <Goals infoCards={GoalsData.cards} />
         <Program
