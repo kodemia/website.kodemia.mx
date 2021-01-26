@@ -109,14 +109,26 @@
         }
 
         .social-media {
-          position: relative;
-
+          padding: 0 66px 0 0;
+          display: flex;
+          flex-wrap: wrap;
+          
           @include on-mobile {
+            justify-content: center;
             margin: 40px 0 20px;
+            padding: 0 25px;
           }
 
           .item-sm {
             margin: 0 10px;
+
+            @include on-mobile {
+              margin: 0 10px 8px;
+            }
+
+            @include on-tablet {
+              margin: 0 10px 8px;
+            }
 
             img {
               width: 25.6px;
