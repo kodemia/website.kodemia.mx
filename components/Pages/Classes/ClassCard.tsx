@@ -26,10 +26,11 @@ export default function ClassCard ({ klass }: Props) {
       <div className='poster-container'>
         <img
           src={klass.thumbnail}
-          className='poster' />
+          className='poster'
+        />
       </div>
       <Link href={{ pathname: '/clase', query: { id, title, isVimeo } }}>
-        <div className='icon-container' >
+        <div className='icon-container'>
           <img
             src='/icons/icon-video.svg'
             alt='play-class-bootcamp'

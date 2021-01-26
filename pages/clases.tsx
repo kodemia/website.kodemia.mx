@@ -45,7 +45,8 @@ export default function Classes () {
               <div className='h2'>
                 <H2
                   whiteText='No te pierdas'
-                  cyanText='ninguna' />
+                  cyanText='ninguna'
+                />
               </div>
             </div>
           </div>
