@@ -1,18 +1,19 @@
+
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import dayjs from 'dayjs'
+// My components
 import VideoPlayer from './VideoPlayer'
 import ClassCard from './ClassCard'
 
 export interface Classes {
-
-    date: string
-    description: string
-    generation: object
-    thumbnail: string
-    title: string
-    vimeoId: string
-    _id: string
+  date: string
+  description: string
+  generation: object
+  thumbnail: string
+  title: string
+  vimeoId: string
+  _id: string
 }
 
 export interface Props {
@@ -54,28 +55,36 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
     setActiveClassIndex(previousIndex)
     const id = classes[activeClassIndex].vimeoId
     const title = classes[activeClassIndex].title
-    router.push({
-      pathname: '/clase',
-      query: { id, title, isVimeo }
-    })
+    router.push(
+      {
+        pathname: '/clase',
+        query: { id, title, isVimeo }
+      }
+    )
   }
 
   return (
     <div className='klass'>
       <div className='columns is-multiline klass-container'>
         <div className='column is-full-tablet  is-8-desktop video-player'>
-          <VideoPlayer id={idVimeo} isVimeo={isVimeo} />
+          <VideoPlayer
+            id={idVimeo}
+            isVimeo={isVimeo}
+          />
           <div className='video-data-btns'>
-
-            {currentClass.map((klass, index) => (
-              <div key={`title-date-${index}`} className='video-data'>
-                <h6 className='class-title'>{klass.title}</h6>
-                <p className='class-date'>Fecha:
-                  {dayjs(klass.date).format('DD/MM/YYYY')}
-                </p>
-              </div>
-            ))}
-
+            {
+              currentClass.map((klass, index) => (
+                <div key={`title-date-${index}`} className='video-data'>
+                  <h6 className='class-title'>
+                    {klass.title}
+                  </h6>
+                  <p className='class-date'>
+                    Fecha:
+                    {dayjs(klass.date).format('DD/MM/YYYY')}
+                  </p>
+                </div>
+              ))
+            }
             <div className='container-btns'>
               <a
                 className='btn-ikon'
@@ -89,9 +98,7 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
                   width={30}
                 />
                 <p className='text'>Anterior</p>
-
               </a>
-
               <a
                 className='btn-ikon'
                 onClick={() => next()}
@@ -104,11 +111,9 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
                   onClick={() => next()}
                   width={30}
                 />
-
               </a>
             </div>
           </div>
-
         </div>
         <div className='column next-classes'>
           {
