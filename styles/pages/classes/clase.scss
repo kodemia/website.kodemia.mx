@@ -15,13 +15,20 @@
       overflow: none;
       padding: 100px 45px 60px;
     }
+
+    @include on-tablet {
+      padding: 100px 73px 60px;
+    }
   }
 
   .next-classes {
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
+    padding-top: 0;
 
     @include on-mobile {
+      margin-left: 0;
       padding: 0;
       width: 100%;
     }
@@ -30,6 +37,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-left: 0;
 
       .class-video {
         width: 40%;

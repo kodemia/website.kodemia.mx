@@ -18,6 +18,10 @@
 
     &::-webkit-scrollbar {
       width: 6px;
+
+      @include on-mobile {
+        width: 0;
+      }
     }
 
     &::-webkit-scrollbar-track {
@@ -41,7 +45,7 @@
       }
 
       .video-data-btns {
-        align-items: flex-end;
+        align-items: center;
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
@@ -57,7 +61,11 @@
 
           .class-title {
             color: $primary;
-            font-size: 22px;
+            font-size: 26px;
+
+            @include on-mobile {
+              font-size: 22px;
+            }
           }
 
           .class-date {

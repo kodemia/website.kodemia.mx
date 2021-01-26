@@ -6,8 +6,7 @@ import applySchema from 'schemas/applyForm.schema'
 
 type ApplyFormData = zod.infer<typeof applySchema>
 
-//const baseURL = process.env.API_URL
-const baseURL = 'https://api-kodemia-mx.vercel.app'
+const baseURL = process.env.API_URL
 
 const api = axios.create({ baseURL })
 
