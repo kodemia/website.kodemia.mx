@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+import { useRouter } from 'next/router'
+import dayjs from 'dayjs'
 import VideoPlayer from './VideoPlayer'
 import ClassCard from './ClassCard'
 
@@ -21,12 +22,13 @@ export interface Props {
 }
 
 export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
-  const position = classes.findIndex(klass => klass.vimeoId === idVimeo)
-  const showClasses = classes.filter(klass => klass.vimeoId !== idVimeo)
-
   const [activeClassIndex, setActiveClassIndex] = useState(0)
 
-  const [changeVideo, setChangeVideo] = useState({})
+  const position = classes.findIndex(klass => klass.vimeoId === idVimeo)
+  const showClasses = classes.filter(klass => klass.vimeoId !== idVimeo)
+  const currentClass = classes.filter(klass => klass.vimeoId === idVimeo)
+
+  const router = useRouter()
 
   const next = () => {
     setActiveClassIndex(position)
@@ -34,8 +36,14 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
       ? 0
       : activeClassIndex + 1
     setActiveClassIndex(nextIndex)
-    setChangeVideo(classes[activeClassIndex])
-    console.log(changeVideo)
+    const id = classes[activeClassIndex].vimeoId
+    const title = classes[activeClassIndex].title
+    router.push(
+      {
+        pathname: '/clase',
+        query: { id, title, isVimeo }
+      }
+    )
   }
 
   const previous = () => {
@@ -44,8 +52,12 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
       ? classes.length - 1
       : activeClassIndex - 1
     setActiveClassIndex(previousIndex)
-    setChangeVideo(classes[activeClassIndex])
-    console.log(changeVideo)
+    const id = classes[activeClassIndex].vimeoId
+    const title = classes[activeClassIndex].title
+    router.push({
+      pathname: '/clase',
+      query: { id, title, isVimeo }
+    })
   }
 
   return (
@@ -53,22 +65,48 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
       <div className='columns is-multiline klass-container'>
         <div className='column is-full-tablet  is-8-desktop video-player'>
           <VideoPlayer id={idVimeo} isVimeo={isVimeo} />
-          <div className='container-buttons'>
-            <img
-              className='back'
-              src='/icons/icon-back.svg'
-              alt='back'
-              onClick={() => previous()}
-              width={20}
-            />
+          <div className='video-data-btns'>
 
-            <img
-              className='forward'
-              src='/icons/icon-forward.svg'
-              alt='forward'
-              onClick={() => next()}
-              width={20}
-            />
+            {currentClass.map((klass, index) => (
+              <div key={`title-date-${index}`} className='video-data'>
+                <h6 className='class-title'>{klass.title}</h6>
+                <p className='class-date'>Fecha:
+                  {dayjs(klass.date).format('DD/MM/YYYY')}
+                </p>
+              </div>
+            ))}
+
+            <div className='container-btns'>
+              <a
+                className='btn-ikon'
+                onClick={() => previous()}
+              >
+                <img
+                  className='ikon'
+                  src='/icons/icon-back.svg'
+                  alt='back'
+                  onClick={() => previous()}
+                  width={30}
+                />
+                <p className='text'>Anterior</p>
+
+              </a>
+
+              <a
+                className='btn-ikon'
+                onClick={() => next()}
+              >
+                <p className='text'>Siguiente</p>
+                <img
+                  className='ikon'
+                  src='/icons/icon-forward.svg'
+                  alt='forward'
+                  onClick={() => next()}
+                  width={30}
+                />
+
+              </a>
+            </div>
           </div>
 
         </div>

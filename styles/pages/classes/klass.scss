@@ -2,8 +2,36 @@
   width: 100%;
 
   .klass-container {
+    height: 600px;
     margin: 0;
+    overflow-y: scroll;
     width: 100%;
+
+    @include on-mobile {
+      height: 100%;
+      overflow-y: none;
+    }
+
+    @include on-tablet {
+      height: 800px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $black;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $gray-primary;
+      border-radius: 10px;
+
+      &:hover {
+        background: $cyan;
+      }
+    }
 
     .video-player {
       @include on-mobile {
@@ -11,14 +39,75 @@
         padding: 0;
         width: 100%;
       }
+
+      .video-data-btns {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        @include on-mobile {
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .video-data {
+          display: inline;
+
+          .class-title {
+            color: $primary;
+            font-size: 22px;
+          }
+
+          .class-date {
+            color: $text;
+            font-size: 18px;
+            margin-top: 10px;
+          }
+        }
+
+        .container-btns {
+          display: flex;
+
+          .btn-ikon {
+            align-items: center;
+            background-color: transparent;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: 2px;
+            color: $primary;
+            cursor: pointer;
+            display: flex;
+            font-size: 16px;
+            font-weight: 500;
+            justify-content: center;
+            margin: 10px;
+            padding: 6.5px 10px;
+            text-align: center;
+            transition: all 0.4s ease;
+            width: 150px;
+
+            @include on-mobile {
+              width: 80px;
+            }
+
+            &:hover {
+              border-color: $primary-btn-hover;
+            }
+
+            .ikon {
+              padding: 0 5px;
+            }
+
+            .text {
+              @include on-mobile {
+                display: none;
+              }
+            }
+          }
+        }
+      }
     }
-  }
-}
-
-.vimeo {
-  width: 100%;
-
-  @include on-mobile {
-    width: auto;
   }
 }
