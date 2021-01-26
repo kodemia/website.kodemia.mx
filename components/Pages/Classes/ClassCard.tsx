@@ -12,12 +12,11 @@ export interface Props {
     title: string
     vimeoId: string
     _id: string
-    playbackId?: string
   }
 }
 
 export default function ClassCard ({ klass }: Props) {
-  const id = klass.playbackId || klass.vimeoId
+  const id = klass.vimeoId
   const isVimeo = !!klass.vimeoId
   const title = klass.title
   const date = dayjs(klass.date).format('DD/MM/YYYY')
@@ -25,18 +24,21 @@ export default function ClassCard ({ klass }: Props) {
   return (
     <div className='class-card'>
       <div className='poster-container'>
-        <img src={klass.thumbnail} className='poster' />
+        <img
+          src={klass.thumbnail}
+          className='poster'
+        />
       </div>
       <Link href={{ pathname: '/clase', query: { id, title, isVimeo } }}>
-        <div
-          className='icon-container'
-        >
+        <div className='icon-container'>
           <img
-            src='/icons/icon-video.svg' alt=''
+            src='/icons/icon-video.svg'
+            alt='play-class-bootcamp'
             className='icon-play'
           />
           <img
-            src='/icons/icon-video-blue.svg' alt=''
+            src='/icons/icon-video-blue.svg'
+            alt='play-class-bootcamp'
             className='icon-play-blue'
           />
         </div>
@@ -45,7 +47,6 @@ export default function ClassCard ({ klass }: Props) {
         <h6 className='class-title'>{klass.title}</h6>
         <p className='class-date'>Fecha: {date}</p>
       </div>
-
     </div>
   )
 }

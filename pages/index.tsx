@@ -1,4 +1,4 @@
-import Head from 'next/head'
+
 // My components
 import AlliancesKodemia from '../components/Pages/Home/AlliancesKodemia'
 import Footer from '../components/Footer'
@@ -8,6 +8,7 @@ import KodemiaFinancing from '../components/Pages/Home/KodemiaFinancing'
 import Navbar from '../components/Navbar'
 import OurBootcamps from '../components/Pages/Home/OurBootcamps'
 import OurMethod from '../components/Pages/Home/OurMethod'
+import Seo from 'components/SEO'
 import Testimonials from '../components/Pages/Home/Testimonials'
 import TransformYourLife from '../components/Pages/Home/TransformYourLife'
 import WhatGoingAchieve from '../components/Pages/Home/WhatGoingAchieve'
@@ -26,10 +27,7 @@ import WinnerImages from '../config/winner-images.json'
 export default function Home () {
   return (
     <>
-      <Head>
-        <title>Kodemia</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <Seo />
       <Navbar />
       <Hero video={BgVideoSrc.home} />
       <WhyKodemia infoCards={WhyKodemiaCards.cards} />

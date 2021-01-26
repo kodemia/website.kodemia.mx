@@ -1,0 +1,47 @@
+
+.clase {
+  background-color: $black-primary;
+
+  .clase-container {
+    max-width: $content-max-width;
+    padding: 150px 25px 60px;
+    width: 100%;
+
+    @include on-mobile {
+      height: 100%;
+      margin: 0;
+      max-width: 100%;
+      min-width: 100%;
+      overflow: none;
+      padding: 100px 45px 60px;
+    }
+
+    @include on-tablet {
+      padding: 100px 73px 60px;
+    }
+  }
+
+  .next-classes {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding-top: 0;
+
+    @include on-mobile {
+      margin-left: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    @include on-tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 0;
+
+      .class-video {
+        width: 40%;
+      }
+    }
+  }
+}
