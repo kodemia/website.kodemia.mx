@@ -9,6 +9,6 @@ export default {
   component: Hero
 } as Meta
 
-const Template: Story = () => <Hero />
+const Template: Story = () => <Hero video='' />
 
 export const Styled = Template.bind({})
