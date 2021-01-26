@@ -1,13 +1,17 @@
 
 import React from 'react'
-// my component
+// my components
 import HeroCard from '../../HeroCard'
 import BgVideo from '../../BgVideo'
 
-export default function Hero () {
+export interface Props {
+  video: string
+}
+
+export default function Hero ({ video }: Props) {
   return (
     <div className='hero'>
-      <BgVideo />
+      <BgVideo video={video} />
       <div className='cover'>
         <div className='container'>
           <HeroCard
@@ -22,4 +26,4 @@ export default function Hero () {
       </div>
     </div>
   )
-};
+}

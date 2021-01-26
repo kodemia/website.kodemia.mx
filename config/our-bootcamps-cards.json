@@ -7,26 +7,26 @@
     "duration":"19 semanas",
     "modalities": [
       {
-        "name":"Live",
+        "name":"Modo Live",
         "description": "Aprende sin salir de casa",
         "link": "/javascript-live",
         "schedule": {
           "day": "08",
           "month":"Febrero",
           "year":"2021",
-          "hour":"7:00 - 10:00 pm",
+          "hour":"19:00 - 22:00 hrs.",
           "days":"Lunes a viernes"
         }
       },
       {
-        "name": "Live",
+        "name": "Modo Live",
         "description": "Aprende sin salir de casa",
         "link": "/javascript-live",
         "schedule" :{
           "day": "",
-          "month":"Abril",
+          "month":"Próximamente",
           "year":"2021",
-          "hour":"7:00 - 10:00 pm",
+          "hour":"19:00 - 22:00 hrs.",
           "days":"Lunes a viernes"
        }
       }
@@ -35,19 +35,31 @@
   ,
   "python": {
     "name":"Bootcamp Web Developer +",
-    "language":"Python",
+    "language":"Data",
     "description": "Desarrollarás una web app completa orientada al Back End con Python y Javascript",
     "duration":"21 semanas",
     "modalities": [
       {
-        "name": "Live",
+        "name": "Modo Live",
         "description": "Aprende sin salir de casa",
         "link": "/python-live",
         "schedule" :{
           "day": "15",
           "month":"Marzo",
           "year":"2021",
-          "hour":"7:00 - 10:00 pm",
+          "hour":"19:00 - 22:00 hrs.",
+          "days":"Lunes a viernes"
+       }
+      },
+      {
+        "name": "Modo Live",
+        "description": "Aprende sin salir de casa",
+        "link": "/python-live",
+        "schedule" :{
+          "day": "",
+          "month":"Próximamente",
+          "year":"2021",
+          "hour":"19:00 - 22:00 hrs.",
           "days":"Lunes a viernes"
        }
       }

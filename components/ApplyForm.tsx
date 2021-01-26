@@ -150,7 +150,7 @@ export default function ApplyForm () {
       </div>
 
       <div className='column is-full-desktop is-full-touch'>
-        Al enviar este formulario estas aceptando nuestros <Link href='/terminos-y-condiciones'> Términos y condiciónes </Link>
+        Al enviar este formulario estas aceptando nuestros <Link href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'> Términos y condiciónes </Link>
       </div>
 
       <div className='column is-full-desktop is-full-touch'>

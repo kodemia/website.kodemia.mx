@@ -1,7 +1,6 @@
 
 import React from 'react'
 // My components
-
 import HeroCard from './HeroCard'
 import BgVideo from '../../BgVideo'
 
@@ -17,14 +16,15 @@ export interface Props{
     description: string
     information: Array<Information>
   }
+  video: string
 }
 
-export default function JavascriptLive ({ bootcamp }:Props) {
+export default function JavascriptLive ({ bootcamp, video }:Props) {
   return (
     <div className='hero-bootcamps'>
       <div className='columns hero-container'>
         <div className='column is-full'>
-          <BgVideo />
+          <BgVideo video={video} />
           <div className='columns is-justify-content-center cover'>
             <div className='column  container-card'>
               <HeroCard bootcamp={bootcamp} />
@@ -37,6 +37,5 @@ export default function JavascriptLive ({ bootcamp }:Props) {
         </div>
       </div>
     </div>
-
   )
 }

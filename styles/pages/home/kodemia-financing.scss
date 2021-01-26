@@ -1,6 +1,6 @@
 
 .kodemia-financing {
-  background-image: url('/images/apoyo-kodemia.jpg');
+  background-image: url('/images/kodemia-financing/apoyo-kodemia.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -8,13 +8,13 @@
   width: 100%;
 
   @include on-mobile {
-    background-image: url('/images/apoyo-mobile.jpg');
+    background-image: url('/images/kodemia-financing/apoyo-mobile.jpg');
     background-position: center;
     padding: 0 45px;
   }
 
   @include on-tablet {
-    background-image: url('/images/apoyo-tablet.jpg');
+    background-image: url('/images/kodemia-financing/apoyo-tablet.jpg');
     background-position: center;
     justify-content: flex-start;
     padding: 0 85px;
