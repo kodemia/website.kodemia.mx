@@ -110,8 +110,8 @@ export default function Footer () {
             </p>
             <p>
               Email:
-              <a href='mailto:contacto@kodemia.mx'>
-                contacto@kodemia.mx
+              <a href='mailto:info@kodemia.mx'>
+                info@kodemia.mx
               </a>
             </p>
           </div>
