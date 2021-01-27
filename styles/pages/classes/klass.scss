@@ -38,10 +38,21 @@
     }
 
     .video-player {
+      height: 72vh;
+      position: sticky;
+      top: 0;
+
       @include on-mobile {
-        margin: 0;
+        height: auto;
+        margin: 0 0 10px;
         padding: 0;
+        position: initial;
         width: 100%;
+      }
+
+      @include on-tablet {
+        height: auto;
+        position: initial;
       }
 
       .video-data-btns {

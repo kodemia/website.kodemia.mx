@@ -79,7 +79,7 @@ export default function Klass ({ idVimeo, isVimeo, classes = [] }: Props) {
                     {klass.title}
                   </h6>
                   <p className='class-date'>
-                    Fecha:
+                    Fecha: {' '}
                     {dayjs(klass.date).format('DD/MM/YYYY')}
                   </p>
                 </div>
