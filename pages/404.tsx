@@ -1,11 +1,44 @@
+import Button from 'components/Button'
+import Footer from 'components/Footer'
+import H2 from 'components/H2'
+import H3 from 'components/H3'
+import Navbar from '../components/Navbar'
+import TextCursor from 'components/TextCursor'
 
 export default function Custom404 () {
   return (
-    // ToDo: hacerla bien :)
-    <div>
-      <img src='https://www.okchicas.com/wp-content/uploads/2020/07/Corgi-hace-caras-graciosas-1.jpg' />
-      <h1> ¡Oops! ya merito está esta página </h1>
-    </div>
-
+    <>
+      <Navbar />
+      <section className='hero has-background-black-bis is-fullheight' id='custom-404'>
+        <div className='hero-body'>
+          <div className='container has-text-centered'>
+            <div className='columns is-centered'>
+              <div className='column is-half'>
+                <div className='card has-background-grey-darker p-5 is-rounded'>
+                  <div className='columns is-multiline container'>
+                    <div className='column is-full mt-5'>
+                      <p className='is-size-1 has-text-weight-bold has-text-white'>
+                        404
+                      </p>
+                      <div className='column is-full mt-5 mb-5'>
+                        <H3 text='Esta página no fue encontrada 🤕' />
+                      </div>
+                      <div className='column is-full mb-5'>
+                        <Button
+                          isPrimary
+                          label='Regresar a Home'
+                          link='/'
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </>
   )
 }
