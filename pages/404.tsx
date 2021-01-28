@@ -1,9 +1,7 @@
 import Button from 'components/Button'
 import Footer from 'components/Footer'
-import H2 from 'components/H2'
 import H3 from 'components/H3'
 import Navbar from '../components/Navbar'
-import TextCursor from 'components/TextCursor'
 
 export default function Custom404 () {
   return (
