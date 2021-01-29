@@ -7,7 +7,7 @@
     width: 100%;
 
     .classes-bg {
-      background-image: url('/images/bootcamps/koder_gerardo.png');
+      background-image: url('/images/classes/classes-desktop.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -16,14 +16,21 @@
       padding: 0;
       width: 100%;
 
+      @include on-mobile {
+        background-image: url('/images/classes/classes-mobile.jpg');
+      }
+
+      @include on-tablet {
+        background-image: url('/images/classes/classes-tablet.jpg');
+      }
+
       .title-container {
-        background: $black-transparent;
         height: 100%;
         width: 100%;
 
         .wrapper {
           height: 100%;
-          margin: 0 25px;
+          margin: 0 49px;
           max-width: $content-max-width;
           width: 100%;
 
