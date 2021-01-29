@@ -62,23 +62,26 @@
         margin-top: 30px;
 
         @include on-mobile {
-          align-items: center;
           flex-wrap: wrap;
-          //flex-direction: column;
-          justify-content: space-between;
           margin-bottom: 40px;
         }
 
         @include on-tablet {
+          flex-wrap: wrap;
           margin-bottom: 40px;
         }
 
         .video-data {
           display: inline;
 
+          @include on-tablet {
+            margin-bottom: 15px;
+            margin-right: 20px;
+          }
+
           .class-title {
             color: $primary;
-            font-size: 26px;
+            font-size: 25px;
 
             @include on-mobile {
               font-size: 22px;
@@ -94,6 +97,13 @@
 
         .container-btns {
           display: flex;
+          justify-content: space-between;
+          width: 310px;
+
+          @include on-mobile {
+            margin-top: 10px;
+            width: 180px;
+          }
 
           .btn-ikon {
             align-items: center;
@@ -107,7 +117,6 @@
             font-size: 16px;
             font-weight: 500;
             justify-content: center;
-            margin: 10px;
             padding: 6.5px 10px;
             text-align: center;
             transition: all 0.4s ease;
