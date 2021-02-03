@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode
 }
 
-export default function DescriptionParagraph({ children }: Props) {
+export default function DescriptionParagraph ({ children }: Props) {
   return (
     <p className='description-paragraph'>
       {children}
