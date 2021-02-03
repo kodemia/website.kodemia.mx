@@ -10,7 +10,7 @@ export interface Props {
   link: string
 }
 
-export default function BootcampCard ({
+export default function BootcampCard({
   mode,
   date,
   schedule,
