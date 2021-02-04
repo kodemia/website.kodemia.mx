@@ -3,7 +3,7 @@ import React from 'react'
 import Button from '../../Button'
 import H1 from '../../H1'
 
-export default function TransformYourLife() {
+export default function TransformYourLife () {
   return (
     <section className='transform-your-life'>
       <div className='transform-your-life-container section-container'>
