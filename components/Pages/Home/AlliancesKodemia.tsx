@@ -31,7 +31,7 @@ export default function AllianceKodemia ({ allies = [], isBlack }: Props) {
           <div className='alliances-title'>
             <H2 cyanText='Ellos confían' whiteText='en nosotros' isFirstCyan />
           </div>
-          <CarrouselAlliances allies={allies} />
+          <CarrouselAlliances allies={allies} hasContent={!isBlack} />
           <div className='slider-container'>
             {allies.map((ally, index) => {
               if (!ally.href) {
