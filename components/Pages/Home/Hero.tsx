@@ -17,6 +17,7 @@ export default function Hero ({ video }: Props) {
           <HeroCard
             title='Transforma tu vida programando'
             content='Más que una escuela, somos el aliado que te acompaña para desarrollarte como programador, antes, durante y después de nuestros Bootcamps. '
+            btnTitle='Conoce nuestros Bootcamps' link='/#bootcamps'
           />
         </div>
         <img

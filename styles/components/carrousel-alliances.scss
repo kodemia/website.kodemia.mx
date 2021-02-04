@@ -1,48 +1,56 @@
+.carrousel {
+  .carrousel-alliances {
+    margin: 50px 0 20px;
+    position: relative;
 
-.carrousel-alliances {
-  margin: 50px 0 20px;
-  position: relative;
+    @include on-mobile {
+      display: none;
+    }
 
-  @include on-mobile {
-    display: none;
-  }
+    @include on-tablet {
+      display: none;
+    }
 
-  @include on-tablet {
-    display: none;
-  }
+    &::before,
+    &::after {
+      background: linear-gradient(to right, $black-primary, $black-transparent-hero, rgba(8, 8, 8, 0.034));
+      content: '';
+      height: 130px;
+      position: absolute;
+      width: 100px;
+      z-index: 2;
+    }
 
-  &::before,
-  &::after {
-    background: linear-gradient(to right, $black-primary, $black-transparent-hero, rgba(8, 8, 8, 0.034));
-    content: '';
-    height: 130px;
-    position: absolute;
-    width: 100px;
-    z-index: 2;
-  }
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
 
-  &::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
+    &::before {
+      left: 0;
+      top: 0;
+    }
 
-  &::before {
-    left: 0;
-    top: 0;
-  }
+    .ally {
+      width: 100%;
 
-  .ally {
-    width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
 
-    &:focus {
-      outline: none;
+    .a-ally {
+      &:focus {
+        outline: none;
+      }
     }
   }
 
-  .a-ally {
-    &:focus {
-      outline: none;
+  .no-content {
+    &::before,
+    &::after {
+      content: none;
     }
   }
 }
