@@ -6,16 +6,18 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Pages/Companies/Hero'
 import AlliancesKodemia from '../components/Pages/Home/AlliancesKodemia'
 import Footer from '../components/Footer'
+import NextDeveloper from '../components/Pages/Companies/NextDeveloper'
 // Data
 import AlliesData from '../config/allies-data.json'
 
-export default function Empresas () {
+export default function Empresas() {
   return (
     <>
       <Seo />
       <Navbar />
       <Hero />
       <AlliancesKodemia allies={AlliesData} isBlack />
+      <NextDeveloper />
       <Footer />
     </>
   )
