@@ -17,7 +17,7 @@ export default function NextDeveloper () {
           <Button
             label='Contáctanos'
             hasWhiteBg
-            link='/'
+            link='#'
           />
         </div>
       </div>
