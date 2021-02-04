@@ -15,7 +15,8 @@ export default function Hero () {
         <div className='title'>
           <H2
             cyanText=''
-            whiteText='Encuentra desarrolladores de alto calibre' isFirstCyan
+            whiteText='Encuentra desarrolladores de alto calibre'
+            isFirstCyan
           />
         </div>
         <p className='description'>
@@ -40,7 +41,9 @@ export default function Hero () {
                 videoRef.current.controls = true
               }}
             >
-              <source src='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4' />
+              <source
+                src='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4'
+              />
             </video>
           </div>
           <div
@@ -69,7 +72,7 @@ export default function Hero () {
         <div className='hero-btn'>
           <Button
             isPrimary
-            label='Contactanos'
+            label='Contáctanos'
             link='/'
           />
         </div>
