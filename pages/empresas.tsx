@@ -10,7 +10,7 @@ import NextDeveloper from '../components/Pages/Companies/NextDeveloper'
 // Data
 import AlliesData from '../config/allies-data.json'
 
-export default function Empresas() {
+export default function Empresas () {
   return (
     <>
       <Seo />
