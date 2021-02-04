@@ -30,6 +30,16 @@
         min-width: 100%;
         padding: 0 85px;
       }
+
+      .alliances-title {
+        @include on-mobile {
+          max-width: 200px;
+        }
+
+        @include on-tablet {
+          max-width: 200px;
+        }
+      }
     }
 
     .slider-container {

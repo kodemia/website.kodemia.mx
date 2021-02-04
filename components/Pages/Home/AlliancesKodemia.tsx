@@ -28,7 +28,9 @@ export default function AllianceKodemia ({ allies = [], isBlack }: Props) {
       >
         <div className='alliances-kodemia-container section-container'>
           <H3 text='Alianzas Kodemia' />
-          <H2 cyanText='Ellos confían' whiteText='en nosotros' isFirstCyan />
+          <div className='alliances-title'>
+            <H2 cyanText='Ellos confían' whiteText='en nosotros' isFirstCyan />
+          </div>
           <CarrouselAlliances allies={allies} />
           <div className='slider-container'>
             {allies.map((ally, index) => {
