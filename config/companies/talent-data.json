@@ -2,17 +2,17 @@
   "cards": [
     {
       "text": "Para que un koder pueda entrar a Kodemia partimos de un objetivo claro que funciona como combustible para alcanzar sus metas antes y después del Bootcamp",
-      "icon": "icons/icon-comunidad.svg",
+      "icon": "icons/icon-objetivos-claros.svg",
       "title": "Objetivos \nclaros"
     },
     {
       "text": "Los egresados experimentan 560 horas de formación intensiva donde aprenden a pensar como programadores y resolver problemas con la tecnología",
-      "icon": "icons/icon-aprende-lideres.svg",
+      "icon": "icons/icon-alto-nivel-tecnico.svg",
       "title": "Alto nivel \ntécnico"
     },
     {
       "text": "La parte técnica no lo es todo, los koders también desarrollan soft skills, que los hacen capaces de trabajar en equipo, comunicarse y ser pro-activos",
-      "icon": "icons/icon-recursos-adicionales.svg",
+      "icon": "icons/icon-desarrollamos-personas.svg",
       "title": "Desarrollamos \npersonas"
     }
   ]
