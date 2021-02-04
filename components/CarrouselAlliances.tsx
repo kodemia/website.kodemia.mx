@@ -14,11 +14,11 @@ export interface Props {
   hasContent?: boolean
 }
 
-function SampleArrow () {
+function SampleArrow() {
   return <div style={{ display: 'none' }} />
 }
 
-export default function CarrouselAlliances ({ allies = [], hasContent }: Props) {
+export default function CarrouselAlliances({ allies = [], hasContent }: Props) {
   const settings = {
     infinite: true,
     slidesToShow: 4,
@@ -30,7 +30,7 @@ export default function CarrouselAlliances ({ allies = [], hasContent }: Props) 
     nextArrow: <SampleArrow />,
     prevArrow: <SampleArrow />
   }
-  console.log(hasContent)
+
   return (
     <div className='carrousel'>
       <div className={classnames(
