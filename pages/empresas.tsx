@@ -9,7 +9,7 @@ import Footer from 'components/Footer'
 // Data
 import AlliesData from 'config/allies-data.json'
 
-export default function Empresas() {
+export default function Empresas () {
   return (
     <>
       <Seo />
