@@ -29,6 +29,11 @@ export default function ApplyForm () {
   const onSubmit = (data: ApplyFormData) => {
     setIsSubmitting(true)
 
+    data.customFields = {
+      source: 'web',
+      reasonToApply: data.reason
+    }
+
     apply(data)
       .then(() => {
         router.push(`aplicar/gracias/${data.course}`)
