@@ -104,7 +104,7 @@ export default function Footer () {
           <div className='contact'>
             <p>
               <a href='tel:55 3731 72 66'>
-                55 3731 72 66
+                +52 55 3731 7266
               </a>
             </p>
             <p>
