@@ -3,8 +3,8 @@ import React, { useRef, useState, MutableRefObject } from 'react'
 import classnames from 'classnames'
 import HTMLVideoElement from 'typescript'
 // My components
-import H2 from '../../H2'
-import Button from '../../Button'
+import H2 from 'components/H2'
+import Button from 'components/Button'
 
 export default function Hero () {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
