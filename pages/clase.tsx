@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Router, { useRouter } from 'next/router'
 
 // My components
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Klass from '../components/Pages/Classes/Klass'
+import Navbar from 'components/Navbar'
+import Footer from 'components/Footer'
+import Klass from 'components/Pages/Classes/Klass'
 // api
-import { getClasses } from '../lib/api'
+import { getClasses } from 'lib/api'
 
 export interface Class {
   date: string
@@ -19,7 +19,7 @@ export interface Class {
 }
 
 export default function Clase () {
-  const [classes, setClasses] = useState< Array < Class >>([])
+  const [classes, setClasses] = useState<Array<Class>>([])
   const [vimeoId, setVimeoId] = useState<any>()
   const [isVimeo, setIsVimeo] = useState<any>()
   const router = useRouter()

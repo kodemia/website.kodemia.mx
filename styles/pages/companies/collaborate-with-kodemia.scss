@@ -1,6 +1,7 @@
 
 .collaborate-with-kodemia {
   background-image: url('/images/companies/colabora-con-kodemia-desktop.jpg');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
@@ -9,12 +10,10 @@
 
   @include on-mobile {
     background-image: url('/images/companies/colabora-con-kodemia-mobile.jpg');
-    background-position: center;
   }
 
   @include on-tablet {
     background-image: url('/images/companies/colabora-con-kodemia-tablet.jpg');
-    background-position: center;
   }
 
   &:not(:last-child) {
@@ -29,12 +28,10 @@
     @include on-mobile {
       margin: 0;
       padding: 0 45px;
-      width: 100%;
     }
 
     @include on-tablet {
       margin: 0;
-      max-width: 100%;
       padding: 0 85px;
     }
 
