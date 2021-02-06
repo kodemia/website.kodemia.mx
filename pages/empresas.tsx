@@ -4,6 +4,7 @@ import React from 'react'
 import Seo from 'components/SEO'
 import Navbar from 'components/Navbar'
 import Hero from 'components/Pages/Companies/Hero'
+import CollaborateWithKodemia from 'components/Pages/Companies/CollaborateWithKodemia'
 import AlliancesKodemia from 'components/Pages/Home/AlliancesKodemia'
 import Footer from 'components/Footer'
 // Data
@@ -15,6 +16,7 @@ export default function Empresas () {
       <Seo />
       <Navbar />
       <Hero />
+      <CollaborateWithKodemia />
       <AlliancesKodemia allies={AlliesData} isBlack />
       <Footer />
     </>
