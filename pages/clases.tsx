@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react'
 import Router from 'next/router'
 // My components
-import Navbar from '../components/Navbar'
-import H2 from '../components/H2'
-import H3 from '../components/H3'
-import ClassCard from '../components/Pages/Classes/ClassCard'
-import Footer from '../components/Footer'
+import Navbar from 'components/Navbar'
+import H2 from 'components/H2'
+import H3 from 'components/H3'
+import ClassCard from 'components/Pages/Classes/ClassCard'
+import Footer from 'components/Footer'
 import Seo from 'components/SEO'
 // api
 import { getClasses } from '../lib/api'

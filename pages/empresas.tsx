@@ -5,6 +5,7 @@ import Hero from '../components/Pages/Companies/Hero'
 import Navbar from 'components/Navbar'
 import Seo from '../components/SEO'
 import Talent from 'components/Pages/Companies/TalentDevelopment'
+import NextDeveloper from 'components/Pages/Companies/NextDeveloper'
 
 // Data
 import AlliesData from '../config/allies-data.json'
@@ -18,6 +19,7 @@ export default function Empresas () {
       <Hero />
       <Talent infoCards={TalentData.cards} />
       <AlliancesKodemia allies={AlliesData} isBlack />
+      <NextDeveloper />
       <Footer />
     </>
   )

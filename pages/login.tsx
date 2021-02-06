@@ -3,9 +3,9 @@ import React, { useEffect } from 'react'
 import Router from 'next/router'
 // My components
 import BgVideo from 'components/BgVideo'
-import H1 from '../components/H1'
-import LoginForm from '../components/Pages/Login/LoginForm'
-import Navbar from '../components/Navbar'
+import H1 from 'components/H1'
+import LoginForm from 'components/Pages/Login/LoginForm'
+import Navbar from 'components/Navbar'
 import Seo from 'components/SEO'
 
 import BgVideoSrc from 'config/bg-video-src.json'
