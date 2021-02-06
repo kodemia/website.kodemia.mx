@@ -30,7 +30,7 @@ export default function ApplyForm () {
     setIsSubmitting(true)
 
     data.customFields = {
-      source: 'web',
+      source: data.referer,
       reasonToApply: data.reason
     }
 
