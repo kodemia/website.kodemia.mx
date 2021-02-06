@@ -1,7 +1,7 @@
 import H2 from 'components/H2'
 import H3 from 'components/H3'
-import InfoCard from 'components/InfoCard'
-import BootcampCard from 'components/BootcampCard'
+// import InfoCard from 'components/InfoCard'
+// import BootcampCard from 'components/BootcampCard'
 
 export default function FindKoder () {
   return (
