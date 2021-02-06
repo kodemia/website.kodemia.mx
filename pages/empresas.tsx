@@ -1,13 +1,14 @@
 
 import React from 'react'
 // My components
-import Seo from '../components/SEO'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Pages/Companies/Hero'
-import AlliancesKodemia from '../components/Pages/Home/AlliancesKodemia'
-import Footer from '../components/Footer'
+import AlliancesKodemia from 'components/Pages/Home/AlliancesKodemia'
+import FindKoder from 'components/Pages/Companies/FindKoder'
+import Footer from 'components/Footer'
+import Hero from 'components/Pages/Companies/Hero'
+import Navbar from 'components/Navbar'
+import Seo from 'components/SEO'
 // Data
-import AlliesData from '../config/allies-data.json'
+import AlliesData from 'config/allies-data.json'
 
 export default function Empresas () {
   return (
@@ -15,6 +16,7 @@ export default function Empresas () {
       <Seo />
       <Navbar />
       <Hero />
+      <FindKoder />
       <AlliancesKodemia allies={AlliesData} isBlack />
       <Footer />
     </>
