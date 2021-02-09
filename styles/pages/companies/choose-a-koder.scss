@@ -15,7 +15,18 @@
         'bar-container'
         'slide-choose';
       margin: 0;
-      padding: 0 45px;
+      padding: 0 33px;
+    }
+
+    @include on-tablet {
+      display: grid;
+      grid-template-areas:
+        'title-chose'
+        'image-container'
+        'bar-container'
+        'slide-choose';
+      margin: 0;
+      padding: 0 73px;
     }
 
     .title-choose {
@@ -34,6 +45,11 @@
         width: 66%;
 
         @include on-mobile {
+          margin: 0;
+          width: 100%;
+        }
+
+        @include on-tablet {
           margin: 0;
           width: 100%;
         }
@@ -94,6 +110,12 @@
         max-width: 100%;
       }
 
+      @include on-tablet {
+        height: 100%;
+        margin: 0;
+        max-width: 100%;
+      }
+
       .slide-item {
         border-radius: 10px;
         height: 100%;
@@ -115,6 +137,10 @@
 
         @include on-mobile {
           flex-direction: column;
+        }
+
+        @include on-mobile {
+          flex-direction: row;
         }
       }
 

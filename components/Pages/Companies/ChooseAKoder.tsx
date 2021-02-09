@@ -117,7 +117,7 @@ export default function ChooseAKoder ({ chooseKoder = [] }: Props) {
                 {
                   program.skills.map((skill, index) => (
                     <div
-                      className='column is-half'
+                      className='column is-half is-full-mobile'
                       key={`skill-${skill.title}-${index}`}
                     >
                       <InfoCard
