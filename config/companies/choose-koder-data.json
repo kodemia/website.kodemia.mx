@@ -1,25 +1,25 @@
 [
   {
     "name": "javascript",
-    "image":"/images/winner-kode-awards/xihuala-wireframe-desktop.png",
+    "image":"/images/companies/de-que-es-capaz-un-koder-js.jpg",
     "skills": [
       {
-        "icon":"",
+        "icon":"/images/companies/mern-stack.svg",
         "title": "MERN Stack",
         "text": "El aprendizaje gira entorno a Javascript, utilizando MongoDB, Express.Js, ReactJS y NodeJS"
       },
       {
-        "icon":"",
+        "icon":"/images/companies/una-web-app-completa.svg",
         "title": "Una web app completa",
         "text": "El desafío final de cada koder es desarrollar una web app, desde la idea, la planeación, Front End, Back End y el consumo de API, todo desplegado en la nube"
       },
       {
-        "icon":"",
+        "icon":"/images/companies/logica-de-programacion.svg",
         "title": "Lógica de programación",
         "text": "Desde el día uno, los koders desarrollan esta habilidad, para que no sólo copien y peguen código"
       },
       {
-        "icon":"",
+        "icon":"/images/companies/encontrar-soluciones.svg",
         "title": "Encontrar soluciones",
         "text": "Aprender a aprender es nuestra filosofía más fuerte. Buscamos acercarles los recursos para resolver problemas, en lugar de darles la respuesta"
       }
@@ -28,25 +28,25 @@
   },
   {
     "name":"python",
-    "image": "../../public/images/winner-kode-awards/xihuala-code-desktop.jpg",
+    "image": "/images/companies/de-que-es-capaz-un-koder-python.jpg",
     "skills": [
       {
-        "icon":"",
+        "icon":"/images/companies/javascript-mas-python.svg",
         "title": "Javascript + Python",
         "text": "Aprenden a desarrollar el Front End con Javascript y Back End con Python, SQL, Django y el consumo de API, todo desplegado en la nube"
       },
       {
-        "icon":"",
+        "icon":"/images/companies/data-manipulation.svg",
         "title": "Data Manipulation",
         "text": "Uso de Pandas y Scrapy  para el análisis de datos sumado a las habilidades como desarrollador web"
       },
       {
-        "icon":"",
+        "icon":"/images/companies/logica-de-programacion.svg",
         "title": "Lógica de programación",
         "text": "Desde el día uno, los koders desarrollan esta habilidad, para que no sólo copien y peguen código"
       },
       {
-        "icon":"",
+        "icon":"/images/companies/encontrar-soluciones.svg",
         "title": "Encontrar soluciones",
         "text": "Aprender a aprender es nuestra filosofía más fuerte. Buscamos acercarles los recursos para resolver problemas, en lugar de darles la respuesta"
       }

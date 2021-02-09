@@ -22,7 +22,7 @@ export interface Props {
   chooseKoder: Array<Program>
 }
 
-export default function ChooseAKoder ({ chooseKoder = [] }: Props) {
+export default function ChooseAKoder({ chooseKoder = [] }: Props) {
   const [activeProgram, setActiveProgram] = useState(0)
   return (
     <section className='choose-a-koder is-flex is-justify-content-center'>
@@ -36,7 +36,7 @@ export default function ChooseAKoder ({ chooseKoder = [] }: Props) {
             />
           </div>
         </div>
-        <div className='column is-two-thirds'>
+        <div className='column is-two-thirds-desktop  is-mobile is-full-mobile is-full-tablet'>
           <div className='columns'>
             {
               chooseKoder.map((program, index) => (
