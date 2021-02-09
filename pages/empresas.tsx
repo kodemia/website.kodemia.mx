@@ -6,6 +6,7 @@ import Navbar from 'components/Navbar'
 import Seo from '../components/SEO'
 import Talent from 'components/Pages/Companies/TalentDevelopment'
 import NextDeveloper from 'components/Pages/Companies/NextDeveloper'
+import CollaborateWithKodemia from 'components/Pages/Companies/CollaborateWithKodemia'
 
 // Data
 import AlliesData from '../config/allies-data.json'
@@ -18,6 +19,7 @@ export default function Empresas () {
       <Navbar />
       <Hero />
       <Talent infoCards={TalentData.cards} />
+      <CollaborateWithKodemia />
       <AlliancesKodemia allies={AlliesData} isBlack />
       <NextDeveloper />
       <Footer />
