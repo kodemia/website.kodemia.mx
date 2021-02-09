@@ -36,43 +36,47 @@ export default function ChooseAKoder ({ chooseKoder = [] }: Props) {
             />
           </div>
         </div>
-        {
-          chooseKoder.map((program, index) => (
-            <div
-              className='column  bar-column'
-              key={`step-slider-${index}`}
-              onClick={() => setActiveProgram(index)}
-            >
-              <div className='columns is-multiline is-mobile bar'>
+        <div className='column is-two-thirds'>
+          <div className='columns'>
+            {
+              chooseKoder.map((program, index) => (
                 <div
-                  className='column is-full has-text-centered has-text-weight-medium-on-desktop bar-text'
+                  className='column  bar-column'
+                  key={`step-slider-${index}`}
+                  onClick={() => setActiveProgram(index)}
                 >
-                  {program.name}
-                </div>
-                <div
-                  className={classnames(
-                    'column',
-                    'is-full',
-                    'bar-bar',
-                    'p-0',
-                    { first: index === 0 },
-                    { last: index === (chooseKoder.length - 1) }
-                  )}
-                >
-                  <div
-                    className={classnames(
-                      'indicator',
-                      { 'has-background-info': activeProgram === index }
-                    )}
-                  >
-                    &nbsp;
+                  <div className='columns is-multiline is-mobile bar'>
+                    <div
+                      className='column is-full has-text-centered has-text-weight-medium-on-desktop bar-text'
+                    >
+                      {program.name}
+                    </div>
+                    <div
+                      className={classnames(
+                        'column',
+                        'is-full',
+                        'bar-bar',
+                        'p-0',
+                        { first: index === 0 },
+                        { last: index === (chooseKoder.length - 1) }
+                      )}
+                    >
+                      <div
+                        className={classnames(
+                          'indicator',
+                          { 'has-background-info': activeProgram === index }
+                        )}
+                      >
+                        &nbsp;
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-
-              </div>
-            </div>
-          ))
-        }
+              ))
+            }
+          </div>
+        </div>
         <div className='slide-choose'>
           {
             chooseKoder.map((program, index) =>
