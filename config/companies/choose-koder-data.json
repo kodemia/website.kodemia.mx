@@ -1,6 +1,6 @@
 [
   {
-    "name": "javascript",
+    "name": "Javascript",
     "image":"/images/companies/de-que-es-capaz-un-koder-js.jpg",
     "skills": [
       {
@@ -27,7 +27,7 @@
 
   },
   {
-    "name":"python",
+    "name":"Python",
     "image": "/images/companies/de-que-es-capaz-un-koder-python.jpg",
     "skills": [
       {

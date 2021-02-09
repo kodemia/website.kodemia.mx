@@ -22,7 +22,7 @@ export interface Props {
   chooseKoder: Array<Program>
 }
 
-export default function ChooseAKoder({ chooseKoder = [] }: Props) {
+export default function ChooseAKoder ({ chooseKoder = [] }: Props) {
   const [activeProgram, setActiveProgram] = useState(0)
   return (
     <section className='choose-a-koder is-flex is-justify-content-center'>
@@ -36,8 +36,8 @@ export default function ChooseAKoder({ chooseKoder = [] }: Props) {
             />
           </div>
         </div>
-        <div className='column is-two-thirds-desktop  is-mobile is-full-mobile is-full-tablet'>
-          <div className='columns'>
+        <div className='column is-full bar-container '>
+          <div className='columns bar-wrapper is-mobile'>
             {
               chooseKoder.map((program, index) => (
                 <div
@@ -47,7 +47,12 @@ export default function ChooseAKoder({ chooseKoder = [] }: Props) {
                 >
                   <div className='columns is-multiline is-mobile bar'>
                     <div
-                      className='column is-full has-text-centered has-text-weight-medium-on-desktop bar-text'
+                      className={classnames(
+                        'column is-full has-text-centered has-text-weight-medium-on-desktop bar-text',
+                        {
+                          'is-inactive-text': activeProgram !== index
+                        }
+                      )}
                     >
                       {program.name}
                     </div>
@@ -77,7 +82,7 @@ export default function ChooseAKoder({ chooseKoder = [] }: Props) {
             }
           </div>
         </div>
-        <div className='slide-choose'>
+        <div className='column is-full image-container'>
           {
             chooseKoder.map((program, index) =>
               <img
@@ -93,13 +98,16 @@ export default function ChooseAKoder({ chooseKoder = [] }: Props) {
               />
             )
           }
+        </div>
+        <div className='column slide-choose '>
           {
             chooseKoder.map((program, index) => (
 
               <div
                 key={`skill-${index}`}
                 className={classnames(
-                  'slide-items',
+
+                  'slide-items columns',
                   {
                     'is-active': activeProgram === index,
                     'is-inactive': activeProgram !== index
@@ -109,6 +117,7 @@ export default function ChooseAKoder({ chooseKoder = [] }: Props) {
                 {
                   program.skills.map((skill, index) => (
                     <div
+                      className='column is-half'
                       key={`skill-${skill.title}-${index}`}
                     >
                       <InfoCard
