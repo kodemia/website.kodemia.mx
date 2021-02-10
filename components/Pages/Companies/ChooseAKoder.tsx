@@ -88,6 +88,7 @@ export default function ChooseAKoder ({ chooseKoder = [] }: Props) {
               <img
                 key={`img-choose-${index}`}
                 src={program.image}
+                alt={`kodemia-${program.name}`}
                 className={classnames(
                   'slide-item',
                   {
