@@ -6,12 +6,12 @@ import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
 // import BootcampCard from 'components/BootcampCard'
 
 export interface Props {
-  detail: string
+  children?: string
   image: string
   infoCards: Array<InfoCardProps>
 }
 
-export default function FindKoder ({ detail, image, infoCards }: Props) {
+export default function FindKoder ({ children, image, infoCards }: Props) {
   return (
     <section className='find-koder'>
       <div className='find-koder-container section-container'>
@@ -27,8 +27,9 @@ export default function FindKoder ({ detail, image, infoCards }: Props) {
                   icon={infoCard.icon}
                   title={infoCard.title}
                   text={infoCard.text}
-                />
-                
+                >
+                {children}
+                </InfoCard>
               )
             })
           }
