@@ -21,7 +21,7 @@ export default function Empresas () {
       <Navbar />
       <Hero />
       <TalentDevelopment infoCards={TalentData.cards} />
-      <FindKoder image={IdealKoder.image} infoCards={IdealKoder.cards} />
+      <FindKoder detail={IdealKoder.cards} image={IdealKoder.image} infoCards={IdealKoder.cards} />
       <CollaborateWithKodemia />
       <AlliancesKodemia allies={AlliesData} isBlack />
       <NextDeveloper />
