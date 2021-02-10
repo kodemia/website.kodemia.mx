@@ -1,8 +1,11 @@
 .find-koder {
   display: flex;
   justify-content: center;
+  padding: 100px 0 80px;
+  width: 100%;
 
   .find-koder-container {
+    max-width: $content-max-width;
     width: 100%;
   }
 }
