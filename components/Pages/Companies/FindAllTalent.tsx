@@ -13,12 +13,12 @@ export default function FindAllTalent ({ detail, infoCards }: Props) {
     <section className='find-all-talent'>
       <div className='find-talent-container section-container'>
         <div className='head'>
-          <H3 text='¿Con qué empresas trabajamos' />
+          <H3 text='¿Con qué empresas trabajamos?' />
           <H2 whiteText='Ayudamos a encontrar talento ' cyanText='a todo nivel' />
-          <p>
-            {detail}
-          </p>
         </div>
+        <p className='detail'>
+          {detail}
+        </p>
         <div className='cards'>
           {
             infoCards.map((infoCard, index) => {

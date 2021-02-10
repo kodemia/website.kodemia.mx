@@ -5,6 +5,7 @@
   grid-template-areas:
     'ikon info-card-title'
     'ikon text';
+    grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   padding: 20px 0 18px;
 
