@@ -1,0 +1,10 @@
+{
+  "javascript-live": {
+    "desktop": "https://kodemia.cdn.prismic.io/kodemia/9431cb25-58c4-4f43-8279-3d16cb5a995b_BJL-D_2021.pdf",
+    "mobile": "https://kodemia.cdn.prismic.io/kodemia/a5a331d7-b126-4e5d-b30f-0b091266a2c7_BJL-M_2021.pdf"
+  },
+  "python-live": {
+    "desktop": "https://kodemia.cdn.prismic.io/kodemia/c26a0831-550b-4bf5-99fe-653d87faa0ab_BPL-D_2021.pdf",
+    "mobile": "https://kodemia.cdn.prismic.io/kodemia/573a4184-7eef-4a59-ad2b-570e3b90f286_BPL-M_2021.pdf"
+  }
+}
