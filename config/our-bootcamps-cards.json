@@ -11,8 +11,8 @@
         "description": "Aprende sin salir de casa",
         "link": "/javascript-live",
         "schedule": {
-          "day": "08",
-          "month":"Febrero",
+          "day": "26",
+          "month":"Abril",
           "year":"2021",
           "hour":"19:00 - 22:00 hrs.",
           "days":"Lunes a viernes"
@@ -34,8 +34,8 @@
     }
   ,
   "python": {
-    "name":"Bootcamp Web Developer +",
-    "language":"Data",
+    "name":"Bootcamp Back End con",
+    "language":"Python",
     "description": "Desarrollarás una web app completa orientada al Back End con Python y Javascript",
     "duration":"21 semanas",
     "modalities": [
