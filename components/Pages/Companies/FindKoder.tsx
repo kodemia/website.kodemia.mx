@@ -23,12 +23,13 @@ export default function FindKoder ({ image, infoCards }: Props) {
           {
             infoCards.map((infoCard, index) => {
               return (
-                <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
-                />
+                  <InfoCard
+                    key={`card-${index}`}
+                    icon={infoCard.icon}
+                    title={infoCard.title}
+                    text={infoCard.text}
+                    detail={infoCard.detail}
+                  />
               )
             })
           }
