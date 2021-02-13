@@ -15,7 +15,7 @@ import AllTalentData from 'config/companies/find-all-talent.json'
 import TalentData from 'config/companies/talent-data.json'
 import ChooseKoder from 'config/companies/choose-koder-data.json'
 
-export default function Empresas() {
+export default function Empresas () {
   return (
     <>
       <Seo />
