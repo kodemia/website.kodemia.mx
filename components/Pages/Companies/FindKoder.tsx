@@ -18,18 +18,20 @@ export default function FindKoder ({ image, infoCards }: Props) {
           <H3 text='¿Cómo encuentro al Koder perfecto para mi empresa?' />
           <H2 whiteText='Encuentra al' cyanText='programador ideal' />
         </div>
-        <img className='image' src={image} alt='koder ideal' />
+        <div className='img-cont'>
+          <img className='image' src={image} alt='koder ideal' />
+        </div>
         <div className='cards'>
           {
             infoCards.map((infoCard, index) => {
               return (
-                  <InfoCard
-                    key={`card-${index}`}
-                    icon={infoCard.icon}
-                    title={infoCard.title}
-                    text={infoCard.text}
-                    detail={infoCard.detail}
-                  />
+                <InfoCard
+                  key={`card-${index}`}
+                  icon={infoCard.icon}
+                  title={infoCard.title}
+                  text={infoCard.text}
+                  detail={infoCard.detail}
+                />
               )
             })
           }

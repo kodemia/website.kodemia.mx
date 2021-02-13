@@ -7,7 +7,7 @@
 
   .find-koder-container {
     display: grid;
-    grid-gap: 2rem;
+    grid-column-gap: 2rem;
     grid-template-areas:
       'subject subject'
       'image cards';
@@ -45,12 +45,27 @@
       }
     }
 
-    .image {
-      border-radius: 10px;
+    .img-cont {
+      height: 420px;
       grid-area: image;
-      margin-top: 20px;
-      max-width: 100%;
       width: 100%;
+
+      @include on-mobile {
+        margin-bottom: 30px;
+      }
+
+      @include on-tablet {
+        margin-bottom: 30px;
+      }
+
+      .image {
+        border-radius: 10px;
+        height: 100%;
+        margin-top: 40px;
+        max-height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
     }
 
     .cards {
@@ -66,13 +81,6 @@
         grid-template-columns: 1fr;
         margin-top: 20px;
       }
-
-      // @include on-tablet {
-      //   grid-column-gap: 2.3rem;
-      //   grid-template-areas
-      //   grid-template-columns: repeat(2, 1fr);
-      //   grid-template-rows: auto;
-      // }
     }
   }
 }
