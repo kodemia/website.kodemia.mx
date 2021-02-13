@@ -25,6 +25,13 @@ export async function apply(data: ApplyFormData) {
   return response
 }
 
+export const registerCompany = async (data) => {
+  console.log('API', data)
+  const url = 'active-campaign/companies'
+  const response = await api.post(url, data)
+  return response
+}
+
 export const getClasses = async (token: string | null) => {
   const url = '/classes'
   const response = await api.get(url, {
@@ -34,6 +41,3 @@ export const getClasses = async (token: string | null) => {
   return classes
 }
 
-export const registerCompany = () => {
-
-}

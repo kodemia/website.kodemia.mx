@@ -3,7 +3,7 @@ import React from 'react'
 import Button from 'components/Button'
 import H2 from 'components/H2'
 
-export default function NextDeveloper() {
+export default function NextDeveloper () {
   return (
     <section className='next-developer'>
       <div className='next-developer-container section-container'>

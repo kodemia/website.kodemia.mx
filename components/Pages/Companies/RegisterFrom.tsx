@@ -4,36 +4,43 @@ import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import Link from 'next/link'
-
+import { useRouter } from 'next/router'
+// My components
 import Button from 'components/Button'
 import Input from 'components/Inputs/Input'
 import PhoneInput from 'components/Inputs/PhoneInput'
-import Select from 'components/Inputs/Select'
-import TextArea from 'components/Inputs/TextArea'
-import schema from 'schemas/applyForm.schema'
+import schema from 'schemas/registerCompanyForm.schema'
 import { ToastContainer, toast } from 'react-toastify'
 
 import { registerCompany } from 'lib/api'
-import { useRouter } from 'next/router'
 
-type ApplyFormData = zod.infer<typeof schema>
 
-export default function ApplyForm () {
-  const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
+type RegisterCompanyFormData = zod.infer<typeof schema>
+
+export default function RegisterCompanyForm() {
+  const { register, handleSubmit, control, errors } = useForm<RegisterCompanyFormData>({
     resolver: zodResolver(schema)
   })
 
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const router = useRouter()
 
-  const onSubmit = (data: ApplyFormData) => {
+  const onSubmit = (data: RegisterCompanyFormData) => {
     setIsSubmitting(true)
+    //ToDo: checar quien crea este objeto, back o front ¿?
+    data.customFields = {
+      position: data.position,
+      company: data.company
+    }
+
 
     registerCompany(data)
-      .then(() => {
-        router.push('empresas/gracias')
+      .then((result) => {
+        console.log(result)
+        //router.push('empresas/gracias')
       })
       .catch(error => {
+        console.log('error', error)
         const status = error.response.status
         let errorMessage = `☠️ Ocurrio un error en el servidor,
         por favor intenta mas tarde o reportalo a contacto@kodemia.mx`
@@ -80,8 +87,30 @@ export default function ApplyForm () {
           error={errors?.lastName?.message}
         />
       </div>
+      <div className='column is-half-desktop is-full-touch'>
+        <Input
+          label='Empresa'
+          type='text'
+          placeholder='Tu empresa'
+          name='company'
+          required
+          register={register}
+          error={errors?.company?.message}
+        />
+      </div>
+      <div className='column is-half-desktop is-full-touch'>
+        <Input
+          label='Cargo / Puesto'
+          type='text'
+          placeholder='Tu puesto'
+          name='position'
+          required
+          register={register}
+          error={errors?.position?.message}
+        />
+      </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='column is-half-desktop is-full-touch'>
         <Input
           label='Correo electrónico'
           type='email'
@@ -93,7 +122,7 @@ export default function ApplyForm () {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='column is-half-desktop is-full-touch'>
         <Controller
           name='phone'
           control={control}
@@ -107,48 +136,6 @@ export default function ApplyForm () {
             />}
         />
       </div>
-
-      <div className='column is-full-desktop is-full-touch'>
-        <Select
-          label='¿Qué programa te interesa?'
-          register={register}
-          name='course'
-          error={errors?.course?.message}
-          options={[
-            { label: 'Javascript Live', value: 'javascript-live' },
-            { label: 'Python Live', value: 'python-live' }
-          ]}
-          required
-        />
-      </div>
-
-      <div className='column is-full-desktop is-full-touch'>
-        <Select
-          label='¿Dónde nos conociste?'
-          register={register}
-          name='referer'
-          error={errors?.referer?.message}
-          options={[
-            { value: 'Facebook' },
-            { value: 'Twitter' },
-            { value: 'Instagram' },
-            { value: 'YouTube' },
-            { value: 'Otro' }
-          ]}
-          required
-        />
-      </div>
-
-      <div className='column is-full-desktop is-full-touch'>
-        <TextArea
-          label='¿Por qué quieres aplicar a Kodemia?'
-          register={register}
-          name='reason'
-          rows={2}
-          error={errors?.reason?.message}
-        />
-      </div>
-
       <div className='column is-full-desktop is-full-touch'>
         Al enviar este formulario estas aceptando nuestros <Link href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'> Términos y condiciónes </Link>
       </div>
