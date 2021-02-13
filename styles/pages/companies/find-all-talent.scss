@@ -1,0 +1,59 @@
+.find-all-talent {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 80px;
+  width: 100%;
+
+  .find-talent-container {
+    max-width: $content-max-width;
+    min-width: $content-min-width;
+    width: 100%;
+
+    @include on-mobile {
+      min-width: 100%;
+      padding: 0 45px;
+    }
+
+    @include on-tablet {
+      min-width: 100%;
+      padding: 0 85px;
+    }
+
+    .head {
+      max-width: 550px;
+      min-width: 230px;
+
+      @include on-mobile {
+        min-width: 230px;
+      }
+    }
+
+    .detail {
+      color: $gray;
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 35px;
+      max-width: 720px;
+    }
+
+    .cards {
+      display: grid;
+      grid-column-gap: 2.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      margin-top: 20px;
+
+      @include on-mobile {
+        grid-column-gap: 0;
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+      }
+
+      @include on-tablet {
+        grid-column-gap: 2.3rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+    }
+  }
+}
