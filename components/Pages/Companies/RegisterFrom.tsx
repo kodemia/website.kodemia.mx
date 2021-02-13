@@ -37,7 +37,7 @@ export default function RegisterCompanyForm() {
     registerCompany(data)
       .then((result) => {
         console.log(result)
-        //router.push('empresas/gracias')
+        router.push('empresas/gracias')
       })
       .catch(error => {
         console.log('error', error)

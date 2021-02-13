@@ -18,7 +18,7 @@ import { useRouter } from 'next/router'
 
 type ApplyFormData = zod.infer<typeof schema>
 
-export default function ApplyForm() {
+export default function ApplyForm () {
   const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
     resolver: zodResolver(schema)
   })
