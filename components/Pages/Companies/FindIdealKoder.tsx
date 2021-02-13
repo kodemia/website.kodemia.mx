@@ -3,16 +3,15 @@ import React from 'react'
 import H2 from 'components/H2'
 import H3 from 'components/H3'
 import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
-// import BootcampCard from 'components/BootcampCard'
 
 export interface Props {
   image: string
   infoCards: Array<InfoCardProps>
 }
 
-export default function FindKoder ({ image, infoCards }: Props) {
+export default function FindIdealKoder ({ image, infoCards }: Props) {
   return (
-    <section className='find-koder'>
+    <section className='find-ideal-koder'>
       <div className='find-koder-container section-container'>
         <div className='subject'>
           <H3 text='¿Cómo encuentro al Koder perfecto para mi empresa?' />

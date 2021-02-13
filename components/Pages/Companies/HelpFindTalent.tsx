@@ -8,9 +8,9 @@ export interface Props {
   infoCards: Array<InfoCardProps>
 }
 
-export default function FindAllTalent ({ detail, infoCards }: Props) {
+export default function HelpFindTalent ({ detail, infoCards }: Props) {
   return (
-    <section className='find-all-talent'>
+    <section className='help-find-talent'>
       <div className='find-talent-container section-container'>
         <div className='head'>
           <H3 text='¿Con qué empresas trabajamos?' />
