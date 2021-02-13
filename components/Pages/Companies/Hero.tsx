@@ -6,7 +6,7 @@ import HTMLVideoElement from 'typescript'
 import H2 from 'components/H2'
 import Button from 'components/Button'
 
-export default function Hero () {
+export default function Hero() {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
   return (
@@ -73,7 +73,7 @@ export default function Hero () {
           <Button
             isPrimary
             label='Contáctanos'
-            link='/'
+            link='/empresas/registro'
           />
         </div>
       </div>
