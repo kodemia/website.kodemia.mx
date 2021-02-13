@@ -46,8 +46,8 @@
     }
 
     .img-cont {
-      height: 420px;
       grid-area: image;
+      height: 420px;
       width: 100%;
 
       @include on-mobile {
