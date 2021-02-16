@@ -14,10 +14,9 @@ import { ToastContainer, toast } from 'react-toastify'
 
 import { registerCompany } from 'lib/api'
 
-
 type RegisterCompanyFormData = zod.infer<typeof schema>
 
-export default function RegisterCompanyForm() {
+export default function RegisterCompanyForm () {
   const { register, handleSubmit, control, errors } = useForm<RegisterCompanyFormData>({
     resolver: zodResolver(schema)
   })
@@ -27,12 +26,11 @@ export default function RegisterCompanyForm() {
 
   const onSubmit = (data: RegisterCompanyFormData) => {
     setIsSubmitting(true)
-    //ToDo: checar quien crea este objeto, back o front ¿?
+    // ToDo: checar quien crea este objeto, back o front ¿?
     data.customFields = {
       position: data.position,
       company: data.company
     }
-
 
     registerCompany(data)
       .then((result) => {
