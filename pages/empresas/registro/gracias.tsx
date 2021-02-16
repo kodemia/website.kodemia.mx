@@ -3,7 +3,7 @@ import Footer from 'components/Footer'
 import H2 from 'components/H2'
 import NavBar from 'components/Navbar'
 
-export default function Thankyou (props: Props) {
+export default function Thankyou () {
   return (
     <>
       <NavBar />
