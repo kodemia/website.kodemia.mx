@@ -1,0 +1,17 @@
+{
+  "image": "/images/companies/programador-ideal.jpg",
+  "cards": [
+    {
+      "detail": "Encuentra opciones para tu empresa sin invertir demasiado tiempo",
+      "icon": "icons/icon-por-tus-necesidades.svg",
+      "text": "¿Tienes una oportunidad laboral? \nTe ayudamos a encontrar al koder que se ajuste al perfil que buscas, si no lo sabes, te apoyamos a definirlo",
+      "title": "Por tus \nnecesidades"
+    },
+    {
+      "detail": "El Hack the Job te asegura encontrar al koder ideal, porque evalúas el código y la capacidad de resolver un problema con tu Stack tecnológico",
+      "icon": "icons/icon-hack-the-job.svg",
+      "text": "Es un método disruptivo con el que ayudamos a las empresas a encontrar al candidato con las habilidades correctas",
+      "title": "Hack \nthe Job"
+    }
+  ]
+}
