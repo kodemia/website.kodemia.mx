@@ -8,7 +8,7 @@ import H3 from 'components/H3'
 import RegisterForm from 'components/Pages/Companies/RegisterFrom'
 import Seo from 'components/SEO'
 
-export default function Registro () {
+export default function Registro() {
   return (
     <>
       <Seo />
