@@ -26,16 +26,6 @@ export default function Thankyou () {
                       <br />
                       pronto posible
                     </div>
-                    {/*
-                    </div>
-                      <div className='column is-full mb-5 is-hidden-desktop'>
-                        <Button
-                          isPrimary
-                          label='Descarga el Brochure'
-                          icon='/icons/download.svg'
-                          href={`/brochures/${props.bootcamp}?version=mobile`}
-                        />
-                    </div> */}
                   </div>
                 </div>
               </div>
