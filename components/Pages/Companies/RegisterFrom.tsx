@@ -26,7 +26,7 @@ export default function RegisterCompanyForm () {
 
   const onSubmit = (data: RegisterCompanyFormData) => {
     setIsSubmitting(true)
-    // ToDo: checar quien crea este objeto, back o front ¿?
+
     data.customFields = {
       position: data.position,
       company: data.company
@@ -93,7 +93,7 @@ export default function RegisterCompanyForm () {
           name='company'
           required
           register={register}
-          error={errors?.company?.message}
+          error={errors?.customFields?.company?.message}
         />
       </div>
       <div className='column is-half-desktop is-full-touch'>
@@ -104,7 +104,7 @@ export default function RegisterCompanyForm () {
           name='position'
           required
           register={register}
-          error={errors?.position?.message}
+          error={errors?.customFields?.position?.message}
         />
       </div>
 

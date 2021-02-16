@@ -24,5 +24,9 @@ export default z.object({
     'Twitter',
     'Otro'
   ]).optional(),
-  reason: z.string().optional()
+  reason: z.string().optional(),
+  customFields: z.object({
+    source: z.string().optional(),
+    reasonToApply: z.string().optional()
+  }).optional()
 })

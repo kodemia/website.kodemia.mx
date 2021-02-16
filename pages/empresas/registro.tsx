@@ -13,7 +13,7 @@ export default function Registro () {
     <>
       <Seo />
       <NavBar />
-      <div className='section' id='aplicar'>
+      <div className='section' id='registro'>
         <div className='container'>
           <main className='columns'>
             <aside className='column '>
