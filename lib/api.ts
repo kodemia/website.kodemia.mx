@@ -4,7 +4,7 @@ import _ from 'lodash'
 import * as zod from 'zod'
 
 import applySchema from 'schemas/applyForm.schema'
-import registerSchema from 'schemas/registerCompanyForm'
+import registerSchema from 'schemas/registerCompanyForm.schema'
 
 type ApplyFormData = zod.infer<typeof applySchema>
 type RegisterFormData = zod.infer<typeof registerSchema>
