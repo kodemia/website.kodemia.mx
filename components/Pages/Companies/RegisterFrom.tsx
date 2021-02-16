@@ -32,9 +32,6 @@ export default function RegisterCompanyForm () {
       company: data.company
     }
 
-    data.position = ''
-    data.company = ''
-
     registerCompany(data)
       .then((result) => {
         console.log(result)
