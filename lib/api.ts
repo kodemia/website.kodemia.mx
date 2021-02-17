@@ -27,7 +27,7 @@ export async function apply(data: ApplyFormData) {
 }
 
 export const registerCompany = async (data: RegisterFormData) => {
-  const url = 'active-campaign/companies'
+  const url = '/active-campaign/companies'
   const response = await api.post(url, data)
   return response
 }

@@ -5,7 +5,7 @@ import Cursor from 'components/TextCursor'
 import DescriptionParagraph from 'components/DescriptionParagraph'
 import H2 from 'components/H2'
 import H3 from 'components/H3'
-import RegisterForm from 'components/Pages/Companies/RegisterFrom'
+import RegisterForm from 'components/Pages/Companies/RegisterForm'
 import Seo from 'components/SEO'
 
 export default function Registro() {

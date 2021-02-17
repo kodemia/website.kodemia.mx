@@ -16,7 +16,7 @@ import { registerCompany } from 'lib/api'
 
 type RegisterCompanyFormData = zod.infer<typeof schema>
 
-export default function RegisterCompanyForm() {
+export default function RegisterCompanyForm () {
   const { register, handleSubmit, control, errors } = useForm<RegisterCompanyFormData>({
     resolver: zodResolver(schema)
   })
