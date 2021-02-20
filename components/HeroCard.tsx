@@ -6,14 +6,16 @@ import H1 from './H1'
 export interface Props {
   title: string
   content: string
+  btnTitle: string
+  link: string
 }
 
-export default function HeroCard ({ title, content }: Props) {
+export default function HeroCard ({ title, content, btnTitle, link }: Props) {
   return (
     <div className='hero-card'>
       <H1 text={title} />
       <p className='hero-content'>{content}</p>
-      <Button isPrimary label='Conoce nuestros Bootcamps' link='/#bootcamps' />
+      <Button isPrimary label={btnTitle} link={link} />
     </div>
   )
 };

@@ -4,7 +4,9 @@
   grid-column-gap: 16px;
   grid-template-areas:
     'ikon info-card-title'
-    'ikon text';
+    'ikon text'
+    'detail detail';
+  grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   padding: 20px 0 18px;
 
@@ -43,5 +45,17 @@
     grid-row: 2 / 3;
     height: 100%;
     margin-top: 15px;
+    white-space: pre-wrap;
+  }
+
+  .detail {
+    border: 1px solid $cyan;
+    border-radius: 10px;
+    color: $gray;
+    font-size: 18px;
+    font-weight: 500;
+    grid-area: detail;
+    margin-top: 40px;
+    padding: 30px 20px;
   }
 }

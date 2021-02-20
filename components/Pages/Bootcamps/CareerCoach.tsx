@@ -1,11 +1,11 @@
 import React from 'react'
 import _ from 'lodash'
 
-import H2 from '../../H2'
-import H3 from '../../H3'
-import InfoCard from '../../InfoCard'
+import H2 from 'components/H2'
+import H3 from 'components/H3'
+import InfoCard from 'components/InfoCard'
 
-import CareerData from '../../../config/bootcamps/career-data.json'
+import CareerData from 'config/bootcamps/career-data.json'
 
 export default function CareerCoach () {
   const [first, second] = _.chunk(CareerData.cards, 4)

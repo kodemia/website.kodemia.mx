@@ -1,15 +1,15 @@
 import React from 'react'
 
-import H2 from '../../H2'
-import H3 from '../../H3'
-import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
+import H2 from 'components/H2'
+import H3 from 'components/H3'
+import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
 
 export interface Props {
   image: string
   infoCards: Array<InfoCardProps>
 }
 
-export default function Support ({ infoCards, image }: Props) {
+export default function Support ({ image, infoCards }: Props) {
   return (
     <section className='support'>
       <div className='support-container section-container'>
