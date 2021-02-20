@@ -22,7 +22,7 @@ export default function Empresas () {
   return (
     <>
       <Seo
-        title='Encuentra desarrolladores de alto calibre'
+        title='Kodemia | Encuentra desarrolladores de alto calibre'
         description='Nuestros egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos'
       />
       <Navbar />
