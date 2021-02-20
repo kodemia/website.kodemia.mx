@@ -16,7 +16,7 @@ import Seo from 'components/SEO'
 
 // Data
 import BgVideoSrc from 'config/bg-video-src.json'
-import GoalsData from 'config/bootcamps/goals.json'
+import GoalsData from 'config/bootcamps/goals-javascript.json'
 import HeroData from 'config/bootcamps/hero-data.json'
 import InvestmentData from 'config/bootcamps/investment.json'
 import MetricsBootcamps from 'config/bootcamps/metrics.json'
