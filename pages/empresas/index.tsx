@@ -21,7 +21,10 @@ import ChooseKoder from 'config/companies/choose-koder-data.json'
 export default function Empresas () {
   return (
     <>
-      <Seo />
+      <Seo
+        title='Kodemia | Encuentra desarrolladores de alto calibre'
+        description='Nuestros egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos'
+      />
       <Navbar />
       <Hero />
       <TalentDevelopment infoCards={TalentData.cards} />

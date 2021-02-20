@@ -20,7 +20,7 @@ export const login = async (email: string, password: string) => {
   return token
 }
 
-export async function apply(data: ApplyFormData) {
+export async function apply (data: ApplyFormData) {
   const url = '/active-campaign/apply'
   const response = await api.post(url, data)
   return response
@@ -40,4 +40,3 @@ export const getClasses = async (token: string | null) => {
   const classes = _.get(response, 'data.payload.classes')
   return classes
 }
-
