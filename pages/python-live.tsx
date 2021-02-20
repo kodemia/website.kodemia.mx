@@ -13,10 +13,9 @@ import Support from 'components/Pages/Bootcamps/Support'
 import Testimonials from 'components/Pages/Home/Testimonials'
 import TransformYourLife from 'components/Pages/Home/TransformYourLife'
 import Seo from 'components/SEO'
-
 // Data
 import BgVideoSrc from 'config/bg-video-src.json'
-import GoalsData from 'config/bootcamps/goals.json'
+import GoalsData from 'config/bootcamps/goals-python.json'
 import HeroData from 'config/bootcamps/hero-data.json'
 import InvestmentData from 'config/bootcamps/investment.json'
 import MetricsBootcamps from 'config/bootcamps/metrics.json'
@@ -24,26 +23,26 @@ import ProgramData from 'config/bootcamps/program.json'
 import SupportData from 'config/bootcamps/support-data.json'
 import TestimonialData from 'config/testimonials-data.json'
 
-export default function JavascriptLive () {
+export default function PythonLive () {
   return (
     <>
       <Seo
-        title='Kodemia | Bootcamp FullStack con Javascript'
+        title='Kodemia | Bootcamp Back End con Python'
       />
       <Navbar />
-      <section id='javascript-live-page'>
-        <Hero bootcamp={HeroData.javascript} video={BgVideoSrc.javascript} />
-        <Metrics metrics={MetricsBootcamps.javascript} />
+      <section id='python-live-page'>
+        <Hero bootcamp={HeroData.python} video={BgVideoSrc.python} />
+        <Metrics metrics={MetricsBootcamps.python} />
         <Goals infoCards={GoalsData.cards} />
         <Program
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
           whiteText={ProgramData.whiteText}
-          bootcamp={ProgramData.javascript}
+          bootcamp={ProgramData.python}
         />
         <CareerCoach />
-        <Testimonials testimonials={TestimonialData} isGray />
-        <Investment investment={InvestmentData.javascript} />
+        <Testimonials testimonials={TestimonialData} />
+        <Investment investment={InvestmentData.python} />
         <Scholarship />
         <Support image={SupportData.image} infoCards={SupportData.cards} />
         <TransformYourLife />
