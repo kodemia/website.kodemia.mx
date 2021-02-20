@@ -13,20 +13,10 @@ export default z.object({
       const phoneNumber = parsePhoneNumber(value)
       return phoneNumber?.isValid()
     }, { message: 'Teléfono invalido' }),
-  course: z.enum([
-    'javascript-live',
-    'python-live'
-  ]),
-  referer: z.enum([
-    'Facebook',
-    'Instagram',
-    'Youtube',
-    'Twitter',
-    'Otro'
-  ]).optional(),
-  reason: z.string().optional(),
+  company: z.string().min(2, { message: ' Ingresa el nombre de tu compañía' }),
+  position: z.string().min(2, { message: 'Ingresa tu puesto' }),
   customFields: z.object({
-    source: z.string().optional(),
-    reasonToApply: z.string().optional()
+    company: z.string().optional(),
+    position: z.string().optional()
   }).optional()
 })

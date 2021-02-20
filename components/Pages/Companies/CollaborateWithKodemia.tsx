@@ -21,7 +21,7 @@ export default function CollaborateWithKodemia () {
           <Button
             label='Contáctanos'
             isPrimary
-            link='#'
+            link='/empresas/registro'
           />
         </div>
       </div>
