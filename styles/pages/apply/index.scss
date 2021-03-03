@@ -6,35 +6,50 @@
   padding-bottom: 80px;
   padding-top: 110px;
 
+  @include on-mobile {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @include on-tablet {
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+
   .container {
     max-width: $content-max-width;
 
-    aside {
-      .delimiter {
-        max-width: 335px;
+    main {
+      margin: 0;
+      width: 100%;
 
-        @include on-mobile {
-          max-width: 100%;
-        }
+      aside {
+        .delimiter {
+          max-width: 335px;
 
-        .description-paragraph {
-          margin-top: 25px;
+          @include on-mobile {
+            max-width: 100%;
+          }
+
+          .description-paragraph {
+            margin-top: 25px;
+          }
         }
       }
-    }
 
-    article {
-      background-color: $black-transparent-background;
-      border-radius: 20px;
-      margin-left: 1rem;
-      margin-right: 12px;
-      margin-top: 25px;
-      padding: 30px 40px;
+      article {
+        background-color: $black-transparent-background;
+        border-radius: 20px;
+        margin-left: 1rem;
+        margin-right: 12px;
+        margin-top: 25px;
+        padding: 30px 40px;
 
-      @include on-mobile {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 20px 15px;
+        @include on-mobile {
+          margin-left: 0;
+          margin-right: 0;
+          padding: 20px 15px;
+        }
       }
     }
   }

@@ -8,11 +8,11 @@
   width: 100%;
 
   @include on-mobile {
-    padding: 5px 30px;
+    padding: 5px 33px;
   }
 
   @include on-tablet {
-    padding: 12px 70px;
+    padding: 12px 72px;
   }
 
   a {
@@ -48,6 +48,10 @@
         img {
           max-height: none;
         }
+      }
+
+      .navbar-burger {
+        width: 2.75rem;
       }
     }
 
