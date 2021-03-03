@@ -3,8 +3,7 @@
 #registro {
   background-color: $black-primary;
   min-height: 100vh;
-  padding-bottom: 80px;
-  padding-top: 110px;
+  padding: 110px 50px 80px;
 
   @include on-mobile {
     padding-left: 45px;
@@ -24,6 +23,8 @@
       width: 100%;
 
       aside {
+        padding-left: 0;
+
         .delimiter {
           max-width: 335px;
 
