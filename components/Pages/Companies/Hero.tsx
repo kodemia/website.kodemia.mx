@@ -12,16 +12,27 @@ export default function Hero () {
   return (
     <div className='columns hero-companies'>
       <div className='column hero-container section-container'>
-        <div className='title'>
+        <div className='subject'>
           <H2
             cyanText=''
-            whiteText='Encuentra desarrolladores de alto calibre'
+            whiteText='Encuentra desarrolladores de'
+          />
+          <H2
+            cyanText=''
+            whiteText='alto calibre'
             isFirstCyan
           />
         </div>
         <p className='description'>
           Los egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos.
         </p>
+        <div className='hero-btn'>
+          <Button
+            isPrimary
+            label='Contáctanos'
+            link='/empresas/registro'
+          />
+        </div>
         <div className='video-wrapper'>
           <div className='video-container'>
             <video
@@ -42,7 +53,7 @@ export default function Hero () {
               }}
             >
               <source
-                src='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4'
+                src='https://cdn.kodemia.mx/videos/video_empresas.mp4'
               />
             </video>
           </div>
@@ -67,14 +78,6 @@ export default function Hero () {
               className='icon-play-blue'
             />
           </div>
-
-        </div>
-        <div className='hero-btn'>
-          <Button
-            isPrimary
-            label='Contáctanos'
-            link='/empresas/registro'
-          />
         </div>
       </div>
     </div>
