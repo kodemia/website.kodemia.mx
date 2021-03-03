@@ -1,0 +1,31 @@
+{
+  "python": {
+    "subtitle": "Soporte Kodemia (De por vida)",
+    "whiteTitle": "Otros",
+    "cyanTitle": "Beneficios",
+    "secondWhiteTitle": "más...",
+    "image": "images/bootcamps/soporte-kodemia.jpg",
+    "cards": [
+      {
+        "text": "En Kodemia se crean las condiciones para formar un grupo de personas unidas por el amor a programar y con la apertura de seguir compartiendo conocimiento. Siempre tendrás a la comunidad para apoyarte y acompañarte",
+        "icon": "icons/icon-comunidad.svg",
+        "title": "Nuestra \ncomunidad"
+      },
+      {
+        "text": "Los mentores trabajan como líderes de desarrollo en diferentes empresas y buscan todos los días compartir su experiencia profesional y personal con los koders. Su compromiso está en brindarte todas las herramientas para que cumplas tu objetivos",
+        "icon": "icons/icon-aprende-lideres.svg",
+        "title": "Cuentas con \nMentoría"
+      },
+      {
+        "text": "Es un método de reclutamiento disruptivo para las empresas que buscan programadores. A partir de la semana 7 puedes participar en los retos y colocarte",
+        "icon": "icons/icon-hack-the-job.svg",
+        "title": "Hack \nthe Job"
+      },
+      {
+        "text": "Cuentas con una cuenta de Kodemia Live para ver tus clases pasadas, acceso al Slack y al Telegram de la comunidad",
+        "icon": "icons/icon-recursos-adicionales.svg",
+        "title": "Recursos \nAdicionales"
+      }
+    ]
+  }
+}

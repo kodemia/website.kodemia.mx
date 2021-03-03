@@ -20,19 +20,22 @@ export interface Program {
 
 export interface Props {
   chooseKoder: Array<Program>
+  cyanTitle: string
+  subtitle: string
+  whiteTitle: string
 }
 
-export default function ChooseAKoder ({ chooseKoder = [] }: Props) {
+export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, whiteTitle }: Props) {
   const [activeProgram, setActiveProgram] = useState(0)
   return (
     <section className='choose-a-koder is-flex is-justify-content-center'>
       <div className='columns is-multiline section-container choose-a-koder-wrapper'>
         <div className='column is-full title-choose'>
-          <H3 text='¿Por qué elegir un Koder?' />
+          <H3 text={subtitle} />
           <div className='title-container'>
             <H2
-              whiteText='¿De qué es capaz un '
-              cyanText='Koder?'
+              whiteText={whiteTitle}
+              cyanText={cyanTitle}
             />
           </div>
         </div>

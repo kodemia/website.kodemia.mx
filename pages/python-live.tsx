@@ -16,11 +16,11 @@ import Seo from 'components/SEO'
 // Data
 import BgVideoSrc from 'config/bg-video-src.json'
 import GoalsData from 'config/bootcamps/goals-python.json'
-import HeroData from 'config/bootcamps/hero-data.json'
-import InvestmentData from 'config/bootcamps/investment.json'
-import MetricsBootcamps from 'config/bootcamps/metrics.json'
-import ProgramData from 'config/bootcamps/program.json'
-import SupportData from 'config/bootcamps/support-data.json'
+import HeroData from 'config/bootcamps/hero-data-python.json'
+import InvestmentData from 'config/bootcamps/investment-python.json'
+import MetricsBootcamps from 'config/bootcamps/metrics-python.json'
+import ProgramData from 'config/bootcamps/program-python.json'
+import SupportData from 'config/bootcamps/support-data-python.json'
 import TestimonialData from 'config/testimonials-data.json'
 
 export default function PythonLive () {
@@ -33,7 +33,7 @@ export default function PythonLive () {
       <section id='python-live-page'>
         <Hero bootcamp={HeroData.python} video={BgVideoSrc.python} />
         <Metrics metrics={MetricsBootcamps.python} />
-        <Goals infoCards={GoalsData.cards} />
+        <Goals achievement={GoalsData.python} />
         <Program
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
@@ -44,7 +44,7 @@ export default function PythonLive () {
         <Testimonials testimonials={TestimonialData} />
         <Investment investment={InvestmentData.python} />
         <Scholarship />
-        <Support image={SupportData.image} infoCards={SupportData.cards} />
+        <Support support={SupportData.python} />
         <TransformYourLife />
       </section>
       <Footer />

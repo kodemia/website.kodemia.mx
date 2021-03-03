@@ -30,13 +30,24 @@ export default function Home () {
       <Seo />
       <Navbar />
       <Hero video={BgVideoSrc.home} />
-      <WhyKodemia infoCards={WhyKodemiaCards.cards} />
+      <WhyKodemia
+        cards={WhyKodemiaCards.cards}
+        cyanTitle={WhyKodemiaCards.cyanTitle}
+        image={WhyKodemiaCards.image}
+        subtitle={WhyKodemiaCards.subtitle}
+        whiteTitle={WhyKodemiaCards.whiteTitle}
+      />
       <OurBootcamps bootcamps={OurBootcampsCards} />
       <KodemiaExperience videos={ExperienceData} />
       <WhatGoingAchieve winnerImages={WinnerImages} />
       <OurMethod ourMethod={OurMethodData} />
       <KodemiaFinancing info={KodemiaFinancingData} />
-      <AlliancesKodemia allies={AlliesData} />
+      <AlliancesKodemia
+        allies={AlliesData.allies}
+        cyanTitle={AlliesData.cyanTitle}
+        subtitle={AlliesData.subtitle}
+        whiteTitle={AlliesData.whiteTitle}
+      />
       <Testimonials testimonials={TestimonialData} />
       <TransformYourLife />
       <Footer />

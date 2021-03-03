@@ -1,20 +1,25 @@
 {
-  "detail": "El objetivo es ayudarte a encontrar a la persona adecuada para colaborar de acuerdo con tu escala y operación.",
-  "cards": [
-    {
-      "icon": "icons/icon-corporativos.svg",
-      "title": "Corporativos",
-      "text": "Empresas grandes con estructuras definidas"
-    },
-    {
-      "icon": "icons/icon-startups.svg",
-      "title": "Startups",
-      "text": "Equipos pequeños de alto rendimiento en constante evolución"
-    },
-    {
-      "icon": "icons/icon-pymes.svg",
-      "title": "Pymes",
-      "text": "Empresas medianas y pequeñas que están migrando al mundo tecnológico"
-    }
-  ]
+  "findTalent": {
+    "subtitle": "¿Con qué empresas trabajamos?",
+    "whiteTitle": "Ayudamos a encontrar talento ",
+    "cyanTitle": "a todo nivel",
+    "detail": "El objetivo es ayudarte a encontrar a la persona adecuada para colaborar de acuerdo con tu escala y operación.",
+    "cards": [
+      {
+        "icon": "icons/icon-corporativos.svg",
+        "title": "Corporativos",
+        "text": "Empresas grandes con estructuras definidas"
+      },
+      {
+        "icon": "icons/icon-startups.svg",
+        "title": "Startups",
+        "text": "Equipos pequeños de alto rendimiento en constante evolución"
+      },
+      {
+        "icon": "icons/icon-pymes.svg",
+        "title": "Pymes",
+        "text": "Empresas medianas y pequeñas que están migrando al mundo tecnológico"
+      }
+    ]
+  }
 }

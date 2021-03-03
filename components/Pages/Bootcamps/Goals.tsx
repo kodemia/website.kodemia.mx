@@ -5,20 +5,25 @@ import H3 from '../../H3'
 import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
 
 export interface Props {
-  infoCards: Array<InfoCardProps>
+  achievement: {
+    cards: Array<InfoCardProps>
+    cyanTitle: string
+    subtitle: string
+    whiteTitle: string
+  }
 }
 
-export default function Goals ({ infoCards }: Props) {
+export default function Goals ({ achievement }: Props) {
   return (
     <section className='goals'>
       <div className='goals-container section-container'>
         <div className='head'>
-          <H3 text='Objetivos del Bootcamp' />
-          <H2 whiteText='¿Qué vas a lograr' cyanText='programando?' />
+          <H3 text={achievement.subtitle} />
+          <H2 whiteText={achievement.whiteTitle} cyanText={achievement.cyanTitle} />
         </div>
         <div className='goals-cards'>
           {
-            infoCards.map((infoCard, index) => {
+            achievement.cards.map((infoCard, index) => {
               return (
                 <InfoCard
                   key={`card-${index}`}

@@ -17,11 +17,11 @@ import Seo from 'components/SEO'
 // Data
 import BgVideoSrc from 'config/bg-video-src.json'
 import GoalsData from 'config/bootcamps/goals-javascript.json'
-import HeroData from 'config/bootcamps/hero-data.json'
-import InvestmentData from 'config/bootcamps/investment.json'
-import MetricsBootcamps from 'config/bootcamps/metrics.json'
-import ProgramData from 'config/bootcamps/program.json'
-import SupportData from 'config/bootcamps/support-data.json'
+import HeroData from 'config/bootcamps/hero-data-javascript.json'
+import InvestmentData from 'config/bootcamps/investment-javascript.json'
+import MetricsBootcamps from 'config/bootcamps/metrics-javascript.json'
+import ProgramData from 'config/bootcamps/program-javascript.json'
+import SupportData from 'config/bootcamps/support-data-javascript.json'
 import TestimonialData from 'config/testimonials-data.json'
 
 export default function JavascriptLive () {
@@ -34,7 +34,7 @@ export default function JavascriptLive () {
       <section id='javascript-live-page'>
         <Hero bootcamp={HeroData.javascript} video={BgVideoSrc.javascript} />
         <Metrics metrics={MetricsBootcamps.javascript} />
-        <Goals infoCards={GoalsData.cards} />
+        <Goals achievement={GoalsData.javascript} />
         <Program
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
@@ -45,7 +45,7 @@ export default function JavascriptLive () {
         <Testimonials testimonials={TestimonialData} isGray />
         <Investment investment={InvestmentData.javascript} />
         <Scholarship />
-        <Support image={SupportData.image} infoCards={SupportData.cards} />
+        <Support support={SupportData.javascript} />
         <TransformYourLife />
       </section>
       <Footer />

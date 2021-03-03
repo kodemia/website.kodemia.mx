@@ -1,55 +1,60 @@
-[
-  {
-    "name": "Javascript",
-    "image":"/images/companies/de-que-es-capaz-un-koder-js.jpg",
-    "skills": [
-      {
-        "icon":"/icons/mern-stack.svg",
-        "title": "MERN Stack",
-        "text": "El aprendizaje gira entorno a Javascript, utilizando MongoDB, Express.Js, ReactJS y NodeJS"
-      },
-      {
-        "icon":"/icons/una-web-app-completa.svg",
-        "title": "Una web app completa",
-        "text": "El desafío final de cada koder es desarrollar una web app, desde la idea, la planeación, Front End, Back End y el consumo de API, todo desplegado en la nube"
-      },
-      {
-        "icon":"/icons/logica-de-programacion.svg",
-        "title": "Lógica de programación",
-        "text": "Desde el día uno, los koders desarrollan esta habilidad, para que no sólo copien y peguen código"
-      },
-      {
-        "icon":"/icons/encontrar-soluciones.svg",
-        "title": "Encontrar soluciones",
-        "text": "Aprender a aprender es nuestra filosofía más fuerte. Buscamos acercarles los recursos para resolver problemas, en lugar de darles la respuesta"
-      }
-    ]
-
-  },
-  {
-    "name":"Python",
-    "image": "/images/companies/de-que-es-capaz-un-koder-python.jpg",
-    "skills": [
-      {
-        "icon":"/icons/javascript-mas-python.svg",
-        "title": "Javascript + Python",
-        "text": "Aprenden a desarrollar el Front End con Javascript y Back End con Python, SQL, Django y el consumo de API, todo desplegado en la nube"
-      },
-      {
-        "icon":"/icons/data-manipulation.svg",
-        "title": "Data Manipulation",
-        "text": "Uso de Pandas y Scrapy  para el análisis de datos sumado a las habilidades como desarrollador web"
-      },
-      {
-        "icon":"/icons/logica-de-programacion.svg",
-        "title": "Lógica de programación",
-        "text": "Desde el día uno, los koders desarrollan esta habilidad, para que no sólo copien y peguen código"
-      },
-      {
-        "icon":"/icons/encontrar-soluciones.svg",
-        "title": "Encontrar soluciones",
-        "text": "Aprender a aprender es nuestra filosofía más fuerte. Buscamos acercarles los recursos para resolver problemas, en lugar de darles la respuesta"
-      }
-    ]
-  }
-]
+{
+  "subtitle": "¿Por qué elegir un Koder?",
+  "whiteTitle": "¿De qué es capaz un ",
+  "cyanTitle": "Koder?",
+  "chooseKoder": [
+    {
+      "name": "Javascript",
+      "image":"/images/companies/de-que-es-capaz-un-koder-js.jpg",
+      "skills": [
+        {
+          "icon":"/icons/mern-stack.svg",
+          "title": "MERN Stack",
+          "text": "El aprendizaje gira entorno a Javascript, utilizando MongoDB, Express.Js, ReactJS y NodeJS"
+        },
+        {
+          "icon":"/icons/una-web-app-completa.svg",
+          "title": "Una web app completa",
+          "text": "El desafío final de cada koder es desarrollar una web app, desde la idea, la planeación, Front End, Back End y el consumo de API, todo desplegado en la nube"
+        },
+        {
+          "icon":"/icons/logica-de-programacion.svg",
+          "title": "Lógica de programación",
+          "text": "Desde el día uno, los koders desarrollan esta habilidad, para que no sólo copien y peguen código"
+        },
+        {
+          "icon":"/icons/encontrar-soluciones.svg",
+          "title": "Encontrar soluciones",
+          "text": "Aprender a aprender es nuestra filosofía más fuerte. Buscamos acercarles los recursos para resolver problemas, en lugar de darles la respuesta"
+        }
+      ]
+  
+    },
+    {
+      "name":"Python",
+      "image": "/images/companies/de-que-es-capaz-un-koder-python.jpg",
+      "skills": [
+        {
+          "icon":"/icons/javascript-mas-python.svg",
+          "title": "Javascript + Python",
+          "text": "Aprenden a desarrollar el Front End con Javascript y Back End con Python, SQL, Django y el consumo de API, todo desplegado en la nube"
+        },
+        {
+          "icon":"/icons/data-manipulation.svg",
+          "title": "Data Manipulation",
+          "text": "Uso de Pandas y Scrapy  para el análisis de datos sumado a las habilidades como desarrollador web"
+        },
+        {
+          "icon":"/icons/logica-de-programacion.svg",
+          "title": "Lógica de programación",
+          "text": "Desde el día uno, los koders desarrollan esta habilidad, para que no sólo copien y peguen código"
+        },
+        {
+          "icon":"/icons/encontrar-soluciones.svg",
+          "title": "Encontrar soluciones",
+          "text": "Aprender a aprender es nuestra filosofía más fuerte. Buscamos acercarles los recursos para resolver problemas, en lugar de darles la respuesta"
+        }
+      ]
+    }
+  ]
+}

@@ -1,23 +1,5 @@
 
 {
-  "javascript": {
-    "title": "Bootcamp Full Stack JavaScript",
-    "subtitle": "Javascript",
-    "description": "Transforma tu vida programando. En 19 semanas tendrás las habilidades para programar una aplicación web desde cero.",
-    "information": [
-      {
-        "title": "Inicio:",
-        "text": "26 de Abril de 2021"
-      },{
-        "title":"Modalidad: Live",
-        "text": "Clases remotas"
-      },
-      {
-        "title":"Horario:",
-        "text": "Lunes a viernes de 19:00 - 22:00 hrs."
-      }
-    ]
-  },
   "python": {
     "title": "Bootcamp Back End con Python",
     "subtitle": "Javascript + Python",
