@@ -7,7 +7,7 @@ import classNames from 'classnames'
 import Button from 'components/Button'
 import NavbarItems from 'config/navbar-items.json'
 
-export default function Navbar () {
+export default function Navbar() {
   const [isActive, setIsActive] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const router = useRouter()
@@ -69,7 +69,7 @@ export default function Navbar () {
             <div className='btns'>
               <div className='btn-sign-in'>
                 {
-                  isLoggedIn && <Button label='Cerrar sesión' onClickP={signOut} />
+                  isLoggedIn && <Button label='Cerrar sesión' onClick={signOut} />
                 }
                 {
                   !isLoggedIn && <Button label='Iniciar sesión' link='/login' />

@@ -20,7 +20,7 @@ export const login = async (email: string, password: string) => {
   return token
 }
 
-export async function apply (data: ApplyFormData) {
+export async function apply(data: ApplyFormData) {
   const url = '/active-campaign/apply'
   const response = await api.post(url, data)
   return response
@@ -33,10 +33,20 @@ export const registerCompany = async (data: RegisterFormData) => {
 }
 
 export const getClasses = async (token: string | null) => {
-  const url = '/classes'
-  const response = await api.get(url, {
-    headers: { Authorization: token }
-  })
-  const classes = _.get(response, 'data.payload.classes')
-  return classes
+  let result = { success: false, classes: [] }
+  try {
+    const url = '/classes'
+    const response = await api.get(url, {
+      headers: { Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmODdjYTRlYjk0MmI5NmFjZDE4NWRjNSIsImlzTWVudG9yIjpmYWxzZSwiaWF0IjoxNjE0OTI2MjUyLCJleHAiOjE2MTU1MzEwNTJ9.OylhYBcLuFnvS2KsRWwECV4JeWmfwUtuknxKgt9ABD0' }
+    })
+
+    result.classes = _.get(response, 'data.payload.classes')
+    result.success = true
+
+    return result
+
+  } catch (error) {
+
+    return result
+  }
 }
