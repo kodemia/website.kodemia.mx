@@ -8,11 +8,11 @@ export interface Props {
   label: string
   icon?: string
   hasWhiteBg?: Boolean
-  link?:string
+  link?: string
   href?: string
   type?: 'submit'
   isDisabled?: boolean
-  onClick?: () => void
+  onClickP?: () => void
 }
 
 export default function Button ({
@@ -23,7 +23,8 @@ export default function Button ({
   href,
   hasWhiteBg,
   type,
-  isDisabled
+  isDisabled,
+  onClickP
 }: Props) {
   const router = useRouter()
   const btnClass = classNames({
@@ -51,7 +52,7 @@ export default function Button ({
         !href && type !== 'submit' &&
           <a
             className={btnClass}
-            onClick={() => router.push(link)}
+            onClick={onClickP || (() => router.push(link))}
           >
             <img src={icon} className='ikon' />
             {label}
