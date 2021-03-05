@@ -39,24 +39,24 @@
     .subject {
       grid-area: subject;
       max-width: 350px;
-      
+
       @include on-mobile {
         max-width: 300px;
       }
-      
+
       @include on-tablet {
         grid-column: 1 / 2;
         grid-row: 1 /2;
         max-width: 300px;
       }
     }
-    
+
     .description {
       color: $text;
       font-size: 18px;
       grid-area: description;
       margin-top: 40px;
-      
+
       @include on-mobile {
         margin-top: 30px;
       }
@@ -87,7 +87,7 @@
       grid-area: video;
       margin: auto;
       position: relative;
-      
+
       @include on-mobile {
         margin-top: 40px;
       }

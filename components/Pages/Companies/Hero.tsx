@@ -13,7 +13,7 @@ export default function Hero () {
     <div className='columns hero-companies'>
       <div className='column hero-container section-container'>
         <div className='subject'>
-        <H2
+          <H2
             cyanText=''
             whiteText='Encuentra desarrolladores de alto calibre'
             isFirstCyan
