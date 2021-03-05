@@ -55,7 +55,7 @@
       color: $text;
       font-size: 18px;
       grid-area: description;
-      margin-top: 40px;
+      margin-top: 25px;
 
       @include on-mobile {
         margin-top: 30px;
@@ -70,7 +70,7 @@
 
     .hero-btn {
       grid-area: button;
-      margin-top: 20px;
+      margin-top: 15px;
 
       @include on-mobile {
         margin-top: 40px;
