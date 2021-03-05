@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react'
 import Router from 'next/router'
+import { ToastContainer, toast } from 'react-toastify'
+
 // My components
 import Navbar from 'components/Navbar'
 import H2 from 'components/H2'
@@ -21,7 +23,7 @@ export interface Class {
   _id: string
 }
 
-export default function Classes() {
+export default function Classes () {
   const [classes, setClasses] = useState<Array<Class>>([])
   useEffect(() => {
     const token = window.sessionStorage.getItem('token')
@@ -30,21 +32,28 @@ export default function Classes() {
       Router.replace('/login')
     }
 
-    getClasses(token).then(classes => {
-      if (classes.success) {
+    getClasses(token)
+      .then(classes => {
         setClasses(classes.classes)
-      } else {
-        console.log('ups')
-        window.sessionStorage.removeItem('token')
-        Router.replace('/login')
-      }
-    })
+      })
+      .catch(error => {
+        const status = error.request.status
+        if (status === 401) {
+          const errorMessage = 'Tu sesión expiró, inicia sesión nuevamente ☠️ '
+          toast.error(errorMessage)
+          setTimeout(function () {
+            window.sessionStorage.removeItem('token')
+            Router.replace('/login')
+          }, 2000)
+        }
+      })
   }, [])
 
   return (
     <div className='classes'>
       <Seo />
       <Navbar />
+      <ToastContainer position='top-center' />
       <div className='columns is-multiline classes-container'>
         <div className='column is-full classes-bg'>
           <div className='title-container is-flex is-justify-content-center'>
@@ -64,9 +73,9 @@ export default function Classes() {
           <div className='columns is-multiline  classes-cards'>
             {
               classes.length === 0 &&
-              <div className='column'>
-                <progress className='progress is-small is-info' max='100'>15%</progress>
-              </div>
+                <div className='column'>
+                  <progress className='progress is-small is-info' max='100'>15%</progress>
+                </div>
             }
             {
               classes.map((klass, index) => (

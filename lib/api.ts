@@ -33,20 +33,11 @@ export const registerCompany = async (data: RegisterFormData) => {
 }
 
 export const getClasses = async (token: string | null) => {
-  let result = { success: false, classes: [] }
-  try {
-    const url = '/classes'
-    const response = await api.get(url, {
-      headers: { Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmODdjYTRlYjk0MmI5NmFjZDE4NWRjNSIsImlzTWVudG9yIjpmYWxzZSwiaWF0IjoxNjE0OTI2MjUyLCJleHAiOjE2MTU1MzEwNTJ9.OylhYBcLuFnvS2KsRWwECV4JeWmfwUtuknxKgt9ABD0' }
-    })
+  const url = '/classes'
+  const response = await api.get(url, {
+    headers: { Authorization: token }
+  })
+  const classes = _.get(response, 'data.payload.classes')
 
-    result.classes = _.get(response, 'data.payload.classes')
-    result.success = true
-
-    return result
-
-  } catch (error) {
-
-    return result
-  }
+  return { classes, status: response.status }
 }

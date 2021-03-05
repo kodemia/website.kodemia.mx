@@ -7,7 +7,7 @@ import classNames from 'classnames'
 import Button from 'components/Button'
 import NavbarItems from 'config/navbar-items.json'
 
-export default function Navbar() {
+export default function Navbar () {
   const [isActive, setIsActive] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const router = useRouter()
