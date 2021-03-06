@@ -15,7 +15,6 @@ import WhatGoingAchieve from 'components/Pages/Home/WhatGoingAchieve'
 import WhyKodemia from 'components/Pages/Home/WhyKodemia'
 // Data
 import AlliesData from 'config/allies-data.json'
-import BgVideoSrc from 'config/bg-video-src.json'
 import ExperienceData from 'config/experiencie-data.json'
 import KodemiaFinancingData from 'config/kodemia-financing-data.json'
 import OurBootcampsCards from 'config/our-bootcamps-cards.json'
@@ -29,7 +28,7 @@ export default function Home () {
     <>
       <Seo />
       <Navbar />
-      <Hero video={BgVideoSrc.home} />
+      <Hero video='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4' />
       <WhyKodemia
         cards={WhyKodemiaCards.cards}
         cyanTitle={WhyKodemiaCards.cyanTitle}

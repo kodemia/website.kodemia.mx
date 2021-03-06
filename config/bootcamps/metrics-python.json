@@ -1,16 +1,14 @@
-{  
-  "python": [
-    {
-      "description": "horas en clases y talleres complementarios",
-      "value": "+448"
-    },
-    {
-      "description": "horas de práctica en desafíos y proyectos",
-      "value": "+180"
-    },
-    {
-      "description": "de colocación de egresados de Kodemia",
-      "value": "+90"
-    }
-  ]
-}
+[
+  {
+    "description": "horas en clases y talleres complementarios",
+    "value": "+448"
+  },
+  {
+    "description": "horas de práctica en desafíos y proyectos",
+    "value": "+180"
+  },
+  {
+    "description": "de colocación de egresados de Kodemia",
+    "value": "+90"
+  }
+]

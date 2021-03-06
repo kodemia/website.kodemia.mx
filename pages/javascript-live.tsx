@@ -15,7 +15,6 @@ import TransformYourLife from 'components/Pages/Home/TransformYourLife'
 import Seo from 'components/SEO'
 
 // Data
-import BgVideoSrc from 'config/bg-video-src.json'
 import GoalsData from 'config/bootcamps/goals-javascript.json'
 import HeroData from 'config/bootcamps/hero-data-javascript.json'
 import InvestmentData from 'config/bootcamps/investment-javascript.json'
@@ -32,9 +31,9 @@ export default function JavascriptLive () {
       />
       <Navbar />
       <section id='javascript-live-page'>
-        <Hero bootcamp={HeroData.javascript} video={BgVideoSrc.javascript} />
-        <Metrics metrics={MetricsBootcamps.javascript} />
-        <Goals achievement={GoalsData.javascript} />
+        <Hero bootcamp={HeroData} video='https://prismic-io.s3.amazonaws.com/kodemia/97b6755e-8623-4010-90e8-67a2c8830ccc_Video+fondo+JS.mp4' />
+        <Metrics metrics={MetricsBootcamps} />
+        <Goals achievement={GoalsData} />
         <Program
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
@@ -43,9 +42,9 @@ export default function JavascriptLive () {
         />
         <CareerCoach />
         <Testimonials testimonials={TestimonialData} isGray />
-        <Investment investment={InvestmentData.javascript} />
+        <Investment investment={InvestmentData} />
         <Scholarship />
-        <Support support={SupportData.javascript} />
+        <Support support={SupportData} />
         <TransformYourLife />
       </section>
       <Footer />

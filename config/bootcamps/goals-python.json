@@ -1,39 +1,37 @@
 {
-  "python": {
-    "whiteTitle": "¿Qué vas a lograr",
-    "cyanTitle": "programando?",
-    "subtitle": "Objetivos del Bootcamp",
-    "cards": [
-      {
-        "text": "En programación las cosas cambian rápidamente y seguir aprendiendo es clave para ser desarrollador",
-        "icon": "icons/icon-aprender.svg",
-        "title": "Aprende a \naprender"
-      },
-      {
-        "text": "Soluciona problemas a través del razonamiento y el análisis de la situación",
-        "icon": "icons/icon-desarrolla-logica.svg",
-        "title": "Desarrollar \ntu lógica"
-      },
-      {
-        "text": "Muestra la información del cliente en el Front End de forma dinámica",
-        "icon": "icons/icon-web.svg",
-        "title": "Desarrollar un \nsitio web"
-      },
-      {
-        "text": "Genera el Back End, desarrolla tu base de datos, crea y consume APIs y despliégalo en la nube",
-        "icon": "icons/icon-arquitectura.svg",
-        "title": "Arquitectura \nCliente-Servidor"
-      },
-      {
-        "text": "Toma un módulo completo donde aprenderás a manipular datos con Pandas y Scrapy para después analizarlos",
-        "icon": "icons/icon-aprende-a-manipular-datos.svg",
-        "title": "Aprende a manipular \ndatos"
-      },
-      {
-        "text": "Integra todas tus habilidades: planeación, organización, desarrollo y hasta la presentación de una idea funcional",
-        "icon": "icons/icon-desarrolla-fullstack.svg",
-        "title": "Desarrollos \nFull Stack"
-      }
-    ]
-  }
+  "whiteTitle": "¿Qué vas a lograr",
+  "cyanTitle": "programando?",
+  "subtitle": "Objetivos del Bootcamp",
+  "cards": [
+    {
+      "text": "En programación las cosas cambian rápidamente y seguir aprendiendo es clave para ser desarrollador",
+      "icon": "icons/icon-aprender.svg",
+      "title": "Aprende a \naprender"
+    },
+    {
+      "text": "Soluciona problemas a través del razonamiento y el análisis de la situación",
+      "icon": "icons/icon-desarrolla-logica.svg",
+      "title": "Desarrollar \ntu lógica"
+    },
+    {
+      "text": "Muestra la información del cliente en el Front End de forma dinámica",
+      "icon": "icons/icon-web.svg",
+      "title": "Desarrollar un \nsitio web"
+    },
+    {
+      "text": "Genera el Back End, desarrolla tu base de datos, crea y consume APIs y despliégalo en la nube",
+      "icon": "icons/icon-arquitectura.svg",
+      "title": "Arquitectura \nCliente-Servidor"
+    },
+    {
+      "text": "Toma un módulo completo donde aprenderás a manipular datos con Pandas y Scrapy para después analizarlos",
+      "icon": "icons/icon-aprende-a-manipular-datos.svg",
+      "title": "Aprende a manipular \ndatos"
+    },
+    {
+      "text": "Integra todas tus habilidades: planeación, organización, desarrollo y hasta la presentación de una idea funcional",
+      "icon": "icons/icon-desarrolla-fullstack.svg",
+      "title": "Desarrollos \nFull Stack"
+    }
+  ]
 }

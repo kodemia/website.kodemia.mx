@@ -14,7 +14,6 @@ import Testimonials from 'components/Pages/Home/Testimonials'
 import TransformYourLife from 'components/Pages/Home/TransformYourLife'
 import Seo from 'components/SEO'
 // Data
-import BgVideoSrc from 'config/bg-video-src.json'
 import GoalsData from 'config/bootcamps/goals-python.json'
 import HeroData from 'config/bootcamps/hero-data-python.json'
 import InvestmentData from 'config/bootcamps/investment-python.json'
@@ -31,9 +30,9 @@ export default function PythonLive () {
       />
       <Navbar />
       <section id='python-live-page'>
-        <Hero bootcamp={HeroData.python} video={BgVideoSrc.python} />
-        <Metrics metrics={MetricsBootcamps.python} />
-        <Goals achievement={GoalsData.python} />
+        <Hero bootcamp={HeroData} video='https://prismic-io.s3.amazonaws.com/kodemia/91cf67a3-e0d4-4158-93ee-eded5bd49514_Video+fondo+Python.mp4' />
+        <Metrics metrics={MetricsBootcamps} />
+        <Goals achievement={GoalsData} />
         <Program
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
@@ -42,9 +41,9 @@ export default function PythonLive () {
         />
         <CareerCoach />
         <Testimonials testimonials={TestimonialData} />
-        <Investment investment={InvestmentData.python} />
+        <Investment investment={InvestmentData} />
         <Scholarship />
-        <Support support={SupportData.python} />
+        <Support support={SupportData} />
         <TransformYourLife />
       </section>
       <Footer />
