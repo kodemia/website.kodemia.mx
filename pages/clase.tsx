@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Router, { useRouter } from 'next/router'
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 
 // My components
 import Navbar from 'components/Navbar'
@@ -8,6 +8,8 @@ import Footer from 'components/Footer'
 import Klass from 'components/Pages/Classes/Klass'
 // api
 import { getClasses } from 'lib/api'
+// utils
+import { checkToken } from '../utils/utils'
 
 export interface Class {
   date: string
@@ -40,18 +42,11 @@ export default function Clase () {
 
     getClasses(token)
       .then(classes => {
-        setClasses(classes.classes)
+        setClasses(classes)
       })
       .catch(error => {
         const status = error.request.status
-        if (status === 401) {
-          const errorMessage = 'Tu sesión expiró, inicia sesión nuevamente ☠️ '
-          toast.error(errorMessage)
-          setTimeout(function () {
-            window.sessionStorage.removeItem('token')
-            Router.replace('/login')
-          }, 2000)
-        }
+        checkToken(status)
       })
   }, [router.query.id])
 

@@ -38,6 +38,5 @@ export const getClasses = async (token: string | null) => {
     headers: { Authorization: token }
   })
   const classes = _.get(response, 'data.payload.classes')
-
-  return { classes, status: response.status }
+  return classes
 }
