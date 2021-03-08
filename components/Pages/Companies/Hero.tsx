@@ -42,9 +42,11 @@ export default function Hero () {
                 videoRef.current.controls = false
               }}
               onEnded={() => {
-                setShowPlayIcon(true)
+                videoRef.current.muted = true
                 videoRef.current.controls = false
-                videoRef.current.load()
+                setShowPlayIcon(true)
+                setHasUserClickedVideo(false)
+                videoRef.current.play()
               }}
               onSeeked={() => {
                 setShowPlayIcon(false)
