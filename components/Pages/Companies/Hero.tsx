@@ -8,6 +8,7 @@ import Button from 'components/Button'
 
 export default function Hero () {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
+  const [hasUserClickedVideo, setHasUserClickedVideo] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
   return (
     <div className='columns hero-companies'>
@@ -34,6 +35,8 @@ export default function Hero () {
             <video
               className='video'
               ref={videoRef}
+              autoPlay
+              muted
               onPause={() => {
                 setShowPlayIcon(true)
                 videoRef.current.controls = false
@@ -61,6 +64,11 @@ export default function Hero () {
               setShowPlayIcon(false)
               videoRef.current.play()
               videoRef.current.controls = true
+              videoRef.current.muted = false
+              if (!hasUserClickedVideo) {
+                setHasUserClickedVideo(true)
+                videoRef.current.currentTime = 0
+              }
             }}
           >
             <img
