@@ -2,236 +2,234 @@
   "subtitle": "El programa",
   "cyanText": "Todos los temas",
   "whiteText": "que verás en el Bootcamp",
-  "javascript": {
-    "modules": [
-      {
-        "module": "Módulo 0 | ",
-        "week": "Semana 0",
-        "title": "Pre-bootcamp",
-        "themes": [
-          {
-            "theme": "Pensamiento estructurado",
-            "image": "/images/bootcamps/Tema-01.svg"
-          },
-          {
-            "theme": "Pensamiento lógico",
-            "image": "/images/bootcamps/Tema-02.svg"
-          },
-          {
-            "theme": "Algoritmos",
-            "image": "/images/bootcamps/Tema-03.svg"
-          },
-          {
-            "theme": "Pensamiento paralelo",
-            "image": "/images/bootcamps/Tema-04.svg"
-          },
-          {
-            "theme": "Pseudocódigo",
-            "image": "/images/bootcamps/Tema-05.svg"
-          },
-          {
-            "theme": "Diagramas de flujo",
-            "image": "/images/bootcamps/Tema-06.svg"
-          },
-          {
-            "theme": "Primeros programas con JavaScript estructurado",
-            "image": "/images/bootcamps/Tema-07.svg"
-          }
-        ]
-      },
-      {
-        "module": "Módulo 1 | ",
-        "week": "Semana 01-06",
-        "title": "Front End",
-        "themes": [
-          {
-            "theme": "Git & Github ",
-            "image": "/images/bootcamps/Tema-08.svg"
-          },
-          {
-            "theme": "HTML5",
-            "image": "/images/bootcamps/Tema-09.svg"
-          },
-          {
-            "theme": "CSS3",
-            "image": "/images/bootcamps/Tema-10.svg"
-          },
-          {
-            "theme": "Sass",
-            "image": "/images/bootcamps/Tema-11.svg"
-          },
-          {
-            "theme": "Bootstrap 4",
-            "image": "/images/bootcamps/Tema-12.svg"
-          },
-          {
-            "theme": "JavaScript (ES5 & ES6)",
-            "image": "/images/bootcamps/Tema-13.svg"
-          },
-          {
-            "theme": "JQuery",
-            "image": "/images/bootcamps/Tema-14.svg"
-          },
-          {
-            "theme": "AJAX",
-            "image": "/images/bootcamps/Tema-15.svg"
-          },
-          {
-            "theme": "DOM",
-            "image": "/images/bootcamps/Tema-16.svg"
-          }
-        ]
-      },
-      {
-        "module": "Módulo 2 | ",
-        "week": "Semana 07-15",
-        "title": "Back End",
-        "themes": [
-          {
-            "theme": "Linux / Consola / Protocolos",
-            "image": "/images/bootcamps/Tema-17.svg"
-          },
-          {
-            "theme": "La terminal / sistemas *NIX",
-            "image": "/images/bootcamps/Tema-18.svg"
-          },
-          {
-            "theme": "Modelo Cliente-Servidor",
-            "image": "/images/bootcamps/Tema-19.svg"
-          },
-          {
-            "theme": "Hypermedia",
-            "image": "/images/bootcamps/Tema-20.svg"
-          },
-          {
-            "theme": "REST / RESTfull / API",
-            "image": "/images/bootcamps/Tema-21.svg"
-          },
-          {
-            "theme": "Clean architecture",
-            "image": "/images/bootcamps/Tema-22.svg"
-          },
-          {
-            "theme": "NodeJS / npm",
-            "image": "/images/bootcamps/Tema-23.svg"
-          },
-          {
-            "theme": "ExpressJS",
-            "image": "/images/bootcamps/Tema-24.svg"
-          },
-          {
-            "theme": "Bases de datos",
-            "image": "/images/bootcamps/Tema-25.svg"
-          },
-          {
-            "theme": "Mongo y Mongoose",
-            "image": "/images/bootcamps/Tema-26.svg"
-          },
-          {
-            "theme": "Autenticación JWT",
-            "image": "/images/bootcamps/Tema-27.svg"
-          },
-          {
-            "theme": "Cloud (IBM & AWS)",
-            "image": "/images/bootcamps/Tema-28.svg"
-          }
-        ]
-      },
-      {
-        "module": "Módulo 3 | ",
-        "week": "Semana 15-17",
-        "title": "Front End moderno",
-        "themes": [
-          {
-            "theme": "ReactJS",
-            "image": "/images/bootcamps/Tema-29.svg"
-          },
-          {
-            "theme": "React-router",
-            "image": "/images/bootcamps/Tema-30.svg"
-          },
-          {
-            "theme": "React-Hooks",
-            "image": "/images/bootcamps/Tema-31.svg"
-          },
-          {
-            "theme": "FectchAPI",
-            "image": "/images/bootcamps/Tema-32.svg"
-          },
-          {
-            "theme": "Babel",
-            "image": "/images/bootcamps/Tema-33.svg"
-          }
-        ]
-      }
-    ],
-    "workshops": [
-      {
-        "image": "/images/bootcamps/Taller-01.svg",
-        "week": "Semana 02",
-        "title": "Github avanzado",
-        "description": "Complementa tu aprendizaje de Github para resolver conflictos, domina el gitflow y estructura un repositorio colaborativo con un equipo de trabajo frente a un proyecto real y profesional."
-      },
-      {
-        "image": "/images/bootcamps/Taller-02.svg",
-        "week": "Semana 03",
-        "title": "Principios de UX/UI",
-        "description": "Aprender las bases del diseño UX/UI, desde comprender a tu usuario, la arquitectura de la información y las herramientas para hacer los Wireframes para previsualizar tu aplicación."
-      },
-      {
-        "image": "/images/bootcamps/Taller-03.svg",
-        "week": "Semana 06",
-        "title": "Scrum Fundamentals",
-        "description": "Conoce las bases de este marco de trabajo y aprende a trabajar de manera ágil para construir productos de valor."
-      },
-      {
-        "image": "/images/bootcamps/Taller-04.svg",
-        "week": "Semana 08",
-        "title": "AWS Cloud",
-        "description": "Conoce la nube de Amazon AWS y los microservicios que ofrece, para complementar tus conocimientos sobre la Nube."
-      },
-      {
-        "image": "/images/bootcamps/Taller-05.svg",
-        "week": "Semana 10",
-        "title": "Xtreme programming",
-        "description": "Es una metodología de desarrollo destinada a mejorar la calidad del software y la capacidad de respuesta a los requisitos cambiantes del cliente."
-      },
-      {
-        "image": "/images/bootcamps/Taller-06.svg",
-        "week": "Semana 14",
-        "title": "Negocios TI",
-        "description": "Conoce los diversos modelos de negocio de las principales empresas y startups para desarrollar una visión de negocios desde una perspectiva como desarrollador."
-      },
-      {
-        "image": "/images/bootcamps/Taller-07.svg",
-        "week": "Semana 15 ",
-        "title": "JamStack",
-        "description": "Aprende cómo se desarrollan sitios y aplicaciones rápidos y seguros entregados mediante archivos de representación previa, eliminando el requisito de ejecutar servidores web."
-      },
-      {
-        "image": "/images/bootcamps/Taller-09.svg",
-        "week": "Taller sabatino ",
-        "title": "Métodos y estrategias de aprendizaje",
-        "description": "Aprende a aprender, ese será el objetivo de este taller donde entenderás cuáles son los métodos y estrategias que puedes emplear para mejorar tu aprendizaje."
-      },
-      {
-        "image": "/images/bootcamps/Taller-10.svg",
-        "week": "Taller sabatino ",
-        "title": "Estrategias de búsqueda efectiva",
-        "description": "Una de las habilidades más importantes de un dev es saber buscar cosas, para ellos hay una serie de pasos y estrategias que aprenderás para encontrar lo que necesitas en el mar del internet."
-      }
-    ],
-    "certifications": [
-      {
-        "image": "/images/bootcamps/Certificacion-01.svg",
-        "title": "Certificación SCRUM",
-        "description": "Aprender Scrum te hace capaz de implementar este marco de trabajo ágil en tu lugar de trabajo con el desarrollo de un proyecto durante el Bootcamp."
-      },
-      {
-        "image": "/images/bootcamps/Certificacion-02.svg",
-        "title": "Certificación IBM",
-        "description": "Aprende a hacer un despliegue en la nube y consumir servicios que ofrece IBM como, Data Science, Blockchain, Machine Learning entrenando Watson IBM y muchas más."
-      }
-    ]
-  }
+  "modules": [
+    {
+      "module": "Módulo 0 | ",
+      "week": "Semana 0",
+      "title": "Pre-bootcamp",
+      "themes": [
+        {
+          "theme": "Pensamiento estructurado",
+          "image": "/images/bootcamps/Tema-01.svg"
+        },
+        {
+          "theme": "Pensamiento lógico",
+          "image": "/images/bootcamps/Tema-02.svg"
+        },
+        {
+          "theme": "Algoritmos",
+          "image": "/images/bootcamps/Tema-03.svg"
+        },
+        {
+          "theme": "Pensamiento paralelo",
+          "image": "/images/bootcamps/Tema-04.svg"
+        },
+        {
+          "theme": "Pseudocódigo",
+          "image": "/images/bootcamps/Tema-05.svg"
+        },
+        {
+          "theme": "Diagramas de flujo",
+          "image": "/images/bootcamps/Tema-06.svg"
+        },
+        {
+          "theme": "Primeros programas con JavaScript estructurado",
+          "image": "/images/bootcamps/Tema-07.svg"
+        }
+      ]
+    },
+    {
+      "module": "Módulo 1 | ",
+      "week": "Semana 01-06",
+      "title": "Front End",
+      "themes": [
+        {
+          "theme": "Git & Github ",
+          "image": "/images/bootcamps/Tema-08.svg"
+        },
+        {
+          "theme": "HTML5",
+          "image": "/images/bootcamps/Tema-09.svg"
+        },
+        {
+          "theme": "CSS3",
+          "image": "/images/bootcamps/Tema-10.svg"
+        },
+        {
+          "theme": "Sass",
+          "image": "/images/bootcamps/Tema-11.svg"
+        },
+        {
+          "theme": "Bootstrap 4",
+          "image": "/images/bootcamps/Tema-12.svg"
+        },
+        {
+          "theme": "JavaScript (ES5 & ES6)",
+          "image": "/images/bootcamps/Tema-13.svg"
+        },
+        {
+          "theme": "JQuery",
+          "image": "/images/bootcamps/Tema-14.svg"
+        },
+        {
+          "theme": "AJAX",
+          "image": "/images/bootcamps/Tema-15.svg"
+        },
+        {
+          "theme": "DOM",
+          "image": "/images/bootcamps/Tema-16.svg"
+        }
+      ]
+    },
+    {
+      "module": "Módulo 2 | ",
+      "week": "Semana 07-15",
+      "title": "Back End",
+      "themes": [
+        {
+          "theme": "Linux / Consola / Protocolos",
+          "image": "/images/bootcamps/Tema-17.svg"
+        },
+        {
+          "theme": "La terminal / sistemas *NIX",
+          "image": "/images/bootcamps/Tema-18.svg"
+        },
+        {
+          "theme": "Modelo Cliente-Servidor",
+          "image": "/images/bootcamps/Tema-19.svg"
+        },
+        {
+          "theme": "Hypermedia",
+          "image": "/images/bootcamps/Tema-20.svg"
+        },
+        {
+          "theme": "REST / RESTfull / API",
+          "image": "/images/bootcamps/Tema-21.svg"
+        },
+        {
+          "theme": "Clean architecture",
+          "image": "/images/bootcamps/Tema-22.svg"
+        },
+        {
+          "theme": "NodeJS / npm",
+          "image": "/images/bootcamps/Tema-23.svg"
+        },
+        {
+          "theme": "ExpressJS",
+          "image": "/images/bootcamps/Tema-24.svg"
+        },
+        {
+          "theme": "Bases de datos",
+          "image": "/images/bootcamps/Tema-25.svg"
+        },
+        {
+          "theme": "Mongo y Mongoose",
+          "image": "/images/bootcamps/Tema-26.svg"
+        },
+        {
+          "theme": "Autenticación JWT",
+          "image": "/images/bootcamps/Tema-27.svg"
+        },
+        {
+          "theme": "Cloud (IBM & AWS)",
+          "image": "/images/bootcamps/Tema-28.svg"
+        }
+      ]
+    },
+    {
+      "module": "Módulo 3 | ",
+      "week": "Semana 15-17",
+      "title": "Front End moderno",
+      "themes": [
+        {
+          "theme": "ReactJS",
+          "image": "/images/bootcamps/Tema-29.svg"
+        },
+        {
+          "theme": "React-router",
+          "image": "/images/bootcamps/Tema-30.svg"
+        },
+        {
+          "theme": "React-Hooks",
+          "image": "/images/bootcamps/Tema-31.svg"
+        },
+        {
+          "theme": "FectchAPI",
+          "image": "/images/bootcamps/Tema-32.svg"
+        },
+        {
+          "theme": "Babel",
+          "image": "/images/bootcamps/Tema-33.svg"
+        }
+      ]
+    }
+  ],
+  "workshops": [
+    {
+      "image": "/images/bootcamps/Taller-01.svg",
+      "week": "Semana 02",
+      "title": "Github avanzado",
+      "description": "Complementa tu aprendizaje de Github para resolver conflictos, domina el gitflow y estructura un repositorio colaborativo con un equipo de trabajo frente a un proyecto real y profesional."
+    },
+    {
+      "image": "/images/bootcamps/Taller-02.svg",
+      "week": "Semana 03",
+      "title": "Principios de UX/UI",
+      "description": "Aprender las bases del diseño UX/UI, desde comprender a tu usuario, la arquitectura de la información y las herramientas para hacer los Wireframes para previsualizar tu aplicación."
+    },
+    {
+      "image": "/images/bootcamps/Taller-03.svg",
+      "week": "Semana 06",
+      "title": "Scrum Fundamentals",
+      "description": "Conoce las bases de este marco de trabajo y aprende a trabajar de manera ágil para construir productos de valor."
+    },
+    {
+      "image": "/images/bootcamps/Taller-04.svg",
+      "week": "Semana 08",
+      "title": "AWS Cloud",
+      "description": "Conoce la nube de Amazon AWS y los microservicios que ofrece, para complementar tus conocimientos sobre la Nube."
+    },
+    {
+      "image": "/images/bootcamps/Taller-05.svg",
+      "week": "Semana 10",
+      "title": "Xtreme programming",
+      "description": "Es una metodología de desarrollo destinada a mejorar la calidad del software y la capacidad de respuesta a los requisitos cambiantes del cliente."
+    },
+    {
+      "image": "/images/bootcamps/Taller-06.svg",
+      "week": "Semana 14",
+      "title": "Negocios TI",
+      "description": "Conoce los diversos modelos de negocio de las principales empresas y startups para desarrollar una visión de negocios desde una perspectiva como desarrollador."
+    },
+    {
+      "image": "/images/bootcamps/Taller-07.svg",
+      "week": "Semana 15 ",
+      "title": "JamStack",
+      "description": "Aprende cómo se desarrollan sitios y aplicaciones rápidos y seguros entregados mediante archivos de representación previa, eliminando el requisito de ejecutar servidores web."
+    },
+    {
+      "image": "/images/bootcamps/Taller-09.svg",
+      "week": "Taller sabatino ",
+      "title": "Métodos y estrategias de aprendizaje",
+      "description": "Aprende a aprender, ese será el objetivo de este taller donde entenderás cuáles son los métodos y estrategias que puedes emplear para mejorar tu aprendizaje."
+    },
+    {
+      "image": "/images/bootcamps/Taller-10.svg",
+      "week": "Taller sabatino ",
+      "title": "Estrategias de búsqueda efectiva",
+      "description": "Una de las habilidades más importantes de un dev es saber buscar cosas, para ellos hay una serie de pasos y estrategias que aprenderás para encontrar lo que necesitas en el mar del internet."
+    }
+  ],
+  "certifications": [
+    {
+      "image": "/images/bootcamps/Certificacion-01.svg",
+      "title": "Certificación SCRUM",
+      "description": "Aprender Scrum te hace capaz de implementar este marco de trabajo ágil en tu lugar de trabajo con el desarrollo de un proyecto durante el Bootcamp."
+    },
+    {
+      "image": "/images/bootcamps/Certificacion-02.svg",
+      "title": "Certificación IBM",
+      "description": "Aprende a hacer un despliegue en la nube y consumir servicios que ofrece IBM como, Data Science, Blockchain, Machine Learning entrenando Watson IBM y muchas más."
+    }
+  ]
 }

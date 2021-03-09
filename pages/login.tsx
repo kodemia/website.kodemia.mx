@@ -8,8 +8,6 @@ import LoginForm from 'components/Pages/Login/LoginForm'
 import Navbar from 'components/Navbar'
 import Seo from 'components/SEO'
 
-// import BgVideoSrc from 'config/bg-video-src.json'
-
 export default function Login () {
   useEffect(() => {
     const token = window.sessionStorage.getItem('token')

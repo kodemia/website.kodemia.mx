@@ -37,7 +37,10 @@ export default function PythonLive () {
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
           whiteText={ProgramData.whiteText}
-          bootcamp={ProgramData.python}
+          modules={ProgramData.modules}
+          workshops={ProgramData.workshops}
+          certifications={ProgramData.certifications}
+          dataManipulation={ProgramData.dataManipulation}
         />
         <CareerCoach />
         <Testimonials testimonials={TestimonialData} />

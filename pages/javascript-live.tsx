@@ -38,7 +38,9 @@ export default function JavascriptLive () {
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
           whiteText={ProgramData.whiteText}
-          bootcamp={ProgramData.javascript}
+          modules={ProgramData.modules}
+          workshops={ProgramData.workshops}
+          certifications={ProgramData.certifications}
         />
         <CareerCoach />
         <Testimonials testimonials={TestimonialData} isGray />
