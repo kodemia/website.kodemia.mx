@@ -1,6 +1,6 @@
-
 .navbar {
   background-color: $black-transparent;
+  justify-content: center;
   padding: 12px 49px;
   position: fixed;
   right: 0;
@@ -8,7 +8,11 @@
   width: 100%;
 
   @include on-mobile {
-    padding: 5px 15px;
+    padding: 5px 33px;
+  }
+
+  @include on-tablet {
+    padding: 12px 72px;
   }
 
   a {
@@ -17,38 +21,62 @@
     }
   }
 
-  .container {
+  .navbar-container {
     max-width: $content-max-width;
     width: 100%;
 
     .navbar-brand {
+      @include on-mobile {
+        width: 100%;
+      }
+
+      @include on-tablet {
+        width: 100%;
+      }
+
       .navbar-item {
+        padding-left: 0;
+
+        @include on-mobile {
+          padding-left: 0.75rem;
+        }
+
+        @include on-tablet {
+          padding-left: 0.75rem;
+        }
+
         img {
           max-height: none;
         }
+      }
+
+      .navbar-burger {
+        width: 2.75rem;
       }
     }
 
     .navbar-menu {
       @include on-mobile {
-        left: -15px;
+        left: 0;
         margin: 4px 0;
         padding: 0 40px;
         position: absolute;
+        top: 58px;
         width: 100vw;
       }
 
       @include on-tablet {
-        margin: 11px 0;
+        margin: 25px 0;
         padding: 0 60px;
         position: absolute;
-        right: -50px;
+        right: 0;
+        top: 51px;
         width: 100vw;
       }
 
       .navbar-end {
         margin: 0;
-        width: 99%;
+        width: 100%;
 
         .navbar-item {
           margin: 0 auto;
