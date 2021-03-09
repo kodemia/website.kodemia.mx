@@ -1,4 +1,7 @@
 {
+  "whiteTitle": "¿Qué vas a lograr",
+  "cyanTitle": "programando?",
+  "subtitle": "Objetivos del Bootcamp",
   "cards": [
     {
       "text": "En programación las cosas cambian rápidamente y seguir aprendiendo es clave para ser desarrollador",

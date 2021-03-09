@@ -14,13 +14,12 @@ import Testimonials from 'components/Pages/Home/Testimonials'
 import TransformYourLife from 'components/Pages/Home/TransformYourLife'
 import Seo from 'components/SEO'
 // Data
-import BgVideoSrc from 'config/bg-video-src.json'
 import GoalsData from 'config/bootcamps/goals-python.json'
-import HeroData from 'config/bootcamps/hero-data.json'
-import InvestmentData from 'config/bootcamps/investment.json'
-import MetricsBootcamps from 'config/bootcamps/metrics.json'
-import ProgramData from 'config/bootcamps/program.json'
-import SupportData from 'config/bootcamps/support-data.json'
+import HeroData from 'config/bootcamps/hero-data-python.json'
+import InvestmentData from 'config/bootcamps/investment-python.json'
+import MetricsBootcamps from 'config/bootcamps/metrics-python.json'
+import ProgramData from 'config/bootcamps/program-python.json'
+import SupportData from 'config/bootcamps/support-data-python.json'
 import TestimonialData from 'config/testimonials-data.json'
 
 export default function PythonLive () {
@@ -31,20 +30,23 @@ export default function PythonLive () {
       />
       <Navbar />
       <section id='python-live-page'>
-        <Hero bootcamp={HeroData.python} video={BgVideoSrc.python} />
-        <Metrics metrics={MetricsBootcamps.python} />
-        <Goals infoCards={GoalsData.cards} />
+        <Hero bootcamp={HeroData} video='https://prismic-io.s3.amazonaws.com/kodemia/91cf67a3-e0d4-4158-93ee-eded5bd49514_Video+fondo+Python.mp4' />
+        <Metrics metrics={MetricsBootcamps} />
+        <Goals achievement={GoalsData} />
         <Program
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
           whiteText={ProgramData.whiteText}
-          bootcamp={ProgramData.python}
+          modules={ProgramData.modules}
+          workshops={ProgramData.workshops}
+          certifications={ProgramData.certifications}
+          dataManipulation={ProgramData.dataManipulation}
         />
         <CareerCoach />
         <Testimonials testimonials={TestimonialData} />
-        <Investment investment={InvestmentData.python} />
+        <Investment investment={InvestmentData} />
         <Scholarship />
-        <Support image={SupportData.image} infoCards={SupportData.cards} />
+        <Support support={SupportData} />
         <TransformYourLife />
       </section>
       <Footer />

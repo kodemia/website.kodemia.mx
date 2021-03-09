@@ -4,12 +4,12 @@
     "href": "/#bootcamps"
   },
   {
+    "name": "Empresas",
+    "href": "/empresas"
+  }, 
+  {
     "name": "Alumnos",
     "href": "/login",
     "onlyLoggedIn": true
-  },
-  {
-    "name": "Empresas",
-    "href": "/empresas"
   }
 ]
