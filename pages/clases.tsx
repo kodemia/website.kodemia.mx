@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react'
 import Router from 'next/router'
+import { ToastContainer } from 'react-toastify'
+
 // My components
 import Navbar from 'components/Navbar'
 import H2 from 'components/H2'
@@ -10,6 +12,8 @@ import Footer from 'components/Footer'
 import Seo from 'components/SEO'
 // api
 import { getClasses } from '../lib/api'
+// utils
+import { checkToken } from '../utils/utils'
 
 export interface Class {
   date: string
@@ -30,15 +34,21 @@ export default function Classes () {
       Router.replace('/login')
     }
 
-    getClasses(token).then(classes => {
-      setClasses(classes)
-    })
+    getClasses(token)
+      .then(classes => {
+        setClasses(classes)
+      })
+      .catch(error => {
+        const status = error.request.status
+        checkToken(status)
+      })
   }, [])
 
   return (
     <div className='classes'>
       <Seo />
       <Navbar />
+      <ToastContainer position='top-center' />
       <div className='columns is-multiline classes-container'>
         <div className='column is-full classes-bg'>
           <div className='title-container is-flex is-justify-content-center'>

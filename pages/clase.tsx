@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Router, { useRouter } from 'next/router'
+import { ToastContainer } from 'react-toastify'
 
 // My components
 import Navbar from 'components/Navbar'
@@ -7,6 +8,8 @@ import Footer from 'components/Footer'
 import Klass from 'components/Pages/Classes/Klass'
 // api
 import { getClasses } from 'lib/api'
+// utils
+import { checkToken } from '../utils/utils'
 
 export interface Class {
   date: string
@@ -37,14 +40,20 @@ export default function Clase () {
     setVimeoId(classVideoId)
     setIsVimeo(isVimeoB)
 
-    getClasses(token).then(classes => {
-      setClasses(classes)
-    })
+    getClasses(token)
+      .then(classes => {
+        setClasses(classes)
+      })
+      .catch(error => {
+        const status = error.request.status
+        checkToken(status)
+      })
   }, [router.query.id])
 
   return (
     <div className='clase is-flex is-flex-direction-column is-align-items-center'>
       <Navbar />
+      <ToastContainer position='top-center' />
       <div className='clase-container'>
         <Klass idVimeo={vimeoId} isVimeo={isVimeo} classes={classes} />
       </div>
