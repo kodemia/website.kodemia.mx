@@ -4,24 +4,29 @@ import H3 from 'components/H3'
 import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
 
 export interface Props {
-  detail: string
-  infoCards: Array<InfoCardProps>
+  findTalent: {
+    cards: Array<InfoCardProps>
+    cyanTitle: string
+    detail: string
+    subtitle: string
+    whiteTitle: string
+  }
 }
 
-export default function HelpFindTalent ({ detail, infoCards }: Props) {
+export default function HelpFindTalent ({ findTalent }: Props) {
   return (
     <section className='help-find-talent'>
       <div className='find-talent-container section-container'>
         <div className='head'>
-          <H3 text='¿Con qué empresas trabajamos?' />
-          <H2 whiteText='Ayudamos a encontrar talento ' cyanText='a todo nivel' />
+          <H3 text={findTalent.subtitle} />
+          <H2 whiteText={findTalent.whiteTitle} cyanText={findTalent.cyanTitle} />
         </div>
         <p className='detail'>
-          {detail}
+          {findTalent.detail}
         </p>
         <div className='cards'>
           {
-            infoCards.map((infoCard, index) => {
+            findTalent.cards.map((infoCard, index) => {
               return (
                 <InfoCard
                   key={`card-${index}`}

@@ -5,24 +5,29 @@ import H3 from 'components/H3'
 import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
 
 export interface Props {
-  infoCards: Array<InfoCardProps>
+  talent: {
+    cyanTitle: string
+    cards: Array<InfoCardProps>
+    subtitle: string
+    whiteTitle: string
+  }
 }
 
-export default function TalentDevelopment ({ infoCards }: Props) {
+export default function TalentDevelopment ({ talent }: Props) {
   return (
     <section className='talent-development'>
       <div className='talent-container section-container'>
         <div className='head'>
-          <H3 text='¿Por qué contratar un koder?' />
+          <H3 text={talent.subtitle} />
           <H2
-            cyanText='Desarrollamos talento,'
-            whiteText='no sólo para programadores'
+            cyanText={talent.cyanTitle}
+            whiteText={talent.whiteTitle}
             isFirstCyan
           />
         </div>
         <div className='talent-cards'>
           {
-            infoCards.map((infoCard, index) => {
+            talent.cards.map((infoCard, index) => {
               return (
                 <InfoCard
                   key={`card-${index}`}

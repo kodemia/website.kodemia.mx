@@ -1,4 +1,4 @@
-
+// TODO: Separar componentes y separar archivo de configuración
 import React from 'react'
 // My components
 import H3 from '../../H3'

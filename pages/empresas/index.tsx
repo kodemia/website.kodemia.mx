@@ -27,12 +27,23 @@ export default function Empresas () {
       />
       <Navbar />
       <Hero />
-      <TalentDevelopment infoCards={TalentData.cards} />
-      <FindIdealKoder image={IdealKoder.image} infoCards={IdealKoder.cards} />
-      <HelpFindTalent detail={FindTalentData.detail} infoCards={FindTalentData.cards} />
+      <TalentDevelopment talent={TalentData.talentDevelopment} />
+      <FindIdealKoder idealKoder={IdealKoder.perfectKoder} />
+      <HelpFindTalent findTalent={FindTalentData.findTalent} />
       <CollaborateWithKodemia />
-      <ChooseAKoder chooseKoder={ChooseKoder} />
-      <AlliancesKodemia allies={AlliesData} isBlack />
+      <ChooseAKoder
+        chooseKoder={ChooseKoder.chooseKoder}
+        cyanTitle={ChooseKoder.cyanTitle}
+        subtitle={ChooseKoder.subtitle}
+        whiteTitle={ChooseKoder.whiteTitle}
+      />
+      <AlliancesKodemia
+        allies={AlliesData.allies}
+        cyanTitle={AlliesData.cyanTitle}
+        subtitle={AlliesData.subtitle}
+        whiteTitle={AlliesData.whiteTitle}
+        isBlack
+      />
       <NextDeveloper />
       <Footer />
     </>

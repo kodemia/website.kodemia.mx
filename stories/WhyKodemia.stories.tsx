@@ -8,12 +8,12 @@ export default {
   component: WhyKodemia
 } as Meta
 
-const Template: Story<Props> = (infoCards) => <WhyKodemia {...infoCards} />
+const Template: Story<Props> = (cards) => <WhyKodemia {...cards} />
 
 export const Default = Template.bind({})
 
 Default.args = {
-  infoCards: [
+  cards: [
     {
       icon: '/icons/Icon-Objetivo.svg',
       title: 'Te acompañamos en el proceso',

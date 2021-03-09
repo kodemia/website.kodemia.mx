@@ -5,22 +5,26 @@ import H3 from '../../H3'
 import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
 
 export interface Props {
-  infoCards: Array<InfoCardProps>
+  cards: Array<InfoCardProps>
+  cyanTitle: string
+  image: string
+  subtitle: string
+  whiteTitle: string
 }
 
-export default function WhyKodemia ({ infoCards }: Props) {
+export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTitle }: Props) {
   return (
     <section className='why-kodemia'>
       <div className='why-kodemia-container section-container'>
         <div className='subject'>
-          <H3 text='¿Por qué Kodemia?' />
-          <H2 whiteText='Vivimos para ' cyanText='formar programadores' />
+          <H3 text={subtitle} />
+          <H2 whiteText={whiteTitle} cyanText={cyanTitle} />
         </div>
-        <img className='image' src='/images/why-kodemia.png' alt='escuela-de-programación-koder-y-mentor-sonriendo' />
+        <img className='image' src={image} alt='escuela-de-programación-koder-y-mentor-sonriendo' />
 
         <div className='why-kodemia-cards'>
           {
-            infoCards.map((infoCard, index) => {
+            cards.map((infoCard, index) => {
               return (
                 <InfoCard
                   key={`card-${index}`}

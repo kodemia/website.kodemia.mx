@@ -8,20 +8,17 @@ import Workshops from './Workshops'
 import Certifications from './Certifications'
 import DataManipulation from './DataManipulation'
 
-export interface bootcamp {
+export interface Props {
+  subtitle: string
+  cyanText: string
+  whiteText: string
   modules: Array<any>
   workshops: Array<any>
   certifications: Array<any>
   dataManipulation?: Array<any>
 }
-export interface Props {
-  subtitle: string
-  cyanText: string
-  whiteText: string
-  bootcamp: bootcamp
-}
 
-export default function Program ({ subtitle, cyanText, whiteText, bootcamp }: Props) {
+export default function Program ({ cyanText, subtitle, whiteText, modules, workshops, certifications, dataManipulation }: Props) {
   return (
     <div className='the-program'>
       <div className='columns is-multiline is-flex program  bg-image'>
@@ -38,25 +35,25 @@ export default function Program ({ subtitle, cyanText, whiteText, bootcamp }: Pr
       </div>
       <div className='columns is-multiline is-flex program '>
         <section className='column is-full-desktop section'>
-          <ProgramModule modules={bootcamp.modules} />
+          <ProgramModule modules={modules} />
         </section>
       </div>
       {
-        bootcamp.dataManipulation &&
+        dataManipulation &&
           <div className='columns is-multiline program is-flex'>
             <section className='column is-full-desktop section'>
-              <DataManipulation dataManipulation={bootcamp.dataManipulation} />
+              <DataManipulation dataManipulation={dataManipulation} />
             </section>
           </div>
       }
       <div className='columns is-multiline program is-flex'>
         <section className='column is-full-desktop section'>
-          <Workshops workshops={bootcamp.workshops} />
+          <Workshops workshops={workshops} />
         </section>
       </div>
       <div className='columns is-multiline program is-flex'>
         <section className='column is-full-desktop section'>
-          <Certifications certifications={bootcamp.certifications} />
+          <Certifications certifications={certifications} />
         </section>
       </div>
     </div>

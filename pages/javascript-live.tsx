@@ -15,13 +15,12 @@ import TransformYourLife from 'components/Pages/Home/TransformYourLife'
 import Seo from 'components/SEO'
 
 // Data
-import BgVideoSrc from 'config/bg-video-src.json'
 import GoalsData from 'config/bootcamps/goals-javascript.json'
-import HeroData from 'config/bootcamps/hero-data.json'
-import InvestmentData from 'config/bootcamps/investment.json'
-import MetricsBootcamps from 'config/bootcamps/metrics.json'
-import ProgramData from 'config/bootcamps/program.json'
-import SupportData from 'config/bootcamps/support-data.json'
+import HeroData from 'config/bootcamps/hero-data-javascript.json'
+import InvestmentData from 'config/bootcamps/investment-javascript.json'
+import MetricsBootcamps from 'config/bootcamps/metrics-javascript.json'
+import ProgramData from 'config/bootcamps/program-javascript.json'
+import SupportData from 'config/bootcamps/support-data-javascript.json'
 import TestimonialData from 'config/testimonials-data.json'
 
 export default function JavascriptLive () {
@@ -32,20 +31,22 @@ export default function JavascriptLive () {
       />
       <Navbar />
       <section id='javascript-live-page'>
-        <Hero bootcamp={HeroData.javascript} video={BgVideoSrc.javascript} />
-        <Metrics metrics={MetricsBootcamps.javascript} />
-        <Goals infoCards={GoalsData.cards} />
+        <Hero bootcamp={HeroData} video='https://prismic-io.s3.amazonaws.com/kodemia/97b6755e-8623-4010-90e8-67a2c8830ccc_Video+fondo+JS.mp4' />
+        <Metrics metrics={MetricsBootcamps} />
+        <Goals achievement={GoalsData} />
         <Program
           subtitle={ProgramData.subtitle}
           cyanText={ProgramData.cyanText}
           whiteText={ProgramData.whiteText}
-          bootcamp={ProgramData.javascript}
+          modules={ProgramData.modules}
+          workshops={ProgramData.workshops}
+          certifications={ProgramData.certifications}
         />
         <CareerCoach />
         <Testimonials testimonials={TestimonialData} isGray />
-        <Investment investment={InvestmentData.javascript} />
+        <Investment investment={InvestmentData} />
         <Scholarship />
-        <Support image={SupportData.image} infoCards={SupportData.cards} />
+        <Support support={SupportData} />
         <TransformYourLife />
       </section>
       <Footer />
