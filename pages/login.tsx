@@ -8,7 +8,7 @@ import LoginForm from 'components/Pages/Login/LoginForm'
 import Navbar from 'components/Navbar'
 import Seo from 'components/SEO'
 
-import BgVideoSrc from 'config/bg-video-src.json'
+// import BgVideoSrc from 'config/bg-video-src.json'
 
 export default function Login () {
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Login () {
       <Navbar />
       <div className='columns'>
         <div className='column is-full'>
-          <BgVideo video={BgVideoSrc.home} />
+          <BgVideo video='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4' />
           <div className='columns cover'>
             <div className='column is-flex is-align-items-center is-flex-direction-column'>
               <H1 text='Bienvenido' />
