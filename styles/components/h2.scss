@@ -1,16 +1,7 @@
-
 %h2-text {
-  font-size: 35px;
+  font-size: $h2-size;
   font-weight: 600;
   line-height: 1.2;
-
-  @include on-mobile {
-    font-size: 28px;
-  }
-
-  @include on-tablet {
-    font-size: 30px;
-  }
 }
 
 .h2-white {

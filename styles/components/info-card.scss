@@ -27,7 +27,7 @@
 
   .info-card-title {
     color: $primary;
-    font-size: 1.35rem;
+    font-size: $h3-size;
     font-weight: 600;
     grid-area: info-card-title;
     grid-row: 1 / 2;
@@ -39,7 +39,7 @@
 
   .text {
     color: $gray;
-    font-size: 18px;
+    font-size: $p-size;
     font-weight: 500;
     grid-area: text;
     grid-row: 2 / 3;
