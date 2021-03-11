@@ -2,6 +2,7 @@
 import React, { useRef, useState, MutableRefObject } from 'react'
 import classnames from 'classnames'
 import HTMLVideoElement from 'typescript'
+
 // My components
 import H2 from 'components/H2'
 import Button from 'components/Button'
@@ -37,16 +38,15 @@ export default function Hero () {
               ref={videoRef}
               autoPlay
               muted
+              loop
               onPause={() => {
                 setShowPlayIcon(true)
                 videoRef.current.controls = false
               }}
               onEnded={() => {
-                videoRef.current.muted = true
                 videoRef.current.controls = false
-                setShowPlayIcon(true)
                 setHasUserClickedVideo(false)
-                videoRef.current.play()
+                setShowPlayIcon(true)
               }}
               onSeeked={() => {
                 setShowPlayIcon(false)

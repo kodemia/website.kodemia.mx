@@ -110,6 +110,10 @@
           @include on-tablet {
             width: 100vw;
           }
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
