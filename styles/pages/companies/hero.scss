@@ -103,16 +103,16 @@
         .video {
           border-radius: 10px;
 
+          &:focus {
+            outline: none;
+          }
+          
           @include on-mobile {
             width: 100vw;
           }
 
           @include on-tablet {
             width: 100vw;
-          }
-
-          &:focus {
-            outline: none;
           }
         }
       }
