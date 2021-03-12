@@ -47,9 +47,13 @@
           width: 30%;
         }
 
+        .image {
+          height: 65px;
+        }
+
         .subtitle {
           color: $text;
-          font-size: 22px;
+          font-size: $p-size;
           font-weight: 600;
           line-height: 1.36;
           max-width: 350px;

@@ -1,6 +1,5 @@
 
 import React from 'react'
-import Image from 'next/image'
 // My components
 import H2 from '../../H2'
 import H3 from '../../H3'
@@ -11,11 +10,11 @@ export interface Theme {
   image: string
 }
 
-export interface ModuleBootcamp{
-    module: string
-    week: string,
-    title: string
-    themes: Array<Theme>
+export interface ModuleBootcamp {
+  module: string
+  week: string,
+  title: string
+  themes: Array<Theme>
 }
 export interface Props {
   modules: Array<ModuleBootcamp>
@@ -49,11 +48,10 @@ export default function ProgramModule ({ modules = [] }: Props) {
                     key={`theme-${index}`}
                     className='theme is-flex is-flex-direction-column is-align-content-center is-flex-direction-column'
                   >
-                    <Image
+                    <img
                       src={theme.image}
                       alt={`bootcamp-${theme.theme}`}
-                      width='100%'
-                      height='auto'
+                      className='image'
                     />
                     <p className='subtitle'>
                       {theme.theme}

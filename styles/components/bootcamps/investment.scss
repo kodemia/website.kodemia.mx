@@ -31,7 +31,7 @@
 
         .description {
           color: $text;
-          font-size: 18px;
+          font-size: $p-size;
           font-weight: 500;
           margin: 45px 0;
           max-width: 730px;
@@ -55,7 +55,7 @@
           background: transparent;
           border: 1px solid $cyan;
           border-radius: 10px;
-          padding: 20px;
+          padding: 16px;
           width: 30%;
 
           @include on-mobile {
@@ -73,8 +73,8 @@
 
           .payment-title {
             color: $primary;
-            font-size: 22px;
-            max-width: 200px;
+            font-size: $h3-size;
+            max-width: 195px;
 
             @include on-mobile {
               max-width: 100%;
@@ -87,7 +87,7 @@
 
           .payment-description {
             color: $text;
-            font-size: 18px;
+            font-size: $p-size;
             margin-top: 20px;
             max-width: 290px;
 

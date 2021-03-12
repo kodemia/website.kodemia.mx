@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 90px;
-  padding: 0 5rem;
+  padding: 0 4rem;
   text-align: center;
 
   @include on-mobile {
@@ -21,7 +21,7 @@
 
   .description {
     color: $gray;
-    font-size: 18px;
+    font-size: $p-size;
     font-weight: 500;
 
     &::first-letter {

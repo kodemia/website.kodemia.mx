@@ -1,6 +1,5 @@
 
 import React from 'react'
-import Image from 'next/image'
 // My components
 import H2 from '../../H2'
 
@@ -11,7 +10,7 @@ export interface Certification {
 }
 
 export interface Props {
- certifications: Array<Certification >
+  certifications: Array<Certification>
 
 }
 export default function Certifications ({ certifications }: Props) {
@@ -28,15 +27,14 @@ export default function Certifications ({ certifications }: Props) {
         certifications.map((workshop, index) => (
           <article
             key={`certification-${index}`}
-            className='column is-full certification'
+            className='column is-full certification '
           >
-            <div className='columns is-multiline wrapper'>
+            <div className='columns is-multiline wrapper is-flex-desktop is-align-items-center'>
               <div className='column is-4-desktop is-12-tablet  is-flex image'>
-                <Image
+                <img
                   src={workshop.image}
                   alt={`workshop-${workshop.title}`}
-                  width={150}
-                  height={150}
+                  className='image'
                 />
               </div>
               <div className='column is-8-desktop is-12-tablet certification-data is-flex is-flex-direction-column
