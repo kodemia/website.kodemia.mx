@@ -1,4 +1,3 @@
-
 .achivements-section {
   align-items: center;
   display: flex;
@@ -19,6 +18,11 @@
 
       @include on-mobile {
         padding-right: 0;
+      }
+
+      .text {
+        color: $text;
+        font-size: $p-size;
       }
     }
 

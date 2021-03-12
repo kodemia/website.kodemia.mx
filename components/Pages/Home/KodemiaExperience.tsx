@@ -21,7 +21,7 @@ export interface Props {
   videos: Array<Video>
 }
 
-export default function KodemiaExperience ({ videos = [] }:Props) {
+export default function KodemiaExperience ({ videos = [] }: Props) {
   const [activeVideoIndex, setActiveVideoIndex] = useState<number>()
   const [isActive, setIsActive] = useState(false)
   const gridRef = useRef(null)
@@ -39,11 +39,13 @@ export default function KodemiaExperience ({ videos = [] }:Props) {
     <section className='kodemia-experience'>
       <div className='kodemia-experience-container section-container'>
         <H3 text='La experiencia Kodemia' />
-        <H2
-          cyanText='Conoce la historia'
-          whiteText='de nuestros graduados'
-          isFirstCyan
-        />
+        <div className='title'>
+          <H2
+            cyanText='Conoce la historia'
+            whiteText='de nuestros graduados'
+            isFirstCyan
+          />
+        </div>
         <p className='description'>Es más importante contar historias que números. Buscamos que los alumnos que salen de Kodemia transformen su vida.</p>
         <div
           ref={gridRef} className={classnames('videos-container', {

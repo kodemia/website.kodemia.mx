@@ -1,4 +1,3 @@
-
 .transform-your-life {
   background-color: $cyan-primary;
   display: flex;
@@ -27,20 +26,19 @@
     }
 
     .title-container {
-      max-width: 600px;
+      max-width: 490px;
 
       @include on-mobile {
         width: 100%;
       }
 
       @include on-tablet {
-        //max-width: 416px;
         width: 55%;
       }
     }
 
     .btn-container {
-      width: 338px;
+      width: 337px;
 
       @include on-mobile {
         margin-top: 55px;
