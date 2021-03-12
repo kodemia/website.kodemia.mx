@@ -1,4 +1,3 @@
-
 .testimonial-card {
   .testimonial-card-container {
     background-color: $black-primary;
@@ -104,14 +103,13 @@
       }
 
       .testimonial-name {
-        font-size: 22px;
+        font-size: $h3-size;
         font-weight: 600;
         grid-area: name;
         line-height: 1;
         margin: 10px 0;
 
         @include on-mobile {
-          font-size: 20px;
           margin: 5px 0;
           min-width: 100px;
         }
@@ -119,7 +117,7 @@
 
       .testimonial-employment {
         color: $text;
-        font-size: 18px;
+        font-size: $p-size;
         font-weight: 500;
         grid-area: employment;
         line-height: 1;
