@@ -31,9 +31,9 @@ export interface Props {
   }
 }
 
-export default function OurBootcamps ({ bootcamps }:Props) {
+export default function OurBootcamps ({ bootcamps }: Props) {
   return (
-    <div id='bootcamps' className='our-bootcamps section-container'>
+    <section id='bootcamps' className='our-bootcamps section-container'>
       <div className='our-bootcamps-container '>
         <H3 text='Nuestros Bootcamps' />
         <div className='bootcamp'>
@@ -83,6 +83,6 @@ export default function OurBootcamps ({ bootcamps }:Props) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -17,7 +17,9 @@ export default function LanguageCard ({
 }: Props) {
   return (
     <div className='language-card'>
-      <H2 whiteText={name} cyanText={language} />
+      <div className='principal-title'>
+        <H2 whiteText={name} cyanText={language} />
+      </div>
       <p className='description'>{description}</p>
       <div className='duration-container'>
         <img

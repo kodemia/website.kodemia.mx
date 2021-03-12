@@ -15,7 +15,6 @@
 
   .why-kodemia-container {
     display: grid;
-    grid-column-gap: 55px;
     grid-template-areas:
       'subject subject'
       'image why-kodemia-cards'
@@ -76,10 +75,17 @@
       grid-column-gap: 35px;
       grid-row-gap: 29px;
       grid-template-columns: 1fr 1fr;
+      margin-left: 55px;
 
       @include on-mobile {
         grid-template-columns: 1fr;
+        margin-left: 0;
         padding-left: 0;
+      }
+
+      @include on-tablet {
+        margin-bottom: 0;
+        margin-left: 0;
       }
     }
   }
