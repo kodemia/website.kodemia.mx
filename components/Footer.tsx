@@ -5,7 +5,7 @@ import Link from 'next/link'
 // my-component
 import Button from './Button'
 
-export default function Footer() {
+export default function Footer () {
   return (
     <footer className='my-footer'>
       <div className='wrapper-f section-container'>
