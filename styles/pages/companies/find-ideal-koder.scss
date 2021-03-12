@@ -43,6 +43,10 @@
       @include on-mobile {
         min-width: 230px;
       }
+
+      .title {
+        max-width: 450px;
+      }
     }
 
     .img-cont {

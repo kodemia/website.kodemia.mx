@@ -20,7 +20,9 @@ export default function FindIdealKoder ({ idealKoder }: Props) {
       <div className='find-koder-container section-container'>
         <div className='subject'>
           <H3 text={idealKoder.subtitle} />
-          <H2 whiteText={idealKoder.whiteTitle} cyanText={idealKoder.cyanTitle} />
+          <div className='title'>
+            <H2 whiteText={idealKoder.whiteTitle} cyanText={idealKoder.cyanTitle} />
+          </div>
         </div>
         <div className='img-cont'>
           <img className='image' src={idealKoder.image} alt='koder ideal' />

@@ -20,7 +20,7 @@
     }
 
     .head {
-      max-width: 550px;
+      max-width: 440px;
       min-width: 230px;
 
       @include on-mobile {
@@ -30,7 +30,7 @@
 
     .detail {
       color: $gray;
-      font-size: 18px;
+      font-size: $p-size;
       font-weight: 500;
       margin-top: 35px;
       max-width: 720px;

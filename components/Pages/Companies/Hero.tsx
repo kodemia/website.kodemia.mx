@@ -3,7 +3,7 @@ import React, { useRef, useState, MutableRefObject } from 'react'
 import classnames from 'classnames'
 import HTMLVideoElement from 'typescript'
 // My components
-import H2 from 'components/H2'
+import H1 from 'components/H1'
 import Button from 'components/Button'
 
 export default function Hero () {
@@ -13,10 +13,8 @@ export default function Hero () {
     <div className='columns hero-companies'>
       <div className='column hero-container section-container'>
         <div className='title'>
-          <H2
-            cyanText=''
-            whiteText='Encuentra desarrolladores de alto calibre'
-            isFirstCyan
+          <H1
+            text='Encuentra desarrolladores de alto calibre'
           />
         </div>
         <p className='description'>
