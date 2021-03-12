@@ -5,7 +5,7 @@ import Link from 'next/link'
 // my-component
 import Button from './Button'
 
-export default function Footer () {
+export default function Footer() {
   return (
     <footer className='my-footer'>
       <div className='wrapper-f section-container'>
@@ -35,6 +35,9 @@ export default function Footer () {
             <div className='navigation'>
               <Link href='/#bootcamps'>
                 <a><span className='item-nav'>Programas</span> | </a>
+              </Link>
+              <Link href='/empresas'>
+                <a><span className='item-nav'>Empresas</span> | </a>
               </Link>
               <Link href='/login'>
                 <a><span className='item-nav'>Alumnos</span> </a>
