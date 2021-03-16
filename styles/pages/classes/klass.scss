@@ -81,7 +81,7 @@
 
           .class-title {
             color: $primary;
-            font-size: $h3-size;
+            font-size: $h3-font-size;
 
             @include on-mobile {
               font-size: 18px;
@@ -90,7 +90,7 @@
 
           .class-date {
             color: $text;
-            font-size: $p-size;
+            font-size: $p-font-size;
             margin-top: 10px;
           }
         }

@@ -34,7 +34,7 @@
 
       .schedule-content {
         color: $text;
-        font-size: $p-size;
+        font-size: $p-font-size;
         margin: 0;
         max-width: 150px;
         min-width: 150px;
@@ -42,7 +42,7 @@
 
       .feature {
         color: $text;
-        font-size: $p-size;
+        font-size: $p-font-size;
         margin-bottom: 25px;
         margin-top: 20px;
         min-height: 48px;

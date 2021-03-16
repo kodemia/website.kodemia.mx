@@ -63,7 +63,7 @@
     }
 
     .name {
-      font-size: $h3-size;
+      font-size: $h3-font-size;
       font-weight: 600;
       line-height: 1.36;
       margin: 12px 0;
@@ -71,7 +71,7 @@
 
     .content {
       color: $text;
-      font-size: $p-size;
+      font-size: $p-font-size;
       font-weight: 500;
     }
   }

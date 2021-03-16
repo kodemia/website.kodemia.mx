@@ -103,7 +103,7 @@
       }
 
       .testimonial-name {
-        font-size: $h3-size;
+        font-size: $h3-font-size;
         font-weight: 600;
         grid-area: name;
         line-height: 1;
@@ -117,7 +117,7 @@
 
       .testimonial-employment {
         color: $text;
-        font-size: $p-size;
+        font-size: $p-font-size;
         font-weight: 500;
         grid-area: employment;
         line-height: 1;

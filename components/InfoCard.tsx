@@ -17,7 +17,7 @@ export default function InfoCard ({ detail, icon, title, text }: Props) {
       })}
       >
         <img src={icon} className='ikon' />
-        <h2 className='info-card-title'>{title}</h2>
+        <h3 className='info-card-title'>{title}</h3>
         <p className='text'>{text}</p>
         {detail && <div className='detail'>{detail}</div>}
       </div>

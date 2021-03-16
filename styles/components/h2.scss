@@ -1,17 +1,11 @@
-%h2-text {
-  font-size: $h2-size;
+.h2 {
+  font-size: $h2-font-size;
   font-weight: 600;
-  line-height: 1.2;
-}
+  line-height: 1.07;
+  padding-right: 10px;
 
-.h2-white {
-  @extend %h2-text;
-
-  color: $primary;
-}
-
-.h2-cyan {
-  @extend %h2-text;
-
-  color: $info;
+  @include on-mobile {
+    font-size: 32px;
+    padding-right: 0;
+  }
 }

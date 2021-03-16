@@ -26,7 +26,7 @@
 
   .description {
     color: $text;
-    font-size: $p-size;
+    font-size: $p-font-size;
     font-weight: 500;
     margin: 33px 0;
   }
@@ -44,7 +44,7 @@
 
     .title {
       color: $primary;
-      font-size: $h3-size;
+      font-size: $h3-font-size;
       font-weight: 600;
       line-break: 1.36;
       margin: 5px;
@@ -52,7 +52,7 @@
 
     .duration {
       color: $text;
-      font-size: $p-size;
+      font-size: $p-font-size;
       font-weight: 500;
     }
   }
