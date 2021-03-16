@@ -1,7 +1,7 @@
 // TODO: Separar componentes y separar archivo de configuración
 import React from 'react'
 // My components
-import H3 from '../../H3'
+import H5 from '../../H5'
 import BootcampCard from '../../BootcampCard'
 import LanguageCard from '../../LanguageCard'
 
@@ -35,7 +35,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
   return (
     <section id='bootcamps' className='our-bootcamps section-container'>
       <div className='our-bootcamps-container '>
-        <H3 text='Nuestros Bootcamps' />
+        <H5 text='Nuestros Bootcamps' />
         <div className='bootcamp'>
           <LanguageCard
             name={bootcamps.javascript.name}

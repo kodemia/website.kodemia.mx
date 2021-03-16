@@ -9,14 +9,9 @@
   .type-container {
     margin: 25px 20px 30px;
 
-    .mode {
-      font-size: 24px;
-      font-weight: 600;
-    }
-
     .date {
       color: $info;
-      font-size: 20px;
+      font-size: $h5-font-size;
     }
 
     .schedule {
@@ -25,11 +20,6 @@
 
       @include on-mobile {
         max-width: 100%;
-      }
-
-      .schedule-title {
-        font-size: 20px;
-        font-weight: 600;
       }
 
       .schedule-content {

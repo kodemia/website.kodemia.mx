@@ -1,6 +1,7 @@
 
 import React from 'react'
-import H2 from './H2'
+import H3 from './H3'
+import H5 from './H5'
 
 export interface Props {
   name: string,
@@ -18,7 +19,7 @@ export default function LanguageCard ({
   return (
     <div className='language-card'>
       <div className='principal-title'>
-        <H2 whiteText={name} cyanText={language} />
+        <H3 whiteText={name} cyanText={language} />
       </div>
       <p className='description'>{description}</p>
       <div className='duration-container'>
@@ -26,7 +27,7 @@ export default function LanguageCard ({
           src='/icons/icon-calendario.svg'
           className='calendar-icon'
         />
-        <h2 className='title'>Duración</h2>
+        <H5 text='Duración' isWhite />
         <p className='duration'>{duration}</p>
       </div>
     </div>
