@@ -9,19 +9,10 @@
   }
 
   .hero-content {
-    color: $text;
+    color: $white-light;
     font-size: $p-font-size;
     font-weight: 500;
     line-height: 1.5;
     margin: 40px 0;
-    text-align: justify;
-
-    @include on-mobile {
-      text-align: left;
-    }
-
-    @include on-tablet {
-      text-align: left;
-    }
   }
 }
