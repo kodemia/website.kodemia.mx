@@ -28,9 +28,6 @@
     }
 
     .description {
-      color: $text;
-      font-size: $p-font-size;
-      font-weight: 500;
       margin: 35px 0;
       max-width: 700px;
     }
@@ -39,7 +36,7 @@
       display: grid;
       grid-auto-flow: dense;
       grid-auto-rows: 1fr;
-      grid-gap: 50px;
+      grid-column-gap: 50px;
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
       grid-template-rows: minmax(14rem, 1fr);
 

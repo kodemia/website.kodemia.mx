@@ -5,6 +5,7 @@ import classnames from 'classnames'
 import H5 from '../../H5'
 import H3 from '../../H3'
 import ExperienceVideo from '../../ExperienceVideo'
+import DescriptionParagraph from 'components/DescriptionParagraph'
 
 let wrapGrid: (arg0: any, arg1: object) => void
 if (typeof window !== 'undefined') {
@@ -47,7 +48,12 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
             isFirstCyan
           />
         </div>
-        <p className='description'>Es más importante contar historias que números. Buscamos que los alumnos que salen de Kodemia transformen su vida.</p>
+
+        <div className='description'>
+          <DescriptionParagraph children='
+          Es más importante contar historias que números. Buscamos que los alumnos que salen de Kodemia transformen su vida.'
+          />
+        </div>
         <div
           ref={gridRef} className={classnames('videos-container', {
             active: isActive,

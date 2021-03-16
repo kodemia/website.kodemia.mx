@@ -6,6 +6,7 @@ import classnames from 'classnames'
 import HTMLVideoElement from 'typescript'
 // My components
 import H5 from './H5'
+import DescriptionParagraph from './DescriptionParagraph'
 
 export interface Props {
   video: {
@@ -79,8 +80,10 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Pr
       </div>
 
       <div className='data-container'>
-        <H5 text={video.name} isWhite/>
-        <p className='content'>{video.content}</p>
+        <H5 text={video.name} isWhite />
+        <div className='content'>
+          <DescriptionParagraph children={video.content} />
+        </div>
       </div>
     </div>
   )
