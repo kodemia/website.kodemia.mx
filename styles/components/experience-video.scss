@@ -50,6 +50,7 @@
     height: 140px;
     max-width: 337px;
     overflow: hidden;
+    margin-top:12px;
 
     @include on-mobile {
       margin-bottom: 20px;
@@ -62,17 +63,12 @@
       width: 100%;
     }
 
-    .name {
-      font-size: $h3-font-size;
-      font-weight: 600;
-      line-height: 1.36;
-      margin: 12px 0;
-    }
 
     .content {
       color: $text;
       font-size: $p-font-size;
       font-weight: 500;
+      margin-top: 12px;
     }
   }
 }

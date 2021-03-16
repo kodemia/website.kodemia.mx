@@ -2,9 +2,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import classnames from 'classnames'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import ExperienceVideo from '../../ExperienceVideo'
+
 let wrapGrid: (arg0: any, arg1: object) => void
 if (typeof window !== 'undefined') {
   wrapGrid = require('animate-css-grid').wrapGrid
@@ -38,9 +39,9 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
   return (
     <section className='kodemia-experience'>
       <div className='kodemia-experience-container section-container'>
-        <H3 text='La experiencia Kodemia' />
+        <H5 text='La experiencia Kodemia' />
         <div className='title'>
-          <H2
+          <H3
             cyanText='Conoce la historia'
             whiteText='de nuestros graduados'
             isFirstCyan
