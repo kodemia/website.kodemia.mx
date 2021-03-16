@@ -1,6 +1,9 @@
 
 import React from 'react'
 import classnames from 'classnames'
+// My components
+import H5 from './H5'
+import DescriptionParagraph from './DescriptionParagraph'
 
 export interface Props {
   icon: string,
@@ -17,8 +20,13 @@ export default function InfoCard ({ detail, icon, title, text }: Props) {
       })}
       >
         <img src={icon} className='ikon' />
-        <h3 className='info-card-title'>{title}</h3>
-        <p className='text'>{text}</p>
+        <div className='info-card-title'>
+          <H5 text={title} isWhite />
+        </div>
+
+        <div className='text'>
+          <DescriptionParagraph children={text} />
+        </div>
         {detail && <div className='detail'>{detail}</div>}
       </div>
     </div>
