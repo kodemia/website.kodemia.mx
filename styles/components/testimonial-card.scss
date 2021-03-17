@@ -4,7 +4,7 @@
     border-radius: 10px;
     display: grid;
     grid-template-areas: 'data quote quote';
-    height: 285px;
+    height: 205px;
     width: 729px;
 
     @include on-mobile {
@@ -38,7 +38,7 @@
         'employment employment';
       grid-template-columns: 115px 1fr;
       grid-template-rows: 115px auto 1fr;
-      margin: 35px;
+      margin: 20px;
       width: 195px;
 
       @include on-mobile {
@@ -103,10 +103,7 @@
       }
 
       .testimonial-name {
-        font-size: $h3-font-size;
-        font-weight: 600;
         grid-area: name;
-        line-height: 1;
         margin: 10px 0;
 
         @include on-mobile {
@@ -153,7 +150,7 @@
 
   .active {
     border: 1px solid $primary-btn-border;
-    height: 285px;
+    height: 235px;
     margin: 0;
     width: 729px;
 
@@ -174,7 +171,7 @@
   .inactive {
     border: 1px solid $secondary-btn-border;
     height: 205px;
-    margin: 41px 0;
+    margin: 15px 0;
     width: 729px;
 
     @include on-mobile {

@@ -19,11 +19,6 @@
       @include on-mobile {
         padding-right: 0;
       }
-
-      .text {
-        color: $text;
-        font-size: $p-font-size;
-      }
     }
 
     .slider-container-column {
@@ -88,10 +83,12 @@
       }
 
       .bar-text {
+        font-size: 20px;
+        font-weight: 600;
         word-break: break-all;
 
         @include on-mobile {
-          font-size: 3vw;
+          font-size: 2.8vw;
         }
       }
     }

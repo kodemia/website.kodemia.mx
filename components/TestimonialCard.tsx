@@ -2,9 +2,11 @@
 import React from 'react'
 import ReactCountryFlag from 'react-country-flag'
 import classnames from 'classnames'
+// My components
+import H5 from './H5'
 
 export interface Props {
-  testimonial : {
+  testimonial: {
     photo: string
     country: string
     name: string
@@ -14,7 +16,7 @@ export interface Props {
   isActive: Boolean
 }
 
-export default function TestimonialCard ({ testimonial, isActive }:Props) {
+export default function TestimonialCard ({ testimonial, isActive }: Props) {
   return (
     <div className='testimonial-card'>
       <div className={classnames(
@@ -32,9 +34,9 @@ export default function TestimonialCard ({ testimonial, isActive }:Props) {
             className='flag'
             style={{ fontSize: '2em' }}
           />
-          <h6 className='testimonial-name'>
-            {testimonial.name}
-          </h6>
+          <div className='testimonial-name'>
+            <H5 text={testimonial.name} isWhite />
+          </div>
           <p className='testimonial-employment'>
             {testimonial.employment}
           </p>

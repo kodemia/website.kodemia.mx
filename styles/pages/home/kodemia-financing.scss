@@ -39,7 +39,7 @@
     }
 
     .title-container {
-      width: 400px;
+      width: 300px;
 
       @include on-mobile {
         width: 100%;
@@ -51,11 +51,25 @@
     }
 
     .text {
-      color: $text;
       font-size: $p-font-size;
       font-weight: 500px;
       margin: 32px 0 37px;
       max-width: 729px;
+    }
+
+    .btn-container {
+      max-width: 318px;
+      width: 33.33%;
+
+      @include on-mobile {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      @include on-tablet {
+        max-width: 100%;
+        width: 100%;
+      }
     }
   }
 }

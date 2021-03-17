@@ -31,7 +31,7 @@
 
       .sliders {
         display: flex;
-        height: 300px;
+        height: 240px;
         margin-top: 45px;
         overflow: hidden;
         position: relative;
@@ -75,14 +75,6 @@
           height: 8px;
           width: 85%;
 
-          @include on-mobile {
-            width: 65%;
-          }
-
-          @include on-tablet {
-            width: 80%;
-          }
-
           ul {
             display: flex;
 
@@ -101,20 +93,10 @@
         }
 
         .container-buttons {
-          .back,
-          .forward {
-            cursor: pointer;
-            height: 20px;
+          min-width: 69px;
 
-            @include on-mobile {
-              height: 15px;
-            }
-          }
-
-          .forward {
-            &:hover {
-              height: 19px;
-            }
+          @include on-tablet {
+            min-width: 128px;
           }
 
           .back {
@@ -123,9 +105,19 @@
             @include on-mobile {
               margin: 0 15px;
             }
+          }
+
+          .back,
+          .forward {
+            cursor: pointer;
+            height: 20px;
+
+            @include on-mobile {
+              height: 15px;
+            }
 
             &:hover {
-              height: 19px;
+              filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%);
             }
           }
         }

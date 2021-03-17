@@ -2,7 +2,7 @@
 import React from 'react'
 import classnames from 'classnames'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import CarrouselAlliances from '../../CarrouselAlliances'
 
@@ -21,7 +21,7 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function AllianceKodemia ({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
+export default function AllianceKodemia({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
   return (
     <section className='alliances-kodemia-wrapper'>
       <div className={classnames(
@@ -32,9 +32,9 @@ export default function AllianceKodemia ({ allies = [], cyanTitle, subtitle, whi
       )}
       >
         <div className='alliances-kodemia-container section-container'>
-          <H3 text={subtitle} />
+          <H5 text={subtitle} />
           <div className='alliances-title'>
-            <H2 cyanText={cyanTitle} whiteText={whiteTitle} isFirstCyan />
+            <H3 cyanText={cyanTitle} whiteText={whiteTitle} isFirstCyan />
           </div>
           <CarrouselAlliances allies={allies} hasContent={!isBlack} />
           <div className='slider-container'>

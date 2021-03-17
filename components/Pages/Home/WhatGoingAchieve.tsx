@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import classnames from 'classnames'
 import _ from 'lodash'
 
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
+import DescriptionParagraph from 'components/DescriptionParagraph'
 
 export interface Image {
   image: string
@@ -23,18 +24,13 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
         <div className='column is-one-third pl-0 is-full-touch achivements-text-column'>
           <div className='columns is-multiline'>
             <div className='column is-full pb-0'>
-              <H3 text='¿Qué vas a lograr?' />
+              <H5 text='¿Qué vas a lograr?' />
             </div>
             <div className='column is-full pt-0'>
-              <H2 whiteText='Tus desarrollos hablarán ' cyanText='por sí solos' />
+              <H3 whiteText='Tus desarrollos hablarán ' cyanText='por sí solos' />
             </div>
             <div className='column is-full'>
-              <p className='text'>
-                Nuestro Bootcamp te llevará desde cero hasta desarrollador {' '}
-                Full Stack. Crearás una aplicación web completa empleando {' '}
-                UX/UI, SCRUM, Front End y Back End con Javascript o Python, {' '}
-                todo desplegado en la nube.
-              </p>
+              <DescriptionParagraph children={`Nuestro Bootcamp te llevará desde cero hasta desarrollador Full Stack.${'\n'}Crearás una aplicación web completa empleando UX/UI, SCRUM, Front End y Back End con Javascript o Python, todo desplegado en la nube`} />
             </div>
           </div>
 

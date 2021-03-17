@@ -6,7 +6,7 @@ export interface Props {
   text: string
 }
 
-export default function H2 ({ text }: Props) {
+export default function H2({ text }: Props) {
   return (
     <h2 className='h2'>
       <TextCursor text={text} white />

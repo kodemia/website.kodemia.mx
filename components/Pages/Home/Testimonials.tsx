@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import TestimonialCard from '../../TestimonialCard'
 export interface Testimonial {
@@ -45,8 +45,8 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
       )}
       >
         <div className='container-testimonials section-container'>
-          <H3 text='Testimonios' />
-          <H2 whiteText='Nuestra' cyanText='comunidad' />
+          <H5 text='Testimonios' />
+          <H3 whiteText='Nuestra' cyanText='comunidad' />
           <div className='sliders'>
             {
               testimonials.map((testimonial, index) => {
@@ -61,7 +61,10 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
                     )}
                     key={`testimonialSection-${index}`}
                   >
-                    <TestimonialCard testimonial={testimonial} isActive={activeTestimonialIndex === index} />
+                    <TestimonialCard
+                      testimonial={testimonial}
+                      isActive={activeTestimonialIndex === index}
+                    />
                   </div>
                 )
               })
