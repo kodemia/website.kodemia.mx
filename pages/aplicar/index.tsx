@@ -5,8 +5,8 @@ import NavBar from 'components/Navbar'
 import Footer from 'components/Footer'
 import Cursor from 'components/TextCursor'
 import DescriptionParagraph from 'components/DescriptionParagraph'
-import H2 from 'components/H2'
-import H3 from 'components/H3'
+import H2 from 'components/H3'
+import H5 from 'components/H5'
 import ApplyForm from 'components/ApplyForm'
 import Seo from 'components/SEO'
 
@@ -24,9 +24,9 @@ export default function Aplicar () {
           <main className='columns'>
             <aside className='column '>
               <div className='delimiter'>
-                <H3 text='Aplica ahora' />
+                <H5 text='Aplica ahora' />
                 <H2>
-                  Únete y <span className='h2-cyan'> sé parte </span> de nuestra comunida<Cursor white>d</Cursor>
+                  Únete y <span className='h3-cyan'> sé parte </span> de nuestra comunida<Cursor white>d</Cursor>
                 </H2>
                 <DescriptionParagraph>
                   Te contactaremos lo más pronto posible para coordinar una entrevista personal
