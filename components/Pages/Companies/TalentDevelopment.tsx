@@ -1,6 +1,6 @@
 import React from 'react'
 
-import H2 from 'components/H2'
+import H5 from 'components/H5'
 import H3 from 'components/H3'
 import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
 
@@ -18,8 +18,8 @@ export default function TalentDevelopment ({ talent }: Props) {
     <section className='talent-development'>
       <div className='talent-container section-container'>
         <div className='head'>
-          <H3 text={talent.subtitle} />
-          <H2
+          <H5 text={talent.subtitle} />
+          <H3
             cyanText={talent.cyanTitle}
             whiteText={talent.whiteTitle}
             isFirstCyan

@@ -1,14 +1,14 @@
 import React from 'react'
 // My components
 import Button from 'components/Button'
-import H1 from 'components/H1'
+import H2 from 'components/H2'
 
 export default function NextDeveloper () {
   return (
     <section className='next-developer'>
       <div className='next-developer-container section-container'>
         <div className='title-container'>
-          <H1
+          <H2
             text='¿Listo para encontrar al próximo developer de tu empresa?'
           />
         </div>

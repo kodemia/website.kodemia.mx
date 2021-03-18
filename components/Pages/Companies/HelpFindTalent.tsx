@@ -1,5 +1,5 @@
 import React from 'react'
-import H2 from 'components/H2'
+import H5 from 'components/H5'
 import H3 from 'components/H3'
 import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
 
@@ -15,11 +15,11 @@ export interface Props {
 
 export default function HelpFindTalent ({ findTalent }: Props) {
   return (
-    <section className='help-find-talent'>
+    <section id='help-find-talent'>
       <div className='find-talent-container section-container'>
         <div className='head'>
-          <H3 text={findTalent.subtitle} />
-          <H2 whiteText={findTalent.whiteTitle} cyanText={findTalent.cyanTitle} />
+          <H5 text={findTalent.subtitle} />
+          <H3 whiteText={findTalent.whiteTitle} cyanText={findTalent.cyanTitle} />
         </div>
         <p className='detail'>
           {findTalent.detail}

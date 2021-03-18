@@ -39,6 +39,7 @@
 
     .bar-container {
       grid-area: bar-container;
+      margin-top: 28px;
 
       .bar-wrapper {
         cursor: pointer;
@@ -82,7 +83,7 @@
           }
 
           .bar-text {
-            font-size: 25px;
+            font-size: $h5-font-size;
             font-weight: 600;
             word-break: break-all;
 
@@ -101,7 +102,7 @@
 
     .image-container {
       grid-area: image-container;
-      height: 450px;
+      height: 443px;
       margin-right: 40px;
       max-width: 336px;
 

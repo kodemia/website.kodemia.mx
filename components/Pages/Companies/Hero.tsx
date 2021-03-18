@@ -4,8 +4,9 @@ import classnames from 'classnames'
 import HTMLVideoElement from 'typescript'
 
 // My components
-import H1 from 'components/H1'
+import H2 from 'components/H2'
 import Button from 'components/Button'
+import DescriptionParagraph from 'components/DescriptionParagraph'
 
 export default function Hero () {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
@@ -15,13 +16,15 @@ export default function Hero () {
     <div className='columns hero-companies'>
       <div className='column hero-container section-container'>
         <div className='subject'>
-          <H1
+          <H2
             text='Encuentra desarrolladores de alto calibre'
           />
         </div>
-        <p className='description'>
-          Los egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos.
-        </p>
+        <div className='description'>
+          <DescriptionParagraph children='
+          Los egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos.'
+          />
+        </div>
         <div className='hero-btn'>
           <Button
             isPrimary
