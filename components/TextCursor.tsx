@@ -28,14 +28,17 @@ export default function TextCursor ({
   const characterCursor = text[finalPosition]
 
   return (
+
     <>
-      <>
-        {!children && <span className={textClass}>{` ${newText}`}</span>}
-        <span className={cursorClass}>
-          {children && children}
-          {!children && characterCursor}
-        </span>
-      </>
+      {!children &&
+        <span className={textClass}>
+          {` ${newText}`}
+        </span>}
+      <span className={cursorClass}>
+        {children && children}
+        {!children && characterCursor}
+      </span>
     </>
+
   )
 };

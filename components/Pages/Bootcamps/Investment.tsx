@@ -1,7 +1,8 @@
 import React from 'react'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
+import DescriptionParagraph from 'components/DescriptionParagraph'
 
 export interface Payment {
   title: string;
@@ -24,23 +25,31 @@ export default function Investment ({ investment }: Props) {
       <div className='column is-full is-flex is-justify-content-center investment-container'>
         <section className='columns is-multiline  investment-wrapper'>
           <div className='column is-three-quarters investment-header'>
-            <H3 text={investment.subtitle} />
+            <H5 text={investment.subtitle} />
             <div className='investment-title'>
-              <H2
+              <H3
                 whiteText={investment.whiteTitle}
                 cyanText={investment.cyanTitle}
               />
             </div>
-            <p className='description'>
-              {investment.description}
-            </p>
+            <div className='description'>
+              <DescriptionParagraph children={investment.description} />
+            </div>
           </div>
           <div className='column is-full is-flex is-justify-content-space-between payment-types-container'>
             {
               investment.paymentTypes.map((paymentType, index) => (
-                <article key={`payment-${index}`} className=' payment-card'>
-                  <h5 className='payment-title'>{paymentType.title}</h5>
-                  <p className='payment-description'>{paymentType.description}</p>
+                <article
+                  key={`payment-${index}`}
+                  className=' payment-card'
+                >
+                  <div className='payment-title'>
+                    <H5 text={paymentType.title} isWhite />
+                  </div>
+
+                  <div className='payment-description'>
+                    <DescriptionParagraph children={paymentType.description} />
+                  </div>
                 </article>
               ))
             }

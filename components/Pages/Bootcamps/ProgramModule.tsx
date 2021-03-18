@@ -1,9 +1,9 @@
 
 import React from 'react'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
-import TextCursor from '../../TextCursor'
+import H2 from '../../H2'
 
 export interface Theme {
   theme: string
@@ -24,11 +24,7 @@ export default function ProgramModule ({ modules = [] }: Props) {
   return (
     <div className='columns is-multiline program-module'>
       <div>
-        <H2
-          whiteText='Los Temas'
-          cyanText=''
-          isFirstCyan
-        />
+        <H2 text='Los Temas' />
       </div>
       {
         modules.map((module, index) => (
@@ -36,11 +32,11 @@ export default function ProgramModule ({ modules = [] }: Props) {
             key={`module-${index}`}
             className='column is-full data-module-container'
           >
-            <H3 text={module.week} />
-            <h2 className='title-module'>
-              {module.module}
-              <TextCursor text={module.title} />
-            </h2>
+            <H5 text={module.week} />
+            <H3
+              whiteText={module.module}
+              cyanText={module.title}
+            />
             <div className='is-flex is-flex-wrap-wrap themes-container'>
               {
                 module.themes.map((theme, index) => (
@@ -53,7 +49,7 @@ export default function ProgramModule ({ modules = [] }: Props) {
                       alt={`bootcamp-${theme.theme}`}
                       className='image'
                     />
-                    <p className='subtitle'>
+                    <p className=' description-paragraph subtitle'>
                       {theme.theme}
                     </p>
                   </article>

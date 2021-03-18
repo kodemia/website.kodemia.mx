@@ -1,8 +1,10 @@
 
 import React from 'react'
 // My components
+import H5 from '../../H5'
 import H2 from '../../H2'
-import H3 from '../../H3'
+import H4 from '../../H4'
+import DescriptionParagraph from 'components/DescriptionParagraph'
 
 export interface WorkshopArr {
   image: string
@@ -18,18 +20,17 @@ export interface Props {
 export default function workshops ({ workshops }: Props) {
   return (
     <section className='columns is-multiline workshops'>
-      <div>
+      <div className='mb-6'>
         <H2
-          whiteText='Los Talleres'
-          cyanText=''
-          isFirstCyan
+          text='Los Talleres'
+
         />
       </div>
       {
         workshops.map((workshop, index) => (
           <article
             key={`workshop-${index}`}
-            className='column is-full workshop'
+            className='column is-full workshop '
           >
             <div className='columns is-multiline wrapper is-flex-dektop
             is-justify-content-center'
@@ -42,13 +43,9 @@ export default function workshops ({ workshops }: Props) {
                 />
               </div>
               <div className='column is-8-desktop is-12-tablet workshop-data'>
-                <H3 text={workshop.week} />
-                <h5 className='title'>
-                  {workshop.title}
-                </h5>
-                <p className='description'>
-                  {workshop.description}
-                </p>
+                <H5 text={workshop.week} />
+                <H4 text={workshop.title} />
+                <DescriptionParagraph children={workshop.description} />
               </div>
             </div>
           </article>

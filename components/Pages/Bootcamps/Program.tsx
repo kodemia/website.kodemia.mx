@@ -1,7 +1,7 @@
 
 import React from 'react'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import ProgramModule from './ProgramModule'
 import Workshops from './Workshops'
@@ -20,12 +20,12 @@ export interface Props {
 
 export default function Program ({ cyanText, subtitle, whiteText, modules, workshops, certifications, dataManipulation }: Props) {
   return (
-    <div className='the-program'>
+    <div id='the-program'>
       <div className='columns is-multiline is-flex program  bg-image'>
         <section className='column is-full-desktop section'>
           <div className='container'>
-            <H3 text={subtitle} />
-            <H2
+            <H5 text={subtitle} />
+            <H3
               cyanText={cyanText}
               whiteText={whiteText}
               isFirstCyan

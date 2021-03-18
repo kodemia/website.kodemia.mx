@@ -2,6 +2,8 @@
 import React from 'react'
 // My components
 import H2 from '../../H2'
+import H4 from '../../H4'
+import DescriptionParagraph from '../../DescriptionParagraph'
 
 export interface Certification {
   title: string
@@ -16,12 +18,8 @@ export interface Props {
 export default function Certifications ({ certifications }: Props) {
   return (
     <section className='columns is-multiline certifications'>
-      <div>
-        <H2
-          whiteText='Las Certificaciones'
-          cyanText=''
-          isFirstCyan
-        />
+      <div className='mb-6'>
+        <H2 text='Las Certificaciones' />
       </div>
       {
         certifications.map((workshop, index) => (
@@ -40,12 +38,13 @@ export default function Certifications ({ certifications }: Props) {
               <div className='column is-8-desktop is-12-tablet certification-data is-flex is-flex-direction-column
             is-justify-content-center'
               >
-                <h5 className='title'>
-                  {workshop.title}
-                </h5>
-                <p className='description'>
-                  {workshop.description}
-                </p>
+
+                <div className='title'>
+                  <H4 text={workshop.title} />
+                </div>
+                <div className='description'>
+                  <DescriptionParagraph children={workshop.description} />
+                </div>
               </div>
             </div>
           </article>

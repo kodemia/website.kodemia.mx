@@ -1,6 +1,6 @@
 import React from 'react'
 
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
 
@@ -18,8 +18,8 @@ export default function Goals ({ achievement }: Props) {
     <section className='goals'>
       <div className='goals-container section-container'>
         <div className='head'>
-          <H3 text={achievement.subtitle} />
-          <H2 whiteText={achievement.whiteTitle} cyanText={achievement.cyanTitle} />
+          <H5 text={achievement.subtitle} />
+          <H3 whiteText={achievement.whiteTitle} cyanText={achievement.cyanTitle} />
         </div>
         <div className='goals-cards'>
           {

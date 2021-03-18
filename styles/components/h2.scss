@@ -1,4 +1,4 @@
-.h2 {
+%h2-text {
   font-size: $h2-font-size;
   font-weight: 600;
   line-height: 1.07;
@@ -8,4 +8,16 @@
     font-size: 32px;
     padding-right: 0;
   }
+}
+
+.h2-is-white {
+  @extend %h2-text;
+
+  color: $primary;
+}
+
+.h2-is-cyan {
+  @extend %h2-text;
+
+  color: $cyan;
 }

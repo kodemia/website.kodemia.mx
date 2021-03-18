@@ -1,7 +1,7 @@
 import React from 'react'
 import _ from 'lodash'
 
-import H2 from 'components/H2'
+import H5 from 'components/H5'
 import H3 from 'components/H3'
 import InfoCard from 'components/InfoCard'
 
@@ -14,8 +14,8 @@ export default function CareerCoach () {
     <section className='career-coach'>
       <div className='career-coach-container section-container'>
         <div className='head'>
-          <H3 text='Desarrollo Profesional' />
-          <H2 whiteText='Parte de lo que lograrás con el' cyanText='Career Coach' />
+          <H5 text='Desarrollo Profesional' />
+          <H3 whiteText='Parte de lo que lograrás con el' cyanText='Career Coach' />
         </div>
         <div className='first'>
           <div className='img-cont' id='first-img'>

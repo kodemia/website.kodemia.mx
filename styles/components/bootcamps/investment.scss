@@ -26,17 +26,12 @@
         padding: 0;
 
         .investment-title {
-          max-width: 300px;
+          max-width: 200px;
         }
 
         .description {
-          color: $text;
-          font-size: $p-font-size;
-          font-weight: 500;
           margin: 45px 0;
-          max-width: 730px;
-          text-align: left;
-          white-space: pre-wrap;
+          max-width: 700px;
         }
       }
 
@@ -72,8 +67,6 @@
           }
 
           .payment-title {
-            color: $primary;
-            font-size: $h3-font-size;
             max-width: 195px;
 
             @include on-mobile {
@@ -86,8 +79,6 @@
           }
 
           .payment-description {
-            color: $text;
-            font-size: $p-font-size;
             margin-top: 20px;
             max-width: 290px;
 
