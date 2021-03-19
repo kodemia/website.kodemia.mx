@@ -15,12 +15,6 @@
     padding: 12px 72px;
   }
 
-  a {
-    @include on-mobile {
-      font-size: 18px;
-    }
-  }
-
   .navbar-container {
     max-width: $content-max-width;
     width: 100%;
@@ -107,10 +101,11 @@
           }
 
           @include on-tablet {
-            flex-direction: column;
+            flex-direction: row;
             width: 100%;
           }
 
+          .btn-apply,
           .btn-sign-in {
             width: 136px;
 
@@ -121,21 +116,7 @@
 
             @include on-tablet {
               margin: 20px auto;
-              width: 95%;
-            }
-          }
-
-          .btn-apply {
-            width: 136px;
-
-            @include on-mobile {
-              margin: 20px auto;
-              width: 95%;
-            }
-
-            @include on-tablet {
-              margin: 20px auto;
-              width: 95%;
+              width: 48%;
             }
           }
         }

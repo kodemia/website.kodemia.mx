@@ -46,7 +46,12 @@ export default function Button ({
           className={btnClass}
         >
           <img src={icon} className='ikon' />
-          {label}
+          <span className={classNames({
+            'label-ikon': icon
+          })}
+          >
+            {label}
+          </span>
         </a>}
       {
         !href && type !== 'submit' &&
@@ -55,7 +60,12 @@ export default function Button ({
             onClick={onClick || (() => router.push(link))}
           >
             <img src={icon} className='ikon' />
-            {label}
+            <span className={classNames({
+              'label-ikon': icon
+            })}
+            >
+              {label}
+            </span>
           </a>
       }
       {
