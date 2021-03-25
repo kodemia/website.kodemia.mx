@@ -17,7 +17,7 @@ export interface Props {
   workshops: Array<WorkshopArr>
 }
 
-export default function workshops({ workshops }: Props) {
+export default function workshops ({ workshops }: Props) {
   return (
     <section className='columns is-multiline workshops'>
       <div className='mb-6'>

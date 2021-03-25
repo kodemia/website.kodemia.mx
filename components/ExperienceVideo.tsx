@@ -20,7 +20,7 @@ export interface Props {
   onEnded: () => void
 }
 
-export default function ExperienceVideo({ video, isPlay, onClick, onEnded }: Props) {
+export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
 

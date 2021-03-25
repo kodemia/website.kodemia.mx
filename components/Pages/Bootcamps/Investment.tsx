@@ -19,7 +19,7 @@ export interface Props {
   };
 }
 
-export default function Investment({ investment }: Props) {
+export default function Investment ({ investment }: Props) {
   return (
     <div className='columns investment '>
       <div className='column is-full is-flex is-justify-content-center investment-container'>
@@ -50,7 +50,7 @@ export default function Investment({ investment }: Props) {
                   </div>
 
                   <div className='payment-description'>
-                    <DescriptionParagraph >
+                    <DescriptionParagraph>
                       {paymentType.description}
                     </DescriptionParagraph>
                   </div>

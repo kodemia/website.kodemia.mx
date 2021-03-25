@@ -12,7 +12,7 @@ export interface Props {
   detail?: string
 }
 
-export default function InfoCard({ detail, icon, title, text }: Props) {
+export default function InfoCard ({ detail, icon, title, text }: Props) {
   return (
     <div id='info-card'>
       <div className={classnames('info-card-container', {
