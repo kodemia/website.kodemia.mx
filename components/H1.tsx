@@ -3,14 +3,14 @@ import React from 'react'
 // my component
 import TextCursor from './TextCursor'
 
-export interface Props {
-  text: string
+interface Props {
+  children: React.ReactNode
 }
 
-export default function H1 ({ text }: Props) {
+export default function H1 ({ children }: Props) {
   return (
     <h1 className='h1'>
-      <TextCursor text={text} white />
+      <TextCursor text={children} white />
     </h1>
   )
 };

@@ -16,9 +16,9 @@ export default function CollaborateWithKodemia () {
           />
         </div>
         <div className='collaborate-text'>
-          <DescriptionParagraph children='
-          Sé parte de las actividades, contenido y eventos de Kodemia. Interactúa con la comunidad, platica de tu proyecto, tu experiencia y súmate a crear contenido de calidad.'
-          />
+          <DescriptionParagraph>
+            Sé parte de las actividades, contenido y eventos de Kodemia. Interactúa con la comunidad, platica de tu proyecto, tu experiencia y súmate a crear contenido de calidad.
+          </DescriptionParagraph>
         </div>
         <div className='collaborate-button'>
           <Button

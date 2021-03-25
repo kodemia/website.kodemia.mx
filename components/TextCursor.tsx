@@ -28,7 +28,6 @@ export default function TextCursor ({
   const characterCursor = text[finalPosition]
 
   return (
-
     <>
       {!children &&
         <span className={textClass}>

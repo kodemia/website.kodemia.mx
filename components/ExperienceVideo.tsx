@@ -20,7 +20,7 @@ export interface Props {
   onEnded: () => void
 }
 
-export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Props) {
+export default function ExperienceVideo({ video, isPlay, onClick, onEnded }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
 
@@ -82,7 +82,9 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Pr
       <div className='data-container'>
         <H5 text={video.name} isWhite />
         <div className='content'>
-          <DescriptionParagraph children={video.content} />
+          <DescriptionParagraph>
+            {video.content}
+          </DescriptionParagraph>
         </div>
       </div>
     </div>

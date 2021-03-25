@@ -15,7 +15,7 @@ export interface Props {
   winnerImages: Array<Image>
 }
 
-export default function WhatGoingAchieve ({ winnerImages }: Props) {
+export default function WhatGoingAchieve({ winnerImages }: Props) {
   const [activeImageIndex, setActiveImageIndex] = useState(0)
 
   return (
@@ -30,7 +30,9 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
               <H3 whiteText='Tus desarrollos hablarán ' cyanText='por sí solos' />
             </div>
             <div className='column is-full'>
-              <DescriptionParagraph children={`Nuestro Bootcamp te llevará desde cero hasta desarrollador Full Stack.${'\n'}Crearás una aplicación web completa empleando UX/UI, SCRUM, Front End y Back End con Javascript o Python, todo desplegado en la nube`} />
+              <DescriptionParagraph>
+                {`Nuestro Bootcamp te llevará desde cero hasta desarrollador Full Stack.${'\n'}Crearás una aplicación web completa empleando UX/UI, SCRUM, Front End y Back End con Javascript o Python, todo desplegado en la nube`}
+              </DescriptionParagraph>
             </div>
           </div>
 

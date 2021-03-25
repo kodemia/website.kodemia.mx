@@ -16,7 +16,9 @@ export default function Scholarship () {
               isCyan
             />
             <div className='scholarship-text'>
-              <DescriptionParagraph children='Puedes aplicar a través de una entrevista personalizada, en ella sabrás la resolución de tu solicitud.' />
+              <DescriptionParagraph>
+                'Puedes aplicar a través de una entrevista personalizada, en ella sabrás la resolución de tu solicitud.'
+              </DescriptionParagraph>
             </div>
           </div>
           <div className='column is-flex is-align-items-center scholarship-button'>

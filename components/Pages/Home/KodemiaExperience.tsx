@@ -23,7 +23,7 @@ export interface Props {
   videos: Array<Video>
 }
 
-export default function KodemiaExperience ({ videos = [] }: Props) {
+export default function KodemiaExperience({ videos = [] }: Props) {
   const [activeVideoIndex, setActiveVideoIndex] = useState<number>()
   const [isActive, setIsActive] = useState(false)
   const gridRef = useRef(null)
@@ -50,9 +50,9 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
         </div>
 
         <div className='description'>
-          <DescriptionParagraph children='
-          Es más importante contar historias que números. Buscamos que los alumnos que salen de Kodemia transformen su vida.'
-          />
+          <DescriptionParagraph>
+            Es más importante contar historias que números. Buscamos que los alumnos que salen de Kodemia transformen su vida.
+          </DescriptionParagraph>
         </div>
         <div
           ref={gridRef} className={classnames('videos-container', {

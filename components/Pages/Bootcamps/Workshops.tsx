@@ -17,7 +17,7 @@ export interface Props {
   workshops: Array<WorkshopArr>
 }
 
-export default function workshops ({ workshops }: Props) {
+export default function workshops({ workshops }: Props) {
   return (
     <section className='columns is-multiline workshops'>
       <div className='mb-6'>
@@ -45,7 +45,9 @@ export default function workshops ({ workshops }: Props) {
               <div className='column is-8-desktop is-12-tablet workshop-data'>
                 <H5 text={workshop.week} />
                 <H4 text={workshop.title} />
-                <DescriptionParagraph children={workshop.description} />
+                <DescriptionParagraph>
+                  {workshop.description}
+                </DescriptionParagraph>
               </div>
             </div>
           </article>

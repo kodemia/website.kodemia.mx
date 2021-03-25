@@ -8,7 +8,7 @@ import H2 from 'components/H2'
 import Button from 'components/Button'
 import DescriptionParagraph from 'components/DescriptionParagraph'
 
-export default function Hero () {
+export default function Hero() {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const [hasUserClickedVideo, setHasUserClickedVideo] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
@@ -21,9 +21,9 @@ export default function Hero () {
           />
         </div>
         <div className='description'>
-          <DescriptionParagraph children='
-          Los egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos.'
-          />
+          <DescriptionParagraph>
+            Los egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos.
+          </DescriptionParagraph>
         </div>
         <div className='hero-btn'>
           <Button

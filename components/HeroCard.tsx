@@ -13,7 +13,7 @@ export interface Props {
 export default function HeroCard ({ title, content, btnTitle, link }: Props) {
   return (
     <div className='hero-card'>
-      <H1 text={title} />
+      <H1>{title}</H1>
       <p className='hero-content'>{content}</p>
       <Button isPrimary label={btnTitle} link={link} />
     </div>
