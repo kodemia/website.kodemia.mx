@@ -13,7 +13,7 @@ export interface Props {
   }
 }
 
-export default function TalentDevelopment({ talent }: Props) {
+export default function TalentDevelopment ({ talent }: Props) {
   return (
     <section className='talent-development'>
       <div className='talent-container section-container'>

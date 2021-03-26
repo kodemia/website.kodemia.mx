@@ -25,7 +25,7 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function ChooseAKoder({ chooseKoder = [], cyanTitle, subtitle, whiteTitle }: Props) {
+export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, whiteTitle }: Props) {
   const [activeProgram, setActiveProgram] = useState(0)
   return (
     <section className='choose-a-koder is-flex is-justify-content-center'>

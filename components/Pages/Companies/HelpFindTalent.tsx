@@ -13,7 +13,7 @@ export interface Props {
   }
 }
 
-export default function HelpFindTalent({ findTalent }: Props) {
+export default function HelpFindTalent ({ findTalent }: Props) {
   return (
     <section id='help-find-talent'>
       <div className='find-talent-container section-container'>

@@ -18,7 +18,7 @@ export interface Props {
   dataManipulation?: Array<any>
 }
 
-export default function Program({ cyanText, subtitle, whiteText, modules, workshops, certifications, dataManipulation }: Props) {
+export default function Program ({ cyanText, subtitle, whiteText, modules, workshops, certifications, dataManipulation }: Props) {
   return (
     <div id='the-program'>
       <div className='columns is-multiline is-flex program  bg-image'>
@@ -45,8 +45,7 @@ export default function Program({ cyanText, subtitle, whiteText, modules, worksh
           <section className='column is-full-desktop section'>
             <DataManipulation dataManipulation={dataManipulation} />
           </section>
-        </div>
-      }
+        </div>}
       <div className='columns is-multiline program is-flex'>
         <section className='column is-full-desktop section'>
           <Workshops workshops={workshops} />

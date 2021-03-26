@@ -13,7 +13,7 @@ export interface Props {
   }
 }
 
-export default function Goals({ achievement }: Props) {
+export default function Goals ({ achievement }: Props) {
   return (
     <section className='goals'>
       <div className='goals-container section-container'>

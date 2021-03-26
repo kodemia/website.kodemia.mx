@@ -25,7 +25,7 @@ export interface Class {
   _id: string
 }
 
-export default function Classes() {
+export default function Classes () {
   const [classes, setClasses] = useState<Array<Class>>([])
   useEffect(() => {
     const token = window.sessionStorage.getItem('token')
@@ -70,9 +70,9 @@ export default function Classes() {
           <div className='columns is-multiline  classes-cards'>
             {
               classes.length === 0 &&
-              <div className='column'>
-                <progress className='progress is-small is-info' max='100'>15%</progress>
-              </div>
+                <div className='column'>
+                  <progress className='progress is-small is-info' max='100'>15%</progress>
+                </div>
             }
             {
               classes.map((klass, index) => (

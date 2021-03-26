@@ -3,7 +3,7 @@ import Footer from 'components/Footer'
 import H5 from 'components/H5'
 import Navbar from 'components/Navbar'
 
-export default function Custom404() {
+export default function Custom404 () {
   return (
     <>
       <Navbar />

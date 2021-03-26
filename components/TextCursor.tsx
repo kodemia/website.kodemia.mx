@@ -9,7 +9,7 @@ export interface Props {
   children?: React.ReactNode
 }
 
-export default function TextCursor({
+export default function TextCursor ({
   text = '',
   white,
   children

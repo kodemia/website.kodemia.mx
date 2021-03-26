@@ -5,7 +5,7 @@ export interface Metric {
   value: string
 }
 
-export default function MetricCard({ description, value }: Metric) {
+export default function MetricCard ({ description, value }: Metric) {
   return (
     <section className='metric'>
       <div className='value'>

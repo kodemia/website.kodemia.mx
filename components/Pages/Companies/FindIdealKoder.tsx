@@ -14,7 +14,7 @@ export interface Props {
   }
 }
 
-export default function FindIdealKoder({ idealKoder }: Props) {
+export default function FindIdealKoder ({ idealKoder }: Props) {
   return (
     <section className='find-ideal-koder'>
       <div className='find-koder-container section-container'>
@@ -27,7 +27,8 @@ export default function FindIdealKoder({ idealKoder }: Props) {
           </div>
         </div>
         <div className='img-cont'>
-          <img className='image'
+          <img
+            className='image'
             src={idealKoder.image}
             alt='koder ideal'
           />

@@ -10,7 +10,7 @@ export interface Props {
   metrics: Array<Metric>
 }
 
-export default function Metrics({ metrics }: Props) {
+export default function Metrics ({ metrics }: Props) {
   return (
     <section className='metrics'>
       <div className='metrics-container'>

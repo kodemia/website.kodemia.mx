@@ -10,7 +10,7 @@ export interface Props {
   duration: string,
 }
 
-export default function LanguageCard({ name, language, description, duration }: Props) {
+export default function LanguageCard ({ name, language, description, duration }: Props) {
   return (
     <div className='language-card'>
       <div className='principal-title'>
@@ -25,7 +25,7 @@ export default function LanguageCard({ name, language, description, duration }: 
           src='/icons/icon-calendario.svg'
           className='calendar-icon'
         />
-        <H5 isWhite >
+        <H5 isWhite>
           Duración
         </H5>
         <p className='duration'>{duration}</p>

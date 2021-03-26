@@ -19,7 +19,7 @@ export interface Props {
   }
 }
 
-export default function HeroCard({ bootcamp }: Props) {
+export default function HeroCard ({ bootcamp }: Props) {
   return (
     <div className='hero-card-bootcamps'>
       <div className='columns is-flex-direction-column container-data'>
@@ -27,8 +27,7 @@ export default function HeroCard({ bootcamp }: Props) {
           'column is-full-mobile is-half-tablet is-one-third-desktop container-tittle',
           {
             'bootcamp-js': bootcamp.subtitle === 'Javascript'
-          })
-        }
+          })}
         >
           <H5>
             {bootcamp.subtitle}

@@ -7,7 +7,7 @@ interface Props {
   children: string
 }
 
-export default function H1({ children }: Props) {
+export default function H1 ({ children }: Props) {
   return (
     <h1 className='h1'>
       <TextCursor text={children} white />

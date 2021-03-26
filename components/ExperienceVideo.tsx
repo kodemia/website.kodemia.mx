@@ -1,5 +1,6 @@
 
-/* global HTMLVideoElement */
+/** global HTMLVideoElement */
+
 import React, { useState, useRef, MutableRefObject } from 'react'
 import classnames from 'classnames'
 import HTMLVideoElement from 'typescript'
@@ -19,7 +20,7 @@ export interface Props {
   onEnded: () => void
 }
 
-export default function ExperienceVideo({ video, isPlay, onClick, onEnded }: Props) {
+export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
 
@@ -79,7 +80,7 @@ export default function ExperienceVideo({ video, isPlay, onClick, onEnded }: Pro
       </div>
 
       <div className='data-container'>
-        <H5 isWhite >
+        <H5 isWhite>
           {video.name}
         </H5>
         <div className='content'>

@@ -20,7 +20,7 @@ export interface Props {
   modules: Array<ModuleBootcamp>
 }
 
-export default function ProgramModule({ modules = [] }: Props) {
+export default function ProgramModule ({ modules = [] }: Props) {
   return (
     <section className='columns is-multiline program-module'>
       <div>

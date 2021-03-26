@@ -16,7 +16,7 @@ export interface Props {
   isActive: Boolean
 }
 
-export default function TestimonialCard({ testimonial, isActive }: Props) {
+export default function TestimonialCard ({ testimonial, isActive }: Props) {
   return (
     <article className='testimonial-card'>
       <div className={classnames(

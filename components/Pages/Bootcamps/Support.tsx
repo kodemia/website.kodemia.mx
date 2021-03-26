@@ -15,7 +15,7 @@ export interface Props {
   }
 }
 
-export default function Support({ support }: Props) {
+export default function Support ({ support }: Props) {
   return (
     <section className='support'>
       <div className='support-container section-container'>

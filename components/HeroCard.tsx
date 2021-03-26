@@ -10,7 +10,7 @@ export interface Props {
   link: string
 }
 
-export default function HeroCard({ title, content, btnTitle, link }: Props) {
+export default function HeroCard ({ title, content, btnTitle, link }: Props) {
   return (
     <div className='hero-card'>
       <H1>{title}</H1>

@@ -19,7 +19,7 @@ export interface Props {
   };
 }
 
-export default function Investment({ investment }: Props) {
+export default function Investment ({ investment }: Props) {
   return (
     <section className='columns investment '>
       <div className='column is-full is-flex is-justify-content-center investment-container'>

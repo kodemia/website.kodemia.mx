@@ -10,7 +10,7 @@ import H5 from 'components/H5'
 import ApplyForm from 'components/ApplyForm'
 import Seo from 'components/SEO'
 
-export default function Aplicar() {
+export default function Aplicar () {
   useEffect(() => {
     window.scrollTo(0, 0)
   })

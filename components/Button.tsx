@@ -15,7 +15,7 @@ export interface Props {
   onClick?: () => void
 }
 
-export default function Button({
+export default function Button ({
   isPrimary,
   label,
   icon,
@@ -50,8 +50,7 @@ export default function Button({
             className='ikon'
           />
           {label}
-        </a>
-      }
+        </a>}
       {!href && type !== 'submit' &&
         <a
           className={btnClass}
@@ -62,16 +61,15 @@ export default function Button({
             className='ikon'
           />
           {label}
-        </a>
-      }
+        </a>}
       {
         type === 'submit' &&
-        <input
-          type='submit'
-          value={label}
-          disabled={!!isDisabled}
-          className={btnClass}
-        />
+          <input
+            type='submit'
+            value={label}
+            disabled={!!isDisabled}
+            className={btnClass}
+          />
       }
     </>
   )

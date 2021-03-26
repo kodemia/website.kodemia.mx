@@ -13,7 +13,7 @@ export interface Props {
   link: string
 }
 
-export default function BootcampCard({
+export default function BootcampCard ({
   mode,
   date,
   schedule,
@@ -30,7 +30,7 @@ export default function BootcampCard({
           {date}
         </h5>
         <div className='schedule'>
-          <H5 isWhite >
+          <H5 isWhite>
             Horario
           </H5>
           <p className='schedule-content'>
