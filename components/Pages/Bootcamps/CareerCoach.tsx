@@ -17,11 +17,18 @@ export default function CareerCoach () {
           <H5>
             Desarrollo Profesional
           </H5>
-          <H3 whiteText='Parte de lo que lograrás con el' cyanText='Career Coach' />
+          <H3
+            whiteText='Parte de lo que lograrás con el'
+            cyanText='Career Coach'
+          />
         </div>
         <div className='first'>
           <div className='img-cont' id='first-img'>
-            <img className='image' src={CareerData.image1} alt='Desarrollo profesional' />
+            <img
+              className='image'
+              src={CareerData.image1}
+              alt='Desarrollo profesional'
+            />
           </div>
           <div className='cards'>
             {
@@ -54,7 +61,11 @@ export default function CareerCoach () {
             }
           </div>
           <div className='img-cont' id='second-img'>
-            <img className='image' src={CareerData.image2} alt='Career coach' />
+            <img
+              className='image'
+              src={CareerData.image2}
+              alt='Career coach'
+            />
           </div>
         </div>
       </div>

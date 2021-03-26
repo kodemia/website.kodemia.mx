@@ -19,18 +19,20 @@ export interface Props {
   }
 }
 
-export default function HeroCard ({ bootcamp }: Props) {
+export default function HeroCard({ bootcamp }: Props) {
   return (
     <div className='hero-card-bootcamps'>
       <div className='columns is-flex-direction-column container-data'>
-        <div className={
-          classNames('column is-full-mobile is-half-tablet is-one-third-desktop container-tittle',
-            {
-              'bootcamp-js': bootcamp.subtitle === 'Javascript'
-            })
+        <div className={classNames(
+          'column is-full-mobile is-half-tablet is-one-third-desktop container-tittle',
+          {
+            'bootcamp-js': bootcamp.subtitle === 'Javascript'
+          })
         }
         >
-          <H5 text={bootcamp.subtitle} />
+          <H5>
+            {bootcamp.subtitle}
+          </H5>
           <H2 text={bootcamp.title} />
         </div>
         <div className='column is-one-third-desktop is-three-fifths-tablet container-description'>
@@ -41,9 +43,16 @@ export default function HeroCard ({ bootcamp }: Props) {
         <div className='column container-information'>
           {
             bootcamp.information.map((data, index) => (
-              <div key={`js-h-${index}`} className='wrapper-information'>
-                <h6 className='title-info'>{data.title}</h6>
-                <p className='text-info'>{data.text}</p>
+              <div
+                key={`js-h-${index}`}
+                className='wrapper-information'
+              >
+                <h6 className='title-info'>
+                  {data.title}
+                </h6>
+                <p className='text-info'>
+                  {data.text}
+                </p>
               </div>
             ))
           }

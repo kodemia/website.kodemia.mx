@@ -5,11 +5,15 @@ export interface Metric {
   value: string
 }
 
-export default function MetricCard ({ description, value }: Metric) {
+export default function MetricCard({ description, value }: Metric) {
   return (
-    <div className='metric'>
-      <div className='value'>{value}</div>
-      <div className='description'>{description}</div>
-    </div>
+    <section className='metric'>
+      <div className='value'>
+        {value}
+      </div>
+      <div className='description'>
+        {description}
+      </div>
+    </section>
   )
 }

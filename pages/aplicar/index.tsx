@@ -10,7 +10,7 @@ import H5 from 'components/H5'
 import ApplyForm from 'components/ApplyForm'
 import Seo from 'components/SEO'
 
-export default function Aplicar () {
+export default function Aplicar() {
   useEffect(() => {
     window.scrollTo(0, 0)
   })
@@ -24,7 +24,9 @@ export default function Aplicar () {
           <main className='columns'>
             <aside className='column '>
               <div className='delimiter'>
-                <H5 text='Aplica ahora' />
+                <H5>
+                  Aplica ahora
+                </H5>
                 <H2>
                   Únete y <span className='h3-cyan'> sé parte </span> de nuestra comunida<Cursor white>d</Cursor>
                 </H2>

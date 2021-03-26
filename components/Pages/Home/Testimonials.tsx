@@ -18,7 +18,7 @@ export interface Props {
   isGray?: boolean
 }
 
-export default function Testimonials({ testimonials, isGray }: Props) {
+export default function Testimonials ({ testimonials, isGray }: Props) {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0)
 
   const next = () => {

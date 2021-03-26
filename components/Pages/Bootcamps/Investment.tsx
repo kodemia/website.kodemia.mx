@@ -19,13 +19,15 @@ export interface Props {
   };
 }
 
-export default function Investment ({ investment }: Props) {
+export default function Investment({ investment }: Props) {
   return (
-    <div className='columns investment '>
+    <section className='columns investment '>
       <div className='column is-full is-flex is-justify-content-center investment-container'>
         <section className='columns is-multiline  investment-wrapper'>
           <div className='column is-three-quarters investment-header'>
-            <H5 text={investment.subtitle} />
+            <H5>
+              {investment.subtitle}
+            </H5>
             <div className='investment-title'>
               <H3
                 whiteText={investment.whiteTitle}
@@ -46,7 +48,9 @@ export default function Investment ({ investment }: Props) {
                   className=' payment-card'
                 >
                   <div className='payment-title'>
-                    <H5 text={paymentType.title} isWhite />
+                    <H5 isWhite>
+                      {paymentType.title}
+                    </H5>
                   </div>
 
                   <div className='payment-description'>
@@ -60,6 +64,6 @@ export default function Investment ({ investment }: Props) {
           </div>
         </section>
       </div>
-    </div>
+    </section>
   )
 }

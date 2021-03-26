@@ -10,12 +10,16 @@ export interface Props {
   link: string
 }
 
-export default function HeroCard ({ title, content, btnTitle, link }: Props) {
+export default function HeroCard({ title, content, btnTitle, link }: Props) {
   return (
     <div className='hero-card'>
       <H1>{title}</H1>
       <p className='hero-content'>{content}</p>
-      <Button isPrimary label={btnTitle} link={link} />
+      <Button
+        isPrimary
+        label={btnTitle}
+        link={link}
+      />
     </div>
   )
 };

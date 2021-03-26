@@ -12,7 +12,7 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function WhyKodemia({ cards, cyanTitle, image, subtitle, whiteTitle }: Props) {
+export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTitle }: Props) {
   return (
     <section className='why-kodemia'>
       <div className='why-kodemia-container section-container'>

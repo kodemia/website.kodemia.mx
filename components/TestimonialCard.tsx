@@ -16,9 +16,9 @@ export interface Props {
   isActive: Boolean
 }
 
-export default function TestimonialCard ({ testimonial, isActive }: Props) {
+export default function TestimonialCard({ testimonial, isActive }: Props) {
   return (
-    <div className='testimonial-card'>
+    <article className='testimonial-card'>
       <div className={classnames(
         'testimonial-card-container',
         {
@@ -28,23 +28,30 @@ export default function TestimonialCard ({ testimonial, isActive }: Props) {
       )}
       >
         <div className='testimonial-data'>
-          <img src={testimonial.photo} className='testimonial-photo' />
+          <img
+            src={testimonial.photo}
+            className='testimonial-photo'
+          />
           <ReactCountryFlag
             countryCode={testimonial.country}
             className='flag'
             style={{ fontSize: '2em' }}
           />
           <div className='testimonial-name'>
-            <H5 text={testimonial.name} isWhite />
+            <H5 isWhite>
+              {testimonial.name}
+            </H5>
           </div>
           <p className='testimonial-employment'>
             {testimonial.employment}
           </p>
         </div>
         <div className='koder-quote '>
-          <p className='quote'>{testimonial.quote}</p>
+          <p className='quote'>
+            {testimonial.quote}
+          </p>
         </div>
       </div>
-    </div>
+    </article>
   )
 }

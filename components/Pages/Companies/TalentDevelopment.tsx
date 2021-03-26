@@ -13,12 +13,14 @@ export interface Props {
   }
 }
 
-export default function TalentDevelopment ({ talent }: Props) {
+export default function TalentDevelopment({ talent }: Props) {
   return (
     <section className='talent-development'>
       <div className='talent-container section-container'>
         <div className='head'>
-          <H5 text={talent.subtitle} />
+          <H5>
+            {talent.subtitle}
+          </H5>
           <H3
             cyanText={talent.cyanTitle}
             whiteText={talent.whiteTitle}

@@ -25,13 +25,15 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, whiteTitle }: Props) {
+export default function ChooseAKoder({ chooseKoder = [], cyanTitle, subtitle, whiteTitle }: Props) {
   const [activeProgram, setActiveProgram] = useState(0)
   return (
     <section className='choose-a-koder is-flex is-justify-content-center'>
       <div className='columns is-multiline section-container choose-a-koder-wrapper'>
         <div className='column is-full title-choose'>
-          <H5 text={subtitle} />
+          <H5>
+            {subtitle}
+          </H5>
           <div className='title-container'>
             <H3
               whiteText={whiteTitle}
@@ -105,11 +107,9 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
         <div className='column slide-choose '>
           {
             chooseKoder.map((program, index) => (
-
               <div
                 key={`skill-${index}`}
                 className={classnames(
-
                   'slide-items columns',
                   {
                     'is-active': activeProgram === index,
@@ -132,7 +132,6 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                   ))
                 }
               </div>
-
             ))
           }
         </div>

@@ -14,18 +14,23 @@ export interface Props {
   }
 }
 
-export default function FindIdealKoder ({ idealKoder }: Props) {
+export default function FindIdealKoder({ idealKoder }: Props) {
   return (
     <section className='find-ideal-koder'>
       <div className='find-koder-container section-container'>
         <div className='subject'>
-          <H5 text={idealKoder.subtitle} />
+          <H5>
+            {idealKoder.subtitle}
+          </H5>
           <div className='title'>
             <H3 whiteText={idealKoder.whiteTitle} cyanText={idealKoder.cyanTitle} />
           </div>
         </div>
         <div className='img-cont'>
-          <img className='image' src={idealKoder.image} alt='koder ideal' />
+          <img className='image'
+            src={idealKoder.image}
+            alt='koder ideal'
+          />
         </div>
         <div className='cards'>
           {

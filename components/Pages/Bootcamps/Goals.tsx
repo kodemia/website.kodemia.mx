@@ -13,13 +13,18 @@ export interface Props {
   }
 }
 
-export default function Goals ({ achievement }: Props) {
+export default function Goals({ achievement }: Props) {
   return (
     <section className='goals'>
       <div className='goals-container section-container'>
         <div className='head'>
-          <H5 text={achievement.subtitle} />
-          <H3 whiteText={achievement.whiteTitle} cyanText={achievement.cyanTitle} />
+          <H5>
+            {achievement.subtitle}
+          </H5>
+          <H3
+            whiteText={achievement.whiteTitle}
+            cyanText={achievement.cyanTitle}
+          />
         </div>
         <div className='goals-cards'>
           {

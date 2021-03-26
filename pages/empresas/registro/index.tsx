@@ -8,7 +8,7 @@ import H3 from 'components/H3'
 import RegisterForm from 'components/Pages/Companies/RegisterForm'
 import Seo from 'components/SEO'
 
-export default function Registro () {
+export default function Registro() {
   return (
     <>
       <Seo />
@@ -18,7 +18,9 @@ export default function Registro () {
           <main className='columns'>
             <aside className='column '>
               <div className='delimiter'>
-                <H5 text='Aplica ahora' />
+                <H5>
+                  Aplica ahora
+                </H5>
                 <H3>
                   Únete y <span className='h3-cyan'> colabora</span> con nosotro<Cursor white>s</Cursor>
                 </H3>

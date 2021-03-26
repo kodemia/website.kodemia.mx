@@ -40,7 +40,13 @@ export default function Navbar () {
               setIsActive(!isActive)
             }}
             role='button'
-            className={classNames('navbar-burger', 'burger', { 'is-active': isActive })}
+            className={classNames(
+              'navbar-burger',
+              'burger',
+              {
+                'is-active': isActive
+              }
+            )}
             aria-label='menu'
             aria-expanded='false'
           >
@@ -49,7 +55,13 @@ export default function Navbar () {
             <span aria-hidden='true' />
           </a>
         </div>
-        <div className={classNames('navbar-menu', { 'is-active': isActive })}>
+        <div className={classNames(
+          'navbar-menu',
+          {
+            'is-active': isActive
+          }
+        )}
+        >
           <div className='navbar-end'>
             <div className='navbar-item'>
               {
@@ -68,15 +80,23 @@ export default function Navbar () {
             </div>
             <div className='btns'>
               <div className='btn-sign-in'>
-                {
-                  isLoggedIn && <Button label='Cerrar sesión' onClick={signOut} />
-                }
-                {
-                  !isLoggedIn && <Button label='Iniciar sesión' link='/login' />
-                }
+                {isLoggedIn &&
+                  <Button
+                    label='Cerrar sesión'
+                    onClick={signOut}
+                  />}
+                {!isLoggedIn &&
+                  <Button
+                    label='Iniciar sesión'
+                    link='/login'
+                  />}
               </div>
               <div className='btn-apply'>
-                <Button isPrimary label='Aplica hoy' link='/aplicar' />
+                <Button
+                  isPrimary
+                  label='Aplica hoy'
+                  link='/aplicar'
+                />
               </div>
             </div>
           </div>

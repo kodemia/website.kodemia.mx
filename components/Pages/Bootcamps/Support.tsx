@@ -15,17 +15,26 @@ export interface Props {
   }
 }
 
-export default function Support ({ support }: Props) {
+export default function Support({ support }: Props) {
   return (
     <section className='support'>
       <div className='support-container section-container'>
         <div className='head'>
-          <H5 text={support.subtitle} />
-          <H3 whiteText={support.whiteTitle} cyanText={support.cyanTitle} />
+          <H5>
+            {support.subtitle}
+          </H5>
+          <H3
+            whiteText={support.whiteTitle}
+            cyanText={support.cyanTitle}
+          />
           <H3 whiteText={support.secondWhiteTitle} />
         </div>
         <div className='img-cont'>
-          <img className='image' src={support.image} alt='' />
+          <img
+            className='image'
+            src={support.image}
+            alt='soporte-kodemia-beneficios'
+          />
         </div>
         <div className='cards'>
           {

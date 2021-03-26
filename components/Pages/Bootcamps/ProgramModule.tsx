@@ -20,19 +20,21 @@ export interface Props {
   modules: Array<ModuleBootcamp>
 }
 
-export default function ProgramModule ({ modules = [] }: Props) {
+export default function ProgramModule({ modules = [] }: Props) {
   return (
-    <div className='columns is-multiline program-module'>
+    <section className='columns is-multiline program-module'>
       <div>
         <H2 text='Los Temas' />
       </div>
       {
         modules.map((module, index) => (
-          <section
+          <article
             key={`module-${index}`}
             className='column is-full data-module-container'
           >
-            <H5 text={module.week} />
+            <H5>
+              {module.week}
+            </H5>
             <H3
               whiteText={module.module}
               cyanText={module.title}
@@ -56,9 +58,9 @@ export default function ProgramModule ({ modules = [] }: Props) {
                 ))
               }
             </div>
-          </section>
+          </article>
         ))
       }
-    </div>
+    </section>
   )
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import MetricCard from './MetricCard'
 
 export interface Metric {
@@ -11,7 +10,7 @@ export interface Props {
   metrics: Array<Metric>
 }
 
-export default function Metrics ({ metrics }: Props) {
+export default function Metrics({ metrics }: Props) {
   return (
     <section className='metrics'>
       <div className='metrics-container'>

@@ -22,7 +22,7 @@ export interface Props {
   ourMethod: Info
 }
 
-export default function OurMethod({ ourMethod: { title, keywords, text, cards } }: Props) {
+export default function OurMethod ({ ourMethod: { title, keywords, text, cards } }: Props) {
   return (
     <section className='our-method '>
       <div className='our-method-container section-container'>

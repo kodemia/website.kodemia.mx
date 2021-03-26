@@ -15,7 +15,7 @@ interface Props {
   winnerImages: Array<Image>
 }
 
-export default function WhatGoingAchieve({ winnerImages }: Props) {
+export default function WhatGoingAchieve ({ winnerImages }: Props) {
   const [activeImageIndex, setActiveImageIndex] = useState(0)
 
   return (

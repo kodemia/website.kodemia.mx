@@ -12,7 +12,7 @@ export interface Props {
   detail?: string
 }
 
-export default function InfoCard ({ detail, icon, title, text }: Props) {
+export default function InfoCard({ detail, icon, title, text }: Props) {
   return (
     <div id='info-card'>
       <div className={classnames('info-card-container', {
@@ -21,15 +21,20 @@ export default function InfoCard ({ detail, icon, title, text }: Props) {
       >
         <img src={icon} className='ikon' />
         <div className='info-card-title'>
-          <H5 text={title} isWhite />
+          <H5 isWhite>
+            {title}
+          </H5>
         </div>
-
         <div className='text'>
           <DescriptionParagraph>
             {text}
           </DescriptionParagraph>
         </div>
-        {detail && <div className='detail'>{detail}</div>}
+        {detail &&
+          <div className='detail'>
+            {detail}
+          </div>
+        }
       </div>
     </div>
   )

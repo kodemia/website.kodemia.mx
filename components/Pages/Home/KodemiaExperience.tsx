@@ -23,7 +23,7 @@ export interface Props {
   videos: Array<Video>
 }
 
-export default function KodemiaExperience({ videos = [] }: Props) {
+export default function KodemiaExperience ({ videos = [] }: Props) {
   const [activeVideoIndex, setActiveVideoIndex] = useState<number>()
   const [isActive, setIsActive] = useState(false)
   const gridRef = useRef(null)

@@ -21,7 +21,7 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function AllianceKodemia({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
+export default function AllianceKodemia ({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
   return (
     <section className='alliances-kodemia-wrapper'>
       <div className={classnames(

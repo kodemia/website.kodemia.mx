@@ -4,10 +4,10 @@ import React from 'react'
 import TextCursor from './TextCursor'
 
 interface Props {
-  children: React.ReactNode
+  children: string
 }
 
-export default function H1 ({ children }: Props) {
+export default function H1({ children }: Props) {
   return (
     <h1 className='h1'>
       <TextCursor text={children} white />

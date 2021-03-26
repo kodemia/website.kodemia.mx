@@ -17,14 +17,11 @@ export interface Props {
   workshops: Array<WorkshopArr>
 }
 
-export default function workshops ({ workshops }: Props) {
+export default function workshops({ workshops }: Props) {
   return (
     <section className='columns is-multiline workshops'>
       <div className='mb-6'>
-        <H2
-          text='Los Talleres'
-
-        />
+        <H2 text='Los Talleres' />
       </div>
       {
         workshops.map((workshop, index) => (
@@ -32,9 +29,7 @@ export default function workshops ({ workshops }: Props) {
             key={`workshop-${index}`}
             className='column is-full workshop '
           >
-            <div className='columns is-multiline wrapper is-flex-dektop
-            is-justify-content-center'
-            >
+            <div className='columns is-multiline wrapper is-flex-desktop is-justify-content-center'>
               <div className='column is-4-desktop is-12-tablet  is-flex image'>
                 <img
                   src={workshop.image}
@@ -43,8 +38,12 @@ export default function workshops ({ workshops }: Props) {
                 />
               </div>
               <div className='column is-8-desktop is-12-tablet workshop-data'>
-                <H5 text={workshop.week} />
-                <H4 text={workshop.title} />
+                <H5>
+                  {workshop.week}
+                </H5>
+                <H4>
+                  {workshop.title}
+                </H4>
                 <DescriptionParagraph>
                   {workshop.description}
                 </DescriptionParagraph>

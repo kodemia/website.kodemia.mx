@@ -13,13 +13,18 @@ export interface Props {
   }
 }
 
-export default function HelpFindTalent ({ findTalent }: Props) {
+export default function HelpFindTalent({ findTalent }: Props) {
   return (
     <section id='help-find-talent'>
       <div className='find-talent-container section-container'>
         <div className='head'>
-          <H5 text={findTalent.subtitle} />
-          <H3 whiteText={findTalent.whiteTitle} cyanText={findTalent.cyanTitle} />
+          <H5>
+            {findTalent.subtitle}
+          </H5>
+          <H3
+            whiteText={findTalent.whiteTitle}
+            cyanText={findTalent.cyanTitle}
+          />
         </div>
         <p className='detail'>
           {findTalent.detail}

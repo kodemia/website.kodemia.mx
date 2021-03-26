@@ -8,7 +8,7 @@ export interface Props {
   video: string
 }
 
-export default function Hero({ video }: Props) {
+export default function Hero ({ video }: Props) {
   return (
     <section className='hero'>
       <BgVideo video={video} />

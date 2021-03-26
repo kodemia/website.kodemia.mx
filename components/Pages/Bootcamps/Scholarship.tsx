@@ -5,7 +5,7 @@ import Button from '../../Button'
 import H2 from '../../H2'
 import DescriptionParagraph from 'components/DescriptionParagraph'
 
-export default function Scholarship () {
+export default function Scholarship() {
   return (
     <section className='columns scholarship '>
       <div className='column is-full is-flex is-justify-content-center scholarship-container '>
@@ -22,7 +22,11 @@ export default function Scholarship () {
             </div>
           </div>
           <div className='column is-flex is-align-items-center scholarship-button'>
-            <Button label='Quiero una beca' href='/aplicar' isPrimary />
+            <Button
+              label='Quiero una beca'
+              href='/aplicar'
+              isPrimary
+            />
           </div>
         </div>
       </div>

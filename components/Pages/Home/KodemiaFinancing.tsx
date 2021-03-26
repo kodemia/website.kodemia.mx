@@ -15,7 +15,7 @@ export interface Props {
   info: Data
 }
 
-export default function KodemiaFinancing({ info }: Props) {
+export default function KodemiaFinancing ({ info }: Props) {
   return (
     <section className='kodemia-financing'>
       <div className='kodemia-financing-container  section-container'>
