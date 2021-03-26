@@ -11,7 +11,11 @@ export default function TransformYourLife () {
           <H2 text='¿Listo para transformar tu vida programando?' />
         </div>
         <div className='btn-container'>
-          <Button label='Aplica ahora' hasWhiteBg link='/aplicar' />
+          <Button
+            label='Aplica ahora'
+            hasWhiteBg
+            link='/aplicar'
+          />
         </div>
       </div>
     </section>

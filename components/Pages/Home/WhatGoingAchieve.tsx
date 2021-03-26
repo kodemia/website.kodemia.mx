@@ -7,15 +7,15 @@ import H5 from '../../H5'
 import H3 from '../../H3'
 import DescriptionParagraph from 'components/DescriptionParagraph'
 
-export interface Image {
+interface Image {
   image: string
 }
 
-export interface Props {
+interface Props {
   winnerImages: Array<Image>
 }
 
-export default function WhatGoingAchieve ({ winnerImages }: Props) {
+export default function WhatGoingAchieve({ winnerImages }: Props) {
   const [activeImageIndex, setActiveImageIndex] = useState(0)
 
   return (
@@ -24,7 +24,9 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
         <div className='column is-one-third pl-0 is-full-touch achivements-text-column'>
           <div className='columns is-multiline'>
             <div className='column is-full pb-0'>
-              <H5 text='¿Qué vas a lograr?' />
+              <H5>
+                ¿Qué vas a lograr?
+              </H5>
             </div>
             <div className='column is-full pt-0'>
               <H3 whiteText='Tus desarrollos hablarán ' cyanText='por sí solos' />

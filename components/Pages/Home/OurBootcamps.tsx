@@ -31,11 +31,13 @@ export interface Props {
   }
 }
 
-export default function OurBootcamps ({ bootcamps }: Props) {
+export default function OurBootcamps({ bootcamps }: Props) {
   return (
     <section id='bootcamps' className='our-bootcamps section-container'>
       <div className='our-bootcamps-container '>
-        <H5 text='Nuestros Bootcamps' />
+        <H5>
+          Nuestros Bootcamps
+        </H5>
         <div className='bootcamp'>
           <LanguageCard
             name={bootcamps.javascript.name}
@@ -43,7 +45,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
             description={bootcamps.javascript.description}
             duration={bootcamps.javascript.duration}
           />
-          <div className='modalities-container'>
+          <article className='modalities-container'>
             {
               bootcamps.javascript.modalities.map((modality, index) => (
                 <div className='modality' key={index}>
@@ -57,7 +59,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
                 </div>
               ))
             }
-          </div>
+          </article>
         </div>
         <div className='bootcamp'>
           <LanguageCard
@@ -66,7 +68,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
             description={bootcamps.python.description}
             duration={bootcamps.python.duration}
           />
-          <div className='modalities-container'>
+          <article className='modalities-container'>
             {
               bootcamps.python.modalities.map((modality, index) => (
                 <div className='modality' key={index}>
@@ -80,7 +82,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
                 </div>
               ))
             }
-          </div>
+          </article>
         </div>
       </div>
     </section>

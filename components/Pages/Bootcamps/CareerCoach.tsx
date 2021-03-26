@@ -14,7 +14,9 @@ export default function CareerCoach () {
     <section className='career-coach'>
       <div className='career-coach-container section-container'>
         <div className='head'>
-          <H5 text='Desarrollo Profesional' />
+          <H5>
+            Desarrollo Profesional
+          </H5>
           <H3 whiteText='Parte de lo que lograrás con el' cyanText='Career Coach' />
         </div>
         <div className='first'>

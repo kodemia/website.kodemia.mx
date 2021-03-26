@@ -22,13 +22,18 @@ export interface Props {
   ourMethod: Info
 }
 
-export default function OurMethod ({ ourMethod: { title, keywords, text, cards } }: Props) {
+export default function OurMethod({ ourMethod: { title, keywords, text, cards } }: Props) {
   return (
     <section className='our-method '>
       <div className='our-method-container section-container'>
-        <H5 text='Nuestro Método' />
+        <H5>
+          Nuestro Método
+        </H5>
         <div className='title-contain'>
-          <H3 whiteText={title} cyanText={keywords} />
+          <H3
+            whiteText={title}
+            cyanText={keywords}
+          />
         </div>
         <div className='our-method-text'>
           <DescriptionParagraph>

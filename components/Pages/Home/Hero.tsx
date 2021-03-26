@@ -8,16 +8,17 @@ export interface Props {
   video: string
 }
 
-export default function Hero ({ video }: Props) {
+export default function Hero({ video }: Props) {
   return (
-    <div className='hero'>
+    <section className='hero'>
       <BgVideo video={video} />
       <div className='cover'>
         <div className='container'>
           <HeroCard
             title='Transforma tu vida programando'
             content='Más que una escuela, somos el aliado que te acompaña para desarrollarte como programador, antes, durante y después de nuestros Bootcamps. '
-            btnTitle='Conoce nuestros Bootcamps' link='/#bootcamps'
+            btnTitle='Conoce nuestros Bootcamps'
+            link='/#bootcamps'
           />
         </div>
         <img
@@ -25,6 +26,6 @@ export default function Hero ({ video }: Props) {
           className='arrow-icon'
         />
       </div>
-    </div>
+    </section>
   )
 }

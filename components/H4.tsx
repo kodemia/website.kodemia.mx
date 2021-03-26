@@ -1,10 +1,12 @@
 import React from 'react'
 export interface Props {
-  text: string
+  children: React.ReactNode
 }
 
-export default function H4 ({ text }: Props) {
+export default function H4({ children }: Props) {
   return (
-    <h4 className='h4'>{text}</h4>
+    <h4 className='h4'>
+      {children}
+    </h4>
   )
 }

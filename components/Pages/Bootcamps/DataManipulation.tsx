@@ -19,7 +19,7 @@ export interface Data {
 export interface Props {
   dataManipulation: Array<Data>
 }
-export default function DataManipulation ({ dataManipulation }: Props) {
+export default function DataManipulation({ dataManipulation }: Props) {
   return (
     <section className='columns is-multiline data-manipulation-container'>
       <div className='column is-12'>
@@ -36,7 +36,9 @@ export default function DataManipulation ({ dataManipulation }: Props) {
           >
             <div className='columns is-multiline wrapper'>
               <div className='column is-12-desktop is-12-tablet data-container '>
-                <H5 text={data.week} />
+                <H5>
+                  {data.week}
+                </H5>
                 <H3
                   whiteText={data.whiteTitle}
                   cyanText={data.cyanTitle}

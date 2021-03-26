@@ -21,7 +21,7 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function AllianceKodemia ({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
+export default function AllianceKodemia({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
   return (
     <section className='alliances-kodemia-wrapper'>
       <div className={classnames(
@@ -32,11 +32,20 @@ export default function AllianceKodemia ({ allies = [], cyanTitle, subtitle, whi
       )}
       >
         <div className='alliances-kodemia-container section-container'>
-          <H5 text={subtitle} />
+          <H5>
+            {subtitle}
+          </H5>
           <div className='alliances-title'>
-            <H3 cyanText={cyanTitle} whiteText={whiteTitle} isFirstCyan />
+            <H3
+              cyanText={cyanTitle}
+              whiteText={whiteTitle}
+              isFirstCyan
+            />
           </div>
-          <CarrouselAlliances allies={allies} hasContent={!isBlack} />
+          <CarrouselAlliances
+            allies={allies}
+            hasContent={!isBlack}
+          />
           <div className='slider-container'>
             {allies.map((ally, index) => {
               if (!ally.href) {

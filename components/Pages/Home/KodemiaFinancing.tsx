@@ -15,13 +15,18 @@ export interface Props {
   info: Data
 }
 
-export default function KodemiaFinancing ({ info }: Props) {
+export default function KodemiaFinancing({ info }: Props) {
   return (
     <section className='kodemia-financing'>
       <div className='kodemia-financing-container  section-container'>
-        <H5 text={info.section} />
+        <H5>
+          {info.section}
+        </H5>
         <div className='title-container'>
-          <H3 whiteText={info.title} cyanText={info.keywords} />
+          <H3
+            whiteText={info.title}
+            cyanText={info.keywords}
+          />
         </div>
         <p className='text'>{info.text}</p>
         <div className='btn-container'>
