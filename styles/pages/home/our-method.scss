@@ -7,18 +7,17 @@
   .our-method-container {
     max-width: $content-max-width;
     min-width: $content-min-width;
-    padding: 100px 0 60px;
+    padding: 100px 0 66px;
 
     @include on-mobile {
       margin: 0;
       max-width: 100%;
       min-width: 100%;
-      padding: 100px 45px;
+      padding: 80px 45px 40px;
     }
 
     @include on-tablet {
-      margin: 0;
-      padding: 70px 85px;
+      margin: 0 85px;
     }
 
     .title-contain {

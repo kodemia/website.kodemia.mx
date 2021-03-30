@@ -10,23 +10,20 @@
       justify-content: center;
       max-width: $content-max-width;
       min-width: $content-min-width;
-      padding: 100px 0 60px;
+      padding: 100px 0 80px;
       width: 100%;
 
       @include mobile {
         margin: 0;
-        margin-bottom: 50px;
         max-width: 100%;
         min-width: 100%;
-        padding: 100px 45px 60px;
+        padding: 80px 45px 60px;
         width: 100%;
       }
 
       @include on-tablet {
         margin: 0;
-        margin-bottom: 50px;
-        margin-top: 100px;
-        padding: 100px 85px 60px;
+        padding: 100px 85px 80px;
       }
 
       .sliders {

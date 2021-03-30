@@ -7,9 +7,9 @@
   .transform-your-life-container {
     align-items: center;
     display: flex;
-    height: 319px;
     justify-content: space-between;
     max-width: $content-max-width;
+    padding: 100px 0 80px;
     width: 100%;
 
     @include on-mobile {
@@ -17,12 +17,12 @@
       flex-direction: column;
       justify-content: center;
       margin: 0;
-      padding: 0 45px;
+      padding: 80px 45px 60px;
     }
 
     @include on-tablet {
       margin: 0;
-      padding: 0 85px;
+      padding: 100px 85px 80px;
     }
 
     .title-container {
