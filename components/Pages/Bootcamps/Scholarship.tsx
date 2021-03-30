@@ -11,10 +11,9 @@ export default function Scholarship () {
       <div className='column is-full is-flex is-justify-content-center scholarship-container '>
         <div className='columns is-multiline scholarship-information'>
           <div className='column is-two-thirds-desktop is-half-tablet info'>
-            <H2
-              text='Aplica por una beca del 5% hasta el 18%'
-              isCyan
-            />
+            <H2 isCyan>
+              Aplica por una beca del 5% hasta el 18%
+            </H2>
             <div className='scholarship-text'>
               <DescriptionParagraph>
                 'Puedes aplicar a través de una entrevista personalizada, en ella sabrás la resolución de tu solicitud.'

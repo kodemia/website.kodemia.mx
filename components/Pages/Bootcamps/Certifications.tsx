@@ -19,7 +19,9 @@ export default function Certifications ({ certifications }: Props) {
   return (
     <section className='columns is-multiline certifications'>
       <div className='mb-6'>
-        <H2 text='Las Certificaciones' />
+        <H2>
+          Las Certificaciones
+        </H2>
       </div>
       {
         certifications.map((workshop, index) => (

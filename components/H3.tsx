@@ -24,11 +24,10 @@ export default function H3 ({
   const cursorText = isFirstCyan ? whiteText : cyanText
 
   return (
-    <h3
-      className={classnames({
-        'h3-cyan': isFirstCyan,
-        'h3-white': !isFirstCyan
-      })}
+    <h3 className={classnames({
+      'h3-cyan': isFirstCyan,
+      'h3-white': !isFirstCyan
+    })}
     >
       {children || text}
       {

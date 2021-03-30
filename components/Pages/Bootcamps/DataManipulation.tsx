@@ -23,10 +23,9 @@ export default function DataManipulation ({ dataManipulation }: Props) {
   return (
     <section className='columns is-multiline data-manipulation-container'>
       <div className='column is-12'>
-        <H2
-          text='Data Manipulation'
-
-        />
+        <H2>
+          Data Manipulation
+        </H2>
       </div>
       {
         dataManipulation.map((data, index) => (

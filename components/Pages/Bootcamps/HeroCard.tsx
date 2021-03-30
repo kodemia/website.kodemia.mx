@@ -32,7 +32,9 @@ export default function HeroCard ({ bootcamp }: Props) {
           <H5>
             {bootcamp.subtitle}
           </H5>
-          <H2 text={bootcamp.title} />
+          <H2>
+            {bootcamp.title}
+          </H2>
         </div>
         <div className='column is-one-third-desktop is-three-fifths-tablet container-description'>
           <p className='description'>

@@ -4,18 +4,18 @@ import classnames from 'classnames'
 import TextCursor from './TextCursor'
 
 export interface Props {
-  text: string
+  children: string
   isCyan?: Boolean
 }
 
-export default function H2 ({ text, isCyan = false }: Props) {
+export default function H2 ({ children, isCyan = false }: Props) {
   return (
     <h2 className={classnames({
       'h2-is-white': !isCyan,
       'h2-is-cyan': isCyan
     })}
     >
-      <TextCursor text={text} white={!isCyan} />
+      <TextCursor text={children} white={!isCyan} />
     </h2>
   )
 };

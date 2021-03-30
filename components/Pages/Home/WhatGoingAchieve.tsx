@@ -102,11 +102,11 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
                         </div>
 
                       </div>
-                      <div
+                      <h5
                         className='column is-full has-text-centered has-text-weight-medium-on-desktop bar-text'
                       >
                         {steps[index]}
-                      </div>
+                      </h5>
                     </div>
                   </div>
                 )

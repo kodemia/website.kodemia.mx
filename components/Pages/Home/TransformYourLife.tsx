@@ -8,7 +8,9 @@ export default function TransformYourLife () {
     <section className='transform-your-life'>
       <div className='transform-your-life-container section-container'>
         <div className='title-container'>
-          <H2 text='¿Listo para transformar tu vida programando?' />
+          <H2>
+            ¿Listo para transformar tu vida programando?
+          </H2>
         </div>
         <div className='btn-container'>
           <Button

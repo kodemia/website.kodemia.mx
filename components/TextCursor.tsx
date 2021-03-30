@@ -4,7 +4,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 export interface Props {
-  text?: string;
+  text?: string
   white?: Boolean,
   children?: React.ReactNode
 }
@@ -38,6 +38,5 @@ export default function TextCursor ({
         {!children && characterCursor}
       </span>
     </>
-
   )
 };

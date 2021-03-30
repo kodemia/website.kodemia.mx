@@ -8,7 +8,16 @@ import H2 from 'components/H2'
 import Button from 'components/Button'
 import DescriptionParagraph from 'components/DescriptionParagraph'
 
-export default function Hero () {
+interface Props {
+  hero: {
+    title: string
+    description: string
+    label: string,
+    link: string
+  }
+}
+
+export default function Hero ({ hero }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const [hasUserClickedVideo, setHasUserClickedVideo] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
@@ -16,18 +25,20 @@ export default function Hero () {
     <div className='columns hero-companies'>
       <div className='column hero-container section-container'>
         <div className='subject'>
-          <H2 text='Encuentra desarrolladores de alto calibre' />
+          <H2>
+            {hero.title}
+          </H2>
         </div>
         <div className='description'>
           <DescriptionParagraph>
-            Los egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos.
+            {hero.description}
           </DescriptionParagraph>
         </div>
         <div className='hero-btn'>
           <Button
             isPrimary
-            label='Contáctanos'
-            link='/empresas/registro'
+            label={hero.label}
+            link={hero.link}
           />
         </div>
         <div className='video-wrapper'>

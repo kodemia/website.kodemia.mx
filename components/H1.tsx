@@ -4,7 +4,7 @@ import React from 'react'
 import TextCursor from './TextCursor'
 
 interface Props {
-  children: string
+  children?: string
 }
 
 export default function H1 ({ children }: Props) {

@@ -24,7 +24,9 @@ export default function ProgramModule ({ modules = [] }: Props) {
   return (
     <section className='columns is-multiline program-module'>
       <div>
-        <H2 text='Los Temas' />
+        <H2>
+          Los Temas
+        </H2>
       </div>
       {
         modules.map((module, index) => (

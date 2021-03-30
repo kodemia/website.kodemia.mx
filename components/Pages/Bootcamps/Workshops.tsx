@@ -21,7 +21,9 @@ export default function workshops ({ workshops }: Props) {
   return (
     <section className='columns is-multiline workshops'>
       <div className='mb-6'>
-        <H2 text='Los Talleres' />
+        <H2>
+          Los Talleres
+        </H2>
       </div>
       {
         workshops.map((workshop, index) => (
