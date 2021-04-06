@@ -5,14 +5,14 @@
 
   .scholarship-container {
     padding: 0;
-    padding: 100px 49px 60px;
+    padding: 100px 49px 80px;
 
     @include on-mobile {
-      padding: 100px 45px 60px;
+      padding: 80px 45px 60px;
     }
 
     @include on-tablet {
-      padding: 100px 73px 60px;
+      padding: 100px 73px 80px;
     }
 
     .scholarship-information {

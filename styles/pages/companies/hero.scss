@@ -3,8 +3,12 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 120px 0 80px;
+  padding: 120px 0 68px;
   width: 100%;
+
+  @include on-mobile {
+    padding: 120px 0 48px;
+  }
 
   .hero-container {
     display: grid;
