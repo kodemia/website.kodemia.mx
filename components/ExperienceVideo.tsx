@@ -5,20 +5,25 @@ import React, { useState, useRef, MutableRefObject } from 'react'
 import classnames from 'classnames'
 import HTMLVideoElement from 'typescript'
 
+export interface Video {
+  url: string
+  name: string
+  content: string
+  poster: string
+}
+
 export interface Props {
-  video: {
-    url: string
-    name: string
-    content: string
-    poster: string
-  }
+  video: Video
   isPlay: boolean
+  setIsActive: any
   onClick: () => void
   onEnded: () => void
 }
 
-export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Props) {
+
+export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setIsActive }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
+  const [showCloseIcon, setShowCloseIcon] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
 
   if (!isPlay && videoRef.current) {
@@ -38,23 +43,38 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Pr
           ref={videoRef}
           onPause={() => {
             setShowPlayIcon(true)
+            setShowCloseIcon(false)
             videoRef.current.controls = false
           }}
           onEnded={() => {
             setShowPlayIcon(true)
+            setShowCloseIcon(false)
             videoRef.current.controls = false
             onEnded()
             videoRef.current.load()
           }}
           onSeeked={() => {
             setShowPlayIcon(false)
+            setShowCloseIcon(true)
             videoRef.current.controls = true
           }}
         >
           <source src={video.url} type='video/mp4' />
         </video>
       </div>
-
+      <div className={classnames('icon-close', {
+            'is-hidden': !showCloseIcon
+          })}
+          onClick={() => {
+            setIsActive(false)
+            videoRef.current.pause()
+          }}
+      >
+            <img
+              src='/icons/btn-close-video.svg'
+              alt='close-video'
+            />
+      </div>
       <div
         className={classnames('icon-container', {
           'is-hidden': !showPlayIcon
@@ -62,6 +82,7 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded }: Pr
         onClick={() => {
           onClick()
           setShowPlayIcon(false)
+          setShowCloseIcon(true)
           videoRef.current.play()
           videoRef.current.controls = true
         }}

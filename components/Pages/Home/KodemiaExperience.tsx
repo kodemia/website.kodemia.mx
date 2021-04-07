@@ -60,6 +60,7 @@ export default function KodemiaExperience ({ videos = [] }:Props) {
               })}
             >
               <ExperienceVideo
+                setIsActive={setIsActive}
                 video={video}
                 onClick={() => {
                   setActiveVideoIndex(index)
