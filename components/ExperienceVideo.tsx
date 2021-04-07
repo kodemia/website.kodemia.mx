@@ -20,7 +20,6 @@ export interface Props {
   onEnded: () => void
 }
 
-
 export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setIsActive }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const [showCloseIcon, setShowCloseIcon] = useState(false)
@@ -62,18 +61,19 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
           <source src={video.url} type='video/mp4' />
         </video>
       </div>
-      <div className={classnames('icon-close', {
-            'is-hidden': !showCloseIcon
-          })}
-          onClick={() => {
-            setIsActive(false)
-            videoRef.current.pause()
-          }}
+      <div
+        className={classnames('icon-close', {
+          'is-hidden': !showCloseIcon
+        })}
+        onClick={() => {
+          setIsActive(false)
+          videoRef.current.pause()
+        }}
       >
-            <img
-              src='/icons/btn-close-video.svg'
-              alt='close-video'
-            />
+        <img
+          src='/icons/btn-close-video.svg'
+          alt='close-video'
+        />
       </div>
       <div
         className={classnames('icon-container', {
