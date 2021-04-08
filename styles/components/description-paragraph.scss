@@ -1,7 +1,7 @@
-
 .description-paragraph {
-  color: $gray;
-  font-size: 18px;
+  color: $text;
+  font-size: $p-font-size;
   font-weight: 500;
-  height: 81px;
+  line-height: 1.5;
+  white-space: pre-wrap;
 }

@@ -5,7 +5,7 @@ import { ToastContainer } from 'react-toastify'
 
 // My components
 import Navbar from 'components/Navbar'
-import H2 from 'components/H2'
+import H5 from 'components/H5'
 import H3 from 'components/H3'
 import ClassCard from 'components/Pages/Classes/ClassCard'
 import Footer from 'components/Footer'
@@ -53,9 +53,11 @@ export default function Classes () {
         <div className='column is-full classes-bg'>
           <div className='title-container is-flex is-justify-content-center'>
             <div className='wrapper is-flex is-flex-direction-column is-justify-content-center'>
-              <H3 text='Clases Kodemia' />
+              <H5>
+                Clases Kodemia
+              </H5>
               <div className='h2'>
-                <H2
+                <H3
                   whiteText='No te pierdas'
                   cyanText='ninguna'
                 />

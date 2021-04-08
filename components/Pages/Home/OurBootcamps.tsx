@@ -1,7 +1,7 @@
 // TODO: Separar componentes y separar archivo de configuración
 import React from 'react'
 // My components
-import H3 from '../../H3'
+import H5 from '../../H5'
 import BootcampCard from '../../BootcampCard'
 import LanguageCard from '../../LanguageCard'
 
@@ -31,11 +31,13 @@ export interface Props {
   }
 }
 
-export default function OurBootcamps ({ bootcamps }:Props) {
+export default function OurBootcamps ({ bootcamps }: Props) {
   return (
-    <div id='bootcamps' className='our-bootcamps section-container'>
+    <section id='bootcamps' className='our-bootcamps section-container'>
       <div className='our-bootcamps-container '>
-        <H3 text='Nuestros Bootcamps' />
+        <H5>
+          Nuestros Bootcamps
+        </H5>
         <div className='bootcamp'>
           <LanguageCard
             name={bootcamps.javascript.name}
@@ -43,7 +45,7 @@ export default function OurBootcamps ({ bootcamps }:Props) {
             description={bootcamps.javascript.description}
             duration={bootcamps.javascript.duration}
           />
-          <div className='modalities-container'>
+          <article className='modalities-container'>
             {
               bootcamps.javascript.modalities.map((modality, index) => (
                 <div className='modality' key={index}>
@@ -57,7 +59,7 @@ export default function OurBootcamps ({ bootcamps }:Props) {
                 </div>
               ))
             }
-          </div>
+          </article>
         </div>
         <div className='bootcamp'>
           <LanguageCard
@@ -66,7 +68,7 @@ export default function OurBootcamps ({ bootcamps }:Props) {
             description={bootcamps.python.description}
             duration={bootcamps.python.duration}
           />
-          <div className='modalities-container'>
+          <article className='modalities-container'>
             {
               bootcamps.python.modalities.map((modality, index) => (
                 <div className='modality' key={index}>
@@ -80,9 +82,9 @@ export default function OurBootcamps ({ bootcamps }:Props) {
                 </div>
               ))
             }
-          </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

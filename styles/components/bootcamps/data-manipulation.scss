@@ -2,15 +2,6 @@
 .data-manipulation-container {
   .data-manipulation {
     .wrapper {
-      .data-container {
-        .title {
-          color: $primary;
-          font-size: 28px;
-          font-weight: 600;
-          line-height: 1.36;
-        }
-      }
-
       .images {
         flex-direction: column;
 
@@ -22,16 +13,6 @@
         @include on-tablet {
           flex-direction: row;
           justify-content: space-evenly;
-        }
-      }
-
-      .data-manipulation-data {
-        .description-data {
-          color: $text;
-          font-size: 18px;
-          font-weight: 500;
-          text-align: left;
-          white-space: pre-line;
         }
       }
     }

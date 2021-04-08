@@ -10,28 +10,25 @@
       justify-content: center;
       max-width: $content-max-width;
       min-width: $content-min-width;
-      padding: 100px 0 60px;
+      padding: 100px 0 80px;
       width: 100%;
 
       @include mobile {
         margin: 0;
-        margin-bottom: 50px;
         max-width: 100%;
         min-width: 100%;
-        padding: 100px 45px 60px;
+        padding: 80px 45px 60px;
         width: 100%;
       }
 
       @include on-tablet {
         margin: 0;
-        margin-bottom: 50px;
-        margin-top: 100px;
-        padding: 100px 85px 60px;
+        padding: 100px 85px 80px;
       }
 
       .sliders {
         display: flex;
-        height: 300px;
+        height: 240px;
         margin-top: 45px;
         overflow: hidden;
         position: relative;
@@ -75,14 +72,6 @@
           height: 8px;
           width: 85%;
 
-          @include on-mobile {
-            width: 65%;
-          }
-
-          @include on-tablet {
-            width: 80%;
-          }
-
           ul {
             display: flex;
 
@@ -101,20 +90,10 @@
         }
 
         .container-buttons {
-          .back,
-          .forward {
-            cursor: pointer;
-            height: 20px;
+          min-width: 69px;
 
-            @include on-mobile {
-              height: 15px;
-            }
-          }
-
-          .forward {
-            &:hover {
-              height: 19px;
-            }
+          @include on-tablet {
+            min-width: 128px;
           }
 
           .back {
@@ -123,9 +102,19 @@
             @include on-mobile {
               margin: 0 15px;
             }
+          }
+
+          .back,
+          .forward {
+            cursor: pointer;
+            height: 20px;
+
+            @include on-mobile {
+              height: 15px;
+            }
 
             &:hover {
-              height: 19px;
+              filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%);
             }
           }
         }

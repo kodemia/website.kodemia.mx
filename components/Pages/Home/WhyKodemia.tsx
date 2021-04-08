@@ -1,6 +1,6 @@
 import React from 'react'
 // my components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import InfoCard, { Props as InfoCardProps } from '../../InfoCard'
 
@@ -17,8 +17,10 @@ export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTi
     <section className='why-kodemia'>
       <div className='why-kodemia-container section-container'>
         <div className='subject'>
-          <H3 text={subtitle} />
-          <H2 whiteText={whiteTitle} cyanText={cyanTitle} />
+          <H5>
+            {subtitle}
+          </H5>
+          <H3 whiteText={whiteTitle} cyanText={cyanTitle} />
         </div>
         <img className='image' src={image} alt='escuela-de-programación-koder-y-mentor-sonriendo' />
 

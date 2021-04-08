@@ -1,61 +1,72 @@
-.info-card {
-  box-sizing: border-box;
-  display: grid;
-  grid-column-gap: 16px;
-  grid-template-areas:
-    'ikon info-card-title'
-    'ikon text'
-    'detail detail';
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  padding: 20px 0 18px;
+#info-card {
+  .info-card-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-column-gap: 16px;
+    grid-template-areas:
+      'ikon info-card-title'
+      'ikon text'
+      'detail detail';
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 20px 0 18px;
 
-  @include on-mobile {
-    padding: 20px 0;
-  }
+    @include on-mobile {
+      padding: 20px 0;
+    }
 
-  .ikon {
-    grid-area: ikon;
-    margin-left: auto;
-    min-width: 26px;
-    padding-top: 10px;
+    .ikon {
+      grid-area: ikon;
+      margin-left: auto;
+      min-width: 26px;
+      padding-top: 10px;
 
-    &:hover {
-      transform: scale(1.1);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .info-card-title {
+      grid-area: info-card-title;
+      grid-row: 1 / 2;
+      margin: 0;
+    }
+
+    .text {
+      grid-area: text;
+      grid-row: 2 / 3;
+      height: 100%;
+      margin-top: 15px;
+    }
+
+    .detail {
+      align-items: center;
+      border: 1px solid $cyan;
+      border-radius: 10px;
+      color: $gray;
+      display: flex;
+      font-size: $p-font-size;
+      font-weight: 500;
+      grid-area: detail;
+      margin-top: 5px;
+      padding: 16px;
     }
   }
 
-  .info-card-title {
-    color: $primary;
-    font-size: 1.35rem;
-    font-weight: 600;
-    grid-area: info-card-title;
-    grid-row: 1 / 2;
-    line-height: 1.36;
-    margin: 0;
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
+  .has-detail {
+    grid-template-rows: auto 1fr 1fr;
+    height: 435px;
+    padding: 20px 0 0;
 
-  .text {
-    color: $gray;
-    font-size: 18px;
-    font-weight: 500;
-    grid-area: text;
-    grid-row: 2 / 3;
-    height: 100%;
-    margin-top: 15px;
-    white-space: pre-wrap;
-  }
+    @include on-mobile {
+      grid-template-rows: auto;
+      height: auto;
+    }
 
-  .detail {
-    border: 1px solid $cyan;
-    border-radius: 10px;
-    color: $gray;
-    font-size: 18px;
-    font-weight: 500;
-    grid-area: detail;
-    margin-top: 40px;
-    padding: 30px 20px;
+    .detail {
+      @include on-mobile {
+        margin: 20px 0;
+      }
+    }
   }
 }

@@ -3,7 +3,7 @@ import { GetStaticPropsContext } from 'next'
 
 import NavBar from 'components/Navbar'
 import Footer from 'components/Footer'
-import H2 from 'components/H2'
+import H3 from 'components/H3'
 import Cursor from 'components/TextCursor'
 import Button from 'components/Button'
 
@@ -23,11 +23,11 @@ export default function Thankyou (props: Props) {
                 <div className='card has-background-grey-darker is-rounded p-5'>
                   <div className='columns is-multiline container'>
                     <div className='column is-full mt-5'>
-                      <H2>
-                        <span className='h2-cyan'>Gracias</span> por
+                      <H3>
+                        <span className='h3-cyan'>Gracias</span> por
                         <br />
                         registrart<Cursor white>e</Cursor>
-                      </H2>
+                      </H3>
                     </div>
                     <div className='column is-full mt-5 mb-5'>
                       Te contactaremos lo más

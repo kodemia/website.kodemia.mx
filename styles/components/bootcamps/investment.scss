@@ -8,14 +8,14 @@
   width: 100%;
 
   .investment-container {
-    padding: 100px 49px 60px;
+    padding: 100px 49px 80px;
 
     @include on-mobile {
-      padding: 100px 45px 60px;
+      padding: 80px 45px 60px;
     }
 
     @include on-tablet {
-      padding: 100px 85px 60px;
+      padding: 100px 85px 80px;
     }
 
     .investment-wrapper {
@@ -26,17 +26,12 @@
         padding: 0;
 
         .investment-title {
-          max-width: 300px;
+          max-width: 200px;
         }
 
         .description {
-          color: $text;
-          font-size: 18px;
-          font-weight: 500;
           margin: 45px 0;
-          max-width: 730px;
-          text-align: left;
-          white-space: pre-wrap;
+          max-width: 700px;
         }
       }
 
@@ -55,7 +50,7 @@
           background: transparent;
           border: 1px solid $cyan;
           border-radius: 10px;
-          padding: 20px;
+          padding: 16px;
           width: 30%;
 
           @include on-mobile {
@@ -72,9 +67,7 @@
           }
 
           .payment-title {
-            color: $primary;
-            font-size: 22px;
-            max-width: 200px;
+            max-width: 195px;
 
             @include on-mobile {
               max-width: 100%;
@@ -86,8 +79,6 @@
           }
 
           .payment-description {
-            color: $text;
-            font-size: 18px;
             margin-top: 20px;
             max-width: 290px;
 

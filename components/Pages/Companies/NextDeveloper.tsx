@@ -8,10 +8,9 @@ export default function NextDeveloper () {
     <section className='next-developer'>
       <div className='next-developer-container section-container'>
         <div className='title-container'>
-          <H2
-            whiteText='¿Listo para encontrar al próximo developer de tu empresa?' cyanText=''
-            isFirstCyan
-          />
+          <H2>
+            ¿Listo para encontrar al próximo developer de tu empresa?
+          </H2>
         </div>
         <div className='btn-container'>
           <Button

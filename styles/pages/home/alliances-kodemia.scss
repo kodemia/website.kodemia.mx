@@ -3,11 +3,12 @@
     background-color: $black-primary;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding: 100px 0 40px;
     width: 100%;
 
     @include on-mobile {
       flex-direction: column;
+      padding: 80px 0 0;
     }
 
     @include on-tablet {
@@ -58,7 +59,7 @@
         flex-wrap: wrap;
         height: calc(130px * 7);
         justify-content: space-between;
-        margin: 25px 0;
+        margin-top: 25px;
         width: 100%;
       }
     }

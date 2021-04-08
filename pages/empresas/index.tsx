@@ -17,6 +17,7 @@ import FindTalentData from 'config/companies/help-find-talent.json'
 import IdealKoder from 'config/companies/ideal-koder.json'
 import TalentData from 'config/companies/talent-data.json'
 import ChooseKoder from 'config/companies/choose-koder-data.json'
+import HeroData from 'config/companies/hero-data.json'
 
 export default function Empresas () {
   return (
@@ -26,7 +27,7 @@ export default function Empresas () {
         description='Nuestros egresados viven una experiencia de alto desempeño que los forma de manera profesional y personal para convertirse en líderes tecnológicos'
       />
       <Navbar />
-      <Hero />
+      <Hero hero={HeroData} />
       <TalentDevelopment talent={TalentData.talentDevelopment} />
       <FindIdealKoder idealKoder={IdealKoder.perfectKoder} />
       <HelpFindTalent findTalent={FindTalentData.findTalent} />

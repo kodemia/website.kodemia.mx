@@ -4,6 +4,9 @@
 import React, { useState, useRef, MutableRefObject } from 'react'
 import classnames from 'classnames'
 import HTMLVideoElement from 'typescript'
+// My components
+import H5 from './H5'
+import DescriptionParagraph from './DescriptionParagraph'
 
 export interface Video {
   url: string
@@ -98,8 +101,14 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
       </div>
 
       <div className='data-container'>
-        <h4 className='name'>{video.name}</h4>
-        <p className='content'>{video.content}</p>
+        <H5 isWhite>
+          {video.name}
+        </H5>
+        <div className='content'>
+          <DescriptionParagraph>
+            {video.content}
+          </DescriptionParagraph>
+        </div>
       </div>
     </div>
   )

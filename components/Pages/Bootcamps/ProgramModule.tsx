@@ -1,21 +1,20 @@
 
 import React from 'react'
-import Image from 'next/image'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
-import TextCursor from '../../TextCursor'
+import H2 from '../../H2'
 
 export interface Theme {
   theme: string
   image: string
 }
 
-export interface ModuleBootcamp{
-    module: string
-    week: string,
-    title: string
-    themes: Array<Theme>
+export interface ModuleBootcamp {
+  module: string
+  week: string,
+  title: string
+  themes: Array<Theme>
 }
 export interface Props {
   modules: Array<ModuleBootcamp>
@@ -23,25 +22,25 @@ export interface Props {
 
 export default function ProgramModule ({ modules = [] }: Props) {
   return (
-    <div className='columns is-multiline program-module'>
+    <section className='columns is-multiline program-module'>
       <div>
-        <H2
-          whiteText='Los Temas'
-          cyanText=''
-          isFirstCyan
-        />
+        <H2>
+          Los Temas
+        </H2>
       </div>
       {
         modules.map((module, index) => (
-          <section
+          <article
             key={`module-${index}`}
             className='column is-full data-module-container'
           >
-            <H3 text={module.week} />
-            <h2 className='title-module'>
-              {module.module}
-              <TextCursor text={module.title} />
-            </h2>
+            <H5>
+              {module.week}
+            </H5>
+            <H3
+              whiteText={module.module}
+              cyanText={module.title}
+            />
             <div className='is-flex is-flex-wrap-wrap themes-container'>
               {
                 module.themes.map((theme, index) => (
@@ -49,22 +48,21 @@ export default function ProgramModule ({ modules = [] }: Props) {
                     key={`theme-${index}`}
                     className='theme is-flex is-flex-direction-column is-align-content-center is-flex-direction-column'
                   >
-                    <Image
+                    <img
                       src={theme.image}
                       alt={`bootcamp-${theme.theme}`}
-                      width='100%'
-                      height='auto'
+                      className='image'
                     />
-                    <p className='subtitle'>
+                    <p className=' description-paragraph subtitle'>
                       {theme.theme}
                     </p>
                   </article>
                 ))
               }
             </div>
-          </section>
+          </article>
         ))
       }
-    </div>
+    </section>
   )
 }
