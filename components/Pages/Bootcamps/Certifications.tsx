@@ -13,9 +13,9 @@ export interface Certification {
 
 export interface Props {
   certifications: Array<Certification>
-
 }
-export default function Certifications ({ certifications }: Props) {
+
+export default function Certifications({ certifications }: Props) {
   return (
     <section className='columns is-multiline certifications'>
       <div className='mb-6'>
