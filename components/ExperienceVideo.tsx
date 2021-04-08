@@ -15,7 +15,7 @@ export interface Video {
 export interface Props {
   video: Video
   isPlay: boolean
-  setIsActive: any
+  setIsActive: (isActive: boolean) => void
   onClick: () => void
   onEnded: () => void
 }
