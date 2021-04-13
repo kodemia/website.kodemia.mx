@@ -1,28 +1,27 @@
 .our-bootcamps {
   @include on-mobile {
-    margin: 0 45px;
+    margin: 0;
   }
 
   @include on-tablet {
     margin: 0;
-    padding: 110px 85px;
-    width: 100%;
   }
 
   .our-bootcamps-container {
     margin: auto;
     max-width: $content-max-width;
     min-width: $content-min-width;
-    padding: 100px 0 40px;
+    padding: 100px 0 60px;
 
     @include on-mobile {
-      margin: 0;
       min-width: 100%;
+      padding: 80px 45px 40px;
     }
 
     @include on-tablet {
+      margin: 0;
       min-width: 100%;
-      padding: 0;
+      padding: 100px 85px 40px;
       width: 100%;
     }
 

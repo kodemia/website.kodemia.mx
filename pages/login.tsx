@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import Router from 'next/router'
 // My components
 import BgVideo from 'components/BgVideo'
-import H1 from 'components/H1'
+import H2 from 'components/H2'
 import LoginForm from 'components/Pages/Login/LoginForm'
 import Navbar from 'components/Navbar'
 import Seo from 'components/SEO'
@@ -29,7 +29,9 @@ export default function Login () {
           <BgVideo video='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4' />
           <div className='columns cover'>
             <div className='column is-flex is-align-items-center is-flex-direction-column'>
-              <H1 text='Bienvenido' />
+              <H2>
+                Bienvenido
+              </H2>
               <div className='form-container'>
                 <LoginForm />
               </div>

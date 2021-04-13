@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import TestimonialCard from '../../TestimonialCard'
 export interface Testimonial {
@@ -28,7 +28,7 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
     setActiveTestimonialIndex(nextIndex)
   }
 
-  const previuos = () => {
+  const previous = () => {
     const previousIndex = (activeTestimonialIndex - 1) < 0
       ? testimonials.length - 1
       : activeTestimonialIndex - 1
@@ -36,8 +36,8 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
   }
 
   return (
-    <div className='testimonials'>
-      <section className={classnames(
+    <section className='testimonials'>
+      <div className={classnames(
         'testimonials-wrapper',
         {
           'is-gray': isGray
@@ -45,8 +45,13 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
       )}
       >
         <div className='container-testimonials section-container'>
-          <H3 text='Testimonios' />
-          <H2 whiteText='Nuestra' cyanText='comunidad' />
+          <H5>
+            Testimonios
+          </H5>
+          <H3
+            whiteText='Nuestra'
+            cyanText='comunidad'
+          />
           <div className='sliders'>
             {
               testimonials.map((testimonial, index) => {
@@ -61,7 +66,10 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
                     )}
                     key={`testimonialSection-${index}`}
                   >
-                    <TestimonialCard testimonial={testimonial} isActive={activeTestimonialIndex === index} />
+                    <TestimonialCard
+                      testimonial={testimonial}
+                      isActive={activeTestimonialIndex === index}
+                    />
                   </div>
                 )
               })
@@ -93,7 +101,7 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
                 className='back'
                 src='/icons/icon-back.svg'
                 alt='back'
-                onClick={() => previuos()}
+                onClick={() => previous()}
               />
               <img
                 className='forward'
@@ -104,7 +112,7 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }

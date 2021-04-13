@@ -1,7 +1,7 @@
 .navbar {
   background-color: $black-transparent;
   justify-content: center;
-  padding: 12px 49px;
+  padding: 2px 49px;
   position: fixed;
   right: 0;
   top: 0;
@@ -61,7 +61,7 @@
 
       @include on-tablet {
         margin: 25px 0;
-        padding: 0 60px;
+        padding: 0 80px;
         position: absolute;
         right: 0;
         top: 51px;
@@ -78,6 +78,11 @@
           @include on-mobile {
             margin: 0;
             padding: 0 10px;
+          }
+
+          @include on-tablet {
+            margin: 20px 0;
+            padding: 0;
           }
 
           a {
@@ -111,11 +116,11 @@
 
             @include on-mobile {
               margin: 20px auto;
-              width: 95%;
+              width: 94%;
             }
 
             @include on-tablet {
-              margin: 20px auto;
+              margin: 20px 0;
               width: 48%;
             }
           }

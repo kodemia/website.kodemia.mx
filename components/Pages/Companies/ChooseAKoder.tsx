@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 // My components
-import H2 from 'components/H2'
+import H5 from 'components/H5'
 import H3 from 'components/H3'
 import InfoCard from 'components/InfoCard'
 
@@ -31,9 +31,11 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
     <section className='choose-a-koder is-flex is-justify-content-center'>
       <div className='columns is-multiline section-container choose-a-koder-wrapper'>
         <div className='column is-full title-choose'>
-          <H3 text={subtitle} />
+          <H5>
+            {subtitle}
+          </H5>
           <div className='title-container'>
-            <H2
+            <H3
               whiteText={whiteTitle}
               cyanText={cyanTitle}
             />
@@ -78,7 +80,6 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                         &nbsp;
                       </div>
                     </div>
-
                   </div>
                 </div>
               ))
@@ -106,11 +107,9 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
         <div className='column slide-choose '>
           {
             chooseKoder.map((program, index) => (
-
               <div
                 key={`skill-${index}`}
                 className={classnames(
-
                   'slide-items columns',
                   {
                     'is-active': activeProgram === index,
@@ -133,7 +132,6 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                   ))
                 }
               </div>
-
             ))
           }
         </div>

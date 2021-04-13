@@ -1,9 +1,10 @@
 
 import React from 'react'
-import Image from 'next/image'
 // My components
+import H5 from '../../H5'
 import H2 from '../../H2'
-import H3 from '../../H3'
+import H4 from '../../H4'
+import DescriptionParagraph from 'components/DescriptionParagraph'
 
 export interface WorkshopArr {
   image: string
@@ -13,42 +14,41 @@ export interface WorkshopArr {
 }
 
 export interface Props {
-  workshops : Array<WorkshopArr>
+  workshops: Array<WorkshopArr>
 }
 
 export default function workshops ({ workshops }: Props) {
   return (
     <section className='columns is-multiline workshops'>
-      <div>
-        <H2
-          whiteText='Los Talleres'
-          cyanText=''
-          isFirstCyan
-        />
+      <div className='mb-6'>
+        <H2>
+          Los Talleres
+        </H2>
       </div>
       {
         workshops.map((workshop, index) => (
           <article
             key={`workshop-${index}`}
-            className='column is-full workshop'
+            className='column is-full workshop '
           >
-            <div className='columns is-multiline wrapper'>
+            <div className='columns is-multiline wrapper is-flex-desktop is-justify-content-center'>
               <div className='column is-4-desktop is-12-tablet  is-flex image'>
-                <Image
+                <img
                   src={workshop.image}
                   alt={`workshop-${workshop.title}`}
-                  width={150}
-                  height={150}
+                  className='image'
                 />
               </div>
               <div className='column is-8-desktop is-12-tablet workshop-data'>
-                <H3 text={workshop.week} />
-                <h5 className='title'>
+                <H5>
+                  {workshop.week}
+                </H5>
+                <H4>
                   {workshop.title}
-                </h5>
-                <p className='description'>
+                </H4>
+                <DescriptionParagraph>
                   {workshop.description}
-                </p>
+                </DescriptionParagraph>
               </div>
             </div>
           </article>

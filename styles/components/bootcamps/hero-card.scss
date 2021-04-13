@@ -1,4 +1,3 @@
-
 .hero-card-bootcamps {
   .container-data {
     .container-tittle {
@@ -16,7 +15,7 @@
     .container-description {
       .description {
         color: $text;
-        font-size: 18px;
+        font-size: $p-font-size;
         font-weight: 500;
         margin: 35px 0;
         max-width: 336px;
@@ -39,7 +38,7 @@
 
         .title-info {
           color: $primary;
-          font-size: 22px;
+          font-size: $h4-font-size;
           font-weight: 600;
           line-height: 1.36;
           margin: 5px 0;
@@ -52,7 +51,7 @@
 
         .text-info {
           color: $text;
-          font-size: 16px;
+          font-size: $p-font-size;
           margin: 2px 0;
         }
       }

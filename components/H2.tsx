@@ -1,43 +1,21 @@
-
 import React from 'react'
 import classnames from 'classnames'
 // my component
 import TextCursor from './TextCursor'
 
 export interface Props {
-  whiteText?: string,
-  cyanText?: string,
-  isFirstCyan?: boolean
-  children?: React.ReactNode
+  children: string
+  isCyan?: Boolean
 }
 
-export default function H2 ({
-  whiteText = '',
-  cyanText = '',
-  isFirstCyan = false,
-  children
-}: Props) {
-  cyanText = cyanText.trim()
-  whiteText = whiteText.trim()
-
-  const text = isFirstCyan ? cyanText : whiteText
-  const cursorText = isFirstCyan ? whiteText : cyanText
-
+export default function H2 ({ children, isCyan = false }: Props) {
   return (
-    <h2
-      className={classnames({
-        'h2-cyan': isFirstCyan,
-        'h2-white': !isFirstCyan
-      })}
+    <h2 className={classnames({
+      'h2-is-white': !isCyan,
+      'h2-is-cyan': isCyan
+    })}
     >
-      {children || text}
-      {
-        !children &&
-          <TextCursor
-            text={cursorText}
-            white={isFirstCyan}
-          />
-      }
+      <TextCursor text={children} white={!isCyan} />
     </h2>
   )
 };

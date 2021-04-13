@@ -1,7 +1,7 @@
 
 import React from 'react'
 // My components
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import ProgramModule from './ProgramModule'
 import Workshops from './Workshops'
@@ -20,12 +20,14 @@ export interface Props {
 
 export default function Program ({ cyanText, subtitle, whiteText, modules, workshops, certifications, dataManipulation }: Props) {
   return (
-    <div className='the-program'>
+    <div id='the-program'>
       <div className='columns is-multiline is-flex program  bg-image'>
         <section className='column is-full-desktop section'>
           <div className='container'>
-            <H3 text={subtitle} />
-            <H2
+            <H5>
+              {subtitle}
+            </H5>
+            <H3
               cyanText={cyanText}
               whiteText={whiteText}
               isFirstCyan
@@ -38,14 +40,12 @@ export default function Program ({ cyanText, subtitle, whiteText, modules, works
           <ProgramModule modules={modules} />
         </section>
       </div>
-      {
-        dataManipulation &&
-          <div className='columns is-multiline program is-flex'>
-            <section className='column is-full-desktop section'>
-              <DataManipulation dataManipulation={dataManipulation} />
-            </section>
-          </div>
-      }
+      {dataManipulation &&
+        <div className='columns is-multiline program is-flex'>
+          <section className='column is-full-desktop section'>
+            <DataManipulation dataManipulation={dataManipulation} />
+          </section>
+        </div>}
       <div className='columns is-multiline program is-flex'>
         <section className='column is-full-desktop section'>
           <Workshops workshops={workshops} />

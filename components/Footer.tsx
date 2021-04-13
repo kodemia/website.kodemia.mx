@@ -36,6 +36,9 @@ export default function Footer () {
               <Link href='/#bootcamps'>
                 <a><span className='item-nav'>Programas</span> | </a>
               </Link>
+              <Link href='/empresas'>
+                <a><span className='item-nav'>Empresas</span> | </a>
+              </Link>
               <Link href='/login'>
                 <a><span className='item-nav'>Alumnos</span> </a>
               </Link>

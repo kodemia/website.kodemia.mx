@@ -1,6 +1,6 @@
 import React from 'react'
 
-import H2 from 'components/H2'
+import H5 from 'components/H5'
 import H3 from 'components/H3'
 import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
 
@@ -19,11 +19,19 @@ export default function FindIdealKoder ({ idealKoder }: Props) {
     <section className='find-ideal-koder'>
       <div className='find-koder-container section-container'>
         <div className='subject'>
-          <H3 text={idealKoder.subtitle} />
-          <H2 whiteText={idealKoder.whiteTitle} cyanText={idealKoder.cyanTitle} />
+          <H5>
+            {idealKoder.subtitle}
+          </H5>
+          <div className='title'>
+            <H3 whiteText={idealKoder.whiteTitle} cyanText={idealKoder.cyanTitle} />
+          </div>
         </div>
         <div className='img-cont'>
-          <img className='image' src={idealKoder.image} alt='koder ideal' />
+          <img
+            className='image'
+            src={idealKoder.image}
+            alt='koder ideal'
+          />
         </div>
         <div className='cards'>
           {

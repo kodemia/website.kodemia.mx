@@ -1,6 +1,6 @@
 import Button from 'components/Button'
 import Footer from 'components/Footer'
-import H3 from 'components/H3'
+import H5 from 'components/H5'
 import Navbar from 'components/Navbar'
 
 export default function Custom404 () {
@@ -19,7 +19,9 @@ export default function Custom404 () {
                         404
                       </p>
                       <div className='column is-full mt-5 mb-5'>
-                        <H3 text='Esta página no fue encontrada 🤕' />
+                        <H5>
+                          Esta página no fue encontrada 🤕
+                        </H5>
                       </div>
                       <div className='column is-full mb-5'>
                         <Button

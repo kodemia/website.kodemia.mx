@@ -1,8 +1,9 @@
 import React from 'react'
 // My component
-import H2 from '../../H2'
+import H5 from '../../H5'
 import H3 from '../../H3'
 import InfoCard from '../../InfoCard'
+import DescriptionParagraph from 'components/DescriptionParagraph'
 
 export interface Card {
   icon: string
@@ -25,11 +26,20 @@ export default function OurMethod ({ ourMethod: { title, keywords, text, cards }
   return (
     <section className='our-method '>
       <div className='our-method-container section-container'>
-        <H3 text='Nuestro Método' />
+        <H5>
+          Nuestro Método
+        </H5>
         <div className='title-contain'>
-          <H2 whiteText={title} cyanText={keywords} />
+          <H3
+            whiteText={title}
+            cyanText={keywords}
+          />
         </div>
-        <p className='our-method-text'>{text}</p>
+        <div className='our-method-text'>
+          <DescriptionParagraph>
+            {text}
+          </DescriptionParagraph>
+        </div>
         <div className='our-method-cards'>
           {cards.map((infoCard, index) => {
             return (

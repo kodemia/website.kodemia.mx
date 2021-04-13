@@ -1,5 +1,8 @@
 
 import React from 'react'
+// My components
+import H4 from './H4'
+import H5 from './H5'
 import Button from './Button'
 
 export interface Props {
@@ -20,14 +23,28 @@ export default function BootcampCard ({
   return (
     <div className='bootcamp-type'>
       <div className='type-container'>
-        <h2 className='mode'>{mode}</h2>
-        <h3 className='date'>{date}</h3>
+        <H4>
+          {mode}
+        </H4>
+        <h5 className='date'>
+          {date}
+        </h5>
         <div className='schedule'>
-          <h2 className='schedule-title'>Horario</h2>
-          <p className='schedule-content'>{schedule}</p>
+          <H5 isWhite>
+            Horario
+          </H5>
+          <p className='schedule-content'>
+            {schedule}
+          </p>
+          <p className='feature'>
+            {feature}
+          </p>
         </div>
-        <p className='feature'>{feature}</p>
-        <Button isPrimary label='Conocer más' link={link} />
+        <Button
+          isPrimary
+          label='Conocer más'
+          link={link}
+        />
       </div>
     </div>
   )

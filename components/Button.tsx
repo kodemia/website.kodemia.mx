@@ -45,29 +45,23 @@ export default function Button ({
           rel='noopener noreferrer'
           className={btnClass}
         >
-          <img src={icon} className='ikon' />
-          <span className={classNames({
-            'label-ikon': icon
-          })}
-          >
-            {label}
-          </span>
+          <img
+            src={icon}
+            className='ikon'
+          />
+          {label}
         </a>}
-      {
-        !href && type !== 'submit' &&
-          <a
-            className={btnClass}
-            onClick={onClick || (() => router.push(link))}
-          >
-            <img src={icon} className='ikon' />
-            <span className={classNames({
-              'label-ikon': icon
-            })}
-            >
-              {label}
-            </span>
-          </a>
-      }
+      {!href && type !== 'submit' &&
+        <a
+          className={btnClass}
+          onClick={onClick || (() => router.push(link))}
+        >
+          <img
+            src={icon}
+            className='ikon'
+          />
+          {label}
+        </a>}
       {
         type === 'submit' &&
           <input

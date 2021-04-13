@@ -1,15 +1,15 @@
-
 .collaborate-with-kodemia {
   background-image: url('/images/companies/colabora-con-kodemia-desktop.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
-  padding: 100px 0 60px;
+  padding: 100px 0 80px;
   width: 100%;
 
   @include on-mobile {
     background-image: url('/images/companies/colabora-con-kodemia-mobile.jpg');
+    padding: 80px 0 60px;
   }
 
   @include on-tablet {
@@ -46,10 +46,8 @@
     }
 
     .collaborate-text {
-      color: $text;
-      font-size: 18px;
       margin: 30px 0;
-      max-width: 730px;
+      max-width: 715px;
 
       @include on-mobile {
         width: 100%;
