@@ -106,6 +106,11 @@ export default function Footer () {
           </div>
           <div className='contact'>
             <p>
+              <a href='tel:+52 55 5015 0517'>
+                +52 55 5015 0517
+              </a>
+            </p>
+            <p>
               <a href='tel:01 800 212 0022'>
                 01 800 212 0022
               </a>
