@@ -120,8 +120,7 @@ export default function ApplyForm () {
           name='course'
           error={errors?.course?.message}
           options={[
-            { label: 'Javascript Live', value: 'javascript-live' },
-            { label: 'Python Live', value: 'python-live' }
+            { label: 'Javascript Live', value: 'javascript-live' }
           ]}
           required
         />
@@ -155,7 +154,7 @@ export default function ApplyForm () {
       </div>
 
       <div className='column is-full-desktop is-full-touch'>
-        Al enviar este formulario estas aceptando nuestros <Link href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'> Términos y condiciónes </Link>
+        Al enviar este formulario estas aceptando nuestros <Link href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'> Términos y condiciones </Link>
       </div>
 
       <div className='column is-full-desktop is-full-touch'>

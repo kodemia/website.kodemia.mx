@@ -11,7 +11,7 @@
         "link": "/javascript-live",
         "schedule": {
           "day": "26",
-          "month":"Abril",
+          "month":"Julio",
           "year":"2021",
           "hour":"19:00 - 22:00 hrs.",
           "days":"Lunes a viernes"
@@ -21,39 +21,6 @@
         "name": "Modo Live",
         "description": "Conexión remota vía streaming",
         "link": "/javascript-live",
-        "schedule" :{
-          "day": "",
-          "month":"Próximamente",
-          "year":"2021",
-          "hour":"19:00 - 22:00 hrs.",
-          "days":"Lunes a viernes"
-       }
-      }
-     ]
-    }
-  ,
-  "python": {
-    "name":"Bootcamp Back End con",
-    "language":"Python",
-    "description": "Desarrollarás una web app completa orientada al Back End con Python y Javascript",
-    "duration":"21 semanas",
-    "modalities": [
-      {
-        "name": "Modo Live",
-        "description": "Conexión remota vía streaming",
-        "link": "/python-live",
-        "schedule" :{
-          "day": "22",
-          "month":"Marzo",
-          "year":"2021",
-          "hour":"19:00 - 22:00 hrs.",
-          "days":"Lunes a viernes"
-       }
-      },
-      {
-        "name": "Modo Live",
-        "description": "Conexión remota vía streaming",
-        "link": "/python-live",
         "schedule" :{
           "day": "",
           "month":"Próximamente",
