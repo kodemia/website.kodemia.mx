@@ -61,7 +61,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
             }
           </article>
         </div>
-        <div className='bootcamp'>
+        {/* <div className='bootcamp'>
           <LanguageCard
             name={bootcamps.python.name}
             language={bootcamps.python.language}
@@ -83,7 +83,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
               ))
             }
           </article>
-        </div>
+        </div> */}
       </div>
     </section>
   )
