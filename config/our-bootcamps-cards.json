@@ -1,34 +1,34 @@
 {
   "javascript": {
-    "name":"Bootcamp Full Stack",
-    "language":"Javascript",
+    "name": "Bootcamp Full Stack",
+    "language": "Javascript",
     "description": "Desarrollarás una web app completa con MERN orientada al Front End con React",
-    "duration":"19 semanas",
+    "duration": "19 semanas",
     "modalities": [
       {
-        "name":"Modo Live",
+        "name": "Modo Live",
         "description": "Conexión remota vía streaming",
         "link": "/javascript-live",
         "schedule": {
           "day": "26",
-          "month":"Julio",
-          "year":"2021",
-          "hour":"19:00 - 22:00 hrs.",
-          "days":"Lunes a viernes"
+          "month": "Julio",
+          "year": "2021",
+          "hour": "19:00 - 22:00 hrs.",
+          "days": "Lunes a viernes"
         }
       },
       {
         "name": "Modo Live",
         "description": "Conexión remota vía streaming",
         "link": "/javascript-live",
-        "schedule" :{
+        "schedule": {
           "day": "",
-          "month":"Próximamente",
-          "year":"2021",
-          "hour":"19:00 - 22:00 hrs.",
-          "days":"Lunes a viernes"
-       }
+          "month": "Próximamente",
+          "year": "2021",
+          "hour": "19:00 - 22:00 hrs.",
+          "days": "Lunes a viernes"
+        }
       }
-     ]
-    }
+    ]
+  }
 }

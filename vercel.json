@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/python-live", "destination": "/javascript-live", "permanent": true }
+  ]
+}
