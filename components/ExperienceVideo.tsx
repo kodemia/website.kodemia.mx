@@ -18,12 +18,13 @@ export interface Video {
 export interface Props {
   video: Video
   isPlay: boolean
+  isActive: boolean
   setIsActive: (isActive: boolean) => void
   onClick: () => void
   onEnded: () => void
 }
 
-export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setIsActive }: Props) {
+export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setIsActive, isActive }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const [showCloseIcon, setShowCloseIcon] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
@@ -41,7 +42,9 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
         <video
           controls={false}
           poster={video.poster}
-          className='poster'
+          className={classnames('poster', {
+            'is-not-play': !isActive
+          })}
           ref={videoRef}
           onPause={() => {
             setShowPlayIcon(true)
