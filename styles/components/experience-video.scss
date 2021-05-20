@@ -5,8 +5,17 @@
   .video {
     .poster {
       border-radius: 10px;
+      height: 100%;
       object-fit: cover;
       width: 100%;
+    }
+
+    .is-not-play {
+      height: 185px;
+
+      @include on-mobile {
+        height: 100%;
+      }
     }
   }
 
@@ -25,7 +34,7 @@
   .icon-container {
     background-color: $black-transparent-hero;
     display: flex;
-    height: calc(100% - 120px);
+    height: calc(100% - 132px);
     justify-content: center;
     position: absolute;
     top: 0;

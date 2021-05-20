@@ -76,6 +76,7 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
               )}
             >
               <ExperienceVideo
+                isActive={isActive}
                 setIsActive={setIsActive}
                 video={video}
                 onClick={() => {
