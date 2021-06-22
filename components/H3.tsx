@@ -5,8 +5,8 @@ import classnames from 'classnames'
 import TextCursor from './TextCursor'
 
 export interface Props {
-  whiteText?: string,
-  cyanText?: string,
+  whiteText?: string
+  cyanText?: string
   isFirstCyan?: boolean
   children?: React.ReactNode
 }
