@@ -1,26 +1,25 @@
 
 import { GetServerSidePropsContext } from 'next'
+
+// TODO: fetch this data from prismic
 import brochures from 'config/brochure-links.json'
-import { Program, BrochureFormat, BrochureVersion } from 'types/common'
+
+type Bootcamp = 'javascript-live'
+type Version = 'desktop' | 'mobile'
 
 export default function DownloadBrochure () {
   return null
 }
 
 export function getServerSideProps (context: GetServerSidePropsContext) {
-  const program: Program = context?.params?.program as Program ?? 'javascript-live'
-  const format: BrochureFormat = context?.query?.version as BrochureFormat ?? 'mobile'
-  const fileVersion: BrochureVersion = context?.query?.file as BrochureVersion ?? brochures.latestVersion
-
-  const brochureUrl = brochures[version][program][format]
+  const program: Bootcamp = context?.params?.program as Bootcamp ?? 'javascript-live'
+  const version: Version = context?.query?.version as Version ?? 'mobile'
 
   context.res
-    .writeHead(302, { Location: brochureUrl })
+    .writeHead(302, { Location: brochures['2021v1'][program][version] })
     .end()
 
   return {
-    props: {
-      brochureUrl
-    }
+    props: {}
   }
 }
