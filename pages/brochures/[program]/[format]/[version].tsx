@@ -19,8 +19,6 @@ export function getServerSideProps (context: GetServerSidePropsContext) {
     .end()
 
   return {
-    props: {
-      brochureUrl
-    }
+    props: {}
   }
 }
