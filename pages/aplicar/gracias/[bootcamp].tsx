@@ -39,7 +39,7 @@ export default function Thankyou (props: Props) {
                         isPrimary
                         label='Descarga el Brochure'
                         icon='/icons/download.svg'
-                        href={`/brochures/${props.bootcamp}?version=desktop`}
+                        href={`/brochures/${props.bootcamp}/desktop`}
                       />
                     </div>
                     <div className='column is-full mb-5 is-hidden-desktop'>
@@ -47,7 +47,7 @@ export default function Thankyou (props: Props) {
                         isPrimary
                         label='Descarga el Brochure'
                         icon='/icons/download.svg'
-                        href={`/brochures/${props.bootcamp}?version=mobile`}
+                        href={`/brochures/${props.bootcamp}/mobile`}
                       />
                     </div>
                   </div>
