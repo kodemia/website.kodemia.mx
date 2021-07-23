@@ -18,25 +18,26 @@ import { useRouter } from 'next/router'
 
 type ApplyFormData = zod.infer<typeof schema>
 
-export default function ApplyForm () {
+export default function ApplyForm() {
   const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
-    resolver: zodResolver(schema)
+    //resolver: zodResolver(schema)
   })
 
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
-    setIsSubmitting(true)
+    console.log('data1', data)
 
+    data.course = 'javascript-live'
     data.customFields = {
-      source: data.referer,
-      reasonToApply: data.reason
+      knowledge: data.knowledge,
+      reasonToProgramming: data.reason
     }
 
     apply(data)
       .then(() => {
-        router.push(`aplicar/gracias/${data.course}`)
+        router.push(`aplicar/gracias/javascript-live`)
       })
       .catch(error => {
         const status = error.response.status
@@ -86,7 +87,7 @@ export default function ApplyForm () {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='column is-half-desktop is-full-touch'>
         <Input
           label='Correo electrónico'
           type='email'
@@ -98,7 +99,7 @@ export default function ApplyForm () {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='column is-half-desktop is-full-touch'>
         <Controller
           name='phone'
           control={control}
@@ -115,12 +116,15 @@ export default function ApplyForm () {
 
       <div className='column is-full-desktop is-full-touch'>
         <Select
-          label='¿Qué programa te interesa?'
+          label='¿Tienes conocimientos previos en programación?'
           register={register}
-          name='course'
-          error={errors?.course?.message}
+          name='knowledge'
+          error={errors?.knowledge?.message}
           options={[
-            { label: 'Javascript Live', value: 'javascript-live' }
+            { value: 'Si, soy/trabajo como programador' },
+            { value: 'Si, lo que vi en la universidad' },
+            { value: 'Tomé algún curso' },
+            { value: 'No, vengo en cero' }
           ]}
           required
         />
@@ -128,28 +132,17 @@ export default function ApplyForm () {
 
       <div className='column is-full-desktop is-full-touch'>
         <Select
-          label='¿Dónde nos conociste?'
-          register={register}
-          name='referer'
-          error={errors?.referer?.message}
-          options={[
-            { value: 'Facebook' },
-            { value: 'Twitter' },
-            { value: 'Instagram' },
-            { value: 'YouTube' },
-            { value: 'Otro' }
-          ]}
-          required
-        />
-      </div>
-
-      <div className='column is-full-desktop is-full-touch'>
-        <TextArea
-          label='¿Por qué quieres aplicar a Kodemia?'
+          label='¿Por qué quieres aprender a programar?'
           register={register}
           name='reason'
-          rows={2}
           error={errors?.reason?.message}
+          options={[
+            { value: 'Me quiero actualizar' },
+            { value: 'Quiero complementar mi educación' },
+            { value: 'Quiero aplicarlo en mi emprendimiento' },
+            { value: 'Quiero cambiar mi carrera profesional ' }
+          ]}
+          required
         />
       </div>
 

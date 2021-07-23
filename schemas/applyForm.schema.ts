@@ -1,32 +1,37 @@
-
-import parsePhoneNumber from 'libphonenumber-js'
-import * as z from 'zod'
+import parsePhoneNumber from "libphonenumber-js";
+import * as z from "zod";
 
 export default z.object({
-  firstName: z.string().min(2, { message: 'Ingresa tu nombre' }),
-  lastName: z.string().min(2, { message: 'Ingresa tu apellido' }),
-  email: z.string().email({ message: 'Email invalido' }),
-  phone: z
-    .string()
-    .refine(value => {
-      value = `+${value}`
-      const phoneNumber = parsePhoneNumber(value)
-      return phoneNumber?.isValid()
-    }, { message: 'Teléfono invalido' }),
-  course: z.enum([
-    'javascript-live',
-    'python-live'
+  firstName: z.string().min(2, { message: "Ingresa tu nombre" }),
+  lastName: z.string().min(2, { message: "Ingresa tu apellido" }),
+  email: z.string().email({ message: "Email invalido" }),
+  phone: z.string().refine(
+    (value) => {
+      value = `+${value}`;
+      const phoneNumber = parsePhoneNumber(value);
+      return phoneNumber?.isValid();
+    },
+    { message: "Teléfono invalido" }
+  ),
+  knowledge: z.enum([
+    "Si, soy/trabajo como programador",
+    "Si, lo que vi en la universidad",
+    "Tomé algún curso",
+    "No, vengo en cero",
   ]),
-  referer: z.enum([
-    'Facebook',
-    'Instagram',
-    'Youtube',
-    'Twitter',
-    'Otro'
-  ]).optional(),
-  reason: z.string().optional(),
-  customFields: z.object({
-    source: z.string().optional(),
-    reasonToApply: z.string().optional()
-  }).optional()
-})
+  reason: z
+    .enum([
+      "Me quiero actualizar",
+      "Quiero complementar mi educación",
+      "Quiero aplicarlo en mi emprendimiento",
+      "Quiero cambiar mi carrera profesional",
+    ])
+    .optional(),
+  course: z.string().min(1),
+  customFields: z
+    .object({
+      knowledge: z.string().optional(),
+      reasonToProgramming: z.string().optional(),
+    })
+    .optional(),
+});
