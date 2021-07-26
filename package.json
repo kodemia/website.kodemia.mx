@@ -112,13 +112,7 @@
           ]
         }
       ],
-      "selector-max-id": 1,
-      "at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": ["include", "extend", "tailwind", "mixin"]
-        }
-      ]
+      "selector-max-id": 1
     }
   },
   "husky": {
