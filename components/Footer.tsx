@@ -129,14 +129,14 @@ export default function Footer () {
           <p>
             Kodemia© {dayjs().format('YYYY')}. Todos los  derechos reservados
           </p>
-          <a
-            href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='privacy'
+
+          <Link
+            href='politica-de-privacidad'
           >
-            Aviso de Privacidad
-          </a>
+            <a className='privacy'>
+              Aviso de Privacidad
+            </a>
+          </Link>
         </div>
       </div>
     </footer>

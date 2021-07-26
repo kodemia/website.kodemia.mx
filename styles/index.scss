@@ -10,6 +10,11 @@
 @import '../node_modules/slick-carousel/slick/slick-theme';
 @import '../node_modules/slick-carousel/slick/slick';
 
+// tailwind
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 * {
   border: 0;
   box-sizing: border-box;
