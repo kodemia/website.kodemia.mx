@@ -14,17 +14,17 @@ export default z.object({
     { message: "Teléfono invalido" }
   ),
   knowledge: z.enum([
-    "Si, soy/trabajo como programador",
-    "Si, lo que vi en la universidad",
-    "Tomé algún curso",
-    "No, vengo en cero",
+    "Sí, soy/trabajo como programador",
+    "Sí, lo que vi en la universidad",
+    "tomé algún curso",
+    "no, vengo de cero",
   ]),
   reasonToProgramming: z
     .enum([
-      "Me quiero actualizar",
-      "Quiero complementar mi educación",
-      "Quiero aplicarlo en mi emprendimiento",
-      "Quiero cambiar mi carrera profesional",
+      "Quiero actualizarme",
+      "Para complementar mi educación",
+      "Para aplicarlo a mi emprendimiento",
+      "Complementar/cambiar mi carrera profesional",
     ])
     .optional(),
   //course: z.enum(["javascript-live"]),

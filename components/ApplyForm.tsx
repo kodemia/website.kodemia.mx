@@ -25,13 +25,10 @@ export default function ApplyForm () {
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
-    // setValue('course', 'javascript-live')
     data.customFields = {
       knowledge: data.knowledge,
       reasonToProgramming: data.reasonToProgramming
     }
-
-    console.log('data', data)
     apply(data)
       .then(() => {
         router.push('aplicar/gracias/javascript-live')
@@ -46,7 +43,6 @@ export default function ApplyForm () {
           toast.warn(errorMessage)
           return
         }
-
         toast.error(errorMessage)
       })
       .finally(() => {
@@ -118,10 +114,10 @@ export default function ApplyForm () {
           name='knowledge'
           error={errors?.knowledge?.message}
           options={[
-            { value: 'Si, soy/trabajo como programador' },
-            { value: 'Si, lo que vi en la universidad' },
-            { value: 'Tomé algún curso' },
-            { value: 'No, vengo en cero' }
+            { value: 'Sí, soy/trabajo como programador' },
+            { value: 'Sí, lo que vi en la universidad' },
+            { value: 'tomé algún curso' },
+            { value: 'no, vengo de cero' }
           ]}
           required
         />
@@ -134,10 +130,10 @@ export default function ApplyForm () {
           name='reasonToProgramming'
           error={errors?.reasonToProgramming?.message}
           options={[
-            { value: 'Me quiero actualizar' },
-            { value: 'Quiero complementar mi educación' },
-            { value: 'Quiero aplicarlo en mi emprendimiento' },
-            { value: 'Quiero cambiar mi carrera profesional ' }
+            { value: 'Quiero actualizarme' },
+            { value: 'Para complementar mi educación' },
+            { value: 'Para aplicarlo a mi emprendimiento' },
+            { value: 'Complementar/cambiar mi carrera profesional' }
           ]}
           required
         />

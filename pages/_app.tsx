@@ -17,16 +17,6 @@ function MyApp ({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     TagManager.initialize(TagManagerArgs)
-    async function pixel () {
-      const { default: ReactPixel } = await import('react-facebook-pixel')
-      ReactPixel.init('502027597333867', undefined, {
-        autoConfig: true,
-        debug: true
-      })
-      ReactPixel.pageView()
-      ReactPixel.track('ViewContent')
-    }
-    pixel()
   }, [])
 
   return (
