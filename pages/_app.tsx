@@ -11,12 +11,22 @@ import 'react-toastify/dist/ReactToastify.css'
 import 'styles/index.scss'
 
 function MyApp ({ Component, pageProps }: AppProps) {
+  const pixelId = process.env.PIXEL_ID || ''
   const TagManagerArgs = {
     gtmId: 'GTM-M752N7Z'
   }
 
   useEffect(() => {
     TagManager.initialize(TagManagerArgs)
+    async function pixel () {
+      const { default: ReactPixel } = await import('react-facebook-pixel')
+      ReactPixel.init(pixelId, undefined, {
+        autoConfig: true,
+        debug: false
+      })
+      ReactPixel.pageView()
+    }
+    pixel()
   }, [])
 
   return (
