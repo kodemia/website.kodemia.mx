@@ -17,7 +17,7 @@ import { useRouter } from 'next/router'
 
 type ApplyFormData = zod.infer<typeof schema>
 
-export default function ApplyForm () {
+export default function ApplyForm() {
   const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
     resolver: zodResolver(schema)
   })
@@ -29,6 +29,7 @@ export default function ApplyForm () {
       knowledge: data.knowledge,
       reasonToProgramming: data.reasonToProgramming
     }
+
     apply(data)
       .then(() => {
         router.push('aplicar/gracias/javascript-live')
@@ -116,8 +117,8 @@ export default function ApplyForm () {
           options={[
             { value: 'Sí, soy/trabajo como programador' },
             { value: 'Sí, lo que vi en la universidad' },
-            { value: 'tomé algún curso' },
-            { value: 'no, vengo de cero' }
+            { label: 'No, vengo de cero', value: 'tomé algún curso' },
+            { label: 'Sí, tomé algún curso', value: 'no, vengo de cero' }
           ]}
           required
         />
