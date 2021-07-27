@@ -10,21 +10,21 @@ import 'react-phone-input-2/lib/style.css'
 import 'react-toastify/dist/ReactToastify.css'
 import 'styles/index.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp ({ Component, pageProps }: AppProps) {
   const TagManagerArgs = {
     gtmId: 'GTM-M752N7Z'
   }
 
   useEffect(() => {
     TagManager.initialize(TagManagerArgs)
-    async function pixel() {
-      const { default: ReactPixel } = await import('react-facebook-pixel');
+    async function pixel () {
+      const { default: ReactPixel } = await import('react-facebook-pixel')
       ReactPixel.init('502027597333867', undefined, {
         autoConfig: true,
-        debug: true,
-      });
-      ReactPixel.pageView();
-      ReactPixel.track("ViewContent")
+        debug: true
+      })
+      ReactPixel.pageView()
+      ReactPixel.track('ViewContent')
     }
     pixel()
   }, [])

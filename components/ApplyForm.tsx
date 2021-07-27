@@ -18,14 +18,14 @@ import { useRouter } from 'next/router'
 type ApplyFormData = zod.infer<typeof schema>
 
 export default function ApplyForm() {
-  const { register, handleSubmit, control, errors, setValue } = useForm<ApplyFormData>({
+  const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
     resolver: zodResolver(schema)
   })
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
-    //setValue('course', 'javascript-live')
+    // setValue('course', 'javascript-live')
     data.customFields = {
       knowledge: data.knowledge,
       reasonToProgramming: data.reasonToProgramming
