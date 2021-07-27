@@ -9,7 +9,6 @@ import Button from 'components/Button'
 import Input from 'components/Inputs/Input'
 import PhoneInput from 'components/Inputs/PhoneInput'
 import Select from 'components/Inputs/Select'
-import TextArea from 'components/Inputs/TextArea'
 import schema from 'schemas/applyForm.schema'
 import { ToastContainer, toast } from 'react-toastify'
 
@@ -19,25 +18,23 @@ import { useRouter } from 'next/router'
 type ApplyFormData = zod.infer<typeof schema>
 
 export default function ApplyForm() {
-  const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
-    //resolver: zodResolver(schema)
+  const { register, handleSubmit, control, errors, setValue } = useForm<ApplyFormData>({
+    resolver: zodResolver(schema)
   })
-
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
-    console.log('data1', data)
-
-    data.course = 'javascript-live'
+    //setValue('course', 'javascript-live')
     data.customFields = {
       knowledge: data.knowledge,
-      reasonToProgramming: data.reason
+      reasonToProgramming: data.reasonToProgramming
     }
 
+    console.log('data', data)
     apply(data)
       .then(() => {
-        router.push(`aplicar/gracias/javascript-live`)
+        router.push('aplicar/gracias/javascript-live')
       })
       .catch(error => {
         const status = error.response.status
@@ -134,8 +131,8 @@ export default function ApplyForm() {
         <Select
           label='¿Por qué quieres aprender a programar?'
           register={register}
-          name='reason'
-          error={errors?.reason?.message}
+          name='reasonToProgramming'
+          error={errors?.reasonToProgramming?.message}
           options={[
             { value: 'Me quiero actualizar' },
             { value: 'Quiero complementar mi educación' },

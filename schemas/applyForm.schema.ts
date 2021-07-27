@@ -19,7 +19,7 @@ export default z.object({
     "Tomé algún curso",
     "No, vengo en cero",
   ]),
-  reason: z
+  reasonToProgramming: z
     .enum([
       "Me quiero actualizar",
       "Quiero complementar mi educación",
@@ -27,7 +27,7 @@ export default z.object({
       "Quiero cambiar mi carrera profesional",
     ])
     .optional(),
-  course: z.string().min(1),
+  //course: z.enum(["javascript-live"]),
   customFields: z
     .object({
       knowledge: z.string().optional(),
