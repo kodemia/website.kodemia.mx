@@ -5,7 +5,7 @@ import Link from 'next/link'
 // my-component
 import Button from './Button'
 
-export default function Footer () {
+export default function Footer() {
   return (
     <footer className='my-footer'>
       <div className='wrapper-f section-container'>
@@ -129,9 +129,8 @@ export default function Footer () {
           <p>
             Kodemia© {dayjs().format('YYYY')}. Todos los  derechos reservados
           </p>
-
           <Link
-            href='politica-de-privacidad'
+            href='/politica-de-privacidad'
           >
             <a className='privacy'>
               Aviso de Privacidad
