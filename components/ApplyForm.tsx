@@ -9,7 +9,6 @@ import Button from 'components/Button'
 import Input from 'components/Inputs/Input'
 import PhoneInput from 'components/Inputs/PhoneInput'
 import Select from 'components/Inputs/Select'
-import TextArea from 'components/Inputs/TextArea'
 import schema from 'schemas/applyForm.schema'
 import { ToastContainer, toast } from 'react-toastify'
 
@@ -22,21 +21,18 @@ export default function ApplyForm () {
   const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
     resolver: zodResolver(schema)
   })
-
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
-    setIsSubmitting(true)
-
     data.customFields = {
-      source: data.referer,
-      reasonToApply: data.reason
+      knowledge: data.knowledge,
+      reasonToProgramming: data.reasonToProgramming
     }
 
     apply(data)
       .then(() => {
-        router.push(`aplicar/gracias/${data.course}`)
+        router.push('aplicar/gracias/javascript-live')
       })
       .catch(error => {
         const status = error.response.status
@@ -48,7 +44,6 @@ export default function ApplyForm () {
           toast.warn(errorMessage)
           return
         }
-
         toast.error(errorMessage)
       })
       .finally(() => {
@@ -86,7 +81,7 @@ export default function ApplyForm () {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='column is-half-desktop is-full-touch'>
         <Input
           label='Correo electrónico'
           type='email'
@@ -98,7 +93,7 @@ export default function ApplyForm () {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='column is-half-desktop is-full-touch'>
         <Controller
           name='phone'
           control={control}
@@ -115,12 +110,15 @@ export default function ApplyForm () {
 
       <div className='column is-full-desktop is-full-touch'>
         <Select
-          label='¿Qué programa te interesa?'
+          label='¿Tienes conocimientos previos en programación?'
           register={register}
-          name='course'
-          error={errors?.course?.message}
+          name='knowledge'
+          error={errors?.knowledge?.message}
           options={[
-            { label: 'Javascript Live', value: 'javascript-live' }
+            { value: 'Sí, soy/trabajo como programador' },
+            { value: 'Sí, lo que vi en la universidad' },
+            { label: 'No, vengo de cero', value: 'tomé algún curso' },
+            { label: 'Sí, tomé algún curso', value: 'no, vengo de cero' }
           ]}
           required
         />
@@ -128,28 +126,17 @@ export default function ApplyForm () {
 
       <div className='column is-full-desktop is-full-touch'>
         <Select
-          label='¿Dónde nos conociste?'
+          label='¿Por qué quieres aprender a programar?'
           register={register}
-          name='referer'
-          error={errors?.referer?.message}
+          name='reasonToProgramming'
+          error={errors?.reasonToProgramming?.message}
           options={[
-            { value: 'Facebook' },
-            { value: 'Twitter' },
-            { value: 'Instagram' },
-            { value: 'YouTube' },
-            { value: 'Otro' }
+            { value: 'Quiero actualizarme' },
+            { value: 'Para complementar mi educación' },
+            { value: 'Para aplicarlo a mi emprendimiento' },
+            { value: 'Complementar/cambiar mi carrera profesional' }
           ]}
           required
-        />
-      </div>
-
-      <div className='column is-full-desktop is-full-touch'>
-        <TextArea
-          label='¿Por qué quieres aplicar a Kodemia?'
-          register={register}
-          name='reason'
-          rows={2}
-          error={errors?.reason?.message}
         />
       </div>
 
