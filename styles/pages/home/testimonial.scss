@@ -107,6 +107,7 @@
           .back,
           .forward {
             cursor: pointer;
+            display: inline-block;
             height: 20px;
 
             @include on-mobile {
