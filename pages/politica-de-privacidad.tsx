@@ -8,7 +8,7 @@ const articleClasses = 'mt-10'
 const paragraphClasses = 'mt-3'
 const listClasses = 'list-disc ml-10'
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicy () {
   return (
     <>
       <Head>
