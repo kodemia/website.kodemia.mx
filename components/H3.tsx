@@ -9,15 +9,13 @@ export interface Props {
   cyanText?: string
   isFirstCyan?: boolean
   children?: React.ReactNode
-  className?: string
 }
 
 export default function H3 ({
   whiteText = '',
   cyanText = '',
   isFirstCyan = false,
-  children,
-  className
+  children
 }: Props) {
   cyanText = cyanText.trim()
   whiteText = whiteText.trim()
@@ -29,7 +27,6 @@ export default function H3 ({
     <h3 className={classnames({
       'h3-cyan': isFirstCyan,
       'h3-white': !isFirstCyan,
-      className
     })}
     >
       {children || text}
