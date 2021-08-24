@@ -3,12 +3,17 @@ import classNames from 'classnames'
 
 import Button from 'components/Button'
 import Cursor from 'components/TextCursor'
+import Footer from 'components/Footer'
+import Navbar from 'components/Navbar'
 
 export default function EndTrialPeriod () {
   return (
+    <>
+    <Navbar />
     <div className={classNames(
+      'bg-black-kd',
       'flex flex-col',
-      'px-4 md:px-11 lg:px-4',
+      'px-5 md:px-11 lg:px-4',
       'overflow-hidden',
       'h-screen w-screen'
     )}
@@ -17,8 +22,8 @@ export default function EndTrialPeriod () {
         'bg-gray-kd-dark',
         'flex flex-col items-center',
         'self-center',
-        'mt-24',
-        'p-9 md:p-16',
+        'mt-56',
+        'p-7 md:p-16',
         'rounded-gray-card',
         'text-center',
         'w-full lg:w-1/2'
@@ -43,5 +48,7 @@ export default function EndTrialPeriod () {
         />
       </div>
     </div>
+    <Footer />
+    </>
   )
 }
