@@ -27,7 +27,7 @@ export default function BuilderPage (props: InferGetServerSidePropsType<typeof g
           'px-12'
         )}
       >
-        <main className='max-w-1086-px self-center'>
+        <main className='max-w-1086-px self-center pt-10'>
           <BuilderComponent
             content={props.content}
             model='page'
@@ -54,7 +54,7 @@ export async function getServerSideProps (context: GetServerSidePropsContext): P
 
   return {
     props: {
-      content,
+      content: content ?? null,
       isPreviewOrEditingInBuilder
     }
   }
