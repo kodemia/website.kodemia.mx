@@ -78,7 +78,8 @@ module.exports = {
         'sm-kd': '220px'
       },
       maxWidth: {
-        'sm-kd': '220px'
+        'sm-kd': '220px',
+        '1086-px': '1086px'
       },
       webkitScrollbar: {
         width: '6px'
