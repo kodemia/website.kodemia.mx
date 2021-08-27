@@ -13,4 +13,4 @@ export default function H1 ({ children }: Props) {
       <TextCursor text={children} white />
     </h1>
   )
-};
+}
