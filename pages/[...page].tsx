@@ -27,7 +27,7 @@ export default function BuilderPage (props: InferGetServerSidePropsType<typeof g
           'px-12'
         )}
       >
-        <main className='max-w-1086-px self-center pt-10'>
+        <main className='max-w-1086-px self-center pt-10 w-full'>
           <BuilderComponent
             content={props.content}
             model='page'
