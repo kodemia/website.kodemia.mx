@@ -9,7 +9,7 @@ export interface Data {
   password: string
 }
 
-export default function LoginForm() {
+export default function LoginForm () {
   const [error, setError] = useState(false)
   const { register, handleSubmit, errors } = useForm()
 
@@ -68,8 +68,7 @@ export default function LoginForm() {
       {error &&
         <p className='help is-danger is-medium'>
           Contraseña o usuario incorrectos
-        </p>
-      }
+        </p>}
     </form>
   )
 }

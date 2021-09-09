@@ -24,7 +24,7 @@ export interface Class {
   _id: string
 }
 
-export default function Classes() {
+export default function Classes () {
   const [classes, setClasses] = useState<Array<Class>>([])
   useEffect(() => {
     const token = window.sessionStorage.getItem('token') || ''

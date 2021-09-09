@@ -21,7 +21,7 @@ export interface Class {
   _id: string
 }
 
-export default function Clase() {
+export default function Clase () {
   const [classes, setClasses] = useState<Array<Class>>([])
   const [vimeoId, setVimeoId] = useState<any>()
   const [isVimeo, setIsVimeo] = useState<any>()
