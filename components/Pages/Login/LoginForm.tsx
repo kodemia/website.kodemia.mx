@@ -44,7 +44,6 @@ export default function LoginForm () {
         ref={register({ required: true })}
       />
       {errors.email &&
-
         <span className='error help is-danger is-medium'>
           Necesitas llenar este campo
         </span>}
