@@ -44,7 +44,7 @@ export default function EndTrialPeriod () {
           <Button
             isPrimary
             label='Quiero aplicar al Bootcamp'
-            link='https://api.whatsapp.com/send?phone=525573255094&text=%C2%A1Hola%2C%20Vero!%20Mi%20periodo%20en%20la%20plataforma%20expir%C3%B3%20y%20quiero%20continuar%20con%20mi%20proceso%20de%20aplicaci%C3%B3n%20%F0%9F%98%80'
+            link='https://api.whatsapp.com/send?phone=5215573255094&text=%C2%A1Hola%2C%20Vero!%20Mi%20periodo%20en%20la%20plataforma%20expir%C3%B3%20y%20quiero%20continuar%20con%20mi%20proceso%20de%20aplicaci%C3%B3n%20%F0%9F%98%80'
           />
         </div>
       </div>
