@@ -9,16 +9,16 @@ import Klass from 'components/Pages/Classes/Klass'
 // api
 import { getClasses } from 'lib/api'
 // utils
-import { checkToken } from '../utils/utils'
+import { checkToken, checkTokenExpiration } from '../utils/utils'
 
 export interface Class {
-  date: string
-  description: string
-  generation: object
-  thumbnail: string
-  title: string
-  vimeoId: string
-  _id: string
+  date: string;
+  description: string;
+  generation: object;
+  thumbnail: string;
+  title: string;
+  vimeoId: string;
+  _id: string;
 }
 
 export default function Clase () {
@@ -30,7 +30,9 @@ export default function Clase () {
   useEffect(() => {
     const classVideoId = router.query.id
     const isVimeoB = router.query.isVimeo
-    const token = window.sessionStorage.getItem('token')
+    const token = window.sessionStorage.getItem('token') || ''
+
+    checkTokenExpiration(token)
 
     if (!token) {
       window.sessionStorage.setItem('from', 'clases')
@@ -41,10 +43,10 @@ export default function Clase () {
     setIsVimeo(isVimeoB)
 
     getClasses(token)
-      .then(classes => {
+      .then((classes) => {
         setClasses(classes)
       })
-      .catch(error => {
+      .catch((error) => {
         const status = error.request.status
         checkToken(status)
       })
