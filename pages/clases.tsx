@@ -15,16 +15,16 @@ import { getClasses } from '../lib/api'
 import { checkToken, checkTokenExpiration } from '../utils/utils'
 
 export interface Class {
-  date: string;
-  description: string;
-  generation: object;
-  thumbnail: string;
-  title: string;
-  vimeoId: string;
-  _id: string;
+  date: string
+  description: string
+  generation: object
+  thumbnail: string
+  title: string
+  vimeoId: string
+  _id: string
 }
 
-export default function Classes () {
+export default function Classes() {
   const [classes, setClasses] = useState<Array<Class>>([])
   useEffect(() => {
     const token = window.sessionStorage.getItem('token') || ''
@@ -36,10 +36,10 @@ export default function Classes () {
     }
 
     getClasses(token)
-      .then((classes) => {
+      .then(classes => {
         setClasses(classes)
       })
-      .catch((error) => {
+      .catch(error => {
         const status = error.request.status
         checkToken(status)
       })

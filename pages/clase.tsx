@@ -12,16 +12,16 @@ import { getClasses } from 'lib/api'
 import { checkToken, checkTokenExpiration } from '../utils/utils'
 
 export interface Class {
-  date: string;
-  description: string;
-  generation: object;
-  thumbnail: string;
-  title: string;
-  vimeoId: string;
-  _id: string;
+  date: string
+  description: string
+  generation: object
+  thumbnail: string
+  title: string
+  vimeoId: string
+  _id: string
 }
 
-export default function Clase () {
+export default function Clase() {
   const [classes, setClasses] = useState<Array<Class>>([])
   const [vimeoId, setVimeoId] = useState<any>()
   const [isVimeo, setIsVimeo] = useState<any>()
@@ -43,10 +43,10 @@ export default function Clase () {
     setIsVimeo(isVimeoB)
 
     getClasses(token)
-      .then((classes) => {
+      .then(classes => {
         setClasses(classes)
       })
-      .catch((error) => {
+      .catch(error => {
         const status = error.request.status
         checkToken(status)
       })
