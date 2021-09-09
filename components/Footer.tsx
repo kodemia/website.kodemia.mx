@@ -20,7 +20,7 @@ export default function Footer () {
               <Button
                 isPrimary label='Mándanos un whatsapp'
                 icon='/icons/btn-whatsapp.svg'
-                href='https://wa.me/525573255094?text=Hola%20quiero%20conocer%20m%C3%A1s%20de%20Kodemia'
+                href='https://wa.me/5215573255094?text=Hola%20quiero%20conocer%20m%C3%A1s%20de%20Kodemia'
               />
             </div>
             <div className='btn-telegram'>
