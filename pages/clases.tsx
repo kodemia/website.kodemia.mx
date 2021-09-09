@@ -54,30 +54,34 @@ export default function Classes () {
         <div className='column is-full classes-bg'>
           <div className='title-container is-flex is-justify-content-center'>
             <div className='wrapper is-flex is-flex-direction-column is-justify-content-center'>
-              <H5>Clases Kodemia</H5>
+              <H5>
+                Clases Kodemia
+              </H5>
               <div className='h2'>
-                <H3 whiteText='No te pierdas' cyanText='ninguna' />
+                <H3
+                  whiteText='No te pierdas'
+                  cyanText='ninguna'
+                />
               </div>
             </div>
           </div>
         </div>
         <div className='column is-flex is-justify-content-center classes-wrapper'>
           <div className='columns is-multiline  classes-cards'>
-            {classes.length === 0 && (
+            {classes.length === 0 &&
               <div className='column'>
                 <progress className='progress is-small is-info' max='100'>
                   15%
                 </progress>
-              </div>
-            )}
-            {classes.map((klass, index) => (
+              </div>}
+            {classes.map((klass, index) =>
               <div
                 key={`class-${index}`}
                 className='column is-4-desktop is-6-tablet is-flex is-justify-content-center'
               >
                 <ClassCard klass={klass} />
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>

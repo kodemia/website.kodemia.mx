@@ -33,7 +33,9 @@ export default function LoginForm () {
       onSubmit={handleSubmit(onSubmit)}
       className='login-form'
     >
-      <label className='label label-login'>Usuario</label>
+      <label className='label label-login'>
+        Usuario
+      </label>
       <input
         className='input input-login'
         type='email'
@@ -42,11 +44,10 @@ export default function LoginForm () {
         ref={register({ required: true })}
       />
       {errors.email &&
-        (
-          <span className='error help is-danger is-medium'>
-            Necesitas llenar este campo
-          </span>
-        )}
+
+        <span className='error help is-danger is-medium'>
+          Necesitas llenar este campo
+        </span>}
       <label className='label label-login'>
         Contraseña
       </label>
@@ -57,11 +58,10 @@ export default function LoginForm () {
         placeholder='contraseña'
         ref={register({ required: true })}
       />
-      {errors.password && (
+      {errors.password &&
         <span className='error help is-danger is-medium'>
           Necesitas llenar este campo
-        </span>
-      )}
+        </span>}
       <button className='btn button-primary btn-login'>
         Ingresar
       </button>
