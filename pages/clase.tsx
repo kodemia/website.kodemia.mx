@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import { ToastContainer } from 'react-toastify'
-
+import { useAuth } from 'lib/hooks'
 // My components
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
@@ -9,7 +9,7 @@ import Klass from 'components/Pages/Classes/Klass'
 // api
 import { getClasses } from 'lib/api'
 // utils
-import { checkToken, checkTokenExpiration } from '../utils/utils'
+import { checkToken } from '../utils/utils'
 
 export interface Class {
   date: string
@@ -27,17 +27,12 @@ export default function Clase () {
   const [isVimeo, setIsVimeo] = useState<any>()
   const router = useRouter()
 
+  useAuth()
+
   useEffect(() => {
     const classVideoId = router.query.id
     const isVimeoB = router.query.isVimeo
     const token = window.sessionStorage.getItem('token') || ''
-
-    checkTokenExpiration(token)
-
-    if (!token) {
-      window.sessionStorage.setItem('from', 'clases')
-      Router.replace('/login')
-    }
 
     setVimeoId(classVideoId)
     setIsVimeo(isVimeoB)

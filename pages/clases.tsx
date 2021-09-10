@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Router from 'next/router'
 import { ToastContainer } from 'react-toastify'
-
+import { useAuth } from 'lib/hooks'
 // My components
 import Navbar from 'components/Navbar'
 import H5 from 'components/H5'
@@ -12,7 +11,7 @@ import Seo from 'components/SEO'
 // api
 import { getClasses } from '../lib/api'
 // utils
-import { checkToken, checkTokenExpiration } from '../utils/utils'
+import { checkToken } from '../utils/utils'
 
 export interface Class {
   date: string
@@ -26,14 +25,9 @@ export interface Class {
 
 export default function Classes () {
   const [classes, setClasses] = useState<Array<Class>>([])
+  useAuth()
   useEffect(() => {
     const token = window.sessionStorage.getItem('token') || ''
-    checkTokenExpiration(token)
-
-    if (!token) {
-      window.sessionStorage.setItem('from', 'clases')
-      Router.replace('/login')
-    }
 
     getClasses(token)
       .then(classes => {
