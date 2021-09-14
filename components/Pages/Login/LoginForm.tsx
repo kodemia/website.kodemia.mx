@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Router from 'next/router'
@@ -20,6 +19,10 @@ export default function LoginForm () {
       window.sessionStorage.setItem('token', token)
       Router.push('clases')
     } catch (error) {
+      const status = error.request.status
+      if (status === 412) {
+        Router.replace('/fin-periodo-de-prueba')
+      }
       setError(true)
       setTimeout(() => setError(false), 5000)
     }

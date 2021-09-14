@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import { ToastContainer } from 'react-toastify'
-
+import { useAuth } from 'lib/hooks'
 // My components
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
@@ -27,15 +27,12 @@ export default function Clase () {
   const [isVimeo, setIsVimeo] = useState<any>()
   const router = useRouter()
 
+  useAuth()
+
   useEffect(() => {
     const classVideoId = router.query.id
     const isVimeoB = router.query.isVimeo
-    const token = window.sessionStorage.getItem('token')
-
-    if (!token) {
-      window.sessionStorage.setItem('from', 'clases')
-      Router.replace('/login')
-    }
+    const token = window.sessionStorage.getItem('token') || ''
 
     setVimeoId(classVideoId)
     setIsVimeo(isVimeoB)

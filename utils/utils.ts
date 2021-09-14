@@ -15,3 +15,11 @@ export const checkToken = (status: number): void => {
     Router.replace("/login");
   }, 2000);
 };
+
+export const checkTokenExpiration = (token = "") => {
+  const tokenData = atob(token.split(".")[1]);
+  const isExpired = JSON.parse(tokenData).isExpired;
+  if (isExpired) {
+    Router.replace("/fin-periodo-de-prueba");
+  }
+};
