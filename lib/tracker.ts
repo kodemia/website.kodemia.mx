@@ -8,7 +8,5 @@ export async function init () {
 }
 
 export function onPageView () {
-  analytics.page(() => {
-    console.log('onPageView')
-  })
+  analytics.page()
 }
