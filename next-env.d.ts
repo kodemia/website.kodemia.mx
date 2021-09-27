@@ -1,4 +1,4 @@
 /// <reference types="next" />
 /// <reference types="next/types/global" />
-declare module '@analytics/segment'
+declare module '@analytics/mixpanel'
 declare module '@analytics/google-tag-manager'

@@ -1,12 +1,17 @@
+import { AnalyticsInstance } from 'analytics'
+import Analytics from 'lib/analytics'
 
-import analytics from 'lib/analytics'
-import * as facebook from 'lib/facebook'
+let analytics: AnalyticsInstance
 
-export async function init () {
-  console.log('tracker init')
-  await facebook.init()
+function init () {
+  analytics = Analytics()
 }
 
 export function onPageView () {
+  init()
   analytics.page()
+}
+
+export function onLoginComplete () {
+
 }
