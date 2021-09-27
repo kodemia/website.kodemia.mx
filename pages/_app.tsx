@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import TagManager from 'react-gtm-module' // TODO: QUITAR REACT-GTM-MODULE
+// import TagManager from 'react-gtm-module' // TODO: QUITAR REACT-GTM-MODULE
 import * as tracker from 'lib/tracker'
 
 import 'node_modules/slick-carousel/slick/slick.css'
@@ -14,7 +14,7 @@ import 'styles/index.scss'
 function MyApp ({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
-  const pixelId = process.env.PIXEL_ID || ''
+  // const pixelId = process.env.PIXEL_ID || ''
 
   useEffect(() => {
     console.log('se montó')
