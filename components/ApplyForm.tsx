@@ -35,7 +35,7 @@ export default function ApplyForm () {
         router.push('aplicar/gracias/javascript-live')
       })
       .catch(error => {
-        const status = error.response.status
+        const status = error?.response?.status
         let errorMessage = `☠️ Ocurrio un error en el servidor,
         por favor intenta mas tarde o reportalo a contacto@kodemia.mx`
 
@@ -43,6 +43,8 @@ export default function ApplyForm () {
           errorMessage = '🤔 Por favor, revisa que tu información sea correcta y vuelve a intentar enviar el formulario'
           toast.warn(errorMessage)
           return
+        } else {
+          errorMessage = 'Ocurrió un error desconocido, por favor intenta mas tarde o contáctanos al correo info@kodemia.mx'
         }
         toast.error(errorMessage)
       })
