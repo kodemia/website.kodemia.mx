@@ -1,7 +1,8 @@
 
 import Analytics, { AnalyticsInstance } from 'analytics'
-import GTMPlugin from '@analytics/google-tag-manager'
+import googleTagManagerPlugin from '@analytics/google-tag-manager'
 import mixpanelPlugin from '@analytics/mixpanel'
+import googleAnalyticsPlugin from '@analytics/google-analytics'
 
 import facebookPixelPlugin from 'lib/analytics/custom-plugins/facebook-pixel'
 import debuggerPlugin from 'lib/analytics/custom-plugins/debugger'
@@ -12,8 +13,11 @@ const IS_PRODUCTION_ENV = process.env.NODE_ENV === 'production'
 let analyticsInstance: AnalyticsInstance
 
 const productionPlugins = [
-  GTMPlugin({
+  googleTagManagerPlugin({
     containerId: process.env.GTM_CONTAINER_ID
+  }),
+  googleAnalyticsPlugin({
+    trackingId: process.env.GA_TRACKING_ID
   }),
   facebookPixelPlugin({
     pixelId: process.env.FB_PIXEL_ID
