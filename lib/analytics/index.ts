@@ -6,6 +6,7 @@ import googleAnalyticsPlugin from '@analytics/google-analytics'
 
 import facebookPixelPlugin from 'lib/analytics/custom-plugins/facebook-pixel'
 import debuggerPlugin from 'lib/analytics/custom-plugins/debugger'
+import hotjarPlugin from 'lib/analytics/custom-plugins/hotjar'
 
 const IS_PRODUCTION_ENV = process.env.NODE_ENV === 'production'
 
@@ -24,6 +25,10 @@ const productionPlugins = [
   }),
   mixpanelPlugin({
     token: process.env.MIXPANEL_TOKEN
+  }),
+  hotjarPlugin({
+    id: parseInt(process.env.HOTJAR_ID as string),
+    scriptVersion: 6
   })
 ]
 
