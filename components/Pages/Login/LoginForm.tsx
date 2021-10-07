@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Router from 'next/router'
-// API
-import { login } from '../../../lib/api'
+
+import * as api from 'lib/api'
+import Auth from 'lib/auth'
 
 export interface Data {
   email: string
@@ -15,8 +16,8 @@ export default function LoginForm () {
 
   const onSubmit = async ({ email, password }: Data) => {
     try {
-      const token = await login(email, password)
-      window.sessionStorage.setItem('token', token)
+      const token = await api.login(email, password)
+      Auth.setToken(token)
       Router.push('clases')
     } catch (error) {
       const status = error.request.status

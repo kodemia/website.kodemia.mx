@@ -8,40 +8,42 @@ interface TokenPayload extends JwtPayload {
 }
 
 export default class Auth {
-  static readonly authTokenKey = 'token'
-  static readonly tokenStorage = window.localStorage
+  static authTokenKey = 'token'
+  static tokenStorage: Storage
 
   static getToken (): string | null {
-    return Auth.tokenStorage.getItem(Auth.authTokenKey)
+    return window.localStorage.getItem(Auth.authTokenKey)
   }
 
   static setToken (token: string): void {
     if (!token) throw new Error('Token is required')
 
-    Auth.tokenStorage.setItem(Auth.authTokenKey, token)
+    window.localStorage.setItem(Auth.authTokenKey, token)
   }
 
-  static deleteToken () {
-    Auth.tokenStorage.removeItem(Auth.authTokenKey)
+  static deleteToken (): void {
+    window.localStorage.removeItem(Auth.authTokenKey)
   }
 
   static isExpired (): boolean {
-    const { isExpired, exp } = Auth.getDecodedTokenPayload()
+    try {
+      const { exp } = Auth.getDecodedTokenPayload()
 
-    if (isExpired) return true
+      const isBeforeExpirationDate = dayjs().isAfter(dayjs.unix(exp ?? 0))
 
-    const isBeforeExpirationDate = dayjs().isAfter(dayjs.unix(exp ?? 0))
-    if (isBeforeExpirationDate) return true
-
-    return false
+      return isBeforeExpirationDate
+    } catch (error) {
+      return true
+    }
   }
 
-  static getDecodedTokenPayload () {
+  static getDecodedTokenPayload (): TokenPayload {
     const token = Auth.getToken()
 
     if (!token) throw new Error('Could not find JWT in the storage')
 
-    const { payload } = jwt.decode(token) as JwtPayload
-    return payload as TokenPayload
+    const payload: TokenPayload = jwt.decode(token) as TokenPayload
+
+    return payload
   }
 }
