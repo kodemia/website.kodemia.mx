@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import Router from 'next/router'
 
-import * as api from 'lib/api'
+import login from 'lib/api/login'
 import Auth from 'lib/auth'
+import * as tracker from 'lib/tracker'
+import { AxiosError } from 'axios'
 
 export interface Data {
   email: string
@@ -11,21 +13,16 @@ export interface Data {
 }
 
 export default function LoginForm () {
-  const [error, setError] = useState(false)
   const { register, handleSubmit, errors } = useForm()
 
   const onSubmit = async ({ email, password }: Data) => {
     try {
-      const token = await api.login(email, password)
+      const token = await login.submit(email, password)
       Auth.setToken(token)
+      tracker.onLoginComplete(email)
       Router.push('clases')
     } catch (error) {
-      const status = error.request.status
-      if (status === 412) {
-        Router.replace('/fin-periodo-de-prueba')
-      }
-      setError(true)
-      setTimeout(() => setError(false), 5000)
+      login.errorHandler(error as AxiosError)
     }
   }
 
@@ -46,7 +43,7 @@ export default function LoginForm () {
       />
       {errors.email &&
         <span className='error help is-danger is-medium'>
-          Necesitas llenar este campo
+          Este campo es necesario
         </span>}
       <label className='label label-login'>
         Contraseña
@@ -60,15 +57,11 @@ export default function LoginForm () {
       />
       {errors.password &&
         <span className='error help is-danger is-medium'>
-          Necesitas llenar este campo
+          Este campo es necesario
         </span>}
       <button className='btn button-primary btn-login'>
         Ingresar
       </button>
-      {error &&
-        <p className='help is-danger is-medium'>
-          Contraseña o usuario incorrectos
-        </p>}
     </form>
   )
 }

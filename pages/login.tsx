@@ -12,10 +12,7 @@ import Auth from 'lib/auth'
 
 export default function Login () {
   useEffect(() => {
-    console.log('effect login pge')
-    const isExpired = Auth.isExpired()
-    console.log('isExpired: ', isExpired)
-    if (!isExpired) Router.replace('clases')
+    if (!Auth.isExpired()) Router.replace('clases')
   })
 
   return (

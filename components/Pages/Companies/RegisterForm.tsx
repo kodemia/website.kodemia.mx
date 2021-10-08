@@ -12,7 +12,7 @@ import PhoneInput from 'components/Inputs/PhoneInput'
 import schema from 'schemas/registerCompanyForm.schema'
 import { ToastContainer, toast } from 'react-toastify'
 
-import { registerCompany } from 'lib/api'
+import * as companyService from 'lib/api/company'
 
 type RegisterCompanyFormData = zod.infer<typeof schema>
 
@@ -32,7 +32,7 @@ export default function RegisterCompanyForm () {
       company: data.company
     }
 
-    registerCompany(data)
+    companyService.register(data)
       .then((result) => {
         console.log(result)
         router.push('/empresas/registro/gracias')

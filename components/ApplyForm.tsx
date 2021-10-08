@@ -12,7 +12,7 @@ import Select from 'components/Inputs/Select'
 import schema from 'schemas/applyForm.schema'
 import { ToastContainer, toast } from 'react-toastify'
 
-import { apply } from 'lib/api'
+import apply from 'lib/api/apply'
 import { useRouter } from 'next/router'
 
 type ApplyFormData = zod.infer<typeof schema>
@@ -30,7 +30,7 @@ export default function ApplyForm () {
       reasonToProgramming: data.reasonToProgramming
     }
 
-    apply(data)
+    apply.submit(data)
       .then(() => {
         router.push('aplicar/gracias/javascript-live')
       })

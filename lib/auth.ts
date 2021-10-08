@@ -29,9 +29,18 @@ export default class Auth {
     try {
       const { exp } = Auth.getDecodedTokenPayload()
 
-      const isBeforeExpirationDate = dayjs().isAfter(dayjs.unix(exp ?? 0))
+      const todayIsBeforeExpirationDate = dayjs().isAfter(dayjs.unix(exp ?? 0))
 
-      return isBeforeExpirationDate
+      return todayIsBeforeExpirationDate
+    } catch (error) {
+      return true
+    }
+  }
+
+  static isTrialExpired (): boolean {
+    try {
+      const { isExpired } = Auth.getDecodedTokenPayload()
+      return !!isExpired
     } catch (error) {
       return true
     }
@@ -42,8 +51,6 @@ export default class Auth {
 
     if (!token) throw new Error('Could not find JWT in the storage')
 
-    const payload: TokenPayload = jwt.decode(token) as TokenPayload
-
-    return payload
+    return jwt.decode(token) as TokenPayload
   }
 }
