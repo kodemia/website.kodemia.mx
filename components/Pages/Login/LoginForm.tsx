@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import Router from 'next/router'
+import { ToastContainer } from 'react-toastify'
 
 import login from 'lib/api/login'
 import Auth from 'lib/auth'
@@ -17,6 +18,7 @@ export default function LoginForm () {
 
   const onSubmit = async ({ email, password }: Data) => {
     try {
+      console.log('onSubmir')
       const token = await login.submit(email, password)
       Auth.setToken(token)
       tracker.onLoginComplete(email)
@@ -31,6 +33,7 @@ export default function LoginForm () {
       onSubmit={handleSubmit(onSubmit)}
       className='login-form'
     >
+      <ToastContainer position='top-center' />
       <label className='label label-login'>
         Usuario
       </label>

@@ -10,7 +10,7 @@ import Input from 'components/Inputs/Input'
 import PhoneInput from 'components/Inputs/PhoneInput'
 import Select from 'components/Inputs/Select'
 import schema from 'schemas/applyForm.schema'
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 
 import apply from 'lib/api/apply'
 import { useRouter } from 'next/router'
@@ -31,26 +31,9 @@ export default function ApplyForm () {
     }
 
     apply.submit(data)
-      .then(() => {
-        router.push('aplicar/gracias/javascript-live')
-      })
-      .catch(error => {
-        const status = error?.response?.status
-        let errorMessage = `☠️ Ocurrio un error en el servidor,
-        por favor intenta mas tarde o reportalo a contacto@kodemia.mx`
-
-        if (status >= 400 && status < 500) {
-          errorMessage = '🤔 Por favor, revisa que tu información sea correcta y vuelve a intentar enviar el formulario'
-          toast.warn(errorMessage)
-          return
-        } else {
-          errorMessage = 'Ocurrió un error desconocido, por favor intenta mas tarde o contáctanos al correo info@kodemia.mx'
-        }
-        toast.error(errorMessage)
-      })
-      .finally(() => {
-        setIsSubmitting(false)
-      })
+      .then(() => router.push('aplicar/gracias/javascript-live'))
+      .catch(apply.errorHandler)
+      .finally(() => setIsSubmitting(false))
   }
 
   return (
