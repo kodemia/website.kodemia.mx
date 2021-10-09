@@ -30,13 +30,13 @@ export async function getAll () {
 export async function errorHandler (error: AxiosError) {
   const status = error.response?.status
 
-  if (!status) return toast.error(errors.network.message)
-
   switch (status) {
     case errors.expiredAccount.status:
       return Router.replace('/fin-periodo-de-prueba')
 
     default:
+      Auth.deleteToken()
+      Router.replace('/login')
       toast.error(errors.network.message)
       break
   }

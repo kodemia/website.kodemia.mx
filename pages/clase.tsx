@@ -36,9 +36,7 @@ export default function Clase () {
 
     classesService.getAll()
       .then(setClasses)
-      .catch(error => {
-        console.log('get classes catch ', error)
-      })
+      .catch(classesService.errorHandler)
   }, [router.query.id])
 
   return (
