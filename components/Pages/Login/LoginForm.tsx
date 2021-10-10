@@ -1,12 +1,11 @@
 import React from 'react'
-import { useForm } from 'react-hook-form'
 import Router from 'next/router'
+import { useForm } from 'react-hook-form'
 import { ToastContainer } from 'react-toastify'
+import { AxiosError } from 'axios'
 
 import login from 'lib/api/login'
 import Auth from 'lib/auth'
-import * as tracker from 'lib/tracker'
-import { AxiosError } from 'axios'
 
 export interface Data {
   email: string
@@ -18,11 +17,9 @@ export default function LoginForm () {
 
   const onSubmit = async ({ email, password }: Data) => {
     try {
-      console.log('onSubmir')
       const token = await login.submit(email, password)
-      Auth.setToken(token)
-      tracker.onLoginComplete(email)
-      Router.push('clases')
+      Auth.login(token, email)
+      Router.push('/clases')
     } catch (error) {
       login.errorHandler(error as AxiosError)
     }

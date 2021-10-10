@@ -8,12 +8,12 @@ import facebookPixelPlugin from 'lib/analytics/custom-plugins/facebook-pixel'
 import debuggerPlugin from 'lib/analytics/custom-plugins/debugger'
 import hotjarPlugin from 'lib/analytics/custom-plugins/hotjar'
 
-const IS_PRODUCTION_ENV = process.env.NODE_ENV === 'production'
+const isProduction = process.env.NODE_ENV === 'production'
 
 // Analytics singleton
 let analyticsInstance: AnalyticsInstance
 
-const productionPlugins = [
+const plugins = [
   googleTagManagerPlugin({
     containerId: process.env.GTM_CONTAINER_ID
   }),
@@ -41,12 +41,14 @@ const developmentPlugins = [
 export default function init () {
   if (analyticsInstance) return analyticsInstance
 
+  if (!isProduction) {
+    plugins.push(developmentPlugins)
+  }
+
   analyticsInstance = Analytics({
     app: 'website-kodemia',
-    debug: !IS_PRODUCTION_ENV,
-    plugins: IS_PRODUCTION_ENV
-      ? productionPlugins
-      : developmentPlugins
+    debug: !isProduction,
+    plugins: plugins
   })
 
   return analyticsInstance

@@ -1,12 +1,27 @@
 
 import classNames from 'classnames'
+import { useEffect } from 'react'
 
 import Button from 'components/Button'
 import Cursor from 'components/TextCursor'
 import Footer from 'components/Footer'
 import Navbar from 'components/Navbar'
 
+import * as tracker from 'lib/tracker'
+import { useRouter } from 'next/router'
+
 export default function EndTrialPeriod () {
+  const router = useRouter()
+
+  useEffect(() => {
+    tracker.onTrapPageLoad()
+  }, [])
+
+  function goToWhatsapp () {
+    tracker.onExpiredUserClickTrapPageContinueButton()
+    router.push('https://api.whatsapp.com/send?phone=5215573255094&text=%C2%A1Hola%2C%20Vero!%20Mi%20periodo%20en%20la%20plataforma%20expir%C3%B3%20y%20quiero%20continuar%20con%20mi%20proceso%20de%20aplicaci%C3%B3n%20%F0%9F%98%80')
+  }
+
   return (
     <>
       <Navbar />
@@ -44,7 +59,7 @@ export default function EndTrialPeriod () {
           <Button
             isPrimary
             label='Quiero aplicar al Bootcamp'
-            link='https://api.whatsapp.com/send?phone=5215573255094&text=%C2%A1Hola%2C%20Vero!%20Mi%20periodo%20en%20la%20plataforma%20expir%C3%B3%20y%20quiero%20continuar%20con%20mi%20proceso%20de%20aplicaci%C3%B3n%20%F0%9F%98%80'
+            onClick={goToWhatsapp}
           />
         </div>
       </div>

@@ -2,27 +2,32 @@
 import jwt, { JwtPayload } from 'jsonwebtoken'
 import dayjs from 'dayjs'
 
+import * as tracker from 'lib/tracker'
+
 interface TokenPayload extends JwtPayload {
   id: string
   isExpired?: boolean
+  isMentor?: boolean
+  isTemporal?: boolean
 }
 
 export default class Auth {
   static authTokenKey = 'token'
-  static tokenStorage: Storage
 
-  static getToken (): string | null {
+  static get (): string | null {
     return window.localStorage.getItem(Auth.authTokenKey)
   }
 
-  static setToken (token: string): void {
+  static login (token: string, email: string): void {
     if (!token) throw new Error('Token is required')
 
     window.localStorage.setItem(Auth.authTokenKey, token)
+    tracker.onLogin(email)
   }
 
-  static deleteToken (): void {
+  static reset (): void {
     window.localStorage.removeItem(Auth.authTokenKey)
+    tracker.onAuthReset()
   }
 
   static isExpired (): boolean {
@@ -47,7 +52,7 @@ export default class Auth {
   }
 
   static getDecodedTokenPayload (): TokenPayload {
-    const token = Auth.getToken()
+    const token = Auth.get()
 
     if (!token) throw new Error('Could not find JWT in the storage')
 

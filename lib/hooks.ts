@@ -10,12 +10,14 @@ export function useAuth (): void {
     try {
       if (Auth.isExpired()) {
         toast(expiredSessionMessage)
+        Auth.reset()
         Router.replace('/login')
       } else if (Auth.isTrialExpired()) {
         Router.replace('/fin-periodo-de-prueba')
       }
     } catch (error) {
       toast(expiredSessionMessage)
+      Auth.reset()
       Router.replace('/login')
     }
   })

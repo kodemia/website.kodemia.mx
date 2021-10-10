@@ -22,7 +22,7 @@ const errors = {
 export async function getAll () {
   const url = '/classes'
   const response = await api.get(url, {
-    headers: { Authorization: Auth.getToken() }
+    headers: { Authorization: Auth.get() }
   })
   return _.get(response, 'data.payload.classes')
 }
@@ -35,7 +35,7 @@ export async function errorHandler (error: AxiosError) {
       return Router.replace('/fin-periodo-de-prueba')
 
     default:
-      Auth.deleteToken()
+      Auth.reset()
       Router.replace('/login')
       toast.error(errors.network.message)
       break
