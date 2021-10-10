@@ -13,7 +13,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 // Analytics singleton
 let analyticsInstance: AnalyticsInstance
 
-const plugins = [
+let plugins = [
   googleTagManagerPlugin({
     containerId: process.env.GTM_CONTAINER_ID
   }),
@@ -34,7 +34,7 @@ const plugins = [
 
 const developmentPlugins = [
   debuggerPlugin({
-    debug: false
+    debug: true
   })
 ]
 
@@ -42,7 +42,10 @@ export default function init () {
   if (analyticsInstance) return analyticsInstance
 
   if (!isProduction) {
-    plugins.push(developmentPlugins)
+    plugins = [
+      ...plugins,
+      ...developmentPlugins
+    ]
   }
 
   analyticsInstance = Analytics({
