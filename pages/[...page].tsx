@@ -3,8 +3,6 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType, GetServerSidePr
 import { builder, BuilderComponent, Builder } from '@builder.io/react'
 import classNames from 'classnames'
 
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
 import NotFoundPage from 'pages/404'
 
 interface Props {
@@ -19,7 +17,6 @@ export default function BuilderPage (props: InferGetServerSidePropsType<typeof g
 
   return (
     <>
-      <Navbar />
       <div
         className={classNames(
           'flex justify-center',
@@ -34,7 +31,6 @@ export default function BuilderPage (props: InferGetServerSidePropsType<typeof g
           />
         </main>
       </div>
-      <Footer />
     </>
   )
 }
