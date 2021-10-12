@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from 'react'
-import Router from 'next/router'
 import { ToastContainer } from 'react-toastify'
-
+import { useAuth } from 'lib/hooks'
 // My components
 import Navbar from 'components/Navbar'
 import H5 from 'components/H5'
@@ -27,12 +25,9 @@ export interface Class {
 
 export default function Classes () {
   const [classes, setClasses] = useState<Array<Class>>([])
+  useAuth()
   useEffect(() => {
-    const token = window.sessionStorage.getItem('token')
-    if (!token) {
-      window.sessionStorage.setItem('from', 'clases')
-      Router.replace('/login')
-    }
+    const token = window.sessionStorage.getItem('token') || ''
 
     getClasses(token)
       .then(classes => {
@@ -66,24 +61,21 @@ export default function Classes () {
           </div>
         </div>
         <div className='column is-flex is-justify-content-center classes-wrapper'>
-
           <div className='columns is-multiline  classes-cards'>
-            {
-              classes.length === 0 &&
-                <div className='column'>
-                  <progress className='progress is-small is-info' max='100'>15%</progress>
-                </div>
-            }
-            {
-              classes.map((klass, index) => (
-                <div
-                  key={`class-${index}`}
-                  className='column is-4-desktop is-6-tablet is-flex is-justify-content-center'
-                >
-                  <ClassCard klass={klass} />
-                </div>
-              ))
-            }
+            {classes.length === 0 &&
+              <div className='column'>
+                <progress className='progress is-small is-info' max='100'>
+                  15%
+                </progress>
+              </div>}
+            {classes.map((klass, index) =>
+              <div
+                key={`class-${index}`}
+                className='column is-4-desktop is-6-tablet is-flex is-justify-content-center'
+              >
+                <ClassCard klass={klass} />
+              </div>
+            )}
           </div>
         </div>
       </div>

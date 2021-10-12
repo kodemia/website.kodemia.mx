@@ -1,4 +1,3 @@
-
 import { GetServerSidePropsContext } from 'next'
 import brochures from 'config/brochure-links.json'
 import { Program, BrochureFormat, BrochureVersion } from 'types/common'
