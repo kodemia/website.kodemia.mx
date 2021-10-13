@@ -9,8 +9,10 @@ import Navbar from 'components/Navbar'
 
 import * as tracker from 'lib/tracker'
 import { useRouter } from 'next/router'
+import Whatsapp from 'lib/whatsapp'
 
 export default function EndTrialPeriod () {
+  const wa = new Whatsapp()
   const router = useRouter()
 
   useEffect(() => {
@@ -19,7 +21,10 @@ export default function EndTrialPeriod () {
 
   function goToWhatsapp () {
     tracker.onExpiredUserClickTrapPageContinueButton()
-    router.push('https://api.whatsapp.com/send?phone=5215573255094&text=%C2%A1Hola%2C%20Vero!%20Mi%20periodo%20en%20la%20plataforma%20expir%C3%B3%20y%20quiero%20continuar%20con%20mi%20proceso%20de%20aplicaci%C3%B3n%20%F0%9F%98%80')
+    const whatsappLink = wa.createLink('¡Hola, Vero! Mi periodo en la plataforma expiró y quiero continuar con mi proceso de aplicación 😀')
+    console.log('wa link: ', whatsappLink)
+    router.push(whatsappLink)
+    // router.push('https://api.whatsapp.com/send?phone=5215573255094&text=%C2%A1Hola%2C%20Vero!%20Mi%20periodo%20en%20la%20plataforma%20expir%C3%B3%20y%20quiero%20continuar%20con%20mi%20proceso%20de%20aplicaci%C3%B3n%20%F0%9F%98%80')
   }
 
   return (
