@@ -6,10 +6,8 @@ import { useAuth } from 'lib/hooks'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import Klass from 'components/Pages/Classes/Klass'
-// api
-import { getClasses } from 'lib/api'
-// utils
-import { checkToken } from '../utils/utils'
+
+import classesService from 'lib/api/classes'
 
 export interface Class {
   date: string
@@ -32,19 +30,13 @@ export default function Clase () {
   useEffect(() => {
     const classVideoId = router.query.id
     const isVimeoB = router.query.isVimeo
-    const token = window.sessionStorage.getItem('token') || ''
 
     setVimeoId(classVideoId)
     setIsVimeo(isVimeoB)
 
-    getClasses(token)
-      .then(classes => {
-        setClasses(classes)
-      })
-      .catch(error => {
-        const status = error.request.status
-        checkToken(status)
-      })
+    classesService.getAll()
+      .then(setClasses)
+      .catch(classesService.errorHandler)
   }, [router.query.id])
 
   return (
