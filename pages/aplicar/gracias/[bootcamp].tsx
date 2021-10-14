@@ -12,7 +12,6 @@ interface Props {
 }
 
 export default function Thankyou (props: Props) {
-  console.log('props.bootcamp: ', props.bootcamp)
   return (
     <>
       <NavBar />
