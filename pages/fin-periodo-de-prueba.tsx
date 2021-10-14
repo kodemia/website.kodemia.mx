@@ -8,21 +8,14 @@ import Footer from 'components/Footer'
 import Navbar from 'components/Navbar'
 
 import * as tracker from 'lib/tracker'
-import { useRouter } from 'next/router'
 import Whatsapp from 'lib/whatsapp'
 
 export default function EndTrialPeriod () {
-  const router = useRouter()
   const whatsappLink = Whatsapp.createLink(Whatsapp.copies.trialPeriodExpired)
 
   useEffect(() => {
     tracker.onTrapPageLoad()
   }, [])
-
-  function goToWhatsapp () {
-    tracker.onExpiredUserClickTrapPageContinueButton()
-    router.push(whatsappLink)
-  }
 
   return (
     <>
@@ -61,7 +54,8 @@ export default function EndTrialPeriod () {
           <Button
             isPrimary
             label='Quiero aplicar al Bootcamp'
-            onClick={goToWhatsapp}
+            href={whatsappLink}
+            onClick={() => tracker.onExpiredUserClickTrapPageContinueButton()}
           />
         </div>
       </div>
