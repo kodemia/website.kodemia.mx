@@ -1,17 +1,16 @@
 
-const phone = '5215573255094'
-
 export default class Whatsapp {
-  url: URL
+  static url = new URL('https://api.whatsapp.com/send')
+  static phone = '5215573255094'
 
-  constructor () {
-    this.url = new URL('https://api.whatsapp.com/send')
-    this.url.searchParams.append('phone', phone)
+  public static copies = {
+    trialPeriodExpired: '¡Hola, Vero! Mi periodo en la plataforma expiró y quiero continuar con mi proceso de aplicación 😀',
+    footerButton: 'Hola quiero conocer más de Kodemia'
   }
 
-  createLink (message?: string) {
-    if (message) this.url.searchParams.append('text', message)
-
-    return this.url.toString()
+  static createLink (text: string) {
+    Whatsapp.url.searchParams.append('phone', Whatsapp.phone)
+    Whatsapp.url.searchParams.append('text', text)
+    return Whatsapp.url.toString()
   }
 }

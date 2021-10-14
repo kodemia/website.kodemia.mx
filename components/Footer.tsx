@@ -2,10 +2,16 @@
 import React from 'react'
 import dayjs from 'dayjs'
 import Link from 'next/link'
+
+import * as tracker from 'lib/tracker'
+import Whatsapp from 'lib/whatsapp'
+
 // my-component
-import Button from './Button'
+import Button from 'components/Button'
 
 export default function Footer () {
+  const whatsappLink = Whatsapp.createLink(Whatsapp.copies.footerButton)
+
   return (
     <footer className='my-footer'>
       <div className='wrapper-f section-container'>
@@ -20,7 +26,8 @@ export default function Footer () {
               <Button
                 isPrimary label='Mándanos un whatsapp'
                 icon='/icons/btn-whatsapp.svg'
-                href='https://wa.me/5215573255094?text=Hola%20quiero%20conocer%20m%C3%A1s%20de%20Kodemia'
+                href={whatsappLink}
+                onClick={() => tracker.onFooterButtonClicked('Whatsapp')}
               />
             </div>
             <div className='btn-telegram'>
@@ -28,6 +35,7 @@ export default function Footer () {
                 label='Únete a la comunidad'
                 icon='/icons/btn-telegram.svg'
                 href='https://t.me/kodemiadevs'
+                onClick={() => tracker.onFooterButtonClicked('Telegram')}
               />
             </div>
           </div>
@@ -48,7 +56,7 @@ export default function Footer () {
                 href='https://www.facebook.com/kodemiamx'
                 target='_blank'
                 rel='noopener noreferrer'
-
+                onClick={() => tracker.onFooterLinkClicked('Facebook')}
                 className='item-sm'
               >
                 <img src='/icons/social-media-fb.svg' />
@@ -58,6 +66,7 @@ export default function Footer () {
                 href='https://www.instagram.com/kodemiamx'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => tracker.onFooterLinkClicked('Instagram')}
                 className='item-sm'
               >
                 <img src='/icons/social-media-insta.svg' />
@@ -66,6 +75,7 @@ export default function Footer () {
                 href='https://twitter.com/kodemiamx'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => tracker.onFooterLinkClicked('Twitter')}
                 className='item-sm'
               >
                 <img src='/icons/social-media-tw.svg' />
@@ -74,6 +84,7 @@ export default function Footer () {
                 href='https://github.com/kodemia'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => tracker.onFooterLinkClicked('GitHub')}
                 className='item-sm'
               >
                 <img src='/icons/social-media-gh.svg' />
@@ -82,6 +93,7 @@ export default function Footer () {
                 href='https://medium.com/kodemia'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => tracker.onFooterLinkClicked('Medium')}
                 className='item-sm'
               >
                 <img src='/icons/social-media-medium.svg' />
@@ -90,6 +102,7 @@ export default function Footer () {
                 href='https://www.youtube.com/channel/UCjCo9gdMQdebs95zcufryaQ'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => tracker.onFooterLinkClicked('YouTube')}
                 className='item-sm'
               >
                 <img src='/icons/social-media-yt.svg' />
@@ -98,6 +111,7 @@ export default function Footer () {
                 href='https://www.linkedin.com/company/kodemiamx'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => tracker.onFooterLinkClicked('LinkedIn')}
                 className='item-sm'
               >
                 <img src='/icons/social-media-in.svg' />
@@ -106,17 +120,26 @@ export default function Footer () {
           </div>
           <div className='contact'>
             <p>
-              <a href='tel:+52 55 5015 0517'>
+              <a
+                href='tel:+52 55 5015 0517'
+                onClick={() => tracker.onFooterLinkClicked('Phone')}
+              >
                 +52 55 5015 0517
               </a>
             </p>
             <p>
-              <a href='tel:01 800 212 0022'>
+              <a
+                href='tel:01 800 212 0022'
+                onClick={() => tracker.onFooterLinkClicked('01800 Phone')}
+              >
                 01 800 212 0022
               </a>
             </p>
             <p>
-              <a href='mailto:info@kodemia.mx'>
+              <a
+                href='mailto:info@kodemia.mx'
+                onClick={() => tracker.onFooterLinkClicked('EMail')}
+              >
                 info@kodemia.mx
               </a>
             </p>

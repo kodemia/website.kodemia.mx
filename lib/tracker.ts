@@ -15,6 +15,10 @@ function init () {
   analytics = Analytics()
 }
 
+function getUserTraits (): UserTraits {
+  return analytics.user('traits')
+}
+
 export function onPageView () {
   init()
   analytics.page()
@@ -47,19 +51,43 @@ export function onLogOut () {
 
 export function onTrapPageLoad () {
   init()
-  const user: UserTraits = analytics.user('traits')
+  const user = getUserTraits()
   analytics.track('Trap Page Shown', user)
 }
 
 export function onExpiredUserClickTrapPageContinueButton () {
   init()
-  const user: UserTraits = analytics.user('traits')
+  const user = getUserTraits()
   analytics.track('Trap Page Whatsapp Button Click', user)
 }
 
 export function onAuthReset () {
   init()
-  const user: UserTraits = analytics.user('traits')
+  const user = getUserTraits()
   analytics.track('Auth reset', user)
   analytics.reset()
+}
+
+export function onFooterButtonClicked (buttonName: 'Whatsapp' | 'Telegram') {
+  init()
+  const user = getUserTraits()
+  analytics.track(`Footer ${buttonName} Button Clicked`, user)
+}
+
+type FooterLinkName = 'Facebook'
+  | 'Instagram'
+  | 'Twitter'
+  | 'GitHub'
+  | 'Medium'
+  | 'YouTube'
+  | 'LinkedIn'
+  | 'Phone'
+  | '01800 Phone'
+  | 'EMail'
+  | 'Privacy Policy'
+
+export function onFooterLinkClicked (linkName: FooterLinkName) {
+  init()
+  const user = getUserTraits()
+  analytics.track(`Footer ${linkName} Link Clicked`, user)
 }
