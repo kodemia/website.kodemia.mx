@@ -36,32 +36,27 @@ export default function Button ({
     'is-loading': isDisabled
   })
 
+  const onClickButton = onClick ?? (() => link && router.push(link))
+
   return (
     <>
-      {href && type !== 'submit' &&
-        <a
-          href={href}
-          target='_blank'
-          rel='noopener noreferrer'
-          className={btnClass}
-        >
-          <img
-            src={icon}
-            className='ikon'
-          />
-          {label}
-        </a>}
-      {!href && type !== 'submit' &&
-        <a
-          className={btnClass}
-          onClick={onClick || (() => router.push(link))}
-        >
-          <img
-            src={icon}
-            className='ikon'
-          />
-          {label}
-        </a>}
+      {
+        type !== 'submit' &&
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            className={btnClass}
+            href={href}
+            onClick={onClickButton}
+          >
+            <img
+              src={icon}
+              className='ikon'
+            />
+            {label}
+          </a>
+      }
+
       {
         type === 'submit' &&
           <input
