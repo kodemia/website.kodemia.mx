@@ -8,10 +8,11 @@ import LoginForm from 'components/Pages/Login/LoginForm'
 import Navbar from 'components/Navbar'
 import Seo from 'components/SEO'
 
+import Auth from 'lib/auth'
+
 export default function Login () {
   useEffect(() => {
-    const token = window.sessionStorage.getItem('token')
-    if (token) Router.replace('clases')
+    if (!Auth.isExpired()) Router.replace('clases')
   })
 
   return (

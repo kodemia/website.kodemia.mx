@@ -7,16 +7,20 @@ import classNames from 'classnames'
 import Button from 'components/Button'
 import NavbarItems from 'config/navbar-items.json'
 
+import Auth from 'lib/auth'
+import * as tracker from 'lib/tracker'
+
 export default function Navbar () {
   const [isActive, setIsActive] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const router = useRouter()
   useEffect(() => {
-    setIsLoggedIn(!!window?.sessionStorage?.getItem('token'))
+    setIsLoggedIn(!!Auth.get())
   })
 
   const signOut = () => {
-    window.sessionStorage.removeItem('token')
+    Auth.reset()
+    tracker.onLogOut()
     setIsLoggedIn(false)
     router.push('/login')
   }

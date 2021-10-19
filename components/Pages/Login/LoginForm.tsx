@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import React from 'react'
 import Router from 'next/router'
-// API
-import { login } from '../../../lib/api'
+import { useForm } from 'react-hook-form'
+import { ToastContainer } from 'react-toastify'
+import { AxiosError } from 'axios'
+
+import login from 'lib/api/login'
+import Auth from 'lib/auth'
 
 export interface Data {
   email: string
@@ -10,21 +13,15 @@ export interface Data {
 }
 
 export default function LoginForm () {
-  const [error, setError] = useState(false)
   const { register, handleSubmit, errors } = useForm()
 
   const onSubmit = async ({ email, password }: Data) => {
     try {
-      const token = await login(email, password)
-      window.sessionStorage.setItem('token', token)
-      Router.push('clases')
+      const token = await login.submit(email, password)
+      Auth.login(token, email)
+      Router.push('/clases')
     } catch (error) {
-      const status = error.request.status
-      if (status === 412) {
-        Router.replace('/fin-periodo-de-prueba')
-      }
-      setError(true)
-      setTimeout(() => setError(false), 5000)
+      login.errorHandler(error as AxiosError)
     }
   }
 
@@ -33,6 +30,7 @@ export default function LoginForm () {
       onSubmit={handleSubmit(onSubmit)}
       className='login-form'
     >
+      <ToastContainer position='top-center' />
       <label className='label label-login'>
         Usuario
       </label>
@@ -45,7 +43,7 @@ export default function LoginForm () {
       />
       {errors.email &&
         <span className='error help is-danger is-medium'>
-          Necesitas llenar este campo
+          Este campo es necesario
         </span>}
       <label className='label label-login'>
         Contraseña
@@ -59,15 +57,11 @@ export default function LoginForm () {
       />
       {errors.password &&
         <span className='error help is-danger is-medium'>
-          Necesitas llenar este campo
+          Este campo es necesario
         </span>}
       <button className='btn button-primary btn-login'>
         Ingresar
       </button>
-      {error &&
-        <p className='help is-danger is-medium'>
-          Contraseña o usuario incorrectos
-        </p>}
     </form>
   )
 }

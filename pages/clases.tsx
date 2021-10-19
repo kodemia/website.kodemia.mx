@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { ToastContainer } from 'react-toastify'
-import { useAuth } from 'lib/hooks'
 // My components
 import Navbar from 'components/Navbar'
 import H5 from 'components/H5'
@@ -8,10 +7,9 @@ import H3 from 'components/H3'
 import ClassCard from 'components/Pages/Classes/ClassCard'
 import Footer from 'components/Footer'
 import Seo from 'components/SEO'
-// api
-import { getClasses } from '../lib/api'
-// utils
-import { checkToken } from '../utils/utils'
+
+import { useAuth } from 'lib/hooks'
+import classesService from 'lib/api/classes'
 
 export interface Class {
   date: string
@@ -27,16 +25,9 @@ export default function Classes () {
   const [classes, setClasses] = useState<Array<Class>>([])
   useAuth()
   useEffect(() => {
-    const token = window.sessionStorage.getItem('token') || ''
-
-    getClasses(token)
-      .then(classes => {
-        setClasses(classes)
-      })
-      .catch(error => {
-        const status = error.request.status
-        checkToken(status)
-      })
+    classesService.getAll()
+      .then(setClasses)
+      .catch(classesService.errorHandler)
   }, [])
 
   return (

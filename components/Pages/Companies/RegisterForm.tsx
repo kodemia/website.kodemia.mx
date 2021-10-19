@@ -10,9 +10,9 @@ import Button from 'components/Button'
 import Input from 'components/Inputs/Input'
 import PhoneInput from 'components/Inputs/PhoneInput'
 import schema from 'schemas/registerCompanyForm.schema'
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 
-import { registerCompany } from 'lib/api'
+import * as companyService from 'lib/api/company'
 
 type RegisterCompanyFormData = zod.infer<typeof schema>
 
@@ -32,28 +32,10 @@ export default function RegisterCompanyForm () {
       company: data.company
     }
 
-    registerCompany(data)
-      .then((result) => {
-        console.log(result)
-        router.push('/empresas/registro/gracias')
-      })
-      .catch(error => {
-        console.log('error', error)
-        const status = error.response.status
-        let errorMessage = `☠️ Ocurrio un error en el servidor,
-        por favor intenta mas tarde o reportalo a contacto@kodemia.mx`
-
-        if (status >= 400 && status < 500) {
-          errorMessage = '🤔 Por favor, revisa que tu información sea correcta y vuelve a intentar enviar el formulario'
-          toast.warn(errorMessage)
-          return
-        }
-
-        toast.error(errorMessage)
-      })
-      .finally(() => {
-        setIsSubmitting(false)
-      })
+    companyService.register(data)
+      .then(() => router.push('/empresas/registro/gracias'))
+      .catch(companyService.errorHandler)
+      .finally(() => setIsSubmitting(false))
   }
 
   return (
