@@ -33,6 +33,7 @@ export default z.object({
     .object({
       knowledge: z.string().optional(),
       reasonToProgramming: z.string().optional(),
+      campaignName: z.string().optional()
     })
     .optional(),
 });
