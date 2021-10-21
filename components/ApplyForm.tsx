@@ -27,7 +27,8 @@ export default function ApplyForm () {
   const onSubmit = (data: ApplyFormData) => {
     data.customFields = {
       knowledge: data.knowledge,
-      reasonToProgramming: data.reasonToProgramming
+      reasonToProgramming: data.reasonToProgramming,
+      campaignName: 'website'
     }
 
     apply.submit(data)
