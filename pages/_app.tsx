@@ -26,9 +26,7 @@ function MyApp ({ Component, pageProps }: AppProps) {
   }, [])
 
   return (
-    <section className='page-container'>
-      <Component {...pageProps} />
-    </section>
+    <Component {...pageProps} />
   )
 }
 

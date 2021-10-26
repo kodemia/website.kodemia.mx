@@ -5,12 +5,7 @@ import builderComponents from 'components/builder'
 export function init () {
   builder.init(process.env.BUILDER_API_KEY as string)
 
-  builderComponents.menus.forEach(menu => {
-    Builder.register('insertMenu', {
-      name: menu.name,
-      items: menu.items
-    })
-  })
+  builderComponents.menus.forEach(menu => Builder.register('insertMenu', menu))
 }
 
 if (process.env.NODE_ENV === 'production' && !process.env.BUILDER_API_KEY) {

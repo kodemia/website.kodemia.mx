@@ -10,6 +10,9 @@ module.exports = {
     HOTJAR_ID: process.env.HOTJAR_ID
   },
   images: {
-    domains: ['cdn.kodemia.mx']
+    domains: [
+      'cdn.kodemia.mx',
+      'cdn.builder.io'
+    ]
   }
 }
