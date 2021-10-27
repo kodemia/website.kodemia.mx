@@ -70,6 +70,9 @@ module.exports = {
       lineHeight: {
         h1: '1.07'
       },
+      maxWidth: {
+        'sm-kd': '220px'
+      },
       minHeight: {
         mini: '16px',
         'sm-kd': '465px'
@@ -77,8 +80,11 @@ module.exports = {
       minWidth: {
         'sm-kd': '220px'
       },
-      maxWidth: {
-        'sm-kd': '220px'
+      screens: {
+        mob: '320px', // Work around to deal with bulma spacing utilities TODO: remove when removing bulma
+        tablet: '640px',
+        laptop: '1024px',
+        desktop: '1280px'
       },
       webkitScrollbar: {
         width: '6px'
