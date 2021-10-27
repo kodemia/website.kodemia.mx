@@ -1,7 +1,6 @@
 
 import { GetServerSidePropsContext, InferGetServerSidePropsType, GetServerSidePropsResult } from 'next'
 import { builder, BuilderComponent, Builder } from '@builder.io/react'
-import classNames from 'classnames'
 
 import NavBar from 'components/LandingNavbar'
 import NotFoundPage from 'pages/404'
@@ -33,20 +32,10 @@ export default function BuilderPage (props: InferGetServerSidePropsType<typeof g
           mobileLogo={props.content?.data?.navbar?.mobileLogo}
         />
       }
-          <BuilderComponent
-            content={props.content}
-            model='page'
-          />
-      {/* <div
-        className={classNames(
-          'flex justify-center',
-          'w-full',
-          'sm:px-12',
-        )}
-      >
-        <main className='container'>
-        </main>
-      </div> */}
+      <BuilderComponent
+        content={props.content}
+        model='page'
+      />
     </>
   )
 }
