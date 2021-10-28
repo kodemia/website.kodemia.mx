@@ -113,6 +113,7 @@
       "stylelint-scss"
     ],
     "rules": {
+      "scss/at-rule-no-unknown": null,
       "max-nesting-depth": 7,
       "selector-max-compound-selectors": 7,
       "selector-no-qualifying-type": [
