@@ -5,8 +5,8 @@ import { Widget, PopupButton, Sidetab } from '@typeform/embed-react'
 
 export default function Typeform () {
   const router = useRouter()
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
+  const [email, setEmail] = useState<any>()
+  const [name, setName] = useState<any>()
 
   useEffect(() => {
     setEmail(router.query.email)

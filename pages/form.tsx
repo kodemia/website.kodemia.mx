@@ -2,7 +2,7 @@
 import * as zod from 'zod'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-
+import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -20,14 +20,16 @@ export default function Form () {
   const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
     resolver: zodResolver(schema)
   })
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
 
   const onSubmit = (data: ApplyFormData) => {
     console.log(data)
+    setIsSubmitting(true)
     router.push({
       pathname: '/typeform',
       query: {
-        email: data.email,
-        name: data.firstName
+        email: data.email || '',
+        name: data.firstName || ''
       }
     })
   }
@@ -128,9 +130,9 @@ export default function Form () {
       <div className='column is-full-desktop is-full-touch'>
         <Button
           isPrimary
-
+          label={isSubmitting ? 'Enviando' : 'Enviar'}
           type='submit'
-
+          isDisabled={isSubmitting}
         />
       </div>
     </form>
