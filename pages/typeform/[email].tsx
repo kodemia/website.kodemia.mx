@@ -15,5 +15,5 @@ export default function MyComponent () {
     onReady={() => {
       console.log('form ready')
     }}
-	       />
+  />
 }
