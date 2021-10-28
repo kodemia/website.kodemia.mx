@@ -27,9 +27,7 @@ export default function BackbaseApply () {
 
   return (
     <>
-      <Seo
-        title='Kodemia | Backbase | Prueba técnica'
-      />
+      <Seo title='Kodemia | Backbase | Prueba técnica' />
       <Widget
           id='dAy6dnqL'
           className='min-h-screen h-screen'

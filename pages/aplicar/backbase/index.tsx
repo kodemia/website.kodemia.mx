@@ -28,20 +28,13 @@ export default function BackbaseApply () {
 
   return (
     <>
-      <Seo
-        title='Kodemia | Backbase | Aplica'
+      <Seo title='Kodemia | Backbase | Aplica' />
+      <Widget
+          id='HwpqfUjL'
+          className='min-h-screen h-screen'
+          hidden={hiddenParams}
+          onSubmit={() => setIsFormSubmitted(true)}
       />
-      {isFormSubmitted &&
-         <p> To tech challenge </p>
-      }
-      {!isFormSubmitted &&
-        <Widget
-            id='HwpqfUjL'
-            className='min-h-screen h-screen'
-            hidden={hiddenParams}
-            onSubmit={() => setIsFormSubmitted(true)}
-        />
-      }
     </>
   )
 }
