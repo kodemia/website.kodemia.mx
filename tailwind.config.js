@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+        arrow: 'arrow ease-out linear 3s infinite',
         cursor: 'cursor alternate linear 0.8s infinite'
       },
       borderRadius: {
@@ -19,7 +20,8 @@ module.exports = {
         'black-kd': {
           dark: '#0E0E0E',
           DEFAULT: '#181818',
-          light: '#343434'
+          light: '#343434',
+          transparent: 'rgba(24, 24, 24, 0.4)'
         },
         'cyan-kd': {
           dark: '#07BABA',
@@ -58,6 +60,15 @@ module.exports = {
         mini: '10px'
       },
       keyframes: {
+        arrow: {
+          '0%, 100%': {
+            bottom: 'bottom-0'
+          },
+          '50%': {
+            bottom: '-60px',
+            width: '20px'
+          }
+        },
         cursor: {
           '0%, 100%': {
             borderBottomColor: 'transparent'
@@ -71,14 +82,16 @@ module.exports = {
         h1: '1.07'
       },
       maxWidth: {
-        'sm-kd': '220px'
+        'sm-kd': '220px',
+        content: '1086px'
       },
       minHeight: {
         mini: '16px',
         'sm-kd': '465px'
       },
       minWidth: {
-        'sm-kd': '220px'
+        'sm-kd': '220px',
+        content: '719px'
       },
       screens: {
         mob: '320px', // Work around to deal with bulma spacing utilities TODO: remove when removing bulma
