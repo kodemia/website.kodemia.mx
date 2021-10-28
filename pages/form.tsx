@@ -2,7 +2,7 @@
 import * as zod from 'zod'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useState } from 'react'
+
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -13,8 +13,6 @@ import Select from 'components/Inputs/Select'
 import schema from 'schemas/applyForm.schema'
 import { ToastContainer } from 'react-toastify'
 
-import apply from 'lib/api/apply'
-
 type ApplyFormData = zod.infer<typeof schema>
 
 export default function Form () {
@@ -22,20 +20,25 @@ export default function Form () {
   const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
     resolver: zodResolver(schema)
   })
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
 
   const onSubmit = (data: ApplyFormData) => {
     console.log(data)
-    router.push(`/typeform/${data.email}`)
+    router.push({
+      pathname: '/typeform',
+      query: {
+        email: data.email,
+        name: data.firstName
+      }
+    })
   }
 
   return (
     <form
-      className='columns is-mobile is-multiline bg-gray-500'
+      className='bg-gray-500'
       onSubmit={handleSubmit(onSubmit)}
     >
       <ToastContainer position='top-center' />
-      <div className='column is-half-desktop is-full-touch'>
+      <div className=' m-4 '>
         <Input
           label='Nombre'
           type='text'
@@ -47,7 +50,7 @@ export default function Form () {
         />
       </div>
 
-      <div className='column is-half-desktop is-full-touch'>
+      <div className=' m-4 '>
         <Input
           label='Apellido'
           type='text'
@@ -59,7 +62,7 @@ export default function Form () {
         />
       </div>
 
-      <div className='column is-half-desktop is-full-touch'>
+      <div className=' m-4 '>
         <Input
           label='Correo electrónico'
           type='email'
@@ -71,7 +74,7 @@ export default function Form () {
         />
       </div>
 
-      <div className='column is-half-desktop is-full-touch'>
+      <div className=' m-4'>
         <Controller
           name='phone'
           control={control}
@@ -86,7 +89,7 @@ export default function Form () {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className=' m-4'>
         <Select
           label='¿Tienes conocimientos previos en programación?'
           register={register}
@@ -102,7 +105,7 @@ export default function Form () {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className=' m-4 '>
         <Select
           label='¿Por qué quieres aprender a programar?'
           register={register}
@@ -118,16 +121,16 @@ export default function Form () {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
-				Al enviar este formulario estas aceptando nuestros <Link href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'> Términos y condiciones </Link>
+      <div className=' m-4'>
+        Al enviar este formulario estas aceptando nuestros <Link href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'> Términos y condiciones </Link>
       </div>
 
       <div className='column is-full-desktop is-full-touch'>
         <Button
           isPrimary
-          label={isSubmitting ? 'Enviando' : 'Enviar'}
+
           type='submit'
-          isDisabled={isSubmitting}
+
         />
       </div>
     </form>
