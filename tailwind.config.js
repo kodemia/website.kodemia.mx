@@ -5,6 +5,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        mob: '320px', // Work around to deal with bulma spacing utilities TODO: remove when removing bulma
+        tablet: '640px',
+        laptop: '1024px',
+        desktop: '1280px'
+      },
       animation: {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
@@ -19,7 +25,8 @@ module.exports = {
         'black-kd': {
           dark: '#0E0E0E',
           DEFAULT: '#181818',
-          light: '#343434'
+          light: '#343434',
+          trasparent: 'rgba(24, 24, 24, 0.85)'
         },
         'cyan-kd': {
           dark: '#07BABA',
@@ -78,7 +85,8 @@ module.exports = {
         'sm-kd': '220px'
       },
       maxWidth: {
-        'sm-kd': '220px'
+        'sm-kd': '220px',
+        '1086-px': '1086px'
       },
       webkitScrollbar: {
         width: '6px'

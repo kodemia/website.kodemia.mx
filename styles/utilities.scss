@@ -1,0 +1,16 @@
+
+@layer utilities {
+  .inner-strong {
+    &-cyan {
+      strong {
+        color: #0ff;
+      }
+    }
+
+    &-red {
+      strong {
+        color: #c22327;
+      }
+    }
+  }
+}

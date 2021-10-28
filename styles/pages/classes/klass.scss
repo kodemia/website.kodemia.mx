@@ -4,7 +4,7 @@
   .klass-container {
     height: 600px;
     margin: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 100%;
 
     @include on-mobile {

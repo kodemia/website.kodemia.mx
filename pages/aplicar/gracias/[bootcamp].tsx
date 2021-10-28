@@ -8,10 +8,14 @@ import Cursor from 'components/TextCursor'
 import Button from 'components/Button'
 
 interface Props {
-  bootcamp: 'javascript-live' | 'python-live'
+  bootcamp: 'javascript-live' | 'python-live' | 'android' | 'ios' | 'backbase'
 }
 
 export default function Thankyou (props: Props) {
+  const isBackbase = props.bootcamp?.toLowerCase() === 'backbase'
+    || props.bootcamp?.toLowerCase() === 'android'
+    || props.bootcamp?.toLowerCase() === 'ios'
+
   return (
     <>
       <NavBar />
@@ -34,22 +38,65 @@ export default function Thankyou (props: Props) {
                       <br />
                       pronto posible
                     </div>
-                    <div className='column is-full mb-5 is-hidden-touch'>
-                      <Button
-                        isPrimary
-                        label='Descarga el Brochure'
-                        icon='/icons/download.svg'
-                        href={`/brochures/${props.bootcamp}/desktop`}
-                      />
-                    </div>
-                    <div className='column is-full mb-5 is-hidden-desktop'>
-                      <Button
-                        isPrimary
-                        label='Descarga el Brochure'
-                        icon='/icons/download.svg'
-                        href={`/brochures/${props.bootcamp}/mobile`}
-                      />
-                    </div>
+                    {isBackbase && (
+                      <>
+                        {/* Android */}
+                        <div className='column is-full mb-5 is-hidden-touch'>
+                          <Button
+                            isPrimary
+                            label='Descarga el Brochure de Android'
+                            icon='/icons/download.svg'
+                            href={'/brochures/android/desktop'}
+                          />
+                        </div>
+                        <div className='column is-full mb-5 is-hidden-desktop'>
+                          <Button
+                            isPrimary
+                            label='Descarga el Brochure de Android'
+                            icon='/icons/download.svg'
+                            href={'/brochures/android/mobile'}
+                          />
+                        </div>
+
+                        {/* iOS */}
+                        <div className='column is-full mb-5 is-hidden-touch'>
+                          <Button
+                            isPrimary
+                            label='Descarga el Brochure de iOS'
+                            icon='/icons/download.svg'
+                            href={'/brochures/ios/desktop'}
+                          />
+                        </div>
+                        <div className='column is-full mb-5 is-hidden-desktop'>
+                          <Button
+                            isPrimary
+                            label='Descarga el Brochure iOS'
+                            icon='/icons/download.svg'
+                            href={'/brochures/ios/mobile'}
+                          />
+                        </div>
+                      </>
+                    )}
+                    {!isBackbase && (
+                      <>
+                        <div className='column is-full mb-5 is-hidden-touch'>
+                          <Button
+                            isPrimary
+                            label='Descarga el Brochure'
+                            icon='/icons/download.svg'
+                            href={`/brochures/${props.bootcamp}/desktop`}
+                          />
+                        </div>
+                        <div className='column is-full mb-5 is-hidden-desktop'>
+                          <Button
+                            isPrimary
+                            label='Descarga el Brochure'
+                            icon='/icons/download.svg'
+                            href={`/brochures/${props.bootcamp}/mobile`}
+                          />
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -74,7 +121,10 @@ export function getStaticPaths () {
   return {
     paths: [
       { params: { bootcamp: 'javascript-live' } },
-      { params: { bootcamp: 'python-live' } }
+      { params: { bootcamp: 'python-live' } },
+      { params: { bootcamp: 'android' } },
+      { params: { bootcamp: 'ios' } },
+      { params: { bootcamp: 'backbase' } },
     ],
     fallback: false
   }
