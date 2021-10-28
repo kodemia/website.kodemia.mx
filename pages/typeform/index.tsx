@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { Widget, PopupButton, Sidetab } from '@typeform/embed-react'
 
-export default function Typeform () {
+export default function Typeform() {
   const router = useRouter()
-  const [email, setEmail] = useState<any>()
-  const [name, setName] = useState<any>()
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
 
   useEffect(() => {
-    setEmail(router.query.email)
-    setName(router.query.name)
+    setEmail(router.query.email as string)
+    setName(router.query.name as string)
     console.log(router.query)
   }, [])
 
