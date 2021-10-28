@@ -1,6 +1,6 @@
 
 import { GetServerSidePropsContext } from 'next'
-import { Program, BrochureFormat } from 'types/common'
+import { Program, BrochureFormat, BrochureVersion } from 'types/common'
 
 import brochures from 'config/brochure-links.json'
 
@@ -9,12 +9,13 @@ export default function DownloadBrochure () {
 }
 
 export function getServerSideProps (context: GetServerSidePropsContext) {
+  const version: BrochureVersion = brochures.latestVersion as BrochureVersion
   const program: Program = context?.params?.program as Program ?? 'javascript-live'
-  const version: BrochureFormat = context?.query?.version as BrochureFormat ?? 'mobile'
+  const format: BrochureFormat = context?.query?.version as BrochureFormat ?? 'mobile'
 
   // TODO: remove hardcoded version when 2021v2 updates are applied to the website
   context.res
-    .writeHead(302, { Location: brochures['2021v1'][program][version] })
+    .writeHead(302, { Location: brochures[version][program][format] })
     .end()
 
   return {

@@ -3,6 +3,7 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType, GetServerSidePr
 import { builder, BuilderComponent, Builder } from '@builder.io/react'
 
 import NavBar from 'components/LandingNavbar'
+import Seo from 'components/SEO'
 import NotFoundPage from 'pages/404'
 
 interface Props {
@@ -25,6 +26,9 @@ export default function BuilderPage (props: InferGetServerSidePropsType<typeof g
 
   return (
     <>
+      <Seo
+        title='Kodemia | Backbase - mobile'
+      />
       {
         props.content?.data?.navbar?.show &&
         <NavBar

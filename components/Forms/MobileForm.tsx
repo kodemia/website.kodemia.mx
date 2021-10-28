@@ -32,15 +32,30 @@ export default function ApplyForm () {
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
+    setIsSubmitting(true)
     data.customFields = {
       campaignName: 'Landing Page Backbase',
       reasonToApplyForScholarship: data.reasonToApplyForScholarship
     }
 
+    const redirectQuery = new URLSearchParams({
+      name: `${data.firstName} ${data.lastName}`,
+      email: data.email,
+      course: data.course
+    })
+
     apply.submit(data)
-      .then(() => router.push('aplicar/gracias/javascript-live'))
-      .catch(apply.errorHandler)
-      .finally(() => setIsSubmitting(false))
+      .then(() => {
+        setIsSubmitting(false)
+        router.push({
+          pathname: '/aplicar/backbase',
+          query: redirectQuery.toString()
+        })
+      })
+      .catch(error => {
+        apply.errorHandler(error)
+        setIsSubmitting(false)
+      })
   }
 
   return (
@@ -131,9 +146,9 @@ export default function ApplyForm () {
       <div className='pt-3'>
         <Button
           isPrimary
-          label={formState.isSubmitting ? 'Enviando' : 'Aplica a la Beca'}
+          label={isSubmitting ? 'Enviando...' : 'Aplica a la Beca'}
           type='submit'
-          isDisabled={formState.isSubmitting}
+          isDisabled={isSubmitting}
         />
       </div>
     </form>
