@@ -25,17 +25,20 @@ export default function ApplyForm() {
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
+    setIsSubmitting(true)
+
     data.customFields = {
       knowledge: data.knowledge,
       reasonToProgramming: data.reasonToProgramming,
       campaignName: 'website'
     }
 
-    setIsSubmitting(true)
-
     apply.submit(data)
       .then(() => router.push('aplicar/gracias/javascript-live'))
-      .catch(apply.errorHandler)
+      .catch(error => {
+        apply.errorHandler(error)
+        setIsSubmitting(false)
+      })
       .finally(() => setIsSubmitting(false))
   }
 

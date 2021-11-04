@@ -3,8 +3,8 @@ import parsePhoneNumber from "libphonenumber-js";
 import * as z from "zod";
 
 export default z.object({
-  firstName: z.string().min(2, { message: "Ingresa tu nombre" }),
-  lastName: z.string().min(2, { message: "Ingresa tu apellido" }),
+  firstName: z.string().min(2, { message: "Ingresa tu nombre" }).regex(/[a-zA-Z]/, { message: "El nombre debe ser texto" }),
+  lastName: z.string().min(2, { message: "Ingresa tu apellido" }).regex(/[a-zA-Z]/, { message: "El apellido debe ser texto" }),
   email: z.string().email({ message: "Email invalido" }),
   phone: z.string().refine(
     (value) => {
