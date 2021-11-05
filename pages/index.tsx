@@ -37,18 +37,18 @@ export default function Home () {
         whiteTitle={WhyKodemiaCards.whiteTitle}
       />
       <OurBootcamps bootcamps={OurBootcampsCards} />
-      <KodemiaExperience videos={ExperienceData} />
-      <WhatGoingAchieve winnerImages={WinnerImages} />
+      {/* <KodemiaExperience videos={ExperienceData} />
+      <WhatGoingAchieve winnerImages={WinnerImages} /> */}
       <OurMethod ourMethod={OurMethodData} />
       <KodemiaFinancing info={KodemiaFinancingData} />
-      <AlliancesKodemia
+      {/* <AlliancesKodemia
         allies={AlliesData.allies}
         cyanTitle={AlliesData.cyanTitle}
         subtitle={AlliesData.subtitle}
         whiteTitle={AlliesData.whiteTitle}
       />
       <Testimonials testimonials={TestimonialData} />
-      <TransformYourLife />
+      <TransformYourLife /> */}
       <Footer />
     </>
   )
