@@ -2,8 +2,8 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import HeroCard from '../../HeroCard'
 import BgVideo from '../../BgVideo'
+import HeroCard from '../../HeroCard'
 
 export interface Props {
   video: string
@@ -22,15 +22,18 @@ export default function Hero ({ video }: Props) {
         'absolute',
         'bg-gradient-to-t from-black-kd to-black-kd-transparent',
         'h-screen',
-        'mob:pt-36 mob:px-11 mob:pb-5 tablet:pt-44 tablet:px-20 tablet:pb-0 laptop:pt-48 laptop:px-12 laptop:pb-0', // TODO: juntar con los demás paddings
+        'mob:pt-36 mob:px-45px mob:pb-5',
+        'tablet:pt-44 tablet:px-20 tablet:pb-0',
+        'laptop:pt-48 laptop:px-12 laptop:pb-0', // TODO: juntar con los demás paddings
         'top-0',
-        'w-full'
+        'mob:w-full'
       )}
       >
         <div className={classNames(
           // 'container'
-          'my-0 mx-auto',
-          'max-w-content'
+          'mob:my-0 mob:mx-auto',
+          'tablet:mx-45px',
+          'laptop:max-w-content'
         )}
         >
           <HeroCard
@@ -50,7 +53,7 @@ export default function Hero ({ video }: Props) {
             'mob:hidden tablet:flex',
             'left-0',
             'bottom-0',
-            'mt-0 mx-auto mb-28',
+            'laptop:mt-0 laptop:mx-auto laptop:mb-28',
             'mob:w-8'
           )}
         />

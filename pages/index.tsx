@@ -36,7 +36,7 @@ export default function Home () {
         subtitle={WhyKodemiaCards.subtitle}
         whiteTitle={WhyKodemiaCards.whiteTitle}
       />
-      <OurBootcamps bootcamps={OurBootcampsCards} />
+      {/* <OurBootcamps bootcamps={OurBootcampsCards} /> */}
       {/* <KodemiaExperience videos={ExperienceData} />
       <WhatGoingAchieve winnerImages={WinnerImages} /> */}
       <OurMethod ourMethod={OurMethodData} />

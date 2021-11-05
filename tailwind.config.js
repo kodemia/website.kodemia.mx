@@ -99,6 +99,10 @@ module.exports = {
         laptop: '1024px',
         desktop: '1280px'
       },
+      spacing: {
+        '45px': '45px',
+        '150px': '150px'
+      },
       webkitScrollbar: {
         width: '6px'
       }
