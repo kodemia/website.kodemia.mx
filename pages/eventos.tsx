@@ -1,34 +1,44 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { builder } from '@builder.io/react';
-import { InferGetStaticPropsType } from 'next'
 import dayjs from 'dayjs'
+import es from "dayjs/locale/es";
 //My components
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import H5 from 'components/H5'
 import H3 from 'components/H3'
-import BootcampCard from 'components/BootcampCard'
+import Card from 'components/Card'
 
+dayjs.locale(es);
+export interface Event {
+	name: string
+	date: Date
+	isLive: Boolean
+	isPrivate: Boolean
+	link: string
+}
+
+export interface Props {
+	events: Array<Event>
+}
 
 export const getStaticProps = async () => {
-	const date = new Date();
+	const date = Date.now()
 	const results = await builder.getAll('evento', { limit: 10 })
 	const events = results.map(event => event.data)
-	const currentEvents = results.filter(event => event.date < date)
+		.sort((a: any, b: any) => a.date - b.date)
+		.filter((event: any) => event.date > date)
 
 	return {
 		props: {
 			events
 		},
-		revalidate: 100
+		revalidate: 300
 	}
 }
 
-export default function Eventos({ events }: any) {
-	useEffect(() => {
-		console.log(dayjs())
-	})
+export default function Eventos({ events }: Props) {
 	return (
 		<>
 			<Navbar />
@@ -48,23 +58,30 @@ export default function Eventos({ events }: any) {
 					</div>
 				</div>
 			</div>
-			<section className={classNames('bg-black-kd', 'flex')}>
-				{events.map((event, index) => (
-					<BootcampCard key={index}
-						mode={event.name}
-						date={dayjs(event.date).format('DD MMMM ').toString()}
-						schedule={dayjs(event.date).format('hh:mm a').toString()}
-						feature='Conexión remota vía streaming'
-						link='#'
-
-					/>
-				))}
-				<BootcampCard mode='Kodeday: Desarrolla tu juego del calamar con Android'
-					date='6 de Noviembre'
-					schedule='11:00 hrs.'
-					feature='Conexión remota vía streaming'
-					link='#' />
-			</section>
+			<main className={classNames(
+				'bg-black-kd p-12 lg:p-14',
+				'flex justify-center xl:items-center'
+			)}>
+				<section className={classNames(
+					'max-w-1086-px w-full ',
+					'flex flex-wrap justify-between'
+				)}>
+					{
+						events.map((event, index) => (
+							<article className={classNames('w-full md:w-80 ', 'my-5')}>
+								<Card key={index}
+									name={event.name}
+									date={dayjs(event.date).format('DD MMMM ').toString()}
+									schedule={`${dayjs(event.date).format('hh:mm').toString()} hrs.`}
+									text={event.isLive ? 'Conexión remota vía streaming' : 'Presencial, te esperamos 😎'}
+									btnLabel={event.isPrivate ? 'Regístrate' : 'Ver evento'}
+									link={event.link}
+								/>
+							</article>
+						))
+					}
+				</section>
+			</main>
 			<Footer />
 		</>
 	)
