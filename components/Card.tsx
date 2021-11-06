@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 // My components
 import H4 from './H4'
-import H5 from './H5'
 import Button from './Button'
 
 export interface Props {
