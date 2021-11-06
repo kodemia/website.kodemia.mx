@@ -72,7 +72,7 @@ export default function Eventos({ events }: Props) {
 								<Card key={index}
 									name={event.name}
 									date={dayjs(event.date).format('DD MMMM ').toString()}
-									schedule={`${dayjs(event.date).format('hh:mm').toString()} hrs.`}
+									schedule={`${dayjs(event.date).format('HH:mm').toString()} hrs.`}
 									text={event.isLive ? 'Conexión remota vía streaming' : 'Presencial, te esperamos 😎'}
 									btnLabel={event.isPrivate ? 'Regístrate' : 'Ver evento'}
 									link={event.link}
