@@ -25,7 +25,7 @@ export interface Props {
 
 export const getStaticProps = async () => {
 	const date = Date.now()
-	const results = await builder.getAll('evento', { limit: 10 })
+	const results = await builder.getAll('evento')
 	const events = results.map(event => event.data)
 		.sort((a: any, b: any) => a.date - b.date)
 		.filter((event: any) => event.date > date)
@@ -68,7 +68,8 @@ export default function Eventos({ events }: Props) {
 				)}>
 					{
 						events.map((event, index) => (
-							<article className={classNames('w-full md:w-80 ', 'my-5')}>
+							<article key={`event-${index}`}
+								className={classNames('w-full md:w-80 ', 'my-5')}>
 								<Card key={index}
 									name={event.name}
 									date={dayjs(event.date).format('DD MMMM ').toString()}

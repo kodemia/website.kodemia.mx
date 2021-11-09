@@ -82,7 +82,7 @@ module.exports = {
         'sm-kd': '465px'
       },
       minWidth: {
-        'sm-kd': '220px',
+        'sm-kd': '220px'
       },
       maxWidth: {
         'sm-kd': '220px',
@@ -92,10 +92,7 @@ module.exports = {
         width: '6px'
       },
       backgroundImage: {
-        'events': "url('https://s3.us-east-2.amazonaws.com/cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
-        mobile: "url('https://s3.us-east-2.amazonaws.com/cdn.kodemia.mx/images/eventos/eventos-mobile.jpg')"
-        ,
-        'events-mobile': "url('https://s3.us-east-2.amazonaws.com/cdn.kodemia.mx/images/eventos/eventos-mobile.jpg')"
+        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
       }
     }
   }
