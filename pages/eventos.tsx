@@ -43,7 +43,7 @@ export default function Eventos({ events }: Props) {
 		<>
 			<Navbar />
 			<header className={classNames(
-				'bg-no-repeat bg-cover bg-events h-80 min-h-430-px',
+				'bg-no-repeat bg-cover bg-bottom bg-events h-80 min-h-430-px',
 				'flex flex-col justify-center xl:items-center'
 			)}>
 				<div className={classNames('px-14 max-w-1086-px w-full xl:px-0')}>
