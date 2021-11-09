@@ -33,7 +33,6 @@ export default function OurMethod ({ ourMethod: { title, keywords, text, cards }
     >
       <div className={classNames(
         'mob:m-0 tablet:my-0 tablet:mx-20',
-        // 'laptop:mx-12',
         'mob:max-w-full laptop:max-w-content',
         'mob:min-w-full laptop:min-w-content',
         'mob:pt-20 mob:px-11 mob:pb-12',
@@ -44,7 +43,7 @@ export default function OurMethod ({ ourMethod: { title, keywords, text, cards }
         <H5>
           Nuestro Método
         </H5>
-        <div className='max-w-sm'>
+        <div className='max-w-330px'>
           <H3
             whiteText={title}
             cyanText={keywords}
