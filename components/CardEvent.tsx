@@ -45,7 +45,7 @@ export default function Card({
 			<Button
 				isPrimary
 				label={btnLabel}
-				link={link}
+				href={link}
 			/>
 		</div>
 	)

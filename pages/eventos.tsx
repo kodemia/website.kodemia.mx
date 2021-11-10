@@ -8,7 +8,7 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import H5 from 'components/H5'
 import H3 from 'components/H3'
-import Card from 'components/Card'
+import CardEvent from 'components/CardEvent'
 
 dayjs.locale(es);
 export interface Event {
@@ -64,13 +64,13 @@ export default function Eventos({ events }: Props) {
 			)}>
 				<section className={classNames(
 					'max-w-1086-px w-full ',
-					'flex flex-wrap justify-between'
+					'flex flex-wrap justify-center'
 				)}>
 					{
 						events.map((event, index) => (
 							<article key={`event-${index}`}
-								className={classNames('w-full md:w-80 ', 'my-5')}>
-								<Card key={index}
+								className={classNames('w-full md:w-80 ', 'my-5 mx-3')}>
+								<CardEvent key={index}
 									name={event.name}
 									date={dayjs(event.date).format('DD MMMM ').toString()}
 									schedule={`${dayjs(event.date).format('HH:mm').toString()} hrs.`}
