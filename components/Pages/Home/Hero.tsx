@@ -32,8 +32,10 @@ export default function Hero ({ video }: Props) {
         <div className={classNames(
           // 'container'
           'mob:my-0 mob:mx-auto',
-          'tablet:mx-45px',
-          'laptop:max-w-content'
+          // 'laptop:mx-45px',
+          // 'laptop:max-w-content'
+          'mob:max-w-full laptop:max-w-content',
+          'mob:min-w-full laptop:min-w-content'
         )}
         >
           <HeroCard

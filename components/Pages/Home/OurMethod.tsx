@@ -36,8 +36,8 @@ export default function OurMethod ({ ourMethod: { title, keywords, text, cards }
         'mob:max-w-full laptop:max-w-content',
         'mob:min-w-full laptop:min-w-content',
         'mob:pt-20 mob:px-11 mob:pb-12',
-        'tablet:px-20',
-        'laptop:pt-24 laptop:px-0 laptop:pb-16'
+        'tablet:pt-24 tablet:px-20 tablet:pb-16',
+        'laptop:px-0'
       )}
       >
         <H5>
