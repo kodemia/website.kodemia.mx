@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { Widget } from '@typeform/embed-react'
+import { removeNullishEntries, getValueFromQuery } from 'lib/utils'
 
 import Seo from 'components/SEO'
 
@@ -10,8 +11,8 @@ export default function BackbaseApply () {
   const [ isFormSubmitted, setIsFormSubmitted ] = useState(false)
 
   const hiddenParams = {
-    name: router.query?.name as string,
-    email: router.query?.email as string
+    name: getValueFromQuery(router, 'name'),
+    email: getValueFromQuery(router, 'email')
   }
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function BackbaseApply () {
       <Widget
           id='dAy6dnqL'
           className='min-h-screen h-screen'
-          hidden={hiddenParams}
+          hidden={removeNullishEntries(hiddenParams)}
           onSubmit={() => setIsFormSubmitted(true)}
       />
     </>
