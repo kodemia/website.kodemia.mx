@@ -79,7 +79,8 @@ module.exports = {
       },
       minHeight: {
         mini: '16px',
-        'sm-kd': '465px'
+        'sm-kd': '465px',
+        '430-px': '430px'
       },
       minWidth: {
         'sm-kd': '220px'
@@ -90,6 +91,9 @@ module.exports = {
       },
       webkitScrollbar: {
         width: '6px'
+      },
+      backgroundImage: {
+        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
       }
     }
   }
