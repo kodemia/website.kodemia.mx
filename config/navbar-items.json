@@ -6,7 +6,11 @@
   {
     "name": "Empresas",
     "href": "/empresas"
-  }, 
+  },
+  {
+    "name": "Eventos",
+    "href": "/eventos"
+  },
   {
     "name": "Alumnos",
     "href": "/login",
