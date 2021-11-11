@@ -84,6 +84,7 @@ module.exports = {
       maxWidth: {
         'sm-kd': '220px',
         '330px': '330px',
+        '50%': '50%',
         content: '1086px'
       },
       minHeight: {
@@ -92,6 +93,7 @@ module.exports = {
       },
       minWidth: {
         'sm-kd': '220px',
+        '50%': '50%',
         content: '719px'
       },
       screens: {
