@@ -9,6 +9,7 @@ import Footer from 'components/Footer'
 import H5 from 'components/H5'
 import H3 from 'components/H3'
 import CardEvent from 'components/CardEvent'
+import Seo from 'components/SEO'
 
 dayjs.locale(es);
 export interface Event {
@@ -41,6 +42,9 @@ export const getStaticProps = async () => {
 export default function Eventos({ events }: Props) {
   return (
     <>
+      <Seo
+        title='Kodemia | Eventos'
+      />
       <Navbar />
       <header className={classNames(
         'bg-no-repeat bg-cover bg-bottom bg-events h-80 min-h-430-px',
