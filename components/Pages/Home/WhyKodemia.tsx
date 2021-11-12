@@ -36,7 +36,7 @@ export default function WhyKodemia ({
         // 'section-container',
         'grid',
         'mob:grid-cols-1 laptop:grid-cols-3',
-        'mob-m-0 tablet:my-0 tablet:mx-20',
+        'mob:m-0 tablet:my-0 tablet:mx-20',
         'mob:pt-20 mob:px-11 mob:pb-12',
         'tablet:pt-24 tablet:px-20 tablet:pb-16',
         'laptop:px-0',
