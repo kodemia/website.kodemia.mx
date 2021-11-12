@@ -22,18 +22,22 @@ export default function KodemiaFinancing ({ info }: Props) {
       // 'kodemia-financing',
       'mob:bg-financing-mobile tablet:bg-financing-tablet laptop:bg-financing-desktop',
       'bg-cover bg-no-repeat',
-      'mob:bg-center',
-      'mob:flex mob:justify-center tablet:justify-start',
-      'mob:py-0 mob:px-11 tablet:px-20',
-      'laptop:w-full'
+      'mob:bg-center laptop:bg-left-top',
+      'mob:flex mob:justify-center tablet:justify-start laptop:justify-center',
+      'mob:py-0 mob:px-11 tablet:px-20 laptop:px-0',
+      'mob:w-full'
     )}
     >
       <div className={classNames(
         // 'kodemia-financing-container',
         // 'section-container', // TODO: quitar y cambiar por margin
         'flex flex-col justify-center',
-        'm-0',
-        'mob:max-w-full tablet:max-w-md laptop:max-w-content',
+        // 'mob:m-0 tablet:my-0 tablet:mx-11',
+        'mob:m-0 laptop:mx-20',
+        'mob:max-w-full tablet:max-w-md laptop:max-w-content', // TODO: checar si agregar Width de tablet
+
+        'mob:min-w-full laptop:min-w-content',
+
         'mob:pt-20 mob:px-0 mob:pb-16',
         'tablet:pt-24 tablet:pb-20',
         'mob:w-full tablet:w-1/2 laptop:w-full'
@@ -44,7 +48,7 @@ export default function KodemiaFinancing ({ info }: Props) {
         </H5>
         <div className={classNames(
           // 'title-container',
-          'mob:w-full laptop:max-w-xs'
+          'mob:w-full laptop:w-300px'
         )}
         >
           <H3
@@ -56,7 +60,7 @@ export default function KodemiaFinancing ({ info }: Props) {
           // 'text',
           'text-base font-medium',
           'mt-8 mx-0 mb-9',
-          'max-w-3xl'
+          'max-w-730px'
         )}
         >
           {info.text}
