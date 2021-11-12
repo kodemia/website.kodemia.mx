@@ -1,8 +1,9 @@
 
 import React from 'react'
+import classNames from 'classnames'
 // My component
-import H5 from '../../H5'
 import H3 from '../../H3'
+import H5 from '../../H5'
 import Button from '../../Button'
 
 export interface Data {
@@ -17,19 +18,55 @@ export interface Props {
 
 export default function KodemiaFinancing ({ info }: Props) {
   return (
-    <section className='kodemia-financing'>
-      <div className='kodemia-financing-container  section-container'>
+    <section className={classNames(
+      // 'kodemia-financing',
+      'mob:bg-financing-mobile tablet:bg-financing-tablet laptop:bg-financing-desktop',
+      'bg-cover bg-no-repeat',
+      'mob:bg-center',
+      'mob:flex mob:justify-center tablet:justify-start',
+      'mob:py-0 mob:px-11 tablet:px-20',
+      'laptop:w-full'
+    )}
+    >
+      <div className={classNames(
+        // 'kodemia-financing-container',
+        // 'section-container', // TODO: quitar y cambiar por margin
+        'flex flex-col justify-center',
+        'm-0',
+        'mob:max-w-full tablet:max-w-md laptop:max-w-content',
+        'mob:pt-20 mob:px-0 mob:pb-16',
+        'tablet:pt-24 tablet:pb-20',
+        'mob:w-full tablet:w-1/2 laptop:w-full'
+      )}
+      >
         <H5>
           {info.section}
         </H5>
-        <div className='title-container'>
+        <div className={classNames(
+          // 'title-container',
+          'mob:w-full laptop:max-w-xs'
+        )}
+        >
           <H3
             whiteText={info.title}
             cyanText={info.keywords}
           />
         </div>
-        <p className='text'>{info.text}</p>
-        <div className='btn-container'>
+        <p className={classNames(
+          // 'text',
+          'text-base font-medium',
+          'mt-8 mx-0 mb-9',
+          'max-w-3xl'
+        )}
+        >
+          {info.text}
+        </p>
+        <div className={classNames(
+          // 'btn-container',
+          'mob:max-w-full laptop:max-w-screen-mob',
+          'mob:w-full laptop:w-1/3'
+        )}
+        >
           <Button
             label='Conoce más'
             isPrimary

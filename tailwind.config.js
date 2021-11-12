@@ -9,6 +9,11 @@ module.exports = {
         arrow: 'arrow ease-out linear 3s infinite',
         cursor: 'cursor alternate linear 0.8s infinite'
       },
+      backgroundImage: {
+        'financing-desktop': 'url("/images/kodemia-financing/apoyo-kodemia.jpg")',
+        'financing-mobile': 'url("/images/kodemia-financing/apoyo-mobile.jpg")',
+        'financing-tablet': 'url("/images/kodemia-financing/apoyo-tablet.jpg")'
+      },
       borderRadius: {
         card: '10px',
         'gray-card': '30px'

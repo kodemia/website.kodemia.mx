@@ -47,8 +47,8 @@ export default function Home () {
         subtitle={AlliesData.subtitle}
         whiteTitle={AlliesData.whiteTitle}
       />
-      <Testimonials testimonials={TestimonialData} />
-      <TransformYourLife /> */}
+      <Testimonials testimonials={TestimonialData} /> */}
+      <TransformYourLife />
       <Footer />
     </>
   )

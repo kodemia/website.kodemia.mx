@@ -35,12 +35,12 @@
 
     @include on-tablet {
       margin: 0;
-      max-width: 437px;
+      max-width: 437px; // TODO: checar si agregar este tamaño al tailwind.config
       width: 50%;
     }
 
     .title-container {
-      width: 300px;
+      width: 300px; // TODO: checar si agregar este tamaño al tailwind.config
 
       @include on-mobile {
         width: 100%;
