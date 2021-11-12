@@ -1,13 +1,24 @@
 
-import parsePhoneNumber from "libphonenumber-js";
-import * as z from "zod";
+import parsePhoneNumber from "libphonenumber-js"
+import * as z from "zod"
+import validator from 'validator'
 
 export default z.object({
-  firstName: z.string().min(2, { message: "Ingresa tu nombre" }).regex(/[a-zA-Z]/, { message: "El nombre debe ser texto" }),
-  lastName: z.string().min(2, { message: "Ingresa tu apellido" }).regex(/[a-zA-Z]/, { message: "El apellido debe ser texto" }),
+  firstName: z
+	  .string()
+	  .min(2, { message: "Ingresa tu nombre" })
+		.refine(value => validator.isAlpha(value, 'es-ES',{ignore:' '}),
+		{ message: 'Debe ser texto valido' }),
+  lastName: z
+	  .string()
+		.min(2, { message: "Ingresa tu apellido" })
+		.refine(value => validator.isAlpha(value, 'es-ES',{ignore:' '}),
+		{ message: 'Debe ser texto valido' }),
   email: z.string().email({ message: "Email invalido" }),
-  phone: z.string().refine(
-    (value) => {
+  phone: z.
+	  string()
+		.refine(
+      value => {
       value = `+${value}`;
       const phoneNumber = parsePhoneNumber(value);
       return phoneNumber?.isValid();
@@ -28,7 +39,6 @@ export default z.object({
       "Complementar/cambiar mi carrera profesional",
     ])
     .optional(),
-  //course: z.enum(["javascript-live"]),
   customFields: z
     .object({
       knowledge: z.string().optional(),
