@@ -32,12 +32,9 @@ export default function KodemiaFinancing ({ info }: Props) {
         // 'kodemia-financing-container',
         // 'section-container', // TODO: quitar y cambiar por margin
         'flex flex-col justify-center',
-        // 'mob:m-0 tablet:my-0 tablet:mx-11',
         'mob:m-0 laptop:mx-20',
         'mob:max-w-full tablet:max-w-md laptop:max-w-content', // TODO: checar si agregar Width de tablet
-
         'mob:min-w-full laptop:min-w-content',
-
         'mob:pt-20 mob:px-0 mob:pb-16',
         'tablet:pt-24 tablet:pb-20',
         'mob:w-full tablet:w-1/2 laptop:w-full'
