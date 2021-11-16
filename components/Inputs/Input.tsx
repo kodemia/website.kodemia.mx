@@ -12,7 +12,7 @@ export interface Props {
   required?: boolean
 }
 
-export default function Input (props: Props) {
+export default function Input(props: Props) {
   return (
     <div className='field'>
       <div className='label has-text-white has-text-weight-normal'>
@@ -33,7 +33,7 @@ export default function Input (props: Props) {
       </div>
       {
         props.error &&
-          <p className='help is-danger'>{props.error}</p>
+        <p className='help is-danger'>{props.error}</p>
       }
     </div>
   )

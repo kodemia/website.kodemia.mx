@@ -17,7 +17,7 @@ import { useRouter } from 'next/router'
 
 type ApplyFormData = zod.infer<typeof schema>
 
-export default function ApplyForm () {
+export default function ApplyForm() {
   const { register, handleSubmit, control, errors } = useForm<ApplyFormData>({
     resolver: zodResolver(schema)
   })
@@ -25,6 +25,8 @@ export default function ApplyForm () {
   const router = useRouter()
 
   const onSubmit = (data: ApplyFormData) => {
+    setIsSubmitting(true)
+
     data.customFields = {
       knowledge: data.knowledge,
       reasonToProgramming: data.reasonToProgramming,
@@ -33,7 +35,10 @@ export default function ApplyForm () {
 
     apply.submit(data)
       .then(() => router.push('aplicar/gracias/javascript-live'))
-      .catch(apply.errorHandler)
+      .catch(error => {
+        apply.errorHandler(error)
+        setIsSubmitting(false)
+      })
       .finally(() => setIsSubmitting(false))
   }
 

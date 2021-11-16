@@ -16,7 +16,7 @@ import * as companyService from 'lib/api/company'
 
 type RegisterCompanyFormData = zod.infer<typeof schema>
 
-export default function RegisterCompanyForm () {
+export default function RegisterCompanyForm() {
   const { register, handleSubmit, control, errors } = useForm<RegisterCompanyFormData>({
     resolver: zodResolver(schema)
   })
@@ -34,7 +34,10 @@ export default function RegisterCompanyForm () {
 
     companyService.register(data)
       .then(() => router.push('/empresas/registro/gracias'))
-      .catch(companyService.errorHandler)
+      .catch(error => {
+        companyService.errorHandler(error)
+        setIsSubmitting(false)
+      })
       .finally(() => setIsSubmitting(false))
   }
 
