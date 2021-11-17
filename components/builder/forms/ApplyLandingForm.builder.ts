@@ -1,5 +1,6 @@
-import { Builder } from '@builder.io/react'
 
+import { Builder } from '@builder.io/react'
+//TODO:  cambiarlo por ApplyForm
 import ApplyLandingForm from 'components/Forms/ApplyLandingForm'
 import icons from 'components/builder/icons'
 
