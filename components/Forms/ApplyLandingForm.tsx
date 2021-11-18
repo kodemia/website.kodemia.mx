@@ -30,7 +30,7 @@ export default function ApplyLandingForm() {
 		data.customFields = {
 			knowledge: data.knowledge,
 			reasonToProgramming: data.reasonToProgramming,
-			campaignName: 'website'
+			campaignName: 'landing'
 		}
 
 		apply.submit(data)
