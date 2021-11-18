@@ -27,6 +27,7 @@ module.exports = {
         },
         'gray-kd': {
           dark: '#2f2f2f',
+          darker: '#363636',
           DEFAULT: '#4E4E4E',
           light: '#828282',
           lighter: '#bdbdbd'
@@ -71,7 +72,8 @@ module.exports = {
         h1: '1.07'
       },
       maxWidth: {
-        'sm-kd': '220px'
+        'sm-kd': '220px',
+        300: '300px'
       },
       minHeight: {
         mini: '16px',
