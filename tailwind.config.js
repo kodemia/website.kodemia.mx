@@ -77,6 +77,13 @@ module.exports = {
       lineHeight: {
         h1: '1.07'
       },
+      letterSpacing: {
+        insane: '.5em'
+      },
+      height: {
+        '85vh': '85vh',
+        '500px': '500px'
+      },
       minHeight: {
         mini: '16px',
         'sm-kd': '465px',
@@ -89,11 +96,16 @@ module.exports = {
         'sm-kd': '220px',
         '1086-px': '1086px'
       },
+      maxHeight: {
+        '500px': '500px'
+      },
       webkitScrollbar: {
         width: '6px'
       },
       backgroundImage: {
-        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
+        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
+        'invitacion-small': "url('https://cdn.kodemia.mx/images/invitacion/background.png')",
+        'invitacion-big': "url('https://cdn.kodemia.mx/images/invitacion/background-desktop.png')"
       }
     }
   }
