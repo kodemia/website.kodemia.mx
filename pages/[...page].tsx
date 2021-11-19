@@ -25,7 +25,6 @@ interface Props {
 export default function BuilderPage(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
 	const pageNotFound = !(props.content || Builder.isPreviewing)
 
-	console.log('Builder', props.content)
 	if (pageNotFound) return <NotFoundPage />
 
 	return (
