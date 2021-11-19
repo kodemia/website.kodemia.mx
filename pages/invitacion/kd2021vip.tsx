@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 import NavBar from 'components/Navbar'
 import Footer from 'components/Footer'
+import TicketVIP from 'components/TicketVIP'
 
 export default function Kd2021vip () {
   return (
@@ -14,93 +15,21 @@ export default function Kd2021vip () {
           'flex justify-center items-center',
           'h-800px w-full',
           'bg-gradient-to-t from-black-kd via-purple-600 to-cyan-kd',
-          'pt-14'
+          'pt-10'
         )}
       >
-        <header className='relative bg-red-600'>
-          <img
-            src="https://cdn.kodemia.mx/images/invitacion/ticket.svg"
-            alt="ticket"
-            className='tablet:px-10 hidden tablet:block'
-          />
-          <img
-            src="https://cdn.kodemia.mx/images/invitacion/ticket-vertical.svg"
-            alt="ticket vertical"
-            className='tablet:hidden max-h-700px'
-          />
-          <div
-            className={classNames(
-              'absolute tablet:top-0 top-5',
-              'h-full w-full',
-              'tablet:px-32 tablet:py-10 px-10 pt-16 pb-28 ',
-            )}
-          >
-            <div
-              className={classNames(
-                'h-full',
-                'flex flex-col tablet:flex-row',
-                'pt- tablet:pt-0 tablet:pb-0',
-                'bg-green-400 bg-opacity-25'
-              )}
-            >
-              <figure
-                className={classNames(
-                  'w-full tablet:w-2/3',
-                  'h-full',
-                  'relative',
-                  'flex justify-center items-center flex-col',
-                )}
-              >
-                <p
-                  className={classNames(
-                    'text-7xl tablet:text-9xl text-center ',
-                    // 'tablet:mt-4',
-                    'bg-clip-text text-transparent',
-                    'bg-gradient-to-t from-white via-black-kd-light to-white'
-                  )}
-                >
-                  VIP
-                </p>
-
-                <p
-                  className={classNames(
-                    'absolute tablet:top-1/3 w-full ml-2',
-                    'bg-black-kd',
-                    'text-center',
-                    'tablet:tracking-even-wider tracking-widest',
-                    'uppercase tablet:text-xl text-sm',
-                    'tablet:leading-5 leading-4'
-                  )}
-                >
-                  KODEDAY
-                </p>
-                <p className='text-center tracking-spaced uppercase hidden tablet:block w-full'>
-                  Leonardo Santiago
-                </p>
-              </figure>
-
-              <div className='text-xl text-center tablet:hidden block uppercase tracking-widest'>
-                Leonardo Santiago
-              </div>
-
-              <figure className='tablet:w-1/3 tablet:my-auto'>
-                <img
-                  src="https://www.codigos-qr.com/qr/php/qr_img.php?d=http%3A%2F%2Ftecnohotelnews.com%2F&s=8&e=m"
-                  alt="qr"
-                  className='tablet:h-28 h-20 mx-auto mt-7 tablet:mt-0'
-                />
-              </figure>
-            </div>
-          </div>
-
-        </header>
+        <TicketVIP
+          name='Leonardo santiago p'
+          qr=''
+        />
       </section>
-      <section />
-      <section className={classNames('flex flex-col pt-8 justify-center w-full text-center')} >
-        <p className={classNames('')}> Descripción </p>
+
+      <section className='flex flex-col pt-8 justify-center w-full text-center' >
+        <p className=''> Descripción </p>
       </section>
 
       <Footer />
+
       <style jsx global>{`
         body {
           background-color: #181818

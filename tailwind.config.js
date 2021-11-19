@@ -62,7 +62,8 @@ module.exports = {
         h3: '28px',
         h4: '24px',
         h5: '20px',
-        mini: '10px'
+        mini: '10px',
+        '8dot5xl': '7rem'
       },
       keyframes: {
         cursor: {
