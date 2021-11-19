@@ -7,7 +7,9 @@ module.exports = {
     GTM_CONTAINER_ID: process.env.GTM_CONTAINER_ID,
     MIXPANEL_TOKEN: process.env.MIXPANEL_TOKEN,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
-    HOTJAR_ID: process.env.HOTJAR_ID
+    HOTJAR_ID: process.env.HOTJAR_ID,
+    API_USER: process.env.API_USER,
+    API_PASSWORD: process.env.API_PASSWORD
   },
   images: {
     domains: [

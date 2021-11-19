@@ -1,6 +1,6 @@
 
 import classNames from 'classnames'
-import { GetServerSidePropsContext } from 'next'
+import { GetStaticPropsContext } from 'next'
 
 import Whatsapp from 'lib/whatsapp'
 import * as invitations from 'lib/api/invitations'
@@ -183,10 +183,23 @@ export default function VIPInvitation ({ invitation }: Props) {
   )
 }
 
-export async function getServerSideProps (ctx: GetServerSidePropsContext) {
-  let invitation
+export async function getStaticPaths () {
   const eventId = '619735ecd6a921c8d75861c6'
-  const invitationId = ctx.params?.invitation_id as string
+  const allInvitations = await invitations.getAllByEventId(eventId)
+  const invitationsIds = allInvitations.map((invitation: Invitation) => invitation._id)
+
+  return {
+    paths: invitationsIds
+      .map((invitationId: string) => ({
+        params: { invitation_id: invitationId }
+      })),
+    fallback: 'blocking'
+  }
+}
+
+export async function getStaticProps (context: GetStaticPropsContext) {
+  let invitation
+  const invitationId = context.params?.invitation_id as string
 
   try {
     invitation = await invitations.getById(invitationId) as Invitation
@@ -194,7 +207,10 @@ export async function getServerSideProps (ctx: GetServerSidePropsContext) {
     invitation = null
   }
 
+  if (!invitation) return { notFound: true }
+
   return {
-    props: { invitation }
+    props: { invitation },
+    revalidate: 60 * 10
   }
 }
