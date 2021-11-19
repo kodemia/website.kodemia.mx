@@ -78,11 +78,14 @@ module.exports = {
         h1: '1.07'
       },
       letterSpacing: {
+        'spaced': '.2em',
+        'even-wider': '.4em',
         insane: '.5em'
       },
       height: {
         '85vh': '85vh',
-        '500px': '500px'
+        '500px': '500px',
+        '800px': '800px'
       },
       minHeight: {
         mini: '16px',

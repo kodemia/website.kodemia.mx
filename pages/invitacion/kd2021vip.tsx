@@ -12,7 +12,7 @@ export default function Kd2021vip () {
         data-component-name='ticket-hero'
         className={classNames(
           'flex justify-center items-center',
-          'h-85vh w-full',
+          'h-800px w-full',
           'bg-gradient-to-t from-black-kd via-purple-600 to-cyan-kd',
           'pt-14'
         )}
@@ -40,43 +40,54 @@ export default function Kd2021vip () {
               className={classNames(
                 'h-full',
                 'flex flex-col tablet:flex-row',
-                'pt-14 tablet:pt-0'
+                'pt-14 tablet:pt-0 pb-3'
               )}
             >
               <figure
                 className={classNames(
                   'w-full tablet:w-2/3',
-                  'h-1/3',
-                  'relative'
+                  'h-full',
+                  'relative',
+                  'flex justify-center items-center flex-col'
                 )}
               >
                 <p
                   className={classNames(
-                    'text-7xl tablet:text-9xl text-center tablet:mt-5',
+                    'text-7xl tablet:text-9xl text-center ',
+                    // 'tablet:mt-4',
                     'bg-clip-text text-transparent',
-                    'bg-gradient-to-t from-white via-black-kd-dark to-white'
+                    'bg-gradient-to-t from-white via-black-kd-light to-white'
                   )}
                 >
                   VIP
                 </p>
 
-                <p className='absolute top-16 bg-black-kd w-full text-center tracking-insane ml-1'>
+                <p
+                  className={classNames(
+                    'absolute tablet:top-1/3 w-full ml-2',
+                    'bg-black-kd',
+                    'text-center',
+                    'tablet:tracking-even-wider tracking-widest',
+                    'uppercase tablet:text-xl text-sm',
+                    'tablet:leading-5 leading-4'
+                  )}
+                >
                   KODEDAY
                 </p>
-                <p className='text-center text-xl'>
+                <p className='text-center tracking-spaced uppercase hidden tablet:block w-full'>
                   Leonardo Santiago
                 </p>
               </figure>
 
-              <div className='text-2xl text-center tablet:hidden block'>
+              <div className='text-xl text-center tablet:hidden block uppercase tracking-widest'>
                 Leonardo Santiago
               </div>
 
-              <figure className='tablet:w-1/3'>
+              <figure className='tablet:w-1/3 tablet:my-auto'>
                 <img
                   src="https://www.codigos-qr.com/qr/php/qr_img.php?d=http%3A%2F%2Ftecnohotelnews.com%2F&s=8&e=m"
                   alt="qr"
-                  className='h-28 m-auto'
+                  className='tablet:h-28 h-20 mx-auto mt-7 tablet:mt-0'
                 />
               </figure>
             </div>
@@ -85,7 +96,9 @@ export default function Kd2021vip () {
         </header>
       </section>
       <section />
-      <section className={classNames('h-screen bg-transparent')} ></section>
+      <section className={classNames('flex flex-col pt-8 justify-center w-full text-center')} >
+        <p className={classNames('')}> Descripción </p>
+      </section>
 
       <Footer />
       <style jsx global>{`
