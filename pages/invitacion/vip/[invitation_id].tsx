@@ -9,6 +9,7 @@ import NavBar from 'components/Navbar'
 import Footer from 'components/Footer'
 import TicketVIP from 'components/TicketVIP'
 import Button from 'components/Button'
+import SEO from 'components/SEO'
 
 type Invitation = {
   _id: string
@@ -27,6 +28,9 @@ export default function VIPInvitation ({ invitation }: Props) {
 
   return (
     <>
+      <SEO
+        title='Kodemia | KodeDay VIP'
+      />
       <NavBar/>
       <section
         className={classNames(
