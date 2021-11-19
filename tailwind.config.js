@@ -81,7 +81,6 @@ module.exports = {
       letterSpacing: {
         'spaced': '.2em',
         'even-wider': '.4em',
-        insane: '.5em'
       },
       height: {
         '85vh': '85vh',
@@ -110,9 +109,7 @@ module.exports = {
         width: '6px'
       },
       backgroundImage: {
-        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
-        'invitacion-small': "url('https://cdn.kodemia.mx/images/invitacion/background.png')",
-        'invitacion-big': "url('https://cdn.kodemia.mx/images/invitacion/background-desktop.png')"
+        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
       }
     }
   }
