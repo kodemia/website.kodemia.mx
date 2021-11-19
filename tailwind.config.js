@@ -85,6 +85,7 @@ module.exports = {
       height: {
         '85vh': '85vh',
         '500px': '500px',
+        '700px': '700px',
         '800px': '800px'
       },
       minHeight: {
@@ -100,7 +101,9 @@ module.exports = {
         '1086-px': '1086px'
       },
       maxHeight: {
-        '500px': '500px'
+        '500px': '500px',
+        '600px': '600px',
+        '700px': '700px'
       },
       webkitScrollbar: {
         width: '6px'

@@ -17,7 +17,7 @@ export default function Kd2021vip () {
           'pt-14'
         )}
       >
-        <header className='mt-0 tablet:mt-0  relative'>
+        <header className='relative bg-red-600'>
           <img
             src="https://cdn.kodemia.mx/images/invitacion/ticket.svg"
             alt="ticket"
@@ -26,21 +26,21 @@ export default function Kd2021vip () {
           <img
             src="https://cdn.kodemia.mx/images/invitacion/ticket-vertical.svg"
             alt="ticket vertical"
-            className='tablet:hidden max-h-500px'
+            className='tablet:hidden max-h-700px'
           />
           <div
             className={classNames(
-              'absolute top-0',
+              'absolute tablet:top-0 top-5',
               'h-full w-full',
-              'px-8 py-16',
-              'tablet:px-32 tablet:py-10'
+              'tablet:px-32 tablet:py-10 px-10 pt-16 pb-28 ',
             )}
           >
             <div
               className={classNames(
                 'h-full',
                 'flex flex-col tablet:flex-row',
-                'pt-14 tablet:pt-0 pb-3'
+                'pt- tablet:pt-0 tablet:pb-0',
+                'bg-green-400 bg-opacity-25'
               )}
             >
               <figure
@@ -48,7 +48,7 @@ export default function Kd2021vip () {
                   'w-full tablet:w-2/3',
                   'h-full',
                   'relative',
-                  'flex justify-center items-center flex-col'
+                  'flex justify-center items-center flex-col',
                 )}
               >
                 <p
