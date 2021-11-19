@@ -29,8 +29,9 @@ export default function VIPInvitation ({ invitation }: Props) {
   return (
     <>
       <SEO
-        title='Kodemia | KodeDay VIP'
+        title='Kodemia | Invitación VIP'
         image='https://cdn.kodemia.mx/images/invitacion/kodeday-vip.png'
+        description={`Invitación | ${name} | VIP`}
       />
       <NavBar/>
       <section
