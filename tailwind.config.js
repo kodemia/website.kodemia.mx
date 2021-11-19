@@ -62,7 +62,8 @@ module.exports = {
         h3: '28px',
         h4: '24px',
         h5: '20px',
-        mini: '10px'
+        mini: '10px',
+        '8dot5xl': '7rem'
       },
       keyframes: {
         cursor: {
@@ -77,6 +78,16 @@ module.exports = {
       lineHeight: {
         h1: '1.07'
       },
+      letterSpacing: {
+        'spaced': '.2em',
+        'even-wider': '.4em',
+      },
+      height: {
+        '85vh': '85vh',
+        '500px': '500px',
+        '700px': '700px',
+        '800px': '800px'
+      },
       minHeight: {
         mini: '16px',
         'sm-kd': '465px',
@@ -88,6 +99,11 @@ module.exports = {
       maxWidth: {
         'sm-kd': '220px',
         '1086-px': '1086px'
+      },
+      maxHeight: {
+        '500px': '500px',
+        '600px': '600px',
+        '700px': '700px'
       },
       webkitScrollbar: {
         width: '6px'
