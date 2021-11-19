@@ -77,7 +77,6 @@ export default function TicketVIP(props: Props) {
           </div>
 
           <figure
-            // className='tablet:w-1/3 tablet:my-auto pl-4'
             className='mx-auto my-auto'
           >
             <QRCode
