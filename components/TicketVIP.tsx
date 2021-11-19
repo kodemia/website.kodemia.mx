@@ -1,9 +1,10 @@
 
 import classNames from 'classnames'
+import QRCode from 'react-qr-code'
 
 type Props = {
   name: string
-  qr: string
+  invitationId: string
 }
 
 export default function TicketVIP(props: Props) {
@@ -22,7 +23,7 @@ export default function TicketVIP(props: Props) {
       <div className={classNames(
         'absolute tablet:top-0 top-5',
         'h-full w-full',
-        'tablet:px-32 tablet:py-10 px-10 pt-16 pb-28 ',
+        'tablet:px-32 tablet:py-10 px-10 pt-16 pb-28',
       )}>
         <div className={classNames(
           'h-full',
@@ -75,11 +76,15 @@ export default function TicketVIP(props: Props) {
             {props.name}
           </div>
 
-          <figure className='tablet:w-1/3 tablet:my-auto'>
-            <img
-              src="https://www.codigos-qr.com/qr/php/qr_img.php?d=http%3A%2F%2Ftecnohotelnews.com%2F&s=8&e=m"
-              alt="qr"
-              className='tablet:h-28 h-20 mx-auto mt-7 tablet:mt-0'
+          <figure
+            // className='tablet:w-1/3 tablet:my-auto pl-4'
+            className='mx-auto my-auto'
+          >
+            <QRCode
+              value={`https://plataforma.kodemia.mx/checkin/${props.invitationId}`}
+              bgColor='#181818'
+              fgColor='#00FFFF'
+              size={120}
             />
           </figure>
         </div>
