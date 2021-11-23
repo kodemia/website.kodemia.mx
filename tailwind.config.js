@@ -34,6 +34,7 @@ module.exports = {
         },
         'gray-kd': {
           dark: '#2f2f2f',
+          darker: '#363636',
           DEFAULT: '#4E4E4E',
           light: '#828282',
           lighter: '#bdbdbd'
@@ -88,6 +89,7 @@ module.exports = {
       },
       maxWidth: {
         'sm-kd': '220px', // TODO: cambiar key por 220px
+        300: '300px',
         '330px': '330px',
         '400px': '400px',
         '730px': '730px',
