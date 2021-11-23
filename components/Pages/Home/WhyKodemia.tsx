@@ -22,39 +22,26 @@ export default function WhyKodemia ({
 }: Props) {
   return (
     <section className={classNames(
-      // 'why-kodemia',
       'bg-black-kd',
       'flex justify-center',
-      // 'mob:pt-20 mob:px-11 mob:pb-12',
-      // 'tablet:pt-24 tablet:px-20 tablet:pb-16',
-      // 'laptop:pt-24 laptop:px-0 laptop:pb-20',
       'mob:w-full'
     )}
     >
       <div className={classNames(
-        // 'why-kodemia-container',
-        // 'section-container',
         'grid',
         'mob:grid-cols-1 laptop:grid-cols-3',
         'mob:m-0 tablet:my-0 tablet:mx-20',
         'mob:pt-20 mob:px-11 mob:pb-12',
         'tablet:pt-24 tablet:px-20 tablet:pb-16',
         'laptop:px-0',
-        // 'tablet:mt-24 tablet:mx-20 tablet:mb-16',
-        // 'laptop:mt-24 laptop:mx-0 laptop:mb-20',
-
-        // 'mob:m-0 tablet:my-0 tablet:mx-20',
-        // 'laptop:px-20',
-        // 'laptop:max-w-content', // TODO: revisar si es el tamaño correcto
         'mob:max-w-full laptop:max-w-content',
         'mob:min-w-full laptop:min-w-content',
         'mob:min-w-full'
       )}
       >
         <div className={classNames(
-          // 'subject',
           'mob:col-span-1',
-          'laptop:col-span-1', // TODO: checar si se duplica y borrar
+          'laptop:col-span-1',
           'mob:mb-10',
           'mob:max-w-full tablet:max-w-50% laptop:max-w-full',
           'mob:min-w-50%',
@@ -68,12 +55,10 @@ export default function WhyKodemia ({
         </div>
         <img
           className={classNames(
-            // 'image',
             'rounded-gray-card',
             'mob:mb-5',
             'laptop:m-auto',
             'laptop:max-w-full',
-            // 'tablet:max-w-full',
             'mob:row-start-2',
             'tablet:w-full',
             'laptop:w-full'
@@ -83,7 +68,6 @@ export default function WhyKodemia ({
         />
 
         <div className={classNames(
-          // 'why-kodemia-cards',
           'col-span-2',
           'grid',
           'mob:grid-cols-1 tablet:grid-cols-2',
