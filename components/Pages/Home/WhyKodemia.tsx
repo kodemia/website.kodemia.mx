@@ -43,8 +43,8 @@ export default function WhyKodemia ({
           'mob:col-span-1',
           'laptop:col-span-1',
           'mob:mb-10',
-          'mob:max-w-full tablet:max-w-50% laptop:max-w-full',
-          'mob:min-w-50%',
+          'mob:max-w-full tablet:max-w-1/2 laptop:max-w-full',
+          'mob:min-w-1/2',
           'mob:row-start-1'
         )}
         >

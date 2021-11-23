@@ -15,8 +15,8 @@ module.exports = {
         'financing-tablet': 'url("/images/kodemia-financing/apoyo-tablet.jpg")'
       },
       borderRadius: {
-        card: '10px',
-        'gray-card': '30px'
+        card: '10px', // TODO: cambiar key por 10px
+        'gray-card': '30px' // TODO: cambiar key por 30px
       },
       borderWidth: {
         'text-cursor': '3.5px'
@@ -91,16 +91,16 @@ module.exports = {
         '330px': '330px',
         '400px': '400px',
         '730px': '730px',
-        '50%': '50%', // TODO: cambiar key por 1/2
+        '1/2': '50%',
         content: '1086px' // TODO: hacer una utilidad 'section-content'
       },
       minHeight: {
-        mini: '16px',
-        'sm-kd': '465px'
+        mini: '16px', // TODO: cambiar key por 16px
+        'sm-kd': '465px' // TODO: cambiar key por 465px
       },
       minWidth: {
-        'sm-kd': '220px',
-        '50%': '50%', // TODO: cambiar key por 1/2
+        'sm-kd': '220px', // TODO: cambiar key por 220px
+        '1/2': '50%',
         content: '719px' // TODO: hacer una utilidad 'section-content'
       },
       screens: {

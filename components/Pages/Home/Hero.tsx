@@ -12,28 +12,23 @@ export interface Props {
 export default function Hero ({ video }: Props) {
   return (
     <section className={classNames(
-      // 'hero',
       'relative'
     )}
     >
       <BgVideo video={video} />
       <div className={classNames(
-        // 'cover'
         'absolute',
         'bg-gradient-to-t from-black-kd to-black-kd-transparent',
         'h-screen',
         'mob:pt-36 mob:px-45px mob:pb-5',
         'tablet:pt-44 tablet:px-20 tablet:pb-0',
-        'laptop:pt-48 laptop:px-12 laptop:pb-0', // TODO: juntar con los demás paddings
+        'laptop:pt-48 laptop:px-12 laptop:pb-0',
         'top-0',
         'mob:w-full'
       )}
       >
         <div className={classNames(
-          // 'container'
           'mob:my-0 mob:mx-auto',
-          // 'laptop:mx-45px',
-          // 'laptop:max-w-content'
           'mob:max-w-full laptop:max-w-content',
           'mob:min-w-full laptop:min-w-content'
         )}
@@ -48,10 +43,8 @@ export default function Hero ({ video }: Props) {
         <img
           src='/icons/icon-scroll.svg'
           className={classNames(
-            // 'arrow-icon'
             'absolute',
             'animate-arrow',
-            // 'animate-bounce ease-out',
             'mob:hidden tablet:flex',
             'left-0',
             'bottom-0',
