@@ -1,0 +1,5 @@
+@layer components {
+  .section-container {
+    @apply mob:max-w-full mob:min-w-full laptop:max-w-content laptop:min-w-content
+  }
+}

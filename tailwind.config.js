@@ -87,12 +87,12 @@ module.exports = {
         h1: '1.07'
       },
       maxWidth: {
-        'sm-kd': '220px',
+        'sm-kd': '220px', // TODO: cambiar key por 220px
         '330px': '330px',
         '400px': '400px',
         '730px': '730px',
-        '50%': '50%',
-        content: '1086px'
+        '50%': '50%', // TODO: cambiar key por 1/2
+        content: '1086px' // TODO: hacer una utilidad 'section-content'
       },
       minHeight: {
         mini: '16px',
@@ -100,8 +100,8 @@ module.exports = {
       },
       minWidth: {
         'sm-kd': '220px',
-        '50%': '50%',
-        content: '719px'
+        '50%': '50%', // TODO: cambiar key por 1/2
+        content: '719px' // TODO: hacer una utilidad 'section-content'
       },
       screens: {
         mob: '320px', // Work around to deal with bulma spacing utilities TODO: remove when removing bulma
@@ -119,6 +119,11 @@ module.exports = {
       webkitScrollbar: {
         width: '6px'
       }
+    }
+  },
+  variants: {
+    extend: {
+      margin: ['first']
     }
   }
 }
