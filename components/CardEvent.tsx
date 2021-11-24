@@ -28,7 +28,7 @@ export default function Card({
 		)}>
 
       {/* <div className={classNames('md:h-24')}> */}
-      <div className={'tablet:h-32'}>
+      <div className={'tablet:h-36'}>
 				<H4>
 					{name}
 				</H4>
