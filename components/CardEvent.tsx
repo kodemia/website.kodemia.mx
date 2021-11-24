@@ -24,9 +24,11 @@ export default function Card({
 	return (
 		<div className={classNames(
 			'border border-solid border-gray-kd-light rounded-xl',
-			' p-4 hover:border-cyan-kd '
+			'p-4 hover:border-cyan-kd'
 		)}>
-			<div className={classNames('md:h-24')}>
+
+      {/* <div className={classNames('md:h-24')}> */}
+      <div className={'tablet:h-32'}>
 				<H4>
 					{name}
 				</H4>

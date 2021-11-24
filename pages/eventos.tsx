@@ -67,7 +67,7 @@ export default function Eventos({ events }: Props) {
         'flex justify-center xl:items-center'
       )}>
         <section className={classNames(
-          'max-w-1086-px w-full ',
+          'max-w-1086-px w-full',
           'flex flex-wrap justify-center'
         )}>
           {
