@@ -98,7 +98,7 @@ module.exports = {
       },
       minHeight: {
         16: '16px',
-        465: '465px' // TODO: cambiar key por 465px
+        465: '465px'
       },
       minWidth: {
         220: '220px',
