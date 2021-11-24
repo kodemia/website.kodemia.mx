@@ -139,7 +139,7 @@ export default function ApplyLandingForm() {
 			<div className='pt-3'>
 				<Button
 					isPrimary
-					label={isSubmitting ? 'Enviando...' : 'Aplica al Bootcamp'}
+					label={isSubmitting ? 'Enviando...' : 'Enviar'}
 					type='submit'
 					isDisabled={isSubmitting}
 				/>
