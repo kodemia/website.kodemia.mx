@@ -23,8 +23,10 @@ export default function Card({
 }: Props) {
 	return (
 		<div className={classNames(
-			'border border-solid border-gray-kd-light rounded-xl',
-			'p-4 hover:border-cyan-kd'
+			'border border-solid rounded-xl',
+      'border-gray-kd-light hover:border-cyan-kd',
+      'h-full',
+			'p-4',
 		)}>
 
       <div className={classNames('md:h-36')}>

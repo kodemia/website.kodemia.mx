@@ -72,8 +72,14 @@ export default function Eventos({ events }: Props) {
         )}>
           {
             events.map((event, index) => (
-              <article key={`event-${index}`}
-                className={classNames('w-full md:w-80 ', 'my-5 mx-3')}>
+              <article
+                key={`event-${index}`}
+                className={classNames(
+                  'my-5 mx-3',
+                  'h-80',
+                  'w-full md:w-80'
+                )}
+              >
                 <CardEvent key={index}
                   name={event.name}
                   date={dayjs(event.date).format('DD MMMM ').toString()}
