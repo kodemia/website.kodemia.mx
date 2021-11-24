@@ -27,7 +27,7 @@ export default function TransformYourLife () {
       )}
       >
         <div className={classNames(
-          'mob:max-w-400px',
+          'mob:max-w-400',
           'mob:w-full tablet:w-55% laptop:w-full'
         )}
         >

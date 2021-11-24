@@ -43,7 +43,7 @@ export default function OurMethod ({ ourMethod: { title, keywords, text, cards }
         <H5>
           Nuestro Método
         </H5>
-        <div className='max-w-330px'>
+        <div className='max-w-330'>
           <H3
             whiteText={title}
             cyanText={keywords}

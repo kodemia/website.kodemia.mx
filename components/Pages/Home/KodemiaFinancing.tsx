@@ -52,7 +52,7 @@ export default function KodemiaFinancing ({ info }: Props) {
         <p className={classNames(
           'text-base font-medium',
           'mt-8 mx-0 mb-9',
-          'max-w-730px'
+          'max-w-730'
         )}
         >
           {info.text}

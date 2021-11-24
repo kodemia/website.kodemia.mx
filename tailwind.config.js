@@ -88,20 +88,20 @@ module.exports = {
         h1: '1.07'
       },
       maxWidth: {
-        'sm-kd': '220px', // TODO: cambiar key por 220px
+        220: '220px',
         300: '300px',
-        '330px': '330px',
-        '400px': '400px',
-        '730px': '730px',
+        330: '330px',
+        400: '400px',
+        730: '730px',
         '1/2': '50%',
         content: '1086px' // TODO: hacer una utilidad 'section-content'
       },
       minHeight: {
-        mini: '16px', // TODO: cambiar key por 16px
-        'sm-kd': '465px' // TODO: cambiar key por 465px
+        16: '16px',
+        465: '465px' // TODO: cambiar key por 465px
       },
       minWidth: {
-        'sm-kd': '220px', // TODO: cambiar key por 220px
+        220: '220px',
         '1/2': '50%',
         content: '719px' // TODO: hacer una utilidad 'section-content'
       },
