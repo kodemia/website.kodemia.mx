@@ -146,7 +146,7 @@ export default function ApplyForm () {
       <div className='pt-3'>
         <Button
           isPrimary
-          label={isSubmitting ? 'Enviando...' : 'Aplica a la Beca'}
+          label={isSubmitting ? 'Enviando...' : 'Enviar'}
           type='submit'
           isDisabled={isSubmitting}
         />
