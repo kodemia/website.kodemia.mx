@@ -27,13 +27,16 @@ export default function Card({
 			'p-4 hover:border-cyan-kd'
 		)}>
 
-      {/* <div className={classNames('md:h-24')}> */}
-      <div className={'tablet:h-36'}>
+      <div className={classNames('md:h-36')}>
 				<H4>
 					{name}
 				</H4>
 			</div>
-			<h5 className={classNames('text-cyan-kd text-h5 font-medium')}>
+			<h5 className={classNames(
+        'text-cyan-kd text-h5 font-medium',
+        'mt-1'
+        )}
+        >
 				{date}
 			</h5>
 			<div className={classNames('my-3')}>
