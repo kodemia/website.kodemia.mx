@@ -10,7 +10,7 @@ export interface Props {
 
 export default function Hero ({ video }: Props) {
   return (
-    <section className='hero'>
+    <section className='hero max-h-80vh'>
       <BgVideo video={video} />
       <div className='cover'>
         <div className='container'>

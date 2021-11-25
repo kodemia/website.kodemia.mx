@@ -27,7 +27,7 @@ export interface Language {
 export interface Props {
   bootcamps: {
     javascript: Language
-    // python: Language
+    mobile: Language
   }
 }
 
@@ -61,16 +61,16 @@ export default function OurBootcamps ({ bootcamps }: Props) {
             }
           </article>
         </div>
-        {/* <div className='bootcamp'>
+        <div className='bootcamp'>
           <LanguageCard
-            name={bootcamps.python.name}
-            language={bootcamps.python.language}
-            description={bootcamps.python.description}
-            duration={bootcamps.python.duration}
+            name={bootcamps.mobile.name}
+            language={bootcamps.mobile.language}
+            description={bootcamps.mobile.description}
+            duration={bootcamps.mobile.duration}
           />
           <article className='modalities-container'>
             {
-              bootcamps.python.modalities.map((modality, index) => (
+              bootcamps.mobile.modalities.map((modality, index) => (
                 <div className='modality' key={index}>
                   <BootcampCard
                     mode={modality.name}
@@ -83,7 +83,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
               ))
             }
           </article>
-        </div> */}
+        </div>
       </div>
     </section>
   )

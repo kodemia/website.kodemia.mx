@@ -33,6 +33,26 @@ Default.args = {
           }
         }
       ]
+    },
+    mobile: {
+      name: 'Bootcamp Mobile',
+      language: 'iOS o Android',
+      description: 'Desarrollarás aplicaciones nativas para dispositivos móviles, aprovecha la beca del 80%',
+      duration: '16 semanas',
+      modalities: [
+        {
+          name: 'Live',
+          description: 'Acceso de por vida a Kodemia',
+          link: '/',
+          schedule: {
+            day: '19',
+            month: 'Oct',
+            year: '2020',
+            hour: '7:00 - 10:00 pm',
+            days: 'Lunes a viernes'
+          }
+        }
+      ]
     }
   }
 }
