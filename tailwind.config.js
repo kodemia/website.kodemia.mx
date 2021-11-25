@@ -103,7 +103,8 @@ module.exports = {
       maxHeight: {
         '500px': '500px',
         '600px': '600px',
-        '700px': '700px'
+        '700px': '700px',
+        '80vh': '80vh'
       },
       webkitScrollbar: {
         width: '6px'
