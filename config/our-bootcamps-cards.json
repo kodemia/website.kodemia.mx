@@ -30,5 +30,37 @@
         }
       }
     ]
+  },
+  "mobile": {
+    "name": "Bootcamp Mobile",
+    "language": "iOS o Android",
+    "description": "Desarrollarás aplicaciones nativas para dispositivos móviles, aprovecha la beca del 80%",
+    "duration": "16 semanas",
+    "modalities": [
+      {
+        "name": "Modo Live [ iOS ]",
+        "description": "Conexión remota vía streaming",
+        "link": "/backbase",
+        "schedule": {
+          "day": "7",
+          "month": "Diciembre",
+          "year": "2021",
+          "hour": "19:00 - 22:00 hrs.",
+          "days": "Lunes a viernes"
+        }
+      },
+      {
+        "name": "Modo Live [ Android ]",
+        "description": "Conexión remota vía streaming",
+        "link": "/backbase",
+        "schedule": {
+          "day": "7",
+          "month": "Diciembre",
+          "year": "2021",
+          "hour": "19:00 - 22:00 hrs.",
+          "days": "Lunes a viernes"
+        }
+      }
+    ]
   }
 }
