@@ -39,7 +39,7 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function Eventos({ events }: Props) {
+export default function Eventos({ events }: Props): JSX.Element {
   return (
     <>
       <Seo
@@ -47,10 +47,18 @@ export default function Eventos({ events }: Props) {
       />
       <Navbar />
       <header className={classNames(
-        'bg-no-repeat bg-cover bg-bottom bg-events h-80 min-h-430-px',
-        'flex flex-col justify-center xl:items-center'
+        'bg-events bg-no-repeat bg-cover bg-bottom',
+        'flex flex-col',
+        'justify-center xl:items-center',
+        'h-80',
+        'min-h-430'
       )}>
-        <div className={classNames('px-14 max-w-1086-px w-full xl:px-0')}>
+        <div className={classNames(
+          'px-12 xl:px-0',
+          'max-w-1086',
+          'w-full'
+        )}
+        >
           <H5>
             Eventos Kodemia
           </H5>
@@ -63,26 +71,37 @@ export default function Eventos({ events }: Props) {
         </div>
       </header>
       <main className={classNames(
-        'bg-black-kd p-12 lg:p-14',
-        'flex justify-center xl:items-center'
+        'bg-black-kd',
+        'pt-24 px-12 pb-16',
+        'flex justify-center',
+        'desktop:items-center',
+
       )}>
         <section className={classNames(
-          'max-w-1086-px w-full ',
-          'flex flex-wrap justify-center'
+          'flex flex-col md:flex-row',
+          'md:flex-wrap',
+          'gap-y-9',
+          'gap-x-0 md:gap-x-11 lg:gap-x-10',
+          'justify-center',
+          'max-w-1086',
+          'w-full',
         )}>
           {
             events.map((event, index) => (
-              <article key={`event-${index}`}
-                className={classNames('w-full md:w-80 ', 'my-5 mx-3')}>
-                <CardEvent key={index}
-                  name={event.name}
-                  date={dayjs(event.date).format('DD MMMM ').toString()}
-                  schedule={`${dayjs(event.date).format('HH:mm').toString()} hrs.`}
-                  text={event.isLive ? 'Conexión remota vía streaming' : 'Presencial, te esperamos 😎'}
-                  btnLabel={event.isPrivate ? 'Regístrate' : 'Ver evento'}
-                  link={event.link}
-                />
-              </article>
+              <CardEvent
+                className={classNames(
+                  'md:max-w-420',
+                  'md:min-w-min',
+                  'w-full md:w-2/5 lg:w-80'
+                )}
+                key={`event-${index}`}
+                name={event.name}
+                date={dayjs(event.date).format('DD MMMM').toString()}
+                schedule={`${dayjs(event.date).format('HH:mm').toString()} hrs.`}
+                text={event.isLive ? 'Conexión remota vía streaming' : 'Presencial, te esperamos 😎'}
+                btnLabel={event.isPrivate ? 'Regístrate' : 'Ver evento'}
+                link={event.link}
+              />
             ))
           }
         </section>
