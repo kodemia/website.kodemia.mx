@@ -26,7 +26,7 @@ export default function Card({
 			'border border-solid border-gray-kd-light rounded-xl',
 			' p-4 hover:border-cyan-kd '
 		)}>
-			<div className={classNames('md:h-24')}>
+			<div className={classNames('md:min-h-100px')}>
 				<H4>
 					{name}
 				</H4>
