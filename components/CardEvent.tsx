@@ -39,7 +39,6 @@ export default function Card({
       </div>
       <div className={classNames('mt-4')}>
         <h5 className={classNames(
-          // 'mt-1',
           'text-cyan-kd text-h5 font-medium'
         )}
         >
