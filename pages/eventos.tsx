@@ -30,6 +30,7 @@ export const getStaticProps = async () => {
   const events = results.map(event => event.data)
     .sort((a: any, b: any) => a.date - b.date)
     .filter((event: any) => event.date > date)
+
   return {
     props: {
       events
