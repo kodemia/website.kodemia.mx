@@ -91,14 +91,19 @@ module.exports = {
       minHeight: {
         mini: '16px',
         'sm-kd': '465px',
-        '430-px': '430px'
+        430: '430px'
       },
       minWidth: {
-        'sm-kd': '220px'
+        'sm-kd': '220px',
+        270: '270px',
+        300: '300px',
+        320: '320px',
+        420: '420px',
       },
       maxWidth: {
         'sm-kd': '220px',
-        '1086-px': '1086px'
+        1086: '1086px',
+        420: '420px'
       },
       minHeight: {
         '100px': '100px'
