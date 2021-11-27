@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import _ from 'lodash'
+import React from 'react'
 import classNames from 'classnames'
 import { builder } from '@builder.io/react';
 import dayjs from 'dayjs'
@@ -87,7 +88,7 @@ export default function Eventos({ events }: Props): JSX.Element {
           'w-full',
         )}>
           {
-            !events.length &&
+            _.isEmpty(events) &&
             <h1 className={classNames('text-cyan-kd animate-bounce text-3xl')}> ¡Más eventos, próximamente! </h1>
           }
           {
