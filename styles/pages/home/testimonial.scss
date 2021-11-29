@@ -13,7 +13,7 @@
       padding: 100px 0 80px;
       width: 100%;
 
-      @include mobile {
+      @include on-mobile {
         margin: 0;
         max-width: 100%;
         min-width: 100%;
