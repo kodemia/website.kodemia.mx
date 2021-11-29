@@ -105,9 +105,6 @@ module.exports = {
         1086: '1086px',
         420: '420px'
       },
-      minHeight: {
-        '100px': '100px'
-      },
       maxHeight: {
         '500px': '500px',
         '600px': '600px',
