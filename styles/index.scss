@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
 // variables
-@import './variables';
-@import './mixins';
+@import './variables'; // TODO: Delete
+@import './mixins'; // TODO: Delete
 
 //bulma
-@import 'bulma/bulma';
+@import 'bulma/bulma'; // TODO: Delete
 @import '../node_modules/slick-carousel/slick/slick-theme';
 @import '../node_modules/slick-carousel/slick/slick';
 
