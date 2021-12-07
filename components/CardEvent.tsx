@@ -63,7 +63,7 @@ export default function Card({
           isPrimary
           label={btnLabel}
           href={link}
-					onClick={()=> tracker.onEventButtonClicked(btnLabel)}
+          onClick={()=> tracker.onEventButtonClicked(btnLabel)}
         />
       </div>
     </div>
