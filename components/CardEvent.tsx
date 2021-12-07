@@ -4,6 +4,8 @@ import classNames from 'classnames'
 import H4 from 'components/H4'
 import Button from 'components/Button'
 
+import * as tracker from 'lib/tracker'
+
 export interface Props {
   name: string
   date: string
@@ -61,6 +63,7 @@ export default function Card({
           isPrimary
           label={btnLabel}
           href={link}
+					onClick={()=> tracker.onEventButtonClicked(btnLabel)}
         />
       </div>
     </div>
