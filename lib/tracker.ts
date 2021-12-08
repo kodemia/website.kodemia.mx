@@ -92,8 +92,12 @@ export function onFooterLinkClicked (linkName: FooterLinkName) {
   analytics.track(`Footer ${linkName} Link Clicked`, user)
 }
 
-export function onEventButtonClicked (buttonName: string){
+export function onEventButtonClicked (eventData:object):void {
   init()
   const user = getUserTraits()
-  analytics.track(`Event ${buttonName} Button Clicked`, user)
+	console.log('user', user)
+  analytics.track(`Event Button Clicked`, {
+		user:{...user},
+		event:{...eventData}
+	})
 }
