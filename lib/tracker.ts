@@ -49,10 +49,14 @@ export function onLogOut () {
   analytics.reset()
 }
 
-export function onTrapPageLoad () {
+export function onTrapPageLoad (eventData={}) {
   init()
   const user = getUserTraits()
-  analytics.track('Trap Page Shown', user)
+  analytics.track('Trap Page Shown',
+  {
+    user:{...user},
+    event:{...eventData}
+  })
 }
 
 export function onExpiredUserClickTrapPageContinueButton () {
@@ -61,17 +65,25 @@ export function onExpiredUserClickTrapPageContinueButton () {
   analytics.track('Trap Page Whatsapp Button Click', user)
 }
 
-export function onAuthReset () {
+export function onAuthReset (eventData={}) {
   init()
   const user = getUserTraits()
-  analytics.track('Auth reset', user)
+  analytics.track('Auth reset',
+  {
+    user:{...user},
+    event:{...eventData}
+  })
   analytics.reset()
 }
 
-export function onFooterButtonClicked (buttonName: 'Whatsapp' | 'Telegram') {
+export function onFooterButtonClicked (buttonName: 'Whatsapp' | 'Telegram', eventData={}) {
   init()
   const user = getUserTraits()
-  analytics.track(`Footer ${buttonName} Button Clicked`, user)
+  analytics.track(`Footer ${buttonName} Button Clicked`,
+  {
+    user:{...user},
+    event:{...eventData}
+  })
 }
 
 type FooterLinkName = 'Facebook'
@@ -86,16 +98,21 @@ type FooterLinkName = 'Facebook'
   | 'EMail'
   | 'Privacy Policy'
 
-export function onFooterLinkClicked (linkName: FooterLinkName) {
+export function onFooterLinkClicked (linkName: FooterLinkName,eventData={}) {
   init()
   const user = getUserTraits()
-  analytics.track(`Footer ${linkName} Link Clicked`, user)
+  analytics.track(`Footer ${linkName} Link Clicked`,
+  {
+    user:{...user},
+    event:{...eventData}
+  })
 }
 
 export function onEventButtonClicked (eventData:object):void {
   init()
   const user = getUserTraits()
-  analytics.track(`Event Button Clicked`, {
+  analytics.track(`Event Button Clicked`,
+  {
     user:{...user},
     event:{...eventData}
   })
