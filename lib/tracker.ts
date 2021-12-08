@@ -2,6 +2,8 @@ import { AnalyticsInstance } from 'analytics'
 import Analytics from 'lib/analytics'
 import Auth from 'lib/auth'
 
+import { Event } from 'types/common'
+
 type UserTraits = {
   email: string
   isExpired: boolean
@@ -49,14 +51,11 @@ export function onLogOut () {
   analytics.reset()
 }
 
-export function onTrapPageLoad (eventData={}) {
+export function onTrapPageLoad () {
   init()
   const user = getUserTraits()
   analytics.track('Trap Page Shown',
-  {
-    user:{...user},
-    event:{...eventData}
-  })
+  { user })
 }
 
 export function onExpiredUserClickTrapPageContinueButton () {
@@ -65,25 +64,19 @@ export function onExpiredUserClickTrapPageContinueButton () {
   analytics.track('Trap Page Whatsapp Button Click', user)
 }
 
-export function onAuthReset (eventData={}) {
+export function onAuthReset () {
   init()
   const user = getUserTraits()
   analytics.track('Auth reset',
-  {
-    user:{...user},
-    event:{...eventData}
-  })
+  { user })
   analytics.reset()
 }
 
-export function onFooterButtonClicked (buttonName: 'Whatsapp' | 'Telegram', eventData={}) {
+export function onFooterButtonClicked (buttonName: 'Whatsapp' | 'Telegram') {
   init()
   const user = getUserTraits()
   analytics.track(`Footer ${buttonName} Button Clicked`,
-  {
-    user:{...user},
-    event:{...eventData}
-  })
+  { user })
 }
 
 type FooterLinkName = 'Facebook'
@@ -98,22 +91,16 @@ type FooterLinkName = 'Facebook'
   | 'EMail'
   | 'Privacy Policy'
 
-export function onFooterLinkClicked (linkName: FooterLinkName,eventData={}) {
+export function onFooterLinkClicked (linkName: FooterLinkName) {
   init()
   const user = getUserTraits()
   analytics.track(`Footer ${linkName} Link Clicked`,
-  {
-    user:{...user},
-    event:{...eventData}
-  })
+  { user })
 }
 
-export function onEventButtonClicked (eventData:object):void {
+export function onEventButtonClicked (event:Event):void {
   init()
   const user = getUserTraits()
   analytics.track(`Event Button Clicked`,
-  {
-    user:{...user},
-    event:{...eventData}
-  })
+  { user, event })
 }
