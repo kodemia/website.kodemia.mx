@@ -5,52 +5,52 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      screens: {
-        mob: '320px', // Work around to deal with bulma spacing utilities TODO: remove when removing bulma
-        tablet: '640px',
-        laptop: '1024px',
-        desktop: '1280px'
-      },
       animation: {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
+      backgroundImage: {
+        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
+      },
       borderRadius: {
-        card: '10px',
-        'gray-card': '30px'
+        DEFAULT: '20px',
+        small: '10px',
+        wide: '30px',
+        card: '10px', // TODO: Delete
+        'gray-card': '30px' // TODO: Delete
       },
       borderWidth: {
         'text-cursor': '3.5px'
       },
       colors: {
-        'black-kd': {
+        'brand-black': {
           dark: '#0E0E0E',
           DEFAULT: '#181818',
-          light: '#343434',
-          trasparent: 'rgba(24, 24, 24, 0.85)'
+          light: '#343434', // TODO: Delete
+          trasparent: 'rgba(24, 24, 24, 0.85)' // TODO: Delete
         },
-        'cyan-kd': {
+        'brand-complementary': {
+          DEFAULT: '#FBFBFB'
+        },
+        'brand-error': {
+          DEFAULT: '#E95249',
+          light: '#fa867f' // TODO: Delete
+        },
+        'brand-gray': {
+          dark: '#302F2B',
+          DEFAULT: '#737373',
+          light: '#999999',
+          lighter: '#bdbdbd' // TODO: Delete
+        },
+        'brand-primary': {
           dark: '#07BABA',
           DEFAULT: '#00FFFF'
         },
-        'gray-kd': {
-          dark: '#2f2f2f',
-          DEFAULT: '#4E4E4E',
-          light: '#828282',
-          lighter: '#bdbdbd'
-        },
-        'green-kd': {
+        'green-kd': { // TODO: Delete
           dark: '#AAD64C',
           DEFAULT: '#95e3a5'
         },
-        'red-kd': {
-          DEFAULT: '#E95249',
-          light: '#fa867f'
-        },
-        'violet-kd': {
+        'violet-kd': { // TODO: Delete
           DEFAULT: '#BB2BFF'
-        },
-        'white-kd': {
-          DEFAULT: '#FBFBFB'
         }
       },
       fontFamily: {
@@ -65,6 +65,12 @@ module.exports = {
         mini: '10px',
         '8dot5xl': '7rem'
       },
+      height: {
+        '85vh': '85vh',
+        '500px': '500px',
+        '700px': '700px',
+        '800px': '800px'
+      },
       keyframes: {
         cursor: {
           '0%, 100%': {
@@ -75,18 +81,24 @@ module.exports = {
           }
         }
       },
-      lineHeight: {
-        h1: '1.07'
-      },
       letterSpacing: {
         'spaced': '.2em',
         'even-wider': '.4em',
       },
-      height: {
-        '85vh': '85vh',
+      lineHeight: {
+        h1: '1.07'
+      },
+      maxHeight: {
         '500px': '500px',
+        '600px': '600px',
         '700px': '700px',
-        '800px': '800px'
+        '80vh': '80vh'
+      },
+      maxWidth: {
+        '200px': '200px',
+        'sm-kd': '220px',
+        1086: '1086px',
+        420: '420px'
       },
       minHeight: {
         mini: '16px',
@@ -100,23 +112,23 @@ module.exports = {
         320: '320px',
         420: '420px',
       },
-      maxWidth: {
-        'sm-kd': '220px',
-        1086: '1086px',
-        420: '420px'
-      },
-      maxHeight: {
-        '500px': '500px',
-        '600px': '600px',
-        '700px': '700px',
-        '80vh': '80vh'
+      screens: {
+        mob: '320px', // Work around to deal with bulma spacing utilities TODO: remove when removing bulma
+        tablet: '640px',
+        laptop: '1024px',
+        desktop: '1280px'
       },
       webkitScrollbar: {
         width: '6px'
       },
-      backgroundImage: {
-        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
-      }
+    }
+  },
+  variants: {
+    extend: {
+      background: ['disabled'],
+      border: ['disabled'],
+      cursor: ['disabled'],
+      opacity: ['disabled']
     }
   }
 }
