@@ -2,8 +2,7 @@ import _ from 'lodash'
 import React from 'react'
 import classNames from 'classnames'
 import { builder } from '@builder.io/react';
-import dayjs from 'dayjs'
-import es from "dayjs/locale/es";
+
 //My components
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
@@ -12,14 +11,7 @@ import H3 from 'components/H3'
 import CardEvent from 'components/CardEvent'
 import Seo from 'components/SEO'
 
-dayjs.locale(es);
-export interface Event {
-  name: string
-  date: Date
-  isLive: Boolean
-  isPrivate: Boolean
-  link: string
-}
+import { Event } from 'types/common'
 
 export interface Props {
   events: Array<Event>
@@ -94,18 +86,13 @@ export default function Eventos({ events }: Props): JSX.Element {
           {
             events.map((event, index) => (
               <CardEvent
+                key={`event-${index}`}
                 className={classNames(
                   'md:max-w-420',
                   'md:min-w-min',
                   'w-full md:w-2/5 lg:w-80'
                 )}
-                key={`event-${index}`}
-                name={event.name}
-                date={dayjs(event.date).format('DD MMMM').toString()}
-                schedule={`${dayjs(event.date).format('HH:mm').toString()} hrs.`}
-                text={event.isLive ? 'Conexión remota vía streaming' : 'Presencial, te esperamos 😎'}
-                btnLabel={event.isPrivate ? 'Regístrate' : 'Ver evento'}
-                link={event.link}
+                event={event}
               />
             ))
           }

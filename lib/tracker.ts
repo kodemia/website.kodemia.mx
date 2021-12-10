@@ -2,6 +2,8 @@ import { AnalyticsInstance } from 'analytics'
 import Analytics from 'lib/analytics'
 import Auth from 'lib/auth'
 
+import { Event } from 'types/common'
+
 type UserTraits = {
   email: string
   isExpired: boolean
@@ -52,7 +54,8 @@ export function onLogOut () {
 export function onTrapPageLoad () {
   init()
   const user = getUserTraits()
-  analytics.track('Trap Page Shown', user)
+  analytics.track('Trap Page Shown',
+  { user })
 }
 
 export function onExpiredUserClickTrapPageContinueButton () {
@@ -64,14 +67,16 @@ export function onExpiredUserClickTrapPageContinueButton () {
 export function onAuthReset () {
   init()
   const user = getUserTraits()
-  analytics.track('Auth reset', user)
+  analytics.track('Auth reset',
+  { user })
   analytics.reset()
 }
 
 export function onFooterButtonClicked (buttonName: 'Whatsapp' | 'Telegram') {
   init()
   const user = getUserTraits()
-  analytics.track(`Footer ${buttonName} Button Clicked`, user)
+  analytics.track(`Footer ${buttonName} Button Clicked`,
+  { user })
 }
 
 type FooterLinkName = 'Facebook'
@@ -89,5 +94,13 @@ type FooterLinkName = 'Facebook'
 export function onFooterLinkClicked (linkName: FooterLinkName) {
   init()
   const user = getUserTraits()
-  analytics.track(`Footer ${linkName} Link Clicked`, user)
+  analytics.track(`Footer ${linkName} Link Clicked`,
+  { user })
+}
+
+export function onEventButtonClicked (event:Event):void {
+  init()
+  const user = getUserTraits()
+  analytics.track(`Event Button Clicked`,
+  { user, event })
 }

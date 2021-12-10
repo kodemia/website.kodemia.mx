@@ -1,28 +1,22 @@
 import React from 'react'
 import classNames from 'classnames'
+import dayjs from 'dayjs'
+import es from "dayjs/locale/es";
 // My components
 import H4 from 'components/H4'
 import Button from 'components/Button'
 
+import { Event } from 'types/common'
+import * as tracker from 'lib/tracker'
+
 export interface Props {
-  name: string
-  date: string
-  schedule: string
-  text: string
-  btnLabel: string
-  link: string
-  className: string
+  event: Event
+  className?: string
 }
 
-export default function Card({
-  name,
-  date,
-  schedule,
-  text,
-  btnLabel,
-  link,
-  className
-}: Props) {
+dayjs.locale(es);
+
+export default function CardEvent({ event, className }: Props) {
   return (
     <div className={classNames(
       className,
@@ -34,7 +28,7 @@ export default function Card({
     )}>
       <div>
         <H4>
-          {name}
+          {event.name}
         </H4>
       </div>
       <div className={classNames('mt-4')}>
@@ -42,25 +36,26 @@ export default function Card({
           'text-cyan-kd text-h5 font-medium'
         )}
         >
-          {date}
+          {dayjs(event.date).format('DD MMMM').toString()}
         </h5>
         <p className={classNames(
           'text-gray-kd-light text-h5 font-medium'
         )}
         >
-          {schedule}
+          {`${dayjs(event.date).format('HH:mm').toString()} hrs.`}
         </p>
         <p className={classNames(
           'mb-5',
           'text-gray-kd-light font-medium'
         )}
         >
-          {text}
+          {event.isLive ? 'Conexión remota vía streaming' : 'Presencial, te esperamos 😎'}
         </p>
         <Button
           isPrimary
-          label={btnLabel}
-          href={link}
+          label={event.isPrivate ? 'Regístrate' : 'Ver evento'}
+          href={event.link}
+          onClick={() => tracker.onEventButtonClicked(event)}
         />
       </div>
     </div>
