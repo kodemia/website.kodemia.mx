@@ -27,7 +27,6 @@ module.exports = {
         },
         'brand-error': {
           DEFAULT: '#E95249',
-          light: '#FA867F'
         },
         'brand-gray': {
           dark: '#302F2B',
