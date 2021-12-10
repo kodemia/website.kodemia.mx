@@ -16,7 +16,7 @@ export interface Props {
 
 dayjs.locale(es);
 
-export default function Card({ event, className }: Props) {
+export default function CardEvent({ event, className }: Props) {
   return (
     <div className={classNames(
       className,
