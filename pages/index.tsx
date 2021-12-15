@@ -6,7 +6,6 @@ import Hero from 'components/Pages/Home/Hero'
 import KodemiaExperience from 'components/Pages/Home/KodemiaExperience'
 import KodemiaFinancing from 'components/Pages/Home/KodemiaFinancing'
 import Navbar from 'components/Navbar'
-import BannerBecaBackbase from 'components/banners/BecaBackbase'
 import OurBootcamps from 'components/Pages/Home/OurBootcamps'
 import OurMethod from 'components/Pages/Home/OurMethod'
 import Seo from 'components/SEO'
@@ -24,12 +23,11 @@ import TestimonialData from 'config/testimonials-data.json'
 import WhyKodemiaCards from 'config/why-kodemia-cards.json'
 import WinnerImages from 'config/winner-images.json'
 
-export default function Home () {
+export default function Home() {
   return (
     <>
       <Seo />
       <Navbar />
-      <BannerBecaBackbase />
       <Hero video='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4' />
       <WhyKodemia
         cards={WhyKodemiaCards.cards}
