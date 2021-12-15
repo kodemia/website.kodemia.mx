@@ -23,7 +23,7 @@ import TestimonialData from 'config/testimonials-data.json'
 import WhyKodemiaCards from 'config/why-kodemia-cards.json'
 import WinnerImages from 'config/winner-images.json'
 
-export default function Home() {
+export default function Home () {
   return (
     <>
       <Seo />
