@@ -27,7 +27,7 @@ export interface Language {
 export interface Props {
   bootcamps: {
     javascript: Language
-    mobile: Language
+    mobile?: Language
   }
 }
 
