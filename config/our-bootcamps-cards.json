@@ -10,9 +10,9 @@
         "description": "Conexión remota vía streaming",
         "link": "/javascript-live",
         "schedule": {
-          "day": "13",
-          "month": "Diciembre",
-          "year": "2021",
+          "day": "10",
+          "month": "Enero",
+          "year": "2022",
           "hour": "19:00 - 22:00 hrs.",
           "days": "Lunes a viernes"
         }
@@ -25,38 +25,6 @@
           "day": "",
           "month": "Próximamente",
           "year": "",
-          "hour": "19:00 - 22:00 hrs.",
-          "days": "Lunes a viernes"
-        }
-      }
-    ]
-  },
-  "mobile": {
-    "name": "Bootcamp Mobile",
-    "language": "iOS o Android",
-    "description": "Desarrollarás aplicaciones nativas para dispositivos móviles, aprovecha la beca del 80%",
-    "duration": "15 semanas",
-    "modalities": [
-      {
-        "name": "Modo Live [ iOS ]",
-        "description": "Conexión remota vía streaming",
-        "link": "/backbase",
-        "schedule": {
-          "day": "13",
-          "month": "Diciembre",
-          "year": "2021",
-          "hour": "19:00 - 22:00 hrs.",
-          "days": "Lunes a viernes"
-        }
-      },
-      {
-        "name": "Modo Live [ Android ]",
-        "description": "Conexión remota vía streaming",
-        "link": "/backbase",
-        "schedule": {
-          "day": "13",
-          "month": "Diciembre",
-          "year": "2021",
           "hour": "19:00 - 22:00 hrs.",
           "days": "Lunes a viernes"
         }
