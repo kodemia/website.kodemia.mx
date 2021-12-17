@@ -9,3 +9,15 @@ export type Event = {
   isPrivate: Boolean
   link: string
 }
+export type Mentor = {
+  photography: string
+  name: string
+  jobTitle: string
+  companyName: string
+  experience: number
+  github: string
+  linkedin: string
+  twitter: string
+  description: string
+  skills: string[]
+}

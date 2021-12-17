@@ -115,7 +115,8 @@ module.exports = {
         width: '6px'
       },
       backgroundImage: {
-        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
+        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
+        'mentors': "url('https://cdn.kodemia.mx/images/mentores/mentores-desktop.jpg')"
       }
     }
   }
