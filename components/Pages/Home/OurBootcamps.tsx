@@ -27,7 +27,7 @@ export interface Language {
 export interface Props {
   bootcamps: {
     javascript: Language
-    mobile: Language
+    mobile?: Language
   }
 }
 
@@ -61,29 +61,31 @@ export default function OurBootcamps ({ bootcamps }: Props) {
             }
           </article>
         </div>
-        <div className='bootcamp'>
-          <LanguageCard
-            name={bootcamps.mobile.name}
-            language={bootcamps.mobile.language}
-            description={bootcamps.mobile.description}
-            duration={bootcamps.mobile.duration}
-          />
-          <article className='modalities-container'>
-            {
-              bootcamps.mobile.modalities.map((modality, index) => (
-                <div className='modality' key={index}>
-                  <BootcampCard
-                    mode={modality.name}
-                    date={`${modality.schedule.day} ${modality.schedule.day ? 'de' : ''} ${modality.schedule.month}`}
-                    schedule={`${modality.schedule.days} de ${modality.schedule.hour}`}
-                    feature={modality.description}
-                    link={modality.link}
-                  />
-                </div>
-              ))
-            }
-          </article>
-        </div>
+        {bootcamps.mobile &&
+          (<div className='bootcamp'>
+            <LanguageCard
+              name={bootcamps.mobile.name}
+              language={bootcamps.mobile.language}
+              description={bootcamps.mobile.description}
+              duration={bootcamps.mobile.duration}
+            />
+            <article className='modalities-container'>
+              {
+                bootcamps.mobile.modalities.map((modality, index) => (
+                  <div className='modality' key={index}>
+                    <BootcampCard
+                      mode={modality.name}
+                      date={`${modality.schedule.day} ${modality.schedule.day ? 'de' : ''} ${modality.schedule.month}`}
+                      schedule={`${modality.schedule.days} de ${modality.schedule.hour}`}
+                      feature={modality.description}
+                      link={modality.link}
+                    />
+                  </div>
+                ))
+              }
+            </article>
+          </div>)
+        }
       </div>
     </section>
   )
