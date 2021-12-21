@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 import H4 from 'components/H4'
+import Pill from 'components/Pill'
 
 import { Mentor } from 'types/common'
 import * as tracker from 'lib/tracker'
@@ -12,24 +13,24 @@ export interface Props {
 }
 
 
-export default function MentorCard ({ mentor, className }: Props) {
-  // console.log('mentor: ', mentor)
+export default function MentorCard ({ className, mentor }: Props) {
+  console.log('mentor: ', mentor)
   return (
     <div className={classNames(
       className,
       'border border-solid rounded-xl',
       'border-gray-kd-light hover:border-cyan-kd-dark',
       'flex flex-col justify-between',
-      'h-56',
-      'mb-4',
       'p-4',
       'w-full'
-    )}>
-      <div>
+      )}>
+      <div className={classNames(
+        'mb-4',
+        ''
+      )}>
          <img
           className={classNames(
-            // 'h-56',
-            'cover siz',
+            'h-60',
             'w-full'
           )}
           src={mentor.photography}
@@ -40,23 +41,36 @@ export default function MentorCard ({ mentor, className }: Props) {
         {mentor.name}
       </H4>
       <p className={classNames(
-        'text-base text-cyan-kd opacity-80',
-        ''
+        'mt-1',
+        'text-base text-cyan-kd opacity-80 font-medium'
       )}>
         {`${mentor.jobTitle} en ${mentor.companyName}`}
       </p>
-      <p>
-        {mentor.experience}
+      <p className={classNames(
+        'mt-2',
+        'text-base text-white font-medium'
+      )}>
+        {`Experiencia: ${mentor.yearsOfExperience} años`}
       </p>
-      <div>
+      <div className={classNames(
+        'flex flex-row',
+        'flex-wrap',
+        'justify-between',
+        'mt-5',
+        'w-28'
+      )}>
         <a
-          className=''
+          className={classNames(
+            '',
+
+          )}
           href={`https://github.com/${mentor.github}`}
           rel='noopener noreferrer'
           target='_blank'
           // onClick={tracker.onMentorLinkClicked('Github')}
         >
           <img
+            className='w-7'
             src='/icons/social-media-gh.svg'
             alt='github-logo'
           />
@@ -69,6 +83,7 @@ export default function MentorCard ({ mentor, className }: Props) {
           // onClick={tracker.onMentorLinkClicked('LinkedIn')}
         >
           <img
+            className='w-7'
             src='/icons/social-media-in.svg'
             alt='linkedin-logo'
           />
@@ -81,24 +96,44 @@ export default function MentorCard ({ mentor, className }: Props) {
           // onClick={tracker.onMentorLinkClicked('Twitter')}
         >
           <img
+            className='w-7'
             src='/icons/social-media-tw.svg'
             alt='twitter-logo'
           />
         </a>
       </div>
-      <p>{mentor.description}</p>
-      <span>
+      <div className='h-20'>
+        <p className={classNames(
+          'mt-5',
+          'text-base text-gray-kd-lighter font-normal',
+          'text-clip'
+        )}>
+          {mentor.description}
+        </p>
+      </div>
+      <p className='text-base font-medium'>
         Skills
-      </span>
-      <div>
+      </p>
+      <div className={classNames(
+        'grid grid-cols-2',
+        'gap-x-3',
+        'gap-y-2',
+        'mt-6'
+      )}>
         {
           mentor.skills.map((skill, index) => (
-            console.log('SKILL: ', skill)
-            // <div
-            //   className='bg-red-500'
-            //   key={`skill-${index}`}
-            //   >
-            //   {skill.name}
+            // console.log('SKILL: ', skill)
+            // <div className={classNames(
+            //   'grid grid-cols-2',
+            //   'gap-y-2'
+            // )}>
+              <Pill
+                className={classNames(
+                  ''
+                )}
+                key={`skill-${index}`}
+                skill={skill}
+              />
             // </div>
           ))
         }

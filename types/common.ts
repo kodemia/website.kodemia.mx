@@ -14,10 +14,13 @@ export type Mentor = {
   name: string
   jobTitle: string
   companyName: string
-  experience: number
+  yearsOfExperience: number
   github: string
   linkedin: string
   twitter: string
   description: string
-  skills: string[]
+  skills: Skill[]
+}
+export type Skill = {
+  name: string
 }
