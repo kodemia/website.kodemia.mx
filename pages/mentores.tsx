@@ -9,6 +9,7 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 
 import { Mentor } from 'types/common'
+// import Skill from 'config/mentor-skills'
 
 export interface Props {
   mentors: Array<Mentor>

@@ -5,7 +5,7 @@ import H4 from 'components/H4'
 import Pill from 'components/Pill'
 
 import { Mentor } from 'types/common'
-import Skill from 'config/mentor-skills'
+// import Skill from 'config/mentor-skills'
 import * as tracker from 'lib/tracker'
 
 export interface Props {

@@ -5,7 +5,8 @@ export interface MentorSkills {
  color: Skill
 }
 
-const MentorSkills: MentorSkills = [
+// const MentorSkills: MentorSkills = [
+[
   {
     "name": "Git",
     "color": "green-kd-dark"
