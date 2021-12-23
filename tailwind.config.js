@@ -119,5 +119,8 @@ module.exports = {
         'mentors': "url('https://cdn.kodemia.mx/images/mentores/mentores-desktop.jpg')"
       }
     }
-  }
+  },
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ]
 }

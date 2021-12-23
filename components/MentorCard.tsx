@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 
 import H4 from 'components/H4'
 import Pill from 'components/Pill'
 
 import { Mentor } from 'types/common'
+import Skill from 'config/mentor-skills'
 import * as tracker from 'lib/tracker'
 
 export interface Props {
@@ -13,14 +14,15 @@ export interface Props {
 }
 
 
-export default function MentorCard ({ className, mentor }: Props) {
-  console.log('mentor: ', mentor)
+export default function MentorCard ({ className, mentor }: Props):JSX.Element {
+  // console.log('mentor: ', mentor)
+  const [isExpanded, setIsExpanded] = useState<boolean>(false)
   return (
     <div className={classNames(
       className,
       'border border-solid rounded-xl',
       'border-gray-kd-light hover:border-cyan-kd-dark',
-      'flex flex-col justify-between',
+      'flex flex-col justify-start',
       'p-4',
       'w-full'
       )}>
@@ -30,6 +32,7 @@ export default function MentorCard ({ className, mentor }: Props) {
       )}>
          <img
           className={classNames(
+            'bg-contain',
             'h-60',
             'w-full'
           )}
@@ -102,37 +105,51 @@ export default function MentorCard ({ className, mentor }: Props) {
           />
         </a>
       </div>
-      <div className='h-20'>
+      <div>
+      {/* <div className='h-20'> */}
         <p className={classNames(
           'mt-5',
           'text-base text-gray-kd-lighter font-normal',
-          'text-clip'
+          {'line-clamp-3': !isExpanded},
+          {'line-clamp-none': isExpanded}
         )}>
           {mentor.description}
+          {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */}
         </p>
+        <a
+          className={classNames(
+            'text-cyan-kd',
+            'underline underline-offset-2',
+            {'hidden': isExpanded}
+          )}
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          leer más
+        </a>
       </div>
-      <p className='text-base font-medium'>
+      <p className={classNames(
+        'mt-5',
+        'text-base font-medium'
+      )}>
         Skills
       </p>
       <div className={classNames(
         'grid grid-cols-2',
         'gap-x-3',
         'gap-y-2',
-        'mt-6'
+        'mt-4'
       )}>
         {
           mentor.skills.map((skill, index) => (
-            // console.log('SKILL: ', skill)
-            // <div className={classNames(
-            //   'grid grid-cols-2',
-            //   'gap-y-2'
-            // )}>
+            // console.log('Skill in mentor.skills', skill)
               <Pill
-                className={classNames(
-                  ''
-                )}
+                // className={classNames(
+                //   ''
+                // )}
                 key={`skill-${index}`}
                 skill={skill}
+                // name={skill.name}
+                // color={skill.color}
               />
             // </div>
           ))

@@ -23,4 +23,5 @@ export type Mentor = {
 }
 export type Skill = {
   name: string
+  color: string
 }

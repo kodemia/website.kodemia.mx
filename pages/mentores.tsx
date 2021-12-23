@@ -68,7 +68,7 @@ export default function Mentores ({ mentors }: Props):JSX.Element {
           'tablet:flex-wrap',
           'gap-y-9',
           'gap-x-0 tablet:gap-x-11 laptop:gap-x-10',
-          'justify-center',
+          'justify-between',
           'max-w-1086',
           'w-full',
         )}>
@@ -84,7 +84,7 @@ export default function Mentores ({ mentors }: Props):JSX.Element {
                 mentor={mentor}
               />
             ))
-        }
+          }
         </section>
       </main>
       <Footer />
