@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import dayjs from 'dayjs'
-import es from "dayjs/locale/es";
+
 // My components
 import H4 from 'components/H4'
 import Button from 'components/Button'
@@ -13,8 +13,6 @@ export interface Props {
   event: Event
   className?: string
 }
-
-dayjs.locale(es);
 
 export default function CardEvent({ event, className }: Props) {
   return (
