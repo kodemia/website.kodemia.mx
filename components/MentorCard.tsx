@@ -29,7 +29,7 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
       )}>
          <img
           className={classNames(
-            'bg-cover',
+            'object-contain bg-center bg-no-repeat',
             'h-60',
             'w-full'
           )}
