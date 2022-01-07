@@ -63,7 +63,7 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
           href={`https://github.com/${mentor.github}`}
           rel='noopener noreferrer'
           target='_blank'
-          onClick={tracker.onMentorLinkClicked('Github')}
+          onClick={() => {tracker.onMentorLinkClicked('Github')}}
         >
           <img
             className='w-7'
@@ -75,7 +75,7 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
           href={`https://www.linkedin.com/in/${mentor.linkedin}`}
           rel='noopener noreferrer'
           target='_blank'
-          onClick={tracker.onMentorLinkClicked('LinkedIn')}
+          onClick={() =>{tracker.onMentorLinkClicked('LinkedIn')}}
         >
           <img
             className='w-7'
@@ -87,7 +87,7 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
           href={`https://twitter.com/${mentor.twitter}`}
           rel='noopener noreferrer'
           target='_blank'
-          onClick={tracker.onMentorLinkClicked('Twitter')}
+          onClick={() =>{tracker.onMentorLinkClicked('Twitter')}}
         >
           <img
             className='w-7'
