@@ -110,7 +110,7 @@ type MentorLinkName = 'Github'
 | 'LinkedIn'
 | 'Twitter'
 
-export function onMentorLinkClicked (linkName:MentorLinkName): void {
+export function onMentorLinkClicked (linkName: MentorLinkName) {
   init()
   const user = getUserTraits()
   analytics.track(`Mentor ${linkName} Link Clicked`,
