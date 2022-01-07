@@ -5,7 +5,6 @@ import H4 from 'components/H4'
 import Pill from 'components/Pill'
 
 import { Mentor } from 'types/common'
-// import Skill from 'config/mentor-skills'
 import * as tracker from 'lib/tracker'
 
 export interface Props {
@@ -13,9 +12,7 @@ export interface Props {
   mentor: Mentor
 }
 
-
 export default function MentorCard ({ className, mentor }: Props):JSX.Element {
-  // console.log('mentor: ', mentor)
   const [isExpanded, setIsExpanded] = useState<boolean>(false)
   return (
     <div className={classNames(
@@ -23,16 +20,16 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
       'border border-solid rounded-xl',
       'border-gray-kd-light hover:border-cyan-kd-dark',
       'flex flex-col justify-start',
+      'h-fit',
       'p-4',
       'w-full'
       )}>
       <div className={classNames(
-        'mb-4',
-        ''
+        'mb-4'
       )}>
          <img
           className={classNames(
-            'bg-contain',
+            'bg-cover',
             'h-60',
             'w-full'
           )}
@@ -63,14 +60,10 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
         'w-28'
       )}>
         <a
-          className={classNames(
-            '',
-
-          )}
           href={`https://github.com/${mentor.github}`}
           rel='noopener noreferrer'
           target='_blank'
-          // onClick={tracker.onMentorLinkClicked('Github')}
+          onClick={tracker.onMentorLinkClicked('Github')}
         >
           <img
             className='w-7'
@@ -79,11 +72,10 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
           />
         </a>
         <a
-          className=''
           href={`https://www.linkedin.com/in/${mentor.linkedin}`}
           rel='noopener noreferrer'
           target='_blank'
-          // onClick={tracker.onMentorLinkClicked('LinkedIn')}
+          onClick={tracker.onMentorLinkClicked('LinkedIn')}
         >
           <img
             className='w-7'
@@ -92,11 +84,10 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
           />
         </a>
         <a
-          className=''
           href={`https://twitter.com/${mentor.twitter}`}
           rel='noopener noreferrer'
           target='_blank'
-          // onClick={tracker.onMentorLinkClicked('Twitter')}
+          onClick={tracker.onMentorLinkClicked('Twitter')}
         >
           <img
             className='w-7'
@@ -106,7 +97,6 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
         </a>
       </div>
       <div>
-      {/* <div className='h-20'> */}
         <p className={classNames(
           'mt-5',
           'text-base text-gray-kd-lighter font-normal',
@@ -114,7 +104,6 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
           {'line-clamp-none': isExpanded}
         )}>
           {mentor.description}
-          {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */}
         </p>
         <a
           className={classNames(
@@ -141,17 +130,10 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
       )}>
         {
           mentor.skills.map((skill, index) => (
-            // console.log('Skill in mentor.skills', skill)
-              <Pill
-                // className={classNames(
-                //   ''
-                // )}
-                key={`skill-${index}`}
-                skill={skill}
-                // name={skill.name}
-                // color={skill.color}
-              />
-            // </div>
+            <Pill
+            key={`skill-${index}`}
+            skill={skill}
+            />
           ))
         }
       </div>

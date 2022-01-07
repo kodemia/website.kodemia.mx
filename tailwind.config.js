@@ -91,7 +91,7 @@ module.exports = {
       minHeight: {
         mini: '16px',
         'sm-kd': '465px',
-        430: '430px'
+        430: '430px',
       },
       minWidth: {
         'sm-kd': '220px',
@@ -117,6 +117,10 @@ module.exports = {
       backgroundImage: {
         'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
         'mentors': "url('https://cdn.kodemia.mx/images/mentores/mentores-desktop.jpg')"
+      },
+      spacing: {
+        '9/20': '45%',
+        'fit': 'fit-content'
       }
     }
   },

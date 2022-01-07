@@ -1,12 +1,4 @@
-import { Skill } from 'types/common'
-
-export interface MentorSkills {
- name: Skill
- color: Skill
-}
-
-// const MentorSkills: MentorSkills = [
-[
+const MentorSkills = [
   {
     "name": "Git",
     "color": "green-kd-dark"
@@ -40,7 +32,7 @@ export interface MentorSkills {
     "color": "cyan-kd-dark"
   },
   {
-    "name": "NodeJS",
+    "name": "Node",
     "color": "cyan-kd-dark"
   },
   {
@@ -61,15 +53,15 @@ export interface MentorSkills {
   },
   {
     "name": "AWS",
-    "color": "blue-700"
+    "color": "violet-kd"
   },
   {
     "name": "Google Cloud",
-    "color": "blue-700"
+    "color": "violet-kd"
   },
   {
     "name": "IBM Cloud",
-    "color": "blue-700"
+    "color": "violet-kd"
   },
   {
     "name": "React",
@@ -88,7 +80,7 @@ export interface MentorSkills {
     "color": "red-500"
   },
   {
-    "name": "IOS",
+    "name": "iOS",
     "color": "yellow-600"
   },
   {
@@ -100,3 +92,5 @@ export interface MentorSkills {
     "color": "yellow-300"
   }
 ]
+
+export default MentorSkills

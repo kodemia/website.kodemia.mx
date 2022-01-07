@@ -9,7 +9,6 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 
 import { Mentor } from 'types/common'
-// import Skill from 'config/mentor-skills'
 
 export interface Props {
   mentors: Array<Mentor>
@@ -28,8 +27,6 @@ export const getStaticProps = async () => {
 }
 
 export default function Mentores ({ mentors }: Props):JSX.Element {
-  // console.log('mentors: ',mentors)
-  // console.log('MENTORS: ', mentors)
   return (
     <>
       <Navbar />
@@ -67,9 +64,9 @@ export default function Mentores ({ mentors }: Props):JSX.Element {
         <section className={classNames(
           'flex flex-col tablet:flex-row',
           'tablet:flex-wrap',
-          'gap-y-9',
-          'gap-x-0 tablet:gap-x-11 laptop:gap-x-10',
-          'justify-between',
+          'gap-x-0',
+          'tablet:gap-x-10',
+          'tablet:justify-between',
           'max-w-1086',
           'w-full',
         )}>
@@ -77,9 +74,8 @@ export default function Mentores ({ mentors }: Props):JSX.Element {
             mentors.map((mentor, index) => (
               <MentorCard
                 className={classNames(
-                  'tablet:max-w-420',
-                  'tablet:min-w-min',
-                  'w-full tablet:w-2/5 laptop:w-80',
+                  'mb-9',
+                  'w-full tablet:w-9/20 laptop:w-80',
                 )}
                 key={`mentor-${index}`}
                 mentor={mentor}
