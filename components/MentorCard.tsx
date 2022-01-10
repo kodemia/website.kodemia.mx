@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
+import _ from 'lodash'
 
 import H4 from 'components/H4'
 import Pill from 'components/Pill'
@@ -14,6 +15,8 @@ export interface Props {
 
 export default function MentorCard ({ className, mentor }: Props):JSX.Element {
   const [isExpanded, setIsExpanded] = useState<boolean>(false)
+  const [skillsList] = _.chunk(mentor.skills, 6)
+
   return (
     <div className={classNames(
       className,
@@ -29,7 +32,7 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
       )}>
          <img
           className={classNames(
-            'object-contain bg-center bg-no-repeat',
+            'object-cover bg-center bg-no-repeat',
             'h-60',
             'w-full'
           )}
@@ -109,11 +112,14 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
           className={classNames(
             'text-cyan-kd',
             'underline underline-offset-2',
-            {'hidden': isExpanded}
           )}
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          leer más
+          {
+            isExpanded
+            ? 'Leer menos'
+            : 'Leer más'
+          }
         </a>
       </div>
       <p className={classNames(
@@ -129,10 +135,10 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
         'mt-4'
       )}>
         {
-          mentor.skills.map((skill, index) => (
+          skillsList.map((skill, index) => (
             <Pill
-            key={`skill-${index}`}
-            skill={skill}
+              key={`skill-${index}`}
+              skill={skill}
             />
           ))
         }

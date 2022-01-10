@@ -59,23 +59,23 @@ export default function Mentores ({ mentors }: Props):JSX.Element {
         'bg-black-kd',
         'flex justify-center',
         'desktop:items-center',
-        'pt-24 px-12 pb-16',
+        'tablet:pt-24 px-7 tablet:px-12 pb-16',
       )}>
-        <section className={classNames(
-          'flex flex-col tablet:flex-row',
-          'tablet:flex-wrap',
-          'gap-x-0',
-          'tablet:gap-x-10',
-          'tablet:justify-between',
-          'max-w-1086',
-          'w-full',
-        )}>
+        <section
+          className={classNames(
+            'tablet:masonry-2-col laptop:masonry-3-col',
+            'gap-x-0',
+            'tablet:gap-x-10',
+            'max-w-1086',
+            'w-full',
+          )}
+        >
           {
             mentors.map((mentor, index) => (
               <MentorCard
                 className={classNames(
+                  'avoid-break-inside',
                   'mb-9',
-                  'w-full tablet:w-9/20 laptop:w-80',
                 )}
                 key={`mentor-${index}`}
                 mentor={mentor}
