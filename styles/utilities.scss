@@ -19,10 +19,12 @@
       column-count: 3;
       column-gap: 1em;
     }
+
     .masonry-2-col {
       column-count: 2;
       column-gap: 1em;
     }
+
     .avoid-break-inside { // remove when migrating to tailwind v3
       break-inside: avoid;
     }
