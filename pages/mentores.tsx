@@ -59,13 +59,11 @@ export default function Mentores ({ mentors }: Props):JSX.Element {
         'bg-black-kd',
         'flex justify-center',
         'desktop:items-center',
-        'tablet:pt-24 px-7 tablet:px-12 pb-16',
+        'pt-24 px-7 tablet:px-12 pb-14',
       )}>
         <section
           className={classNames(
             'tablet:masonry-2-col laptop:masonry-3-col',
-            'gap-x-0',
-            'tablet:gap-x-10',
             'max-w-1086',
             'w-full',
           )}
