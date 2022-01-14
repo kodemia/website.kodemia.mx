@@ -19,6 +19,9 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
   const experience = mentor.yearsOfExperience === 1
     ? `${mentor.yearsOfExperience} año`
     : `${mentor.yearsOfExperience} años`
+  const hasGithubUser = !!mentor.github
+  const hasLinkedinUser = !!mentor.linkedin
+  const hasTwitterUSer = !!mentor.twitter
 
   return (
     <div className={classNames(
@@ -59,48 +62,54 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
         {`Experiencia: ${experience}`}
       </p>
       <div className={classNames(
-        'flex flex-row',
-        'flex-wrap',
-        'justify-between',
+        'grid grid-cols-3',
+        'gap-x-4',
+        'gap-y-3',
         'mt-5',
-        'w-28'
+        'w-max'
       )}>
-        <a
-          href={`https://github.com/${mentor.github}`}
-          rel='noopener noreferrer'
-          target='_blank'
-          onClick={() => {tracker.onMentorLinkClicked('Github')}}
-        >
-          <img
-            className='w-7'
-            src='/icons/social-media-gh.svg'
-            alt='github-logo'
-          />
-        </a>
-        <a
-          href={`https://www.linkedin.com/in/${mentor.linkedin}`}
-          rel='noopener noreferrer'
-          target='_blank'
-          onClick={() =>{tracker.onMentorLinkClicked('LinkedIn')}}
-        >
-          <img
-            className='w-7'
-            src='/icons/social-media-in.svg'
-            alt='linkedin-logo'
-          />
-        </a>
-        <a
-          href={`https://twitter.com/${mentor.twitter}`}
-          rel='noopener noreferrer'
-          target='_blank'
-          onClick={() =>{tracker.onMentorLinkClicked('Twitter')}}
-        >
-          <img
-            className='w-7'
-            src='/icons/social-media-tw.svg'
-            alt='twitter-logo'
-          />
-        </a>
+        {hasGithubUser && (
+          <a
+            href={`https://github.com/${mentor.github}`}
+            rel='noopener noreferrer'
+            target='_blank'
+            onClick={() => {tracker.onMentorLinkClicked('Github')}}
+          >
+            <img
+              className='w-8'
+              src='/icons/social-media-gh.svg'
+              alt='github-logo'
+            />
+          </a>
+        )}
+        {hasLinkedinUser && (
+          <a
+            href={`https://www.linkedin.com/in/${mentor.linkedin}`}
+            rel='noopener noreferrer'
+            target='_blank'
+            onClick={() =>{tracker.onMentorLinkClicked('LinkedIn')}}
+          >
+            <img
+              className='w-8'
+              src='/icons/social-media-in.svg'
+              alt='linkedin-logo'
+            />
+          </a>
+        )}
+        {hasTwitterUSer && (
+          <a
+            href={`https://twitter.com/${mentor.twitter}`}
+            rel='noopener noreferrer'
+            target='_blank'
+            onClick={() =>{tracker.onMentorLinkClicked('Twitter')}}
+          >
+            <img
+              className='w-8'
+              src='/icons/social-media-tw.svg'
+              alt='twitter-logo'
+            />
+          </a>
+        )}
       </div>
       <div>
         <p className={classNames(
