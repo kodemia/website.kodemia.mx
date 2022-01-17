@@ -21,7 +21,7 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
     : `${mentor.yearsOfExperience} años`
   const hasGithubUser = !!mentor.github
   const hasLinkedinUser = !!mentor.linkedin
-  const hasTwitterUSer = !!mentor.twitter
+  const hasTwitterUser = !!mentor.twitter
 
   return (
     <div className={classNames(
@@ -96,7 +96,7 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
             />
           </a>
         )}
-        {hasTwitterUSer && (
+        {hasTwitterUser && (
           <a
             href={`https://twitter.com/${mentor.twitter}`}
             rel='noopener noreferrer'
