@@ -1,6 +1,5 @@
 
 import React from 'react'
-// my component
 import classNames from 'classnames'
 
 export interface Props {
@@ -13,14 +12,16 @@ export default function TextCursor ({
   text = '',
   white,
   children
-}: Props) {
-  const cursorClass = classNames({
-    'white-cursor': white,
-    'cyan-cursor': !white
-  })
+}: Props):JSX.Element {
+  const cursorClass = classNames(
+    'border-b-4 border-solid',
+    {
+      'animate-cursor text-white': white,
+      'animate-cursor text-brand-primary': !white
+    })
   const textClass = classNames({
-    'cyan-text': !white,
-    'white-text': white
+    'text-brand-primary': !white,
+    'text-white': white
   })
 
   const finalPosition = text.length - 1
@@ -29,10 +30,12 @@ export default function TextCursor ({
 
   return (
     <>
-      {!children &&
-        <span className={textClass}>
-          {` ${newText}`}
-        </span>}
+      {
+        !children &&
+          <span className={textClass}>
+            {` ${newText}`}
+          </span>
+      }
       <span className={cursorClass}>
         {children && children}
         {!children && characterCursor}
