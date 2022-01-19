@@ -16,8 +16,8 @@ export default function TextCursor ({
   const cursorClass = classNames(
     'border-b-4 border-solid',
     {
-      'animate-cursor text-white': white,
-      'animate-cursor text-brand-primary': !white
+      'animate-cursor text-brand-primary': !white,
+      'animate-cursor text-white': white
     })
   const textClass = classNames({
     'text-brand-primary': !white,
