@@ -31,8 +31,7 @@ export default function H3 ({
         'text-brand-primary': isFirstCyan,
         'text-brand-complementary': !isFirstCyan
       }
-    )}
-    >
+    )}>
       {children || text}
       {
         !children &&

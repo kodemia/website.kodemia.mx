@@ -18,8 +18,7 @@ export default function H2 ({ children, isCyan = false }: Props):JSX.Element {
         'text-brand-primary': isCyan,
         'text-brand-complementary': !isCyan
       }
-    )}
-    >
+    )}>
       <TextCursor
         text={children}
         white={!isCyan}
