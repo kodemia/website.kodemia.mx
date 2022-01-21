@@ -1,22 +1,22 @@
 
 import React from 'react'
-import classnames from 'classnames'
+import classNames from 'classnames'
 // my component
 import TextCursor from './TextCursor'
 
 export interface Props {
-  whiteText?: string
   cyanText?: string
-  isFirstCyan?: boolean
+  whiteText?: string
+  isFirstCyan?: Boolean
   children?: React.ReactNode
 }
 
 export default function H3 ({
-  whiteText = '',
   cyanText = '',
+  whiteText = '',
   isFirstCyan = false,
   children
-}: Props) {
+}: Props): JSX.Element {
   cyanText = cyanText.trim()
   whiteText = whiteText.trim()
 
@@ -24,10 +24,14 @@ export default function H3 ({
   const cursorText = isFirstCyan ? whiteText : cyanText
 
   return (
-    <h3 className={classnames({
-      'h3-cyan': isFirstCyan,
-      'h3-white': !isFirstCyan
-    })}
+    <h3 className={classNames(
+      'text-brand-h3',
+      'font-semibold',
+      {
+        'text-brand-primary': isFirstCyan,
+        'text-brand-complementary': !isFirstCyan
+      }
+    )}
     >
       {children || text}
       {
