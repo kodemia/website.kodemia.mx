@@ -41,6 +41,18 @@ module.exports = {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans]
       },
+      fontSize: {
+        'brand-h1': ['40px', '1.07'],
+        'brand-h1-sm': ['32px', '1.07'],
+        'brand-h2': ['32px', '1.07'],
+        'brand-h2-sm': ['28px', '1.07'],
+        'brand-h3': ['28px', '1.2'],
+        'brand-h4': ['24px', '40px'],
+        'brand-h5': ['20px', '28px'],
+        'brand-h6': ['16px', '28px'],
+        'brand-subtitle': ['20px', '28px'],
+        'brand-body': ['16px', '24px']
+      }
     }
   }
 }
