@@ -48,7 +48,7 @@ module.exports = {
         'brand-h2-sm': ['28px', '1.07'],
         'brand-h3': ['28px', '1.2'],
         'brand-h4': ['24px', '1.36'],
-        'brand-h5': ['20px', '28px'],
+        'brand-h5': ['20px', '1.36'],
         'brand-h6': ['16px', '28px'],
         'brand-subtitle': ['20px', '28px'],
         'brand-body': ['16px', '24px']
