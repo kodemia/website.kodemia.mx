@@ -2,7 +2,7 @@
 import React from 'react'
 import classNames from 'classnames'
 // my component
-import TextCursor from './TextCursor'
+import TextCursor from 'components/TextCursor'
 
 interface Props {
   children?: string
