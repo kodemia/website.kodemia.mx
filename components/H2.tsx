@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 // my component
-import TextCursor from './TextCursor'
+import Cursor from './TextCursor'
 
 export interface Props {
   children: string
@@ -15,7 +15,7 @@ export default function H2 ({ children, isCyan = false }: Props) {
       'h2-is-cyan': isCyan
     })}
     >
-      <TextCursor text={children} white={!isCyan} />
+      <Cursor children={children} white={!isCyan} />
     </h2>
   )
 };

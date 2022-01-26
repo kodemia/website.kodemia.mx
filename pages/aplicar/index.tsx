@@ -28,7 +28,7 @@ export default function Aplicar () {
                   Aplica ahora
                 </H5>
                 <H2>
-                  Únete y <span className='h3-cyan'> sé parte </span> de nuestra comunida<Cursor white>d</Cursor>
+                  Únete y<span className='h3-cyan'> sé parte</span> de nuestra comunida<Cursor white>d</Cursor>
                 </H2>
                 <DescriptionParagraph>
                   Te contactaremos lo más pronto posible para coordinar una entrevista personal
