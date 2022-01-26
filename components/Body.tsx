@@ -14,7 +14,7 @@ export default function Body ({ children }: Props):JSX.Element {
       'font-medium',
       'whitespace-pre-wrap',
     )}>
-
+      {children}
     </p>
   )
 }
