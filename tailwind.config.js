@@ -47,11 +47,11 @@ module.exports = {
         'brand-h2': ['32px', '1.07'],
         'brand-h2-sm': ['28px', '1.07'],
         'brand-h3': ['28px', '1.2'],
-        'brand-h4': ['24px', '1.36'],
-        'brand-h5': ['20px', '1.36'],
-        'brand-h6': ['16px', '28px'],
-        'brand-subtitle': ['20px', '28px'],
-        'brand-body': ['16px', '24px']
+        'brand-h4': ['24px', '1.4'],
+        'brand-h5': ['20px', '1.4'],
+        'brand-subtitle': ['20px', '1.4'],
+        'brand-h6': ['16px', '1.5'],
+        'brand-body': ['16px', '1.5']
       }
     }
   }
