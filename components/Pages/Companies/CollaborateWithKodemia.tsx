@@ -3,7 +3,7 @@ import React from 'react'
 // My components
 import H3 from 'components/H3'
 import Button from 'components/Button'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+import Text from 'components/Text'
 
 export default function CollaborateWithKodemia () {
   return (
@@ -16,9 +16,9 @@ export default function CollaborateWithKodemia () {
           />
         </div>
         <div className='collaborate-text'>
-          <DescriptionParagraph>
+          <Text>
             Sé parte de las actividades, contenido y eventos de Kodemia. Interactúa con la comunidad, platica de tu proyecto, tu experiencia y súmate a crear contenido de calidad.
-          </DescriptionParagraph>
+          </Text>
         </div>
         <div className='collaborate-button'>
           <Button

@@ -50,7 +50,7 @@ module.exports = {
         'brand-h4': ['24px', '1.4'],
         'brand-h5': ['20px', '1.4'],
         'brand-h6': ['16px', '1.5'],
-        'brand-body-text': ['16px', '1.5']
+        'brand-normal': ['16px', '1.5']
       }
     }
   }

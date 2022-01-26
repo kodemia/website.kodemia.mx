@@ -1,9 +1,9 @@
 
 import React from 'react'
 // My components
-import Button from '../../Button'
-import H2 from '../../H2'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+import Button from 'components/Button'
+import H2 from 'components/H2'
+import Text from 'components/Text'
 
 export default function Scholarship () {
   return (
@@ -15,9 +15,9 @@ export default function Scholarship () {
               Aplica por una beca del 5% hasta el 18%
             </H2>
             <div className='scholarship-text'>
-              <DescriptionParagraph>
+              <Text>
                 'Puedes aplicar a través de una entrevista personalizada, en ella sabrás la resolución de tu solicitud.'
-              </DescriptionParagraph>
+              </Text>
             </div>
           </div>
           <div className='column is-flex is-align-items-center scholarship-button'>

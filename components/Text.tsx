@@ -10,7 +10,7 @@ export default function Text ({ children }: Props):JSX.Element {
   return (
     <p className={classNames(
       'text-brand-gray-light',
-      'text-brand-body-text',
+      'text-brand-normal',
       'font-medium',
       'whitespace-pre-wrap',
     )}>

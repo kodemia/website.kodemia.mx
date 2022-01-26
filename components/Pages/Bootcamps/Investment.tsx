@@ -1,8 +1,8 @@
 import React from 'react'
 // My components
-import H5 from '../../H5'
-import H3 from '../../H3'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+import H5 from 'components/H5'
+import H3 from 'components/H3'
+import Text from 'components/Text'
 
 export interface Payment {
   title: string;
@@ -35,9 +35,9 @@ export default function Investment ({ investment }: Props) {
               />
             </div>
             <div className='description'>
-              <DescriptionParagraph>
+              <Text>
                 {investment.description}
-              </DescriptionParagraph>
+              </Text>
             </div>
           </div>
           <div className='column is-full is-flex is-justify-content-space-between payment-types-container'>
@@ -54,9 +54,9 @@ export default function Investment ({ investment }: Props) {
                   </div>
 
                   <div className='payment-description'>
-                    <DescriptionParagraph>
+                    <Text>
                       {paymentType.description}
-                    </DescriptionParagraph>
+                    </Text>
                   </div>
                 </article>
               ))

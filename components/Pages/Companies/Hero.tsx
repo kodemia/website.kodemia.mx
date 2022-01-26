@@ -6,7 +6,7 @@ import HTMLVideoElement from 'typescript'
 // My components
 import H2 from 'components/H2'
 import Button from 'components/Button'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+import Text from 'components/Text'
 
 interface Props {
   hero: {
@@ -30,9 +30,9 @@ export default function Hero ({ hero }: Props) {
           </H2>
         </div>
         <div className='description'>
-          <DescriptionParagraph>
+          <Text>
             {hero.description}
-          </DescriptionParagraph>
+          </Text>
         </div>
         <div className='hero-btn'>
           <Button
