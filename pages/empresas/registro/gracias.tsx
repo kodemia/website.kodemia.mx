@@ -19,7 +19,7 @@ export default function Thankyou () {
                       <H3>
                         <span className='h3-cyan'>Gracias</span> por
                         <br />
-                        registrart<Cursor white>e</Cursor>
+                        <Cursor children='registrarte'white />
                       </H3>
                     </div>
                     <div className='column is-full mt-5 mb-5'>
