@@ -1,8 +1,9 @@
 
 import React from 'react'
-// my components
-import Button from '../components/Button'
-import H1 from './H1'
+import classNames from 'classnames'
+
+import Button from 'components/Button'
+import H1 from 'components/H1'
 export interface Props {
   title: string
   content: string
@@ -10,11 +11,29 @@ export interface Props {
   link: string
 }
 
-export default function HeroCard ({ title, content, btnTitle, link }: Props) {
+export default function HeroCard ({
+  title,
+  content,
+  btnTitle,
+  link
+}: Props): JSX.Element {
   return (
-    <div className='hero-card'>
+    <div className={classNames(
+      // 'hero-card'
+      'min-w-[338px]',
+      'w-1/3'
+    )}>
       <H1>{title}</H1>
-      <p className='hero-content'>{content}</p>
+      <p className={classNames(
+        // 'hero-content'
+        'text-brand-complementary',
+        'text-base', // TODO: Asegurarse que 16px con line-height: 1.5
+        'font-medium',
+        'my-10',
+        'mx-0'
+      )}>
+        {content}
+      </p>
       <Button
         isPrimary
         label={btnTitle}
@@ -22,4 +41,4 @@ export default function HeroCard ({ title, content, btnTitle, link }: Props) {
       />
     </div>
   )
-};
+}
