@@ -1,9 +1,9 @@
 
 import React from 'react'
-import classnames from 'classnames'
-// My components
-import H5 from './H5'
-import DescriptionParagraph from './DescriptionParagraph'
+import classNames from 'classnames'
+
+import H5 from 'components/H5'
+import DescriptionParagraph from './DescriptionParagraph' // TODO: cambiar por Text component
 
 export interface Props {
   icon: string,
@@ -12,26 +12,43 @@ export interface Props {
   detail?: string
 }
 
-export default function InfoCard ({ detail, icon, title, text }: Props) {
+export default function InfoCard ({
+  icon,
+  title,
+  text,
+  detail
+}: Props):JSX.Element {
   return (
     <div id='info-card'>
-      <div className={classnames('info-card-container', {
-        'has-detail': detail
-      })}
-      >
-        <img src={icon} className='ikon' />
-        <div className='info-card-title'>
+      <div className={classNames(
+        'info-card-container',
+        {
+          'has-detail': detail
+        }
+      )}>
+        <img
+          src={icon}
+          className={classNames(
+          'ikon'
+        )}/>
+        <div className={classNames(
+          'info-card-title'
+        )}>
           <H5 isWhite>
             {title}
           </H5>
         </div>
-        <div className='text'>
+        <div className={classNames(
+          'text'
+        )}>
           <DescriptionParagraph>
             {text}
           </DescriptionParagraph>
         </div>
         {detail &&
-          <div className='detail'>
+          <div className={classNames(
+            'detail'
+          )}>
             {detail}
           </div>}
       </div>
