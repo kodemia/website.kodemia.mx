@@ -1,9 +1,9 @@
 
 import React from 'react'
-// My components
-import H4 from './H4'
-import H5 from './H5'
-import Button from './Button'
+
+import Button from 'components/Button'
+import H4 from 'components/H4'
+import H5 from 'components/H5'
 
 export interface Props {
   mode: string,
@@ -48,4 +48,4 @@ export default function BootcampCard ({
       </div>
     </div>
   )
-};
+}

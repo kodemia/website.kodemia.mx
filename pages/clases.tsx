@@ -1,11 +1,12 @@
+
 import React, { useState, useEffect } from 'react'
 import { ToastContainer } from 'react-toastify'
-// My components
-import Navbar from 'components/Navbar'
-import H5 from 'components/H5'
-import H3 from 'components/H3'
+
 import ClassCard from 'components/Pages/Classes/ClassCard'
 import Footer from 'components/Footer'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
+import Navbar from 'components/Navbar'
 import Seo from 'components/SEO'
 
 import { useAuth } from 'lib/hooks'

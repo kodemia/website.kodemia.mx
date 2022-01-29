@@ -1,9 +1,9 @@
 
 import React from 'react'
-// My components
-import H5 from '../../H5'
-import H3 from '../../H3'
-import H2 from '../../H2'
+
+import H2 from 'components/H2'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
 
 export interface Theme {
   theme: string

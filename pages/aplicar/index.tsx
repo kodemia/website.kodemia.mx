@@ -1,14 +1,14 @@
 
 import { useEffect } from 'react'
 
-import NavBar from 'components/Navbar'
-import Footer from 'components/Footer'
+import ApplyForm from 'components/ApplyForm'
 import Cursor from 'components/TextCursor'
-import Text from 'components/Text'
+import Footer from 'components/Footer'
 import H2 from 'components/H3'
 import H5 from 'components/H5'
-import ApplyForm from 'components/ApplyForm'
+import NavBar from 'components/Navbar'
 import Seo from 'components/SEO'
+import Text from 'components/Text'
 
 export default function Aplicar () {
   useEffect(() => {

@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-// My components
+
 import H2 from 'components/H2'
 import H3 from 'components/H3'
 import H5 from 'components/H5'

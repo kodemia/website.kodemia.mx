@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect, useRef } from 'react'
-import classnames from 'classnames'
-// My components
-import H5 from 'components/H5'
-import H3 from 'components/H3'
+import classNames from 'classnames'
+
 import ExperienceVideo from 'components/ExperienceVideo'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
 import Text from 'components/Text'
 
 let wrapGrid: (arg0: any, arg1: object) => void
@@ -56,7 +56,7 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
           </Text>
         </div>
         <div
-          ref={gridRef} className={classnames(
+          ref={gridRef} className={classNames(
             'videos-container',
             {
               active: isActive,
@@ -67,7 +67,7 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
           {videos.map((video, index) => (
             <div
               key={`experience-video-${index}`}
-              className={classnames(
+              className={classNames(
                 'video',
                 {
                   'is-active': index === activeVideoIndex,

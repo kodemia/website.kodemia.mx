@@ -1,8 +1,8 @@
 
 import React from 'react'
-// My components
-import H3 from 'components/H3'
+
 import Button from 'components/Button'
+import H3 from 'components/H3'
 import Text from 'components/Text'
 
 export default function CollaborateWithKodemia () {

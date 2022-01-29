@@ -1,6 +1,6 @@
 
 import React from 'react'
-// My components
+
 import H2 from 'components/H2'
 import H4 from 'components/H4'
 import Text from 'components/Text'

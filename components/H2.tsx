@@ -1,6 +1,7 @@
+
 import React from 'react'
 import classNames from 'classnames'
-// my component
+
 import Cursor from 'components/TextCursor'
 
 export interface Props {
@@ -22,4 +23,4 @@ export default function H2 ({ children, isCyan = false }: Props):JSX.Element {
       <Cursor children={children} white={!isCyan} />
     </h2>
   )
-};
+}

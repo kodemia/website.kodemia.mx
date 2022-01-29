@@ -1,11 +1,11 @@
 
 import { GetStaticPropsContext } from 'next'
 
-import NavBar from 'components/Navbar'
+import Button from 'components/Button'
+import Cursor from 'components/TextCursor'
 import Footer from 'components/Footer'
 import H3 from 'components/H3'
-import Cursor from 'components/TextCursor'
-import Button from 'components/Button'
+import NavBar from 'components/Navbar'
 
 interface Props {
   bootcamp: 'javascript-live' | 'python-live' | 'android' | 'ios' | 'backbase'

@@ -1,12 +1,13 @@
 
 import React from 'react'
-import NavBar from 'components/Navbar'
+
 import Cursor from 'components/TextCursor'
-import Text from 'components/Text'
-import H5 from 'components/H5'
 import H3 from 'components/H3'
+import H5 from 'components/H5'
+import NavBar from 'components/Navbar'
 import RegisterForm from 'components/Pages/Companies/RegisterForm'
 import Seo from 'components/SEO'
+import Text from 'components/Text'
 
 export default function Registro () {
   return (

@@ -4,7 +4,7 @@
 import React, { useState, useRef, MutableRefObject } from 'react'
 import classNames from 'classnames'
 import HTMLVideoElement from 'typescript'
-// My components
+
 import H5 from 'components/H5'
 import Text from 'components/Text'
 

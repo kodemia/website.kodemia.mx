@@ -1,12 +1,12 @@
 
 import React from 'react'
-// My components
-import H5 from '../../H5'
-import H3 from '../../H3'
-import ProgramModule from './ProgramModule'
-import Workshops from './Workshops'
-import Certifications from './Certifications'
-import DataManipulation from './DataManipulation'
+
+import Certifications from 'components/Pages/Bootcamps/Certifications'
+import DataManipulation from 'components/Pages/Bootcamps/DataManipulation'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
+import ProgramModule from 'components/Pages/Bootcamps/ProgramModule'
+import Workshops from 'components/Pages/Bootcamps/Workshops'
 
 export interface Props {
   subtitle: string

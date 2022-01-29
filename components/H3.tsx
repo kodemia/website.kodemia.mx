@@ -1,7 +1,7 @@
 
 import React from 'react'
 import classNames from 'classnames'
-// my component
+
 import Cursor from 'components/TextCursor'
 
 export interface Props {
@@ -42,4 +42,4 @@ export default function H3 ({
       }
     </h3>
   )
-};
+}

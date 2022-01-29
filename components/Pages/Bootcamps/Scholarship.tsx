@@ -1,6 +1,6 @@
 
 import React from 'react'
-// My components
+
 import Button from 'components/Button'
 import H2 from 'components/H2'
 import Text from 'components/Text'

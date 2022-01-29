@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react'
-import classnames from 'classnames'
+import classNames from 'classnames'
 import _ from 'lodash'
 
-import H5 from 'components/H5'
 import H3 from 'components/H3'
+import H5 from 'components/H5'
 import Text from 'components/Text'
 
 interface Image {
@@ -61,7 +61,7 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
                       key={`step-${index}`}
                       src={step.image}
                       alt='winner images'
-                      className={classnames(
+                      className={classNames(
                         'slide-item',
                         { 'is-active': activeImageIndex === index }
                       )}
@@ -83,7 +83,7 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
                   >
                     <div className='columns is-multiline is-mobile bar'>
                       <div
-                        className={classnames(
+                        className={classNames(
                           'column',
                           'is-full',
                           'bar-bar',
@@ -93,7 +93,7 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
                         )}
                       >
                         <div
-                          className={classnames(
+                          className={classNames(
                             'indicator',
                             { 'has-background-info': activeImageIndex === index }
                           )}

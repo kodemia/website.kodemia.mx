@@ -1,9 +1,9 @@
 // TODO: Separar componentes y separar archivo de configuración
 import React from 'react'
-// My components
-import H5 from '../../H5'
-import BootcampCard from '../../BootcampCard'
-import LanguageCard from '../../LanguageCard'
+
+import BootcampCard from 'components/BootcampCard'
+import H5 from 'components/H5'
+import LanguageCard from 'components/LanguageCard'
 
 export interface Modality {
   name: string

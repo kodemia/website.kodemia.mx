@@ -1,11 +1,10 @@
 
 import React, { useRef, useState, MutableRefObject } from 'react'
-import classnames from 'classnames'
+import classNames from 'classnames'
 import HTMLVideoElement from 'typescript'
 
-// My components
-import H2 from 'components/H2'
 import Button from 'components/Button'
+import H2 from 'components/H2'
 import Text from 'components/Text'
 
 interface Props {
@@ -69,7 +68,7 @@ export default function Hero ({ hero }: Props) {
             </video>
           </div>
           <div
-            className={classnames('icon-container', {
+            className={classNames('icon-container', {
               'is-hidden': !showPlayIcon
             })}
             onClick={() => {

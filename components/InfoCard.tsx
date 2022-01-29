@@ -1,7 +1,7 @@
 
 import React from 'react'
 import classNames from 'classnames'
-// My components
+
 import H5 from 'components/H5'
 import Text from 'components/Text'
 
