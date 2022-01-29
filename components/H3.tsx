@@ -2,7 +2,7 @@
 import React from 'react'
 import classNames from 'classnames'
 // my component
-import TextCursor from 'components/TextCursor'
+import Cursor from 'components/TextCursor'
 
 export interface Props {
   cyanText?: string
@@ -35,8 +35,8 @@ export default function H3 ({
       {children || text}
       {
         !children &&
-          <TextCursor
-            text={cursorText}
+          <Cursor
+            children={cursorText}
             white={isFirstCyan}
           />
       }

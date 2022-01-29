@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 // my component
-import TextCursor from 'components/TextCursor'
+import Cursor from 'components/TextCursor'
 
 export interface Props {
   children: string
@@ -19,10 +19,7 @@ export default function H2 ({ children, isCyan = false }: Props):JSX.Element {
         'text-brand-complementary': !isCyan
       }
     )}>
-      <TextCursor
-        text={children}
-        white={!isCyan}
-      />
+      <Cursor children={children} white={!isCyan} />
     </h2>
   )
 };

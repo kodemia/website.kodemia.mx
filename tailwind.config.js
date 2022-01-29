@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        cursor: 'cursor alternate linear 0.8s infinite'
+      },
       borderRadius: {
         DEFAULT: '20px',
         'small': '10px',
@@ -51,6 +54,16 @@ module.exports = {
         'brand-h5': ['20px', '1.4'],
         'brand-h6': ['16px', '1.5'],
         'brand-normal': ['16px', '1.5']
+      },
+      keyframes: {
+        cursor: {
+          '0%, 100%': {
+            borderBottomColor: 'transparent'
+          },
+          '50%': {
+            borderBottomColor: 'unset'
+          }
+        }
       }
     }
   }

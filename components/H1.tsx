@@ -2,10 +2,10 @@
 import React from 'react'
 import classNames from 'classnames'
 // my component
-import TextCursor from 'components/TextCursor'
+import Cursor from 'components/TextCursor'
 
 interface Props {
-  children?: string
+  children: string
 }
 
 export default function H1 ({ children }: Props):JSX.Element {
@@ -15,7 +15,7 @@ export default function H1 ({ children }: Props):JSX.Element {
       'font-semibold',
       'pr-0 md:pr-3'
     )}>
-      <TextCursor text={children} white />
+      <Cursor children={children} white />
     </h1>
   )
 }

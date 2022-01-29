@@ -22,7 +22,7 @@ export default function Registro () {
                   Aplica ahora
                 </H5>
                 <H3>
-                  Únete y <span className='h3-cyan'> colabora</span> con nosotro<Cursor white>s</Cursor>
+                  Únete y <span className='h3-cyan'> colabora</span><Cursor children='con nosotros' white />
                 </H3>
                 <Text>
                   Te contactaremos lo más pronto posible para coordinar una entrevista personal
