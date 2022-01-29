@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import dayjs from 'dayjs'
 
-import ClassCard from './ClassCard'
-import VideoPlayer from './VideoPlayer'
+import ClassCard from 'components/Pages/Classes/ClassCard'
+import VideoPlayer from 'components/Pages/Classes/VideoPlayer'
 
 export interface Classes {
   date: string

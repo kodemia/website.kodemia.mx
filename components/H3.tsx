@@ -7,7 +7,7 @@ import Cursor from 'components/TextCursor'
 export interface Props {
   cyanText?: string
   whiteText?: string
-  isFirstCyan?: Boolean
+  isFirstCyan?: boolean
   children?: React.ReactNode
 }
 

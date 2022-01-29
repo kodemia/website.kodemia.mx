@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 export interface Props {
   children: React.ReactNode
-  isWhite?: Boolean
+  isWhite?: boolean
 }
 
 export default function H6 ({ children, isWhite }: Props):JSX.Element {
