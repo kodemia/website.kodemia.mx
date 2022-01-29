@@ -1,9 +1,10 @@
 
 import React from 'react'
-// My components
-import H4 from './H4'
-import H5 from './H5'
-import Button from './Button'
+import classNames from 'classnames'
+
+import H4 from 'components/H4'
+import H5 from 'components/H5'
+import Button from 'components/Button'
 
 export interface Props {
   mode: string,
@@ -19,24 +20,58 @@ export default function BootcampCard ({
   schedule,
   feature,
   link
-}: Props) {
+}: Props):JSX.Element {
   return (
-    <div className='bootcamp-type'>
-      <div className='type-container'>
+    <div className={classNames(
+      // 'bootcamp-type',
+      'border border-solid',
+      'border-brand-gray-light hover:border-brand-primary',
+      'rounded-xl' // TODO: checar tamaño en CSS está a 10px
+    )}>
+      <div className={classNames(
+        // 'type-container',
+        'mt-6', // TODO: checar tamaño en CSS está a 25px
+        'mx-5',
+        'mb-7' // TODO: checar tamaño en CSS está a 30px
+      )}>
         <H4>
           {mode}
         </H4>
-        <h5 className='date'>
+        <h5 className={classNames(
+          // 'date'
+          'text-brand-primary',
+          'text-xl', // TODO: cambiar por H5-brand cuando se mezcle esa rama
+          'font-medium'
+        )}>
           {date}
         </h5>
-        <div className='schedule'>
+        <div className={classNames(
+          // 'schedule'
+          'my-6',
+          'mx-0',
+          'max-w-full' // TODO: comprobar pq en css solo aplica en mobile
+        )}>
           <H5 isWhite>
             Horario
           </H5>
-          <p className='schedule-content'>
+          <p className={classNames(
+            // 'schedule-content'
+            'text-brand-gray-light',
+            'text-base',
+            'm-0',
+            'max-w-[150px]',
+            'min-w-[150px]'
+          )}>
             {schedule}
           </p>
-          <p className='feature'>
+          <p className={classNames(
+            // 'feature'
+            'text-brand-gray-light',
+            'text-base',
+            'mt-5',
+            'mb-6', // TODO: checar tamaño en CSS está a 25px
+            'min-h-[48px]'
+          )}>
             {feature}
           </p>
         </div>
@@ -48,4 +83,4 @@ export default function BootcampCard ({
       </div>
     </div>
   )
-};
+}
