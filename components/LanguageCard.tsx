@@ -19,15 +19,25 @@ export default function LanguageCard ({
   duration
 }: Props):JSX.Element {
   return (
-    <div className='language-card'>
-      <div className='principal-title'>
+    <div className={classNames(
+      'language-card'
+    )}>
+      <div className={classNames(
+        'principal-title'
+      )}>
         <H3
           whiteText={name}
           cyanText={language}
         />
       </div>
-      <p className='description'>{description}</p>
-      <div className='duration-container'>
+      <p className={classNames(
+        'description'
+      )}>
+        {description}
+      </p>
+      <div className={classNames(
+        'duration-container'
+      )}>
         <img
           src='/icons/icon-calendario.svg'
           className='calendar-icon'
@@ -35,8 +45,12 @@ export default function LanguageCard ({
         <H5 isWhite>
           Duración
         </H5>
-        <p className='duration'>{duration}</p>
+        <p className={classNames(
+          'duration'
+        )}>
+          {duration}
+        </p>
       </div>
     </div>
   )
-};
+}

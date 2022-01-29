@@ -1,14 +1,15 @@
+
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { builder } from '@builder.io/react';
 import dayjs from 'dayjs'
 import es from "dayjs/locale/es";
-//My components
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
-import H5 from 'components/H5'
-import H3 from 'components/H3'
+
 import CardEvent from 'components/CardEvent'
+import Footer from 'components/Footer'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
+import Navbar from 'components/Navbar'
 import Seo from 'components/SEO'
 
 dayjs.locale(es);

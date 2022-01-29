@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react'
 import Router from 'next/router'
-// My components
+
 import BgVideo from 'components/BgVideo'
 import H2 from 'components/H2'
 import LoginForm from 'components/Pages/Login/LoginForm'

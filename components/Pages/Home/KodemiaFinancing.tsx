@@ -1,9 +1,9 @@
 
 import React from 'react'
-// My component
-import H5 from '../../H5'
-import H3 from '../../H3'
-import Button from '../../Button'
+
+import Button from 'components/Button'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
 
 export interface Data {
   title: string

@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react'
-import classnames from 'classnames'
+import classNames from 'classnames'
 import _ from 'lodash'
 
-import H5 from '../../H5'
-import H3 from '../../H3'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
+import Text from 'components/Text'
 
 interface Image {
   image: string
@@ -32,9 +32,9 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
               <H3 whiteText='Tus desarrollos hablarán ' cyanText='por sí solos' />
             </div>
             <div className='column is-full'>
-              <DescriptionParagraph>
+              <Text>
                 {`Nuestro Bootcamp te llevará desde cero hasta desarrollador Full Stack.${'\n'}Crearás una aplicación web completa empleando UX/UI, SCRUM, Front End y Back End con Javascript o Python, todo desplegado en la nube`}
-              </DescriptionParagraph>
+              </Text>
             </div>
           </div>
 
@@ -61,7 +61,7 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
                       key={`step-${index}`}
                       src={step.image}
                       alt='winner images'
-                      className={classnames(
+                      className={classNames(
                         'slide-item',
                         { 'is-active': activeImageIndex === index }
                       )}
@@ -83,7 +83,7 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
                   >
                     <div className='columns is-multiline is-mobile bar'>
                       <div
-                        className={classnames(
+                        className={classNames(
                           'column',
                           'is-full',
                           'bar-bar',
@@ -93,7 +93,7 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
                         )}
                       >
                         <div
-                          className={classnames(
+                          className={classNames(
                             'indicator',
                             { 'has-background-info': activeImageIndex === index }
                           )}

@@ -2,11 +2,11 @@
 /** global HTMLVideoElement */
 
 import React, { useState, useRef, MutableRefObject } from 'react'
-import classnames from 'classnames'
+import classNames from 'classnames'
 import HTMLVideoElement from 'typescript'
-// My components
-import H5 from './H5'
-import DescriptionParagraph from './DescriptionParagraph'
+
+import H5 from 'components/H5'
+import Text from 'components/Text'
 
 export interface Video {
   url: string
@@ -42,7 +42,7 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
         <video
           controls={false}
           poster={video.poster}
-          className={classnames('poster', {
+          className={classNames('poster', {
             'is-not-play': !isActive
           })}
           ref={videoRef}
@@ -68,7 +68,7 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
         </video>
       </div>
       <div
-        className={classnames('icon-close', {
+        className={classNames('icon-close', {
           'is-hidden': !showCloseIcon
         })}
         onClick={() => {
@@ -82,7 +82,7 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
         />
       </div>
       <div
-        className={classnames('icon-container', {
+        className={classNames('icon-container', {
           'is-hidden': !showPlayIcon
         })}
         onClick={() => {
@@ -108,9 +108,9 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
           {video.name}
         </H5>
         <div className='content'>
-          <DescriptionParagraph>
+          <Text>
             {video.content}
-          </DescriptionParagraph>
+          </Text>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
-// My components
-import Button from '../../Button'
-import H2 from '../../H2'
+
+import Button from 'components/Button'
+import H2 from 'components/H2'
 
 export default function TransformYourLife () {
   return (

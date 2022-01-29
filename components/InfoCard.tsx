@@ -3,7 +3,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 import H5 from 'components/H5'
-import DescriptionParagraph from './DescriptionParagraph' // TODO: cambiar por Text component
+import Text from 'components/Text'
 
 export interface Props {
   icon: string,
@@ -41,16 +41,18 @@ export default function InfoCard ({
         <div className={classNames(
           'text'
         )}>
-          <DescriptionParagraph>
+          <Text>
             {text}
-          </DescriptionParagraph>
+          </Text>
         </div>
-        {detail &&
-          <div className={classNames(
-            'detail'
-          )}>
-            {detail}
-          </div>}
+        {
+          detail &&
+            <div className={classNames(
+              'detail'
+            )}>
+              {detail}
+            </div>
+        }
       </div>
     </div>
   )

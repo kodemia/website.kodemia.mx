@@ -40,7 +40,7 @@ export default function BootcampCard ({
         <h5 className={classNames(
           // 'date'
           'text-brand-primary',
-          'text-xl', // TODO: cambiar por H5-brand cuando se mezcle esa rama
+          'text-brand-h5',
           'font-medium'
         )}>
           {date}

@@ -1,15 +1,16 @@
 
 import React from 'react'
 import classNames from 'classnames'
+
 export interface Props {
   children: React.ReactNode
   isWhite?: boolean
 }
 
-export default function H5 ({ children, isWhite }: Props):JSX.Element {
+export default function H6 ({ children, isWhite }: Props):JSX.Element {
   return (
-    <h5 className={classNames(
-      'text-brand-h5',
+    <h6 className={classNames(
+      'text-brand-h6',
       'whitespace-pre-wrap',
       'break-words',
       {
@@ -18,6 +19,6 @@ export default function H5 ({ children, isWhite }: Props):JSX.Element {
       }
     )}>
       {children}
-    </h5>
+    </h6>
   )
 }

@@ -28,7 +28,7 @@ export default function HeroCard ({
       <p className={classNames(
         // 'hero-content'
         'text-brand-complementary',
-        'text-base', // TODO: Asegurarse que quede 16px con line-height: 1.5
+        'text-brand-normal',
         'font-medium',
         'my-10',
         'mx-0'

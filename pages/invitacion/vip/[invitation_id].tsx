@@ -5,11 +5,11 @@ import { GetStaticPropsContext } from 'next'
 import Whatsapp from 'lib/whatsapp'
 import * as invitations from 'lib/api/invitations'
 
-import NavBar from 'components/Navbar'
-import Footer from 'components/Footer'
-import TicketVIP from 'components/TicketVIP'
 import Button from 'components/Button'
+import Footer from 'components/Footer'
+import NavBar from 'components/Navbar'
 import SEO from 'components/SEO'
+import TicketVIP from 'components/TicketVIP'
 
 type Invitation = {
   _id: string
