@@ -1,41 +1,42 @@
 
 import React from 'react'
-// my component
 import classNames from 'classnames'
 
 export interface Props {
-  text?: string
+  children: string
   white?: Boolean,
-  children?: React.ReactNode
 }
 
 export default function TextCursor ({
-  text = '',
   white,
   children
-}: Props) {
-  const cursorClass = classNames({
-    'white-cursor': white,
-    'cyan-cursor': !white
-  })
+}: Props):JSX.Element {
+  const cursorClass = classNames(
+    'border-b-4 border-solid',
+    {
+      'animate-cursor text-white': white,
+      'animate-cursor text-brand-primary': !white
+    })
   const textClass = classNames({
-    'cyan-text': !white,
-    'white-text': white
+    'text-white': white,
+    'text-brand-primary': !white
   })
 
-  const finalPosition = text.length - 1
-  const newText = text.slice(0, finalPosition)
-  const characterCursor = text[finalPosition]
+  const finalPosition = children.length - 1
+  const newText = children.slice(0, finalPosition)
+  const characterCursor = children[finalPosition]
 
   return (
     <>
-      {!children &&
-        <span className={textClass}>
-          {` ${newText}`}
-        </span>}
+      {
+        children &&
+          <span className={textClass}>
+            {` ${newText}`}
+          </span>
+      }
       <span className={cursorClass}>
-        {children && children}
-        {!children && characterCursor}
+        {!children && !children}
+        {children && characterCursor}
       </span>
     </>
   )

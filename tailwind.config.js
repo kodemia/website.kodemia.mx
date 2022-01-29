@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        cursor: 'cursor alternate linear 0.8s infinite'
+      },
       borderRadius: {
         DEFAULT: '20px',
         'small': '10px',
@@ -41,6 +44,16 @@ module.exports = {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans]
       },
+      keyframes: {
+        cursor: {
+          '0%, 100%': {
+            borderBottomColor: 'transparent'
+          },
+          '50%': {
+            borderBottomColor: 'unset'
+          }
+        }
+      }
     }
   }
 }
