@@ -37,7 +37,7 @@ export default function Card({
           {name}
         </H4>
       </div>
-      <div className={classNames('mt-4')}>
+      <div className='mt-4'>
         <h5 className={classNames(
           'text-cyan-kd text-h5 font-medium'
         )}
