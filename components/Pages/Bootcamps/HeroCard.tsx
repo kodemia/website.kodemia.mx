@@ -1,9 +1,9 @@
 
 import React from 'react'
 import classNames from 'classnames'
-// My components
-import H2 from '../../H2'
-import H5 from '../../H5'
+
+import H2 from 'components/H2'
+import H5 from 'components/H5'
 
 export interface Information {
   title: string

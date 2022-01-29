@@ -1,10 +1,10 @@
 
 import React from 'react'
-// My components
-import H5 from '../../H5'
-import H2 from '../../H2'
-import H4 from '../../H4'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+
+import H2 from 'components/H2'
+import H4 from 'components/H4'
+import H5 from 'components/H5'
+import Text from 'components/Text'
 
 export interface WorkshopArr {
   image: string
@@ -46,9 +46,9 @@ export default function workshops ({ workshops }: Props) {
                 <H4>
                   {workshop.title}
                 </H4>
-                <DescriptionParagraph>
+                <Text>
                   {workshop.description}
-                </DescriptionParagraph>
+                </Text>
               </div>
             </div>
           </article>

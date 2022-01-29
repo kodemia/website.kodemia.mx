@@ -1,7 +1,8 @@
 
 import React from 'react'
-import H3 from './H3'
-import H5 from './H5'
+
+import H3 from 'components/H3'
+import H5 from 'components/H5'
 
 export interface Props {
   name: string,
@@ -32,4 +33,4 @@ export default function LanguageCard ({ name, language, description, duration }:
       </div>
     </div>
   )
-};
+}

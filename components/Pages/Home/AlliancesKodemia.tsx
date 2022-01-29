@@ -1,10 +1,10 @@
 
 import React from 'react'
-import classnames from 'classnames'
-// My components
-import H5 from '../../H5'
-import H3 from '../../H3'
-import CarrouselAlliances from '../../CarrouselAlliances'
+import classNames from 'classnames'
+
+import CarrouselAlliances from 'components/CarrouselAlliances'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
 
 export interface Ally {
   name: string;
@@ -24,7 +24,7 @@ export interface Props {
 export default function AllianceKodemia ({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
   return (
     <section className='alliances-kodemia-wrapper'>
-      <div className={classnames(
+      <div className={classNames(
         'alliances-kodemia',
         {
           'is-black': isBlack

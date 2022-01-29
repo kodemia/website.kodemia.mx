@@ -1,11 +1,11 @@
 
 import React from 'react'
 import Image from 'next/image'
-// My components
-import H2 from '../../H2'
-import H3 from '../../H3'
-import H5 from '../../H5'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+
+import H2 from 'components/H2'
+import H3 from 'components/H3'
+import H5 from 'components/H5'
+import Text from 'components/Text'
 
 export interface Data {
   whiteTitle: string
@@ -58,9 +58,9 @@ export default function DataManipulation ({ dataManipulation }: Props) {
                 />
               </div>
               <div className='column is-8-desktop is-12-tablet data-manipulation-data'>
-                <DescriptionParagraph>
+                <Text>
                   {data.description}
-                </DescriptionParagraph>
+                </Text>
               </div>
             </div>
           </article>

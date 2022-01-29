@@ -1,9 +1,9 @@
 
 import React from 'react'
 import ReactCountryFlag from 'react-country-flag'
-import classnames from 'classnames'
-// My components
-import H5 from './H5'
+import classNames from 'classnames'
+
+import H5 from 'components/H5'
 
 export interface Props {
   testimonial: {
@@ -19,7 +19,7 @@ export interface Props {
 export default function TestimonialCard ({ testimonial, isActive }: Props) {
   return (
     <article className='testimonial-card'>
-      <div className={classnames(
+      <div className={classNames(
         'testimonial-card-container',
         {
           inactive: (!isActive),

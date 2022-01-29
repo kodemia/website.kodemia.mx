@@ -1,21 +1,26 @@
+
 import React from 'react'
-import classnames from 'classnames'
-// my component
-import Cursor from './TextCursor'
+import classNames from 'classnames'
+
+import Cursor from 'components/TextCursor'
 
 export interface Props {
   children: string
   isCyan?: Boolean
 }
 
-export default function H2 ({ children, isCyan = false }: Props) {
+export default function H2 ({ children, isCyan = false }: Props):JSX.Element {
   return (
-    <h2 className={classnames({
-      'h2-is-white': !isCyan,
-      'h2-is-cyan': isCyan
-    })}
-    >
+    <h2 className={classNames(
+      'text-brand-h2-sm md:text-brand-h2',
+      'font-semibold',
+      'pr-0 md:pr-3',
+      {
+        'text-brand-primary': isCyan,
+        'text-brand-complementary': !isCyan
+      }
+    )}>
       <Cursor children={children} white={!isCyan} />
     </h2>
   )
-};
+}

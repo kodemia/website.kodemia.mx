@@ -1,9 +1,9 @@
 
 import React from 'react'
-// My components
-import H2 from '../../H2'
-import H4 from '../../H4'
-import DescriptionParagraph from '../../DescriptionParagraph'
+
+import H2 from 'components/H2'
+import H4 from 'components/H4'
+import Text from 'components/Text'
 
 export interface Certification {
   title: string
@@ -47,9 +47,9 @@ export default function Certifications ({ certifications }: Props) {
                   </H4>
                 </div>
                 <div className='description'>
-                  <DescriptionParagraph>
+                  <Text>
                     {workshop.description}
-                  </DescriptionParagraph>
+                  </Text>
                 </div>
               </div>
             </div>

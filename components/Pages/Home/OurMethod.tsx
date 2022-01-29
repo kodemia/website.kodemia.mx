@@ -1,9 +1,10 @@
+
 import React from 'react'
-// My component
-import H5 from '../../H5'
-import H3 from '../../H3'
-import InfoCard from '../../InfoCard'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+
+import H3 from 'components/H3'
+import H5 from 'components/H5'
+import InfoCard from 'components/InfoCard'
+import Text from 'components/Text'
 
 export interface Card {
   icon: string
@@ -36,9 +37,9 @@ export default function OurMethod ({ ourMethod: { title, keywords, text, cards }
           />
         </div>
         <div className='our-method-text'>
-          <DescriptionParagraph>
+          <Text>
             {text}
-          </DescriptionParagraph>
+          </Text>
         </div>
         <div className='our-method-cards'>
           {cards.map((infoCard, index) => {

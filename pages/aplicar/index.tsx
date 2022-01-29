@@ -1,14 +1,14 @@
 
 import { useEffect } from 'react'
 
-import NavBar from 'components/Navbar'
-import Footer from 'components/Footer'
+import ApplyForm from 'components/ApplyForm'
 import Cursor from 'components/TextCursor'
-import DescriptionParagraph from 'components/DescriptionParagraph'
+import Footer from 'components/Footer'
 import H2 from 'components/H3'
 import H5 from 'components/H5'
-import ApplyForm from 'components/ApplyForm'
+import NavBar from 'components/Navbar'
 import Seo from 'components/SEO'
+import Text from 'components/Text'
 
 export default function Aplicar () {
   useEffect(() => {
@@ -30,9 +30,9 @@ export default function Aplicar () {
                 <H2>
                   Únete y<span className='h3-cyan'> sé parte</span> <Cursor children='de nuestra comunidad' white />
                 </H2>
-                <DescriptionParagraph>
+                <Text>
                   Te contactaremos lo más pronto posible para coordinar una entrevista personal
-                </DescriptionParagraph>
+                </Text>
               </div>
             </aside>
             <article className='column is-two-thirds'>

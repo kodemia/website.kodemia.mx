@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react'
-import classnames from 'classnames'
-// My components
-import H5 from '../../H5'
-import H3 from '../../H3'
-import TestimonialCard from '../../TestimonialCard'
+import classNames from 'classnames'
+
+import H3 from 'components/H3'
+import H5 from 'components/H5'
+import TestimonialCard from 'components/TestimonialCard'
 export interface Testimonial {
   photo: string
   country: string
@@ -37,7 +37,7 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
 
   return (
     <section className='testimonials'>
-      <div className={classnames(
+      <div className={classNames(
         'testimonials-wrapper',
         {
           'is-gray': isGray
@@ -57,7 +57,7 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
               testimonials.map((testimonial, index) => {
                 return (
                   <div
-                    className={classnames(
+                    className={classNames(
                       'testimonial',
                       {
                         inactive: (activeTestimonialIndex !== index),
@@ -82,7 +82,7 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
                   testimonials.map((testimonial, index) => {
                     return (
                       <li
-                        className={classnames(
+                        className={classNames(
                           'selected-bar',
                           {
                             inactive: (activeTestimonialIndex !== index),
