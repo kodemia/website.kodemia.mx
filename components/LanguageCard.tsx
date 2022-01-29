@@ -1,7 +1,9 @@
 
 import React from 'react'
-import H3 from './H3'
-import H5 from './H5'
+import classNames from 'classnames'
+
+import H3 from 'components/H3'
+import H5 from 'components/H5'
 
 export interface Props {
   name: string,
@@ -10,7 +12,12 @@ export interface Props {
   duration: string,
 }
 
-export default function LanguageCard ({ name, language, description, duration }: Props) {
+export default function LanguageCard ({
+  name,
+  language,
+  description,
+  duration
+}: Props):JSX.Element {
   return (
     <div className='language-card'>
       <div className='principal-title'>
