@@ -4,6 +4,7 @@ import classNames from 'classnames'
 
 import Button from 'components/Button'
 import H1 from 'components/H1'
+
 export interface Props {
   title: string
   content: string
@@ -27,7 +28,7 @@ export default function HeroCard ({
       <p className={classNames(
         // 'hero-content'
         'text-brand-complementary',
-        'text-base', // TODO: Asegurarse que 16px con line-height: 1.5
+        'text-base', // TODO: Asegurarse que quede 16px con line-height: 1.5
         'font-medium',
         'my-10',
         'mx-0'

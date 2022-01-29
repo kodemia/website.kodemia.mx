@@ -2,9 +2,9 @@
 import React from 'react'
 import classNames from 'classnames'
 
+import Button from 'components/Button'
 import H4 from 'components/H4'
 import H5 from 'components/H5'
-import Button from 'components/Button'
 
 export interface Props {
   mode: string,
@@ -26,13 +26,13 @@ export default function BootcampCard ({
       // 'bootcamp-type',
       'border border-solid',
       'border-brand-gray-light hover:border-brand-primary',
-      'rounded-xl' // TODO: checar tamaño en CSS está a 10px
+      'rounded-[10px]'
     )}>
       <div className={classNames(
         // 'type-container',
-        'mt-6', // TODO: checar tamaño en CSS está a 25px
+        'mt-[25px]',
         'mx-5',
-        'mb-7' // TODO: checar tamaño en CSS está a 30px
+        'mb-[30px]'
       )}>
         <H4>
           {mode}
@@ -49,7 +49,7 @@ export default function BootcampCard ({
           // 'schedule'
           'my-6',
           'mx-0',
-          'max-w-full' // TODO: comprobar pq en css solo aplica en mobile
+          'max-w-full' // TODO: comprobar comportamiento pq en CSS solo aplica en mobile
         )}>
           <H5 isWhite>
             Horario
@@ -69,7 +69,7 @@ export default function BootcampCard ({
             'text-brand-gray-light',
             'text-base',
             'mt-5',
-            'mb-6', // TODO: checar tamaño en CSS está a 25px
+            'mb-[25px]',
             'min-h-[48px]'
           )}>
             {feature}

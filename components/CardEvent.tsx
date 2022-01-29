@@ -1,8 +1,9 @@
+
 import React from 'react'
 import classNames from 'classnames'
-// My components
-import H4 from 'components/H4'
+
 import Button from 'components/Button'
+import H4 from 'components/H4'
 
 export interface Props {
   name: string
