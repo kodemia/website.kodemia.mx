@@ -23,13 +23,11 @@ export default function BootcampCard ({
 }: Props):JSX.Element {
   return (
     <div className={classNames(
-      // 'bootcamp-type',
       'border border-solid',
       'border-brand-gray-light hover:border-brand-primary',
-      'rounded-[10px]'
+      'rounded-small'
     )}>
       <div className={classNames(
-        // 'type-container',
         'mt-[25px]',
         'mx-5',
         'mb-[30px]'
@@ -38,7 +36,6 @@ export default function BootcampCard ({
           {mode}
         </H4>
         <h5 className={classNames(
-          // 'date'
           'text-brand-primary',
           'text-brand-h5',
           'font-medium'
@@ -46,16 +43,14 @@ export default function BootcampCard ({
           {date}
         </h5>
         <div className={classNames(
-          // 'schedule'
           'my-6',
           'mx-0',
-          'max-w-full' // TODO: comprobar comportamiento pq en CSS solo aplica en mobile
+          'max-w-full lg:max-w-[153px]' // TODO: comprobar comportamiento pq en CSS solo aplica en mobile
         )}>
           <H5 isWhite>
             Horario
           </H5>
           <p className={classNames(
-            // 'schedule-content'
             'text-brand-gray-light',
             'text-base',
             'm-0',
@@ -65,7 +60,6 @@ export default function BootcampCard ({
             {schedule}
           </p>
           <p className={classNames(
-            // 'feature'
             'text-brand-gray-light',
             'text-base',
             'mt-5',
