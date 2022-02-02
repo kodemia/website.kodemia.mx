@@ -20,15 +20,13 @@ export default function HeroCard ({
 }: Props): JSX.Element {
   return (
     <div className={classNames(
-      // 'hero-card'
       'min-w-[338px]',
       'w-1/3'
     )}>
       <H1>{title}</H1>
       <p className={classNames(
-        // 'hero-content'
         'text-brand-complementary',
-        'text-brand-normal',
+        'text-base',
         'font-medium',
         'my-10',
         'mx-0'
