@@ -11,13 +11,9 @@ module.exports = {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
       borderRadius: {
-        DEFAULT: '20px',
         'small': '10px',
+        'medium': '20px',
         'wide': '30px'
-      },
-      borderWidth: {
-        DEFAULT: '1px',
-        'thick': '2px'
       },
       colors: {
         'brand-black': {
@@ -51,9 +47,7 @@ module.exports = {
         'brand-h2-sm': ['28px', '1.07'],
         'brand-h3': ['28px', '1.2'],
         'brand-h4': ['24px', '1.4'],
-        'brand-h5': ['20px', '1.4'],
-        'brand-h6': ['16px', '1.5'],
-        'brand-normal': ['16px', '1.5']
+        'brand-h5': ['20px', '1.4']
       },
       keyframes: {
         cursor: {
