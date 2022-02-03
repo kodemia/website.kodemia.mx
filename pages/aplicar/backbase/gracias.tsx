@@ -34,7 +34,7 @@ export default function Thankyou () {
         )}>
           <div className={classNames(
             'self-center',
-            'max-w-300'
+            'max-w-xs'
           )}>
             <div className={classNames(
               'mt-9'
