@@ -102,8 +102,9 @@ module.exports = {
       },
       maxWidth: {
         'sm-kd': '220px',
-        1086: '1086px',
-        420: '420px'
+        300: '300px',
+        420: '420px',
+        1086: '1086px'
       },
       maxHeight: {
         '500px': '500px',
