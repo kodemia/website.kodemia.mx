@@ -81,7 +81,7 @@ export default function WhatGoingAchieve ({ winnerImages }: Props) {
                     key={`step-slider-${index}`}
                     onClick={() => setActiveImageIndex(index)}
                   >
-                    <div className='columns is-multiline is-mobile bar'>
+                    <div className='columns is-multiline is-mobile bar cursor-pointer'>
                       <div
                         className={classnames(
                           'column',
