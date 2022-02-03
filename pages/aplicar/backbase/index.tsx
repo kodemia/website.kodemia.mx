@@ -22,9 +22,7 @@ export default function BackbaseApply () {
     const query = new URLSearchParams(hiddenParams)
 
     router.push({
-      // pathname: '/aplicar/backbase/prueba-tecnica',
-      pathname: '/aplicar/backbase/gracias',
-
+      pathname: '/aplicar/backbase/prueba-tecnica',
       query: query.toString()
     })
   }, [isFormSubmitted])
