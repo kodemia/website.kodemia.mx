@@ -48,7 +48,7 @@ export default function ApplyForm () {
       .then(() => {
         setIsSubmitting(false)
         router.push({
-          pathname: '/aplicar/backbase',
+          pathname: '/aplicar/backbase/gracias',
           query: redirectQuery.toString()
         })
       })
