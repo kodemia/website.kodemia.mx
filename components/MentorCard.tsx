@@ -15,7 +15,7 @@ export interface Props {
 
 export default function MentorCard ({ className, mentor }: Props):JSX.Element {
   const [isExpanded, setIsExpanded] = useState<boolean>(false)
-  const [skillsList] = _.chunk(mentor.skills, 6)
+  const [skillsList = []] = _.chunk(mentor.skills, 6)
   const experience = mentor.yearsOfExperience === 1
     ? `${mentor.yearsOfExperience} año`
     : `${mentor.yearsOfExperience} años`
