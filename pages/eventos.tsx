@@ -5,7 +5,7 @@ import { builder } from '@builder.io/react';
 import dayjs from 'dayjs'
 import es from "dayjs/locale/es";
 
-import CardEvent from 'components/CardEvent'
+import EventCard from 'components/EventCard'
 import Footer from 'components/Footer'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
@@ -40,7 +40,7 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function Eventos({ events }: Props): JSX.Element {
+export default function Eventos ({ events }: Props): JSX.Element {
   return (
     <>
       <Seo
@@ -89,7 +89,7 @@ export default function Eventos({ events }: Props): JSX.Element {
         )}>
           {
             events.map((event, index) => (
-              <CardEvent
+              <EventCard
                 className={classNames(
                   'md:max-w-420',
                   'md:min-w-min',
