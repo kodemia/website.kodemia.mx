@@ -17,10 +17,7 @@ export interface Props {
 
 export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTitle }: Props) {
   return (
-    <PageSection>
-      <div className={classNames(
-        'why-kodemia-container'
-        )}>
+    <PageSection contentClassName='why-kodemia-container'>
         <div className='subject'>
           <H5>
             {subtitle}
@@ -43,7 +40,6 @@ export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTi
               })
             }
         </div>
-      </div>
     </PageSection>
   )
 }
