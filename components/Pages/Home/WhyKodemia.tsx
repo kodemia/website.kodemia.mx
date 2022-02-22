@@ -1,5 +1,6 @@
 
 import React from 'react'
+import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
@@ -15,8 +16,11 @@ export interface Props {
 
 export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTitle }: Props) {
   return (
-    <section className='why-kodemia supercontainer'>
-      <div className='why-kodemia-container hijocontainer'>
+    <section className='section--container'>
+      <div className={classNames(
+        'content-wrapper',
+        'why-kodemia-container'
+      )}>
         <div className='subject'>
           <H5>
             {subtitle}
