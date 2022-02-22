@@ -15,8 +15,7 @@
     "lint": "npm run lint:ts ; npm run lint:scss",
     "lint:fix": "npm run lint:ts:fix ; npm run lint:scss:fix",
     "chromatic": "chromatic --exit-once-uploaded",
-    "test": "npm run lint",
-    "lint-next": "next lint"
+    "test": "npm run lint"
   },
   "dependencies": {
     "@analytics/google-analytics": "^0.5.3",
