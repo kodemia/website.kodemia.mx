@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
 import TestimonialCard from 'components/TestimonialCard'
+
 export interface Testimonial {
   photo: string
   country: string
@@ -18,7 +19,7 @@ export interface Props {
   isGray?: boolean
 }
 
-export default function Testimonials ({ testimonials, isGray }: Props) {
+export default function Testimonials ({ testimonials, isGray }: Props):JSX.Element {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0)
 
   const next = () => {
@@ -36,15 +37,35 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
   }
 
   return (
-    <section className='testimonials'>
+    <section className={classNames(
+      // 'testimonials'
+    )}>
       <div className={classNames(
-        'testimonials-wrapper',
+        // 'testimonials-wrapper',
+        'flex',
+        'justify-center',
+        'w-full',
         {
-          'is-gray': isGray
+          // 'is-gray': isGray
+          'bg-brand-black': isGray
         }
       )}
       >
-        <div className='container-testimonials section-container'>
+        <div className={classNames(
+          // 'container-testimonials',
+          'section-container',
+
+          'max-w-full lg:max-w-[1086px]',
+          'min-w-full lg:min-w-[719px]',
+
+          'flex',
+          'flex-col',
+          'justify-center',
+          'pt-20 md:pt-24',
+          'px-11 md:px-20 lg:px-0',
+          'pb-14 md:pb-20',
+          'w-full'
+        )}>
           <H5>
             Testimonios
           </H5>
@@ -52,14 +73,26 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
             whiteText='Nuestra'
             cyanText='comunidad'
           />
-          <div className='sliders'>
+          <div className={classNames(
+            // 'sliders',
+            'flex',
+            'h-60',
+            'mt-11',
+            'overflow-hidden',
+            'relative',
+            'w-full'
+          )}>
             {
               testimonials.map((testimonial, index) => {
                 return (
                   <div
                     className={classNames(
                       'testimonial',
+                      '',
+                      '',
                       {
+                        // inactive: (activeTestimonialIndex !== index),
+                        // active: (activeTestimonialIndex === index)
                         inactive: (activeTestimonialIndex !== index),
                         active: (activeTestimonialIndex === index)
                       }
@@ -75,8 +108,16 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
               })
             }
           </div>
-          <div className='bar-buttons'>
-            <div className='bar'>
+          <div className={classNames(
+            'bar-buttons',
+            '',
+            ''
+          )}>
+            <div className={classNames(
+              'bar',
+              '',
+              ''
+            )}>
               <ul>
                 {
                   testimonials.map((testimonial, index) => {
@@ -84,6 +125,8 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
                       <li
                         className={classNames(
                           'selected-bar',
+                          '',
+                          '',
                           {
                             inactive: (activeTestimonialIndex !== index),
                             active: (activeTestimonialIndex === index)
@@ -96,15 +139,27 @@ export default function Testimonials ({ testimonials, isGray }: Props) {
                 }
               </ul>
             </div>
-            <div className='container-buttons'>
+            <div className={classNames(
+              'container-buttons',
+              '',
+              ''
+            )}>
               <img
-                className='back'
+                className={classNames(
+                  'back',
+                  '',
+                  ''
+                )}
                 src='/icons/icon-back.svg'
                 alt='back'
                 onClick={() => previous()}
               />
               <img
-                className='forward'
+                className={classNames(
+                  'forward',
+                  '',
+                  ''
+                )}
                 src='/icons/icon-forward.svg'
                 alt='forward'
                 onClick={() => next()}
