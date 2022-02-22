@@ -15,7 +15,8 @@
     "lint": "npm run lint:ts ; npm run lint:scss",
     "lint:fix": "npm run lint:ts:fix ; npm run lint:scss:fix",
     "chromatic": "chromatic --exit-once-uploaded",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "lint-next": "next lint"
   },
   "dependencies": {
     "@analytics/google-analytics": "^0.5.3",
@@ -75,7 +76,7 @@
     "babel-loader": "^8.1.0",
     "chromatic": "^6.0.4",
     "css-loader": "^4.3.0",
-    "eslint": "^8.0.1",
+    "eslint": "^8.9.0",
     "eslint-config-next": "^11.1.2",
     "postcss": "^8.4.4",
     "react-is": "^16.13.1",
