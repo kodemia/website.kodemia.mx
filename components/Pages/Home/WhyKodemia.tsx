@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
 import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
-import PageContainer from 'components/PageContainer'
+import PageSection from 'components/PageSection'
 
 export interface Props {
   cards: Array<InfoCardProps>
@@ -17,7 +17,7 @@ export interface Props {
 
 export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTitle }: Props) {
   return (
-    <PageContainer>
+    <PageSection>
       <div className={classNames(
         'why-kodemia-container'
         )}>
@@ -44,6 +44,6 @@ export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTi
             }
         </div>
       </div>
-    </PageContainer>
+    </PageSection>
   )
 }
