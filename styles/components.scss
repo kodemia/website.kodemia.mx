@@ -1,0 +1,10 @@
+
+@layer components {
+  .supercontainer {
+    @apply bg-amber-400 flex justify-center lg:mx-12;
+  }
+
+  .hijocontainer {
+    @apply border border-solid border-green-500 px-6 md:px-16 lg:px-0 max-w-full min-w-full lg:max-w-[1086px] lg:min-w-[719px];
+  }
+}

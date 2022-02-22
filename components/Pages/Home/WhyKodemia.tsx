@@ -15,8 +15,8 @@ export interface Props {
 
 export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTitle }: Props) {
   return (
-    <section className='why-kodemia'>
-      <div className='why-kodemia-container section-container'>
+    <section className='why-kodemia supercontainer'>
+      <div className='why-kodemia-container hijocontainer'>
         <div className='subject'>
           <H5>
             {subtitle}

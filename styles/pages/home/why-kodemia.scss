@@ -1,17 +1,17 @@
 .why-kodemia {
-  background-color: $black-primary;
-  display: flex;
-  justify-content: center;
-  padding: 100px 0 80px;
-  width: 100%;
+  // background-color: $black-primary;
+  // display: flex;
+  // justify-content: center;
+  // padding: 100px 0 80px;
+  // width: 100%;
 
-  @include on-mobile {
-    padding: 80px 45px 40px;
-  }
+  // @include on-mobile {
+  //   padding: 80px 45px 40px;
+  // }
 
-  @include on-tablet {
-    padding: 100px 85px 60px;
-  }
+  // @include on-tablet {
+  //   padding: 100px 85px 60px;
+  // }
 
   .why-kodemia-container {
     display: grid;
@@ -20,7 +20,7 @@
       'image why-kodemia-cards'
       'image why-kodemia-cards';
     grid-template-columns: 1fr 2fr;
-    max-width: $content-max-width;
+    // max-width: $content-max-width;
 
     @include on-mobile {
       grid-template-areas:
@@ -28,7 +28,7 @@
         'image'
         'why-kodemia-cards';
       grid-template-columns: 1fr;
-      min-width: 100%;
+      // min-width: 100%;
     }
 
     @include on-tablet {
@@ -37,7 +37,7 @@
         'image'
         'why-kodemia-cards';
       grid-template-columns: 1fr;
-      min-width: 100%;
+      // min-width: 100%;
     }
 
     .subject {
