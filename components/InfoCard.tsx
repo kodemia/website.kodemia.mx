@@ -24,9 +24,6 @@ export default function InfoCard ({
         // 'info-card-container',
         'box-border',
         'gap-4',
-        // 'grid',
-        // 'grid-cols-2',
-        // 'grid-rows-2',
         'flex',
         'pt-5',
         'px-0',
@@ -45,18 +42,17 @@ export default function InfoCard ({
               'w-[26px]',
               'pt-2', // TODO: Comprobar comportamiento, en CSS está a 10px
               'hover:scale-110',
-              // 'grid',
-              // 'auto-cols-auto'
+              // 'grid'
           )}/>
         </div>
-        <div className='flex flex-col w-4/5'>
+        <div className={classNames(
+          'flex',
+          'flex-col',
+          'w-4/5'
+        )}>
           <div className={classNames(
             // 'info-card-title',
-            'm-0',
-            // 'row-start-1 row-end-2',
-            // 'grid',
-            // 'auto-cols-fr'
-            // 'w-4/5'
+            'm-0'
           )}>
             <H5 isWhite>
               {title}
@@ -66,9 +62,6 @@ export default function InfoCard ({
             // 'text'
             'h-full',
             'mt-4', // TODO: Comprobar comportamiento, en CSS está a 15px
-            // 'row-start-2 row-end-3',
-            // 'auto-cols-fr'
-            // 'w-4/5'
           )}>
             <Text>
               {text}
