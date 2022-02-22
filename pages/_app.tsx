@@ -26,7 +26,9 @@ function MyApp ({ Component, pageProps }: AppProps) {
   }, [])
 
   return (
-    <Component {...pageProps} />
+    <div className='bg-brand-black-dark'>
+     <Component {...pageProps}/>
+    </div>
   )
 }
 
