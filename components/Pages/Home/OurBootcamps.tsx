@@ -34,7 +34,7 @@ export interface Props {
 export default function OurBootcamps ({ bootcamps }: Props) {
   return (
     <section id='bootcamps' className='our-bootcamps section-container'>
-      <div className='our-bootcamps-container '>
+      <div className='our-bootcamps-container'>
         <H5>
           Nuestros Bootcamps
         </H5>
