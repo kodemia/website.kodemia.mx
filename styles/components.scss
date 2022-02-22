@@ -1,5 +1,5 @@
 @layer components {
-  //TODO: rename the class when delete the section-container of the index.css file , using kebab-case
+  //TODO: rename the class with kebab-case when delete the section-container of the index.css file
   .sectionContainer {
     @apply flex justify-center px-6 md:px-16 lg:px-12;
   }
