@@ -12,12 +12,12 @@ module.exports = {
       },
       borderRadius: {
         DEFAULT: '20px',
-        'small': '10px',
-        'wide': '30px'
+        small: '10px',
+        wide: '30px'
       },
       borderWidth: {
         DEFAULT: '1px',
-        'thick': '2px'
+        thick: '2px'
       },
       colors: {
         'brand-black': {
