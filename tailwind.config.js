@@ -11,9 +11,13 @@ module.exports = {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
       borderRadius: {
-        'small': '10px',
-        'medium': '20px',
-        'wide': '30px'
+        DEFAULT: '20px',
+        small: '10px',
+        wide: '30px'
+      },
+      borderWidth: {
+        DEFAULT: '1px',
+        thick: '2px'
       },
       colors: {
         'brand-black': {

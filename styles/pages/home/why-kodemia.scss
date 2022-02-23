@@ -1,92 +1,73 @@
-.why-kodemia {
-  background-color: $black-primary;
-  display: flex;
-  justify-content: center;
-  padding: 100px 0 80px;
-  width: 100%;
+.why-kodemia-container {
+  display: grid;
+  grid-template-areas:
+    'subject subject'
+    'image why-kodemia-cards'
+    'image why-kodemia-cards';
+  grid-template-columns: 1fr 2fr;
 
   @include on-mobile {
-    padding: 80px 45px 40px;
+    grid-template-areas:
+      'subject'
+      'image'
+      'why-kodemia-cards';
+    grid-template-columns: 1fr;
   }
 
   @include on-tablet {
-    padding: 100px 85px 60px;
+    grid-template-areas:
+      'subject'
+      'image'
+      'why-kodemia-cards';
+    grid-template-columns: 1fr;
   }
 
-  .why-kodemia-container {
-    display: grid;
-    grid-template-areas:
-      'subject subject'
-      'image why-kodemia-cards'
-      'image why-kodemia-cards';
-    grid-template-columns: 1fr 2fr;
-    max-width: $content-max-width;
+  .subject {
+    margin-bottom: 40px;
 
     @include on-mobile {
-      grid-template-areas:
-        'subject'
-        'image'
-        'why-kodemia-cards';
-      grid-template-columns: 1fr;
-      min-width: 100%;
+      max-width: 100%;
+      min-width: 50%;
     }
 
     @include on-tablet {
-      grid-template-areas:
-        'subject'
-        'image'
-        'why-kodemia-cards';
+      max-width: 50%;
+    }
+  }
+
+  .image {
+    border-radius: 30px;
+    grid-area: image;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+
+    @include on-mobile {
+      margin-bottom: 20px;
+    }
+
+    @include on-tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  .why-kodemia-cards {
+    display: grid;
+    grid-area: why-kodemia-cards;
+    grid-column-gap: 35px;
+    grid-row-gap: 29px;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 55px;
+
+    @include on-mobile {
       grid-template-columns: 1fr;
-      min-width: 100%;
+      margin-left: 0;
+      padding-left: 0;
     }
 
-    .subject {
-      margin-bottom: 40px;
-
-      @include on-mobile {
-        max-width: 100%;
-        min-width: 50%;
-      }
-
-      @include on-tablet {
-        max-width: 50%;
-      }
-    }
-
-    .image {
-      border-radius: 30px;
-      grid-area: image;
-      margin: auto;
-      max-width: 100%;
-      width: 100%;
-
-      @include on-mobile {
-        margin-bottom: 20px;
-      }
-
-      @include on-tablet {
-        margin-bottom: 20px;
-      }
-    }
-
-    .why-kodemia-cards {
-      display: grid;
-      grid-area: why-kodemia-cards;
-      grid-column-gap: 35px;
-      grid-row-gap: 29px;
-      grid-template-columns: 1fr 1fr;
-      margin-left: 55px;
-
-      @include on-mobile {
-        grid-template-columns: 1fr;
-        margin-left: 0;
-        padding-left: 0;
-      }
-
-      @include on-tablet {
-        margin-bottom: 0;
-        margin-left: 0;
-      }
+    @include on-tablet {
+      margin-bottom: 0;
+      margin-left: 0;
     }
   }
 }
