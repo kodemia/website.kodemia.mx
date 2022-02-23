@@ -3,6 +3,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 import Button from 'components/Button'
+import Card from 'components/Card'
 import H4 from 'components/H4'
 
 export interface Props {
@@ -25,19 +26,24 @@ export default function EventCard ({
   className
 }: Props):JSX.Element {
   return (
-    <div className={classNames(
-      className,
-      'border border-solid rounded-xl',
-      'border-gray-kd-light hover:border-cyan-kd',
-      'flex flex-col justify-between',
-      'p-4',
-      'w-full'
-    )}>
-      <div>
+    <Card className='bg-orange-400'>
+    {/* // <div className={classNames(
+      //   className,
+      //   'border border-solid rounded-small',
+      //   'border-brand-gray-light hover:border-brand-primary',
+      //   'flex flex-col justify-between',
+      //   'p-4',
+      //   'w-full'
+    // )}> */}
+      {/* <div className={classNames(
+        'flex flex-col justify-between',
+        'p-4',
+        'w-full'
+      )}> */}
         <H4>
           {name}
         </H4>
-      </div>
+      {/* </div> */}
       <div className='mt-4'>
         <h5 className={classNames(
           'text-cyan-kd text-h5 font-medium'
@@ -64,6 +70,7 @@ export default function EventCard ({
           href={link}
         />
       </div>
-    </div>
+    {/*// </div>*/}
+    </Card>
   )
 }
