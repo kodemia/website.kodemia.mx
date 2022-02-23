@@ -11,34 +11,30 @@ module.exports = {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
       borderRadius: {
-        DEFAULT: '20px',
         small: '10px',
+        medium: '20px',
         wide: '30px'
-      },
-      borderWidth: {
-        DEFAULT: '1px',
-        thick: '2px'
       },
       colors: {
         'brand-black': {
-          dark: '#0E0E0E',
           DEFAULT: '#181818',
-          light: '#343434',
+          dark: '#0E0E0E',
+          light: '#343434'
         },
         'brand-complementary': {
           DEFAULT: '#FBFBFB'
         },
         'brand-error': {
-          DEFAULT: '#E95249',
+          DEFAULT: '#E95249'
         },
         'brand-gray': {
-          dark: '#302F2B',
           DEFAULT: '#737373',
-          light: '#999999',
+          dark: '#302F2B',
+          light: '#999999'
         },
         'brand-primary': {
-          dark: '#07BABA',
-          DEFAULT: '#00FFFF'
+          DEFAULT: '#00FFFF',
+          dark: '#07BABA'
         }
       },
       fontFamily: {
