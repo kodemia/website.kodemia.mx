@@ -7,15 +7,26 @@ import classNames from 'classnames'
 import * as tracker from 'lib/tracker'
 import Whatsapp from 'lib/whatsapp'
 
+import SocialMediaData from 'config/social-media.json'
 // my-component
 import PageSection from 'components/PageSection'
 import Button from 'components/Button'
+import { FooterLinkName } from 'lib/tracker'
+interface SocialMedia {
+  name: FooterLinkName
+  href: string
+  icon: string
+}
+interface SocialMediaData {
+  SocialMedia: Array<SocialMedia>
+}
 
 export default function Footer() {
-  const menuLinks = [['Programas', '/#bootcamps'],['Empresas', '/empresas'], ['Alumnos', '/logins']]
+  const menuLinks = [['Programas', '/#bootcamps'], ['Empresas', '/empresas'], ['Alumnos', '/logins']]
   const whatsappLink = Whatsapp.createLink(Whatsapp.copies.footerButton)
   const iconClasses = classNames('w-8 sm:w-6 hover:filter-white-to-cyan')
   const linkClasses = classNames('text-base font-medium hover:text-brand-primary')
+  const socialMedia: SocialMediaData = SocialMediaData
 
   return (
     <footer>
@@ -52,79 +63,27 @@ export default function Footer() {
             'md:items-start md:justify-between'
           )}>
             <div>
-              {menuLinks.map(([title, url],index) => (
+              {menuLinks.map(([title, url], index) => (
                 <Link href={url}>
-                  {( index !== menuLinks.length-1)?
-                   <a><span className={linkClasses}>{title}</span> | </a> : 
+                  {(index !== menuLinks.length - 1) ?
+                    <a><span className={linkClasses}>{title}</span> | </a> :
                     <a><span className={linkClasses}>{title}</span> </a>
-                  } 
+                  }
                 </Link>
               ))}
             </div>
             <div className={classNames('flex my-8')}>
-              <a
-                href='https://www.facebook.com/kodemiamx'
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={() => tracker.onFooterLinkClicked('Facebook')}
-              >
-                <img src='/icons/social-media-fb.svg' className={iconClasses} />
-              </a>
-
-              <a
-                href='https://www.instagram.com/kodemiamx'
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={() => tracker.onFooterLinkClicked('Instagram')}
-                className={classNames('ml-5')}
-              >
-                <img src='/icons/social-media-insta.svg' className={iconClasses} />
-              </a>
-              <a
-                href='https://twitter.com/kodemiamx'
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={() => tracker.onFooterLinkClicked('Twitter')}
-                className={classNames('ml-5')}
-              >
-                <img src='/icons/social-media-tw.svg' className={iconClasses} />
-              </a>
-              <a
-                href='https://github.com/kodemia'
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={() => tracker.onFooterLinkClicked('GitHub')}
-                className={classNames('ml-5')}
-              >
-                <img src='/icons/social-media-gh.svg' className={iconClasses} />
-              </a>
-              <a
-                href='https://medium.com/kodemia'
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={() => tracker.onFooterLinkClicked('Medium')}
-                className={classNames('ml-5')}
-              >
-                <img src='/icons/social-media-medium.svg' className={iconClasses} />
-              </a>
-              <a
-                href='https://www.youtube.com/channel/UCjCo9gdMQdebs95zcufryaQ'
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={() => tracker.onFooterLinkClicked('YouTube')}
-                className={classNames('ml-5')}
-              >
-                <img src='/icons/social-media-yt.svg' className={iconClasses} />
-              </a>
-              <a
-                href='https://www.linkedin.com/company/kodemiamx'
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={() => tracker.onFooterLinkClicked('LinkedIn')}
-                className={classNames('ml-5')}
-              >
-                <img src='/icons/social-media-in.svg' className={iconClasses} />
-              </a>
+              {socialMedia.map(socialMedia => (
+                <a
+                  href={socialMedia.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  onClick={() => tracker.onFooterLinkClicked(socialMedia.name)}
+                  className={classNames('mr-5')}
+                >
+                  <img src={socialMedia.icon} className={iconClasses} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -185,6 +144,6 @@ export default function Footer() {
           </Link>
         </div>
       </PageSection>
-    </footer>
+    </footer >
   )
 }
