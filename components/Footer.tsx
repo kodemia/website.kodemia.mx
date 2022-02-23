@@ -6,27 +6,18 @@ import classNames from 'classnames'
 
 import * as tracker from 'lib/tracker'
 import Whatsapp from 'lib/whatsapp'
-
-import SocialMediaData from 'config/social-media.json'
+import socialMedia from 'config/socialMedia'
+import { footerLinks } from 'config/pageLinks'
 // my-component
 import PageSection from 'components/PageSection'
 import Button from 'components/Button'
-import { FooterLinkName } from 'lib/tracker'
-interface SocialMediaElements {
-  name: FooterLinkName
-  href: string
-  icon: string
-}
-interface SocialMediaD {
-  SocialMediaElement: Array<SocialMediaElements>
-}
+
 
 export default function Footer() {
-  const menuLinks = [['Programas', '/#bootcamps'], ['Empresas', '/empresas'], ['Alumnos', '/logins']]
+
   const whatsappLink = Whatsapp.createLink(Whatsapp.copies.footerButton)
   const iconClasses = classNames('w-8 sm:w-6 hover:filter-white-to-cyan')
   const linkClasses = classNames('text-base font-medium hover:text-brand-primary')
-  const socialMedia: SocialMediaD = SocialMediaData
 
   return (
     <footer>
@@ -63,23 +54,29 @@ export default function Footer() {
             'md:items-start md:justify-between'
           )}>
             <div>
-              {menuLinks.map(([title, url], index) => (
-                <Link href={url}>
-                  {(index !== menuLinks.length - 1) ?
-                    <a><span className={linkClasses}>{title}</span> | </a> :
-                    <a><span className={linkClasses}>{title}</span> </a>
-                  }
+              {footerLinks.map((footerLink, index) => (
+                <Link href={footerLink.href} key={`${footerLink.name}-${index}`}>
+                  <a>
+                    <span className={linkClasses}>
+                      {footerLink.name}
+                    </span>
+                    {
+                      (footerLinks.length - 1 !== index) ?
+                        ' | ' : ''
+                    }
+                  </a>
                 </Link>
               ))}
             </div>
             <div className={classNames('flex my-8')}>
-              {socialMedia.map(socialMedia => (
+              {socialMedia.map((socialMedia, index) => (
                 <a
                   href={socialMedia.href}
                   target='_blank'
                   rel='noopener noreferrer'
                   onClick={() => tracker.onFooterLinkClicked(socialMedia.name)}
                   className={classNames('mr-5')}
+                  key={`${socialMedia.name}-${index}`}
                 >
                   <img src={socialMedia.icon} className={iconClasses} />
                 </a>
