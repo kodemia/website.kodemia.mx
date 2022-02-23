@@ -3,6 +3,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 import Button from 'components/Button'
+import Card from 'components/Card'
 import H4 from 'components/H4'
 import H5 from 'components/H5'
 
@@ -22,16 +23,16 @@ export default function BootcampCard ({
   link
 }: Props):JSX.Element {
   return (
-    <div className={classNames(
-      'border border-solid',
-      'border-brand-gray-light hover:border-brand-primary',
-      'rounded-small'
-    )}>
-      <div className={classNames(
+    <Card className='bg-orange-400'>
+    {/* // <div className={classNames(
+    //   'border border-solid rounded-small',
+    //   'border-brand-gray-light hover:border-brand-primary',
+    // )}> */}
+      {/* <div className={classNames(
         'mt-[25px]',
         'mx-5',
         'mb-[30px]'
-      )}>
+      )}> */}
         <H4>
           {mode}
         </H4>
@@ -74,7 +75,8 @@ export default function BootcampCard ({
           label='Conocer más'
           link={link}
         />
-      </div>
-    </div>
+      {/* </div> */}
+    {/* // </div> */}
+    </Card>
   )
 }
