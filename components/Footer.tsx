@@ -12,7 +12,7 @@ import PageSection from 'components/PageSection'
 import Button from 'components/Button'
 
 export default function Footer() {
-  const menuLinks = [['Programas', '/#bootcamps'],['Empresas', '/empresas'], ['Alumnos', '/logins']]å
+  const menuLinks = [['Programas', '/#bootcamps'],['Empresas', '/empresas'], ['Alumnos', '/logins']]
   const whatsappLink = Whatsapp.createLink(Whatsapp.copies.footerButton)
   const iconClasses = classNames('w-8 sm:w-6 hover:filter-white-to-cyan')
   const linkClasses = classNames('text-base font-medium hover:text-brand-primary')
