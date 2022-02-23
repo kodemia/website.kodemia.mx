@@ -24,7 +24,7 @@ export default function TestimonialCard ({ testimonial, isActive }: Props):JSX.E
       <div className={classNames(
         // 'testimonial-card-container',
         // 'bg-brand-black-dark',
-        'border border-solid',
+        'border border-solid rounded-small',
         'grid',
         'grid-cols-1 lg:grid-cols-3',
         'h-full md:h-[317px] lg:h-[205px]',
@@ -33,7 +33,6 @@ export default function TestimonialCard ({ testimonial, isActive }: Props):JSX.E
         'min-w-full md:min-w-0', // TODO: Comprobar comportamiento, en CSS está solo para mobile
         'py-6', // TODO: Comprobar comportamiento, en CSS está 25px
         'px-5',
-        'rounded-small',
         'w-full md:w-[637px] lg:w-[729px]', // Está en isActive y en !isActive
         {
           // active: (isActive),
