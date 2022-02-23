@@ -12,6 +12,7 @@ import PageSection from 'components/PageSection'
 import Button from 'components/Button'
 
 export default function Footer() {
+  const menuLinks = [['Programas', '/#bootcamps'],['Empresas', '/empresas'], ['Alumnos', '/logins']]å
   const whatsappLink = Whatsapp.createLink(Whatsapp.copies.footerButton)
   const iconClasses = classNames('w-8 sm:w-6 hover:filter-white-to-cyan')
   const linkClasses = classNames('text-base font-medium hover:text-brand-primary')
@@ -51,15 +52,14 @@ export default function Footer() {
             'md:items-start md:justify-between'
           )}>
             <div>
-              <Link href='/#bootcamps'>
-                <a><span className={linkClasses}>Programas</span> | </a>
-              </Link>
-              <Link href='/empresas'>
-                <a><span className={linkClasses}>Empresas</span> | </a>
-              </Link>
-              <Link href='/login'>
-                <a><span className={linkClasses}>Alumnos</span> </a>
-              </Link>
+              {menuLinks.map(([title, url],index) => (
+                <Link href={url}>
+                  {( index !== menuLinks.length-1)?
+                   <a><span className={linkClasses}>{title}</span> | </a> : 
+                    <a><span className={linkClasses}>{title}</span> </a>
+                  } 
+                </Link>
+              ))}
             </div>
             <div className={classNames('flex my-8')}>
               <a
@@ -85,7 +85,7 @@ export default function Footer() {
                 target='_blank'
                 rel='noopener noreferrer'
                 onClick={() => tracker.onFooterLinkClicked('Twitter')}
-                className={classNames('ml-5 md:ml-6')}
+                className={classNames('ml-5')}
               >
                 <img src='/icons/social-media-tw.svg' className={iconClasses} />
               </a>
