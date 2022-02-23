@@ -23,7 +23,7 @@ export default function BootcampCard ({
   link
 }: Props):JSX.Element {
   return (
-    <Card className='bg-orange-400' isBordered>
+    <Card isBordered>
       <H4>
         {mode}
       </H4>
