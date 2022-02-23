@@ -26,7 +26,7 @@ export default function EventCard ({
   className
 }: Props):JSX.Element {
   return (
-    <Card className='bg-orange-400'>
+    <Card className='bg-orange-400' isBordered>
     {/* // <div className={classNames(
       //   className,
       //   'border border-solid rounded-small',

@@ -13,7 +13,7 @@ export interface Props {
     employment: string
     quote: string
   }
-  isActive: Boolean
+  isActive: boolean
 }
 
 export default function TestimonialCard ({ testimonial, isActive }: Props):JSX.Element {

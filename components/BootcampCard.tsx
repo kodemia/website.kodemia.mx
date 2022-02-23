@@ -23,60 +23,49 @@ export default function BootcampCard ({
   link
 }: Props):JSX.Element {
   return (
-    <Card className='bg-orange-400'>
-    {/* // <div className={classNames(
-    //   'border border-solid rounded-small',
-    //   'border-brand-gray-light hover:border-brand-primary',
-    // )}> */}
-      {/* <div className={classNames(
-        'mt-[25px]',
-        'mx-5',
-        'mb-[30px]'
-      )}> */}
-        <H4>
-          {mode}
-        </H4>
-        <h5 className={classNames(
-          'text-brand-primary',
-          'text-brand-h5',
-          'font-medium'
+    <Card className='bg-orange-400' isBordered>
+      <H4>
+        {mode}
+      </H4>
+      <h5 className={classNames(
+        'text-brand-primary',
+        'text-brand-h5',
+        'font-medium'
+      )}>
+        {date}
+      </h5>
+      <div className={classNames(
+        'my-6',
+        'mx-0',
+        'max-w-full lg:max-w-[153px]'
+      )}>
+        <H5 isWhite>
+          Horario
+        </H5>
+        <p className={classNames(
+          'text-brand-gray-light',
+          'text-base',
+          'm-0',
+          'max-w-[150px]',
+          'min-w-[150px]'
         )}>
-          {date}
-        </h5>
-        <div className={classNames(
-          'my-6',
-          'mx-0',
-          'max-w-full lg:max-w-[153px]' // TODO: comprobar comportamiento pq en CSS solo aplica en mobile
+          {schedule}
+        </p>
+        <p className={classNames(
+          'text-brand-gray-light',
+          'text-base',
+          'mt-5',
+          'mb-[25px]',
+          'min-h-[48px]'
         )}>
-          <H5 isWhite>
-            Horario
-          </H5>
-          <p className={classNames(
-            'text-brand-gray-light',
-            'text-base',
-            'm-0',
-            'max-w-[150px]',
-            'min-w-[150px]'
-          )}>
-            {schedule}
-          </p>
-          <p className={classNames(
-            'text-brand-gray-light',
-            'text-base',
-            'mt-5',
-            'mb-[25px]',
-            'min-h-[48px]'
-          )}>
-            {feature}
-          </p>
-        </div>
-        <Button
-          isPrimary
-          label='Conocer más'
-          link={link}
-        />
-      {/* </div> */}
-    {/* // </div> */}
+          {feature}
+        </p>
+      </div>
+      <Button
+        isPrimary
+        label='Conocer más'
+        link={link}
+      />
     </Card>
   )
 }
