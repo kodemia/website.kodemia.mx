@@ -10,6 +10,7 @@ import Footer from 'components/Footer'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
 import Navbar from 'components/Navbar'
+import PageSection from 'components/PageSection'
 import Seo from 'components/SEO'
 
 dayjs.locale(es);
@@ -55,8 +56,10 @@ export default function Eventos ({ events }: Props): JSX.Element {
         'min-h-430'
       )}>
         <div className={classNames(
-          'px-12 xl:px-0',
-          'max-w-1086',
+          // 'px-12 xl:px-0',
+          'px-6 md:px-16 lg:px-12 xl:px-0',
+          // 'max-w-1086',
+          'lg:max-w-screen-xl',
           'w-full'
         )}
         >
@@ -71,14 +74,14 @@ export default function Eventos ({ events }: Props): JSX.Element {
           </div>
         </div>
       </header>
-      <main className={classNames(
+      {/* <main className={classNames(
         'bg-black-kd',
         'pt-24 px-12 pb-16',
         'flex justify-center',
         'desktop:items-center',
-
-      )}>
-        <section className={classNames(
+      )}> */}
+        <PageSection sectionClassName='bg-blue-400' contentClassName='flex flex-col md:flex-row md:flex-wrap gap-y-9 gap-x-0 md:gap-x-11 lg:gap-x-10 justify-center'>
+        {/* <section className={classNames(
           'flex flex-col md:flex-row',
           'md:flex-wrap',
           'gap-y-9',
@@ -86,14 +89,14 @@ export default function Eventos ({ events }: Props): JSX.Element {
           'justify-center',
           'max-w-1086',
           'w-full',
-        )}>
+        )}> */}
           {
             events.map((event, index) => (
               <EventCard
                 className={classNames(
                   'md:max-w-420',
                   'md:min-w-min',
-                  'w-full md:w-2/5 lg:w-80'
+                  'w-full md:w-2/5 lg:w-80',
                 )}
                 key={`event-${index}`}
                 name={event.name}
@@ -105,8 +108,9 @@ export default function Eventos ({ events }: Props): JSX.Element {
               />
             ))
           }
-        </section>
-      </main>
+        {/* </section> */}
+        </PageSection>
+      {/* </main> */}
       <Footer />
     </>
   )
