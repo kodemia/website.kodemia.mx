@@ -1,5 +1,5 @@
 import React from 'react'
-import ClassNames from 'classnames'
+import classNames from 'classnames'
 // My components
 import PageSection from 'components/PageSection'
 import Button from 'components/Button'
@@ -12,7 +12,7 @@ export default function TransformYourLife () {
         sectionClassName='bg-brand-primary-dark'
         contentClassName='md:flex md:justify-between md:items-center '
       >
-        <div className={ClassNames(
+        <div className={classNames(
           'text-center md:text-left',
           'mb-10 md:mb-0 md:pb-4 md:w-2/5'
         )}>
@@ -20,7 +20,7 @@ export default function TransformYourLife () {
             ¿Listo para transformar tu vida programando?
           </H2>
         </div>
-        <div className={ClassNames(
+        <div className={classNames(
           'mb-10 md:mb-0',
           'md:w-2/4 lg:max-w-xs'
         )}>
