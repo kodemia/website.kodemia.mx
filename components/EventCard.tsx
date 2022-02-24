@@ -26,24 +26,10 @@ export default function EventCard ({
   className
 }: Props):JSX.Element {
   return (
-    <Card className='bg-orange-400' isBordered>
-    {/* // <div className={classNames(
-      //   className,
-      //   'border border-solid rounded-small',
-      //   'border-brand-gray-light hover:border-brand-primary',
-      //   'flex flex-col justify-between',
-      //   'p-4',
-      //   'w-full'
-    // )}> */}
-      {/* <div className={classNames(
-        'flex flex-col justify-between',
-        'p-4',
-        'w-full'
-      )}> */}
+    <Card className={classNames(className)} isBordered>
         <H4>
           {name}
         </H4>
-      {/* </div> */}
       <div className='mt-4'>
         <h5 className={classNames(
           'text-cyan-kd text-h5 font-medium'
@@ -70,7 +56,6 @@ export default function EventCard ({
           href={link}
         />
       </div>
-    {/*// </div>*/}
     </Card>
   )
 }

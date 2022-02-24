@@ -10,6 +10,9 @@ module.exports = {
       animation: {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
+      backgroundImage: {
+        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
+      },
       borderRadius: {
         small: '10px',
         medium: '20px',
