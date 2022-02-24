@@ -5,12 +5,12 @@ import { useRouter } from 'next/router'
 import classNames from 'classnames'
 // my components
 import Button from 'components/Button'
-import NavbarItems from 'config/navbar-items.json'
+import { navbarLinks } from 'config/pageLinks'
 
 import Auth from 'lib/auth'
 import * as tracker from 'lib/tracker'
 
-export default function Navbar () {
+export default function Navbar() {
   const [isActive, setIsActive] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const router = useRouter()
@@ -69,7 +69,7 @@ export default function Navbar () {
           <div className='navbar-end'>
             <div className='navbar-item'>
               {
-                NavbarItems.map(({ name, href, onlyLoggedIn }, index) => (
+                navbarLinks.map(({ name, href, onlyLoggedIn }, index) => (
                   <Link href={href} key={index}>
                     <a className={classNames(
                       'navbar-item',

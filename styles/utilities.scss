@@ -1,4 +1,3 @@
-
 @layer utilities {
   .inner-strong {
     &-cyan {
@@ -12,5 +11,11 @@
         color: #c22327;
       }
     }
+  }
+
+  .filter-white-to-cyan {
+    filter:
+      invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg)
+      brightness(113%) contrast(100%);
   }
 }
