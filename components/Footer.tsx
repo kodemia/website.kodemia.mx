@@ -29,7 +29,7 @@ export default function Footer() {
           'mt-10',
           'md:flex md:flex-row-reverse md:justify-between'
         )}>
-          <div>
+          <div className='md:w-80'>
             <Button
               isPrimary label='Mándanos un whatsapp'
               icon='/icons/btn-whatsapp.svg'
