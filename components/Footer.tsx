@@ -16,8 +16,6 @@ import Button from 'components/Button'
 export default function Footer() {
 
   const whatsappLink = Whatsapp.createLink(Whatsapp.copies.footerButton)
-  const iconClasses = classNames('w-8 sm:w-6 hover:filter-white-to-cyan')
-  const linkClasses = classNames('text-base font-medium hover:text-brand-primary')
 
   return (
     <footer>
@@ -25,22 +23,20 @@ export default function Footer() {
         <img
           src='/icons/kodemia-logo.svg'
           alt='kodemia-logo'
-          className={classNames('w-44')}
+          className='w-44'
         />
         <div className={classNames(
           'mt-10',
           'md:flex md:flex-row-reverse md:justify-between'
         )}>
-          <div >
-            <div >
-              <Button
-                isPrimary label='Mándanos un whatsapp'
-                icon='/icons/btn-whatsapp.svg'
-                href={whatsappLink}
-                onClick={() => tracker.onFooterButtonClicked('Whatsapp')}
-              />
-            </div>
-            <div className={classNames('my-7')}>
+          <div>
+            <Button
+              isPrimary label='Mándanos un whatsapp'
+              icon='/icons/btn-whatsapp.svg'
+              href={whatsappLink}
+              onClick={() => tracker.onFooterButtonClicked('Whatsapp')}
+            />
+            <div className='my-7'>
               <Button
                 label='Únete a la comunidad'
                 icon='/icons/btn-telegram.svg'
@@ -57,7 +53,10 @@ export default function Footer() {
               {footerLinks.map((footerLink, index) => (
                 <Link href={footerLink.href} key={`${footerLink.name}-${index}`}>
                   <a>
-                    <span className={linkClasses}>
+                    <span className={classNames(
+                      'text-base font-medium',
+                      'hover:text-brand-primary'
+                    )}>
                       {footerLink.name}
                     </span>
                     {
@@ -75,10 +74,13 @@ export default function Footer() {
                   target='_blank'
                   rel='noopener noreferrer'
                   onClick={() => tracker.onFooterLinkClicked(socialMedia.name)}
-                  className={classNames('mr-5')}
+                  className='mr-5'
                   key={`${socialMedia.name}-${index}`}
                 >
-                  <img src={socialMedia.icon} className={iconClasses} />
+                  <img src={socialMedia.icon} className={classNames(
+                    'w-8 sm:w-6',
+                    'hover:filter-white-to-cyan'
+                  )} />
                 </a>
               ))}
             </div>
@@ -141,6 +143,6 @@ export default function Footer() {
           </Link>
         </div>
       </PageSection>
-    </footer >
+    </footer>
   )
 }
