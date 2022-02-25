@@ -21,7 +21,6 @@ export default function TransformYourLife () {
           </H2>
         </div>
         <div className={classNames(
-          'mb-10 md:mb-0',
           'md:w-2/4 lg:max-w-xs'
         )}>
           <Button
