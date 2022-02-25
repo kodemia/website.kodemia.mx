@@ -33,7 +33,7 @@ export default function Eventos({ jobs }: Props): JSX.Element {
   return (
     <>
       <Seo
-        title='Kodemia | Jobs'
+        title='Kodemia | Empleos'
       />
       <Navbar />
       <header className={classNames(
