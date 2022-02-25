@@ -8,7 +8,7 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import H5 from 'components/H5'
 import H3 from 'components/H3'
-import CardEvent from 'components/EventCard'
+import EventCard from 'components/EventCard'
 import Seo from 'components/SEO'
 
 import { Event } from 'types/common'
@@ -85,7 +85,7 @@ export default function Eventos({ events }: Props): JSX.Element {
           }
           {
             events.map((event, index) => (
-              <CardEvent
+              <EventCard
                 key={`event-${index}`}
                 className={classNames(
                   'md:max-w-420',
