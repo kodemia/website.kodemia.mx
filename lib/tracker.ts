@@ -39,8 +39,8 @@ export function onLogin (email: string) {
     isMentor,
     isTemporal
   },
-  {},
-  ({ payload }) => analytics.track('User Log In', payload.traits))
+    {},
+    ({ payload }) => analytics.track('User Log In', payload.traits))
 }
 
 export function onLogOut () {
@@ -74,7 +74,7 @@ export function onFooterButtonClicked (buttonName: 'Whatsapp' | 'Telegram') {
   analytics.track(`Footer ${buttonName} Button Clicked`, user)
 }
 
-type FooterLinkName = 'Facebook'
+export type FooterLinkName = 'Facebook'
   | 'Instagram'
   | 'Twitter'
   | 'GitHub'
