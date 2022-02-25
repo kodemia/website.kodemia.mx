@@ -64,7 +64,7 @@ export default function Navbar () {
             )}
           >
             {!isActive && (
-              <div className={classNames('h-full flex flex-col justify-center')}>
+              <div className={classNames('h-full flex flex-col justify-center cursor-pointer ')}>
                 <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary')} />
                 <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary')} />
                 <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary mb-1')} />
@@ -72,7 +72,7 @@ export default function Navbar () {
             )}
             {isActive && (
               <div className={classNames(
-                'h-full w-2 relative mt-2',
+                'h-full w-2 relative mt-2 cursor-pointer',
                 "after:content-[' '] after:absolute after:rotate-45 after:bg-brand-complementary after:w-[1px] after:h-4 after:mt-1",
                 "before:content-[' '] before:absolute before:-rotate-45 before:bg-brand-complementary before:w-[1px] before:h-4 before:mt-1"
               )}>
