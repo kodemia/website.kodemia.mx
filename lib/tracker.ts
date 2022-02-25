@@ -3,6 +3,7 @@ import Analytics from 'lib/analytics'
 import Auth from 'lib/auth'
 
 import { Event } from 'types/common'
+import { Mentor } from 'types/common'
 
 type UserTraits = {
   email: string
@@ -103,4 +104,15 @@ export function onEventButtonClicked (event:Event):void {
   const user = getUserTraits()
   analytics.track(`Event Button Clicked`,
   { user, event })
+}
+
+type MentorLinkName = 'Github'
+| 'LinkedIn'
+| 'Twitter'
+
+export function onMentorLinkClicked (linkName: MentorLinkName) {
+  init()
+  const user = getUserTraits()
+  analytics.track(`Mentor ${linkName} Link Clicked`,
+  { user })
 }
