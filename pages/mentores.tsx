@@ -9,6 +9,7 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 
 import { Mentor } from 'types/common'
+import SEO from 'components/SEO'
 
 export interface Props {
   mentors: Array<Mentor>
@@ -29,6 +30,10 @@ export const getStaticProps = async () => {
 export default function Mentores ({ mentors }: Props):JSX.Element {
   return (
     <>
+      <SEO
+        title='Kodemia | Mentores'
+        description='Conoce a tus mentores'
+      />
       <Navbar />
       <header className={classNames(
         'bg-mentors bg-cover bg-no-repeat bg-center',
