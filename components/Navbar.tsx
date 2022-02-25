@@ -57,8 +57,6 @@ export default function Navbar () {
             className={classNames(
               'h-full  lg:hidden flex flex-col',
             )}
-            // aria-label='menu'
-            // aria-expanded='false'
           >
           { !isActive && (
             <>
@@ -69,9 +67,7 @@ export default function Navbar () {
           )
           }
            { isActive && (
-            <div className='bg-pink-200'>
-             <div className={classNames('h-2 w-6 border-b-2 border-solid border-brand-complementary')}/>
-             <div className={classNames('h-2 w-6 border-b-2 border-solid border-brand-complementary')}/>
+             <div className={classNames("h-full w-2 relative after:mt-1 after:content-[' '] after:absolute after:bg-brand-complementary after:w-[2px] after:h-6 after:rotate-45 before:content-[' '] before:absolute before:bg-brand-complementary before:w-[2px] before:h-6 before:-rotate-45 before:mt-1")}>
             </div>
           )
           }
