@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import classNames from 'classnames'
+
 // my components
 import Button from 'components/Button'
 import { navbarLinks } from 'config/pageLinks'
 
 import Auth from 'lib/auth'
 import * as tracker from 'lib/tracker'
+import classNames from 'classnames'
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false)
@@ -26,9 +27,9 @@ export default function Navbar() {
   }
 
   return (
-    <nav className='navbar' role='navigation' aria-label='main navigation'>
-      <div className='navbar-container is-flex'>
-        <div className='navbar-brand'>
+    <nav className={classNames('navbar bg-yellow-200 fixed z-40 w-full top-0 flex justify-center px-6 md:px-16 lg:px-12' )}role='navigation' aria-label='main navigation'>
+      <div className={classNames('lg:max-w-screen-xl w-full bg-green-200')}>
+        <div className={classNames('')}>
           <Link href='/'>
             <a className='navbar-item'>
               <img
@@ -66,7 +67,7 @@ export default function Navbar() {
           }
         )}
         >
-          <div className='navbar-end'>
+          <div className={classNames('navbar-end bg-blue-200')}>
             <div className='navbar-item'>
               {
                 navbarLinks.map(({ name, href, onlyLoggedIn }, index) => (

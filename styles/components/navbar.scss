@@ -1,15 +1,4 @@
 .navbar {
-  background-color: $black-transparent;
-  justify-content: center;
-  padding: 2px 49px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-
-  @include on-mobile {
-    padding: 5px 33px;
-  }
 
   @include on-tablet {
     padding: 12px 72px;
