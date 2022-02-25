@@ -28,5 +28,15 @@
     .avoid-break-inside { // remove when migrating to tailwind v3
       break-inside: avoid;
     }
+
+    .flex-basis-half {
+      flex-basis: 50%;
+    }
+
+    // refactor when migrate to tailwind v3
+    .mentor-skill-pill {
+      flex: 0 1 calc(50% - 16px);
+      margin: 10px 8px;
+    }
   }
 }

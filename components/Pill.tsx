@@ -16,12 +16,12 @@ export default function Pill ({ className, skill }: Props):JSX.Element {
   )
     return (
       <div className={classNames(
-        className,
         'box-border',
         'flex justify-center items-center',
         'py-1 px-2',
         'rounded-lg',
-        `bg-${colorSkill?.color}`
+        `bg-${colorSkill?.color}`,
+        className
       )}>
         <span className={classNames(
           'text-sm tablet:text-base',

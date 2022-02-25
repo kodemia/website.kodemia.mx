@@ -135,22 +135,22 @@ export default function MentorCard ({ className, mentor }: Props):JSX.Element {
         </a>
       </div>
       <p className={classNames(
-        'mt-5',
+        'mt-5 mb-4',
         'text-base font-medium'
       )}>
         Skills
       </p>
-      <div className={classNames(
-        'grid grid-cols-2',
-        'gap-x-3',
-        'gap-y-2',
-        'mt-4'
+      <div
+      className={classNames(
+        'flex flex-wrap justify-between',
+        '-m-2'
       )}>
         {
           skillsList.map((skill, index) => (
             <Pill
               key={`skill-${index}`}
               skill={skill}
+              className='mentor-skill-pill'
             />
           ))
         }
