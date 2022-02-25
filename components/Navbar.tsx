@@ -29,7 +29,7 @@ export default function Navbar () {
 
   return (
     <nav className={classNames(
-      'bg-brand-black-transparent',
+      'bg-brand-black opacity-90',
       'fixed z-40 w-full top-0',
       'flex justify-center',
       'px-6 md:px-16 lg:px-12 py-4'
@@ -73,7 +73,7 @@ export default function Navbar () {
             {isActive && (
               <div className={classNames(
                 'h-full w-2 relative mt-2',
-                " after:content-[' '] after:absolute after:rotate-45 after:bg-brand-complementary after:w-[1px] after:h-4 after:mt-1",
+                "after:content-[' '] after:absolute after:rotate-45 after:bg-brand-complementary after:w-[1px] after:h-4 after:mt-1",
                 "before:content-[' '] before:absolute before:-rotate-45 before:bg-brand-complementary before:w-[1px] before:h-4 before:mt-1"
               )}>
               </div>
@@ -105,7 +105,7 @@ export default function Navbar () {
                     <a className={classNames(
                       'w-full py-4',
                       'lg:w-auto lg:py-0 lg:px-3 xl:px-4',
-                      'hover:text-brand-primary hover:bg-brand-black-transparent lg:hover:bg-transparent',
+                      'hover:text-brand-primary hover:bg-brand-black-dark lg:hover:bg-transparent',
                       { 'is-hidden': onlyLoggedIn && !isLoggedIn }
                     )}
                     >

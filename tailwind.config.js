@@ -24,7 +24,6 @@ module.exports = {
           dark: '#0E0E0E',
           DEFAULT: '#181818',
           light: '#343434',
-          transparent:'rgba(24, 24, 24, 0.9)'
         },
         'brand-complementary': {
           DEFAULT: '#FBFBFB'
