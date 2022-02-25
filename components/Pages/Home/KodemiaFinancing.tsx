@@ -20,27 +20,29 @@ export default function KodemiaFinancing ({ info }: Props) {
   return (
     <section>
       <PageSection
-        sectionClassName='bg-brand-financing-sm md:brand-financing-md lg:brand-financing-lg bg-center bg-cover md:justify-start'
-        contentClassName='md:w-2/4'
+        sectionClassName='bg-brand-financing-sm md:brand-financing-md lg:brand-financing-lg bg-center bg-cover '
+        contentClassName=' md:flex md:justify-start'
       >
-        <H5>
-          {info.section}
-        </H5>
-        <div className='lg:w-80'>
-          <H3
-            whiteText={info.title}
-            cyanText={info.keywords}
-          />
-        </div>
-        <p className='my-10'>
-          {info.text}
-        </p>
-        <div className='lg:w-80'>
-          <Button
-            label='Conoce más'
-            isPrimary
-            link='/aplicar'
-          />
+        <div className='md:w-2/'>
+          <H5>
+            {info.section}
+          </H5>
+          <div className='lg:w-80'>
+            <H3
+              whiteText={info.title}
+              cyanText={info.keywords}
+            />
+          </div>
+          <p className='my-10'>
+            {info.text}
+          </p>
+          <div className='lg:w-80'>
+            <Button
+              label='Conoce más'
+              isPrimary
+              link='/aplicar'
+            />
+          </div>
         </div>
       </PageSection>
     </section>
