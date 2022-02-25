@@ -20,16 +20,14 @@ export default function HeroCard ({
 }: Props): JSX.Element {
   return (
     <div className={classNames(
-      'min-w-[338px]',
-      'w-1/3'
+      'lg:min-w-[338px]',
+      'w-full sm:w-1/2 lg:w-1/3'
     )}>
       <H1>{title}</H1>
       <p className={classNames(
-        'text-brand-complementary',
-        'text-base',
-        'font-medium',
         'my-10',
-        'mx-0'
+        'text-brand-complementary',
+        'text-base font-medium',
       )}>
         {content}
       </p>
