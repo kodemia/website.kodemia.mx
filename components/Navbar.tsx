@@ -11,13 +11,13 @@ import Auth from 'lib/auth'
 import * as tracker from 'lib/tracker'
 import classNames from 'classnames'
 
-export default function Navbar () {
+export default function Navba () {
   const [isActive, setIsActive] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const router = useRouter()
-  useEffect(() => {
+
+  useEffect (() => {
     setIsLoggedIn(!!Auth.get())
-    console.log('cargo',isActive)
   })
 
   const signOut = () => {
@@ -34,12 +34,17 @@ export default function Navbar () {
       'flex justify-center',
       'px-6 md:px-16 lg:px-12 py-4'
     )}>
-      <div className={classNames('lg:max-w-screen-xl w-full',
-        'flex justify-between flex-col lg:flex-row '
+      <div className={classNames(
+        'w-full lg:max-w-screen-xl',
+        'flex justify-between',
+        'flex-col lg:flex-row'
       )}>
-        <div className={classNames(' w-full lg:w-36 flex justify-between')}>
+        <div className={classNames(
+          'w-full lg:w-36',
+          'flex justify-between'
+        )}>
           <Link href='/'>
-            <a className='navbar-item'>
+            <a>
               <img
                 src='/icons/kodemia-logo.svg'
                 alt='Logo'
@@ -53,42 +58,54 @@ export default function Navbar () {
               setIsActive(!isActive)
               console.log(isActive)
             }}
-            role='button'
             className={classNames(
-              'h-full  lg:hidden flex flex-col',
+              'h-full lg:hidden',
+              'flex flex-col'
             )}
           >
-          { !isActive && (
-            <>
-             <div className={classNames('h-2 w-6 border-b-2 border-solid border-brand-complementary')}/>
-             <div className={classNames('h-2 w-6 border-b-2 border-solid border-brand-complementary')}/>
-             <div className={classNames('h-2 w-6 border-b-2 border-solid border-brand-complementary')}/>
-            </>
-          )
-          }
-           { isActive && (
-             <div className={classNames("h-full w-2 relative after:mt-1 after:content-[' '] after:absolute after:bg-brand-complementary after:w-[2px] after:h-6 after:rotate-45 before:content-[' '] before:absolute before:bg-brand-complementary before:w-[2px] before:h-6 before:-rotate-45 before:mt-1")}>
-            </div>
-          )
-          }
+            {!isActive && (
+              <div className={classNames('h-full flex flex-col justify-center')}>
+                <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary')} />
+                <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary')} />
+                <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary mb-1')} />
+              </div>
+            )}
+            {isActive && (
+              <div className={classNames(
+                'h-full w-2 relative mt-2',
+                " after:content-[' '] after:absolute after:rotate-45 after:bg-brand-complementary after:w-[1px] after:h-4 after:mt-1",
+                "before:content-[' '] before:absolute before:-rotate-45 before:bg-brand-complementary before:w-[1px] before:h-4 before:mt-1"
+              )}>
+              </div>
+            )}
           </a>
         </div>
-        <div className={classNames(
-          ' w-full',
+        <div className={classNames('w-full ease-linear',
           {
             'is-active': isActive
           }
         )}
         >
-          <div className={classNames(' lg:flex justify-between flex-col lg:flex-row pt-4 lg:pt-0',{
-            'hidden': !isActive
-          })}>
-            <div className={classNames('w-full flex justify-center items-center flex-col lg:flex-row')}>
+          <div className={classNames(
+            'justify-between flex-col pt-4',
+            'lg:flex-row lg:flex lg:pt-0',
+            {
+              'hidden': !isActive
+            }
+          )}
+          >
+            <div className={classNames(
+              'w-full',
+              'flex justify-center items-center',
+              'flex-col lg:flex-row'
+            )}>
               {
                 navbarLinks.map(({ name, href, onlyLoggedIn }, index) => (
                   <Link href={href} key={index}>
                     <a className={classNames(
-                      'py-4 lg:py-0 w-full lg:w-auto hover:text-brand-primary  hover:bg-brand-black-transparent lg:hover:bg-transparent lg:px-3 xl:px-4',
+                      'w-full py-4',
+                      'lg:w-auto lg:py-0 lg:px-3 xl:px-4',
+                      'hover:text-brand-primary hover:bg-brand-black-transparent lg:hover:bg-transparent',
                       { 'is-hidden': onlyLoggedIn && !isLoggedIn }
                     )}
                     >
@@ -98,8 +115,16 @@ export default function Navbar () {
                 ))
               }
             </div>
-            <div className={classNames('flex flex-col md:flex-row my-4 lg:my-0')}>
-              <div className={classNames('my-4 md:my-0 md:w-2/4 md:mr-5 lg:w-36 lg:mr-4 xl:mr-8 ')}>
+            <div className={classNames(
+              'my-4 flex flex-col',
+              'md:flex-row lg:my-0'
+            )}>
+              <div className={classNames(
+                'my-4',
+                'md:my-0 md:w-2/4 md:mr-5',
+                'lg:w-36 lg:mr-4',
+                'xl:mr-8'
+              )}>
                 {isLoggedIn &&
                   <Button
                     label='Cerrar sesión'
@@ -111,7 +136,10 @@ export default function Navbar () {
                     link='/login'
                   />}
               </div>
-              <div className={classNames(' md:w-2/4 md:ml-5 lg:ml-0 lg:w-36 lg:mr-0')}>
+              <div className={classNames(
+                'md:w-2/4 md:ml-5',
+                'lg:ml-0 lg:w-36 lg:mr-0'
+              )}>
                 <Button
                   isPrimary
                   label='Aplica hoy'
