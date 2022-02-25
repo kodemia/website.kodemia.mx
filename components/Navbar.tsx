@@ -11,7 +11,7 @@ import Auth from 'lib/auth'
 import * as tracker from 'lib/tracker'
 import classNames from 'classnames'
 
-export default function Navba () {
+export default function Navbar () {
   const [isActive, setIsActive] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const router = useRouter()
