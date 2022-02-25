@@ -20,18 +20,11 @@ export default function LanguageCard ({
 }: Props):JSX.Element {
   return (
     <div className={classNames(
-      // 'language-card'
-      'my-5',
-      'mr-2', // TODO: Comprobar comportamiento, en CSS esta en 10px
-      'ml-0',
-      'max-w-full md:max-w-[50%]',
-      'min-w-full lg:min-w-[250px]'
+      'my-5 mr-2 ml-0',
+      'w-full md:w-1/2 lg:w-full',
     )}>
       <div className={classNames(
-        // 'principal-title'
-        'max-w-[50%]',
-        'md:max-w-full',
-        'lg:max-w-[190px]'
+        'w-full lg:w-[190px]'
       )}>
         <H3
           whiteText={name}
@@ -39,45 +32,35 @@ export default function LanguageCard ({
         />
       </div>
       <p className={classNames(
-        // 'description'
-        'text-brand-gray',
-        'text-base',
-        'font-medium',
-        'my-8 mx-0'
+        'my-8 mx-0',
+        'text-brand-gray text-base font-medium'
       )}>
         {description}
       </p>
       <div className={classNames(
-        // 'duration-container'
-        'flex',
+        'flex'
       )}>
         <div className={classNames(
-          'w-auto',
-          ''
+          'w-auto'
         )}>
           <img
             src='/icons/icon-calendario.svg'
             className={classNames(
-              // 'calendar-icon'
+              'mr-4',
               'row-start-1 row-end-3',
-              'mr-4', // TODO: Comprobar comportamiento, en CSS esta en 15px
-              'w-[26px]'
+              'w-7'
             )}
           />
         </div>
         <div className={classNames(
-          'flex',
-          'flex-col',
+          'flex flex-col',
           'w-4/5'
         )}>
           <H5 isWhite>
             Duración
           </H5>
           <p className={classNames(
-            // 'duration'
-            'text-brand-gray',
-            'text-base',
-            'font-medium'
+            'text-brand-gray text-base font-medium'
           )}>
             {duration}
           </p>

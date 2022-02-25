@@ -20,10 +20,9 @@ export default function InfoCard ({
 }: Props):JSX.Element {
   return (
     <div className={classNames(
-      'bg-brand-black-dark',
       'box-border',
-      'gap-4',
       'flex',
+      'gap-4',
       'pt-5 px-0 lg:pb-4',
       {
         'grid-rows-none lg:grid-rows-3 h-[435px] pt-5 px-0 pb-0': detail
@@ -42,9 +41,7 @@ export default function InfoCard ({
         'flex flex-col',
         'w-4/5'
       )}>
-        <div className={classNames(
-          'm-0'
-        )}>
+        <div className='m-0'>
           <H5 isWhite>
             {title}
           </H5>

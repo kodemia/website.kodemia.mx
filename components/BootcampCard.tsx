@@ -28,34 +28,25 @@ export default function BootcampCard ({
         {mode}
       </H4>
       <h5 className={classNames(
-        'text-brand-primary',
-        'text-brand-h5',
-        'font-medium'
+        'text-brand-primary text-brand-h5 font-medium'
       )}>
         {date}
       </h5>
       <div className={classNames(
         'my-6',
-        'mx-0',
-        'max-w-full lg:max-w-[153px]'
+        'w-full lg:w-40'
       )}>
         <H5 isWhite>
           Horario
         </H5>
         <p className={classNames(
-          'text-brand-gray-light',
-          'text-base',
-          'm-0',
-          'max-w-[150px]',
-          'min-w-[150px]'
+          'text-brand-gray-light text-base',
         )}>
           {schedule}
         </p>
         <p className={classNames(
-          'text-brand-gray-light',
-          'text-base',
-          'mt-5',
-          'mb-[25px]',
+          'text-brand-gray-light text-base',
+          'mt-5 mb-6',
           'min-h-[48px]'
         )}>
           {feature}
