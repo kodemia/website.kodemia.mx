@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import dayjs from 'dayjs'
 
 // My components
 import H4 from 'components/H4'
@@ -8,8 +7,6 @@ import Button from 'components/Button'
 
 import { Job } from 'types/common'
 import * as tracker from 'lib/tracker'
-
-
 
 export interface Props {
   job: Job
