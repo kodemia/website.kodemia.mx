@@ -123,7 +123,8 @@ export default function Navbar () {
                 'my-4',
                 'md:my-0 md:w-2/4 md:mr-5',
                 'lg:w-36 lg:mr-4',
-                'xl:mr-8'
+                'xl:mr-8',
+                'hover:bg-brand-black-light'
               )}>
                 {isLoggedIn &&
                   <Button
