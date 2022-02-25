@@ -19,7 +19,7 @@ export interface Props {
 
 export const getStaticProps = async () => {
   const results = await builder.getAll('job')
-  const jobs = results.map(event => event.data)
+  const jobs: Job[] = results.map(event => event.data) as Job[]
 
   return {
     props: {
