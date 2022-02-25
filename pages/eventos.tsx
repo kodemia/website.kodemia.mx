@@ -26,15 +26,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      events: [
-        {
-          date: Date.now(),
-          isLive: true,
-          isPrivate: false,
-          link: '',
-          name: 'El evento falso'
-        }
-      ]
+      events
     },
     revalidate: 60
   }
