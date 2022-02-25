@@ -10,6 +10,11 @@ module.exports = {
       animation: {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
+      backgroundImage: {
+        'brand-financing-lg': "url('/images/kodemia-financing/apoyo-kodemia.jpg')",
+        'brand-financing-md': "url('/images/kodemia-financing/apoyo-tablet.jpg')",
+        'brand-financing-sm': "url('/images/kodemia-financing/apoyo-mobile.jpg')",
+      },
       borderRadius: {
         DEFAULT: '20px',
         small: '10px',

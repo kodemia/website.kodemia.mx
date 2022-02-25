@@ -1,6 +1,7 @@
 
 import React from 'react'
 
+import PageSection from 'components/PageSection'
 import Button from 'components/Button'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
@@ -17,26 +18,31 @@ export interface Props {
 
 export default function KodemiaFinancing ({ info }: Props) {
   return (
-    <section className='kodemia-financing'>
-      <div className='kodemia-financing-container  section-container'>
+    <section>
+      <PageSection
+        sectionClassName='bg-brand-financing-sm md:brand-financing-md lg:brand-financing-lg bg-center bg-cover md:justify-start'
+        contentClassName='md:w-2/4'
+      >
         <H5>
           {info.section}
         </H5>
-        <div className='title-container'>
+        <div className='lg:w-80'>
           <H3
             whiteText={info.title}
             cyanText={info.keywords}
           />
         </div>
-        <p className='text'>{info.text}</p>
-        <div className='btn-container'>
+        <p className='my-10'>
+          {info.text}
+        </p>
+        <div className='lg:w-80'>
           <Button
             label='Conoce más'
             isPrimary
             link='/aplicar'
           />
         </div>
-      </div>
+      </PageSection>
     </section>
   )
 }
