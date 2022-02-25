@@ -8,35 +8,32 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import H5 from 'components/H5'
 import H3 from 'components/H3'
-import EventCard from 'components/EventCard'
+import JobCard from 'components/JobCard'
 import Seo from 'components/SEO'
 
-import { Event } from 'types/common'
+import { Job } from 'types/common'
 
 export interface Props {
-  events: Array<Event>
+  jobs: Job[]
 }
 
 export const getStaticProps = async () => {
-  const date = Date.now()
-  const results = await builder.getAll('evento')
-  const events = results.map(event => event.data)
-    .sort((a: any, b: any) => a.date - b.date)
-    .filter((event: any) => event.date > date)
+  const results = await builder.getAll('job')
+  const jobs = results.map(event => event.data)
 
   return {
     props: {
-      events
+      jobs
     },
     revalidate: 60
   }
 }
 
-export default function Eventos({ events }: Props): JSX.Element {
+export default function Eventos({ jobs }: Props): JSX.Element {
   return (
     <>
       <Seo
-        title='Kodemia | Eventos'
+        title='Kodemia | Jobs'
       />
       <Navbar />
       <header className={classNames(
@@ -53,12 +50,12 @@ export default function Eventos({ events }: Props): JSX.Element {
         )}
         >
           <H5>
-            Eventos Kodemia
+            Vacantes abiertas
           </H5>
           <div>
             <H3
-              whiteText='No te pierdas'
-              cyanText='ninguno'
+              whiteText='Ayudanos a transformar'
+              cyanText='vidas'
             />
           </div>
         </div>
@@ -80,19 +77,34 @@ export default function Eventos({ events }: Props): JSX.Element {
           'w-full',
         )}>
           {
-            _.isEmpty(events) &&
-            <h1 className={classNames('text-cyan-kd animate-bounce text-3xl')}> ¡Más eventos, próximamente! </h1>
+            _.isEmpty(jobs) &&
+            <div className='text-center'>
+              <h1 className={classNames('text-cyan-kd text-3xl pb-10')}>
+                No tenemos vacantes por el momento 🤷‍♂️
+              </h1>
+              <p>
+                Si te interesa trabajar con nostros mandanos un email <br/>
+                <a
+                  href="mailto:rockstars@kodemia.mx"
+                  className='text-cyan-kd-dark'
+                >
+                  &nbsp; rockstars@kodemia.mx &nbsp;
+                </a>
+                <br/>
+                y cuentanos por que te gustaría trabajar con nosotros
+              </p>
+            </div>
           }
           {
-            events.map((event, index) => (
-              <EventCard
+            jobs.map((job, index) => (
+              <JobCard
                 key={`event-${index}`}
                 className={classNames(
                   'md:max-w-420',
                   'md:min-w-min',
                   'w-full md:w-2/5 lg:w-80'
                 )}
-                event={event}
+                job={job}
               />
             ))
           }

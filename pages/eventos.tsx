@@ -20,13 +20,21 @@ export interface Props {
 export const getStaticProps = async () => {
   const date = Date.now()
   const results = await builder.getAll('evento')
-  const events = results.map(event => event.data)
+  const events: Event[] = results.map(event => event.data)
     .sort((a: any, b: any) => a.date - b.date)
-    .filter((event: any) => event.date > date)
+    .filter((event: any) => event.date > date) as Event[]
 
   return {
     props: {
-      events
+      events: [
+        {
+          date: Date.now(),
+          isLive: true,
+          isPrivate: false,
+          link: '',
+          name: 'El evento falso'
+        }
+      ]
     },
     revalidate: 60
   }
