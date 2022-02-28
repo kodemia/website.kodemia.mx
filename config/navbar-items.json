@@ -12,6 +12,10 @@
     "href": "/eventos"
   },
   {
+    "name": "Mentores",
+    "href": "/mentores"
+  },
+  {
     "name": "Alumnos",
     "href": "/login",
     "onlyLoggedIn": true

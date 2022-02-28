@@ -109,3 +109,14 @@ export function onJobButtonClicked (job: Job): void {
   const user = getUserTraits()
   analytics.track(`Job Button Clicked`, { user, job })
 }
+
+type MentorLinkName = 'Github'
+| 'LinkedIn'
+| 'Twitter'
+
+export function onMentorLinkClicked (linkName: MentorLinkName) {
+  init()
+  const user = getUserTraits()
+  analytics.track(`Mentor ${linkName} Link Clicked`,
+  { user })
+}

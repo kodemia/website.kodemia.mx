@@ -11,11 +11,28 @@ export type Event = {
   link: string
 }
 
-export interface Job {
+export type Job = {
   name: string
   description: string
   location: string
   schedule: string
   offer: string
   link: string
+}
+
+export type Mentor = {
+  photography: string
+  name: string
+  jobTitle: string
+  companyName: string
+  yearsOfExperience: number
+  github: string
+  linkedin: string
+  twitter: string
+  description: string
+  skills: Skill[]
+}
+export type Skill = {
+  name: string
+  color: string
 }
