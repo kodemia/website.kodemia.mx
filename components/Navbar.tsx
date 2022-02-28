@@ -2,14 +2,13 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
-// my components
-import Button from 'components/Button'
-import { navbarLinks } from 'config/pageLinks'
+import classNames from 'classnames'
 
 import Auth from 'lib/auth'
 import * as tracker from 'lib/tracker'
-import classNames from 'classnames'
+import { navbarLinks } from 'config/pageLinks'
+// my components
+import Button from 'components/Button'
 
 export default function Navbar () {
   const [isActive, setIsActive] = useState(false)
