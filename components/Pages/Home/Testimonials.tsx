@@ -19,7 +19,7 @@ export interface Props {
   isGray?: boolean
 }
 
-export default function Testimonials ({ testimonials, isGray }: Props):JSX.Element {
+export default function Testimonials ({ testimonials, isGray }: Props) {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0)
 
   const next = () => {
@@ -37,35 +37,15 @@ export default function Testimonials ({ testimonials, isGray }: Props):JSX.Eleme
   }
 
   return (
-    <section className={classNames(
-      // 'testimonials'
-    )}>
+    <section className='testimonials'>
       <div className={classNames(
-        // 'testimonials-wrapper',
-        'flex',
-        'justify-center',
-        'w-full',
+        'testimonials-wrapper',
         {
-          // 'is-gray': isGray
-          'bg-brand-black': isGray
+          'is-gray': isGray
         }
       )}
       >
-        <div className={classNames(
-          // 'container-testimonials',
-          'section-container',
-
-          'max-w-full lg:max-w-[1086px]',
-          'min-w-full lg:min-w-[719px]',
-
-          'flex',
-          'flex-col',
-          'justify-center',
-          'pt-20 md:pt-24',
-          'px-11 md:px-20 lg:px-0',
-          'pb-14 md:pb-20',
-          'w-full'
-        )}>
+        <div className='container-testimonials section-container'>
           <H5>
             Testimonios
           </H5>
@@ -73,26 +53,14 @@ export default function Testimonials ({ testimonials, isGray }: Props):JSX.Eleme
             whiteText='Nuestra'
             cyanText='comunidad'
           />
-          <div className={classNames(
-            // 'sliders',
-            'flex',
-            'h-60',
-            'mt-11',
-            'overflow-hidden',
-            'relative',
-            'w-full'
-          )}>
+          <div className='sliders'>
             {
               testimonials.map((testimonial, index) => {
                 return (
                   <div
                     className={classNames(
                       'testimonial',
-                      '',
-                      '',
                       {
-                        // inactive: (activeTestimonialIndex !== index),
-                        // active: (activeTestimonialIndex === index)
                         inactive: (activeTestimonialIndex !== index),
                         active: (activeTestimonialIndex === index)
                       }
@@ -108,16 +76,8 @@ export default function Testimonials ({ testimonials, isGray }: Props):JSX.Eleme
               })
             }
           </div>
-          <div className={classNames(
-            'bar-buttons',
-            '',
-            ''
-          )}>
-            <div className={classNames(
-              'bar',
-              '',
-              ''
-            )}>
+          <div className='bar-buttons'>
+            <div className='bar'>
               <ul>
                 {
                   testimonials.map((testimonial, index) => {
@@ -125,8 +85,6 @@ export default function Testimonials ({ testimonials, isGray }: Props):JSX.Eleme
                       <li
                         className={classNames(
                           'selected-bar',
-                          '',
-                          '',
                           {
                             inactive: (activeTestimonialIndex !== index),
                             active: (activeTestimonialIndex === index)
@@ -139,27 +97,15 @@ export default function Testimonials ({ testimonials, isGray }: Props):JSX.Eleme
                 }
               </ul>
             </div>
-            <div className={classNames(
-              'container-buttons',
-              '',
-              ''
-            )}>
+            <div className='container-buttons'>
               <img
-                className={classNames(
-                  'back',
-                  '',
-                  ''
-                )}
+                className='back'
                 src='/icons/icon-back.svg'
                 alt='back'
                 onClick={() => previous()}
               />
               <img
-                className={classNames(
-                  'forward',
-                  '',
-                  ''
-                )}
+                className='forward'
                 src='/icons/icon-forward.svg'
                 alt='forward'
                 onClick={() => next()}
