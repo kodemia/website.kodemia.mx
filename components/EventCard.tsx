@@ -14,7 +14,7 @@ export interface Props {
   className?: string
 }
 
-export default function CardEvent({ event, className }: Props) {
+export default function EventCard({ event, className }: Props) {
   return (
     <div className={classNames(
       className,

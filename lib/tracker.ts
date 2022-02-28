@@ -2,8 +2,7 @@ import { AnalyticsInstance } from 'analytics'
 import Analytics from 'lib/analytics'
 import Auth from 'lib/auth'
 
-import { Event } from 'types/common'
-import { Mentor } from 'types/common'
+import { Event, Job } from 'types/common'
 
 type UserTraits = {
   email: string
@@ -102,8 +101,13 @@ export function onFooterLinkClicked (linkName: FooterLinkName) {
 export function onEventButtonClicked (event:Event):void {
   init()
   const user = getUserTraits()
-  analytics.track(`Event Button Clicked`,
-  { user, event })
+  analytics.track(`Event Button Clicked`, { user, event })
+}
+
+export function onJobButtonClicked (job: Job): void {
+  init()
+  const user = getUserTraits()
+  analytics.track(`Job Button Clicked`, { user, job })
 }
 
 type MentorLinkName = 'Github'
