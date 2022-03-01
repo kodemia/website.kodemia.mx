@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import BootcampCard from 'components/BootcampCard'
 import H5 from 'components/H5'
-import LanguageCard from 'components/LanguageCard'
+import LanguageInfo from 'components/LanguageInfo'
 import PageSection from 'components/PageSection'
 
 export interface Modality {
@@ -36,8 +36,6 @@ export interface Props {
 export default function OurBootcamps ({ bootcamps }: Props) {
   return (
     <PageSection
-      sectionClassName={classNames(
-      )}
       contentClassName={classNames(
         'grid',
         'grid-cols-1 lg:grid-cols-3'
@@ -48,9 +46,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
         'row-start-1',
         'col-span-1 lg:col-span-3'
       )}>
-        <H5>
-          Nuestros Bootcamps
-        </H5>
+        <H5> Nuestros Bootcamps </H5>
       </div>
       <div className={classNames(
         'col-start-1',
@@ -63,7 +59,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
           'col-start-1',
           'md:col-span-2 lg:col-span-1'
         )}>
-          <LanguageCard
+          <LanguageInfo
             name={bootcamps.javascript.name}
             language={bootcamps.javascript.language}
             description={bootcamps.javascript.description}
@@ -106,7 +102,7 @@ export default function OurBootcamps ({ bootcamps }: Props) {
           'col-start-1',
           'md:col-span-2 lg:col-span-1'
         )}>
-          <LanguageCard
+          <LanguageInfo
             name={bootcamps.mobile.name}
             language={bootcamps.mobile.language}
             description={bootcamps.mobile.description}
