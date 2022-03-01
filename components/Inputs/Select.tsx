@@ -1,5 +1,5 @@
 
-import classnames from 'classnames'
+import classNames from 'classnames'
 
 interface Option {
   label?: string
@@ -18,20 +18,26 @@ export interface Props {
 
 export default function Select (props: Props) {
   return (
-    <div className='field'>
-      <label className='label has-text-white has-text-weight-normal'>
+    <>
+      <label className={classNames('text-brand-complementary text-brand-normal ')}>
         {props.label}
       </label>
-      <div className='control'>
-        <div className={classnames(
+
+        <div className={classNames(
           props.wrapperClassName,
-          'select'
+          'py-2 px-3 mt-2 relative',
+          'bg-brand-black-dark opacity-90',
+          'text-brand-complementary',
+          'rounded-small'
         )}
         >
           <select
             name={props.name}
             ref={props.register}
             required={props.required}
+           className={classNames(
+             'bg-brand-black-dark pr-10 cursor-pointer w-full'
+             )}
           >
             {
               props.options?.map((option, index) => (
@@ -45,13 +51,12 @@ export default function Select (props: Props) {
             }
           </select>
         </div>
-      </div>
       {
         props.error &&
-          <p className='help is-danger'>
+          <p className='text-brand-error'>
             {props.error}
           </p>
       }
-    </div>
+    </>
   )
 }
