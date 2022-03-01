@@ -30,8 +30,8 @@ export default function Phone (props: Props) {
         preferredCountries={['mx', 'co', 'pe', 've', 'ar']}
         regions={['america']}
         buttonClass={classNames(
-          'pl-2 bg-transparent border-none',
-          'phone-dropdown'
+          'phone-dropdown',
+          'pl-2 bg-transparent border-none'
         )}
         value={props.value}
         onChange={(phone) => props.onChange(phone)}
