@@ -54,7 +54,7 @@ export default function Eventos({ jobs }: Props): JSX.Element {
           </H5>
           <div>
             <H3
-              whiteText='Ayudanos a transformar'
+              whiteText='Ayúdanos a transformar'
               cyanText='vidas'
             />
           </div>
