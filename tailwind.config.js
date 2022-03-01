@@ -11,9 +11,9 @@ module.exports = {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
       backgroundImage: {
-        'brand-financing-lg': "url('/images/kodemia-financing/apoyo-kodemia.jpg')",
-        'brand-financing-md': "url('/images/kodemia-financing/apoyo-tablet.jpg')",
-        'brand-financing-sm': "url('/images/kodemia-financing/apoyo-mobile.jpg')",
+        'home-financing-lg': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
+        'home-financing-md': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
+        'home-financing-sm': "url('https://cdn.kodemia.mx/images/home/apoyo-mobile.jpg')",
       },
       borderRadius: {
         DEFAULT: '20px',
