@@ -1,5 +1,5 @@
 
-import classNames from 'classNames'
+import classNames from 'classnames'
 
 export interface Props {
   type: 'text' | 'email'
