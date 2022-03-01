@@ -74,7 +74,12 @@ export default function Eventos ({ events }: Props): JSX.Element {
       </header>
         <PageSection
           sectionClassName='max-h-screen'
-          contentClassName='flex flex-col md:flex-row md:flex-wrap gap-y-9 gap-x-0 md:gap-x-11 lg:gap-x-10 justify-center'
+          contentClassName={classNames(
+            'flex justify-center',
+            'flex-col md:flex-row',
+            'md:flex-wrap',
+            'gap-y-9 gap-x-0 md:gap-x-11 lg:gap-x-10'
+          )}
         >
           {
             events.map((event, index) => (
