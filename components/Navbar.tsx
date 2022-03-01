@@ -55,7 +55,6 @@ export default function Navbar () {
           <a
             onClick={() => {
               setIsActive(!isActive)
-              console.log(isActive)
             }}
             className={classNames(
               'h-full lg:hidden',
@@ -63,7 +62,7 @@ export default function Navbar () {
             )}
           >
             {!isActive && (
-              <div className={classNames('h-full flex flex-col justify-center cursor-pointer ')}>
+              <div className={classNames('h-full flex flex-col justify-center cursor-pointer')}>
                 <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary')} />
                 <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary')} />
                 <div className={classNames('h-[5px] w-4 border-b-[1px] border-solid border-brand-complementary mb-1')} />
@@ -87,7 +86,7 @@ export default function Navbar () {
         >
           <div className={classNames(
             'justify-between flex-col pt-4',
-            'lg:flex-row lg:flex lg:pt-0',
+            'lg:flex lg:flex-row lg:pt-0',
             {
               'hidden': !isActive
             }
