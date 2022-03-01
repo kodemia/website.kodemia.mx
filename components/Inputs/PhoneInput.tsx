@@ -25,7 +25,7 @@ export default function Phone (props: Props) {
         placeholder='55 3333 5555'
         preferredCountries={['mx', 'co', 'pe', 've', 'ar']}
         regions={['america']}
-        buttonClass={classNames('border-none')}
+        buttonClass={'bg-transparent border-none phone-dropdown pl-2'}
         value={props.value}
         onChange={(phone) => props.onChange(phone)}
         inputProps={{
