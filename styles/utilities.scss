@@ -18,9 +18,9 @@
       invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg)
       brightness(113%) contrast(100%);
   }
-
-   .phone-dropdown {
-    .selected-flag {
+  //TODO: check this
+  // .phone-dropdown {
+  //   .selected-flag {
   //     &:focus,
   //     &:hover,
   //     &:active,
@@ -28,6 +28,6 @@
   //       background-color: transparent;
   //       border-radius: 10px;
   //     }
-    }
-  }
+  //   }
+  // }
 }
