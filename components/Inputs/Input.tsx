@@ -15,7 +15,11 @@ export interface Props {
 export default function Input (props: Props) {
   return (
     <div className='w-full'>
-      <div className={classNames('text-brand-complementary  mb-2 font-normal text-brand-normal')}>
+      <div className={classNames(
+        'mb-2 font-normal ',
+        'text-brand-complementary text-brand-normal'
+      )}
+      >
         {props.label}
       </div>
       <input
@@ -24,7 +28,7 @@ export default function Input (props: Props) {
           'py-2 px-3 w-full',
           'bg-brand-black-dark opacity-90',
           'text-brand-complementary placeholder:text-brand-gray-light',
-          'rounded-small',
+          'rounded-small'
         )}
         type={props.type}
         placeholder={props.placeholder}

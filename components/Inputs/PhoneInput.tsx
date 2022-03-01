@@ -13,7 +13,11 @@ export interface Props {
 export default function Phone (props: Props) {
   return (
     <div>
-      <div className={classNames('text-brand-complementary text-brand-normal mb-2')}>
+      <div className={classNames(
+        'mb-2 font-normal ',
+        'text-brand-complementary text-brand-normal'
+        )}
+        >
         {props.label}
       </div>
       <PhoneInput
@@ -25,7 +29,10 @@ export default function Phone (props: Props) {
         placeholder='55 3333 5555'
         preferredCountries={['mx', 'co', 'pe', 've', 'ar']}
         regions={['america']}
-        buttonClass={'bg-transparent border-none phone-dropdown pl-2'}
+        buttonClass={classNames(
+          'pl-2 bg-transparent border-none',
+          'phone-dropdown'
+        )}
         value={props.value}
         onChange={(phone) => props.onChange(phone)}
         inputProps={{
@@ -34,8 +41,8 @@ export default function Phone (props: Props) {
           pattern: '^[\\+]?[(]?[0-9]{2,}[)]?[-\\s\\.]?[0-9]{2,}[-\\s\\.]?[0-9]{2,}[-\\s\\.]?[0-9]{2,}$',
           required: true,
           className: classNames(
-            'bg-brand-black-dark opacity-90',
             'pr-2 pl-12 w-full py-2',
+            'bg-brand-black-dark opacity-90',
             'rounded-small',
             'text-brand-complementary'
           )

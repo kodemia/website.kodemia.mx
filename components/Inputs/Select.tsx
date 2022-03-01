@@ -19,43 +19,44 @@ export interface Props {
 export default function Select (props: Props) {
   return (
     <>
-      <label className={classNames('text-brand-complementary text-brand-normal ')}>
+      <label className='text-brand-complementary text-brand-normal'>
         {props.label}
       </label>
-
-        <div className={classNames(
-          props.wrapperClassName,
-          'py-2 px-3 mt-2 relative',
-          'bg-brand-black-dark opacity-90',
-          'text-brand-complementary',
-          'rounded-small'
-        )}
+      <div className={classNames(
+        props.wrapperClassName,
+        'py-2 px-3 mt-2',
+        'bg-brand-black-dark opacity-90',
+        'text-brand-complementary',
+        'rounded-small'
+      )}
+      >
+        <select
+          name={props.name}
+          ref={props.register}
+          required={props.required}
+          className={classNames(
+            'bg-brand-black-dark',
+            'pr-10 w-full',
+            'cursor-pointer'
+          )}
         >
-          <select
-            name={props.name}
-            ref={props.register}
-            required={props.required}
-           className={classNames(
-             'bg-brand-black-dark pr-10 cursor-pointer w-full'
-             )}
-          >
-            {
-              props.options?.map((option, index) => (
-                <option
-                  key={`option-${option.value}-${index}`}
-                  value={option.value}
-                >
-                  {option?.label || option.value}
-                </option>
-              ))
-            }
-          </select>
-        </div>
+          {
+            props.options?.map((option, index) => (
+              <option
+                key={`option-${option.value}-${index}`}
+                value={option.value}
+              >
+                {option?.label || option.value}
+              </option>
+            ))
+          }
+        </select>
+      </div>
       {
         props.error &&
-          <p className='text-brand-error'>
-            {props.error}
-          </p>
+        <p className='text-brand-error'>
+          {props.error}
+        </p>
       }
     </>
   )
