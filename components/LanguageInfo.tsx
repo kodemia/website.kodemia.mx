@@ -16,7 +16,7 @@ export default function LanguageInfo ({ name, language, description, duration }:
   return (
     <div className={classNames(
       'my-5 mr-2 ml-0',
-      'w-full md:w-1/2 lg:w-full',
+      'w-full md:w-1/2 lg:w-full'
     )}>
       <div className='w-full lg:w-48'>
         <H3
@@ -45,8 +45,12 @@ export default function LanguageInfo ({ name, language, description, duration }:
           'flex flex-col',
           'w-4/5'
         )}>
-          <H5 isWhite> Duración </H5>
-          <p className='text-brand-gray text-base font-medium'> {duration} </p>
+          <H5 isWhite>
+            Duración
+          </H5>
+          <p className='text-brand-gray text-base font-medium'>
+            {duration}
+          </p>
         </div>
       </div>
     </div>

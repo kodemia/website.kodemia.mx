@@ -3,18 +3,18 @@ import React from 'react'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
+import InfoElement, { Props as InfoElementProps } from 'components/InfoElement'
 
 export interface Props {
   talent: {
     cyanTitle: string
-    cards: Array<InfoCardProps>
+    cards: Array<InfoElementProps>
     subtitle: string
     whiteTitle: string
   }
 }
 
-export default function TalentDevelopment ({ talent }: Props) {
+export default function TalentDevelopment ({ talent }: Props):JSX.Element {
   return (
     <section className='talent-development'>
       <div className='talent-container section-container'>
@@ -30,13 +30,13 @@ export default function TalentDevelopment ({ talent }: Props) {
         </div>
         <div className='talent-cards'>
           {
-            talent.cards.map((infoCard, index) => {
+            talent.cards.map((infoElement, index) => {
               return (
-                <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
+                <InfoElement
+                  key={`talent-development-${index}`}
+                  icon={infoElement.icon}
+                  title={infoElement.title}
+                  text={infoElement.text}
                 />
               )
             })

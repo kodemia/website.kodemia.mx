@@ -3,20 +3,20 @@ import React from 'react'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
+import InfoElement, { Props as InfoElementProps } from 'components/InfoElement'
 
 export interface Props {
   support: {
     cyanTitle: string
     image: string
-    cards: Array<InfoCardProps>
+    cards: Array<InfoElementProps>
     secondWhiteTitle: string
     subtitle: string
     whiteTitle: string
   }
 }
 
-export default function Support ({ support }: Props) {
+export default function Support ({ support }: Props): JSX.Element {
   return (
     <section className='support'>
       <div className='support-container section-container'>
@@ -39,13 +39,13 @@ export default function Support ({ support }: Props) {
         </div>
         <div className='cards'>
           {
-            support.cards.map((infoCard, index) => {
+            support.cards.map((infoElement, index) => {
               return (
-                <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
+                <InfoElement
+                  key={`support-${index}`}
+                  icon={infoElement.icon}
+                  title={infoElement.title}
+                  text={infoElement.text}
                 />
               )
             })

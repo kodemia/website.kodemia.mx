@@ -3,10 +3,10 @@ import React from 'react'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard from 'components/InfoCard'
+import InfoElement from 'components/InfoElement'
 import Text from 'components/Text'
 
-export interface Card {
+export interface InfoElement {
   icon: string
   text: string
   title: string
@@ -16,16 +16,16 @@ export interface Info {
   title: string
   keywords: string
   text: string
-  cards: Array<Card>
+  cards: Array<InfoElement>
 }
 
 export interface Props {
   ourMethod: Info
 }
 
-export default function OurMethod ({ ourMethod: { title, keywords, text, cards } }: Props) {
+export default function OurMethod ({ ourMethod: { title, keywords, text, cards } }: Props): JSX.Element {
   return (
-    <section className='our-method '>
+    <section className='our-method'>
       <div className='our-method-container section-container'>
         <H5>
           Nuestro Método
@@ -42,13 +42,13 @@ export default function OurMethod ({ ourMethod: { title, keywords, text, cards }
           </Text>
         </div>
         <div className='our-method-cards'>
-          {cards.map((infoCard, index) => {
+          {cards.map((infoElement, index) => {
             return (
-              <InfoCard
-                key={`om-card-${index}`}
-                icon={infoCard.icon}
-                title={infoCard.title}
-                text={infoCard.text}
+              <InfoElement
+                key={`our-method-${index}`}
+                icon={infoElement.icon}
+                title={infoElement.title}
+                text={infoElement.text}
               />
             )
           })}

@@ -6,20 +6,15 @@ import H5 from 'components/H5'
 import Text from 'components/Text'
 
 export interface Props {
-  icon: string,
-  title: string,
-  text: string,
+  icon: string
+  title: string
+  text: string
   detail?: string
 }
 
-export default function InfoCard ({
-  icon,
-  title,
-  text,
-  detail
-}: Props):JSX.Element {
+export default function InfoElement({ icon, title, text, detail }: Props): JSX.Element {
   return (
-    <div className={classNames(
+    <article className={classNames(
       'box-border',
       'flex',
       'gap-4',
@@ -34,23 +29,24 @@ export default function InfoCard ({
           className={classNames(
             'pt-2',
             'w-7',
-            'hover:scale-110',
-          )} />
+            'hover:scale-110'
+          )}
+        />
       </div>
       <div className={classNames(
         'flex flex-col',
         'w-4/5'
       )}>
-        <div className='m-0'>
-          <H5 isWhite>
-            {title}
-          </H5>
-        </div>
+        <H5 isWhite>
+          {title}
+        </H5>
         <div className={classNames(
           'h-full',
           'mt-4'
         )}>
-          <Text> {text} </Text>
+          <Text>
+            {text}
+          </Text>
         </div>
         {
           detail &&
@@ -66,6 +62,6 @@ export default function InfoCard ({
           </div>
         }
       </div>
-    </div>
+    </article>
   )
 }

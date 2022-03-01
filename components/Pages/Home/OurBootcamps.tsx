@@ -33,7 +33,7 @@ export interface Props {
   }
 }
 
-export default function OurBootcamps ({ bootcamps }: Props) {
+export default function OurBootcamps ({ bootcamps }: Props):JSX.Element {
   return (
     <PageSection
       contentClassName={classNames(
@@ -46,7 +46,9 @@ export default function OurBootcamps ({ bootcamps }: Props) {
         'row-start-1',
         'col-span-1 lg:col-span-3'
       )}>
-        <H5> Nuestros Bootcamps </H5>
+        <H5>
+          Nuestros Bootcamps
+        </H5>
       </div>
       <div className={classNames(
         'col-start-1',
@@ -89,7 +91,6 @@ export default function OurBootcamps ({ bootcamps }: Props) {
           }
         </article>
       </div>
-
       <div className={classNames(
         'col-start-1',
         'row-start-3',

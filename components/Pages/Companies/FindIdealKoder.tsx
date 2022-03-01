@@ -3,11 +3,11 @@ import React from 'react'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
+import InfoElement, { Props as InfoElementProps } from 'components/InfoElement'
 
 export interface Props {
   idealKoder: {
-    cards: Array<InfoCardProps>
+    cards: Array<InfoElementProps>
     cyanTitle: string
     image: string
     subtitle: string
@@ -15,7 +15,7 @@ export interface Props {
   }
 }
 
-export default function FindIdealKoder ({ idealKoder }: Props) {
+export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
   return (
     <section className='find-ideal-koder'>
       <div className='find-koder-container section-container'>
@@ -36,14 +36,14 @@ export default function FindIdealKoder ({ idealKoder }: Props) {
         </div>
         <div className='cards'>
           {
-            idealKoder.cards.map((infoCard, index) => {
+            idealKoder.cards.map((infoElement, index) => {
               return (
-                <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
-                  detail={infoCard.detail}
+                <InfoElement
+                  key={`ideal-koder-${index}`}
+                  icon={infoElement.icon}
+                  title={infoElement.title}
+                  text={infoElement.text}
+                  detail={infoElement.detail}
                 />
               )
             })

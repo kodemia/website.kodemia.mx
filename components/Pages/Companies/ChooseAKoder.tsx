@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard from 'components/InfoCard'
+import InfoElement from 'components/InfoElement'
 
 export interface Skill {
   icon: string
@@ -25,7 +25,7 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, whiteTitle }: Props) {
+export default function ChooseAKoder ({ chooseKoder, cyanTitle, subtitle, whiteTitle }: Props): JSX.Element {
   const [activeProgram, setActiveProgram] = useState(0)
   return (
     <section className='choose-a-koder is-flex is-justify-content-center'>
@@ -123,7 +123,7 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                       className='column is-half is-full-mobile'
                       key={`skill-${skill.title}-${index}`}
                     >
-                      <InfoCard
+                      <InfoElement
                         icon={skill.icon}
                         title={skill.title}
                         text={skill.text}

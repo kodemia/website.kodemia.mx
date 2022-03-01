@@ -3,18 +3,18 @@ import React from 'react'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
+import InfoElement, { Props as InfoElementProps } from 'components/InfoElement'
 
 export interface Props {
   achievement: {
-    cards: Array<InfoCardProps>
+    cards: Array<InfoElementProps>
     cyanTitle: string
     subtitle: string
     whiteTitle: string
   }
 }
 
-export default function Goals ({ achievement }: Props) {
+export default function Goals ({ achievement }: Props): JSX.Element {
   return (
     <section className='goals'>
       <div className='goals-container section-container'>
@@ -29,13 +29,13 @@ export default function Goals ({ achievement }: Props) {
         </div>
         <div className='goals-cards'>
           {
-            achievement.cards.map((infoCard, index) => {
+            achievement.cards.map((infoElement, index) => {
               return (
-                <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
+                <InfoElement
+                  key={`achievement-${index}`}
+                  icon={infoElement.icon}
+                  title={infoElement.title}
+                  text={infoElement.text}
                 />
               )
             })
