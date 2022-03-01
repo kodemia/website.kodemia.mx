@@ -33,7 +33,12 @@ export default function WhyKodemia({ cards, cyanTitle, image, subtitle, whiteTit
         <H5>
           {subtitle}
         </H5>
-        <H3 whiteText={whiteTitle} cyanText={cyanTitle} />
+        <div className='max-w-[365px]'>
+          <H3
+            whiteText={whiteTitle}
+            cyanText={cyanTitle}
+          />
+        </div>
       </div>
       <img
         className={classNames(

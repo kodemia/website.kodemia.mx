@@ -33,7 +33,7 @@ export interface Props {
   }
 }
 
-export default function OurBootcamps ({ bootcamps }: Props):JSX.Element {
+export default function OurBootcamps({ bootcamps }: Props): JSX.Element {
   return (
     <PageSection
       contentClassName={classNames(
@@ -72,7 +72,7 @@ export default function OurBootcamps ({ bootcamps }: Props):JSX.Element {
           'md:col-start-1 lg:col-start-2',
           'md:col-span-2',
           'grid',
-          'grid-cols-1 md:grid-cols-2',
+          'grid-cols-1 sm:grid-cols-2',
           'sm:gap-x-9',
           'gap-y-7',
           'lg:ml-14'
@@ -110,28 +110,28 @@ export default function OurBootcamps ({ bootcamps }: Props):JSX.Element {
             duration={bootcamps.mobile.duration}
           />
         </div>
-          <article className={classNames(
-            'md:col-start-1 lg:col-start-2',
-            'md:col-span-2',
-            'grid',
-            'grid-cols-1 md:grid-cols-2',
-            'sm:gap-x-9',
-            'gap-y-7',
-            'lg:ml-14'
-          )}>
-            {
-              bootcamps.mobile.modalities.map((modality, index) => (
-                <BootcampCard
-                  mode={modality.name}
-                  date={`${modality.schedule.day} ${modality.schedule.day ? 'de' : ''} ${modality.schedule.month}`}
-                  schedule={`${modality.schedule.days} de ${modality.schedule.hour}`}
-                  feature={modality.description}
-                  link={modality.link}
-                  key={`modality-${index}`}
-                />
-              ))
-            }
-          </article>
+        <article className={classNames(
+          'md:col-start-1 lg:col-start-2',
+          'md:col-span-2',
+          'grid',
+          'grid-cols-1 sm:grid-cols-2',
+          'sm:gap-x-9',
+          'gap-y-7',
+          'lg:ml-14'
+        )}>
+          {
+            bootcamps.mobile.modalities.map((modality, index) => (
+              <BootcampCard
+                mode={modality.name}
+                date={`${modality.schedule.day} ${modality.schedule.day ? 'de' : ''} ${modality.schedule.month}`}
+                schedule={`${modality.schedule.days} de ${modality.schedule.hour}`}
+                feature={modality.description}
+                link={modality.link}
+                key={`modality-${index}`}
+              />
+            ))
+          }
+        </article>
       </div>
     </PageSection>
   )

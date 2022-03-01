@@ -38,7 +38,7 @@
     "duration": "15 semanas",
     "modalities": [
       {
-        "name": "Modo Live [ iOS ]",
+        "name": "Modo Live [iOS]",
         "description": "Conexión remota vía streaming",
         "link": "/backbase",
         "schedule": {
@@ -50,7 +50,7 @@
         }
       },
       {
-        "name": "Modo Live [ Android ]",
+        "name": "Modo Live [Android]",
         "description": "Conexión remota vía streaming",
         "link": "/backbase",
         "schedule": {
