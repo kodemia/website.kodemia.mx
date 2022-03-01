@@ -22,7 +22,7 @@ export default function KodemiaFinancing ({ info }: Props) {
       sectionClassName='bg-home-financing-sm md:home-financing-md lg:home-financing-lg bg-center bg-cover'
       contentClassName='md:flex md:justify-start'
     >
-      <div className='md:w-2/'>
+      <div className='md:w-2'>
         <H5>
           {info.section}
         </H5>
