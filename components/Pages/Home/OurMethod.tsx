@@ -48,7 +48,7 @@ export default function OurMethod({ ourMethod: { title, keywords, text, cards } 
       <div className={classNames(
         'grid',
         'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
-        'gap-y-7 gap-x-14'
+        'gap-y-7 sm:gap-x-14'
       )}>
         {cards.map((infoElement, index) => {
           return (
