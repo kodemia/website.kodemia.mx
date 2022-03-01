@@ -19,7 +19,7 @@ export interface Props {
 export default function Select (props: Props) {
   return (
     <>
-      <label className='text-brand-complementary text-brand-normal'>
+      <label className={classNames('text-brand-complementary text-brand-normal')}>
         {props.label}
       </label>
       <div className={classNames(
