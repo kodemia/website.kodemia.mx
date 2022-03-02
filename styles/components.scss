@@ -1,0 +1,13 @@
+@layer components {
+  .phone-dropdown {
+    .selected-flag {
+      &:focus,
+      &:hover,
+      &:active,
+      &.open {
+        background-color: transparent;
+        border-radius: 10px;
+      }
+    }
+  }
+}
