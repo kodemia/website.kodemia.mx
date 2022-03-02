@@ -1,5 +1,6 @@
 
 import React from 'react'
+import classNames from 'classnames'
 
 import PageSection from 'components/PageSection'
 import Button from 'components/Button'
@@ -19,10 +20,10 @@ export interface Props {
 export default function KodemiaFinancing ({ info }: Props) {
   return (
     <PageSection
-      sectionClassName='bg-home-financing-sm md:home-financing-md lg:home-financing-lg bg-center bg-cover'
+      sectionClassName={classNames('bg-center bg-cover bg-home-financing-sm','md:home-financing-md lg:home-financing-lg')}
       contentClassName='md:flex md:justify-start'
     >
-      <div className='md:w-2'>
+      <div className='md:w-1/2'>
         <H5>
           {info.section}
         </H5>
