@@ -60,7 +60,8 @@ export default function WhyKodemia({ cards, cyanTitle, image, subtitle, whiteTit
         'grid',
         'grid-cols-1 sm:grid-cols-2',
         'sm:gap-x-9',
-        'sm:gap-y-7',
+        'gap-y-7',
+        'lg:items-center',
         'lg:ml-14'
       )}>
         {
