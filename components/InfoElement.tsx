@@ -18,7 +18,7 @@ export default function InfoElement({ icon, title, text, detail }: Props): JSX.E
     <article className={classNames(
       'box-border',
       'grid',
-      'columns-2',
+      'grid-cols-[auto_1fr]',
       'gap-x-5',
       'content-between',
       {
