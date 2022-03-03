@@ -1,29 +1,13 @@
-<<<<<<< HEAD
-
-import React, { useEffect, useState } from 'react'
-import classNames from 'classnames'
-import { builder } from '@builder.io/react';
-import dayjs from 'dayjs'
-import es from "dayjs/locale/es";
-
-import CardEvent from 'components/CardEvent'
-=======
 import _ from 'lodash'
 import React from 'react'
 import classNames from 'classnames'
 import { builder } from '@builder.io/react';
 
-//My components
-import Navbar from 'components/Navbar'
->>>>>>> master
 import Footer from 'components/Footer'
 import H3 from 'components/H3'
-<<<<<<< HEAD
 import H5 from 'components/H5'
 import Navbar from 'components/Navbar'
-=======
-import CardEvent from 'components/EventCard'
->>>>>>> master
+import EventCard from 'components/EventCard'
 import Seo from 'components/SEO'
 
 import { Event } from 'types/common'
@@ -100,7 +84,7 @@ export default function Eventos({ events }: Props): JSX.Element {
           }
           {
             events.map((event, index) => (
-              <CardEvent
+              <EventCard
                 key={`event-${index}`}
                 className={classNames(
                   'md:max-w-420',
