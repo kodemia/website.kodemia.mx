@@ -62,7 +62,7 @@ export default function WhyKodemia({ cards, cyanTitle, image, subtitle, whiteTit
         'sm:gap-x-9',
         'gap-y-7',
         'lg:items-center',
-        'lg:ml-14'
+        'lg:ml-10'
       )}>
         {
           cards.map((infoElement, index) => {
