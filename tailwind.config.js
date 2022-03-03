@@ -11,7 +11,10 @@ module.exports = {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
       backgroundImage: {
-        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')"
+        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
+        'home-financing-lg': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
+        'home-financing-md': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
+        'home-financing-sm': "url('https://cdn.kodemia.mx/images/home/apoyo-mobile.jpg')",
       },
       borderRadius: {
         small: '10px',
