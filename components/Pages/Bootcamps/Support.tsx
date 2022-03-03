@@ -3,13 +3,13 @@ import React from 'react'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoElement, { Props as InfoElementProps } from 'components/InfoElement'
+import InfoBullet, { Props as InfoBulletProps } from 'components/InfoBullet'
 
 export interface Props {
   support: {
     cyanTitle: string
     image: string
-    cards: Array<InfoElementProps>
+    cards: Array<InfoBulletProps>
     secondWhiteTitle: string
     subtitle: string
     whiteTitle: string
@@ -41,7 +41,7 @@ export default function Support ({ support }: Props): JSX.Element {
           {
             support.cards.map((infoElement, index) => {
               return (
-                <InfoElement
+                <InfoBullet
                   key={`support-${index}`}
                   icon={infoElement.icon}
                   title={infoElement.title}

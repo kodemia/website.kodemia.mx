@@ -73,7 +73,7 @@ export default function Eventos ({ events }: Props): JSX.Element {
         </div>
       </header>
         <PageSection
-          sectionClassName='max-h-screen'
+          sectionClassName='min-h-screen'
           contentClassName={classNames(
             'flex justify-center',
             'flex-col md:flex-row',

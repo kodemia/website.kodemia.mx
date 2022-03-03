@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoElement from 'components/InfoElement'
+import InfoBullet from 'components/InfoBullet'
 
 export interface Skill {
   icon: string
@@ -123,7 +123,7 @@ export default function ChooseAKoder ({ chooseKoder, cyanTitle, subtitle, whiteT
                       className='column is-half is-full-mobile'
                       key={`skill-${skill.title}-${index}`}
                     >
-                      <InfoElement
+                      <InfoBullet
                         icon={skill.icon}
                         title={skill.title}
                         text={skill.text}

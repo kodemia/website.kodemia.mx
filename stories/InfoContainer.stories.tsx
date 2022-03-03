@@ -3,11 +3,11 @@ import React from 'react'
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import InfoElement, { Props } from 'components/InfoElement'
+import InfoBullet, { Props } from 'components/InfoBullet'
 
 export default {
-  title: 'Base/InfoElement',
-  component: InfoElement,
+  title: 'Base/InfoBullet',
+  component: InfoBullet,
   argTypes: {
     icon: {
       control: 'text'
@@ -22,7 +22,7 @@ export default {
 
 } as Meta
 
-const Template: Story<Props> = (args) => <InfoElement {...args} />
+const Template: Story<Props> = (args) => <InfoBullet {...args} />
 
 export const Info = Template.bind({})
 Info.args = {

@@ -3,13 +3,13 @@ import React from 'react'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoElement, { Props as InfoElementProps } from 'components/InfoElement'
+import InfoBullet, { Props as InfoBulletProps } from 'components/InfoBullet'
 import PageSection from 'components/PageSection'
 import classNames from 'classnames'
 
 export interface Props {
   achievement: {
-    cards: Array<InfoElementProps>
+    cards: Array<InfoBulletProps>
     cyanTitle: string
     subtitle: string
     whiteTitle: string
@@ -39,7 +39,7 @@ export default function Goals({ achievement }: Props): JSX.Element {
         {
           achievement.cards.map((infoElement, index) => {
             return (
-              <InfoElement
+              <InfoBullet
                 key={`achievement-${index}`}
                 icon={infoElement.icon}
                 title={infoElement.title}

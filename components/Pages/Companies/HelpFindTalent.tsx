@@ -4,12 +4,12 @@ import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoElement, { Props as InfoElementProps } from 'components/InfoElement'
+import InfoBullet, { Props as InfoBulletProps } from 'components/InfoBullet'
 import PageSection from 'components/PageSection'
 
 export interface Props {
   findTalent: {
-    cards: Array<InfoElementProps>
+    cards: Array<InfoBulletProps>
     cyanTitle: string
     detail: string
     subtitle: string
@@ -47,7 +47,7 @@ export default function HelpFindTalent ({ findTalent }: Props): JSX.Element {
         {
           findTalent.cards.map((infoElement, index) => {
             return (
-              <InfoElement
+              <InfoBullet
                 key={`find-talent-${index}`}
                 icon={infoElement.icon}
                 title={infoElement.title}

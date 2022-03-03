@@ -4,12 +4,12 @@ import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoElement, { Props as InfoElementProps } from 'components/InfoElement'
+import InfoBullet, { Props as InfoBulletProps } from 'components/InfoBullet'
 import PageSection from 'components/PageSection'
 
 export interface Props {
   idealKoder: {
-    cards: Array<InfoElementProps>
+    cards: Array<InfoBulletProps>
     cyanTitle: string
     image: string
     subtitle: string
@@ -21,20 +21,14 @@ export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
   return (
     <PageSection
       sectionClassName={classNames(
-        // 'find-ideal-koder'
         'bg-brand-black'
       )}
       contentClassName={classNames(
-        // 'find-koder-container',
-        // 'section-container'
         'grid',
         'grid-cols-1 lg:grid-cols-3',
-        // 'columns-1 lg:columns-3',
-        // 'lg:gap-x-8,'
       )}
     >
       <div className={classNames(
-        // 'subject'
         'col-start-1',
         'row-start-1',
         'lg:col-span-3',
@@ -45,25 +39,19 @@ export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
         <H5>
           {idealKoder.subtitle}
         </H5>
-        <div className='max-w-[365px]'>   {/*// TODO: title class name*/}
+        <div className='max-w-[365px]'>
           <H3
             whiteText={idealKoder.whiteTitle}
             cyanText={idealKoder.cyanTitle}
           />
         </div>
       </div>
-      {/* <div className={classNames(
-          // 'img-cont'
-        )}> */}
       <img
         className={classNames(
-          // 'image'
           'col-start-1',
           'row-start-2',
           'col-span-1',
-          'h-[420px]',
-          'mb-5',
-          'lg:m-auto',
+          'h-[460px]',
           'max-w-full',
           'object-cover',
           'rounded-small',
@@ -72,9 +60,7 @@ export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
         src={idealKoder.image}
         alt='koder ideal'
       />
-      {/* </div> */}
       <div className={classNames(
-        // 'cards'
         'lg:col-start-2',
         'lg:row-start-2',
         'lg:col-span-2',
@@ -82,13 +68,13 @@ export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
         'grid-cols-1 sm:grid-cols-2',
         'sm:gap-x-9',
         'gap-y-7',
-        'lg:items-center',
-        'lg:ml-10'
+        'lg:ml-10',
+        'mt-10 lg:mt-0'
       )}>
         {
           idealKoder.cards.map((infoElement, index) => {
             return (
-              <InfoElement
+              <InfoBullet
                 key={`ideal-koder-${index}`}
                 icon={infoElement.icon}
                 title={infoElement.title}

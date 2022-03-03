@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoElement from 'components/InfoElement'
+import InfoBullet from 'components/InfoBullet'
 import PageSection from 'components/PageSection'
 import Text from 'components/Text'
 
@@ -52,7 +52,7 @@ export default function OurMethod({ ourMethod: { title, keywords, text, cards } 
       )}>
         {cards.map((infoElement, index) => {
           return (
-            <InfoElement
+            <InfoBullet
               key={`our-method-${index}`}
               icon={infoElement.icon}
               title={infoElement.title}

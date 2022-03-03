@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoElement from 'components/InfoElement'
+import InfoBullet from 'components/InfoBullet'
 
 import CareerData from 'config/bootcamps/career-data.json'
 
@@ -35,7 +35,7 @@ export default function CareerCoach (): JSX.Element {
             {
               first.map((infoElement, index) => {
                 return (
-                  <InfoElement
+                  <InfoBullet
                     key={`first-${index}`}
                     icon={infoElement.icon}
                     title={infoElement.title}
@@ -51,7 +51,7 @@ export default function CareerCoach (): JSX.Element {
             {
               second.map((infoElement, index) => {
                 return (
-                  <InfoElement
+                  <InfoBullet
                     key={`second-${index}`}
                     icon={infoElement.icon}
                     title={infoElement.title}
