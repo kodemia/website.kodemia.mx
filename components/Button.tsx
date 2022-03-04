@@ -2,14 +2,15 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import classNames from 'classnames'
+import { UrlObject } from 'url'
 
 export interface Props {
   isPrimary?: Boolean
   label: string
   icon?: string
   hasWhiteBg?: Boolean
+  link?: string | UrlObject
   href?: string
-  link?: string
   type?: 'submit'
   isDisabled?: boolean
   onClick?: () => void

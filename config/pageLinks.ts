@@ -8,29 +8,35 @@ interface pageLink {
 
 const pageLinks: pageLink[] = [
   {
-    "name": "Bootcamps",
-    "href": "/#bootcamps",
-    "isNavBar": true,
-    "isFooter": true
+    name: "Bootcamps",
+    href: "/#bootcamps",
+    isNavBar: true,
+    isFooter: true
   },
   {
-    "name": "Empresas",
-    "href": "/empresas",
-    "isNavBar": true,
-    "isFooter": true
+    name: "Empresas",
+    href: "/empresas",
+    isNavBar: true,
+    isFooter: true
   },
   {
-    "name": "Eventos",
-    "href": "/eventos",
-    "isNavBar": true,
-    "isFooter": false
+    name: "Eventos",
+    href: "/eventos",
+    isNavBar: true,
+    isFooter: false
   },
   {
-    "name": "Alumnos",
-    "href": "/login",
-    "onlyLoggedIn": true,
-    "isNavBar": true,
-    "isFooter": true
+    name: "Alumnos",
+    href: "/login",
+    onlyLoggedIn: true,
+    isNavBar: true,
+    isFooter: true
+  },
+  {
+    name: "Empleos",
+    href: "/empleos",
+    isNavBar: false,
+    isFooter: true
   }
 ]
 
