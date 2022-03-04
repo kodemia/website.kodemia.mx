@@ -1,26 +1,24 @@
-
-import React, { useEffect, useState } from 'react'
+import _ from 'lodash'
+import React from 'react'
 import classNames from 'classnames'
 import { builder } from '@builder.io/react';
-import dayjs from 'dayjs'
-import es from "dayjs/locale/es";
 
+<<<<<<< HEAD
 import EventCard from 'components/EventCard'
+=======
+>>>>>>> project-refactor
 import Footer from 'components/Footer'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
 import Navbar from 'components/Navbar'
+<<<<<<< HEAD
 import PageSection from 'components/PageSection'
+=======
+import EventCard from 'components/EventCard'
+>>>>>>> project-refactor
 import Seo from 'components/SEO'
 
-dayjs.locale(es);
-export interface Event {
-  name: string
-  date: Date
-  isLive: Boolean
-  isPrivate: Boolean
-  link: string
-}
+import { Event } from 'types/common'
 
 export interface Props {
   events: Array<Event>
@@ -29,9 +27,9 @@ export interface Props {
 export const getStaticProps = async () => {
   const date = Date.now()
   const results = await builder.getAll('evento')
-  const events = results.map(event => event.data)
+  const events: Event[] = results.map(event => event.data)
     .sort((a: any, b: any) => a.date - b.date)
-    .filter((event: any) => event.date > date)
+    .filter((event: any) => event.date > date) as Event[]
 
   return {
     props: {
@@ -82,20 +80,19 @@ export default function Eventos ({ events }: Props): JSX.Element {
           )}
         >
           {
+            _.isEmpty(events) &&
+            <h1 className={classNames('text-cyan-kd animate-bounce text-3xl')}> ¡Más eventos, próximamente! </h1>
+          }
+          {
             events.map((event, index) => (
               <EventCard
+                key={`event-${index}`}
                 className={classNames(
                   'md:max-w-[420px]',
                   'md:min-w-min',
                   'w-full md:w-2/5 lg:w-80',
                 )}
-                key={`event-${index}`}
-                name={event.name}
-                date={dayjs(event.date).format('DD MMMM').toString()}
-                schedule={`${dayjs(event.date).format('HH:mm').toString()} hrs.`}
-                text={event.isLive ? 'Conexión remota vía streaming' : 'Presencial, te esperamos 😎'}
-                btnLabel={event.isPrivate ? 'Regístrate' : 'Ver evento'}
-                link={event.link}
+                event={event}
               />
             ))
           }
