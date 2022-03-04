@@ -25,7 +25,7 @@ export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
       )}
       contentClassName={classNames(
         'grid',
-        'grid-cols-1 lg:grid-cols-3',
+        'grid-cols-1 lg:grid-cols-3'
       )}
     >
       <div className={classNames(
@@ -33,8 +33,7 @@ export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
         'row-start-1',
         'lg:col-span-3',
         'mb-10',
-        'w-full sm:w-1/2',
-        // 'max-w-xl' // TODO: comprobar si es el tamaño adecuado
+        'w-full sm:w-1/2'
       )}>
         <H5>
           {idealKoder.subtitle}

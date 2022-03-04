@@ -20,11 +20,7 @@ export default function InfoElement({ icon, title, text, detail }: Props): JSX.E
       'grid-cols-[auto_1fr]',
       'grid-rows-[auto_1fr]',
       'gap-x-5',
-      'content-between',
-      {
-        // 'pt-5 mb-5 lg:mb-0 px-0 pb-0': detail
-        // '[h-435px]'
-      }
+      'content-between'
     )}>
       <div className={classNames(
         'col-start-1',
@@ -51,23 +47,27 @@ export default function InfoElement({ icon, title, text, detail }: Props): JSX.E
         <H5 isWhite>
           {title}
         </H5>
-        <div className={classNames(
-          'mt-4'
-        )}>
-          <Text>
-            {text}
-          </Text>
-        </div>
+      </div>
+      <div className={classNames(
+        'col-start-2',
+        'row-start-2',
+        'col-span-2',
+        'mt-5'
+      )}>
+        <Text>
+          {text}
+        </Text>
       </div>
         {
           detail &&
           <div className={classNames(
             'border border-solid border-brand-primary',
             'col-start-1',
-            'row-start-2',
+            'row-start-3',
             'col-span-3',
             'flex items-center',
-            'h-fit',
+            'h-44',
+            'mt-5',
             'p-4',
             'rounded-small',
             'text-brand-gray-light text-base font-medium'
