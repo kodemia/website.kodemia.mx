@@ -3,19 +3,12 @@ import React from 'react'
 import classNames from 'classnames'
 import { builder } from '@builder.io/react';
 
-<<<<<<< HEAD
 import EventCard from 'components/EventCard'
-=======
->>>>>>> project-refactor
 import Footer from 'components/Footer'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
 import Navbar from 'components/Navbar'
-<<<<<<< HEAD
 import PageSection from 'components/PageSection'
-=======
-import EventCard from 'components/EventCard'
->>>>>>> project-refactor
 import Seo from 'components/SEO'
 
 import { Event } from 'types/common'
@@ -81,7 +74,9 @@ export default function Eventos ({ events }: Props): JSX.Element {
         >
           {
             _.isEmpty(events) &&
-            <h1 className={classNames('text-cyan-kd animate-bounce text-3xl')}> ¡Más eventos, próximamente! </h1>
+            <h1 className={classNames('text-cyan-kd animate-bounce text-3xl')}>
+              ¡Más eventos, próximamente!
+            </h1>
           }
           {
             events.map((event, index) => (
@@ -90,7 +85,7 @@ export default function Eventos ({ events }: Props): JSX.Element {
                 className={classNames(
                   'md:max-w-[420px]',
                   'md:min-w-min',
-                  'w-full md:w-2/5 lg:w-80',
+                  'w-full md:w-2/5 lg:w-80'
                 )}
                 event={event}
               />
