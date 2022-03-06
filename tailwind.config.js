@@ -11,6 +11,11 @@ module.exports = {
       animation: {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
+      backgroundImage: {
+        'home-financing-lg': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
+        'home-financing-md': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
+        'home-financing-sm': "url('https://cdn.kodemia.mx/images/home/apoyo-mobile.jpg')",
+      },
       borderRadius: {
         DEFAULT: '20px',
         small: '10px',
@@ -67,5 +72,8 @@ module.exports = {
         }
       }
     }
-  }
+  },
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ]
 }
