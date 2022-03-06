@@ -18,7 +18,7 @@ export default function TransformYourLife (): JSX.Element {
       <div className={classNames(
         'mb-10 md:mb-0',
         'md:pb-4',
-        'text-center md:text-left',
+        'text-left',
         'md:w-2/5'
       )}>
         <H2>
