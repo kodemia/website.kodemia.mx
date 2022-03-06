@@ -25,9 +25,9 @@ export default function Input (props: Props) {
       <input
         className={classNames(
           'py-2 px-3 w-full',
+          'rounded-small',
           'bg-brand-black-dark opacity-90',
           'text-brand-complementary placeholder:text-brand-gray-light',
-          'rounded-small',
           props.className,
         )}
         type={props.type}
