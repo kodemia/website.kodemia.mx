@@ -16,7 +16,7 @@ export default function Input (props: Props) {
   return (
     <div className='w-full'>
       <div className={classNames(
-        'mb-2 font-normal ',
+        'mb-2 font-normal',
         'text-brand-complementary text-brand-normal'
       )}
       >
@@ -24,11 +24,11 @@ export default function Input (props: Props) {
       </div>
       <input
         className={classNames(
-          props.className,
           'py-2 px-3 w-full',
           'bg-brand-black-dark opacity-90',
           'text-brand-complementary placeholder:text-brand-gray-light',
-          'rounded-small'
+          'rounded-small',
+          props.className,
         )}
         type={props.type}
         placeholder={props.placeholder}

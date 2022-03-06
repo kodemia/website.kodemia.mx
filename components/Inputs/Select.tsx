@@ -23,11 +23,11 @@ export default function Select (props: Props) {
         {props.label}
       </label>
       <div className={classNames(
-        props.wrapperClassName,
         'py-2 px-3 mt-2',
         'bg-brand-black-dark opacity-90',
         'text-brand-complementary',
-        'rounded-small'
+        'rounded-small',
+        props.wrapperClassName,
       )}
       >
         <select
