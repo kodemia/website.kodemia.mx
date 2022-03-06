@@ -26,7 +26,7 @@ export default function TransformYourLife (): JSX.Element {
         </H2>
       </div>
       <div className={classNames(
-        'md:w-2/4 lg:w-[340px]'
+        'w-full md:w-2/4 lg:w-[340px]'
       )}>
         <Button
           label='Aplica ahora'
