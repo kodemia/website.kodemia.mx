@@ -1,26 +1,32 @@
+
 import React from 'react'
 import classNames from 'classnames'
-// My components
-import PageSection from 'components/PageSection'
+
 import Button from 'components/Button'
 import H2 from 'components/H2'
+import PageSection from 'components/PageSection'
 
-export default function TransformYourLife () {
+export default function TransformYourLife (): JSX.Element {
   return (
     <PageSection
       sectionClassName='bg-brand-primary-dark'
-      contentClassName='md:flex md:justify-between md:items-center'
+      contentClassName={classNames(
+        'md:flex',
+        'md:justify-between md:items-center'
+      )}
     >
       <div className={classNames(
+        'mb-10 md:mb-0',
+        'md:pb-4',
         'text-center md:text-left',
-        'mb-10 md:mb-0 md:pb-4 md:w-2/5'
+        'md:w-2/5'
       )}>
         <H2>
           ¿Listo para transformar tu vida programando?
         </H2>
       </div>
       <div className={classNames(
-        'md:w-2/4 lg:max-w-xs'
+        'md:w-2/4 lg:w-[340px]'
       )}>
         <Button
           label='Aplica ahora'

@@ -13,7 +13,7 @@ export default function PageSection ({children, sectionClassName, contentClassNa
       'flex justify-center',
       'pt-20 md:pt-24',
       'px-6 md:px-16 lg:px-12',
-      'pb-10 md:pb-16 ',
+      'pb-14 md:pb-16',
       sectionClassName
     )}>
       <div className={classNames(
