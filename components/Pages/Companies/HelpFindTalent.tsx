@@ -20,9 +20,7 @@ export interface Props {
 export default function HelpFindTalent ({ findTalent }: Props): JSX.Element {
   return (
     <PageSection>
-      <div className={classNames(
-        'max-w-sm'
-      )}>
+      <div className='max-w-sm'>
         <H5>
           {findTalent.subtitle}
         </H5>
@@ -32,9 +30,9 @@ export default function HelpFindTalent ({ findTalent }: Props): JSX.Element {
         />
       </div>
       <p className={classNames(
-        'text-brand-gray-light text-base font-medium',
         'mt-9',
-        'max-w-2xl'
+        'max-w-2xl',
+        'text-brand-gray-light text-base font-medium'
       )}>
         {findTalent.detail}
       </p>
@@ -45,13 +43,13 @@ export default function HelpFindTalent ({ findTalent }: Props): JSX.Element {
         'mt-10'
       )}>
         {
-          findTalent.cards.map((infoElement, index) => {
+          findTalent.cards.map((infoBullet, index) => {
             return (
               <InfoBullet
                 key={`find-talent-${index}`}
-                icon={infoElement.icon}
-                title={infoElement.title}
-                text={infoElement.text}
+                icon={infoBullet.icon}
+                title={infoBullet.title}
+                text={infoBullet.text}
               />
             )
           })

@@ -20,9 +20,7 @@ export interface Props {
 export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
   return (
     <PageSection
-      sectionClassName={classNames(
-        'bg-brand-black'
-      )}
+      sectionClassName='bg-brand-black'
       contentClassName={classNames(
         'grid',
         'grid-cols-1 lg:grid-cols-3'
@@ -71,14 +69,14 @@ export default function FindIdealKoder ({ idealKoder }: Props): JSX.Element {
         'mt-10 lg:mt-0'
       )}>
         {
-          idealKoder.cards.map((infoElement, index) => {
+          idealKoder.cards.map((infoBullet, index) => {
             return (
               <InfoBullet
                 key={`ideal-koder-${index}`}
-                icon={infoElement.icon}
-                title={infoElement.title}
-                text={infoElement.text}
-                detail={infoElement.detail}
+                icon={infoBullet.icon}
+                title={infoBullet.title}
+                text={infoBullet.text}
+                detail={infoBullet.detail}
               />
             )
           })

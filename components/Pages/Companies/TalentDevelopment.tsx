@@ -16,7 +16,7 @@ export interface Props {
   }
 }
 
-export default function TalentDevelopment({ talent }: Props): JSX.Element {
+export default function TalentDevelopment ({ talent }: Props): JSX.Element {
   return (
     <PageSection>
       <div className='max-w-[370px]'>
@@ -36,13 +36,13 @@ export default function TalentDevelopment({ talent }: Props): JSX.Element {
         'mt-10'
       )}>
         {
-          talent.cards.map((infoElement, index) => {
+          talent.cards.map((infoBullet, index) => {
             return (
               <InfoBullet
                 key={`talent-development-${index}`}
-                icon={infoElement.icon}
-                title={infoElement.title}
-                text={infoElement.text}
+                icon={infoBullet.icon}
+                title={infoBullet.title}
+                text={infoBullet.text}
               />
             )
           })

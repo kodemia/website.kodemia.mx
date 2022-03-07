@@ -15,7 +15,7 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function WhyKodemia({ cards, cyanTitle, image, subtitle, whiteTitle }: Props): JSX.Element {
+export default function WhyKodemia ({ cards, cyanTitle, image, subtitle, whiteTitle }: Props): JSX.Element {
   return (
     <PageSection
       sectionClassName='bg-brand-black'
@@ -65,13 +65,13 @@ export default function WhyKodemia({ cards, cyanTitle, image, subtitle, whiteTit
         'lg:ml-10'
       )}>
         {
-          cards.map((infoElement, index) => {
+          cards.map((infoBullet, index) => {
             return (
               <InfoBullet
                 key={`why-kodemia-${index}`}
-                icon={infoElement.icon}
-                title={infoElement.title}
-                text={infoElement.text}
+                icon={infoBullet.icon}
+                title={infoBullet.title}
+                text={infoBullet.text}
               />
             )
           })

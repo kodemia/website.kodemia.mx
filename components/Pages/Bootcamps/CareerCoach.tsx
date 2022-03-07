@@ -33,13 +33,13 @@ export default function CareerCoach (): JSX.Element {
           </div>
           <div className='cards'>
             {
-              first.map((infoElement, index) => {
+              first.map((infoBullet, index) => {
                 return (
                   <InfoBullet
                     key={`first-${index}`}
-                    icon={infoElement.icon}
-                    title={infoElement.title}
-                    text={infoElement.text}
+                    icon={infoBullet.icon}
+                    title={infoBullet.title}
+                    text={infoBullet.text}
                   />
                 )
               })
@@ -49,13 +49,13 @@ export default function CareerCoach (): JSX.Element {
         <div className='second'>
           <div className='cards'>
             {
-              second.map((infoElement, index) => {
+              second.map((infoBullet, index) => {
                 return (
                   <InfoBullet
                     key={`second-${index}`}
-                    icon={infoElement.icon}
-                    title={infoElement.title}
-                    text={infoElement.text}
+                    icon={infoBullet.icon}
+                    title={infoBullet.title}
+                    text={infoBullet.text}
                   />
                 )
               })

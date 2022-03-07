@@ -12,7 +12,7 @@ export interface Props {
   detail?: string
 }
 
-export default function InfoElement({ icon, title, text, detail }: Props): JSX.Element {
+export default function InfoBullet ({ icon, title, text, detail }: Props): JSX.Element {
   return (
     <article className={classNames(
       'box-border',

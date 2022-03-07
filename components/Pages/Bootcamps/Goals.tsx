@@ -16,11 +16,9 @@ export interface Props {
   }
 }
 
-export default function Goals({ achievement }: Props): JSX.Element {
+export default function Goals ({ achievement }: Props): JSX.Element {
   return (
-    <PageSection contentClassName={classNames(
-      'flex flex-col'
-    )}>
+    <PageSection contentClassName='flex flex-col'>
       <div className='max-w-[350px]'>
         <H5>
           {achievement.subtitle}
@@ -37,13 +35,13 @@ export default function Goals({ achievement }: Props): JSX.Element {
         'mt-10'
       )}>
         {
-          achievement.cards.map((infoElement, index) => {
+          achievement.cards.map((infoBullet, index) => {
             return (
               <InfoBullet
                 key={`achievement-${index}`}
-                icon={infoElement.icon}
-                title={infoElement.title}
-                text={infoElement.text}
+                icon={infoBullet.icon}
+                title={infoBullet.title}
+                text={infoBullet.text}
               />
             )
           })

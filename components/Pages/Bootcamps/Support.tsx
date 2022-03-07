@@ -7,9 +7,9 @@ import InfoBullet, { Props as InfoBulletProps } from 'components/InfoBullet'
 
 export interface Props {
   support: {
+    cards: Array<InfoBulletProps>
     cyanTitle: string
     image: string
-    cards: Array<InfoBulletProps>
     secondWhiteTitle: string
     subtitle: string
     whiteTitle: string
@@ -39,13 +39,13 @@ export default function Support ({ support }: Props): JSX.Element {
         </div>
         <div className='cards'>
           {
-            support.cards.map((infoElement, index) => {
+            support.cards.map((infoBullet, index) => {
               return (
                 <InfoBullet
                   key={`support-${index}`}
-                  icon={infoElement.icon}
-                  title={infoElement.title}
-                  text={infoElement.text}
+                  icon={infoBullet.icon}
+                  title={infoBullet.title}
+                  text={infoBullet.text}
                 />
               )
             })
