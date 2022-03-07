@@ -36,7 +36,7 @@ export default function LoginForm() {
       onSubmit={handleSubmit(onSubmit)}
       className='flex flex-col w-full'
     >
-      <ToastContainer position='top-center' />
+      <ToastContainer position='top-center' style={{marginTop:'54px'}}/>
       <label className='mt-9 mb-5'>
         Usuario
       </label>
