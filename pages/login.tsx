@@ -17,7 +17,7 @@ export default function Login() {
   })
 
   return (
-    <div className='login'>
+    <div>
       <Seo />
       <style global jsx>{`
         body ::-webkit-scrollbar {
@@ -29,7 +29,7 @@ export default function Login() {
       <div className='is-full'>
         <BgVideo video='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4' />
         <div className={classNames(
-          'bg-brand-black-dark opacity-90',
+          'bg-brand-black-dark/90',
           'w-full h-screen',
           'pt-36 md:pt-44 lg:pt-48',
           'flex justify-center items-start',
@@ -43,9 +43,7 @@ export default function Login() {
             <H2>
               Bienvenido
             </H2>
-            <div className='form-container'>
-              <LoginForm />
-            </div>
+            <LoginForm />
           </div>
         </div>
       </div>

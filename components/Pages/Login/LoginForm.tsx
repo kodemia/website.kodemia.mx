@@ -36,14 +36,14 @@ export default function LoginForm() {
       onSubmit={handleSubmit(onSubmit)}
       className='flex flex-col w-full'
     >
-      <ToastContainer position='top-center' style={{marginTop:'54px'}}/>
+      <ToastContainer position='top-center' />
       <label className='mt-9 mb-5'>
         Usuario
       </label>
       <div className='flex flex-col relative'>
         <input
           className={classNames(
-            'bg-black text-brand-complementary',
+            'bg-black/70 text-brand-complementary',
             'rounded-small py-1 px-3',
             'focus:border focus:border-solid focus:border-brand-primary',
             'placeholder:font-light placeholder:text-brand-gray',
@@ -68,7 +68,7 @@ export default function LoginForm() {
       <div className='flex flex-col relative'>
         <input
           className={classNames(
-            'bg-black text-brand-complementary',
+            'bg-black/70 text-brand-complementary',
             'rounded-small py-1 px-3',
             'focus:border focus:border-solid focus:border-brand-primary',
             'placeholder:font-light placeholder:text-brand-gray',
