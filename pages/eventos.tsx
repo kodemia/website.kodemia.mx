@@ -1,3 +1,4 @@
+
 import _ from 'lodash'
 import React from 'react'
 import classNames from 'classnames'
@@ -44,7 +45,7 @@ export default function Eventos ({ events }: Props): JSX.Element {
         'flex flex-col',
         'justify-center xl:items-center',
         'h-96',
-        'max-h-[430px]',
+        'max-h-[430px]'
         )}>
         <div className={classNames(
           'px-6 md:px-16 lg:px-12 xl:px-0',
@@ -69,12 +70,15 @@ export default function Eventos ({ events }: Props): JSX.Element {
             'flex justify-center',
             'flex-col md:flex-row',
             'md:flex-wrap',
-            'gap-y-9 gap-x-0 md:gap-x-11 lg:gap-x-10'
+            'gap-y-9 gap-x-0 md:gap-x-11 lg:gap-x-10',
+            'h-max'
           )}
         >
           {
             _.isEmpty(events) &&
-            <h1 className={classNames('text-cyan-kd animate-bounce text-3xl')}>
+            <h1 className={classNames(
+              'text-brand-primary animate-bounce text-3xl'
+            )}>
               ¡Más eventos, próximamente!
             </h1>
           }
