@@ -70,7 +70,7 @@ export default function LoginForm() {
           className={classNames(
             'bg-black/70 text-brand-complementary',
             'rounded-small py-1 px-3',
-            'focus:border focus:border-solid focus:border-brand-primary',
+            'focus:outline focus:outline-1 focus:outline-brand-primary',
             'placeholder:font-light placeholder:text-brand-gray',
           )}
           type='password'
