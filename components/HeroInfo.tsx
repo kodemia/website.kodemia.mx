@@ -12,11 +12,11 @@ export interface Props {
   link: string
 }
 
-export default function HeroCard ({ title, content, btnTitle, link }: Props): JSX.Element {
+export default function HeroInfo ({ title, content, btnTitle, link }: Props): JSX.Element {
   return (
     <div className={classNames(
       'max-w-[300px] md:max-w-none',
-      'lg:min-w-[345px]',
+      'lg:min-w-[340px]',
       'w-full sm:w-1/2 lg:w-1/4'
     )}>
       <H1>

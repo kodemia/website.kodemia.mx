@@ -14,9 +14,23 @@
   }
 
   .filter-white-to-cyan {
-    filter:
-      invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg)
-      brightness(113%) contrast(100%);
+    filter: invert(5%) sepia(35%) saturate(2000%) hue-rotate(130deg) brightness(113%) contrast(100%);
+  }
+
+  .phone-dropdown {
+    .selected-flag {
+      &:focus,
+      &:hover,
+      &:active,
+      &.open {
+        background-color: transparent;
+        border-radius: 10px;
+      }
+    }
+
+    .country-list {
+      margin: 0;
+    }
   }
 
   @variants responsive {

@@ -3,7 +3,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 import BgVideo from 'components/BgVideo'
-import HeroCard from 'components/HeroCard'
+import HeroInfo from 'components/HeroInfo'
 import PageSection from 'components/PageSection'
 
 export interface Props {
@@ -26,7 +26,7 @@ export default function Hero ({ video }: Props): JSX.Element {
         )}
         contentClassName='pt-20 md:pt-24 lg:pt-28'
       >
-        <HeroCard
+        <HeroInfo
           title='Transforma tu vida programando'
           content='Más que una escuela, somos el aliado que te acompaña para desarrollarte como programador, antes, durante y después de nuestros Bootcamps. '
           btnTitle='Conoce nuestros Bootcamps'
