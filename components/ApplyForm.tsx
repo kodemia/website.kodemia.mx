@@ -4,6 +4,7 @@ import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import Link from 'next/link'
+import classNames from 'classnames'
 
 import Button from 'components/Button'
 import Input from 'components/Inputs/Input'
@@ -44,11 +45,15 @@ export default function ApplyForm() {
 
   return (
     <form
-      className='columns is-mobile is-multiline'
+      className={classNames(
+        'bg-brand-black-light w-full',
+        'px-4  md:px-10','py-6 md:py-8',
+        'rounded'
+      )}
       onSubmit={handleSubmit(onSubmit)}
     >
       <ToastContainer position='top-center' />
-      <div className='column is-half-desktop is-full-touch'>
+      <div className='w-full lg:w-1/2'>
         <Input
           label='Nombre'
           type='text'
@@ -60,7 +65,7 @@ export default function ApplyForm() {
         />
       </div>
 
-      <div className='column is-half-desktop is-full-touch'>
+      <div className='w-full lg:w-1/2'>
         <Input
           label='Apellido'
           type='text'
@@ -72,7 +77,7 @@ export default function ApplyForm() {
         />
       </div>
 
-      <div className='column is-half-desktop is-full-touch'>
+      <div className='w-full lg:w-1/2'>
         <Input
           label='Correo electrónico'
           type='email'
@@ -84,7 +89,7 @@ export default function ApplyForm() {
         />
       </div>
 
-      <div className='column is-half-desktop is-full-touch'>
+      <div className='w-full lg:w-1/2'>
         <Controller
           name='phone'
           control={control}
@@ -99,7 +104,7 @@ export default function ApplyForm() {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='w-full'>
         <Select
           label='¿Tienes conocimientos previos en programación?'
           register={register}
@@ -115,7 +120,7 @@ export default function ApplyForm() {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='w-full'>
         <Select
           label='¿Por qué quieres aprender a programar?'
           register={register}
@@ -131,11 +136,11 @@ export default function ApplyForm() {
         />
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className='w-full my-6'>
         Al enviar este formulario estas aceptando nuestros <Link href='https://cdn.kodemia.mx/docs/legal/politica-de-privacidad-kodemia.pdf'> Términos y condiciones </Link>
       </div>
 
-      <div className='column is-full-desktop is-full-touch'>
+      <div className=''>
         <Button
           isPrimary
           label={isSubmitting ? 'Enviando' : 'Enviar'}
