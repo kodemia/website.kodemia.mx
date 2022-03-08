@@ -1,5 +1,5 @@
 
-import classnames from 'classnames'
+import classNames from 'classnames'
 
 interface Option {
   label?: string
@@ -18,40 +18,46 @@ export interface Props {
 
 export default function Select (props: Props) {
   return (
-    <div className='field'>
-      <label className='label has-text-white has-text-weight-normal'>
+    <>
+      <label className={classNames('text-brand-complementary text-brand-normal')}>
         {props.label}
       </label>
-      <div className='control'>
-        <div className={classnames(
-          props.wrapperClassName,
-          'select'
-        )}
+      <div className={classNames(
+        'py-2 px-3 mt-2',
+        'bg-brand-black-dark opacity-90',
+        'text-brand-complementary',
+        'rounded-small',
+        props.wrapperClassName,
+      )}
+      >
+        <select
+          name={props.name}
+          ref={props.register}
+          required={props.required}
+          className={classNames(
+            'bg-brand-black-dark',
+            'pr-10 w-full',
+            'cursor-pointer'
+          )}
         >
-          <select
-            name={props.name}
-            ref={props.register}
-            required={props.required}
-          >
-            {
-              props.options?.map((option, index) => (
-                <option
-                  key={`option-${option.value}-${index}`}
-                  value={option.value}
-                >
-                  {option?.label || option.value}
-                </option>
-              ))
-            }
-          </select>
-        </div>
+          {
+            props.options?.map((option, index) => (
+              <option
+                key={`option-${option.value}-${index}`}
+                value={option.value}
+              >
+                {option?.label || option.value}
+              </option>
+            ))
+          }
+        </select>
       </div>
       {
         props.error &&
-          <p className='help is-danger'>
-            {props.error}
-          </p>
+        <p className='text-brand-error'>
+          {props.error}
+        </p>
       }
-    </div>
+    </>
   )
 }

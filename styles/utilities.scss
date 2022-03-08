@@ -19,6 +19,22 @@
       brightness(113%) contrast(100%);
   }
 
+  .phone-dropdown {
+    .selected-flag {
+      &:focus,
+      &:hover,
+      &:active,
+      &.open {
+        background-color: transparent;
+        border-radius: 10px;
+      }
+    }
+
+    .country-list {
+      margin: 0;
+    }
+  }
+
   @variants responsive {
     .masonry-3-col {
       column-count: 3;
