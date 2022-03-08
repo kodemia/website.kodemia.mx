@@ -10,7 +10,7 @@ export interface Props {
 export default function H6 ({ children, isWhite }: Props):JSX.Element {
   return (
     <h6 className={classNames(
-      'text-brand-h6',
+      'text-base',
       'whitespace-pre-wrap',
       'break-words',
       {

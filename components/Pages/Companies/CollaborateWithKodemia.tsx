@@ -12,7 +12,7 @@ export default function CollaborateWithKodemia () {
     <PageSection
       sectionClassName={classNames(
         'bg-companies-collaborate-sm md:bg-companies-collaborate-md lg:bg-companies-collaborate-lg',
-        'bg-cover bg-no-repeat'
+        'bg-cover bg-center bg-no-repeat'
       )}
     >
       <div className={classNames(

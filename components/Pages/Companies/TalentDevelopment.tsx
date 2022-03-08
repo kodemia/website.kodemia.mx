@@ -1,48 +1,53 @@
 
 import React from 'react'
+import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
+import InfoBullet, { Props as InfoBulletProps } from 'components/InfoBullet'
+import PageSection from 'components/PageSection'
 
 export interface Props {
   talent: {
     cyanTitle: string
-    cards: Array<InfoCardProps>
+    cards: Array<InfoBulletProps>
     subtitle: string
     whiteTitle: string
   }
 }
 
-export default function TalentDevelopment ({ talent }: Props) {
+export default function TalentDevelopment ({ talent }: Props): JSX.Element {
   return (
-    <section className='talent-development'>
-      <div className='talent-container section-container'>
-        <div className='head'>
-          <H5>
-            {talent.subtitle}
-          </H5>
-          <H3
-            cyanText={talent.cyanTitle}
-            whiteText={talent.whiteTitle}
-            isFirstCyan
-          />
-        </div>
-        <div className='talent-cards'>
-          {
-            talent.cards.map((infoCard, index) => {
-              return (
-                <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
-                />
-              )
-            })
-          }
-        </div>
+    <PageSection>
+      <div className='max-w-[370px]'>
+        <H5>
+          {talent.subtitle}
+        </H5>
+        <H3
+          cyanText={talent.cyanTitle}
+          whiteText={talent.whiteTitle}
+          isFirstCyan
+        />
       </div>
-    </section>
+      <div className={classNames(
+        'grid',
+        'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+        'gap-y-7 sm:gap-x-10',
+        'mt-10'
+      )}>
+        {
+          talent.cards.map((infoBullet, index) => {
+            return (
+              <InfoBullet
+                key={`talent-development-${index}`}
+                icon={infoBullet.icon}
+                title={infoBullet.title}
+                text={infoBullet.text}
+              />
+            )
+          })
+        }
+      </div>
+    </PageSection>
   )
 }

@@ -1,13 +1,15 @@
 
 import React from 'react'
+import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard, { Props as InfoCardProps } from 'components/InfoCard'
+import InfoBullet, { Props as InfoBulletProps } from 'components/InfoBullet'
+import PageSection from 'components/PageSection'
 
 export interface Props {
   findTalent: {
-    cards: Array<InfoCardProps>
+    cards: Array<InfoBulletProps>
     cyanTitle: string
     detail: string
     subtitle: string
@@ -15,37 +17,44 @@ export interface Props {
   }
 }
 
-export default function HelpFindTalent ({ findTalent }: Props) {
+export default function HelpFindTalent ({ findTalent }: Props): JSX.Element {
   return (
-    <section id='help-find-talent'>
-      <div className='find-talent-container section-container'>
-        <div className='head'>
-          <H5>
-            {findTalent.subtitle}
-          </H5>
-          <H3
-            whiteText={findTalent.whiteTitle}
-            cyanText={findTalent.cyanTitle}
-          />
-        </div>
-        <p className='detail'>
-          {findTalent.detail}
-        </p>
-        <div className='cards'>
-          {
-            findTalent.cards.map((infoCard, index) => {
-              return (
-                <InfoCard
-                  key={`card-${index}`}
-                  icon={infoCard.icon}
-                  title={infoCard.title}
-                  text={infoCard.text}
-                />
-              )
-            })
-          }
-        </div>
+    <PageSection>
+      <div className='max-w-sm'>
+        <H5>
+          {findTalent.subtitle}
+        </H5>
+        <H3
+          whiteText={findTalent.whiteTitle}
+          cyanText={findTalent.cyanTitle}
+        />
       </div>
-    </section>
+      <p className={classNames(
+        'mt-9',
+        'max-w-2xl',
+        'text-brand-gray-light text-base font-medium'
+      )}>
+        {findTalent.detail}
+      </p>
+      <div className={classNames(
+        'grid',
+        'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+        'gap-y-7 sm:gap-x-10',
+        'mt-10'
+      )}>
+        {
+          findTalent.cards.map((infoBullet, index) => {
+            return (
+              <InfoBullet
+                key={`find-talent-${index}`}
+                icon={infoBullet.icon}
+                title={infoBullet.title}
+                text={infoBullet.text}
+              />
+            )
+          })
+        }
+      </div>
+    </PageSection>
   )
 }

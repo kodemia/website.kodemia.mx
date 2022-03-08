@@ -28,7 +28,7 @@ export default function Navbar () {
 
   return (
     <nav className={classNames(
-      'bg-brand-black opacity-90',
+      'bg-brand-black/90',
       'fixed z-40 w-full top-0',
       'flex justify-center',
       'px-6 md:px-16 lg:px-12 py-4'
