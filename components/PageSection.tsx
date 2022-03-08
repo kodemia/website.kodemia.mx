@@ -7,7 +7,7 @@ export interface Props {
   contentClassName?: string
 }
 
-export default function PageSection ({children, sectionClassName, contentClassName}: Props):JSX.Element {
+export default function PageSection ({children, sectionClassName, contentClassName}: Props): JSX.Element {
   return (
     <section className={classNames(
       'flex justify-center',
