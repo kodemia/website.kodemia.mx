@@ -4,11 +4,11 @@ import _ from 'lodash'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard from 'components/InfoCard'
+import InfoBullet from 'components/InfoBullet'
 
 import CareerData from 'config/bootcamps/career-data.json'
 
-export default function CareerCoach () {
+export default function CareerCoach (): JSX.Element {
   const [first, second] = _.chunk(CareerData.cards, 4)
 
   return (
@@ -33,13 +33,13 @@ export default function CareerCoach () {
           </div>
           <div className='cards'>
             {
-              first.map((infoCard, index) => {
+              first.map((infoBullet, index) => {
                 return (
-                  <InfoCard
-                    key={`card-${index}`}
-                    icon={infoCard.icon}
-                    title={infoCard.title}
-                    text={infoCard.text}
+                  <InfoBullet
+                    key={`first-${index}`}
+                    icon={infoBullet.icon}
+                    title={infoBullet.title}
+                    text={infoBullet.text}
                   />
                 )
               })
@@ -49,13 +49,13 @@ export default function CareerCoach () {
         <div className='second'>
           <div className='cards'>
             {
-              second.map((infoCard, index) => {
+              second.map((infoBullet, index) => {
                 return (
-                  <InfoCard
-                    key={`card-${index}`}
-                    icon={infoCard.icon}
-                    title={infoCard.title}
-                    text={infoCard.text}
+                  <InfoBullet
+                    key={`second-${index}`}
+                    icon={infoBullet.icon}
+                    title={infoBullet.title}
+                    text={infoBullet.text}
                   />
                 )
               })

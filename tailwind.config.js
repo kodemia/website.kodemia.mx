@@ -12,39 +12,37 @@ module.exports = {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
       backgroundImage: {
+        'events-lg': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
+        'events-sm': "url('https://cdn.kodemia.mx/images/eventos/eventos-mobile.jpg')",
         'home-financing-lg': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
-        'home-financing-md': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
+        'home-financing-md': "url('https://cdn.kodemia.mx/images/home/apoyo-tablet.jpg')",
         'home-financing-sm': "url('https://cdn.kodemia.mx/images/home/apoyo-mobile.jpg')",
       },
       borderRadius: {
-        DEFAULT: '20px',
         small: '10px',
+        medium: '20px',
         wide: '30px'
-      },
-      borderWidth: {
-        DEFAULT: '1px',
-        thick: '2px'
       },
       colors: {
         'brand-black': {
-          dark: '#0E0E0E',
           DEFAULT: '#181818',
-          light: '#343434',
+          dark: '#0E0E0E',
+          light: '#343434'
         },
         'brand-complementary': {
           DEFAULT: '#FBFBFB'
         },
         'brand-error': {
-          DEFAULT: '#E95249',
+          DEFAULT: '#E95249'
         },
         'brand-gray': {
-          dark: '#302F2B',
           DEFAULT: '#737373',
-          light: '#999999',
+          dark: '#302F2B',
+          light: '#999999'
         },
         'brand-primary': {
-          dark: '#07BABA',
-          DEFAULT: '#00FFFF'
+          DEFAULT: '#00FFFF',
+          dark: '#07BABA'
         }
       },
       fontFamily: {
@@ -57,9 +55,7 @@ module.exports = {
         'brand-h2-sm': ['28px', '1.07'],
         'brand-h3': ['28px', '1.2'],
         'brand-h4': ['24px', '1.4'],
-        'brand-h5': ['20px', '1.4'],
-        'brand-h6': ['16px', '1.5'],
-        'brand-normal': ['16px', '1.5']
+        'brand-h5': ['20px', '1.4']
       },
       keyframes: {
         cursor: {
