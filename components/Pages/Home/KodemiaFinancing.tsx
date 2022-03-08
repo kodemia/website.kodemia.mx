@@ -17,10 +17,13 @@ export interface Props {
   info: Data
 }
 
-export default function KodemiaFinancing ({ info }: Props) {
+export default function KodemiaFinancing({ info }: Props) {
   return (
     <PageSection
-      sectionClassName={classNames('bg-center bg-cover bg-home-financing-sm','md:home-financing-md lg:home-financing-lg')}
+      sectionClassName={classNames(
+        'bg-cover bg-no-repeat bg-center',
+        'bg-home-financing-sm md:bg-home-financing-md lg:bg-home-financing-lg'
+      )}
       contentClassName='md:flex md:justify-start'
     >
       <div className='md:w-1/2'>
