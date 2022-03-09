@@ -1,8 +1,10 @@
 
 import React from 'react'
-// My components
-import HeroCard from './HeroCard'
-import BgVideo from '../../BgVideo'
+import classNames from 'classnames'
+
+import BgVideo from 'components/BgVideo'
+import HeroJsInfo from 'components/Pages/Bootcamps/HeroJsInfo'
+import PageSection from 'components/PageSection'
 
 export interface Information {
   title: string
@@ -19,23 +21,53 @@ export interface Props{
   video: string
 }
 
-export default function JavascriptLive ({ bootcamp, video }:Props) {
+export default function JavascriptLive ({ bootcamp, video }: Props): JSX.Element {
   return (
-    <div className='hero-bootcamps'>
-      <div className='columns hero-container'>
-        <div className='column is-full'>
+    // <div className={classNames(
+    //   // 'hero-bootcamps'
+    // )}>
+      // <div className={classNames(
+      //   // 'columns hero-container'
+      // )}>
+        <div className={classNames(
+          // 'column is-full'
+          'h-screen',
+          'relative'
+        )}>
           <BgVideo video={video} />
-          <div className='columns is-justify-content-center cover'>
-            <div className='column  container-card'>
-              <HeroCard bootcamp={bootcamp} />
+          <PageSection
+            sectionClassName={classNames(
+              'absolute top-0',
+              'bg-gradient-to-t from-brand-black via-brand-black/60 to-brand-black/40',
+              'h-full',
+              // 'overflow-hidden',
+              'w-full'
+            )}
+            contentClassName='pt-20 md:pt-24 lg:pt-28'
+          >
+          {/* <div className={classNames(
+            // 'columns is-justify-content-center cover'
+          )}> */}
+            {/* <div className={classNames(
+              // 'column  container-card'
+            )}> */}
+              <HeroJsInfo bootcamp={bootcamp} />
               <img
                 src='/icons/icon-scroll.svg'
-                className='arrow-icon'
+                className={classNames(
+                  // 'arrow-icon'
+                  'absolute left-0 bottom-0',
+                  'animate-bounce',
+                  'hidden md:block',
+                  'mx-[50%] md:mb-20',
+                  'w-7'
+                )}
               />
-            </div>
-          </div>
+            {/* </div> */}
+          {/* </div> */}
+          </PageSection>
         </div>
-      </div>
-    </div>
+      // </div>
+    // </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-// My components
+
 import CareerCoach from 'components/Pages/Bootcamps/CareerCoach'
 import Footer from 'components/Footer'
 import Goals from 'components/Pages/Bootcamps/Goals'
@@ -31,7 +31,10 @@ export default function JavascriptLive () {
       />
       <Navbar />
       <section id='javascript-live-page'>
-        <Hero bootcamp={HeroData} video='https://prismic-io.s3.amazonaws.com/kodemia/97b6755e-8623-4010-90e8-67a2c8830ccc_Video+fondo+JS.mp4' />
+        <Hero
+          bootcamp={HeroData}
+          video='https://prismic-io.s3.amazonaws.com/kodemia/97b6755e-8623-4010-90e8-67a2c8830ccc_Video+fondo+JS.mp4'
+        />
         <Metrics metrics={MetricsBootcamps} />
         <Goals achievement={GoalsData} />
         <Program
