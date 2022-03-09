@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import dayjs from 'dayjs'
 
 import Button from 'components/Button'
+import Card from 'components/Card'
 import H4 from 'components/H4'
 
 import { Event } from 'types/common'
@@ -16,35 +17,32 @@ export interface Props {
 
 export default function EventCard({ event, className }: Props) {
   return (
-    <div className={classNames(
-      className,
-      'border border-solid rounded-xl',
-      'border-gray-kd-light hover:border-cyan-kd',
-      'flex flex-col justify-between',
-      'p-4',
-      'w-full'
-    )}>
-      <div>
+    <Card
+      className={classNames(
+        'flex flex-col justify-between',
+        className
+    )}
+      isBordered
+    >
         <H4>
           {event.name}
         </H4>
-      </div>
-      <div className={classNames('mt-4')}>
+      <div className='mt-4'>
         <h5 className={classNames(
-          'text-cyan-kd text-h5 font-medium'
+          'text-brand-primary text-brand-h5 font-medium'
         )}
         >
           {dayjs(event.date).format('DD MMMM').toString()}
         </h5>
         <p className={classNames(
-          'text-gray-kd-light text-h5 font-medium'
+          'text-brand-gray-light text-brand-h5 font-medium'
         )}
         >
           {`${dayjs(event.date).format('HH:mm').toString()} hrs.`}
         </p>
         <p className={classNames(
           'mb-5',
-          'text-gray-kd-light font-medium'
+          'text-brand-gray-light text-base font-medium'
         )}
         >
           {event.isLive ? 'Conexión remota vía streaming' : 'Presencial, te esperamos 😎'}
@@ -56,6 +54,6 @@ export default function EventCard({ event, className }: Props) {
           onClick={() => tracker.onEventButtonClicked(event)}
         />
       </div>
-    </div>
+    </Card>
   )
 }

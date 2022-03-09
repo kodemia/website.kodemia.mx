@@ -1,14 +1,23 @@
+
 import React from 'react'
+import classNames from 'classnames'
 
 export interface Props {
   video: string
 }
 
-export default function BgVideo ({ video }: Props) {
+export default function BgVideo ({ video }: Props): JSX.Element {
   return (
-    <div className='bg-video'>
+    <div className={classNames(
+      'h-full',
+      '-z-10'
+    )}>
       <video
-        className='video'
+        className={classNames(
+          'h-full',
+          'object-cover',
+          'w-screen'
+        )}
         autoPlay
         loop
         muted

@@ -1,59 +1,60 @@
 
 import React from 'react'
+import classNames from 'classnames'
 
 import H3 from 'components/H3'
 import H5 from 'components/H5'
-import InfoCard from 'components/InfoCard'
+import InfoBullet, { Props as InfoBulletProps } from 'components/InfoBullet'
+import PageSection from 'components/PageSection'
 import Text from 'components/Text'
-
-export interface Card {
-  icon: string
-  text: string
-  title: string
-}
 
 export interface Info {
   title: string
   keywords: string
   text: string
-  cards: Array<Card>
+  cards: Array<InfoBulletProps>
 }
 
 export interface Props {
   ourMethod: Info
 }
 
-export default function OurMethod ({ ourMethod: { title, keywords, text, cards } }: Props) {
+export default function OurMethod ({ ourMethod: { title, keywords, text, cards } }: Props): JSX.Element {
   return (
-    <section className='our-method '>
-      <div className='our-method-container section-container'>
-        <H5>
-          Nuestro Método
-        </H5>
-        <div className='title-contain'>
-          <H3
-            whiteText={title}
-            cyanText={keywords}
-          />
-        </div>
-        <div className='our-method-text'>
-          <Text>
-            {text}
-          </Text>
-        </div>
-        <div className='our-method-cards'>
-          {cards.map((infoCard, index) => {
-            return (
-              <InfoCard
-                key={`om-card-${index}`}
-                icon={infoCard.icon}
-                title={infoCard.title}
-                text={infoCard.text}
-              />
-            )
-          })}
-        </div>
+    <PageSection sectionClassName='bg-brand-black'>
+      <H5>
+        Nuestro Método
+      </H5>
+      <div className='max-w-[365px]'>
+        <H3
+          whiteText={title}
+          cyanText={keywords}
+        />
       </div>
-    </section>
+      <div className={classNames(
+        'my-9',
+        'max-w-full lg:max-w-[730px]'
+      )}>
+        <Text>
+          {text}
+        </Text>
+      </div>
+      <div className={classNames(
+        'grid',
+        'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+        'gap-y-7 sm:gap-x-14'
+      )}>
+        {cards.map((infoBullet, index) => {
+          return (
+            <InfoBullet
+              key={`our-method-${index}`}
+              icon={infoBullet.icon}
+              title={infoBullet.title}
+              text={infoBullet.text}
+            />
+          )
+        })}
+      </div>
+    </PageSection>
   )
 }

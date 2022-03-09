@@ -1,7 +1,7 @@
 
 import React from 'react'
 import classNames from 'classnames'
-// my component
+
 import Cursor from 'components/TextCursor'
 
 interface Props {

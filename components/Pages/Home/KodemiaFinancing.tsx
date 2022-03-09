@@ -2,10 +2,10 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import PageSection from 'components/PageSection'
 import Button from 'components/Button'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
+import PageSection from 'components/PageSection'
 
 export interface Data {
   title: string
@@ -17,10 +17,13 @@ export interface Props {
   info: Data
 }
 
-export default function KodemiaFinancing ({ info }: Props) {
+export default function KodemiaFinancing ({ info }: Props): JSX.Element {
   return (
     <PageSection
-      sectionClassName={classNames('bg-center bg-cover bg-home-financing-sm','md:home-financing-md lg:home-financing-lg')}
+      sectionClassName={classNames(
+        'bg-cover bg-center bg-no-repeat',
+        'bg-home-financing-sm md:bg-home-financing-md lg:bg-home-financing-lg'
+      )}
       contentClassName='md:flex md:justify-start'
     >
       <div className='md:w-1/2'>
