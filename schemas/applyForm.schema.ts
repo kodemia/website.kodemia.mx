@@ -31,6 +31,9 @@ export default z.object({
     "tomé algún curso",
     "no, vengo de cero",
   ]),
+  promoCode: z
+    .string()
+    .optional(),
   reasonToProgramming: z
     .enum([
       "Quiero actualizarme",

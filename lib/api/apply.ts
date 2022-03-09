@@ -16,6 +16,9 @@ const errors = {
   },
   unknown: {
     message: 'Ocurrió un error desconocido, por favor intenta mas tarde o contáctanos al correo info@kodemia.mx'
+  },
+  invalidPromoCode: {
+    message: 'Código de promoción desconocido o invalido'
   }
 }
 
@@ -30,6 +33,10 @@ export function errorHandler (error: AxiosError) {
   let errorMessage = (status >= 400 && status < 500)
     ? errors.invalidaData.message
     : errors.unknown.message
+
+  if (status === 400 && error.response?.data?.message?.includes('promo code')) {
+    errorMessage = errors.invalidPromoCode.message
+  }
 
   if (!status) errorMessage = errors.network.message
 
