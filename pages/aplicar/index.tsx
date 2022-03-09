@@ -22,7 +22,7 @@ export default function Aplicar() {
       <NavBar />
       <main >
         <PageSection
-        sectionClassName='bg-brand-black h-screen'
+        sectionClassName='bg-brand-black md:h-screen'
         contentClassName='flex flex-col md:flex-row'>
           <aside className='md:w-1/4 md:mr-8 lg:mr-12 mb-12'>
             <H5>
