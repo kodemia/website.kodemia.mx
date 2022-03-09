@@ -12,13 +12,16 @@ export interface Props {
   link: string
 }
 
-export default function HeroCard ({ title, content, btnTitle, link }: Props): JSX.Element {
+export default function HeroInfo ({ title, content, btnTitle, link }: Props): JSX.Element {
   return (
     <div className={classNames(
-      'lg:min-w-[338px]',
-      'w-full sm:w-1/2 lg:w-1/3'
+      'max-w-[300px] md:max-w-none',
+      'lg:min-w-[340px]',
+      'w-full sm:w-1/2 lg:w-1/4'
     )}>
-      <H1>{title}</H1>
+      <H1>
+        {title}
+      </H1>
       <p className={classNames(
         'my-10',
         'text-brand-complementary text-base font-medium'
