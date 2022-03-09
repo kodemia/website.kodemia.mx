@@ -5,7 +5,7 @@ import PageSection from 'components/PageSection'
 import ApplyForm from 'components/ApplyForm'
 import Cursor from 'components/TextCursor'
 import Footer from 'components/Footer'
-import H2 from 'components/H3'
+import H3 from 'components/H3'
 import H5 from 'components/H5'
 import NavBar from 'components/Navbar'
 import Seo from 'components/SEO'
@@ -29,9 +29,9 @@ export default function Aplicar() {
               Aplica ahora
             </H5>
             <div className='mb-6'>
-              <H2>
+              <H3>
                 Únete y<span className='text-brand-primary'> sé parte</span> <Cursor children='de nuestra comunidad' white />
-              </H2>
+              </H3>
             </div>
             <Text>
               Te contactaremos lo más pronto posible para coordinar una entrevista personal
