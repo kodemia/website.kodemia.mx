@@ -33,7 +33,7 @@ export default function JavascriptLive () {
       <section id='javascript-live-page'>
         <Hero
           bootcamp={HeroData}
-          video='https://prismic-io.s3.amazonaws.com/kodemia/97b6755e-8623-4010-90e8-67a2c8830ccc_Video+fondo+JS.mp4'
+          video='https://cdn.kodemia.mx/videos/bootcamp-js-hero.mp4'
         />
         <Metrics metrics={MetricsBootcamps} />
         <Goals achievement={GoalsData} />
