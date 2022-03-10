@@ -41,7 +41,7 @@ export default function CarrouselAlliances({ allies = [], hasContent }: Props) {
         'after:absolute after:w-24 after:h-32 after:content-[""] after:z-20',
         'before:bg-gradient-to-r from-brand-black to-transparent',
         'after:bg-gradient-to-r from-brand-black to-transparent',
-        `${!hasContent && 'before:content-none after:content-none'}`,
+        { 'before:content-none after:content-none': !hasContent },
       )}
       >
         <Slider {...settings}>

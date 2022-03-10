@@ -27,7 +27,10 @@ export default function AllianceKodemia({ allies = [], cyanTitle, subtitle, whit
     <PageSection sectionClassName='bg-brand-black'>
       <H5>{subtitle}</H5>
       <div className='max-w-[200px] lg:max-w-full'>
-        <H3 cyanText={cyanTitle} whiteText={whiteTitle} isFirstCyan />
+        <H3 
+        cyanText={cyanTitle} 
+        whiteText={whiteTitle} 
+        isFirstCyan />
       </div>
       <CarrouselAlliances allies={allies} hasContent={!isBlack} />
       <div className={classNames(
@@ -39,18 +42,23 @@ export default function AllianceKodemia({ allies = [], cyanTitle, subtitle, whit
           if (!ally.href) {
             return (
               <div className='h-32 md:mx-auto' key={`ally-${index}`}>
-                <img src={ally.image} className='h-32 w-full lg:w-64' alt={ally.alt} />
+                <img 
+                src={ally.image} 
+                className='h-32 w-full lg:w-64' 
+                alt={ally.alt} />
               </div>
             );
           } else {
             return (
               <div className='h-32 md:mx-auto' key={`ally-${index}`}>
-                <a
-                  href={ally.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <img src={ally.image} className='h-32 w-full lg:w-64' alt={ally.alt} />
+                <a 
+                href={ally.href} 
+                target='_blank' 
+                rel='noopener noreferrer'>
+                  <img 
+                  src={ally.image} 
+                  className='h-32 w-full lg:w-64' 
+                  alt={ally.alt} />
                 </a>
               </div>
             );
