@@ -37,7 +37,8 @@ export default function Select (props: Props) {
           className={classNames(
             'bg-brand-black-dark',
             'pr-10 w-full',
-            'cursor-pointer'
+            'cursor-pointer',
+            'focus:outline-none',
           )}
         >
           {

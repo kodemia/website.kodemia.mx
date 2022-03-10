@@ -45,7 +45,8 @@ export default function Phone (props: Props) {
             'pr-2 pl-12 w-full py-2',
             'bg-brand-black-dark opacity-90',
             'rounded-small',
-            'text-brand-complementary'
+            'text-brand-complementary',
+            'focus:outline focus:outline-1 focus:outline-brand-gray'
           )
         }}
       />

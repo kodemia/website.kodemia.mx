@@ -28,6 +28,7 @@ export default function Input (props: Props) {
           'rounded-small',
           'bg-brand-black-dark opacity-90',
           'text-brand-complementary placeholder:text-brand-gray-light',
+          'focus:outline focus:outline-1 focus:outline-brand-gray',
           props.className,
         )}
         type={props.type}
