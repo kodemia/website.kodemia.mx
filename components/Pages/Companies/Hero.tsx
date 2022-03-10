@@ -6,6 +6,7 @@ import HTMLVideoElement from 'typescript'
 import Button from 'components/Button'
 import H2 from 'components/H2'
 import Text from 'components/Text'
+import PageSection from 'components/PageSection'
 
 interface Props {
   hero: {
@@ -16,34 +17,73 @@ interface Props {
   }
 }
 
-export default function Hero ({ hero }: Props) {
+export default function Hero ({ hero }: Props): JSX.Element {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const [hasUserClickedVideo, setHasUserClickedVideo] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
+
   return (
-    <div className='columns hero-companies'>
-      <div className='column hero-container section-container'>
-        <div className='subject'>
+    <PageSection
+      sectionClassName='bg-brand-black'
+      contentClassName={classNames(
+        'grid',
+        'grid-cols-1 lg:grid-cols-3',
+        'lg:gap-x-12',
+      )}
+    >
+    {/* <div className='columns hero-companies'> */}
+      {/* <div className='column hero-container section-container'> */}
+        <div className={classNames(
+          // 'subject'
+          'col-start-1',
+          'row-start-1',
+          'col-span-1',
+          'max-w-[300px] lg:max-w-[350px]'
+        )}>
           <H2>
             {hero.title}
           </H2>
         </div>
-        <div className='description'>
+        <div className={classNames(
+          // 'description'
+          'col-start-1',
+          'row-start-3 lg:row-start-2',
+          'col-span-1',
+          'mt-5'
+        )}>
           <Text>
             {hero.description}
           </Text>
         </div>
-        <div className='hero-btn'>
+        <div className={classNames(
+          // 'hero-btn'
+          'col-start-1',
+          'row-start-4 lg:row-start-3',
+          'col-span-1'
+        )}>
           <Button
             isPrimary
             label={hero.label}
             link={hero.link}
           />
         </div>
-        <div className='video-wrapper'>
-          <div className='video-container'>
+        <div className={classNames(
+          // 'video-wrapper'
+          'col-start-1 lg:col-start-2',
+          'row-start-2 lg:row-start-1',
+          'col-span-1 lg:col-span-2',
+          'row-span-1 lg:row-span-3'
+        )}>
+          <div className={classNames(
+            // 'video-container'
+            ''
+            )}>
             <video
-              className='video'
+              className={classNames(
+                // 'video'
+                'rounded-small',
+                ''
+              )}
               ref={videoRef}
               autoPlay
               muted
@@ -68,9 +108,14 @@ export default function Hero ({ hero }: Props) {
             </video>
           </div>
           <div
-            className={classNames('icon-container', {
+            className={classNames(
+              // 'icon-container',
+              '',
+              {
+              // 'is-hidden': !showPlayIcon
               'is-hidden': !showPlayIcon
-            })}
+              }
+            )}
             onClick={() => {
               setShowPlayIcon(false)
               videoRef.current.play()
@@ -85,16 +130,25 @@ export default function Hero ({ hero }: Props) {
             <img
               src='/icons/icon-video.svg'
               alt=''
-              className='icon-play'
+              className={classNames(
+                // 'icon-play'
+                'block hover:hidden',
+                'w-12'
+              )}
             />
             <img
               src='/icons/icon-video-blue.svg'
               alt=''
-              className='icon-play-blue'
+              className={classNames(
+                // 'icon-play-blue'
+                'hidden hover:block',
+                'w-12'
+              )}
             />
           </div>
         </div>
-      </div>
-    </div>
+      {/* </div> */}
+    {/* </div> */}
+    </PageSection>
   )
 }
