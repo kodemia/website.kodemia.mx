@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import CarrouselAlliances from 'components/CarrouselAlliances'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
+import PageSection from 'components/PageSection'
 
 export interface Ally {
   name: string;
@@ -21,69 +22,49 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function AllianceKodemia ({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
+export default function AllianceKodemia({ allies = [], cyanTitle, subtitle, whiteTitle, isBlack }: Props) {
   return (
-    <section className='alliances-kodemia-wrapper'>
-      <div className={classNames(
-        'alliances-kodemia',
-        {
-          'is-black': isBlack
-        }
-      )}
-      >
-        <div className='alliances-kodemia-container section-container'>
-          <H5>
-            {subtitle}
-          </H5>
-          <div className='alliances-title'>
-            <H3
-              cyanText={cyanTitle}
-              whiteText={whiteTitle}
-              isFirstCyan
-            />
-          </div>
-          <CarrouselAlliances
-            allies={allies}
-            hasContent={!isBlack}
-          />
-          <div className='slider-container'>
-            {allies.map((ally, index) => {
-              if (!ally.href) {
-                return (
-                  <div
-                    className='slide'
-                    key={`ally-${index}`}
-                  >
-                    <img
-                      src={ally.image}
-                      className='ally'
-                      alt={ally.alt}
-                    />
-                  </div>)
-              } else {
-                return (
-                  <div
-                    className='slide'
-                    key={`ally-${index}`}
-                  >
-                    <a
-                      href={ally.href}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <img
-                        src={ally.image}
-                        className='ally'
-                        alt={ally.alt}
-                      />
-                    </a>
-                  </div>
-                )
-              }
-            })}
-          </div>
-        </div>
+    <PageSection sectionClassName='bg-brand-black'>
+      <H5>{subtitle}</H5>
+      <div className='max-w-[200px] lg:max-w-full'>
+        <H3 
+        cyanText={cyanTitle} 
+        whiteText={whiteTitle} 
+        isFirstCyan />
       </div>
-    </section>
-  )
+      <CarrouselAlliances allies={allies} hasContent={!isBlack} />
+      <div className={classNames(
+        'lg:hidden w-full',
+        'flex flex-col md:flex-wrap md:justify-between',
+        'my-6 md:mt-6 md:h-[910px]'
+      )}>
+        {allies.map((ally, index) => {
+          if (!ally.href) {
+            return (
+              <div className='h-32 md:mx-auto' key={`ally-${index}`}>
+                <img 
+                src={ally.image} 
+                className='h-32 w-full lg:w-64' 
+                alt={ally.alt} />
+              </div>
+            );
+          } else {
+            return (
+              <div className='h-32 md:mx-auto' key={`ally-${index}`}>
+                <a 
+                href={ally.href} 
+                target='_blank' 
+                rel='noopener noreferrer'>
+                  <img 
+                  src={ally.image} 
+                  className='h-32 w-full lg:w-64' 
+                  alt={ally.alt} />
+                </a>
+              </div>
+            );
+          }
+        })}
+      </div>
+    </PageSection >
+  );
 }
