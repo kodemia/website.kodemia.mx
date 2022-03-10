@@ -22,9 +22,12 @@ export default function Hero ({ video }: Props): JSX.Element {
           'absolute top-0',
           'bg-gradient-to-t from-brand-black via-brand-black/70 to-brand-black/90',
           'h-full',
+          'overflow-hidden',
           'w-full'
         )}
-        contentClassName='pt-20 md:pt-24 lg:pt-28'
+        contentClassName={classNames(
+          'flex items-center'
+        )}
       >
         <HeroInfo
           title='Transforma tu vida programando'
@@ -38,7 +41,7 @@ export default function Hero ({ video }: Props): JSX.Element {
             'absolute left-0 bottom-0',
             'animate-bounce',
             'hidden md:block',
-            'mx-[50%] md:mb-20',
+            'mx-[50%] md:mb-14',
             'w-7'
           )}
         />

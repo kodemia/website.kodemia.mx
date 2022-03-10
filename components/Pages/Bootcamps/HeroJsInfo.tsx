@@ -23,7 +23,8 @@ export default function HeroJsInfo ({ bootcamp }: Props): JSX.Element {
   return (
     <div className='flex flex-col'>
       <div className={classNames(
-        'w-full sm:w-1/2 lg:w-1/3'
+        'max-w-[200px]',
+        'md:w-1/2 lg:w-2/3'
       )}>
         <H5>
           {bootcamp.subtitle}
@@ -34,7 +35,7 @@ export default function HeroJsInfo ({ bootcamp }: Props): JSX.Element {
       </div>
         <p className={classNames(
           'mt-8 mb-2',
-          'max-w-[540px] sm:max-w-[336px]',
+          'max-w-sm',
           'text-brand-gray-light text-base font-medium'
         )}>
           {bootcamp.description}

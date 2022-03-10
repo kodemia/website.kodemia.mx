@@ -43,8 +43,8 @@ export default function JavascriptLive ({ bootcamp, video }: Props): JSX.Element
           className={classNames(
             'absolute left-0 bottom-0',
             'animate-bounce',
-            'hidden sm:block',
-            'mx-[50%] sm:mb-14',
+            'hidden md:block',
+            'mx-[50%] md:mb-14',
             'w-7'
           )}
         />
