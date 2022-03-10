@@ -15,7 +15,7 @@ export default function Registro() {
     <>
       <Seo />
       <NavBar />
-      <main className='columns'>
+      <main>
         <PageSection
           sectionClassName='bg-brand-black md:h-screen'
           contentClassName='flex flex-col md:flex-row'>
