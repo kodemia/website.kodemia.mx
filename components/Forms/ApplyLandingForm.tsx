@@ -52,10 +52,9 @@ export default function ApplyLandingForm(props: Props = defaultProps) {
       .finally(() => setIsSubmitting(false))
   }
 
-
   return (
     <form
-      className='bg-gray-kd-dark border rounded-xl p-5'
+      className='bg-brand-black-light rounded-medium p-5'
       onSubmit={handleSubmit(onSubmit)}
     >
       <ToastContainer position='top-center' />
