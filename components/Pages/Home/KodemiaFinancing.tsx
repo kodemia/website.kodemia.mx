@@ -21,7 +21,7 @@ export default function KodemiaFinancing ({ info }: Props): JSX.Element {
   return (
     <PageSection
       sectionClassName={classNames(
-        'bg-cover bg-center bg-no-repeat',
+        'bg-cover bg-no-repeat',
         'bg-home-financing-sm md:bg-home-financing-md lg:bg-home-financing-lg'
       )}
       contentClassName='md:flex md:justify-start'
