@@ -28,7 +28,10 @@ export default function Hero ({ hero }: Props): JSX.Element {
       contentClassName={classNames(
         'grid',
         'grid-cols-1 lg:grid-cols-3',
+        // 'grid-cols-[auto_1fr] lg:grid-cols-[auto_3fr]',
+        'grid-rows-[auto_1fr] lg:grid-rows-[auto_3fr]',
         'lg:gap-x-12',
+        'mt-10'
       )}
     >
     {/* <div className='columns hero-companies'> */}
@@ -49,7 +52,7 @@ export default function Hero ({ hero }: Props): JSX.Element {
           'col-start-1',
           'row-start-3 lg:row-start-2',
           'col-span-1',
-          'mt-5'
+          'mt-7'
         )}>
           <Text>
             {hero.description}
@@ -59,7 +62,9 @@ export default function Hero ({ hero }: Props): JSX.Element {
           // 'hero-btn'
           'col-start-1',
           'row-start-4 lg:row-start-3',
-          'col-span-1'
+          'col-span-1',
+          'mt-10 lg:mt-7 xl:mt-0',
+          'lg:mb-10 xl:mb-20 2xl:mb-28',
         )}>
           <Button
             isPrimary
@@ -72,7 +77,9 @@ export default function Hero ({ hero }: Props): JSX.Element {
           'col-start-1 lg:col-start-2',
           'row-start-2 lg:row-start-1',
           'col-span-1 lg:col-span-2',
-          'row-span-1 lg:row-span-3'
+          'row-span-1 lg:row-span-3',
+          'mt-10 lg:m-auto',
+          'relative'
         )}>
           <div className={classNames(
             // 'video-container'
@@ -82,7 +89,8 @@ export default function Hero ({ hero }: Props): JSX.Element {
               className={classNames(
                 // 'video'
                 'rounded-small',
-                ''
+                'w-screen',
+                // 'focus:outline-none'
               )}
               ref={videoRef}
               autoPlay
