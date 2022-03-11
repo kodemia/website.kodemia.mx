@@ -1,39 +1,30 @@
 
+import PageSection from 'components/PageSection'
 import Cursor from 'components/TextCursor'
 import Footer from 'components/Footer'
 import H3 from 'components/H3'
 import NavBar from 'components/Navbar'
 
-export default function Thankyou () {
+export default function Thankyou() {
   return (
     <>
       <NavBar />
-      <section className='hero has-background-black-bis is-fullheight' id='thanks-page'>
-        <main className='hero-body'>
-          <div className='container has-text-centered'>
-            <div className='columns is-centered'>
-              <div className='column is-half'>
-                <div className='card has-background-grey-darker is-rounded p-5'>
-                  <div className='columns is-multiline container'>
-                    <div className='column is-full mt-5'>
-                      <H3>
-                        <span className='h3-cyan'>Gracias</span> por
-                        <br />
-                        <Cursor children='registrarte'white />
-                      </H3>
-                    </div>
-                    <div className='column is-full mt-5 mb-5'>
-                      Te contactaremos lo más
-                      <br />
-                      pronto posible
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <PageSection sectionClassName='bg-brand-black h-screen' contentClassName=' my-auto'>
+        <div className='bg-brand-black-light flex flex-col items-center justify-center rounded-medium h-64 p-6 md:w-2/3 md:mx-auto'>
+          <div className=' mb-12'>
+            <H3>
+              <span className='text-brand-primary'>Gracias</span> por
+              <br />
+              <Cursor children='registrarte' white />
+            </H3>
           </div>
-        </main>
-      </section>
+          <div className=' text-brand-gray text-center'>
+            Te contactaremos lo más
+            <br />
+            pronto posible
+          </div>
+        </div>
+      </PageSection>
       <Footer />
     </>
   )
