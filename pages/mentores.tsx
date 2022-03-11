@@ -18,7 +18,6 @@ export interface Props {
 export const getStaticProps = async () => {
   const results  = await builder.getAll('mentor', {limit: 100})
   const mentors = results.map(mentor => mentor.data)
-  console.table(results)
   return {
     props: {
       mentors
