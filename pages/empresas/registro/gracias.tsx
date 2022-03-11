@@ -17,8 +17,8 @@ export default function Thankyou() {
         <div className={classNames(
           'bg-brand-black-light',
           'flex flex-col items-center justify-center',
-          'rounded-medium',
-          'h-72 p-6 sm:w-2/3 sm:mx-auto'
+          'rounded-wide',
+          'h-64 p-6 sm:w-2/3 sm:mx-auto'
         )}>
           <div className=' mb-12'>
             <H3>
@@ -27,7 +27,7 @@ export default function Thankyou() {
               <Cursor children='registrarte' white />
             </H3>
           </div>
-          <div className=' text-brand-gray text-center'>
+          <div className='text-brand-gray-light text-center'>
             Te contactaremos lo más
             <br />
             pronto posible

@@ -28,25 +28,24 @@ export default function Thankyou(props: Props) {
         <div className={classNames(
           'bg-brand-black-light',
           'flex flex-col items-center justify-center',
-          'rounded-medium',
-          'p-6 md:w-2/3 md:mx-auto'
+          'rounded-wide',
+          'px-6 py-9 sm:mx-auto',
+          'sm:w-2/3 lg:w-2/4'
         )}>
-          <div className='mb-12'>
-            <H3>
-              <span className='h3-cyan'>Gracias</span> por
-              <br />
-              <Cursor children='registrarte' white />
-            </H3>
-          </div>
-          <div className='column is-full mt-5 mb-5'>
+          <H3>
+            <span className='text-brand-primary'>Gracias</span> por
+            <br />
+            <Cursor children='registrarte' white />
+          </H3>
+          <div className='text-brand-gray-light text-center my-12'>
             Te contactaremos lo más
             <br />
             pronto posible
           </div>
           {isBackbase && (
-            <>
+            <div className='sm:w-72'>
               {/* Android */}
-              <div className='column is-full mb-5 is-hidden-touch'>
+              <div className='hidden lg:block mb-12'>
                 <Button
                   isPrimary
                   label='Descarga el Brochure de Android'
@@ -54,7 +53,7 @@ export default function Thankyou(props: Props) {
                   href={'/brochures/android/desktop'}
                 />
               </div>
-              <div className='column is-full mb-5 is-hidden-desktop'>
+              <div className='lg:hidden mb-12'>
                 <Button
                   isPrimary
                   label='Descarga el Brochure de Android'
@@ -64,7 +63,7 @@ export default function Thankyou(props: Props) {
               </div>
 
               {/* iOS */}
-              <div className='column is-full mb-5 is-hidden-touch'>
+              <div className='hidden lg:block'>
                 <Button
                   isPrimary
                   label='Descarga el Brochure de iOS'
@@ -72,7 +71,7 @@ export default function Thankyou(props: Props) {
                   href={'/brochures/ios/desktop'}
                 />
               </div>
-              <div className='column is-full mb-5 is-hidden-desktop'>
+              <div className='lg:hidden'>
                 <Button
                   isPrimary
                   label='Descarga el Brochure iOS'
@@ -80,11 +79,11 @@ export default function Thankyou(props: Props) {
                   href={'/brochures/ios/mobile'}
                 />
               </div>
-            </>
+            </div>
           )}
           {!isBackbase && (
-            <>
-              <div className='column is-full mb-5 is-hidden-touch'>
+            <div className='sm:w-72'>
+              <div className='hidden lg:block'>
                 <Button
                   isPrimary
                   label='Descarga el Brochure'
@@ -92,7 +91,7 @@ export default function Thankyou(props: Props) {
                   href={`/brochures/${props.bootcamp}/desktop`}
                 />
               </div>
-              <div className='column is-full mb-5 is-hidden-desktop'>
+              <div className='lg:hidden'>
                 <Button
                   isPrimary
                   label='Descarga el Brochure'
@@ -100,7 +99,7 @@ export default function Thankyou(props: Props) {
                   href={`/brochures/${props.bootcamp}/mobile`}
                 />
               </div>
-            </>
+            </div>
           )}
         </div>
       </PageSection>
