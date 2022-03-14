@@ -30,10 +30,10 @@ module.exports = {
         'brand-black': {
           DEFAULT: '#181818',
           dark: '#0E0E0E',
-          light: '#343434'
+          light: '#343434',
         },
         'brand-complementary': {
-          DEFAULT: '#FBFBFB'
+          DEFAULT: '#FBFBFB' 
         },
         'brand-error': {
           DEFAULT: '#E95249'
@@ -46,7 +46,7 @@ module.exports = {
         'brand-primary': {
           DEFAULT: '#00FFFF',
           dark: '#07BABA'
-        }
+        },
       },
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans]
