@@ -26,7 +26,7 @@ export default function Investment ({ investment }: Props): JSX.Element {
   return (
     <div className={classNames(
       'bg-javascript-investment-lg',
-      'bg-cover bg-top bg-no-repeat',
+      'bg-cover bg-center bg-no-repeat',
       'w-full'
     )}>
       <PageSection
