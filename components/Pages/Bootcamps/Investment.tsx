@@ -24,90 +24,70 @@ export interface Props {
 
 export default function Investment ({ investment }: Props): JSX.Element {
   return (
-    <PageSection
-      sectionClassName={classNames(
-        'bg-javascript-investment-lg',
-        'bg-cover bg-center bg-no-repeat',
-        'w-full'
-      )}
-      contentClassName={classNames(
-        ''
-      )}
-    >
-    {/* <section className={classNames(
-      // 'columns investment'
-      ''
-    )}> */}
-      <div className={classNames(
-        // 'column is-full is-flex is-justify-content-center',
-        // 'investment-container'
-        ''
-      )}>
-        <section className={classNames(
-          // 'columns is-multiline',
-          // 'investment-wrapper'
-          'flex-col',
-          'w-full' // TODO: Comprobar si es necesario este wrapper
+    <div className={classNames(
+      'bg-javascript-investment-lg',
+      'bg-cover bg-top bg-no-repeat',
+      'w-full'
+    )}>
+      <PageSection
+        sectionClassName='bg-brand-black/60'
+        contentClassName='flex flex-col'
+      >
+        <div className='w-full lg:w-3/4'>
+          <H5>
+            {investment.subtitle}
+          </H5>
+          <div className='max-w-[200px]'>
+            <H3
+              whiteText={investment.whiteTitle}
+              cyanText={investment.cyanTitle}
+            />
+          </div>
+          <div className='my-11 max-w-[700px]'>
+            <Text>
+              {investment.description}
+            </Text>
+          </div>
+        </div>
+        <div className={classNames(
+          'flex flex-col md:flex-row',
+          'md:flex-wrap',
+          'gap-x-3',
+          'justify-between',
+          'w-full'
         )}>
-          <div className={classNames(
-            // 'column is-three-quarters',
-            // 'investment-header'
-            'w-3/4'
-          )}>
-            <H5>
-              {investment.subtitle}
-            </H5>
-            <div className={classNames(
-              // 'investment-title'
-              'max-w-[200px]'
-            )}>
-              <H3
-                whiteText={investment.whiteTitle}
-                cyanText={investment.cyanTitle}
-              />
-            </div>
-            <div className={classNames(
-              // 'description'
-              'my-11', // TODO: Comprobar si es necesario este margin
-              'max-w-2xl' // TODO: Comprobar tamaño, en css está a 700px
-            )}>
-              <Text>
-                {investment.description}
-              </Text>
-            </div>
-          </div>
-          <div className={classNames(
-            // 'column is-full is-flex is-justify-content-space-between',
-            // 'payment-types-container'
-            'flex flex-col md:flex-row',
-            'md:flex-wrap',
-            'justify-between',
-            'w-full'
-          )}>
-            {
-              investment.paymentTypes.map((paymentType, index) => (
-                <article
-                  key={`payment-${index}`}
-                  className=' payment-card'
-                >
-                  <div className='payment-title'>
-                    <H5 isWhite>
-                      {paymentType.title}
-                    </H5>
-                  </div>
-
-                  <div className='payment-description'>
-                    <Text>
-                      {paymentType.description}
-                    </Text>
-                  </div>
-                </article>
-              ))
-            }
-          </div>
-        </section>
-      </div>
-    {/* </section> */}
-    </PageSection>
+          {
+            investment.paymentTypes.map((paymentType, index) => (
+              <article
+                key={`payment-${index}`}
+                className={classNames(
+                  'border border-solid border-brand-primary',
+                  'my-5',
+                  'md:mt-8 md:mb-0 lg:mt-0',
+                  'py-8 px-6',
+                  'rounded-small',
+                  'w-full md:w-[45%] lg:w-[30%]'
+                )}
+              >
+                <div className='max-w-full lg:max-w-[195px]'>
+                  <H5 isWhite>
+                    {paymentType.title}
+                  </H5>
+                </div>
+                <div className={classNames(
+                  'mt-5',
+                  'max-w-full',
+                  'min-h-[56px]'
+                )}>
+                  <Text>
+                    {paymentType.description}
+                  </Text>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </PageSection>
+    </div>
   )
 }

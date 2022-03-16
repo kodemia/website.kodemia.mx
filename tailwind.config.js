@@ -20,7 +20,7 @@ module.exports = {
         'companies-collaborate-lg': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-desktop.jpg')",
         'companies-collaborate-md': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-tablet.jpg')",
         'companies-collaborate-sm': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-mobile.jpg')",
-        'javascript-investment-lg': "url('/images/bootcamps/koder-gerardo.png')"
+        'javascript-investment-lg': "url('https://cdn.kodemia.mx/images/javascript/investment-desktop.png')"
       },
       borderRadius: {
         small: '10px',
