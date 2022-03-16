@@ -1,64 +1,64 @@
 .class-card {
-  padding: 10px 0;
-  position: relative;
+  // padding: 10px 0;
+  // position: relative;
 
-  .poster-container {
-    .poster {
-      width: 336px;
+  // .poster-container {
+  //   .poster {
+  //     // width: 336px;
 
-      @include on-mobile {
-        width: 100%;
-      }
+  //     @include on-mobile {
+  //       width: 100%;
+  //     }
 
-      @include on-tablet {
-        width: auto;
-      }
-    }
-  }
+  //     @include on-tablet {
+  //       width: auto;
+  //     }
+  //   }
+  // }
 
-  .icon-container {
-    background-color: $black-transparent-hero;
-    display: flex;
-    height: calc(100% - 95px);
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  // .icon-container {
+  //   background-color: $black-transparent-hero;
+  //   display: flex;
+  //   height: calc(100% - 95px);
+  //   justify-content: center;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100%;
 
-    @include on-mobile {
-      width: 100%;
-    }
+  //   @include on-mobile {
+  //     width: 100%;
+  //   }
 
-    @include on-tablet {
-      width: 100%;
-    }
+  //   @include on-tablet {
+  //     width: 100%;
+  //   }
 
-    %ikon {
-      width: 50px;
-    }
+  //   %ikon {
+  //     width: 50px;
+  //   }
 
-    .icon-play {
-      @extend %ikon;
+  //   .icon-play {
+  //     @extend %ikon;
 
-      display: block;
-    }
+  //     display: block;
+  //   }
 
-    .icon-play-blue {
-      @extend %ikon;
+  //   .icon-play-blue {
+  //     @extend %ikon;
 
-      display: none;
-    }
+  //     display: none;
+  //   }
 
-    &:hover {
-      .icon-play {
-        display: none;
-      }
+  //   &:hover {
+  //     .icon-play {
+  //       display: none;
+  //     }
 
-      .icon-play-blue {
-        display: block;
-      }
-    }
-  }
+  //     .icon-play-blue {
+  //       display: block;
+  //     }
+  //   }
+  // }
 
   .data-container {
     height: 80px;
