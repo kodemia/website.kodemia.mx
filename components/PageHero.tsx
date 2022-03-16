@@ -35,7 +35,7 @@ export default function PageHero (props: Props): JSX.Element {
           className={classNames(
             'text-brand-h5 text-brand-gray-light font-medium',
             'whitespace-pre-wrap break-words',
-            'my-4'
+            'pt-16 pb-4'
           )}
         >
           {props.subTitle}
