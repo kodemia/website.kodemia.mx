@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import router from 'next/router'
 
 export interface Props {
-  className: string
+  className?: string
   klass: {
     date: string
     description: string
