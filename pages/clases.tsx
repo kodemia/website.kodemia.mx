@@ -33,7 +33,6 @@ export default function Classes () {
   }, [])
 
   return (
-    // <div className='classes'>
     <>
       <Seo
         title='Kodemia | clases'
