@@ -41,7 +41,7 @@ export default function Eventos ({ events }: Props): JSX.Element {
       />
       <Navbar />
       <header className={classNames(
-        'bg-events-sm md:bg-events-lg bg-no-repeat bg-cover bg-bottom',
+        'bg-events-hero-sm md:bg-events-hero-lg bg-no-repeat bg-cover bg-bottom',
         'flex flex-col',
         'justify-center xl:items-center',
         'h-96',
