@@ -101,6 +101,7 @@ export default function Hero ({ hero }: Props): JSX.Element {
         <div
           className={classNames(
             'absolute',
+            'bg-brand-black/70',
             'flex justify-center',
             'group',
             'h-full',
