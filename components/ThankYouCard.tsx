@@ -14,7 +14,6 @@ export default function ThankyouCard({ children, text }: Props): JSX.Element {
   const description = !text ? 'Te contactaremos lo más \n pronto posible' : text
 
   return (
-
     <PageSection
       sectionClassName='bg-brand-black h-screen'
       contentClassName=' my-auto'
