@@ -104,7 +104,7 @@ export default function Navbar () {
                       'w-full py-4',
                       'lg:w-auto lg:py-0 lg:px-3 xl:px-4',
                       'hover:text-brand-primary hover:bg-brand-black-dark lg:hover:bg-transparent',
-                      { 'is-hidden': onlyLoggedIn && !isLoggedIn }
+                      { 'hidden': onlyLoggedIn && !isLoggedIn }
                     )}
                     >
                       {name}
