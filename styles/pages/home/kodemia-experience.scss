@@ -1,13 +1,4 @@
 .kodemia-experience {
-  background-color: $black-primary;
-  display: flex;
-  justify-content: center;
-  padding: 100px 0 70px;
-  width: 100%;
-
-  @include on-mobile {
-    padding: 80px 45px 40px;
-  }
 
   .kodemia-experience-container {
     max-width: $content-max-width;

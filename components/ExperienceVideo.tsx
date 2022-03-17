@@ -34,7 +34,7 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
   }
 
   return (
-    <div className='experience-video'>
+    <div className='relative'>
       <div
         className='video'
         onClick={onClick}
@@ -42,7 +42,8 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
         <video
           controls={false}
           poster={video.poster}
-          className={classNames('poster', {
+          className={classNames('rounded-small','h-full w-full','object-cover',
+          {
             'is-not-play': !isActive
           })}
           ref={videoRef}

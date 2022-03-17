@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 
 import ExperienceVideo from 'components/ExperienceVideo'
+import PageSection from 'components/PageSection'
 import H3 from 'components/H3'
 import H5 from 'components/H5'
 import Text from 'components/Text'
@@ -38,19 +39,18 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
   }, [])
 
   return (
-    <section className='kodemia-experience'>
-      <div className='kodemia-experience-container section-container'>
+      <PageSection sectionClassName='bg-brand-black'>
         <H5>
           La experiencia Kodemia
         </H5>
-        <div className='title'>
+        <div className='sm:w-80'>
           <H3
             cyanText='Conoce la historia'
             whiteText='de nuestros graduados'
             isFirstCyan
           />
         </div>
-        <div className='description'>
+        <div className='my-9'>
           <Text>
             Es más importante contar historias que números. Buscamos que los alumnos que salen de Kodemia transformen su vida.
           </Text>
@@ -91,7 +91,7 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+
+      </PageSection>
   )
 }
