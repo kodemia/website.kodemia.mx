@@ -42,7 +42,7 @@ export default function Classes () {
       <ToastContainer position='top-center' />
 
       <PageHero
-        subTitle='Clases kodemia'
+        subTitle='Clases Kodemia'
         title='No te pierdas ninguna'
         hasSeparatedLines
         headerClassName={'bg-clases-hero-sm md:bg-clases-hero-md lg:bg-clases-hero-lg'}
