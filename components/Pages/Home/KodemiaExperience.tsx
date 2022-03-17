@@ -57,7 +57,7 @@ export default function KodemiaExperience ({ videos = [] }: Props) {
         </div>
         <div
           ref={gridRef} className={classNames(
-            'videos-container',
+            '',
             {
               active: isActive,
               inactive: !isActive
