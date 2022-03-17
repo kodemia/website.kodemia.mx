@@ -2,7 +2,6 @@ import classNames from 'classnames'
 
 import PageSection from 'components/PageSection'
 import Cursor from 'components/TextCursor'
-import Footer from 'components/Footer'
 import H3 from 'components/H3'
 
 interface Props {
