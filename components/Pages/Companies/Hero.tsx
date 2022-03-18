@@ -11,7 +11,7 @@ interface Props {
   hero: {
     title: string
     description: string
-    label: string,
+    label: string
     link: string
   }
 }
@@ -28,7 +28,7 @@ export default function Hero ({ hero }: Props): JSX.Element {
         'grid',
         'grid-cols-1 lg:grid-cols-3',
         'grid-rows-[auto_1fr] lg:grid-rows-[auto_3fr]',
-        'lg:gap-x-12',
+        'lg:gap-x-8 xl:gap-x-10',
         'mt-10'
       )}
     >
@@ -56,8 +56,8 @@ export default function Hero ({ hero }: Props): JSX.Element {
         'col-start-1',
         'row-start-4 lg:row-start-3',
         'col-span-1',
-        'mt-10 lg:mt-7 xl:mt-0',
-        'lg:mb-10 xl:mb-44'
+        'mt-9 lg:mt-4',
+        'lg:mb-14 xl:mb-36'
       )}>
         <Button
           isPrimary
