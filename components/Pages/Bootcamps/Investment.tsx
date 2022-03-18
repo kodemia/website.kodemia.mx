@@ -8,18 +8,18 @@ import PageSection from 'components/PageSection'
 import Text from 'components/Text'
 
 export interface Payment {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 
 export interface Props {
   investment: {
-    whiteTitle: string;
-    cyanTitle: string;
-    subtitle: string;
-    description: string;
-    paymentTypes: Array<Payment>;
-  };
+    whiteTitle: string
+    cyanTitle: string
+    subtitle: string
+    description: string
+    paymentTypes: Array<Payment>
+  }
 }
 
 export default function Investment ({ investment }: Props): JSX.Element {
@@ -30,7 +30,7 @@ export default function Investment ({ investment }: Props): JSX.Element {
       'w-full'
     )}>
       <PageSection
-        sectionClassName='bg-brand-black/60'
+        sectionClassName='bg-gradient-to-t from-black via-black/70 to-black/50'
         contentClassName='flex flex-col'
       >
         <div className='w-full lg:w-3/4'>
