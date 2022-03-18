@@ -34,7 +34,7 @@ export default function ExperienceVideo({ video, isPlay, onClick, onEnded, setIs
   }
 
   return (
-    <div>
+    <div className='my-4'>
       <div className='relative'>
         <div onClick={onClick} >
           <video
@@ -46,7 +46,7 @@ export default function ExperienceVideo({ video, isPlay, onClick, onEnded, setIs
               'object-cover',
               'align-middle',
               {
-                'md:h-48': !isActive
+                'md:h-52': !isActive
               }
             )}
             ref={videoRef}
