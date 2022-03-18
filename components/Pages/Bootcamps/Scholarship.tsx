@@ -9,7 +9,7 @@ import Text from 'components/Text'
 
 export default function Scholarship (): JSX.Element {
   return (
-    <PageSection>
+    <PageSection sectionClassName='bg-brand-black'>
       <div className={classNames(
         'flex items-center',
         'flex-col md:flex-row',
