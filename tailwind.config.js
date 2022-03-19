@@ -23,6 +23,7 @@ module.exports = {
         'clases-hero-lg': "url('https://cdn.kodemia.mx/images/clases/classes-desktop.jpg')",
         'clases-hero-md': "url('https://cdn.kodemia.mx/images/clases/classes-tablet.jpg')",
         'clases-hero-sm': "url('https://cdn.kodemia.mx/images/clases/classes-mobile.jpg')",
+        'javascript-investment-lg': "url('https://cdn.kodemia.mx/images/javascript/investment-desktop.png')"
       },
       borderRadius: {
         small: '10px',
@@ -33,7 +34,7 @@ module.exports = {
         'brand-black': {
           DEFAULT: '#181818',
           dark: '#0E0E0E',
-          light: '#343434'
+          light: '#343434',
         },
         'brand-complementary': {
           DEFAULT: '#FBFBFB'
@@ -49,7 +50,7 @@ module.exports = {
         'brand-primary': {
           DEFAULT: '#00FFFF',
           dark: '#07BABA'
-        }
+        },
       },
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans]
