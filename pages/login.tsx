@@ -26,7 +26,7 @@ export default function Login() {
       `}
       </style>
       <Navbar />
-      <div className='is-full'>
+      <div className='h-screen'>
         <BgVideo video='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4' />
         <div className={classNames(
           'bg-brand-black-dark/90',
