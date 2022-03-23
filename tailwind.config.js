@@ -12,14 +12,17 @@ module.exports = {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
       backgroundImage: {
-        'events-lg': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
-        'events-sm': "url('https://cdn.kodemia.mx/images/eventos/eventos-mobile.jpg')",
+        'events-hero-lg': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
+        'events-hero-sm': "url('https://cdn.kodemia.mx/images/eventos/eventos-mobile.jpg')",
         'home-financing-lg': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
         'home-financing-md': "url('https://cdn.kodemia.mx/images/home/apoyo-tablet.jpg')",
         'home-financing-sm': "url('https://cdn.kodemia.mx/images/home/apoyo-mobile.jpg')",
         'companies-collaborate-lg': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-desktop.jpg')",
         'companies-collaborate-md': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-tablet.jpg')",
         'companies-collaborate-sm': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-mobile.jpg')",
+        'clases-hero-lg': "url('https://cdn.kodemia.mx/images/clases/classes-desktop.jpg')",
+        'clases-hero-md': "url('https://cdn.kodemia.mx/images/clases/classes-tablet.jpg')",
+        'clases-hero-sm': "url('https://cdn.kodemia.mx/images/clases/classes-mobile.jpg')",
         'javascript-investment-lg': "url('https://cdn.kodemia.mx/images/javascript/investment-desktop.png')"
       },
       borderRadius: {
@@ -34,7 +37,7 @@ module.exports = {
           light: '#343434',
         },
         'brand-complementary': {
-          DEFAULT: '#FBFBFB' 
+          DEFAULT: '#FBFBFB'
         },
         'brand-error': {
           DEFAULT: '#E95249'

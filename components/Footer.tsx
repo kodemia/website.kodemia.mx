@@ -18,7 +18,7 @@ export default function Footer() {
   const whatsappLink = Whatsapp.createLink(Whatsapp.copies.footerButton)
 
   return (
-    <footer>
+    <footer className='bg-black'>
       <PageSection>
         <img
           src='/icons/kodemia-logo.svg'
