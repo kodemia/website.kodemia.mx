@@ -1,15 +1,23 @@
 {
-  "latestVersion": "2021v2",
-  "2021v1": {
-    "javascript-live": {
-      "desktop": "https://kodemia.cdn.prismic.io/kodemia/9431cb25-58c4-4f43-8279-3d16cb5a995b_BJL-D_2021.pdf",
-      "mobile": "https://kodemia.cdn.prismic.io/kodemia/a5a331d7-b126-4e5d-b30f-0b091266a2c7_BJL-M_2021.pdf"
-    }
-  },
+  "latestVersion": "2022v1",
   "2021v2": {
     "javascript-live": {
       "desktop": "https://cdn.kodemia.mx/docs/brochures/2021v2/KO_Brochure_2021.pdf",
       "mobile": "https://cdn.kodemia.mx/docs/brochures/2021v2/KO_Brochure_Mobile_2021.pdf"
+    },
+    "android": {
+      "desktop": "https://cdn.kodemia.mx/docs/brochures/2021v2/Backbase_Brochure_Android_2021_Desktop.pdf",
+      "mobile": "https://cdn.kodemia.mx/docs/brochures/2021v2/Backbase_Brochure_Android_2021_Mobile.pdf"
+    },
+    "ios": {
+      "desktop": "https://cdn.kodemia.mx/docs/brochures/2021v2/Backbase_Brochure_iOS_2021_Desktop.pdf",
+      "mobile": "https://cdn.kodemia.mx/docs/brochures/2021v2/Backbase_Brochure_iOS_2021_Mobile.pdf"
+    }
+  },
+  "2022v1": {
+    "javascript-live": {
+      "desktop": "https://cdn.kodemia.mx/docs/brochures/2022v1/KO_BrochureJS_Desktop_2022.pdf",
+      "mobile": "https://cdn.kodemia.mx/docs/brochures/2022v1/KO_BrochureJS_Mobile_2022.pdf"
     },
     "android": {
       "desktop": "https://cdn.kodemia.mx/docs/brochures/2021v2/Backbase_Brochure_Android_2021_Desktop.pdf",
