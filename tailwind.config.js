@@ -1,69 +1,68 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  important: true,
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}'
+  ],
   theme: {
     extend: {
-      screens: {
-        mob: '320px', // Work around to deal with bulma spacing utilities TODO: remove when removing bulma
-        tablet: '640px',
-        laptop: '1024px',
-        desktop: '1280px'
-      },
       animation: {
         cursor: 'cursor alternate linear 0.8s infinite'
       },
-      borderRadius: {
-        card: '10px',
-        'gray-card': '30px'
+      backgroundImage: {
+        'events-hero-lg': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
+        'events-hero-sm': "url('https://cdn.kodemia.mx/images/eventos/eventos-mobile.jpg')",
+        'home-financing-lg': "url('https://cdn.kodemia.mx/images/home/apoyo-kodemia.jpg')",
+        'home-financing-md': "url('https://cdn.kodemia.mx/images/home/apoyo-tablet.jpg')",
+        'home-financing-sm': "url('https://cdn.kodemia.mx/images/home/apoyo-mobile.jpg')",
+        'companies-collaborate-lg': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-desktop.jpg')",
+        'companies-collaborate-md': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-tablet.jpg')",
+        'companies-collaborate-sm': "url('https://cdn.kodemia.mx/images/companies/colabora-con-kodemia-mobile.jpg')",
+        'clases-hero-lg': "url('https://cdn.kodemia.mx/images/clases/classes-desktop.jpg')",
+        'clases-hero-md': "url('https://cdn.kodemia.mx/images/clases/classes-tablet.jpg')",
+        'clases-hero-sm': "url('https://cdn.kodemia.mx/images/clases/classes-mobile.jpg')",
+        'javascript-investment-lg': "url('https://cdn.kodemia.mx/images/javascript/investment-desktop.png')"
       },
-      borderWidth: {
-        'text-cursor': '3.5px'
+      borderRadius: {
+        small: '10px',
+        medium: '20px',
+        wide: '30px'
       },
       colors: {
-        'black-kd': {
-          dark: '#0E0E0E',
+        'brand-black': {
           DEFAULT: '#181818',
+          dark: '#0E0E0E',
           light: '#343434',
-          trasparent: 'rgba(24, 24, 24, 0.85)'
         },
-        'cyan-kd': {
-          dark: '#07BABA',
-          DEFAULT: '#00FFFF'
-        },
-        'gray-kd': {
-          dark: '#2f2f2f',
-          DEFAULT: '#4E4E4E',
-          light: '#828282',
-          lighter: '#bdbdbd'
-        },
-        'green-kd': {
-          dark: '#AAD64C',
-          DEFAULT: '#95e3a5'
-        },
-        'red-kd': {
-          DEFAULT: '#E95249',
-          light: '#fa867f'
-        },
-        'violet-kd': {
-          DEFAULT: '#BB2BFF'
-        },
-        'white-kd': {
+        'brand-complementary': {
           DEFAULT: '#FBFBFB'
-        }
+        },
+        'brand-error': {
+          DEFAULT: '#E95249'
+        },
+        'brand-gray': {
+          DEFAULT: '#737373',
+          dark: '#302F2B',
+          light: '#999999'
+        },
+        'brand-primary': {
+          DEFAULT: '#00FFFF',
+          dark: '#07BABA'
+        },
       },
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans]
       },
       fontSize: {
-        h1: '40px',
-        h2: '32px',
-        h3: '28px',
-        h4: '24px',
-        h5: '20px',
-        mini: '10px',
-        '8dot5xl': '7rem'
+        'brand-h1': ['40px', '1.07'],
+        'brand-h1-sm': ['32px', '1.07'],
+        'brand-h2': ['32px', '1.07'],
+        'brand-h2-sm': ['28px', '1.07'],
+        'brand-h3': ['28px', '1.2'],
+        'brand-h4': ['24px', '1.4'],
+        'brand-h5': ['20px', '1.4']
       },
       keyframes: {
         cursor: {
@@ -74,53 +73,6 @@ module.exports = {
             borderBottomColor: 'unset'
           }
         }
-      },
-      lineHeight: {
-        h1: '1.07'
-      },
-      letterSpacing: {
-        'spaced': '.2em',
-        'even-wider': '.4em',
-      },
-      height: {
-        '85vh': '85vh',
-        '500px': '500px',
-        '700px': '700px',
-        '800px': '800px'
-      },
-      minHeight: {
-        mini: '16px',
-        'sm-kd': '465px',
-        430: '430px',
-      },
-      minWidth: {
-        'sm-kd': '220px',
-        270: '270px',
-        300: '300px',
-        320: '320px',
-        420: '420px',
-      },
-      maxWidth: {
-        'sm-kd': '220px',
-        420: '420px',
-        1086: '1086px'
-      },
-      maxHeight: {
-        '500px': '500px',
-        '600px': '600px',
-        '700px': '700px',
-        '80vh': '80vh'
-      },
-      webkitScrollbar: {
-        width: '6px'
-      },
-      backgroundImage: {
-        'events': "url('https://cdn.kodemia.mx/images/eventos/eventos-desktop.jpg')",
-        'mentors': "url('https://cdn.kodemia.mx/images/mentores/mentores-desktop.jpg')"
-      },
-      spacing: {
-        '9/20': '45%',
-        'fit': 'fit-content'
       }
     }
   },

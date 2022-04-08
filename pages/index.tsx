@@ -28,7 +28,7 @@ export default function Home () {
     <>
       <Seo />
       <Navbar />
-      <Hero video='https://prismic-io.s3.amazonaws.com/kodemia/d58417e7-a700-4c67-a3e2-5a746d3df0b2_home-background.mp4' />
+      <Hero video='https://cdn.kodemia.mx/videos/home-background-hero.mp4' />
       <WhyKodemia
         cards={WhyKodemiaCards.cards}
         cyanTitle={WhyKodemiaCards.cyanTitle}

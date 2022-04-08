@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react'
-import classnames from 'classnames'
-// My components
-import H5 from 'components/H5'
+import classNames from 'classnames'
+
 import H3 from 'components/H3'
-import InfoCard from 'components/InfoCard'
+import H5 from 'components/H5'
+import InfoBullet from 'components/InfoBullet'
 
 export interface Skill {
   icon: string
@@ -25,7 +25,7 @@ export interface Props {
   whiteTitle: string
 }
 
-export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, whiteTitle }: Props) {
+export default function ChooseAKoder ({ chooseKoder, cyanTitle, subtitle, whiteTitle }: Props): JSX.Element {
   const [activeProgram, setActiveProgram] = useState(0)
   return (
     <section className='choose-a-koder is-flex is-justify-content-center'>
@@ -52,7 +52,7 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                 >
                   <div className='columns is-multiline is-mobile bar'>
                     <div
-                      className={classnames(
+                      className={classNames(
                         'column is-full has-text-centered has-text-weight-medium-on-desktop bar-text',
                         {
                           'is-inactive-text': activeProgram !== index
@@ -62,7 +62,7 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                       {program.name}
                     </div>
                     <div
-                      className={classnames(
+                      className={classNames(
                         'column',
                         'is-full',
                         'bar-bar',
@@ -72,7 +72,7 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                       )}
                     >
                       <div
-                        className={classnames(
+                        className={classNames(
                           'indicator',
                           { 'has-background-info': activeProgram === index }
                         )}
@@ -93,7 +93,7 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                 key={`img-choose-${index}`}
                 src={program.image}
                 alt={`kodemia-${program.name}`}
-                className={classnames(
+                className={classNames(
                   'slide-item',
                   {
                     'is-active': activeProgram === index,
@@ -109,7 +109,7 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
             chooseKoder.map((program, index) => (
               <div
                 key={`skill-${index}`}
-                className={classnames(
+                className={classNames(
                   'slide-items columns',
                   {
                     'is-active': activeProgram === index,
@@ -123,7 +123,7 @@ export default function ChooseAKoder ({ chooseKoder = [], cyanTitle, subtitle, w
                       className='column is-half is-full-mobile'
                       key={`skill-${skill.title}-${index}`}
                     >
-                      <InfoCard
+                      <InfoBullet
                         icon={skill.icon}
                         title={skill.title}
                         text={skill.text}

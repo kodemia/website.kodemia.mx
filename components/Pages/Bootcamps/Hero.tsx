@@ -1,8 +1,10 @@
 
 import React from 'react'
-// My components
-import HeroCard from './HeroCard'
-import BgVideo from '../../BgVideo'
+import classNames from 'classnames'
+
+import BgVideo from 'components/BgVideo'
+import HeroJsInfo from 'components/Pages/Bootcamps/HeroJsInfo'
+import PageSection from 'components/PageSection'
 
 export interface Information {
   title: string
@@ -19,23 +21,34 @@ export interface Props{
   video: string
 }
 
-export default function JavascriptLive ({ bootcamp, video }:Props) {
+export default function JavascriptLive ({ bootcamp, video }: Props): JSX.Element {
   return (
-    <div className='hero-bootcamps'>
-      <div className='columns hero-container'>
-        <div className='column is-full'>
-          <BgVideo video={video} />
-          <div className='columns is-justify-content-center cover'>
-            <div className='column  container-card'>
-              <HeroCard bootcamp={bootcamp} />
-              <img
-                src='/icons/icon-scroll.svg'
-                className='arrow-icon'
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className={classNames(
+      'h-[80vh]',
+      'relative'
+    )}>
+      <BgVideo video={video} />
+      <PageSection
+        sectionClassName={classNames(
+          'absolute top-0',
+          'bg-gradient-to-t from-brand-black via-brand-black/60 to-brand-black/40',
+          'h-full',
+          'overflow-hidden',
+          'w-full'
+        )}
+        contentClassName='flex items-center'>
+        <HeroJsInfo bootcamp={bootcamp} />
+        <img
+          src='/icons/icon-scroll.svg'
+          className={classNames(
+            'absolute left-0 bottom-0',
+            'animate-bounce',
+            'hidden md:block',
+            'mx-[50%] md:mb-14',
+            'w-7'
+          )}
+        />
+      </PageSection>
     </div>
   )
 }

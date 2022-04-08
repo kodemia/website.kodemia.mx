@@ -1,13 +1,14 @@
 
+// TODO: Delete these
 // BREAK POINTS
 @mixin on-tablet {
-  @media only screen and (min-width: #{$tablet}) and (max-width: #{$desktop - 1}) {
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin on-mobile {
-  @media only screen and (max-width: #{$tablet}) {
+  @media only screen and (max-width: 769px) {
     @content;
   }
 }

@@ -1,5 +1,5 @@
 
-import classnames from 'classnames'
+import classNames from 'classnames'
 
 export interface Props {
   type: 'text' | 'email'
@@ -12,28 +12,34 @@ export interface Props {
   required?: boolean
 }
 
-export default function Input(props: Props) {
+export default function Input (props: Props) {
   return (
-    <div className='field'>
-      <div className='label has-text-white has-text-weight-normal'>
+    <div className='w-full'>
+      <div className={classNames(
+        'mb-2 font-normal',
+        'text-brand-complementary text-brand-normal'
+      )}
+      >
         {props.label}
       </div>
-      <div className='control'>
-        <input
-          className={classnames(
-            props.className,
-            'input'
-          )}
-          type={props.type}
-          placeholder={props.placeholder}
-          name={props.name}
-          ref={props.register}
-          required={props.required}
-        />
-      </div>
+      <input
+        className={classNames(
+          'py-2 px-3 w-full',
+          'rounded-small',
+          'bg-brand-black-dark opacity-90',
+          'text-brand-complementary placeholder:text-brand-gray-light',
+          'focus:outline focus:outline-1 focus:outline-brand-gray',
+          props.className,
+        )}
+        type={props.type}
+        placeholder={props.placeholder}
+        name={props.name}
+        ref={props.register}
+        required={props.required}
+      />
       {
         props.error &&
-        <p className='help is-danger'>{props.error}</p>
+        <p className='text-brand-error'>{props.error}</p>
       }
     </div>
   )

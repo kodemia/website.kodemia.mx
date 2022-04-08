@@ -1,8 +1,9 @@
 
-import NavBar from 'components/Navbar'
+import classNames from 'classnames'
+
 import Footer from 'components/Footer'
 import Head from 'next/head'
-import classNames from 'classnames'
+import NavBar from 'components/Navbar'
 
 const articleClasses = 'mt-10'
 const paragraphClasses = 'mt-3'

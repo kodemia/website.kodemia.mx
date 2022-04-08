@@ -1,25 +1,39 @@
-import React from 'react'
-// My components
-import Button from '../../Button'
-import H2 from '../../H2'
 
-export default function TransformYourLife () {
+import React from 'react'
+import classNames from 'classnames'
+
+import Button from 'components/Button'
+import H2 from 'components/H2'
+import PageSection from 'components/PageSection'
+
+export default function TransformYourLife (): JSX.Element {
   return (
-    <section className='transform-your-life'>
-      <div className='transform-your-life-container section-container'>
-        <div className='title-container'>
-          <H2>
-            ¿Listo para transformar tu vida programando?
-          </H2>
-        </div>
-        <div className='btn-container'>
-          <Button
-            label='Aplica ahora'
-            hasWhiteBg
-            link='/aplicar'
-          />
-        </div>
+    <PageSection
+      sectionClassName='bg-brand-primary-dark'
+      contentClassName={classNames(
+        'md:flex',
+        'md:justify-between md:items-center'
+      )}
+    >
+      <div className={classNames(
+        'mb-10 md:mb-0',
+        'md:pb-4',
+        'text-left',
+        'md:w-2/5'
+      )}>
+        <H2>
+          ¿Listo para transformar tu vida programando?
+        </H2>
       </div>
-    </section>
+      <div className={classNames(
+        'w-full md:w-2/4 lg:w-[340px]'
+      )}>
+        <Button
+          label='Aplica ahora'
+          hasWhiteBg
+          link='/aplicar'
+        />
+      </div>
+    </PageSection>
   )
 }

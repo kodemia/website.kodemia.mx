@@ -40,7 +40,11 @@ export default function EndTrialPeriod () {
         )}
         >
           <h1 className='text-h1 leading-h1 font-semibold'>
-            <span className='text-cyan-kd'>¡Ups,</span><br /> el tiempo de prueba<br /><span className='text-cyan-kd'>se acabó</span><Cursor>!</Cursor>
+            <span className='text-brand-primary'>¡Ups,</span>
+            <br />
+            el periodo de prueba
+            <br />
+            <Cursor children='se acabó!' />
           </h1>
           <p className={classNames(
             'mt-8',

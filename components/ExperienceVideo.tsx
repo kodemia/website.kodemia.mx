@@ -2,11 +2,11 @@
 /** global HTMLVideoElement */
 
 import React, { useState, useRef, MutableRefObject } from 'react'
-import classnames from 'classnames'
+import classNames from 'classnames'
 import HTMLVideoElement from 'typescript'
-// My components
-import H5 from './H5'
-import DescriptionParagraph from './DescriptionParagraph'
+
+import H5 from 'components/H5'
+import Text from 'components/Text'
 
 export interface Video {
   url: string
@@ -24,7 +24,7 @@ export interface Props {
   onEnded: () => void
 }
 
-export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setIsActive, isActive }: Props) {
+export default function ExperienceVideo({ video, isPlay, onClick, onEnded, setIsActive, isActive }: Props) {
   const [showPlayIcon, setShowPlayIcon] = useState(true)
   const [showCloseIcon, setShowCloseIcon] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null) as MutableRefObject<HTMLVideoElement>
@@ -34,85 +34,92 @@ export default function ExperienceVideo ({ video, isPlay, onClick, onEnded, setI
   }
 
   return (
-    <div className='experience-video'>
-      <div
-        className='video'
-        onClick={onClick}
-      >
-        <video
-          controls={false}
-          poster={video.poster}
-          className={classnames('poster', {
-            'is-not-play': !isActive
-          })}
-          ref={videoRef}
-          onPause={() => {
-            setShowPlayIcon(true)
-            setShowCloseIcon(false)
-            videoRef.current.controls = false
+    <div className='my-4'>
+      <div className='relative'>
+        <div onClick={onClick} >
+          <video
+            controls={false}
+            poster={video.poster}
+            className={classNames(
+              'rounded-small',
+              'h-full w-full',
+              'object-cover',
+              'align-middle',
+              {
+                'md:h-52': !isActive
+              }
+            )}
+            ref={videoRef}
+            onPause={() => {
+              setShowPlayIcon(true)
+              setShowCloseIcon(false)
+              videoRef.current.controls = false
+            }}
+            onEnded={() => {
+              setShowPlayIcon(true)
+              setShowCloseIcon(false)
+              videoRef.current.controls = false
+              onEnded()
+              videoRef.current.load()
+            }}
+            onSeeked={() => {
+              setShowPlayIcon(false)
+              setShowCloseIcon(true)
+              videoRef.current.controls = true
+            }}
+          >
+            <source src={video.url} type='video/mp4' />
+          </video>
+        </div>
+        <div
+          className={classNames(
+            'absolute top-3 right-4',
+            {
+              'hidden': !showCloseIcon
+            }
+          )}
+          onClick={() => {
+            setIsActive(false)
+            videoRef.current.pause()
           }}
-          onEnded={() => {
-            setShowPlayIcon(true)
-            setShowCloseIcon(false)
-            videoRef.current.controls = false
-            onEnded()
-            videoRef.current.load()
-          }}
-          onSeeked={() => {
+        >
+          <img
+            src='/icons/btn-close-video.svg'
+            alt='close-video'
+          />
+        </div>
+        <div
+          className={classNames(
+            'bg-brand-black/60 group',
+            'absolute top-0',
+            'w-full h-full',
+            'flex justify-center items-center',
+            {
+              'hidden': !showPlayIcon
+            }
+          )}
+          onClick={() => {
+            onClick()
             setShowPlayIcon(false)
             setShowCloseIcon(true)
+            videoRef.current.play()
             videoRef.current.controls = true
           }}
         >
-          <source src={video.url} type='video/mp4' />
-        </video>
+          <figure className={classNames(
+            'h-14 w-14',
+            'bg-[url(/icons/icon-video.svg)] group-hover:bg-[url(/icons/icon-video-blue.svg)]',
+          )} />
+        </div>
       </div>
-      <div
-        className={classnames('icon-close', {
-          'is-hidden': !showCloseIcon
-        })}
-        onClick={() => {
-          setIsActive(false)
-          videoRef.current.pause()
-        }}
-      >
-        <img
-          src='/icons/btn-close-video.svg'
-          alt='close-video'
-        />
-      </div>
-      <div
-        className={classnames('icon-container', {
-          'is-hidden': !showPlayIcon
-        })}
-        onClick={() => {
-          onClick()
-          setShowPlayIcon(false)
-          setShowCloseIcon(true)
-          videoRef.current.play()
-          videoRef.current.controls = true
-        }}
-      >
-        <img
-          src='/icons/icon-video.svg' alt=''
-          className='icon-play'
-        />
-        <img
-          src='/icons/icon-video-blue.svg' alt=''
-          className='icon-play-blue'
-        />
-      </div>
-
-      <div className='data-container'>
+      <div className='my-3'>
         <H5 isWhite>
           {video.name}
         </H5>
-        <div className='content'>
-          <DescriptionParagraph>
-            {video.content}
-          </DescriptionParagraph>
-        </div>
       </div>
+      <Text>
+        {video.content}
+      </Text>
     </div>
   )
 }
